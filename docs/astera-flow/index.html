@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astera · Knowledge Explorer</title>
+  <meta name="description" content="Astera Clinical Intelligence Platform — Interactive Knowledge Explorer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-top">
+      <div class="header-left">
+        <div class="logo">
+          <span class="logo-icon">✦</span>
+          <span class="logo-text">Astera</span>
+        </div>
+        <span class="header-divider"></span>
+        <span class="header-subtitle" id="headerSubtitle">Knowledge Explorer</span>
+        <span class="header-divider"></span>
+        <div class="workspace-selector">
+          <select id="workspaceSelect" class="workspace-select">
+            <option value="clinical-doc" selected>Clinical Documentation Engine</option>
+            <option value="universo">Universo Astera</option>
+            <option value="deep-map">Project Deep Map</option>
+          </select>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="node-counter" id="nodeCounter">
+          <span class="counter-value">17</span>
+          <span class="counter-label">conceitos</span>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <nav class="module-nav" id="moduleNav">
+        <button class="module-btn" data-module="plataforma">Runtime</button>
+        <button class="module-btn" data-module="modulos">Open Source AI Modules</button>
+        <button class="module-btn" data-module="medical_knowledge">Medical Knowledge Layer</button>
+        <button class="module-btn" data-module="organization">Organization Architecture</button>
+        <button class="module-btn" data-module="adr">Architecture Decisions</button>
+        <button class="module-btn" data-module="tech_catalog">Technology Catalog</button>
+        <button class="module-btn" data-module="plugin_arch">Plugin Architecture</button>
+        <button class="module-btn" data-module="runtime_lifecycle">Runtime Lifecycle</button>
+        <button class="module-btn" data-module="event_catalog">Event Catalog</button>
+        <button class="module-btn" data-module="api_contracts">API Contracts</button>
+        <button class="module-btn" data-module="engineering_roadmap">Master Engineering Plan</button>
+        <button class="module-btn" data-module="cloud">Cloud Strategy</button>
+        <button class="module-btn" data-module="infra">Infraestrutura</button>
+        <button class="module-btn active" data-module="explorar">Explorar</button>
+        <button class="module-btn" data-module="arquitetura">Arquitetura</button>
+        <button class="module-btn" data-module="catalogo">Catálogo OS</button>
+        <button class="module-btn" data-module="timeline">Timeline</button>
+        <button class="module-btn" data-module="maturidade">Maturidade</button>
+        <button class="module-btn" data-module="live">Astera Live</button>
+      </nav>
+      <div id="liveControls" class="live-controls" style="display: none;">
+        <button id="btnPlayLive" class="btn-play">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4 3L13 8L4 13V3Z"/></svg> Simular Consulta
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Secondary Toolbar (Visible only in Explorar) -->
+  <div class="toolbar-secondary" id="toolbarSecondary">
+    <div class="view-switcher" id="viewSwitcher">
+      <button class="view-btn active" data-view="grafo" title="Grafo">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="3" cy="8" r="2" fill="currentColor"/><circle cx="13" cy="4" r="2" fill="currentColor"/><circle cx="13" cy="12" r="2" fill="currentColor"/><line x1="5" y1="8" x2="11" y2="4" stroke="currentColor" stroke-width="1.2"/><line x1="5" y1="8" x2="11" y2="12" stroke="currentColor" stroke-width="1.2"/></svg>
+        <span>Grafo</span>
+      </button>
+      <button class="view-btn" data-view="cognitivo" title="Pipeline Cognitivo">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="5" y="1" width="6" height="3" rx="1" fill="currentColor"/><rect x="5" y="6.5" width="6" height="3" rx="1" fill="currentColor"/><rect x="5" y="12" width="6" height="3" rx="1" fill="currentColor"/><line x1="8" y1="4" x2="8" y2="6.5" stroke="currentColor" stroke-width="1.2"/><line x1="8" y1="9.5" x2="8" y2="12" stroke="currentColor" stroke-width="1.2"/></svg>
+        <span>Cognitivo</span>
+      </button>
+      <button class="view-btn" data-view="pipeline" title="Pipeline Linear">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="2" cy="8" r="1.5" fill="currentColor"/><circle cx="8" cy="8" r="1.5" fill="currentColor"/><circle cx="14" cy="8" r="1.5" fill="currentColor"/><line x1="3.5" y1="8" x2="6.5" y2="8" stroke="currentColor" stroke-width="1.2"/><line x1="9.5" y1="8" x2="12.5" y2="8" stroke="currentColor" stroke-width="1.2"/></svg>
+        <span>Pipeline Linear</span>
+      </button>
+      <button class="view-btn" data-view="arvore" title="Árvore">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="2" r="1.5" fill="currentColor"/><circle cx="4" cy="9" r="1.5" fill="currentColor"/><circle cx="12" cy="9" r="1.5" fill="currentColor"/><circle cx="4" cy="14" r="1.5" fill="currentColor"/><circle cx="12" cy="14" r="1.5" fill="currentColor"/><line x1="8" y1="3.5" x2="4" y2="7.5" stroke="currentColor" stroke-width="1.2"/><line x1="8" y1="3.5" x2="12" y2="7.5" stroke="currentColor" stroke-width="1.2"/><line x1="4" y1="10.5" x2="4" y2="12.5" stroke="currentColor" stroke-width="1.2"/><line x1="12" y1="10.5" x2="12" y2="12.5" stroke="currentColor" stroke-width="1.2"/></svg>
+        <span>Árvore</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Flow Canvas -->
+  <main class="flow-container" id="flowContainer">
+    <svg id="flowSvg" class="flow-svg"></svg>
+    <div id="nodesContainer" class="nodes-container"></div>
+  </main>
+
+  <!-- Maturity Dashboard -->
+  <main class="maturity-container" id="maturityContainer" style="display: none;">
+    <div class="maturity-content" id="maturityContent">
+      <div class="maturity-header-section" id="maturityHeaderSection">
+        <h1 class="maturity-title">Astera</h1>
+        <div class="maturity-progress-wrapper" id="maturityProgressWrapper">
+          <!-- Filled dynamically -->
+        </div>
+      </div>
+      
+      <div class="maturity-chapters" id="maturityChaptersContainer">
+        <!-- Filled dynamically by JavaScript -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Plataforma View -->
+  <main class="architecture-container" id="plataformaContainer" style="display: none;">
+    <div class="architecture-content">
+      <div class="arch-header">
+        <h1 class="arch-title" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><span style="font-size: 1.5em;">🏛️</span> Plataforma Astera</h1>
+        <p class="arch-subtitle">Plataforma Cognitiva para Saúde</p>
+      </div>
+
+      <!-- Produtos -->
+      <div class="arch-layer theme-blue">
+        <div class="arch-layer-header">Produtos</div>
+        <div class="arch-grid-3">
+          <div class="arch-node module-node theme-blue" data-id="prod_connect" onclick="openSmartPanel(getArchNodeData('prod_connect'))">Astera Connect</div>
+          <div class="arch-node module-node theme-blue" data-id="prod_live" onclick="openSmartPanel(getArchNodeData('prod_live'))">Astera Live</div>
+          <div class="arch-node module-node theme-blue" data-id="prod_docs" onclick="openSmartPanel(getArchNodeData('prod_docs'))">Astera Docs</div>
+        </div>
+      </div>
+
+      <div class="arch-flow-down">↓</div>
+
+      <!-- Astera Runtime -->
+      <div class="arch-layer theme-purple arch-runtime-box">
+        <div class="arch-layer-header">Astera Runtime</div>
+        
+        <div class="arch-runtime-split">
+          <!-- Cognitive Modules -->
+          <div class="arch-module-group">
+            <h3 class="arch-group-title theme-green-text">Cognitive Modules</h3>
+            <div class="arch-grid-2">
+              <div class="arch-node module-node theme-green" data-id="arch_evidence" onclick="openSmartPanel(getArchNodeData('arch_evidence'))">Evidence Module</div>
+              <div class="arch-node module-node theme-green" data-id="arch_correlation" onclick="openSmartPanel(getArchNodeData('arch_correlation'))">Correlation Module</div>
+              <div class="arch-node module-node theme-green" data-id="arch_understanding" onclick="openSmartPanel(getArchNodeData('arch_understanding'))">Understanding Module</div>
+              <div class="arch-node module-node theme-green" data-id="arch_knowledge" onclick="openSmartPanel(getArchNodeData('arch_knowledge'))">Knowledge Module</div>
+              <div class="arch-node module-node theme-green" data-id="arch_representation" onclick="openSmartPanel(getArchNodeData('arch_representation'))">Representation Module</div>
+            </div>
+          </div>
+          
+          <!-- Platform Modules -->
+          <div class="arch-module-group">
+            <h3 class="arch-group-title theme-amber-text">Platform Modules</h3>
+            <div class="arch-grid-2">
+              <div class="arch-node module-node theme-amber" data-id="arch_patient" onclick="openSmartPanel(getArchNodeData('arch_patient'))">Patient Context</div>
+              <div class="arch-node module-node theme-amber" data-id="arch_session" onclick="openSmartPanel(getArchNodeData('arch_session'))">Session State</div>
+              <div class="arch-node module-node theme-amber" data-id="arch_terminology" onclick="openSmartPanel(getArchNodeData('arch_terminology'))">Terminology (CID/TUSS)</div>
+              <div class="arch-node module-node theme-amber" data-id="arch_security" onclick="openSmartPanel(getArchNodeData('arch_security'))">Security & Audit</div>
+              <div class="arch-node module-node theme-amber" data-id="arch_observability" onclick="openSmartPanel(getArchNodeData('arch_observability'))">Observability</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="arch-flow-row" style="margin-top: 1.5rem;">
+          <div class="arch-node node-highlight" style="width: 100%;">NATS Event Bus</div>
+        </div>
+
+        <div class="arch-flow-row" style="margin-top: 1.5rem;">
+          <div class="arch-node module-node theme-rose" style="width: 100%; text-align: center;" data-id="cognitive_services" onclick="openSmartPanel(getArchNodeData('cognitive_services'))">Cognitive Services ⭐</div>
+        </div>
+      </div>
+
+      <div class="arch-flow-down">↓</div>
+
+      <!-- Agentic Framework -->
+      <div class="arch-layer theme-orange">
+        <div class="arch-layer-header">Agentic Framework</div>
+        <div class="arch-flow-row">
+          <div class="arch-node module-node theme-orange" data-id="framework_agentes" onclick="openSmartPanel(getArchNodeData('framework_agentes'))">Google ADK / LangGraph (Orchestration)</div>
+        </div>
+      </div>
+
+      <div class="arch-flow-down">↓</div>
+
+      <!-- Integrações & IA -->
+      <div class="arch-layer theme-gray">
+        <div class="arch-layer-header">Integrações & IA</div>
+        <div class="arch-grid-3">
+          <div class="arch-node module-node theme-gray" data-id="llm_gateway" onclick="openSmartPanel(getArchNodeData('llm_gateway'))">LLM Gateway (LiteLLM)</div>
+          <div class="arch-node module-node theme-gray" data-id="fhir_gateway" onclick="openSmartPanel(getArchNodeData('fhir_gateway'))">FHIR Gateway</div>
+          <div class="arch-node module-node theme-gray" data-id="persistence" onclick="openSmartPanel(getArchNodeData('persistence'))">Postgres + pgvector / Neo4j</div>
+          <div class="arch-node module-node theme-gray" data-id="audio_pipeline" onclick="openSmartPanel(getArchNodeData('audio_pipeline'))">Audio Pipeline</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Open Source AI Modules View -->
+  <main class="architecture-container" id="modulesContainer" style="display: none;">
+    <div class="architecture-content">
+      <div class="arch-header">
+        <h1 class="arch-title" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><span style="font-size: 1.5em;">🧩</span> Astera Flow</h1>
+        <p class="arch-subtitle">Open Source AI Modules</p>
+      </div>
+
+      <div class="arch-layer theme-blue" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Objetivo</div>
+        <p style="margin-bottom: 16px;">Esta aba representa toda a camada de Inteligência Especializada do Astera.</p>
+        <p style="margin-bottom: 16px;">Ela documenta as capacidades cognitivas que podem ser utilizadas pelos Agentes do Google ADK durante a execução do Cognitive Engine.</p>
+        <p style="margin-bottom: 16px;">Esta camada é completamente desacoplada dos modelos de linguagem (LLMs).</p>
+        <p>Os módulos representam capacidades reutilizáveis que podem ser implementadas por diferentes projetos Open Source ao longo da evolução da plataforma.</p>
+      </div>
+
+      <div class="arch-layer theme-purple" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Visão Geral</div>
+        <pre style="background: rgba(0,0,0,0.2); padding: 16px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.5; color: #a78bfa; overflow-x: auto;">                    Google ADK
+                         │
+                         ▼
+
+             Open Source AI Modules
+
+        ┌────────────────────────────────────┐
+        │ Audio                             │
+        │ Vision                            │
+        │ OCR                               │
+        │ Medical NLP                       │
+        │ Medical Knowledge                 │
+        │ Medical Coding                    │
+        │ Medical Imaging                   │
+        │ Reasoning                         │
+        │ Memory                            │
+        │ Retrieval                         │
+        │ Search                            │
+        │ FHIR                              │
+        │ Terminology                       │
+        │ Embeddings                        │
+        │ Translation                       │
+        │ Safety                            │
+        │ Evaluation                        │
+        │ Ranking                           │
+        │ Temporal                          │
+        │ Voice                             │
+        └────────────────────────────────────┘
+
+                         │
+                         ▼
+
+                     LiteLLM
+
+                         │
+
+       Gemini
+       Claude
+       GPT
+       Grok
+       Modelos Locais</pre>
+      </div>
+
+      <div class="arch-layer theme-orange" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Filosofia & Interface Universal</div>
+        <h3 class="arch-group-title theme-orange-text" style="margin-bottom: 12px;">Filosofia</h3>
+        <p style="margin-bottom: 12px;">O Astera não depende de um único modelo de IA. Toda inteligência especializada deve existir como módulos independentes. O Google ADK apenas decide:</p>
+        <ul style="margin-bottom: 24px; padding-left: 20px; color: var(--text-secondary);">
+          <li>qual módulo executar</li>
+          <li>em qual ordem</li>
+          <li>com quais dados</li>
+        </ul>
+        <p style="margin-bottom: 24px;">Os módulos nunca conhecem uns aos outros. Toda comunicação acontece através do Runtime.</p>
+        
+        <h3 class="arch-group-title theme-orange-text" style="margin-bottom: 12px;">Interface Universal</h3>
+        <p style="margin-bottom: 12px;">Todo módulo deverá implementar a mesma interface lógica. Isso permite substituir qualquer implementação sem alterar o restante do sistema.</p>
+        <pre style="background: rgba(0,0,0,0.2); padding: 16px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #fb923c;">initialize()
+execute()
+health()
+metadata()
+shutdown()</pre>
+      </div>
+
+      <div class="arch-layer theme-green" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Organização</div>
+        <p style="margin-bottom: 12px;">Cada módulo representa uma capacidade cognitiva.</p>
+        <p style="margin-bottom: 12px;">Nesta etapa ainda NÃO escolhemos os projetos Open Source.</p>
+        <p style="margin-bottom: 12px;">Primeiro definimos as capacidades.</p>
+        <p>Depois escolheremos a melhor implementação para cada uma.</p>
+      </div>
+
+      <!-- Módulos Cognitivos - Grid -->
+      <div class="arch-layer theme-amber" style="margin-bottom: 24px;">
+        <div class="arch-layer-header">Módulos Cognitivos</div>
+        <div class="arch-grid-3">
+          
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Audio</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Responsável por processamento de áudio.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>Speech Recognition</li>
+              <li>Speaker Diarization</li>
+              <li>Voice Activity Detection</li>
+              <li>Noise Reduction</li>
+              <li>Audio Segmentation</li>
+              <li>Audio Enhancement</li>
+            </ul>
+          </div>
+          
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Voice</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Responsável por geração e análise da voz.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>Text-to-Speech</li>
+              <li>Voice Clone</li>
+              <li>Emotion Detection</li>
+              <li>Voice Profiles</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Vision</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Processamento de imagens.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>Object Detection</li>
+              <li>Clinical Image Analysis</li>
+              <li>Document Understanding</li>
+              <li>Screenshot Analysis</li>
+            </ul>
+          </div>
+          
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">OCR</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Leitura de documentos.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>PDF</li>
+              <li>Prescrição</li>
+              <li>Exames</li>
+              <li>Laudos</li>
+              <li>Escrita Manual</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Medical NLP</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Processamento de linguagem médica.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>Entity Recognition</li>
+              <li>Clinical Concepts</li>
+              <li>Negation Detection</li>
+              <li>Temporal Expressions</li>
+              <li>Medical Abbreviations</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Medical Knowledge</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Conhecimento médico estruturado.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>Clinical Guidelines</li>
+              <li>Evidence Based Medicine</li>
+              <li>Drug Knowledge</li>
+              <li>Protocols</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Medical Coding</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Padronização clínica.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>CID</li>
+              <li>ICD</li>
+              <li>SNOMED CT</li>
+              <li>LOINC</li>
+              <li>RxNorm</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Medical Imaging</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Análise especializada.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>DICOM</li>
+              <li>Radiologia</li>
+              <li>ECG</li>
+              <li>Ultrassom</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Retrieval</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Busca inteligente.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>Vector Search</li>
+              <li>Hybrid Search</li>
+              <li>Semantic Search</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Search</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Busca externa.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>Internet</li>
+              <li>Documentos</li>
+              <li>Guidelines</li>
+              <li>Base institucional</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Embeddings</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Representação vetorial.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>Embeddings</li>
+              <li>Similaridade</li>
+              <li>Clustering</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Memory</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Memória cognitiva.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>Session Memory</li>
+              <li>Patient Memory</li>
+              <li>Long Memory</li>
+              <li>Episodic Memory</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Reasoning</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Raciocínio.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>Clinical Reasoning</li>
+              <li>Decision Trees</li>
+              <li>Rule Engine</li>
+              <li>Planning</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Temporal</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Tempo.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>Timeline</li>
+              <li>Evolução Clínica</li>
+              <li>Eventos</li>
+              <li>Histórico</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">FHIR</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Integração clínica.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>Resource Mapping</li>
+              <li>Validation</li>
+              <li>Bundle Generation</li>
+              <li>Interoperability</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Terminology</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Vocabulários médicos.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>SNOMED</li>
+              <li>ICD</li>
+              <li>LOINC</li>
+              <li>UMLS</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Translation</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Idiomas.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>Medical Translation</li>
+              <li>Patient Friendly Language</li>
+              <li>Technical Language</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Safety</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Segurança.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>LGPD</li>
+              <li>HIPAA</li>
+              <li>PII Detection</li>
+              <li>Data Masking</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Ranking</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Priorização.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>Evidence Ranking</li>
+              <li>Confidence Score</li>
+              <li>Relevance</li>
+            </ul>
+          </div>
+
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start; text-align: left;">
+            <strong class="theme-amber-text" style="font-size: 16px; margin-bottom: 8px;">Evaluation</strong>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">Avaliação.</p>
+            <ul style="font-size: 12px; margin: 0; padding-left: 16px; color: #d1d5db; line-height: 1.6;">
+              <li>Benchmark</li>
+              <li>Hallucination Detection</li>
+              <li>Quality Metrics</li>
+              <li>Confidence</li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="arch-layer theme-rose" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Próxima Etapa & Princípio Arquitetural</div>
+        
+        <h3 class="arch-group-title theme-rose-text" style="margin-bottom: 12px;">Próxima Etapa</h3>
+        <p style="margin-bottom: 12px;">Após a definição das capacidades cognitivas será criado um novo documento: <strong>Astera Open Source Catalog</strong>. Esse documento responderá:</p>
+        <ul style="margin-bottom: 24px; padding-left: 20px; color: var(--text-secondary);">
+          <li>Qual projeto Open Source implementa cada módulo?</li>
+          <li>Por que ele foi escolhido?</li>
+          <li>Como ele será integrado ao Google ADK?</li>
+          <li>Qual sua licença?</li>
+          <li>Como poderá ser substituído futuramente?</li>
+        </ul>
+        
+        <h3 class="arch-group-title theme-rose-text" style="margin-bottom: 12px;">Princípio Arquitetural</h3>
+        <p style="margin-bottom: 12px;">O Astera nunca dependerá de um projeto específico. Ele dependerá apenas das capacidades cognitivas.</p>
+        <p>Projetos Open Source poderão ser substituídos ao longo da evolução da plataforma sem impacto na arquitetura do Runtime.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Open Source Catalog View -->
+  <main class="architecture-container" id="catalogContainer" style="display: none;">
+    <div class="architecture-content">
+      <div class="arch-header">
+        <h1 class="arch-title" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><span style="font-size: 1.5em;">📚</span> Open Source Catalog</h1>
+        <p class="arch-subtitle">Mapeamento Oficial de Tecnologias (Em Avaliação)</p>
+      </div>
+
+      <div class="arch-layer theme-purple" style="margin-bottom: 24px;">
+        <div class="arch-layer-header">Diretrizes de Seleção</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; text-align: left; width: 100%;">
+          <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; border: 1px solid rgba(167, 139, 250, 0.3);">
+            <strong style="color: #a78bfa; display: block; margin-bottom: 8px;">Licença Permissiva</strong>
+            <span style="font-size: 13px; color: #d1d5db;">Prioridade para Apache 2.0, MIT, ou BSD. Evitar licenças restritivas (GPL) para uso em saúde.</span>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; border: 1px solid rgba(167, 139, 250, 0.3);">
+            <strong style="color: #a78bfa; display: block; margin-bottom: 8px;">Privacidade (Local First)</strong>
+            <span style="font-size: 13px; color: #d1d5db;">Capacidade de rodar on-premise ou em nuvem soberana (sem enviar dados de pacientes a APIs públicas).</span>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; border: 1px solid rgba(167, 139, 250, 0.3);">
+            <strong style="color: #a78bfa; display: block; margin-bottom: 8px;">Maturidade & Comunidade</strong>
+            <span style="font-size: 13px; color: #d1d5db;">Projetos com manutenção ativa, documentação robusta e adoção pela comunidade.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Perception -->
+      <div class="arch-layer theme-blue" style="margin-bottom: 24px;">
+        <div class="arch-layer-header">Perception & Audio</div>
+        <div class="arch-grid-2">
+          
+          <div class="arch-node catalog-card theme-blue">
+            <div class="catalog-card-header">
+              <span class="catalog-title">Whisper (OpenAI / whisper.cpp)</span>
+              <span class="catalog-badge status-approved">Aprovado</span>
+            </div>
+            <div class="catalog-module">Módulo: Audio (Speech Recognition)</div>
+            <div class="catalog-desc">Modelo SOTA para transcrição de áudio, robusto a sotaques e jargões. A versão cpp permite inferência eficiente em CPU/Edge.</div>
+            <div class="catalog-footer">
+              <span class="catalog-license">MIT</span>
+            </div>
+          </div>
+          
+          <div class="arch-node catalog-card theme-blue">
+            <div class="catalog-card-header">
+              <span class="catalog-title">PyAnnote Audio</span>
+              <span class="catalog-badge status-evaluating">Em Avaliação</span>
+            </div>
+            <div class="catalog-module">Módulo: Audio (Speaker Diarization)</div>
+            <div class="catalog-desc">Toolkit neural para diarização de locutores (separar médico de paciente).</div>
+            <div class="catalog-footer">
+              <span class="catalog-license">MIT</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Category: NLP & Knowledge -->
+      <div class="arch-layer theme-amber" style="margin-bottom: 24px;">
+        <div class="arch-layer-header">Medical NLP & Knowledge</div>
+        <div class="arch-grid-2">
+          
+          <div class="arch-node catalog-card theme-amber">
+            <div class="catalog-card-header">
+              <span class="catalog-title">MedSpacy</span>
+              <span class="catalog-badge status-approved">Aprovado</span>
+            </div>
+            <div class="catalog-module">Módulo: Medical NLP</div>
+            <div class="catalog-desc">Biblioteca de processamento de linguagem natural otimizada para textos clínicos, baseada em spaCy. Extração de entidades, negação e contexto clínico.</div>
+            <div class="catalog-footer">
+              <span class="catalog-license">Apache 2.0</span>
+            </div>
+          </div>
+          
+          <div class="arch-node catalog-card theme-amber">
+            <div class="catalog-card-header">
+              <span class="catalog-title">Snowstorm</span>
+              <span class="catalog-badge status-evaluating">Em Avaliação</span>
+            </div>
+            <div class="catalog-module">Módulo: Terminology</div>
+            <div class="catalog-desc">Servidor de terminologia SNOMED CT da SNOMED International. Essencial para padronização e interoperabilidade semântica.</div>
+            <div class="catalog-footer">
+              <span class="catalog-license">Apache 2.0</span>
+            </div>
+          </div>
+
+          <div class="arch-node catalog-card theme-amber">
+            <div class="catalog-card-header">
+              <span class="catalog-title">HAPI FHIR</span>
+              <span class="catalog-badge status-approved">Aprovado</span>
+            </div>
+            <div class="catalog-module">Módulo: FHIR</div>
+            <div class="catalog-desc">A implementação mais madura em Java para HL7 FHIR. Fundamental para o FHIR Gateway do Astera.</div>
+            <div class="catalog-footer">
+              <span class="catalog-license">Apache 2.0</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Category: Search & Retrieval -->
+      <div class="arch-layer theme-green" style="margin-bottom: 24px;">
+        <div class="arch-layer-header">Retrieval, Memory & Search</div>
+        <div class="arch-grid-2">
+          
+          <div class="arch-node catalog-card theme-green">
+            <div class="catalog-card-header">
+              <span class="catalog-title">Qdrant / pgvector</span>
+              <span class="catalog-badge status-approved">Aprovado</span>
+            </div>
+            <div class="catalog-module">Módulo: Retrieval & Vector DB</div>
+            <div class="catalog-desc">Mecanismos de busca vetorial para grounding clínico. pgvector para integração transacional; Qdrant para alta performance.</div>
+            <div class="catalog-footer">
+              <span class="catalog-license">Apache 2.0 / PostgreSQL</span>
+            </div>
+          </div>
+          
+          <div class="arch-node catalog-card theme-green">
+            <div class="catalog-card-header">
+              <span class="catalog-title">SearXNG</span>
+              <span class="catalog-badge status-evaluating">Em Avaliação</span>
+            </div>
+            <div class="catalog-module">Módulo: Search</div>
+            <div class="catalog-desc">Metabuscador que agrega resultados de múltiplos serviços de busca mantendo a privacidade (privacy-respecting).</div>
+            <div class="catalog-footer">
+              <span class="catalog-license">AGPL-3.0 (Isolado em API)</span>
+            </div>
+          </div>
+
+          <div class="arch-node catalog-card theme-green">
+            <div class="catalog-card-header">
+              <span class="catalog-title">Mem0 / Zep</span>
+              <span class="catalog-badge status-evaluating">Em Avaliação</span>
+            </div>
+            <div class="catalog-module">Módulo: Memory</div>
+            <div class="catalog-desc">Camada de memória de longo prazo para agentes de IA, essencial para histórico de pacientes em múltiplas sessões.</div>
+            <div class="catalog-footer">
+              <span class="catalog-license">Apache 2.0</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Category: Frameworks & Orchestration -->
+      <div class="arch-layer theme-orange" style="margin-bottom: 24px;">
+        <div class="arch-layer-header">Frameworks & Safety</div>
+        <div class="arch-grid-2">
+          
+          <div class="arch-node catalog-card theme-orange">
+            <div class="catalog-card-header">
+              <span class="catalog-title">Google ADK (Agent Development Kit)</span>
+              <span class="catalog-badge status-approved">Aprovado</span>
+            </div>
+            <div class="catalog-module">Módulo: Orchestration</div>
+            <div class="catalog-desc">O backbone de orquestração de agentes. Controla o fluxo de raciocínio, chamadas de ferramentas e delegação entre agentes cognitivos.</div>
+            <div class="catalog-footer">
+              <span class="catalog-license">Apache 2.0</span>
+            </div>
+          </div>
+          
+          <div class="arch-node catalog-card theme-orange">
+            <div class="catalog-card-header">
+              <span class="catalog-title">NeMo Guardrails</span>
+              <span class="catalog-badge status-evaluating">Em Avaliação</span>
+            </div>
+            <div class="catalog-module">Módulo: Safety</div>
+            <div class="catalog-desc">Toolkit da NVIDIA para adicionar restrições programáveis e barreiras de segurança a agentes baseados em LLMs, vital para conformidade clínica.</div>
+            <div class="catalog-footer">
+              <span class="catalog-license">Apache 2.0</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </main>
+  
+  <!-- Medical Knowledge View -->
+  <main class="architecture-container" id="medicalKnowledgeContainer" style="display: none;">
+    <div class="architecture-content">
+      <div class="arch-header">
+        <h1 class="arch-title" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><span style="font-size: 1.5em;">🧠</span> Medical Knowledge Layer</h1>
+        <p class="arch-subtitle">Origem da Inteligência Clínica</p>
+      </div>
+
+      <div class="arch-layer theme-blue" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Objetivo</div>
+        <p style="margin-bottom: 16px;">Esta aba representa a camada de conhecimento médico da plataforma Astera.</p>
+        <p style="margin-bottom: 16px;">Diferente dos Cognitive Modules, que processam informações, ou dos Open Source AI Modules, que executam capacidades especializadas, esta camada representa a origem do conhecimento utilizado durante o raciocínio clínico.</p>
+        <p style="margin-bottom: 16px;">O Astera não toma decisões apenas utilizando modelos de linguagem.</p>
+        <p>O Astera fundamenta seu raciocínio em bases oficiais, literatura científica, terminologias padronizadas e protocolos institucionais.</p>
+      </div>
+
+      <div class="arch-layer theme-purple" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Filosofia</div>
+        <p style="margin-bottom: 12px;">Modelos de IA não possuem conhecimento oficial.</p>
+        <p style="margin-bottom: 12px;">Eles apenas raciocinam sobre o contexto recebido.</p>
+        <p style="margin-bottom: 12px;">O conhecimento utilizado pelo Astera deve possuir origem conhecida, rastreabilidade e versionamento.</p>
+        <p>Toda resposta clínica deverá poder ser relacionada às fontes que fundamentaram sua construção.</p>
+      </div>
+
+      <div class="arch-layer theme-amber" style="margin-bottom: 24px;">
+        <div class="arch-layer-header">Fontes de Conhecimento</div>
+        <div class="arch-grid-3">
+          <div class="arch-node catalog-card theme-amber">
+            <div class="catalog-card-header"><span class="catalog-title">Oficial Brasileiro</span></div>
+            <div class="catalog-desc">Ministério da Saúde, SUS, CONITEC, ANVISA, CFM, ANS, PCDT, Diretrizes Terapêuticas.</div>
+          </div>
+          <div class="arch-node catalog-card theme-amber">
+            <div class="catalog-card-header"><span class="catalog-title">Internacional</span></div>
+            <div class="catalog-desc">WHO, ICD-11, SNOMED CT, LOINC, RxNorm, HL7 FHIR, NICE, CDC.</div>
+          </div>
+          <div class="arch-node catalog-card theme-amber">
+            <div class="catalog-card-header"><span class="catalog-title">Literatura Científica</span></div>
+            <div class="catalog-desc">PubMed, SciELO, Cochrane, Guidelines, Ensaios Clínicos.</div>
+          </div>
+          <div class="arch-node catalog-card theme-amber">
+            <div class="catalog-card-header"><span class="catalog-title">Protocolos Institucionais</span></div>
+            <div class="catalog-desc">Fluxos Assistenciais, Diretrizes Internas, Checklists, Templates.</div>
+          </div>
+          <div class="arch-node catalog-card theme-amber">
+            <div class="catalog-card-header"><span class="catalog-title">Conhecimento Profissional</span></div>
+            <div class="catalog-desc">Preferências, Especialidade, Atalhos, Modelos de Documento.</div>
+          </div>
+          <div class="arch-node catalog-card theme-amber">
+            <div class="catalog-card-header"><span class="catalog-title">Conhecimento Paciente</span></div>
+            <div class="catalog-desc">Histórico, Evoluções, Exames, Medicamentos, Alergias, Timeline.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-layer theme-green" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Pipeline de Processamento & Recuperação</div>
+        
+        <h3 class="arch-group-title theme-green-text" style="margin-bottom: 12px;">Knowledge Processing</h3>
+        <pre style="background: rgba(0,0,0,0.2); padding: 16px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #34d399; overflow-x: auto; margin-bottom: 24px;">Fonte → Parser → Normalização → Metadados → Chunk → Embeddings → Versionamento → Validação → Indexação → Knowledge Store</pre>
+        
+        <h3 class="arch-group-title theme-green-text" style="margin-bottom: 12px;">Knowledge Retrieval</h3>
+        <pre style="background: rgba(0,0,0,0.2); padding: 16px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #34d399; overflow-x: auto; margin-bottom: 24px;">Pergunta → Retriever → Filtros → Ranking → Reranker → Contexto → Google ADK → LLM</pre>
+
+        <h3 class="arch-group-title theme-green-text" style="margin-bottom: 12px;">Rastreabilidade</h3>
+        <pre style="background: rgba(0,0,0,0.2); padding: 16px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #34d399; overflow-x: auto;">Resposta → Guideline → PubMed → PCDT → Consulta Anterior → Paciente</pre>
+      </div>
+
+      <div class="arch-layer theme-rose" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Integração & Arquitetura</div>
+        <p style="margin-bottom: 12px;">Os Cognitive Modules nunca acessam diretamente as bases, garantindo total desacoplamento. Eles solicitam conhecimento ao Knowledge Service.</p>
+        <pre style="background: rgba(0,0,0,0.2); padding: 16px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #fb7185; overflow-x: auto; margin-bottom: 24px;">Evidence Module → Knowledge Service → Medical Knowledge Layer → Knowledge Retrieval → Resposta</pre>
+        <p style="margin-bottom: 12px;">O modelo de linguagem e os Open Source AI Modules não executam conhecimento. A <strong>Medical Knowledge Layer</strong> fornece conhecimento; os módulos executam capacidades. O modelo recebe apenas o contexto preparado pelo Runtime.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Infraestrutura View -->
+  <main class="architecture-container" id="infraContainer" style="display: none;">
+    <div class="architecture-content">
+      <div class="arch-header">
+        <h1 class="arch-title" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><span style="font-size: 1.5em;">🏗️</span> Infrastructure Architecture</h1>
+        <p class="arch-subtitle">Componentes Físicos da Plataforma</p>
+      </div>
+
+      <div class="arch-layer theme-blue" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Objetivo</div>
+        <p style="margin-bottom: 16px;">Esta visualização representa toda a infraestrutura física oficial da plataforma Astera.</p>
+        <p style="margin-bottom: 16px;">Aqui documentamos onde o Astera executa, os bancos de dados utilizados, como ocorre a comunicação entre os componentes e a fundação técnica da plataforma.</p>
+      </div>
+
+      <div class="arch-layer theme-purple" style="margin-bottom: 24px;">
+        <div class="arch-layer-header">Infrastructure & Orchestration</div>
+        <div class="arch-grid-3">
+          <div class="arch-node catalog-card theme-purple">
+            <div class="catalog-card-header"><span class="catalog-title">Kubernetes Cluster</span></div>
+            <div class="catalog-desc">Orquestração de todos os serviços da plataforma. Hospeda o Runtime, Gateway e agentes cognitivos. Escalabilidade automática baseada em carga.</div>
+          </div>
+          <div class="arch-node catalog-card theme-purple">
+            <div class="catalog-card-header"><span class="catalog-title">Astera Runtime (Pods)</span></div>
+            <div class="catalog-desc">Serviços escaláveis que executam o núcleo da plataforma e a API Layer para clientes externos e Desktop.</div>
+          </div>
+          <div class="arch-node catalog-card theme-purple">
+            <div class="catalog-card-header"><span class="catalog-title">NATS (Event Bus)</span></div>
+            <div class="catalog-desc">Mensageria de altíssima performance para comunicação assíncrona entre módulos, agentes e o Runtime.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-layer theme-orange" style="margin-bottom: 24px;">
+        <div class="arch-layer-header">Persistência & Dados</div>
+        <div class="arch-grid-3">
+          <div class="arch-node catalog-card theme-orange">
+            <div class="catalog-card-header"><span class="catalog-title">PostgreSQL (Relacional)</span></div>
+            <div class="catalog-desc">Banco de dados principal. Armazena dados transacionais, sessões, contexto clínico de pacientes e configurações globais.</div>
+          </div>
+          <div class="arch-node catalog-card theme-orange">
+            <div class="catalog-card-header"><span class="catalog-title">Qdrant / pgvector</span></div>
+            <div class="catalog-desc">Banco de dados vetorial para Retrieval (RAG) corporativo, busca de guidelines médicas e memória semântica.</div>
+          </div>
+          <div class="arch-node catalog-card theme-orange">
+            <div class="catalog-card-header"><span class="catalog-title">Redis / Valkey</span></div>
+            <div class="catalog-desc">Gerenciamento de estado de curto prazo, caching ultra-rápido, rate limiting e locks distribuídos para agentes.</div>
+          </div>
+          <div class="arch-node catalog-card theme-orange">
+            <div class="catalog-card-header"><span class="catalog-title">S3 / MinIO (Object Storage)</span></div>
+            <div class="catalog-desc">Armazenamento escalável de arquivos de áudio, imagens médicas (DICOM), laudos PDF e artefatos de IA.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-layer theme-green" style="margin-bottom: 24px;">
+        <div class="arch-layer-header">Cognitivo & Integrações</div>
+        <div class="arch-grid-3">
+          <div class="arch-node catalog-card theme-green">
+            <div class="catalog-card-header"><span class="catalog-title">Google ADK (Agent Runner)</span></div>
+            <div class="catalog-desc">Workers dedicados para execução de pipelines cognitivos, agentes autônomos e orquestração de raciocínio.</div>
+          </div>
+          <div class="arch-node catalog-card theme-green">
+            <div class="catalog-card-header"><span class="catalog-title">LLM Gateway (LiteLLM)</span></div>
+            <div class="catalog-desc">Proxy unificado para comunicação com modelos fundacionais externos (Gemini, Claude, GPT).</div>
+          </div>
+          <div class="arch-node catalog-card theme-green">
+            <div class="catalog-card-header"><span class="catalog-title">FHIR Gateway</span></div>
+            <div class="catalog-desc">Interface padronizada (HL7 FHIR) para troca de dados com sistemas hospitalares e EMRs legados.</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="arch-layer theme-gray">
+        <div class="arch-layer-header">Operação, Deploy & Suporte</div>
+        <div class="arch-grid-3">
+          <div class="arch-node catalog-card theme-gray">
+            <div class="catalog-card-header"><span class="catalog-title">Observability Stack</span></div>
+            <div class="catalog-desc">OpenTelemetry, Grafana e Prometheus para monitoramento de métricas, logs estruturados e tracing distribuído.</div>
+          </div>
+          <div class="arch-node catalog-card theme-gray">
+            <div class="catalog-card-header"><span class="catalog-title">Auth Gateway (Keycloak)</span></div>
+            <div class="catalog-desc">Gerenciamento de identidades, Single Sign-On (SSO) e segurança de acesso à plataforma.</div>
+          </div>
+          <div class="arch-node catalog-card theme-gray">
+            <div class="catalog-card-header"><span class="catalog-title">GitOps (ArgoCD)</span></div>
+            <div class="catalog-desc">Pipeline de Continuous Deployment (CD) gerenciando infraestrutura como código diretamente do repositório Git.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Cloud Strategy View -->
+  <main class="architecture-container" id="cloudContainer" style="display: none;">
+    <div class="architecture-content">
+      <div class="arch-header">
+        <h1 class="arch-title" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><span style="font-size: 1.5em;">☁️</span> Cloud Strategy</h1>
+        <p class="arch-subtitle">Decisão Arquitetural (ADR) da Plataforma</p>
+      </div>
+
+      <div class="arch-layer theme-blue" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Objetivo</div>
+        <p style="margin-bottom: 16px;">Este documento define oficialmente a estratégia de infraestrutura da plataforma Astera.</p>
+        <p style="margin-bottom: 16px;">Ele estabelece como a plataforma será implantada, quais tecnologias fazem parte da infraestrutura oficial e quais princípios deverão ser seguidos durante toda a evolução do projeto.</p>
+        <p>Este documento representa uma <strong>decisão arquitetural (ADR)</strong> da plataforma.</p>
+      </div>
+
+      <div class="arch-layer theme-purple" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Visão & Princípio Fundamental</div>
+        
+        <h3 class="arch-group-title theme-purple-text" style="margin-bottom: 12px;">Visão</h3>
+        <p style="margin-bottom: 12px;">O Astera é uma plataforma <strong>Cloud First</strong>.</p>
+        <p style="margin-bottom: 12px;">Toda a inteligência da plataforma será executada na infraestrutura da Astera Cloud.</p>
+        <p style="margin-bottom: 12px;">O Desktop é apenas a experiência do usuário.</p>
+        <p style="margin-bottom: 24px;">Toda computação acontece na nuvem.</p>
+        
+        <h3 class="arch-group-title theme-purple-text" style="margin-bottom: 12px;">Princípio Fundamental</h3>
+        <p style="margin-bottom: 12px; font-weight: 600;">O Astera deve ser independente do provedor de nuvem.</p>
+        <p style="margin-bottom: 12px;">A plataforma poderá ser hospedada inicialmente na AWS.</p>
+        <p style="margin-bottom: 12px;">Entretanto, o Runtime nunca poderá depender de serviços proprietários específicos quando existir uma alternativa Open Source madura.</p>
+        <p>A arquitetura deve permanecer portável.</p>
+      </div>
+
+      <div class="arch-layer theme-orange" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Filosofia & Estratégia</div>
+        
+        <h3 class="arch-group-title theme-orange-text" style="margin-bottom: 12px;">Filosofia</h3>
+        <p style="margin-bottom: 12px;">O usuário nunca deve saber:</p>
+        <ul style="margin-bottom: 16px; padding-left: 20px; color: var(--text-secondary); line-height: 1.8;">
+          <li>onde a plataforma está rodando;</li>
+          <li>qual servidor está sendo utilizado;</li>
+          <li>qual GPU executou a IA;</li>
+          <li>qual LLM respondeu;</li>
+          <li>qual projeto Open Source foi utilizado;</li>
+          <li>qual provedor de infraestrutura está hospedando o sistema.</li>
+        </ul>
+        <p style="margin-bottom: 24px;">Toda essa responsabilidade pertence exclusivamente ao Astera.</p>
+
+        <h3 class="arch-group-title theme-orange-text" style="margin-bottom: 12px;">Estratégia</h3>
+        <p style="margin-bottom: 12px;">A AWS será utilizada como infraestrutura. Não como plataforma proprietária.</p>
+        <p>Isso significa que utilizaremos a infraestrutura da AWS sempre que fizer sentido, mantendo o núcleo do Astera completamente desacoplado.</p>
+      </div>
+
+      <div class="arch-layer theme-green" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Arquitetura Lógica vs Física</div>
+        
+        <h3 class="arch-group-title theme-green-text" style="margin-bottom: 12px;">Arquitetura Lógica</h3>
+        <p style="margin-bottom: 12px;">A arquitetura lógica nunca muda. Essa arquitetura é independente da nuvem.</p>
+        <pre style="background: rgba(0,0,0,0.2); padding: 16px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.5; color: #4ade80; margin-bottom: 24px; overflow-x: auto;">Desktop
+↓
+API
+↓
+Astera Runtime
+↓
+Google ADK
+↓
+Cognitive Services
+↓
+Open Source AI Modules
+↓
+LiteLLM
+↓
+LLMs</pre>
+        
+        <h3 class="arch-group-title theme-green-text" style="margin-bottom: 12px;">Arquitetura Física</h3>
+        <p style="margin-bottom: 12px;">A primeira infraestrutura oficial será a AWS.</p>
+        <pre style="background: rgba(0,0,0,0.2); padding: 16px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.5; color: #4ade80; overflow-x: auto;">AWS
+↓
+Kubernetes
+↓
+Astera Runtime
+↓
+Google ADK
+↓
+NATS
+↓
+PostgreSQL
+↓
+Redis
+↓
+Qdrant
+↓
+Object Storage
+↓
+Observabilidade</pre>
+      </div>
+
+      <div class="arch-layer theme-rose" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Serviços Oficiais & Cloud Agnostic</div>
+        
+        <div class="arch-grid-3" style="margin-bottom: 24px; text-align: left;">
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start;">
+            <strong class="theme-rose-text" style="margin-bottom: 8px;">Kubernetes</strong>
+            <span style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">Execução dos containers</span>
+            <span style="font-size: 12px; color: #d1d5db;">Inicialmente: Amazon EKS<br>Futuro: Qualquer Kubernetes</span>
+          </div>
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start;">
+            <strong class="theme-rose-text" style="margin-bottom: 8px;">Banco Relacional</strong>
+            <span style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">PostgreSQL</span>
+            <span style="font-size: 12px; color: #d1d5db;">Pode ser: RDS ou Self Hosted</span>
+          </div>
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start;">
+            <strong class="theme-rose-text" style="margin-bottom: 8px;">Cache</strong>
+            <span style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">Redis</span>
+            <span style="font-size: 12px; color: #d1d5db;">Pode ser: Elasticache ou Container próprio</span>
+          </div>
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start;">
+            <strong class="theme-rose-text" style="margin-bottom: 8px;">Banco Vetorial</strong>
+            <span style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">Qdrant</span>
+            <span style="font-size: 12px; color: #d1d5db;">Container oficial da plataforma</span>
+          </div>
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start;">
+            <strong class="theme-rose-text" style="margin-bottom: 8px;">Mensageria</strong>
+            <span style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">NATS</span>
+            <span style="font-size: 12px; color: #d1d5db;">Barramento oficial de eventos</span>
+          </div>
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start;">
+            <strong class="theme-rose-text" style="margin-bottom: 8px;">Storage</strong>
+            <span style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">Object Storage</span>
+            <span style="font-size: 12px; color: #d1d5db;">Preferencialmente Amazon S3.<br>Futuro: MinIO, Azure Blob, GCS</span>
+          </div>
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start;">
+            <strong class="theme-rose-text" style="margin-bottom: 8px;">Observabilidade</strong>
+            <span style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">Executados em containers</span>
+            <span style="font-size: 12px; color: #d1d5db;">OpenTelemetry, Grafana, Prometheus, Loki, Langfuse</span>
+          </div>
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start;">
+            <strong class="theme-rose-text" style="margin-bottom: 8px;">LLM Gateway</strong>
+            <span style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">LiteLLM</span>
+            <span style="font-size: 12px; color: #d1d5db;">Roteamento inteligente entre modelos</span>
+          </div>
+          <div class="arch-node" style="flex-direction: column; align-items: flex-start;">
+            <strong class="theme-rose-text" style="margin-bottom: 8px;">Runtime</strong>
+            <span style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">Google ADK</span>
+            <span style="font-size: 12px; color: #d1d5db;">Nunca exposto ao restante da plataforma</span>
+          </div>
+        </div>
+
+        <h3 class="arch-group-title theme-rose-text" style="margin-bottom: 12px;">Abstrações (Cloud Agnostic)</h3>
+        <p style="margin-bottom: 12px;">Todo componente deverá depender apenas de abstrações. Nunca de implementações específicas.</p>
+        <div style="display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap;">
+          <pre style="flex: 1; background: rgba(0,0,0,0.2); padding: 16px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #fb7185; margin: 0; min-width: 250px; overflow-x: auto;">Object Storage
+↓
+Interface
+↓
+S3 ou MinIO ou Azure Blob ou GCS</pre>
+          <pre style="flex: 1; background: rgba(0,0,0,0.2); padding: 16px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #fb7185; margin: 0; min-width: 250px; overflow-x: auto;">Secrets
+↓
+Interface
+↓
+AWS Secrets ou Vault ou Azure Key Vault</pre>
+        </div>
+        <p style="margin-bottom: 12px;"><strong>A troca do provedor nunca poderá impactar o Runtime.</strong></p>
+      </div>
+
+      <div class="arch-layer theme-amber" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Desenvolvimento Local & AWS</div>
+        
+        <h3 class="arch-group-title theme-amber-text" style="margin-bottom: 12px;">Serviços AWS</h3>
+        <p style="margin-bottom: 12px;">Os serviços da AWS deverão ser utilizados apenas quando agregarem valor operacional claro (Ex: Amazon S3, AWS Secrets Manager, Amazon EKS).</p>
+        <p style="margin-bottom: 12px;">O uso de serviços <strong>altamente acoplados deverá ser evitado</strong> (Ex: Lambda, DynamoDB, EventBridge, Cognito, Step Functions). Só poderão ser adotados após análise arquitetural.</p>
+        
+        <h3 class="arch-group-title theme-amber-text" style="margin-top: 24px; margin-bottom: 12px;">Ambiente Local Oficial</h3>
+        <p style="margin-bottom: 12px;">O ambiente local deve reproduzir a infraestrutura de produção. Toda a plataforma deverá subir utilizando Docker Compose.</p>
+        <pre style="background: rgba(0,0,0,0.2); padding: 16px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.5; color: #fbbf24; margin-bottom: 16px; overflow-x: auto;">Docker Compose
+↓
+Astera Runtime → PostgreSQL → Redis → Qdrant → NATS → MinIO → Grafana → Langfuse → Mailpit</pre>
+        
+        <p style="margin-bottom: 12px;"><strong>LocalStack</strong> será utilizado apenas para desenvolvimento (simular S3, Secrets Manager, IAM). Nunca faz parte da arquitetura de produção.</p>
+      </div>
+
+      <div class="arch-layer theme-gray" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Princípios Arquiteturais & Benefícios</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-bottom: 24px;">
+          <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+            <strong style="color: #fff; display: block; margin-bottom: 8px;">☁️ Cloud First</strong>
+            <span style="font-size: 13px; color: #d1d5db;">Toda inteligência executa na Astera Cloud.</span>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+            <strong style="color: #fff; display: block; margin-bottom: 8px;">🔌 Cloud Agnostic</strong>
+            <span style="font-size: 13px; color: #d1d5db;">O Runtime nunca depende diretamente de um provedor específico.</span>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+            <strong style="color: #fff; display: block; margin-bottom: 8px;">🏗️ Infrastructure as Code</strong>
+            <span style="font-size: 13px; color: #d1d5db;">Toda infraestrutura deverá ser reproduzível.</span>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+            <strong style="color: #fff; display: block; margin-bottom: 8px;">📦 Container First</strong>
+            <span style="font-size: 13px; color: #d1d5db;">Todos os serviços oficiais deverão possuir imagens Docker.</span>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+            <strong style="color: #fff; display: block; margin-bottom: 8px;">⚡ Event Driven</strong>
+            <span style="font-size: 13px; color: #d1d5db;">Toda comunicação interna utiliza NATS.</span>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+            <strong style="color: #fff; display: block; margin-bottom: 8px;">🔓 Open Source First</strong>
+            <span style="font-size: 13px; color: #d1d5db;">Sempre priorizar soluções Open Source maduras. Serviços proprietários só com grande vantagem.</span>
+          </div>
+        </div>
+        
+        <h3 class="arch-group-title theme-gray-text" style="margin-bottom: 12px; color: #e5e7eb;">Benefícios</h3>
+        <ul style="margin-bottom: 24px; padding-left: 20px; color: #9ca3af; line-height: 1.6; font-size: 14px;">
+          <li>Baixo acoplamento e redução de vendor lock-in.</li>
+          <li>Facilidade de migração entre provedores e evolução tecnológica contínua.</li>
+          <li>Melhor previsibilidade operacional.</li>
+          <li>Ambiente local semelhante ao ambiente de produção.</li>
+          <li>Atualizações transparentes para o usuário.</li>
+        </ul>
+
+        <h3 class="arch-group-title theme-gray-text" style="margin-bottom: 12px; color: #fff;">Objetivo Final</h3>
+        <p style="margin-bottom: 12px; color: #d1d5db;">O Astera deve oferecer uma infraestrutura moderna, escalável e preparada para crescimento, mantendo total independência arquitetural.</p>
+        <p style="color: #d1d5db;">A AWS será a primeira infraestrutura oficial. Entretanto, a arquitetura permanecerá portável, desacoplada e preparada para executar em qualquer ambiente compatível com containers e Kubernetes, garantindo longevidade e evolução sem comprometer seu núcleo.</p>
+      </div>
+
+    </div>
+  </main>
+  
+  <!-- Architecture View -->
+  <main class="architecture-container" id="architectureContainer" style="display: none;">
+    <div class="architecture-content">
+      <div class="arch-header">
+        <h1 class="arch-title">Runtime Architecture</h1>
+        <p class="arch-subtitle">Astera Platform Execution View</p>
+      </div>
+
+      <!-- Experience Layer -->
+      <div class="arch-layer theme-blue">
+        <div class="arch-layer-header">Experience Layer</div>
+        <div class="arch-flow-row">
+          <div class="arch-node">Astera Connect</div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-node">Deno Desktop</div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-node">React</div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-node">TypeScript</div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-node">A2UI Renderer</div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-node">Clinical Workspace</div>
+        </div>
+      </div>
+
+      <div class="arch-flow-down">↓</div>
+
+      <!-- API Layer -->
+      <div class="arch-layer theme-gray">
+        <div class="arch-layer-header">API Layer</div>
+        <div class="arch-flow-row">
+          <div class="arch-node node-highlight">FastAPI</div>
+        </div>
+      </div>
+
+      <div class="arch-flow-down">↓</div>
+
+      <!-- Astera Runtime -->
+      <div class="arch-layer theme-purple arch-runtime-box">
+        <div class="arch-layer-header">Astera Runtime</div>
+        
+        <div class="arch-runtime-split">
+          <!-- Cognitive Modules -->
+          <div class="arch-module-group">
+            <h3 class="arch-group-title theme-green-text">Cognitive Modules</h3>
+            <div class="arch-grid-2">
+              <div class="arch-node module-node theme-green" data-id="arch_evidence" onclick="openSmartPanel(getArchNodeData('arch_evidence'))">Evidence Module</div>
+              <div class="arch-node module-node theme-green" data-id="arch_correlation" onclick="openSmartPanel(getArchNodeData('arch_correlation'))">Correlation Module</div>
+              <div class="arch-node module-node theme-green" data-id="arch_understanding" onclick="openSmartPanel(getArchNodeData('arch_understanding'))">Understanding Module</div>
+              <div class="arch-node module-node theme-green" data-id="arch_knowledge" onclick="openSmartPanel(getArchNodeData('arch_knowledge'))">Knowledge Module</div>
+              <div class="arch-node module-node theme-green" data-id="arch_representation" onclick="openSmartPanel(getArchNodeData('arch_representation'))">Representation Module</div>
+            </div>
+          </div>
+          
+          <!-- Platform Modules -->
+          <div class="arch-module-group">
+            <h3 class="arch-group-title theme-orange-text">Platform Modules</h3>
+            <div class="arch-grid-2">
+              <div class="arch-node module-node theme-orange" data-id="arch_memory" onclick="openSmartPanel(getArchNodeData('arch_memory'))">Memory Module</div>
+              <div class="arch-node module-node theme-orange" data-id="arch_orchestration" onclick="openSmartPanel(getArchNodeData('arch_orchestration'))">Orchestration Module</div>
+              <div class="arch-node module-node theme-orange" data-id="arch_persistence" onclick="openSmartPanel(getArchNodeData('arch_persistence'))">Persistence Module</div>
+              <div class="arch-node module-node theme-orange" data-id="arch_integration" onclick="openSmartPanel(getArchNodeData('arch_integration'))">Integration Module</div>
+              <div class="arch-node module-node theme-orange" data-id="arch_security" onclick="openSmartPanel(getArchNodeData('arch_security'))">Security Module</div>
+              <div class="arch-node module-node theme-orange" data-id="arch_observability" onclick="openSmartPanel(getArchNodeData('arch_observability'))">Observability Module</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="arch-flow-down">↕</div>
+
+        <!-- NATS Event Bus -->
+        <div class="arch-bus theme-yellow">
+          <span class="bus-icon">⚡</span> NATS Event Bus
+        </div>
+
+        <div class="arch-flow-down">↕</div>
+
+        <!-- Google ADK Runtime -->
+        <div class="arch-adk theme-cyan">
+          <div class="arch-node node-highlight">Google ADK Runtime</div>
+          <p class="arch-adk-legend">Runtime utilizado internamente pelos módulos cognitivos.</p>
+        </div>
+
+        <div class="arch-flow-down">↕</div>
+
+        <!-- Cognitive Services -->
+        <div class="arch-adk theme-pink">
+          <div class="arch-node node-highlight" style="background: rgba(236, 72, 153, 0.1); border-color: rgba(236, 72, 153, 0.3); color: #fce7f3;">Cognitive Services ⭐</div>
+          <div class="arch-flow-row arch-wrap" style="margin-top: 12px; gap: 8px;">
+            <div class="arch-node" style="font-size: 11px; padding: 4px 8px;">Speech</div>
+            <div class="arch-node" style="font-size: 11px; padding: 4px 8px;">Vision</div>
+            <div class="arch-node" style="font-size: 11px; padding: 4px 8px;">OCR</div>
+            <div class="arch-node" style="font-size: 11px; padding: 4px 8px;">Search</div>
+            <div class="arch-node" style="font-size: 11px; padding: 4px 8px;">FHIR</div>
+            <div class="arch-node" style="font-size: 11px; padding: 4px 8px;">TTS</div>
+            <div class="arch-node" style="font-size: 11px; padding: 4px 8px;">NLP</div>
+            <div class="arch-node" style="font-size: 11px; padding: 4px 8px;">Embed</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-flow-down">↓</div>
+
+      <!-- LLM Gateway -->
+      <div class="arch-layer theme-gray">
+        <div class="arch-layer-header">LLM Gateway</div>
+        <div class="arch-flow-row">
+          <div class="arch-node node-highlight">LiteLLM</div>
+        </div>
+      </div>
+
+      <div class="arch-flow-down">↓</div>
+
+      <!-- AI Models -->
+      <div class="arch-layer theme-gray">
+        <div class="arch-layer-header">AI Models</div>
+        <div class="arch-flow-row arch-wrap">
+          <div class="arch-node">Gemini</div>
+          <div class="arch-node">GPT</div>
+          <div class="arch-node">Claude</div>
+          <div class="arch-node">Grok</div>
+          <div class="arch-node">OpenRouter</div>
+          <div class="arch-node">Ollama</div>
+          <div class="arch-node">Local Models</div>
+        </div>
+      </div>
+
+      <div class="arch-flow-down">↓</div>
+
+      <!-- Infraestrutura -->
+      <div class="arch-layer theme-gray">
+        <div class="arch-layer-header">Infraestrutura</div>
+        <div class="arch-flow-row arch-wrap">
+          <div class="arch-node"><span class="icon">🐘</span> PostgreSQL</div>
+          <div class="arch-node"><span class="icon">🔍</span> Qdrant</div>
+          <div class="arch-node"><span class="icon">⚡</span> Redis</div>
+          <div class="arch-node"><span class="icon">🪣</span> MinIO</div>
+          <div class="arch-node"><span class="icon">📡</span> OpenTelemetry</div>
+          <div class="arch-node"><span class="icon">🔬</span> Langfuse</div>
+          <div class="arch-node"><span class="icon">📊</span> Grafana</div>
+          <div class="arch-node"><span class="icon">🐳</span> Docker</div>
+        </div>
+      </div>
+      
+      <!-- Legend -->
+      <div class="arch-legend-box">
+        <div class="legend-item"><span class="dot theme-blue"></span> Experience Layer</div>
+        <div class="legend-item"><span class="dot theme-purple"></span> Runtime</div>
+        <div class="legend-item"><span class="dot theme-green"></span> Cognitive Modules</div>
+        <div class="legend-item"><span class="dot theme-orange"></span> Platform Modules</div>
+        <div class="legend-item"><span class="dot theme-yellow"></span> Mensageria</div>
+        <div class="legend-item"><span class="dot theme-gray"></span> Infraestrutura</div>
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- Architecture Decisions View -->
+  <main class="architecture-container" id="adrContainer" style="display: none;">
+    <div class="architecture-content">
+      <div class="arch-header">
+        <h1 class="arch-title" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><span style="font-size: 1.5em;">🏛️</span> Architecture Decisions (ADR)</h1>
+        <p class="arch-subtitle">Painel de Controle da Arquitetura</p>
+      </div>
+
+      <div class="arch-layer theme-blue" style="margin-bottom: 24px; text-align: left;">
+        <div class="arch-layer-header">Objetivo</div>
+        <p style="margin-bottom: 16px;">Esta aba representa o conjunto oficial de decisões arquiteturais da plataforma Astera.</p>
+        <p style="margin-bottom: 16px;">Cada item listado nesta página foi analisado, discutido e aprovado durante o processo de arquitetura da plataforma.</p>
+        <p style="margin-bottom: 16px;">Essas decisões formam a base técnica do Astera e somente poderão ser alteradas através de uma nova Architecture Decision Record (ADR).</p>
+        <p>O objetivo desta aba é evitar rediscussões, garantir consistência arquitetural e acelerar a evolução da plataforma.</p>
+      </div>
+
+      <div class="arch-layer theme-purple" style="margin-bottom: 24px;">
+        <div class="arch-layer-header">Status da Arquitetura</div>
+        <div class="arch-grid-2">
+          <div class="arch-node catalog-card theme-purple">
+            <div class="catalog-card-header"><span class="catalog-title">Architecture Version</span></div>
+            <div class="catalog-desc" style="font-size: 1.2rem; font-weight: 600; text-align: center; margin-top: 10px;">v1.0</div>
+          </div>
+          <div class="arch-node catalog-card theme-green">
+            <div class="catalog-card-header"><span class="catalog-title">Status</span></div>
+            <div class="catalog-desc" style="font-size: 1.2rem; font-weight: 600; text-align: center; margin-top: 10px;">🟢 Foundation Complete</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-layer theme-amber" style="margin-bottom: 24px;">
+        <div class="arch-layer-header">Princípios da Plataforma</div>
+        <div class="arch-grid-3">
+          <div class="arch-node catalog-card theme-amber">
+            <div class="catalog-card-header"><span class="catalog-title">Cloud First & Agnostic</span></div>
+            <div class="catalog-desc">Toda a inteligência roda na Astera Cloud. A plataforma é projetada para ser Cloud Agnostic, sem lock-in em serviços proprietários, rodando via Kubernetes.</div>
+          </div>
+          <div class="arch-node catalog-card theme-amber">
+            <div class="catalog-card-header"><span class="catalog-title">Open Source by Design</span></div>
+            <div class="catalog-desc">Sempre que houver uma alternativa open source madura, ela deve ser priorizada. Modelos cognitivos são implementados via projetos open source desacoplados.</div>
+          </div>
+          <div class="arch-node catalog-card theme-amber">
+            <div class="catalog-card-header"><span class="catalog-title">Decoupled AI</span></div>
+            <div class="catalog-desc">O Runtime do Astera (Google ADK) é totalmente independente dos modelos de fundação. LLMs e ferramentas são intercambiáveis via interfaces comuns.</div>
+          </div>
+          <div class="arch-node catalog-card theme-amber">
+            <div class="catalog-card-header"><span class="catalog-title">Privacy & Security First</span></div>
+            <div class="catalog-desc">Arquitetura multi-tenant robusta. Dados de pacientes (PII) podem ser anonimizados e a plataforma deve suportar ambientes on-premise isolados se necessário.</div>
+          </div>
+          <div class="arch-node catalog-card theme-amber">
+            <div class="catalog-card-header"><span class="catalog-title">Event-Driven Architecture</span></div>
+            <div class="catalog-desc">A comunicação assíncrona entre módulos cognitivos e serviços da plataforma ocorre através de mensageria escalável (NATS).</div>
+          </div>
+          <div class="arch-node catalog-card theme-amber">
+            <div class="catalog-card-header"><span class="catalog-title">Evidence-Based Generation</span></div>
+            <div class="catalog-desc">Nenhum raciocínio clínico confia exclusivamente na memória paramétrica dos LLMs; todo conhecimento é rastreável e baseado na Medical Knowledge Layer.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Technology Catalog View -->
+  <main class="architecture-container" id="techCatalogContainer" style="display: none;">
+  </main>
+
+  <!-- Plugin Architecture View -->
+  <main class="architecture-container" id="pluginArchContainer" style="display: none;">
+  </main>
+
+  <!-- Runtime Lifecycle View -->
+  <main class="architecture-container" id="runtimeLifecycleContainer" style="display: none;">
+  </main>
+
+  <!-- Event Catalog View -->
+  <main class="architecture-container" id="eventCatalogContainer" style="display: none;">
+  </main>
+
+  <!-- API Contracts View -->
+  <main class="architecture-container" id="apiContractsContainer" style="display: none;">
+  </main>
+
+  <!-- Engineering Roadmap View -->
+  <main class="architecture-container" id="engineeringRoadmapContainer" style="display: none;">
+  </main>
+
+  <!-- ═══ SMART PANEL (replaces raw markdown modal) ═══ -->
+  <aside class="smart-panel" id="smartPanel">
+    <div class="panel-header">
+      <div class="panel-title-row">
+        <span class="panel-emoji" id="panelEmoji">📄</span>
+        <div class="panel-title-group">
+          <h2 class="panel-title" id="panelTitle">Título</h2>
+          <span class="panel-category" id="panelCategory">Fundacional</span>
+        </div>
+      </div>
+      <button class="panel-close" id="panelClose" aria-label="Fechar">✕</button>
+    </div>
+
+    <div class="panel-content" id="panelContent">
+      <!-- Summary -->
+      <section class="panel-section panel-summary" id="panelSummary">
+        <h3 class="section-label">O que é</h3>
+        <p class="summary-text" id="panelSummaryText"></p>
+      </section>
+
+      <!-- Purpose -->
+      <section class="panel-section panel-summary" id="panelPurpose">
+        <h3 class="section-label">Por que existe</h3>
+        <p class="summary-text" id="panelPurposeText"></p>
+      </section>
+
+      <!-- Users -->
+      <section class="panel-section panel-summary" id="panelUses" style="display: none;">
+        <h3 class="section-label">Quem utiliza</h3>
+        <p class="summary-text" id="panelUsesText"></p>
+      </section>
+
+      <!-- Depends -->
+      <section class="panel-section panel-summary" id="panelDepends" style="display: none;">
+        <h3 class="section-label">Quem depende (Impacto de mudança)</h3>
+        <p class="summary-text" id="panelDependsText"></p>
+      </section>
+      
+      <!-- Born -->
+      <section class="panel-section panel-summary" id="panelBorn" style="display: none;">
+        <h3 class="section-label">Quando nasce</h3>
+        <p class="summary-text" id="panelBornText"></p>
+      </section>
+
+      <!-- Creator -->
+      <section class="panel-section panel-summary" id="panelCreator" style="display: none;">
+        <h3 class="section-label">Quem cria</h3>
+        <p class="summary-text" id="panelCreatorText"></p>
+      </section>
+
+      <!-- Modifier -->
+      <section class="panel-section panel-summary" id="panelModifier" style="display: none;">
+        <h3 class="section-label">Quem altera</h3>
+        <p class="summary-text" id="panelModifierText"></p>
+      </section>
+
+      <!-- Inputs -->
+      <section class="panel-section panel-summary" id="panelInputs" style="display: none;">
+        <h3 class="section-label">Entradas</h3>
+        <ul class="summary-text" id="panelInputsList" style="margin: 0; padding-left: 20px;"></ul>
+      </section>
+
+      <!-- Outputs -->
+      <section class="panel-section panel-summary" id="panelOutputs" style="display: none;">
+        <h3 class="section-label">Saídas</h3>
+        <ul class="summary-text" id="panelOutputsList" style="margin: 0; padding-left: 20px;"></ul>
+      </section>
+
+      <!-- Examples -->
+      <section class="panel-section panel-summary" id="panelExamples" style="display: none;">
+        <h3 class="section-label">Exemplos</h3>
+        <ul class="summary-text" id="panelExamplesList" style="margin: 0; padding-left: 20px;"></ul>
+      </section>
+      
+      <!-- Anti Examples -->
+      <section class="panel-section panel-summary" id="panelAntiExamples" style="display: none;">
+        <h3 class="section-label">Anti-exemplos (O que não é)</h3>
+        <ul class="summary-text" id="panelAntiExamplesList" style="margin: 0; padding-left: 20px;"></ul>
+      </section>
+      
+      <!-- Implementation -->
+      <section class="panel-section panel-summary" id="panelImplementation" style="display: none;">
+        <h3 class="section-label">Implementação</h3>
+        <div class="summary-text" id="panelImplApis" style="display: none;"></div>
+        <div class="summary-text" id="panelImplClasses" style="display: none; margin-top: 4px;"></div>
+        <div class="summary-text" id="panelImplEventos" style="display: none; margin-top: 4px;"></div>
+      </section>
+
+      <!-- Metadata chips -->
+      <section class="panel-section panel-meta">
+        <div class="meta-grid" id="panelMetaGrid">
+          <!-- Filled by JS -->
+        </div>
+      </section>
+
+      <!-- Tags -->
+      <section class="panel-section panel-tags" id="panelTagsSection" style="display: none;">
+        <h3 class="section-label">Tags</h3>
+        <div class="tags-list" id="panelTagsList"></div>
+      </section>
+
+      <!-- Relations -->
+      <section class="panel-section panel-relations" id="panelRelations">
+        <h3 class="section-label">Relações</h3>
+        <div class="relations-list" id="panelRelationsList"></div>
+      </section>
+
+      <!-- Full doc button -->
+      <section class="panel-section panel-actions">
+        <button class="btn-open-docs" id="btnOpenDocs">
+          <span>Abrir documentação completa</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </section>
+    </div>
+  </aside>
+
+  <!-- ═══ FULL DOCUMENTATION MODAL ═══ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-icon" id="modalIcon">📄</span>
+          <h2 class="modal-title" id="modalTitle">Título</h2>
+        </div>
+        <div class="modal-header-actions">
+          <span class="modal-badge" id="modalBadge">Consolidado</span>
+          <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+        </div>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Minimap -->
+  <div class="minimap" id="minimap">
+    <div class="minimap-title">Mapa</div>
+    <div class="minimap-viewport" id="minimapViewport"></div>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="data.js"></script>
+  <script src="tech-catalog.js"></script>
+  <script src="plugin-arch.js"></script>
+  <script src="runtime-lifecycle.js"></script>
+  <script src="event-catalog.js"></script>
+  <script src="api-contracts.js"></script>
+  <script src="engineering-roadmap.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
