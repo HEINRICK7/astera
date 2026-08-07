@@ -1,96 +1,120 @@
 """
-Astera Domain Exceptions.
+Astera Kernel — Domain Exception Hierarchy.
 
-All exceptions in the Astera platform inherit from AsteraError.
-No module raises generic Python exceptions directly — always use domain exceptions.
+All Astera exceptions inherit from AsteraError.
+HTTP adapters catch these and map them to appropriate status codes.
 """
 from __future__ import annotations
 
+from apps.runtime.src.domain.value_objects import (
+    CapabilityType,
+    PluginName,
+    ProviderName,
+)
+
+
+# ── Root ──────────────────────────────────────────────────────────────────────
 
 class AsteraError(Exception):
-    """Base exception for all Astera platform errors."""
+    """Root exception for all Astera platform errors."""
 
     def __init__(self, message: str, code: str = "ASTERA_ERROR") -> None:
-        self.message = message
-        self.code = code
         super().__init__(message)
+        self.code = code
 
-    def __repr__(self) -> str:
-        return f"{self.__class__.__name__}(code={self.code!r}, message={self.message!r})"
+    @property
+    def message(self) -> str:
+        return str(self)
 
 
-# ── Runtime Exceptions ────────────────────────────────────────────────────────
-
-class RuntimeError(AsteraError):
-    """Raised when the Runtime encounters an unrecoverable state."""
-
-    def __init__(self, message: str) -> None:
-        super().__init__(message, code="RUNTIME_ERROR")
-
+# ── Kernel / Runtime ──────────────────────────────────────────────────────────
 
 class RuntimeNotReadyError(AsteraError):
-    """Raised when an operation is attempted before the Runtime is ready."""
-
     def __init__(self) -> None:
         super().__init__(
-            "The Astera Runtime is not ready. Ensure startup completed successfully.",
-            code="RUNTIME_NOT_READY",
+            "The Kernel is not ready to serve requests.",
+            code="KERNEL_NOT_READY",
         )
 
-
-# ── Configuration Exceptions ──────────────────────────────────────────────────
-
-class ConfigurationError(AsteraError):
-    """Raised when a configuration value is invalid or missing."""
-
-    def __init__(self, key: str, reason: str) -> None:
-        super().__init__(
-            f"Configuration error for key '{key}': {reason}",
-            code="CONFIG_ERROR",
-        )
-        self.key = key
-
-
-# ── Plugin Exceptions ─────────────────────────────────────────────────────────
-
-class PluginError(AsteraError):
-    """Base exception for plugin-related errors."""
-
-    def __init__(self, plugin_name: str, message: str) -> None:
-        super().__init__(f"Plugin '{plugin_name}': {message}", code="PLUGIN_ERROR")
-        self.plugin_name = plugin_name
-
-
-class PluginNotFoundError(PluginError):
-    """Raised when a requested plugin is not registered."""
-
-    def __init__(self, plugin_name: str) -> None:
-        super().__init__(plugin_name, "not found in the Plugin Registry.")
-        self.code = "PLUGIN_NOT_FOUND"
-
-
-class PluginAlreadyRegisteredError(PluginError):
-    """Raised when attempting to register a plugin that is already registered."""
-
-    def __init__(self, plugin_name: str) -> None:
-        super().__init__(plugin_name, "is already registered.")
-        self.code = "PLUGIN_ALREADY_REGISTERED"
-
-
-# ── Event Bus Exceptions ──────────────────────────────────────────────────────
 
 class EventBusError(AsteraError):
-    """Raised when the Event Bus encounters an error."""
-
-    def __init__(self, message: str) -> None:
-        super().__init__(message, code="EVENT_BUS_ERROR")
+    def __init__(self, detail: str) -> None:
+        super().__init__(f"Event Bus error: {detail}", code="EVENT_BUS_ERROR")
 
 
-class EventBusNotConnectedError(EventBusError):
-    """Raised when publishing/subscribing before the Event Bus is connected."""
+# ── Capability ────────────────────────────────────────────────────────────────
 
-    def __init__(self) -> None:
+class CapabilityNotFoundError(AsteraError):
+    def __init__(self, capability_type: CapabilityType) -> None:
         super().__init__(
-            "Event Bus is not connected. Ensure NATS connection was established during startup."
+            f"No provider registered for capability '{capability_type.value}'.",
+            code="CAPABILITY_NOT_FOUND",
         )
-        self.code = "EVENT_BUS_NOT_CONNECTED"
+        self.capability_type = capability_type
+
+
+class NoHealthyProviderError(AsteraError):
+    def __init__(
+        self,
+        capability_type: CapabilityType,
+        criteria=None,
+    ) -> None:
+        detail = f"No healthy provider found for capability '{capability_type.value}'"
+        if criteria and not criteria.is_empty():
+            detail += f" with the requested criteria."
+        super().__init__(detail, code="NO_HEALTHY_PROVIDER")
+        self.capability_type = capability_type
+        self.criteria = criteria
+
+
+# ── Provider ──────────────────────────────────────────────────────────────────
+
+class ProviderNotFoundError(AsteraError):
+    def __init__(self, provider: ProviderName) -> None:
+        super().__init__(
+            f"Provider '{provider}' is not registered in the ProviderRegistry.",
+            code="PROVIDER_NOT_FOUND",
+        )
+        self.provider = provider
+
+
+# ── Plugin ────────────────────────────────────────────────────────────────────
+
+class PluginNotFoundError(AsteraError):
+    def __init__(self, plugin: PluginName) -> None:
+        super().__init__(
+            f"Plugin '{plugin}' is not registered.",
+            code="PLUGIN_NOT_FOUND",
+        )
+        self.plugin = plugin
+
+
+class PluginLoadError(AsteraError):
+    def __init__(self, plugin: PluginName, reason: str) -> None:
+        super().__init__(
+            f"Failed to load plugin '{plugin}': {reason}",
+            code="PLUGIN_LOAD_ERROR",
+        )
+        self.plugin = plugin
+
+
+# ── Orchestration ─────────────────────────────────────────────────────────────
+
+class TaskExecutionError(AsteraError):
+    def __init__(self, request_id: str, reason: str) -> None:
+        super().__init__(
+            f"Task '{request_id}' failed: {reason}",
+            code="TASK_EXECUTION_ERROR",
+        )
+        self.request_id = request_id
+
+
+# ── Context ───────────────────────────────────────────────────────────────────
+
+class ContextNotFoundError(AsteraError):
+    def __init__(self, context_id: str) -> None:
+        super().__init__(
+            f"Context '{context_id}' not found.",
+            code="CONTEXT_NOT_FOUND",
+        )
+        self.context_id = context_id

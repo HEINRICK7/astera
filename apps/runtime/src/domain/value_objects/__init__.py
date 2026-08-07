@@ -1,16 +1,18 @@
 """
-Astera Runtime — Domain Value Objects.
+Astera Kernel — Domain Value Objects.
 
 Value objects are immutable and identity-free.
-Equality is determined by value, not reference.
 
-RuntimeState is the authoritative source of truth for the Kernel's lifecycle.
-Every observability component (Grafana, Langfuse, Health) reads from it.
+Key additions in this revision:
+    - ProviderName: typed identity for a Capability provider (Parakeet, Whisper, Azure…)
+    - SelectionCriteria: declarative constraints passed to select_best()
+      The Kernel selects the best Provider without the caller naming any Provider.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import Enum
+from typing import Sequence
 
 
 # ── Base ──────────────────────────────────────────────────────────────────────
@@ -24,54 +26,49 @@ class AsteraValueObject:
 
 class RuntimeState(str, Enum):
     """
-    Authoritative state machine for the Astera Kernel.
+    Authoritative state machine for the AsteraKernel.
 
     Transitions:
-        BOOTING → READY
-        BOOTING → FAILED          (startup error)
-        READY   → DEGRADED        (component becomes unhealthy)
-        READY   → STOPPING        (graceful shutdown signal)
-        DEGRADED → READY          (component recovered)
-        DEGRADED → STOPPING       (graceful shutdown signal)
+        BOOTING  → READY    (bootstrap complete)
+        BOOTING  → FAILED   (startup error)
+        READY    → DEGRADED (component unhealthy)
+        READY    → STOPPING (SIGTERM)
+        DEGRADED → READY    (component recovered)
+        DEGRADED → STOPPING (SIGTERM)
         STOPPING → STOPPED
-        STOPPING → FAILED         (shutdown error)
+        STOPPING → FAILED   (shutdown error)
 
-    Grafana, Langfuse, and Health endpoints all observe this state.
+    Every observability component reads this state:
+    Grafana · Langfuse · Kubernetes probes · Health endpoints
     """
 
-    BOOTING  = "booting"   # Kernel is executing the bootstrap sequence
-    READY    = "ready"     # Kernel is fully operational — accepts all traffic
-    DEGRADED = "degraded"  # Kernel is running but some component is unhealthy
-    STOPPING = "stopping"  # Kernel received shutdown signal — draining
-    STOPPED  = "stopped"   # Kernel has stopped cleanly
-    FAILED   = "failed"    # Kernel encountered an unrecoverable error
-
-    # ── Predicates ────────────────────────────────────────────────────────────
+    BOOTING  = "booting"
+    READY    = "ready"
+    DEGRADED = "degraded"
+    STOPPING = "stopping"
+    STOPPED  = "stopped"
+    FAILED   = "failed"
 
     def is_operational(self) -> bool:
-        """True when the Kernel can accept platform requests."""
         return self in {RuntimeState.READY, RuntimeState.DEGRADED}
 
     def is_healthy(self) -> bool:
-        """True only when fully healthy (no degraded components)."""
         return self == RuntimeState.READY
 
     def is_terminal(self) -> bool:
-        """True when the Kernel will not transition further."""
         return self in {RuntimeState.STOPPED, RuntimeState.FAILED}
 
     def is_shutting_down(self) -> bool:
         return self in {RuntimeState.STOPPING, RuntimeState.STOPPED}
 
     def can_accept_plugins(self) -> bool:
-        """True when the Plugin Registry can accept new registrations."""
         return self in {RuntimeState.BOOTING, RuntimeState.READY, RuntimeState.DEGRADED}
 
 
 # ── Health Status ─────────────────────────────────────────────────────────────
 
 class HealthStatus(str, Enum):
-    """Health status for any individual component in the platform."""
+    """Health status for any platform component or provider."""
 
     HEALTHY   = "healthy"
     DEGRADED  = "degraded"
@@ -86,52 +83,72 @@ class HealthStatus(str, Enum):
 
 class CapabilityType(str, Enum):
     """
-    Catalogue of known Capability types in the Astera platform.
+    Catalogue of all Capability types in the platform.
 
-    A Plugin offers one or more Capabilities from this catalogue.
-    The CapabilityRegistry indexes plugins by CapabilityType.
-
-    Example:
-        SpeechPlugin registers:
-            - CapabilityType.SPEECH_TRANSCRIPTION
-            - CapabilityType.SPEECH_STREAMING
-            - CapabilityType.SPEECH_DIARIZATION
-            - CapabilityType.SPEECH_LANGUAGE_DETECTION
+    The Kernel thinks in CapabilityTypes, never in Providers or Plugins.
+    When it needs speech transcription, it asks:
+        capability_registry.select_best(CapabilityType.SPEECH_TRANSCRIPTION, criteria)
     """
 
     # Speech
-    SPEECH_TRANSCRIPTION       = "speech.transcription"
-    SPEECH_STREAMING           = "speech.streaming"
-    SPEECH_DIARIZATION         = "speech.diarization"
-    SPEECH_LANGUAGE_DETECTION  = "speech.language_detection"
+    SPEECH_TRANSCRIPTION      = "speech.transcription"
+    SPEECH_STREAMING          = "speech.streaming"
+    SPEECH_DIARIZATION        = "speech.diarization"
+    SPEECH_LANGUAGE_DETECTION = "speech.language_detection"
 
     # Vision
-    VISION_OCR                 = "vision.ocr"
-    VISION_CLASSIFICATION      = "vision.classification"
+    VISION_OCR                = "vision.ocr"
+    VISION_CLASSIFICATION     = "vision.classification"
 
     # NLP
-    NLP_ENTITY_EXTRACTION      = "nlp.entity_extraction"
-    NLP_SUMMARIZATION          = "nlp.summarization"
-    NLP_CLASSIFICATION         = "nlp.classification"
+    NLP_ENTITY_EXTRACTION     = "nlp.entity_extraction"
+    NLP_SUMMARIZATION         = "nlp.summarization"
+    NLP_CLASSIFICATION        = "nlp.classification"
 
-    # Medical (Phase E)
-    MEDICAL_SOAP_GENERATION    = "medical.soap_generation"
-    MEDICAL_ICD_CODING         = "medical.icd_coding"
-    MEDICAL_DRUG_INTERACTION   = "medical.drug_interaction"
-    MEDICAL_TERMINOLOGY        = "medical.terminology"
+    # Medical (Phase E+)
+    MEDICAL_SOAP_GENERATION   = "medical.soap_generation"
+    MEDICAL_ICD_CODING        = "medical.icd_coding"
+    MEDICAL_DRUG_INTERACTION  = "medical.drug_interaction"
+    MEDICAL_TERMINOLOGY       = "medical.terminology"
 
-    # Platform
-    PLATFORM_ECHO              = "platform.echo"   # Used for integration testing
+    # Platform internal
+    PLATFORM_ECHO             = "platform.echo"
 
 
-# ── Plugin Identity ───────────────────────────────────────────────────────────
+# ── Provider & Plugin Identity ────────────────────────────────────────────────
+
+@dataclass(frozen=True)
+class ProviderName(AsteraValueObject):
+    """
+    Typed identity for a Capability provider.
+
+    A Provider is the concrete implementation (Parakeet, Whisper, Azure Speech).
+    Multiple Providers can implement the same CapabilityType.
+
+    Examples: 'parakeet', 'whisper-large-v3', 'azure-speech', 'deepgram-nova'
+    """
+
+    value: str
+
+    def __post_init__(self) -> None:
+        if not self.value:
+            raise ValueError("ProviderName cannot be empty.")
+        if not all(c.isalnum() or c in "-_." for c in self.value):
+            raise ValueError(
+                f"ProviderName '{self.value}' must contain only letters, digits, hyphens, underscores, or dots."
+            )
+
+    def __str__(self) -> str:
+        return self.value
+
 
 @dataclass(frozen=True)
 class PluginName(AsteraValueObject):
     """
-    Unique identifier for a plugin.
-    Allowed: lowercase letters, digits, hyphens.
-    Example: 'echo-plugin', 'speech-v1'.
+    Typed identity for a Plugin.
+
+    A Plugin HOSTS one or more Providers.
+    Example: 'speech-plugin' hosts providers Parakeet and Whisper.
     """
 
     value: str
@@ -150,7 +167,7 @@ class PluginName(AsteraValueObject):
 
 @dataclass(frozen=True)
 class PluginVersion(AsteraValueObject):
-    """Semantic version (MAJOR.MINOR.PATCH) for a Plugin or Capability."""
+    """Semantic version (MAJOR.MINOR.PATCH)."""
 
     major: int
     minor: int
@@ -168,3 +185,47 @@ class PluginVersion(AsteraValueObject):
 
     def __str__(self) -> str:
         return f"{self.major}.{self.minor}.{self.patch}"
+
+
+# ── Selection Criteria ────────────────────────────────────────────────────────
+
+@dataclass(frozen=True)
+class SelectionCriteria(AsteraValueObject):
+    """
+    Declarative constraints for select_best() in the CapabilityRegistry.
+
+    The caller declares WHAT they need. The Kernel picks WHO delivers it.
+    The caller NEVER names a Provider or Plugin.
+
+    Example:
+        criteria = SelectionCriteria(
+            language="pt-BR",
+            requires_streaming=True,
+            prefer_cpu=True,
+            max_latency_ms=200.0,
+        )
+        descriptor = capability_registry.select_best(
+            CapabilityType.SPEECH_TRANSCRIPTION,
+            criteria,
+        )
+    """
+
+    language: str | None = None               # e.g. "pt-BR", "en-US"
+    requires_streaming: bool = False
+    prefer_gpu: bool = False
+    prefer_cpu: bool = False
+    max_latency_ms: float | None = None
+    min_accuracy_score: float | None = None   # 0.0 – 1.0
+    requires_confidence_output: bool = False
+
+    def is_empty(self) -> bool:
+        """True when no constraints are set — any healthy provider qualifies."""
+        return not any([
+            self.language,
+            self.requires_streaming,
+            self.prefer_gpu,
+            self.prefer_cpu,
+            self.max_latency_ms,
+            self.min_accuracy_score,
+            self.requires_confidence_output,
+        ])

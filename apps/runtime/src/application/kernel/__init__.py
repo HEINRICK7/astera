@@ -1,38 +1,29 @@
 """
-Astera Kernel — The Platform Operating System.
+Astera Kernel — The Platform Operating System (v2).
 
-The AsteraKernel is NOT a server. It is NOT a service.
-It is the operating system of the Astera platform.
+Architecture (revised):
 
-Every capability (Speech, Vision, OCR, Medical NLP, Google ADK, etc.)
-exists only as an extension registered in this Kernel.
+    AsteraKernel (OS — lifecycle, state, subsystems)
+        ↓
+    TaskOrchestrator (operational brain — decides who runs what)
+        ↓
+    CapabilityRegistry (what the platform CAN do)
+        ↓
+    ProviderRegistry + PluginResolver (who does it, how to call them)
+        ↓
+    Plugin (the concrete implementation — Phase D)
 
-Bootstrap sequence:
-    BOOTING
-        → configure logging
-        → load configuration
-        → connect Event Bus
-        → initialize Context Manager
-        → initialize Plugin Registry
-        → initialize Capability Registry
-        → initialize Health Manager
-        → start Lifecycle Manager
-    READY
-        → API starts accepting requests
-        → Plugins can register capabilities
-        → ADK can query capabilities
-    [DEGRADED if any component fails health check]
-    STOPPING (on SIGTERM)
-        → drain in-flight requests
-        → stop plugins / unregister capabilities
-        → disconnect Event Bus
-    STOPPED
+KEY RULE: The Kernel does NOT know Plugins.
+    The Kernel knows Capabilities and Providers.
+    The TaskOrchestrator knows the Resolver.
+    The PluginResolver knows the Plugin instances.
 
-RuntimeState is the authoritative signal for:
-    - Grafana dashboards
-    - Langfuse observability
-    - Kubernetes probes
-    - Health endpoints
+When the ADK arrives in Phase D:
+    adk.transcribe(audio) →
+    orchestrator.execute(TaskIntent(SPEECH_TRANSCRIPTION, criteria)) →
+    select_best() → Parakeet →
+    plugin.invoke() → result
+    ZERO changes to the Kernel.
 """
 from __future__ import annotations
 
@@ -42,14 +33,15 @@ from datetime import datetime, timezone
 from typing import Any
 
 from apps.runtime.src.domain.value_objects import RuntimeState, HealthStatus
-from apps.runtime.src.domain.exceptions import RuntimeNotReadyError, EventBusError
+from apps.runtime.src.domain.exceptions import RuntimeNotReadyError
 from apps.runtime.src.ports.outbound import EventBusPort
 from apps.runtime.src.application.context import ContextManager
 from apps.runtime.src.application.capabilities import CapabilityRegistry
+from apps.runtime.src.application.providers import ProviderRegistry, PluginResolver
+from apps.runtime.src.application.orchestrator import TaskOrchestrator
 
 logger = logging.getLogger("astera.kernel")
 
-# Platform version — bump on every release
 PLATFORM_VERSION = "0.1.0"
 PLATFORM_BUILD_DATE = "2026-08-07"
 
@@ -58,15 +50,9 @@ class AsteraKernel:
     """
     The Astera Platform Kernel.
 
-    Manages the complete lifecycle of the platform:
-        State Machine  → RuntimeState transitions (BOOTING → READY → ...)
-        Context        → ContextManager (Org/Workspace/Encounter/Patient/Session)
-        Event Bus      → EventBusPort (NATS)
-        Plugin Registry→ dict of registered plugins (populated in Phase D)
-        Capability Registry → CapabilityRegistry (Plugin → Capability 1:N)
-        Health Manager → component health aggregation
-
-    Nothing runs outside the Kernel. Everything is an extension of the Kernel.
+    Owns the lifecycle and provides subsystem access.
+    Does NOT own Plugin instances (that is the PluginResolver's job).
+    Does NOT decide which Provider to use (that is the Orchestrator's job).
     """
 
     def __init__(self, event_bus: EventBusPort) -> None:
@@ -74,44 +60,57 @@ class AsteraKernel:
         self._boot_time: float | None = None
         self._started_at: datetime | None = None
 
-        # Core subsystems
-        self._event_bus = event_bus
-        self._context_manager = ContextManager()
+        # ── Subsystems (the Kernel's OS components) ───────────────────────────
+        self._event_bus          = event_bus
+        self._context_manager    = ContextManager()
         self._capability_registry = CapabilityRegistry()
+        self._provider_registry   = ProviderRegistry()
+        self._plugin_resolver     = PluginResolver()
 
-        # Plugin Registry (raw dict — Plugin SDK will wrap this in Phase D)
-        self._plugin_registry: dict[str, dict[str, Any]] = {}
+        # ── Operational Brain ─────────────────────────────────────────────────
+        # The TaskOrchestrator is wired by the Kernel but runs independently.
+        self._orchestrator = TaskOrchestrator(
+            capabilities=self._capability_registry,
+            providers=self._provider_registry,
+            resolver=self._plugin_resolver,
+            event_bus=self._event_bus,
+        )
 
-        # Component health map
+        # Component health map (reported in /ready)
         self._component_health: dict[str, HealthStatus] = {
-            "event_bus":           HealthStatus.UNKNOWN,
-            "context_manager":     HealthStatus.UNKNOWN,
-            "plugin_registry":     HealthStatus.UNKNOWN,
+            "event_bus":          HealthStatus.UNKNOWN,
+            "context_manager":    HealthStatus.UNKNOWN,
+            "provider_registry":  HealthStatus.UNKNOWN,
             "capability_registry": HealthStatus.UNKNOWN,
+            "task_orchestrator":  HealthStatus.UNKNOWN,
         }
 
-    # ── Public Properties ─────────────────────────────────────────────────────
+    # ── Public Surface ────────────────────────────────────────────────────────
 
     @property
     def state(self) -> RuntimeState:
-        """The current Kernel state. Source of truth for all observability."""
         return self._state
 
     @property
-    def context(self) -> ContextManager:
-        """Access to the Context Manager (sessions, encounters, patients)."""
-        return self._context_manager
+    def orchestrator(self) -> TaskOrchestrator:
+        """The TaskOrchestrator. Used by HTTP adapters and the ADK."""
+        return self._orchestrator
 
     @property
     def capabilities(self) -> CapabilityRegistry:
-        """Access to the Capability Registry (what the platform can do)."""
         return self._capability_registry
 
     @property
+    def providers(self) -> ProviderRegistry:
+        return self._provider_registry
+
+    @property
+    def context(self) -> ContextManager:
+        return self._context_manager
+
+    @property
     def uptime_seconds(self) -> float | None:
-        if self._boot_time is None:
-            return None
-        return time.monotonic() - self._boot_time
+        return None if self._boot_time is None else time.monotonic() - self._boot_time
 
     def is_ready(self) -> bool:
         return self._state.is_operational()
@@ -119,11 +118,6 @@ class AsteraKernel:
     # ── Bootstrap ─────────────────────────────────────────────────────────────
 
     async def startup(self) -> None:
-        """
-        Execute the Platform Bootstrap sequence.
-
-        The Kernel transitions: BOOTING → READY (or FAILED on error).
-        """
         logger.info("━" * 60)
         logger.info("  ASTERA KERNEL BOOTING")
         logger.info("━" * 60)
@@ -132,14 +126,16 @@ class AsteraKernel:
         try:
             await self._step("event_bus",           self._connect_event_bus())
             await self._step("context_manager",     self._init_context_manager())
-            await self._step("plugin_registry",     self._init_plugin_registry())
+            await self._step("provider_registry",   self._init_provider_registry())
             await self._step("capability_registry", self._init_capability_registry())
+            await self._step("task_orchestrator",   self._init_orchestrator())
 
-            self._boot_time = time.monotonic()
+            self._boot_time  = time.monotonic()
             self._started_at = datetime.now(tz=timezone.utc)
-            self._state = RuntimeState.READY
+            self._state      = RuntimeState.READY
 
             elapsed_ms = round((time.monotonic() - t0) * 1000, 1)
+
             logger.info("━" * 60)
             logger.info(
                 "  ASTERA KERNEL READY",
@@ -148,8 +144,8 @@ class AsteraKernel:
             logger.info("━" * 60)
 
             await self._publish("astera.kernel.ready", {
-                "event": "kernel.ready",
-                "version": PLATFORM_VERSION,
+                "event":       "kernel.ready",
+                "version":     PLATFORM_VERSION,
                 "boot_time_ms": elapsed_ms,
             })
 
@@ -163,7 +159,6 @@ class AsteraKernel:
             raise
 
     async def shutdown(self) -> None:
-        """Execute graceful shutdown. Kernel transitions: STOPPING → STOPPED."""
         if self._state.is_terminal():
             return
 
@@ -174,7 +169,7 @@ class AsteraKernel:
 
         try:
             await self._publish("astera.kernel.stopping", {"event": "kernel.stopping"})
-            await self._teardown_plugins()
+            await self._teardown_providers()
             await self._event_bus.disconnect()
         except Exception as exc:
             logger.warning("Non-fatal error during shutdown", extra={"error": str(exc)})
@@ -185,27 +180,24 @@ class AsteraKernel:
         logger.info("  ASTERA KERNEL STOPPED CLEANLY")
         logger.info("━" * 60)
 
-    # ── Health & Introspection ────────────────────────────────────────────────
+    # ── Health & Introspection (implements KernelPort) ────────────────────────
 
     async def get_health(self) -> dict[str, Any]:
-        """Full health report. Called by /health/ready."""
         if not self.is_ready():
             raise RuntimeNotReadyError()
-
         return {
-            "state":       self._state.value,
-            "version":     PLATFORM_VERSION,
-            "uptime_s":    round(self.uptime_seconds or 0, 1),
-            "started_at":  self._started_at.isoformat() if self._started_at else None,
-            "components":  {k: v.value for k, v in self._component_health.items()},
-            "event_bus":   {"connected": await self._event_bus.is_connected()},
-            "context":     self._context_manager.summary(),
+            "state":        self._state.value,
+            "version":      PLATFORM_VERSION,
+            "uptime_s":     round(self.uptime_seconds or 0, 1),
+            "started_at":   self._started_at.isoformat() if self._started_at else None,
+            "components":   {k: v.value for k, v in self._component_health.items()},
+            "event_bus":    {"connected": await self._event_bus.is_connected()},
+            "context":      self._context_manager.summary(),
             "capabilities": self._capability_registry.summary(),
-            "plugins":     {"registered": len(self._plugin_registry)},
+            "providers":    self._provider_registry.summary(),
         }
 
     async def get_status(self) -> dict[str, Any]:
-        """Lightweight status. Called by /status and liveness probes."""
         return {
             "state":    self._state.value,
             "ready":    self.is_ready(),
@@ -214,31 +206,17 @@ class AsteraKernel:
         }
 
     def get_version_info(self) -> dict[str, Any]:
-        """Build/version information for the /version endpoint."""
         return {
-            "platform":    "astera",
-            "version":     PLATFORM_VERSION,
-            "build_date":  PLATFORM_BUILD_DATE,
+            "platform":     "astera",
+            "version":      PLATFORM_VERSION,
+            "build_date":   PLATFORM_BUILD_DATE,
             "kernel_state": self._state.value,
-            "started_at":  self._started_at.isoformat() if self._started_at else None,
+            "started_at":   self._started_at.isoformat() if self._started_at else None,
         }
-
-    # ── Plugin Registry (raw — Plugin SDK wraps this in Phase D) ─────────────
-
-    async def list_plugins(self) -> list[dict[str, Any]]:
-        return list(self._plugin_registry.values())
-
-    async def get_plugin(self, plugin_name: str) -> dict[str, Any]:
-        from apps.runtime.src.domain.exceptions import PluginNotFoundError
-        from apps.runtime.src.domain.value_objects import PluginName
-        if plugin_name not in self._plugin_registry:
-            raise PluginNotFoundError(PluginName(plugin_name))
-        return self._plugin_registry[plugin_name]
 
     # ── Private: Bootstrap Steps ──────────────────────────────────────────────
 
     async def _step(self, component: str, coro) -> None:
-        """Execute a bootstrap step, update component health, log result."""
         logger.info(f"  → {component}: initializing...")
         try:
             await coro
@@ -253,33 +231,29 @@ class AsteraKernel:
         await self._event_bus.connect()
 
     async def _init_context_manager(self) -> None:
-        # ContextManager is initialized in __init__. Nothing async to do.
-        # Placeholder for future: load active sessions from Redis.
-        pass
+        pass  # Scaffold: Phase D loads active sessions from Redis
 
-    async def _init_plugin_registry(self) -> None:
-        # Empty at Phase C. Plugin SDK populates this in Phase D.
-        pass
+    async def _init_provider_registry(self) -> None:
+        pass  # Scaffold: Phase D plugins register here on startup
 
     async def _init_capability_registry(self) -> None:
-        # Empty at Phase C. Plugins register capabilities in Phase D.
-        pass
+        pass  # Scaffold: Phase D plugins register CapabilityDescriptors here
 
-    async def _teardown_plugins(self) -> None:
-        if not self._plugin_registry:
+    async def _init_orchestrator(self) -> None:
+        pass  # Orchestrator is wired in __init__, nothing async to initialize
+
+    async def _teardown_providers(self) -> None:
+        """Gracefully unregister all providers on shutdown."""
+        providers = self._provider_registry.list_all()
+        if not providers:
             return
-        logger.info(f"Stopping {len(self._plugin_registry)} plugins...")
-        for name in list(self._plugin_registry):
-            self._capability_registry.unregister_plugin(
-                __import__(
-                    "apps.runtime.src.domain.value_objects",
-                    fromlist=["PluginName"],
-                ).PluginName(name)
-            )
-        self._plugin_registry.clear()
+        logger.info(f"Stopping {len(providers)} providers...")
+        for provider in providers:
+            self._plugin_resolver.unbind(provider.name)
+            self._capability_registry.unregister_provider(provider.name)
+        self._provider_registry.list_all().clear()
 
     async def _publish(self, subject: str, payload: dict[str, Any]) -> None:
-        """Publish a Kernel lifecycle event. Non-fatal on failure."""
         import json
         try:
             if await self._event_bus.is_connected():
@@ -288,7 +262,4 @@ class AsteraKernel:
                     json.dumps(payload, default=str).encode(),
                 )
         except Exception as exc:
-            logger.warning(
-                f"Could not publish '{subject}'",
-                extra={"error": str(exc)},
-            )
+            logger.warning(f"Could not publish '{subject}'", extra={"error": str(exc)})
