@@ -1,10 +1,11 @@
 """
 Astera Runtime — Domain Value Objects.
 
-Value objects are immutable and have no identity (no ID field).
-Equality is determined by value, not by reference.
+Value objects are immutable and identity-free.
+Equality is determined by value, not reference.
 
-All value objects inherit from AsteraValueObject.
+RuntimeState is the authoritative source of truth for the Kernel's lifecycle.
+Every observability component (Grafana, Langfuse, Health) reads from it.
 """
 from __future__ import annotations
 
@@ -19,35 +20,108 @@ class AsteraValueObject:
     """Base class for all Astera value objects. Immutable by design."""
 
 
-# ── Runtime State ─────────────────────────────────────────────────────────────
+# ── Runtime State (Kernel State Machine) ──────────────────────────────────────
 
-class RuntimeStatus(str, Enum):
-    """Represents the lifecycle state of the Astera Runtime."""
+class RuntimeState(str, Enum):
+    """
+    Authoritative state machine for the Astera Kernel.
 
-    INITIALIZING = "initializing"
-    STARTING = "starting"
-    RUNNING = "running"
-    DEGRADED = "degraded"
-    STOPPING = "stopping"
-    STOPPED = "stopped"
+    Transitions:
+        BOOTING → READY
+        BOOTING → FAILED          (startup error)
+        READY   → DEGRADED        (component becomes unhealthy)
+        READY   → STOPPING        (graceful shutdown signal)
+        DEGRADED → READY          (component recovered)
+        DEGRADED → STOPPING       (graceful shutdown signal)
+        STOPPING → STOPPED
+        STOPPING → FAILED         (shutdown error)
+
+    Grafana, Langfuse, and Health endpoints all observe this state.
+    """
+
+    BOOTING  = "booting"   # Kernel is executing the bootstrap sequence
+    READY    = "ready"     # Kernel is fully operational — accepts all traffic
+    DEGRADED = "degraded"  # Kernel is running but some component is unhealthy
+    STOPPING = "stopping"  # Kernel received shutdown signal — draining
+    STOPPED  = "stopped"   # Kernel has stopped cleanly
+    FAILED   = "failed"    # Kernel encountered an unrecoverable error
+
+    # ── Predicates ────────────────────────────────────────────────────────────
+
+    def is_operational(self) -> bool:
+        """True when the Kernel can accept platform requests."""
+        return self in {RuntimeState.READY, RuntimeState.DEGRADED}
 
     def is_healthy(self) -> bool:
-        return self == RuntimeStatus.RUNNING
+        """True only when fully healthy (no degraded components)."""
+        return self == RuntimeState.READY
 
     def is_terminal(self) -> bool:
-        return self in {RuntimeStatus.STOPPED}
+        """True when the Kernel will not transition further."""
+        return self in {RuntimeState.STOPPED, RuntimeState.FAILED}
 
-    def can_accept_requests(self) -> bool:
-        return self in {RuntimeStatus.RUNNING, RuntimeStatus.DEGRADED}
+    def is_shutting_down(self) -> bool:
+        return self in {RuntimeState.STOPPING, RuntimeState.STOPPED}
 
+    def can_accept_plugins(self) -> bool:
+        """True when the Plugin Registry can accept new registrations."""
+        return self in {RuntimeState.BOOTING, RuntimeState.READY, RuntimeState.DEGRADED}
+
+
+# ── Health Status ─────────────────────────────────────────────────────────────
 
 class HealthStatus(str, Enum):
-    """Health status for any component in the platform."""
+    """Health status for any individual component in the platform."""
 
-    HEALTHY = "healthy"
-    DEGRADED = "degraded"
+    HEALTHY   = "healthy"
+    DEGRADED  = "degraded"
     UNHEALTHY = "unhealthy"
-    UNKNOWN = "unknown"
+    UNKNOWN   = "unknown"
+
+    def is_ok(self) -> bool:
+        return self == HealthStatus.HEALTHY
+
+
+# ── Capability Types ──────────────────────────────────────────────────────────
+
+class CapabilityType(str, Enum):
+    """
+    Catalogue of known Capability types in the Astera platform.
+
+    A Plugin offers one or more Capabilities from this catalogue.
+    The CapabilityRegistry indexes plugins by CapabilityType.
+
+    Example:
+        SpeechPlugin registers:
+            - CapabilityType.SPEECH_TRANSCRIPTION
+            - CapabilityType.SPEECH_STREAMING
+            - CapabilityType.SPEECH_DIARIZATION
+            - CapabilityType.SPEECH_LANGUAGE_DETECTION
+    """
+
+    # Speech
+    SPEECH_TRANSCRIPTION       = "speech.transcription"
+    SPEECH_STREAMING           = "speech.streaming"
+    SPEECH_DIARIZATION         = "speech.diarization"
+    SPEECH_LANGUAGE_DETECTION  = "speech.language_detection"
+
+    # Vision
+    VISION_OCR                 = "vision.ocr"
+    VISION_CLASSIFICATION      = "vision.classification"
+
+    # NLP
+    NLP_ENTITY_EXTRACTION      = "nlp.entity_extraction"
+    NLP_SUMMARIZATION          = "nlp.summarization"
+    NLP_CLASSIFICATION         = "nlp.classification"
+
+    # Medical (Phase E)
+    MEDICAL_SOAP_GENERATION    = "medical.soap_generation"
+    MEDICAL_ICD_CODING         = "medical.icd_coding"
+    MEDICAL_DRUG_INTERACTION   = "medical.drug_interaction"
+    MEDICAL_TERMINOLOGY        = "medical.terminology"
+
+    # Platform
+    PLATFORM_ECHO              = "platform.echo"   # Used for integration testing
 
 
 # ── Plugin Identity ───────────────────────────────────────────────────────────
@@ -56,9 +130,8 @@ class HealthStatus(str, Enum):
 class PluginName(AsteraValueObject):
     """
     Unique identifier for a plugin.
-
-    Must follow the pattern: lowercase letters, digits, and hyphens.
-    Example: 'echo-plugin', 'speech-v1', 'medical-nlp'.
+    Allowed: lowercase letters, digits, hyphens.
+    Example: 'echo-plugin', 'speech-v1'.
     """
 
     value: str
@@ -77,11 +150,7 @@ class PluginName(AsteraValueObject):
 
 @dataclass(frozen=True)
 class PluginVersion(AsteraValueObject):
-    """
-    Semantic version of a plugin.
-
-    Format: MAJOR.MINOR.PATCH (e.g., '1.0.0').
-    """
+    """Semantic version (MAJOR.MINOR.PATCH) for a Plugin or Capability."""
 
     major: int
     minor: int
@@ -91,7 +160,7 @@ class PluginVersion(AsteraValueObject):
     def from_string(cls, version: str) -> PluginVersion:
         parts = version.split(".")
         if len(parts) != 3:
-            raise ValueError(f"Invalid version format: '{version}'. Expected MAJOR.MINOR.PATCH.")
+            raise ValueError(f"Invalid version: '{version}'. Expected MAJOR.MINOR.PATCH.")
         try:
             return cls(major=int(parts[0]), minor=int(parts[1]), patch=int(parts[2]))
         except ValueError:

@@ -1,32 +1,25 @@
 """
-Astera Runtime — Platform Bootstrap.
+Astera Runtime — Platform Bootstrap (Kernel Edition).
 
-This is the entry point of the Astera platform.
-It executes the Platform Bootstrap sequence in the correct order:
+Entry point of the Astera platform. Wires all components together
+and hands control to the AsteraKernel.
 
+Bootstrap sequence:
     1. Configure Logging
     2. Load Configuration (AsteraSettings)
-    3. Build Dependency Container
-    4. Connect Event Bus (NATS)
-    5. Initialize Plugin Registry
-    6. Initialize Health Manager
-    7. Initialize Lifecycle Manager
-    8. Start API (FastAPI/Uvicorn)
+    3. Build Dependency Container (concrete adapters)
+    4. Create AsteraKernel (the platform OS)
+    5. Configure FastAPI (routes, middleware)
+    6. Start Kernel (via FastAPI lifespan)
+    7. API accepts traffic when Kernel state == READY
 
-When this module exits successfully, you have an "Astera vazio" —
-a fully operational platform with no clinical logic, ready to accept plugins.
-
-Usage:
+Run:
     python -m apps.runtime.src.bootstrap.main
-    # or via uvicorn:
-    uvicorn apps.runtime.src.bootstrap.main:create_app --factory --host 0.0.0.0 --port 8000
+    uvicorn apps.runtime.src.bootstrap.main:create_app --factory
 """
 from __future__ import annotations
 
-import asyncio
 import logging
-import signal
-import sys
 from contextlib import asynccontextmanager
 from typing import AsyncGenerator
 
@@ -37,14 +30,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from apps.runtime.src.infrastructure.settings import get_settings
 from apps.runtime.src.infrastructure.logging import configure_logging
 
-# ── Adapters ──────────────────────────────────────────────────────────────────
+# ── Adapters (only place concrete implementations are instantiated) ────────────
 from apps.runtime.src.adapters.nats import NatsEventBusAdapter
 from apps.runtime.src.adapters.http.health import create_health_router
 
-# ── Application ───────────────────────────────────────────────────────────────
-from apps.runtime.src.application.runtime import RuntimeManager
+# ── Kernel ────────────────────────────────────────────────────────────────────
+from apps.runtime.src.application.kernel import AsteraKernel
 
-logger = logging.getLogger("astera.runtime.bootstrap")
+logger = logging.getLogger("astera.bootstrap")
 
 
 # ── Lifespan ──────────────────────────────────────────────────────────────────
@@ -54,102 +47,66 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     """
     FastAPI lifespan context manager.
 
-    Handles the full Platform Bootstrap sequence on startup
-    and graceful shutdown on SIGTERM/SIGINT.
-
-    This replaces the deprecated @app.on_event("startup") pattern.
+    Delegates entirely to AsteraKernel.startup() and AsteraKernel.shutdown().
+    The API is NOT available until the Kernel reaches READY state.
     """
-    runtime: RuntimeManager = app.state.runtime
-
-    # ── STARTUP ───────────────────────────────────────────────────────────────
-    logger.info("=" * 60)
-    logger.info("  ASTERA RUNTIME — PLATFORM BOOTSTRAP STARTING")
-    logger.info("=" * 60)
+    kernel: AsteraKernel = app.state.kernel
 
     try:
-        await runtime.startup()
-        logger.info("=" * 60)
-        logger.info("  ASTERA RUNTIME — PLATFORM READY")
-        logger.info("=" * 60)
+        await kernel.startup()
     except Exception as exc:
-        logger.critical(
-            "Platform Bootstrap FAILED — Runtime cannot start",
-            extra={"error": str(exc)},
-            exc_info=True,
-        )
+        logger.critical("Platform Bootstrap FAILED", extra={"error": str(exc)}, exc_info=True)
         raise SystemExit(1) from exc
 
-    yield  # ← Application is running here
+    yield  # ← Kernel is READY. API accepts traffic.
 
-    # ── SHUTDOWN ──────────────────────────────────────────────────────────────
-    logger.info("=" * 60)
-    logger.info("  ASTERA RUNTIME — GRACEFUL SHUTDOWN INITIATED")
-    logger.info("=" * 60)
-
-    await runtime.shutdown()
-
-    logger.info("=" * 60)
-    logger.info("  ASTERA RUNTIME — STOPPED CLEANLY")
-    logger.info("=" * 60)
+    await kernel.shutdown()
 
 
 # ── App Factory ───────────────────────────────────────────────────────────────
 
 def create_app() -> FastAPI:
     """
-    FastAPI application factory.
+    Astera Platform application factory.
 
-    Builds the complete Astera Runtime application:
-    1. Loads settings
-    2. Configures logging
-    3. Builds the dependency container
-    4. Creates the RuntimeManager
-    5. Mounts all adapters (HTTP routes)
-    6. Returns the configured FastAPI app
-
-    This factory pattern enables:
-    - Testing with different settings
-    - Multiple instances in the same process (if needed)
-    - Deferred initialization (uvicorn --factory flag)
+    Wiring order:
+        Settings → Logging → Adapters → Kernel → FastAPI → Routes
     """
-    # Step 1 — Load configuration
+    # 1. Configuration
     settings = get_settings()
 
-    # Step 2 — Configure logging (must happen before any log statement)
+    # 2. Logging (must be first log consumer)
     configure_logging(
         level=settings.log_level,
         json_format=settings.is_production,
     )
 
     logger.info(
-        "Astera Runtime initializing",
+        "Bootstrapping Astera Platform",
         extra={
             "environment": settings.environment,
-            "debug": settings.debug,
-            "nats_url": settings.nats_url,
-            "otel_endpoint": settings.otel_endpoint,
+            "version": "0.1.0",
         },
     )
 
-    # Step 3 — Build Dependency Container
-    # Wire up concrete implementations to abstract interfaces.
-    # Only place in the codebase where concrete adapters are instantiated.
+    # 3. Dependency Container — wire concrete → abstract
     event_bus = NatsEventBusAdapter(
         nats_url=settings.nats_url,
         connect_timeout=settings.nats_connect_timeout,
     )
 
-    # Step 4 — Create Runtime Manager (application layer)
-    runtime = RuntimeManager(event_bus=event_bus)
+    # 4. Kernel (the platform OS)
+    kernel = AsteraKernel(event_bus=event_bus)
 
-    # Step 5 — Create FastAPI application
+    # 5. FastAPI application
     app = FastAPI(
         title="Astera Runtime",
         description=(
-            "The Astera Runtime is the heart of the Astera platform. "
-            "It manages the lifecycle of all platform components, plugins, "
-            "and the Event Bus. "
-            "\n\n**Architecture:** Modular Monolith + Hexagonal + Event Driven + Plugin First"
+            "**Astera Platform Kernel** — the operating system of the Astera clinical intelligence platform.\n\n"
+            "All platform capabilities (Speech, Vision, OCR, Medical NLP, Google ADK) "
+            "exist as extensions registered in this Kernel.\n\n"
+            "**Architecture:** Modular Monolith · Hexagonal · Event Driven · Plugin First\n\n"
+            "**ADR-001:** Modular Monolith — not microservices."
         ),
         version="0.1.0",
         docs_url="/docs" if not settings.is_production else None,
@@ -157,11 +114,11 @@ def create_app() -> FastAPI:
         lifespan=lifespan,
     )
 
-    # Attach Runtime to app state for lifespan access
-    app.state.runtime = runtime
+    # Attach Kernel to app state (accessed in lifespan)
+    app.state.kernel = kernel
     app.state.settings = settings
 
-    # Step 6 — CORS Middleware
+    # 6. Middleware
     app.add_middleware(
         CORSMiddleware,
         allow_origins=["*"] if settings.is_development else [],
@@ -170,9 +127,8 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
-    # Step 7 — Mount HTTP Adapters (routes)
-    health_router = create_health_router(runtime=runtime)
-    app.include_router(health_router)
+    # 7. Routes — inject Kernel as KernelPort (depends on interface, not implementation)
+    app.include_router(create_health_router(kernel=kernel))
 
     logger.info("FastAPI application configured", extra={"routes": len(app.routes)})
 
