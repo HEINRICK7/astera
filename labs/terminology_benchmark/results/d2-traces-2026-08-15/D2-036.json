@@ -1,0 +1,845 @@
+{
+  "case_id": "D2-036",
+  "corpus_checksum": "3711d88475bd81da311be795b13c971c805ee3509eec8ddf352daec79b11a021",
+  "corpus_version": "D2",
+  "decisions": [],
+  "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+  "mismatches": [
+    {
+      "actual": "confirmed",
+      "confidence": 0.55,
+      "details": {
+        "mention": "anemia",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "possible",
+      "policy_rules": [],
+      "semantic_dimension": "certainty",
+      "stage": "prediction"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "ff09e39196d8458637629dce70da5bd20c4c5b0f5af5cd83a0d19b27e3a186ab",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "64066a45bb418d2390bdb1a9c724e89aade9546ee11bae4d723d3a08fae251c2",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "4a60bb4fbb3add6cb85edab6a70d147222ce7f6a7505227b7d4b0478393141fd",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "l1",
+            "speaker": "patient",
+            "text": "O exame mostrou anemia."
+          },
+          {
+            "segment_id": "l2",
+            "speaker": "patient",
+            "text": "Melhor dizendo, mostrou ferro baixo."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-036",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "c831f539c5a9db939cfc00850fd83bc2c755c2aea88f809b66d6c4f091cfd967",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "4a60bb4fbb3add6cb85edab6a70d147222ce7f6a7505227b7d4b0478393141fd",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "a04aea59e1aa64b6aef0096e16f00a680216a556ca19e66df57b10e256d519f5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "anemia"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "609ec3791f5701eaa0d5004b490779847dd6d957a68d71e8aadaafa8d7607ffe",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "anemia"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "cd8699fbab215904508899a93aabef5f737af747287856ceaf0bf3541ab25929",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "anemia"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "5721d8742650eb394b6bf9649994b39e827c53fc0d3c1d777494299c3885a600",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:l1",
+            "owner_segment_id": "l1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "7902c63fb58bbb8d15b8b23bc46d1fb849c40aa9c697389247ab8d0ba0540a44",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "5721d8742650eb394b6bf9649994b39e827c53fc0d3c1d777494299c3885a600",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "c1b617285d3fb9a15267d3337148d92ff2f77b0f622aba43eeb933a07f79bb62",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "eeb5b341e86d161b8e631f76e27394d17c88a0941a43143b5bb7887f8cbdd1ed",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1"
+            }
+          },
+          "candidate_source": "l1",
+          "source_segment_ids": [
+            "l1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O exame mostrou anemia.\\npatient: Melhor dizendo, mostrou ferro baixo.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:l1:16:22', 'owner_span': (16, 22), 'source_evidence_id': 'context:l1'}}, 'projection': {'mention_id': 'context:l1:16:22', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('l1',), 'candidate_source': 'l1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1'}}}, 'authority_metrics': {'resolver_decisions_total': 484, 'resolver_decisions_preserved': 456, 'resolver_decisions_overwritten': 28, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'l1', 'conversation_segment_ids': ['l2']}",
+            "relations": [],
+            "surface": "anemia"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "d14f6e91fe75b1a062881d9f15bf9a80ece1450f4076517d0dc5bccb22ad4ea0",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "anemia"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "eeb5b341e86d161b8e631f76e27394d17c88a0941a43143b5bb7887f8cbdd1ed",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "4b7b2d7e4834dec998ad9715fb9d2d80383b6fae12e0bdce41aad9ab46ea2542",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "anemia"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "dc3f17a8fa5f3986282c4f5b328af4545c27125d726239b5b239b42114a56e51",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O exame mostrou anemia.\\npatient: Melhor dizendo, mostrou ferro baixo.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:l1:16:22', 'owner_span': (16, 22), 'source_evidence_id': 'context:l1'}}, 'projection': {'mention_id': 'context:l1:16:22', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('l1',), 'candidate_source': 'l1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1'}}}, 'authority_metrics': {'resolver_decisions_total': 484, 'resolver_decisions_preserved': 456, 'resolver_decisions_overwritten': 28, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'l1', 'conversation_segment_ids': ['l2']}",
+            "relations": [],
+            "surface": "anemia"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "64b129dae8aed5d5ff3a6daf5d12daf58d52dab2f499134aebb3649959c2d29f",
+      "changed_fields": [
+        "certainty"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "dc3f17a8fa5f3986282c4f5b328af4545c27125d726239b5b239b42114a56e51",
+      "output_hash": "dc3f17a8fa5f3986282c4f5b328af4545c27125d726239b5b239b42114a56e51",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O exame mostrou anemia.\\npatient: Melhor dizendo, mostrou ferro baixo.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:l1:16:22', 'owner_span': (16, 22), 'source_evidence_id': 'context:l1'}}, 'projection': {'mention_id': 'context:l1:16:22', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('l1',), 'candidate_source': 'l1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1'}}}, 'authority_metrics': {'resolver_decisions_total': 484, 'resolver_decisions_preserved': 456, 'resolver_decisions_overwritten': 28, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'l1', 'conversation_segment_ids': ['l2']}",
+            "relations": [],
+            "surface": "anemia"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "c6cba94fd0be08379c75b28c696742ef0213086b99b3af039f2ad35ea6d215bc",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "dc3f17a8fa5f3986282c4f5b328af4545c27125d726239b5b239b42114a56e51",
+      "output_hash": "37cadf06c8745985dd62be607172acc09c54eac0bd0767312bf66c474871219e",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "certainty": [
+                "l2"
+              ]
+            },
+            "concept_id": "condition.anemia",
+            "fields": {
+              "certainty": "possible",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "l1",
+              "l2"
+            ],
+            "surface": "anemia"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-036",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "1ef167fbee327e92fb9506e23666f255a59dfd531873ae4f55d9b91a4265b54f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "37cadf06c8745985dd62be607172acc09c54eac0bd0767312bf66c474871219e",
+      "output_hash": "ad0747ab59e1e059b34bccb08cc84e61664670aa60f335fc2b6d9d4ab57f8547",
+      "payload": {
+        "case_id": "D2-036",
+        "mismatch_count": 1
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-036",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

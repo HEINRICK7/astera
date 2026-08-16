@@ -1,0 +1,546 @@
+{
+  "status": "executed",
+  "corpus": "pt_br_clinical_semantics_v4",
+  "report": {
+    "provider": "hybrid-medspacy+niede-pt-br",
+    "detection": {
+      "mode": "gold_span_queries",
+      "measured": false,
+      "errors": 0,
+      "note": "Mention boundaries are fixed by the corpus; this report isolates composition."
+    },
+    "composition": {
+      "mention_total": 134,
+      "mention_exact_match": 0.9925373134328358,
+      "cases_total": 100,
+      "cases_with_errors": 1,
+      "error_counts": {
+        "DOSE_ATTACHMENT": 1,
+        "MULTI_MENTION_COLLISION": 1
+      },
+      "cooccurrences": {
+        "DOSE_ATTACHMENT+MULTI_MENTION_COLLISION": 1
+      },
+      "case_classifications": [
+        {
+          "case_id": "v4-001",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-002",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-003",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-004",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-005",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-006",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-007",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-008",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-009",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-010",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-011",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-012",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-013",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-014",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-015",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-016",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-017",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-018",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-019",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-020",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-021",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-022",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-023",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-024",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-025",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-026",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-027",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-028",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-029",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-030",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-031",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-032",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-033",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-034",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-035",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-036",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-037",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-038",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-039",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-040",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-041",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-042",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-043",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-044",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-045",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-046",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-047",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-048",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-049",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-050",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-051",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-052",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-053",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-054",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-055",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-056",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-057",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-058",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-059",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-060",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-061",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-062",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-063",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-064",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-065",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-066",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-067",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-068",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-069",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-070",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-071",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-072",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-073",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-074",
+          "mention_count": 2,
+          "error_types": [
+            "DOSE_ATTACHMENT",
+            "MULTI_MENTION_COLLISION"
+          ]
+        },
+        {
+          "case_id": "v4-075",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-076",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-077",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-078",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-079",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-080",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-081",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-082",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-083",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-084",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-085",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-086",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-087",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-088",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-089",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-090",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-091",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-092",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-093",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-094",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-095",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-096",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-097",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-098",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-099",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v4-100",
+          "mention_count": 2,
+          "error_types": []
+        }
+      ],
+      "details": [
+        {
+          "case_id": "v4-074",
+          "surface": "hidroclorotiazida",
+          "mismatches": [
+            "frequency"
+          ],
+          "expected": {
+            "frequency": null
+          },
+          "actual": {
+            "frequency": "à tarde"
+          }
+        }
+      ]
+    }
+  }
+}

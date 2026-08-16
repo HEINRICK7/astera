@@ -1,0 +1,148 @@
+{
+  "status": "experimental-only",
+  "corpus": "pt_br_clinical_semantics_v4",
+  "cases": 100,
+  "production_promotion": false,
+  "baseline": {
+    "provider": "deterministic-context-baseline",
+    "metadata": null,
+    "cases": 100,
+    "attribute_accuracy": {
+      "negated": 0.8208955223880597,
+      "certainty": 0.8582089552238806,
+      "temporality": 0.8432835820895522,
+      "experiencer": 0.9328358208955224,
+      "status": 0.0,
+      "dose": 0.0,
+      "dose_value": 0.0,
+      "dose_unit": 0.0,
+      "frequency": 0.0,
+      "route": 0.0,
+      "laterality": 0.0,
+      "provenance": 1.0,
+      "mention_exact_match": 0.16417910447761194,
+      "relation_exact_match": 0.0,
+      "scope_accuracy": 0.8477611940298507,
+      "cross_mention_isolation": 0.029411764705882353
+    },
+    "hard_gate_thresholds": {
+      "negated": 0.9,
+      "certainty": 0.9,
+      "temporality": 0.9,
+      "experiencer": 0.95,
+      "dose": 0.9,
+      "provenance": 1.0,
+      "mention_exact_match": 0.9,
+      "relation_exact_match": 0.9,
+      "scope_accuracy": 0.9,
+      "cross_mention_isolation": 0.9
+    },
+    "mean_latency_ms": 0.6398434684274774,
+    "startup_seconds": 0.0,
+    "hard_gate_passed": false
+  },
+  "medspacy": {
+    "status": "executed",
+    "report": {
+      "provider": "medspacy",
+      "metadata": {
+        "code_license": "MIT",
+        "data_license": "not applicable",
+        "model_license": "not applicable (default medspaCy pipeline)",
+        "vocabulary": "NIEDE PT-BR context rules",
+        "vocabulary_version": "niede-pt-br-context-v1",
+        "source_uri": "local://labs/terminology_benchmark/data/pt_br_context_rules_v1.json",
+        "model_path": null,
+        "asset_bytes": 828,
+        "asset_sha256": "2025e1592be4d731350530e37fb1c7034b08e815cd3f590095cb3c3cccd747dc",
+        "notes": "medspaCy ConText plus project-owned PT-BR rules."
+      },
+      "cases": 100,
+      "attribute_accuracy": {
+        "negated": 0.7686567164179104,
+        "certainty": 0.9328358208955224,
+        "temporality": 0.835820895522388,
+        "experiencer": 0.9552238805970149,
+        "status": 0.0,
+        "dose": 0.0,
+        "dose_value": 0.0,
+        "dose_unit": 0.0,
+        "frequency": 0.0,
+        "route": 0.0,
+        "laterality": 0.0,
+        "provenance": 1.0,
+        "mention_exact_match": 0.21641791044776118,
+        "relation_exact_match": 0.0,
+        "scope_accuracy": 0.8552238805970149,
+        "cross_mention_isolation": 0.08823529411764706
+      },
+      "hard_gate_thresholds": {
+        "negated": 0.9,
+        "certainty": 0.9,
+        "temporality": 0.9,
+        "experiencer": 0.95,
+        "dose": 0.9,
+        "provenance": 1.0,
+        "mention_exact_match": 0.9,
+        "relation_exact_match": 0.9,
+        "scope_accuracy": 0.9,
+        "cross_mention_isolation": 0.9
+      },
+      "mean_latency_ms": 3.434869551982508,
+      "startup_seconds": 1.8216412129986566,
+      "hard_gate_passed": false
+    }
+  },
+  "hybrid": {
+    "status": "executed",
+    "report": {
+      "provider": "hybrid-medspacy+niede-pt-br",
+      "metadata": {
+        "code_license": "MIT",
+        "data_license": "not applicable",
+        "model_license": "not applicable (default medspaCy pipeline)",
+        "vocabulary": "NIEDE PT-BR context rules",
+        "vocabulary_version": "niede-pt-br-context-v1",
+        "source_uri": "local://labs/terminology_benchmark/data/pt_br_context_rules_v1.json",
+        "model_path": null,
+        "asset_bytes": 828,
+        "asset_sha256": "2025e1592be4d731350530e37fb1c7034b08e815cd3f590095cb3c3cccd747dc",
+        "notes": "medspaCy ConText plus project-owned PT-BR rules."
+      },
+      "cases": 100,
+      "attribute_accuracy": {
+        "negated": 1.0,
+        "certainty": 1.0,
+        "temporality": 1.0,
+        "experiencer": 1.0,
+        "status": 1.0,
+        "dose": 1.0,
+        "dose_value": 1.0,
+        "dose_unit": 1.0,
+        "frequency": 0.95,
+        "route": 1.0,
+        "laterality": 1.0,
+        "provenance": 1.0,
+        "mention_exact_match": 0.9925373134328358,
+        "relation_exact_match": 1.0,
+        "scope_accuracy": 1.0,
+        "cross_mention_isolation": 0.9705882352941176
+      },
+      "hard_gate_thresholds": {
+        "negated": 0.9,
+        "certainty": 0.9,
+        "temporality": 0.9,
+        "experiencer": 0.95,
+        "dose": 0.9,
+        "provenance": 1.0,
+        "mention_exact_match": 0.9,
+        "relation_exact_match": 0.9,
+        "scope_accuracy": 0.9,
+        "cross_mention_isolation": 0.9
+      },
+      "mean_latency_ms": 3.448620657940437,
+      "startup_seconds": 1.8216412129986566,
+      "hard_gate_passed": true
+    }
+  }
+}

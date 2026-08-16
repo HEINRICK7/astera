@@ -1,0 +1,2291 @@
+{
+  "status": "executed",
+  "corpus": "pt_br_clinical_semantics_v6",
+  "report": {
+    "provider": "hybrid-medspacy+niede-pt-br",
+    "detection": {
+      "mode": "gold_span_queries",
+      "measured": false,
+      "errors": 0,
+      "note": "Mention boundaries are fixed by the corpus; this report isolates composition."
+    },
+    "composition": {
+      "mention_total": 334,
+      "mention_exact_match": 0.7215568862275449,
+      "cases_total": 150,
+      "cases_with_errors": 66,
+      "error_counts": {
+        "TEMPORAL_SCOPE": 29,
+        "MULTI_MENTION_COLLISION": 58,
+        "NEGATION_SCOPE": 20,
+        "STATUS_CONFLICT": 46,
+        "FAMILY_EXPERIENCER_SCOPE": 4,
+        "DOSE_ATTACHMENT": 10,
+        "LATERALITY_ATTACHMENT": 8
+      },
+      "cooccurrences": {
+        "MULTI_MENTION_COLLISION+TEMPORAL_SCOPE": 22,
+        "MULTI_MENTION_COLLISION+NEGATION_SCOPE": 17,
+        "NEGATION_SCOPE+TEMPORAL_SCOPE": 4,
+        "MULTI_MENTION_COLLISION+STATUS_CONFLICT": 29,
+        "NEGATION_SCOPE+STATUS_CONFLICT": 5,
+        "STATUS_CONFLICT+TEMPORAL_SCOPE": 6,
+        "FAMILY_EXPERIENCER_SCOPE+MULTI_MENTION_COLLISION": 4,
+        "FAMILY_EXPERIENCER_SCOPE+TEMPORAL_SCOPE": 4,
+        "LATERALITY_ATTACHMENT+MULTI_MENTION_COLLISION": 8,
+        "LATERALITY_ATTACHMENT+STATUS_CONFLICT": 8,
+        "DOSE_ATTACHMENT+STATUS_CONFLICT": 1
+      },
+      "case_classifications": [
+        {
+          "case_id": "v6-i-001",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-002",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-003",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-004",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-005",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-006",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-007",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-008",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-009",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-010",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-011",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-012",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-013",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-014",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-015",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-016",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-017",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-018",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-019",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-020",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-021",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-022",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-023",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-024",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-025",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-026",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-027",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-028",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-029",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-030",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-031",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-032",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-033",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-034",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-035",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-036",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-037",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-038",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-039",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-040",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-041",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-042",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-043",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-044",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-045",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-046",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-047",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-048",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-049",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-050",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-i-051",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-i-052",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-i-053",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-i-054",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-i-055",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-i-056",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-i-057",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-i-058",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-i-059",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-i-060",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-r-001-1",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-001-2",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-001-3",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-002-1",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-002-2",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-002-3",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-003-1",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-r-003-2",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-r-003-3",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-r-004-1",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-r-004-2",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-r-004-3",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-r-005-1",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-005-2",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-005-3",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-006-1",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-r-006-2",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-r-006-3",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-r-007-1",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-007-2",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-007-3",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-008-1",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-008-2",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-008-3",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-r-009-1",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-009-2",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-009-3",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-010-1",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-010-2",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-r-010-3",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-c-001-1",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE",
+            "STATUS_CONFLICT",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-c-001-2",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE",
+            "STATUS_CONFLICT",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-c-001-3",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE",
+            "STATUS_CONFLICT",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-c-002-1",
+          "mention_count": 3,
+          "error_types": [
+            "FAMILY_EXPERIENCER_SCOPE",
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-c-002-2",
+          "mention_count": 3,
+          "error_types": [
+            "FAMILY_EXPERIENCER_SCOPE",
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-c-002-3",
+          "mention_count": 3,
+          "error_types": [
+            "FAMILY_EXPERIENCER_SCOPE",
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-c-003-1",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-c-003-2",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-c-003-3",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE"
+          ]
+        },
+        {
+          "case_id": "v6-c-004-1",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-c-004-2",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-c-004-3",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-c-005-1",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-c-005-2",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "v6-c-005-3",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "sim-v6-0001",
+          "mention_count": 1,
+          "error_types": [
+            "DOSE_ATTACHMENT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0002",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "sim-v6-0003",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "sim-v6-0005",
+          "mention_count": 2,
+          "error_types": [
+            "LATERALITY_ATTACHMENT",
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0006",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0007",
+          "mention_count": 2,
+          "error_types": [
+            "LATERALITY_ATTACHMENT",
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0008",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0009",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0010",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0013",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0014",
+          "mention_count": 2,
+          "error_types": [
+            "LATERALITY_ATTACHMENT",
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0015",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "sim-v6-0016",
+          "mention_count": 1,
+          "error_types": [
+            "DOSE_ATTACHMENT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0017",
+          "mention_count": 1,
+          "error_types": [
+            "DOSE_ATTACHMENT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0018",
+          "mention_count": 1,
+          "error_types": [
+            "DOSE_ATTACHMENT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0019",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "sim-v6-0020",
+          "mention_count": 1,
+          "error_types": [
+            "DOSE_ATTACHMENT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0021",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "sim-v6-0023",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "sim-v6-0024",
+          "mention_count": 2,
+          "error_types": [
+            "FAMILY_EXPERIENCER_SCOPE",
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0025",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0026",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0027",
+          "mention_count": 2,
+          "error_types": [
+            "LATERALITY_ATTACHMENT",
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0028",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0029",
+          "mention_count": 2,
+          "error_types": [
+            "LATERALITY_ATTACHMENT",
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0030",
+          "mention_count": 2,
+          "error_types": [
+            "LATERALITY_ATTACHMENT",
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0031",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0032",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0033",
+          "mention_count": 2,
+          "error_types": [
+            "LATERALITY_ATTACHMENT",
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0034",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0035",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0036",
+          "mention_count": 2,
+          "error_types": [
+            "LATERALITY_ATTACHMENT",
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0037",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0038",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0039",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0040",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0041",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0042",
+          "mention_count": 3,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0048",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0049",
+          "mention_count": 1,
+          "error_types": [
+            "STATUS_CONFLICT",
+            "TEMPORAL_SCOPE"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0050",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "sim-v6-0051",
+          "mention_count": 2,
+          "error_types": [
+            "MULTI_MENTION_COLLISION",
+            "NEGATION_SCOPE",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0053",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "sim-v6-0054",
+          "mention_count": 1,
+          "error_types": [
+            "DOSE_ATTACHMENT",
+            "STATUS_CONFLICT"
+          ]
+        },
+        {
+          "case_id": "sim-v6-0055",
+          "mention_count": 1,
+          "error_types": [
+            "STATUS_CONFLICT",
+            "TEMPORAL_SCOPE"
+          ]
+        }
+      ],
+      "details": [
+        {
+          "case_id": "v6-i-051",
+          "surface": "cirurgia no ombro",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "v6-i-052",
+          "surface": "queda",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "v6-i-053",
+          "surface": "pneumonia",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "v6-i-054",
+          "surface": "lesão no joelho",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "v6-i-055",
+          "surface": "fratura na mão",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "v6-i-056",
+          "surface": "infarto",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "v6-i-057",
+          "surface": "crise de asma",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "v6-i-058",
+          "surface": "dor lombar",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "v6-i-059",
+          "surface": "trombose",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "v6-i-060",
+          "surface": "otite",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "v6-r-003-1",
+          "surface": "vomitou",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": true
+          },
+          "actual": {
+            "negated": false
+          }
+        },
+        {
+          "case_id": "v6-r-003-2",
+          "surface": "vomitou",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": true
+          },
+          "actual": {
+            "negated": false
+          }
+        },
+        {
+          "case_id": "v6-r-003-3",
+          "surface": "vomitou",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": true
+          },
+          "actual": {
+            "negated": false
+          }
+        },
+        {
+          "case_id": "v6-r-003-3",
+          "surface": "enjoo",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "current"
+          },
+          "actual": {
+            "temporality": "past"
+          }
+        },
+        {
+          "case_id": "v6-r-003-3",
+          "surface": "azia",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "current"
+          },
+          "actual": {
+            "temporality": "past"
+          }
+        },
+        {
+          "case_id": "v6-r-004-1",
+          "surface": "fraqueza",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": false
+          },
+          "actual": {
+            "negated": true
+          }
+        },
+        {
+          "case_id": "v6-r-004-2",
+          "surface": "fraqueza",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": false
+          },
+          "actual": {
+            "negated": true
+          }
+        },
+        {
+          "case_id": "v6-r-004-3",
+          "surface": "fraqueza",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": false
+          },
+          "actual": {
+            "negated": true
+          }
+        },
+        {
+          "case_id": "v6-r-006-1",
+          "surface": "cansaço",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": false
+          },
+          "actual": {
+            "negated": true
+          }
+        },
+        {
+          "case_id": "v6-r-006-1",
+          "surface": "peso no peito",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": false
+          },
+          "actual": {
+            "negated": true
+          }
+        },
+        {
+          "case_id": "v6-r-006-2",
+          "surface": "cansaço",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": false
+          },
+          "actual": {
+            "negated": true
+          }
+        },
+        {
+          "case_id": "v6-r-006-2",
+          "surface": "peso no peito",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": false
+          },
+          "actual": {
+            "negated": true
+          }
+        },
+        {
+          "case_id": "v6-r-006-3",
+          "surface": "cansaço",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": false
+          },
+          "actual": {
+            "negated": true
+          }
+        },
+        {
+          "case_id": "v6-r-006-3",
+          "surface": "peso no peito",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": false
+          },
+          "actual": {
+            "negated": true
+          }
+        },
+        {
+          "case_id": "v6-r-008-3",
+          "surface": "febre",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "current"
+          },
+          "actual": {
+            "temporality": "past"
+          }
+        },
+        {
+          "case_id": "v6-r-008-3",
+          "surface": "dor no corpo",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "current"
+          },
+          "actual": {
+            "temporality": "past"
+          }
+        },
+        {
+          "case_id": "v6-c-001-1",
+          "surface": "losartana",
+          "mismatches": [
+            "temporality",
+            "status"
+          ],
+          "expected": {
+            "temporality": "past",
+            "status": "discontinued"
+          },
+          "actual": {
+            "temporality": "current",
+            "status": null
+          }
+        },
+        {
+          "case_id": "v6-c-001-1",
+          "surface": "tontura",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": true
+          },
+          "actual": {
+            "negated": false
+          }
+        },
+        {
+          "case_id": "v6-c-001-1",
+          "surface": "semana passada",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "v6-c-001-2",
+          "surface": "losartana",
+          "mismatches": [
+            "temporality",
+            "status"
+          ],
+          "expected": {
+            "temporality": "past",
+            "status": "discontinued"
+          },
+          "actual": {
+            "temporality": "current",
+            "status": null
+          }
+        },
+        {
+          "case_id": "v6-c-001-2",
+          "surface": "tontura",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": true
+          },
+          "actual": {
+            "negated": false
+          }
+        },
+        {
+          "case_id": "v6-c-001-2",
+          "surface": "semana passada",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "v6-c-001-3",
+          "surface": "losartana",
+          "mismatches": [
+            "temporality",
+            "status"
+          ],
+          "expected": {
+            "temporality": "past",
+            "status": "discontinued"
+          },
+          "actual": {
+            "temporality": "current",
+            "status": null
+          }
+        },
+        {
+          "case_id": "v6-c-001-3",
+          "surface": "tontura",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": true
+          },
+          "actual": {
+            "negated": false
+          }
+        },
+        {
+          "case_id": "v6-c-001-3",
+          "surface": "semana passada",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "v6-c-002-1",
+          "surface": "mãe",
+          "mismatches": [
+            "temporality",
+            "experiencer"
+          ],
+          "expected": {
+            "temporality": "current",
+            "experiencer": "family"
+          },
+          "actual": {
+            "temporality": "past",
+            "experiencer": "patient"
+          }
+        },
+        {
+          "case_id": "v6-c-002-2",
+          "surface": "mãe",
+          "mismatches": [
+            "temporality",
+            "experiencer"
+          ],
+          "expected": {
+            "temporality": "current",
+            "experiencer": "family"
+          },
+          "actual": {
+            "temporality": "past",
+            "experiencer": "patient"
+          }
+        },
+        {
+          "case_id": "v6-c-002-3",
+          "surface": "mãe",
+          "mismatches": [
+            "temporality",
+            "experiencer"
+          ],
+          "expected": {
+            "temporality": "current",
+            "experiencer": "family"
+          },
+          "actual": {
+            "temporality": "past",
+            "experiencer": "patient"
+          }
+        },
+        {
+          "case_id": "v6-c-003-1",
+          "surface": "dor",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": true
+          },
+          "actual": {
+            "negated": false
+          }
+        },
+        {
+          "case_id": "v6-c-003-2",
+          "surface": "dor",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": true
+          },
+          "actual": {
+            "negated": false
+          }
+        },
+        {
+          "case_id": "v6-c-003-3",
+          "surface": "dor",
+          "mismatches": [
+            "negated"
+          ],
+          "expected": {
+            "negated": true
+          },
+          "actual": {
+            "negated": false
+          }
+        },
+        {
+          "case_id": "sim-v6-0001",
+          "surface": "metformina",
+          "mismatches": [
+            "frequency"
+          ],
+          "expected": {
+            "frequency": "no jantar"
+          },
+          "actual": {
+            "frequency": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0005",
+          "surface": "dor",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0005",
+          "surface": "fraqueza",
+          "mismatches": [
+            "laterality",
+            "status"
+          ],
+          "expected": {
+            "laterality": "right",
+            "status": "present"
+          },
+          "actual": {
+            "laterality": null,
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0006",
+          "surface": "formigamento",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0006",
+          "surface": "dor",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0007",
+          "surface": "formigamento",
+          "mismatches": [
+            "laterality",
+            "status"
+          ],
+          "expected": {
+            "laterality": "right",
+            "status": "present"
+          },
+          "actual": {
+            "laterality": null,
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0008",
+          "surface": "queimação",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0008",
+          "surface": "dormência",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0009",
+          "surface": "falta de ar",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0010",
+          "surface": "tosse seca",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0013",
+          "surface": "cirurgia",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "sim-v6-0013",
+          "surface": "peso",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0014",
+          "surface": "dor",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "historical"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0014",
+          "surface": "dormência",
+          "mismatches": [
+            "laterality",
+            "status"
+          ],
+          "expected": {
+            "laterality": "right",
+            "status": "present"
+          },
+          "actual": {
+            "laterality": null,
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0016",
+          "surface": "sertralina",
+          "mismatches": [
+            "dose",
+            "dose_value",
+            "frequency"
+          ],
+          "expected": {
+            "dose": "75 mg",
+            "dose_value": "75",
+            "frequency": "pela manhã"
+          },
+          "actual": {
+            "dose": "50 mg",
+            "dose_value": "50",
+            "frequency": "antes de dormir"
+          }
+        },
+        {
+          "case_id": "sim-v6-0017",
+          "surface": "ibuprofeno",
+          "mismatches": [
+            "frequency"
+          ],
+          "expected": {
+            "frequency": "a cada oito horas"
+          },
+          "actual": {
+            "frequency": "se dor"
+          }
+        },
+        {
+          "case_id": "sim-v6-0018",
+          "surface": "prednisona",
+          "mismatches": [
+            "frequency"
+          ],
+          "expected": {
+            "frequency": "depois do café"
+          },
+          "actual": {
+            "frequency": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0020",
+          "surface": "levotiroxina",
+          "mismatches": [
+            "frequency"
+          ],
+          "expected": {
+            "frequency": "antes do café"
+          },
+          "actual": {
+            "frequency": "em jejum"
+          }
+        },
+        {
+          "case_id": "sim-v6-0024",
+          "surface": "epilepsia",
+          "mismatches": [
+            "temporality",
+            "experiencer"
+          ],
+          "expected": {
+            "temporality": "past",
+            "experiencer": "family"
+          },
+          "actual": {
+            "temporality": "current",
+            "experiencer": "patient"
+          }
+        },
+        {
+          "case_id": "sim-v6-0025",
+          "surface": "hipertensão",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "sim-v6-0026",
+          "surface": "AVC",
+          "mismatches": [
+            "temporality"
+          ],
+          "expected": {
+            "temporality": "past"
+          },
+          "actual": {
+            "temporality": "current"
+          }
+        },
+        {
+          "case_id": "sim-v6-0027",
+          "surface": "dormência",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0027",
+          "surface": "dor",
+          "mismatches": [
+            "laterality",
+            "status"
+          ],
+          "expected": {
+            "laterality": "left",
+            "status": "present"
+          },
+          "actual": {
+            "laterality": null,
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0028",
+          "surface": "dor",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0028",
+          "surface": "tremor",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0029",
+          "surface": "pressão",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0029",
+          "surface": "zumbido",
+          "mismatches": [
+            "laterality",
+            "status"
+          ],
+          "expected": {
+            "laterality": "right",
+            "status": "present"
+          },
+          "actual": {
+            "laterality": null,
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0030",
+          "surface": "rigidez",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0030",
+          "surface": "sensibilidade",
+          "mismatches": [
+            "laterality",
+            "status"
+          ],
+          "expected": {
+            "laterality": "left",
+            "status": "present"
+          },
+          "actual": {
+            "laterality": null,
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0031",
+          "surface": "inchaço",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0031",
+          "surface": "coceira",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0032",
+          "surface": "fraqueza",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0033",
+          "surface": "queimação",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0033",
+          "surface": "dormência",
+          "mismatches": [
+            "laterality",
+            "status"
+          ],
+          "expected": {
+            "laterality": "right",
+            "status": "present"
+          },
+          "actual": {
+            "laterality": null,
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0034",
+          "surface": "cólica",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0034",
+          "surface": "tontura",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0035",
+          "surface": "dor",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0036",
+          "surface": "dor abdominal",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0036",
+          "surface": "sensibilidade",
+          "mismatches": [
+            "laterality",
+            "status"
+          ],
+          "expected": {
+            "laterality": "left",
+            "status": "present"
+          },
+          "actual": {
+            "laterality": null,
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0037",
+          "surface": "náusea",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0038",
+          "surface": "fraqueza",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0039",
+          "surface": "cólica",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0040",
+          "surface": "desequilíbrio",
+          "mismatches": [
+            "negated",
+            "status"
+          ],
+          "expected": {
+            "negated": false,
+            "status": "present"
+          },
+          "actual": {
+            "negated": true,
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0041",
+          "surface": "dor epigástrica",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0042",
+          "surface": "mal-estar",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0048",
+          "surface": "queda",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "historical"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0048",
+          "surface": "dor",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0049",
+          "surface": "losartana",
+          "mismatches": [
+            "temporality",
+            "status"
+          ],
+          "expected": {
+            "temporality": "past",
+            "status": "discontinued"
+          },
+          "actual": {
+            "temporality": "current",
+            "status": "active"
+          }
+        },
+        {
+          "case_id": "sim-v6-0051",
+          "surface": "dor",
+          "mismatches": [
+            "negated",
+            "status"
+          ],
+          "expected": {
+            "negated": true,
+            "status": "resolved"
+          },
+          "actual": {
+            "negated": false,
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0051",
+          "surface": "formigamento",
+          "mismatches": [
+            "status"
+          ],
+          "expected": {
+            "status": "present"
+          },
+          "actual": {
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0054",
+          "surface": "metformina",
+          "mismatches": [
+            "dose",
+            "dose_value",
+            "frequency",
+            "status"
+          ],
+          "expected": {
+            "dose": "850",
+            "dose_value": "850",
+            "frequency": "depois do jantar",
+            "status": "active"
+          },
+          "actual": {
+            "dose": null,
+            "dose_value": null,
+            "frequency": null,
+            "status": null
+          }
+        },
+        {
+          "case_id": "sim-v6-0055",
+          "surface": "enalapril",
+          "mismatches": [
+            "temporality",
+            "status"
+          ],
+          "expected": {
+            "temporality": "past",
+            "status": "discontinued"
+          },
+          "actual": {
+            "temporality": "current",
+            "status": "active"
+          }
+        }
+      ]
+    }
+  }
+}

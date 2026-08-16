@@ -1,0 +1,36 @@
+replicaCount: 2
+
+image:
+  repository: ghcr.io/astera/astera-runtime
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent
+
+environment: production
+authSecretName: astera-runtime-secrets
+authSecretKey: auth-secret
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: http
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 1000m
+    memory: 1Gi
+
+probes:
+  readiness:
+    path: /ready
+    initialDelaySeconds: 5
+    periodSeconds: 10
+  liveness:
+    path: /health
+    initialDelaySeconds: 15
+    periodSeconds: 20
+
+podDisruptionBudget:
+  minAvailable: 1

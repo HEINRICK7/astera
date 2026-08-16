@@ -1,0 +1,19 @@
+{
+  "status": "D3_DIAGNOSTIC_COMPLETE",
+  "execution_id": "d3-one-shot-4c137795-99d1-4973-a98d-20eb89de0617",
+  "started_at_utc": "2026-08-16T01:00:54.044285+00:00",
+  "one_shot": true,
+  "official_corpus_checksum": "cef75b21b8eae6ec940b9f6cffe3d27fbe5b050db838569f3f19ef68434f1b0d",
+  "compiler_checksum": "70d5d74c87c7ab09226ae072d18b85eb5a375fdbf8785d7e9744228197c1dc53",
+  "resolver_checksum": "d7dda54457cf896392e41edc8c259098b190c1c9bfa1ed82c6a1e5c7a46a59a7",
+  "policy_checksum": "b2bf0b98e4544ac6d2d94fe1e8d8c244a7edc11845820ac9978e4d0f6016e153",
+  "trace_schema": "clinical-evaluation-trace/v2",
+  "resolver_repair_after_run": "NOT_AUTHORIZED",
+  "d1_rerun": false,
+  "d2_rerun": false,
+  "v7_rerun": false,
+  "finished_at_utc": "2026-08-16T01:00:56.096063+00:00",
+  "result": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/D3_ONE_SHOT_RESULT.json",
+  "trace_directory": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d3-traces-2026-08-15",
+  "trace_count": 36
+}

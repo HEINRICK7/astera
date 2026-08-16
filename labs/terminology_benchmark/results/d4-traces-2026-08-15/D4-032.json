@@ -1,0 +1,1899 @@
+{
+  "case_id": "D4-032",
+  "corpus_checksum": "1ad10a39a899906ab35455d6ce51bedcfd20f2f7776a9e6e59155ed9a1cb0938",
+  "corpus_version": "D4",
+  "decisions": [],
+  "evaluation_id": "d4-one-shot-0877e9b7-fac6-4881-8ab7-18d46356f719",
+  "mismatches": [
+    {
+      "actual": "dois comprimidos",
+      "confidence": 0.55,
+      "details": {
+        "mention": "comprimido",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": null,
+      "policy_rules": [
+        "ptbr-recent-duration",
+        "ptbr-dose",
+        "ptbr-active-medication-context"
+      ],
+      "semantic_dimension": "dose",
+      "stage": "prediction"
+    },
+    {
+      "actual": "2",
+      "confidence": 0.55,
+      "details": {
+        "mention": "comprimido",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": null,
+      "policy_rules": [
+        "ptbr-recent-duration",
+        "ptbr-dose",
+        "ptbr-active-medication-context"
+      ],
+      "semantic_dimension": "dose_value",
+      "stage": "prediction"
+    },
+    {
+      "actual": "comprimido",
+      "confidence": 0.55,
+      "details": {
+        "mention": "comprimido",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": null,
+      "policy_rules": [
+        "ptbr-recent-duration",
+        "ptbr-dose",
+        "ptbr-active-medication-context"
+      ],
+      "semantic_dimension": "dose_unit",
+      "stage": "prediction"
+    },
+    {
+      "actual": "active",
+      "confidence": 0.55,
+      "details": {
+        "mention": "comprimido",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": null,
+      "policy_rules": [
+        "ptbr-recent-duration",
+        "ptbr-dose",
+        "ptbr-active-medication-context"
+      ],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "7451a83307e83f27f337297bdf2c3fc72c390ccae4f76e2cc7a1ad880a186852",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "e60f5c8e0586d56d9488b941490557de7f824ac7d07b87339241a0ae7703257c",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "448aa8cb05ced3ddbb64fb01080d0aee6f2204d869d198313cacb36e9700fc29",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "u1",
+            "speaker": "patient",
+            "text": "Há dois comprimidos sem identificação na receita."
+          },
+          {
+            "segment_id": "u3",
+            "speaker": "patient",
+            "text": "O horário mudou, mas não se sabe qual deles."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-032",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "59be314fa9da32d49c3cf5d2744d622bd98802702d965c61b4d118e99acb1ac9",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "448aa8cb05ced3ddbb64fb01080d0aee6f2204d869d198313cacb36e9700fc29",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-032",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "e21f4608fbe7dbd8a8719f61464dbd0f99f6ad5744dd12982834e2b68cd4d48c",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u3"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "comprimido"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "dois comprimidos",
+            "dose_unit": "comprimido",
+            "dose_value": "2",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-032",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "8afdc0d6d78df0333794d83bf8e7641b61a9e823b255e541041648cb26f2e19e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u3"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "comprimido"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "dois comprimidos",
+            "dose_unit": "comprimido",
+            "dose_value": "2",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-032",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "dc7d73a3eb079ab6be86d2de6fc0f46013191fd78146647f2370d35aac7c392c",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u3"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "comprimido"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "dois comprimidos",
+            "dose_unit": "comprimido",
+            "dose_value": "2",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 2,
+            "actual_signal_count": 2,
+            "ambiguous_expected": 1,
+            "complete_and_correct": 0,
+            "complete_but_wrong": 0,
+            "details": [
+              {
+                "actual": null,
+                "classification": "AMBIGUOUS",
+                "expected": {
+                  "attribute_type": "unknown",
+                  "current_value": null,
+                  "owner_type": null,
+                  "previous_value": null,
+                  "source_segment_ids": [
+                    "u3"
+                  ],
+                  "state": "unresolved",
+                  "status": "AMBIGUOUS"
+                }
+              }
+            ],
+            "expected_unresolved_count": 1,
+            "owner_correct": 0,
+            "owner_total": 0,
+            "provenance_correct": 0,
+            "provenance_total": 0,
+            "state_correct": 0,
+            "state_total": 0,
+            "transition_correct": 0,
+            "transition_total": 0,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "dose",
+                "confidence": 1.0,
+                "evidence": [
+                  "u1"
+                ],
+                "owner_mention_id": "context:u1",
+                "owner_type": null,
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "u1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "UNRESOLVED_OWNER",
+                "value": "dois comprimidos"
+              },
+              {
+                "attribute_type": "status",
+                "confidence": 1.0,
+                "evidence": [
+                  "u1"
+                ],
+                "owner_mention_id": "context:u1",
+                "owner_type": null,
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "u1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "UNRESOLVED_OWNER",
+                "value": "active"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "81c7951f104f95d5f5a88fdeadcdee111ec62f85de6e3a37070e23576dcf5b62",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:u1",
+            "owner_segment_id": "u1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "u1"
+            ]
+          },
+          "dose": {
+            "owner_mention_id": "context:u1",
+            "owner_segment_id": "u1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "u1"
+            ]
+          },
+          "dose_unit": {
+            "owner_mention_id": "context:u1",
+            "owner_segment_id": "u1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "u1"
+            ]
+          },
+          "dose_value": {
+            "owner_mention_id": "context:u1",
+            "owner_segment_id": "u1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "u1"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:u1",
+            "owner_segment_id": "u1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "u1"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:u1",
+            "owner_segment_id": "u1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "u3"
+            ]
+          },
+          "status": {
+            "owner_mention_id": "context:u1",
+            "owner_segment_id": "u1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "u1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:u1",
+            "owner_segment_id": "u1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "u1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-032",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "a83049db0a246ff95538f0481de05ce58579e6da38d9a4831c2574ae8e635d1e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "81c7951f104f95d5f5a88fdeadcdee111ec62f85de6e3a37070e23576dcf5b62",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-032",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "dd2164ba288976989e72f580c63bb0b456bfe61f085bce5e67ccf1b70b9bd835",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "7cce98c6728d4a18c9b72fd84e9a0b97220e4dbc72c09872932130a7d8ddf554",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u3"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "negated": [
+              "u3"
+            ]
+          },
+          "candidate_source": "u1",
+          "historical_attributes": {},
+          "owner_mention_id": "context:u1",
+          "owner_type": null,
+          "relation_input_contract": {
+            "attribute_signals": [
+              {
+                "attribute_type": "dose",
+                "confidence": 1.0,
+                "evidence": [
+                  "u1"
+                ],
+                "owner_mention_id": "context:u1",
+                "owner_type": null,
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "u1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "UNRESOLVED_OWNER",
+                "value": "dois comprimidos"
+              },
+              {
+                "attribute_type": "status",
+                "confidence": 1.0,
+                "evidence": [
+                  "u1"
+                ],
+                "owner_mention_id": "context:u1",
+                "owner_type": null,
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "u1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "UNRESOLVED_OWNER",
+                "value": "active"
+              }
+            ],
+            "has_blocking_signal": true,
+            "relation_input_owner_completeness": 0.0,
+            "relation_input_provenance": 1.0,
+            "relation_input_state_completeness": 1.0,
+            "transition_contract_validity": 1.0,
+            "transition_signals": []
+          },
+          "relation_input_signals": [
+            {
+              "attribute_type": "dose",
+              "confidence": 1.0,
+              "evidence": [
+                "u1"
+              ],
+              "owner_mention_id": "context:u1",
+              "owner_type": null,
+              "provenance": {
+                "evidence_id": null,
+                "semantic_policy": null,
+                "source_segment_ids": [
+                  "u1"
+                ]
+              },
+              "relation_ready": false,
+              "state": "current",
+              "status": "UNRESOLVED_OWNER",
+              "value": "dois comprimidos"
+            },
+            {
+              "attribute_type": "status",
+              "confidence": 1.0,
+              "evidence": [
+                "u1"
+              ],
+              "owner_mention_id": "context:u1",
+              "owner_type": null,
+              "provenance": {
+                "evidence_id": null,
+                "semantic_policy": null,
+                "source_segment_ids": [
+                  "u1"
+                ]
+              },
+              "relation_ready": false,
+              "state": "current",
+              "status": "UNRESOLVED_OWNER",
+              "value": "active"
+            }
+          ],
+          "source_segment_ids": [
+            "u1"
+          ],
+          "transition_attribute_ownership": {},
+          "transition_evidence": [],
+          "transition_input_signals": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Há dois comprimidos sem identificação na receita.\\npatient: O horário mudou, mas não se sabe qual deles.', 'rules': ('ptbr-recent-duration', 'ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:u1:8:18', 'owner_span': (8, 18), 'source_evidence_id': 'context:u1'}}, 'relation_signals': [{'relation_type': 'HAS_DOSE', 'source': 'context:u1:8:18', 'target': 'dose', 'value': 'dois comprimidos', 'provenance': {'rule': 'ptbr-dose'}}], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'UNRESOLVED', 'unresolved': ['UNRESOLVED_OWNER:dose', 'UNRESOLVED_OWNER:status'], 'resolved_provenance': {'source_segment_ids': ('u1',), 'candidate_source': 'u1', 'owner_type': None, 'owner_mention_id': 'context:u1', 'attribute_provenance': {'negated': ['u3']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u3',)}, 'certainty': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'temporality': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'experiencer': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'dose': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'dose_value': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'dose_unit': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'status': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'dose', 'value': 'dois comprimidos', 'owner_mention_id': 'context:u1', 'owner_type': None, 'state': 'current', 'status': 'UNRESOLVED_OWNER', 'provenance': {'source_segment_ids': ('u1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['u1'], 'relation_ready': False}, {'attribute_type': 'status', 'value': 'active', 'owner_mention_id': 'context:u1', 'owner_type': None, 'state': 'current', 'status': 'UNRESOLVED_OWNER', 'provenance': {'source_segment_ids': ('u1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['u1'], 'relation_ready': False}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'dose', 'value': 'dois comprimidos', 'owner_mention_id': 'context:u1', 'owner_type': None, 'state': 'current', 'status': 'UNRESOLVED_OWNER', 'provenance': {'source_segment_ids': ('u1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['u1'], 'relation_ready': False}, {'attribute_type': 'status', 'value': 'active', 'owner_mention_id': 'context:u1', 'owner_type': None, 'state': 'current', 'status': 'UNRESOLVED_OWNER', 'provenance': {'source_segment_ids': ('u1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['u1'], 'relation_ready': False}], 'transition_signals': [], 'relation_input_owner_completeness': 0.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': True}, 'transition_attribute_ownership': {}}, 'authority_metrics': {'resolver_decisions_total': 275, 'resolver_decisions_preserved': 245, 'resolver_decisions_overwritten': 30, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'u1', 'conversation_segment_ids': ['u3']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "dose",
+                "confidence": 1.0,
+                "evidence": [
+                  "u1"
+                ],
+                "owner_mention_id": "context:u1",
+                "owner_type": null,
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "u1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "UNRESOLVED_OWNER",
+                "value": "dois comprimidos"
+              },
+              {
+                "attribute_type": "status",
+                "confidence": 1.0,
+                "evidence": [
+                  "u1"
+                ],
+                "owner_mention_id": "context:u1",
+                "owner_type": null,
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "u1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "UNRESOLVED_OWNER",
+                "value": "active"
+              }
+            ],
+            "relations": [],
+            "signal_quality": {
+              "actual_nonready_signal_count": 2,
+              "actual_signal_count": 2,
+              "ambiguous_expected": 1,
+              "complete_and_correct": 0,
+              "complete_but_wrong": 0,
+              "details": [
+                {
+                  "actual": null,
+                  "classification": "AMBIGUOUS",
+                  "expected": {
+                    "attribute_type": "unknown",
+                    "current_value": null,
+                    "owner_type": null,
+                    "previous_value": null,
+                    "source_segment_ids": [
+                      "u3"
+                    ],
+                    "state": "unresolved",
+                    "status": "AMBIGUOUS"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 1,
+              "owner_correct": 0,
+              "owner_total": 0,
+              "provenance_correct": 0,
+              "provenance_total": 0,
+              "state_correct": 0,
+              "state_total": 0,
+              "transition_correct": 0,
+              "transition_total": 0,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "comprimido",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-032",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "f46f9c7791142bffe0b99b7191fec2daf32ac1853c78da16c22df87115edc1cb",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u3"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "comprimido"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "dois comprimidos",
+            "dose_unit": "comprimido",
+            "dose_value": "2",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 2,
+            "actual_signal_count": 2,
+            "ambiguous_expected": 1,
+            "complete_and_correct": 0,
+            "complete_but_wrong": 0,
+            "details": [
+              {
+                "actual": null,
+                "classification": "AMBIGUOUS",
+                "expected": {
+                  "attribute_type": "unknown",
+                  "current_value": null,
+                  "owner_type": null,
+                  "previous_value": null,
+                  "source_segment_ids": [
+                    "u3"
+                  ],
+                  "state": "unresolved",
+                  "status": "AMBIGUOUS"
+                }
+              }
+            ],
+            "expected_unresolved_count": 1,
+            "owner_correct": 0,
+            "owner_total": 0,
+            "provenance_correct": 0,
+            "provenance_total": 0,
+            "state_correct": 0,
+            "state_total": 0,
+            "transition_correct": 0,
+            "transition_total": 0,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "dose",
+                "confidence": 1.0,
+                "evidence": [
+                  "u1"
+                ],
+                "owner_mention_id": "context:u1",
+                "owner_type": null,
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "u1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "UNRESOLVED_OWNER",
+                "value": "dois comprimidos"
+              },
+              {
+                "attribute_type": "status",
+                "confidence": 1.0,
+                "evidence": [
+                  "u1"
+                ],
+                "owner_mention_id": "context:u1",
+                "owner_type": null,
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "u1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "UNRESOLVED_OWNER",
+                "value": "active"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "7cce98c6728d4a18c9b72fd84e9a0b97220e4dbc72c09872932130a7d8ddf554",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-032",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "a94e713bf70590bf998c42ac557a4f72eb33dd444d1981a9f6ca35ef61f647ef",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u3"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:u1",
+              "owner_segment_id": "u1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "u1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "comprimido"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "dois comprimidos",
+            "dose_unit": "comprimido",
+            "dose_value": "2",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 2,
+            "actual_signal_count": 2,
+            "ambiguous_expected": 1,
+            "complete_and_correct": 0,
+            "complete_but_wrong": 0,
+            "details": [
+              {
+                "actual": null,
+                "classification": "AMBIGUOUS",
+                "expected": {
+                  "attribute_type": "unknown",
+                  "current_value": null,
+                  "owner_type": null,
+                  "previous_value": null,
+                  "source_segment_ids": [
+                    "u3"
+                  ],
+                  "state": "unresolved",
+                  "status": "AMBIGUOUS"
+                }
+              }
+            ],
+            "expected_unresolved_count": 1,
+            "owner_correct": 0,
+            "owner_total": 0,
+            "provenance_correct": 0,
+            "provenance_total": 0,
+            "state_correct": 0,
+            "state_total": 0,
+            "transition_correct": 0,
+            "transition_total": 0,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "dose",
+                "confidence": 1.0,
+                "evidence": [
+                  "u1"
+                ],
+                "owner_mention_id": "context:u1",
+                "owner_type": null,
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "u1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "UNRESOLVED_OWNER",
+                "value": "dois comprimidos"
+              },
+              {
+                "attribute_type": "status",
+                "confidence": 1.0,
+                "evidence": [
+                  "u1"
+                ],
+                "owner_mention_id": "context:u1",
+                "owner_type": null,
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "u1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "UNRESOLVED_OWNER",
+                "value": "active"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "14bd5c3982116703e9549fa3517bd6accfbed61d4a278e175287d1e037b22973",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Há dois comprimidos sem identificação na receita.\\npatient: O horário mudou, mas não se sabe qual deles.', 'rules': ('ptbr-recent-duration', 'ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:u1:8:18', 'owner_span': (8, 18), 'source_evidence_id': 'context:u1'}}, 'relation_signals': [{'relation_type': 'HAS_DOSE', 'source': 'context:u1:8:18', 'target': 'dose', 'value': 'dois comprimidos', 'provenance': {'rule': 'ptbr-dose'}}], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'UNRESOLVED', 'unresolved': ['UNRESOLVED_OWNER:dose', 'UNRESOLVED_OWNER:status'], 'resolved_provenance': {'source_segment_ids': ('u1',), 'candidate_source': 'u1', 'owner_type': None, 'owner_mention_id': 'context:u1', 'attribute_provenance': {'negated': ['u3']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u3',)}, 'certainty': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'temporality': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'experiencer': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'dose': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'dose_value': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'dose_unit': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'status': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'dose', 'value': 'dois comprimidos', 'owner_mention_id': 'context:u1', 'owner_type': None, 'state': 'current', 'status': 'UNRESOLVED_OWNER', 'provenance': {'source_segment_ids': ('u1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['u1'], 'relation_ready': False}, {'attribute_type': 'status', 'value': 'active', 'owner_mention_id': 'context:u1', 'owner_type': None, 'state': 'current', 'status': 'UNRESOLVED_OWNER', 'provenance': {'source_segment_ids': ('u1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['u1'], 'relation_ready': False}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'dose', 'value': 'dois comprimidos', 'owner_mention_id': 'context:u1', 'owner_type': None, 'state': 'current', 'status': 'UNRESOLVED_OWNER', 'provenance': {'source_segment_ids': ('u1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['u1'], 'relation_ready': False}, {'attribute_type': 'status', 'value': 'active', 'owner_mention_id': 'context:u1', 'owner_type': None, 'state': 'current', 'status': 'UNRESOLVED_OWNER', 'provenance': {'source_segment_ids': ('u1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['u1'], 'relation_ready': False}], 'transition_signals': [], 'relation_input_owner_completeness': 0.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': True}, 'transition_attribute_ownership': {}}, 'authority_metrics': {'resolver_decisions_total': 275, 'resolver_decisions_preserved': 245, 'resolver_decisions_overwritten': 30, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'u1', 'conversation_segment_ids': ['u3']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "dose",
+                "confidence": 1.0,
+                "evidence": [
+                  "u1"
+                ],
+                "owner_mention_id": "context:u1",
+                "owner_type": null,
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "u1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "UNRESOLVED_OWNER",
+                "value": "dois comprimidos"
+              },
+              {
+                "attribute_type": "status",
+                "confidence": 1.0,
+                "evidence": [
+                  "u1"
+                ],
+                "owner_mention_id": "context:u1",
+                "owner_type": null,
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "u1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "UNRESOLVED_OWNER",
+                "value": "active"
+              }
+            ],
+            "relations": [],
+            "signal_quality": {
+              "actual_nonready_signal_count": 2,
+              "actual_signal_count": 2,
+              "ambiguous_expected": 1,
+              "complete_and_correct": 0,
+              "complete_but_wrong": 0,
+              "details": [
+                {
+                  "actual": null,
+                  "classification": "AMBIGUOUS",
+                  "expected": {
+                    "attribute_type": "unknown",
+                    "current_value": null,
+                    "owner_type": null,
+                    "previous_value": null,
+                    "source_segment_ids": [
+                      "u3"
+                    ],
+                    "state": "unresolved",
+                    "status": "AMBIGUOUS"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 1,
+              "owner_correct": 0,
+              "owner_total": 0,
+              "provenance_correct": 0,
+              "provenance_total": 0,
+              "state_correct": 0,
+              "state_total": 0,
+              "transition_correct": 0,
+              "transition_total": 0,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "comprimido",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-032",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "c9dbdf4676d74e2628c84693904027428c34fa100078ac352349c9229a721158",
+      "changed_fields": [
+        "dose",
+        "dose_unit",
+        "dose_value",
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "14bd5c3982116703e9549fa3517bd6accfbed61d4a278e175287d1e037b22973",
+      "output_hash": "14bd5c3982116703e9549fa3517bd6accfbed61d4a278e175287d1e037b22973",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "dois comprimidos",
+              "dose_unit": "comprimido",
+              "dose_value": "2",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Há dois comprimidos sem identificação na receita.\\npatient: O horário mudou, mas não se sabe qual deles.', 'rules': ('ptbr-recent-duration', 'ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:u1:8:18', 'owner_span': (8, 18), 'source_evidence_id': 'context:u1'}}, 'relation_signals': [{'relation_type': 'HAS_DOSE', 'source': 'context:u1:8:18', 'target': 'dose', 'value': 'dois comprimidos', 'provenance': {'rule': 'ptbr-dose'}}], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'UNRESOLVED', 'unresolved': ['UNRESOLVED_OWNER:dose', 'UNRESOLVED_OWNER:status'], 'resolved_provenance': {'source_segment_ids': ('u1',), 'candidate_source': 'u1', 'owner_type': None, 'owner_mention_id': 'context:u1', 'attribute_provenance': {'negated': ['u3']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u3',)}, 'certainty': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'temporality': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'experiencer': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'dose': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'dose_value': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'dose_unit': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}, 'status': {'owner_mention_id': 'context:u1', 'owner_segment_id': 'u1', 'owner_type': None, 'source_segment_ids': ('u1',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'dose', 'value': 'dois comprimidos', 'owner_mention_id': 'context:u1', 'owner_type': None, 'state': 'current', 'status': 'UNRESOLVED_OWNER', 'provenance': {'source_segment_ids': ('u1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['u1'], 'relation_ready': False}, {'attribute_type': 'status', 'value': 'active', 'owner_mention_id': 'context:u1', 'owner_type': None, 'state': 'current', 'status': 'UNRESOLVED_OWNER', 'provenance': {'source_segment_ids': ('u1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['u1'], 'relation_ready': False}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'dose', 'value': 'dois comprimidos', 'owner_mention_id': 'context:u1', 'owner_type': None, 'state': 'current', 'status': 'UNRESOLVED_OWNER', 'provenance': {'source_segment_ids': ('u1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['u1'], 'relation_ready': False}, {'attribute_type': 'status', 'value': 'active', 'owner_mention_id': 'context:u1', 'owner_type': None, 'state': 'current', 'status': 'UNRESOLVED_OWNER', 'provenance': {'source_segment_ids': ('u1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['u1'], 'relation_ready': False}], 'transition_signals': [], 'relation_input_owner_completeness': 0.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': True}, 'transition_attribute_ownership': {}}, 'authority_metrics': {'resolver_decisions_total': 275, 'resolver_decisions_preserved': 245, 'resolver_decisions_overwritten': 30, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'u1', 'conversation_segment_ids': ['u3']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "dose",
+                "confidence": 1.0,
+                "evidence": [
+                  "u1"
+                ],
+                "owner_mention_id": "context:u1",
+                "owner_type": null,
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "u1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "UNRESOLVED_OWNER",
+                "value": "dois comprimidos"
+              },
+              {
+                "attribute_type": "status",
+                "confidence": 1.0,
+                "evidence": [
+                  "u1"
+                ],
+                "owner_mention_id": "context:u1",
+                "owner_type": null,
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "u1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "UNRESOLVED_OWNER",
+                "value": "active"
+              }
+            ],
+            "relations": [],
+            "signal_quality": {
+              "actual_nonready_signal_count": 2,
+              "actual_signal_count": 2,
+              "ambiguous_expected": 1,
+              "complete_and_correct": 0,
+              "complete_but_wrong": 0,
+              "details": [
+                {
+                  "actual": null,
+                  "classification": "AMBIGUOUS",
+                  "expected": {
+                    "attribute_type": "unknown",
+                    "current_value": null,
+                    "owner_type": null,
+                    "previous_value": null,
+                    "source_segment_ids": [
+                      "u3"
+                    ],
+                    "state": "unresolved",
+                    "status": "AMBIGUOUS"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 1,
+              "owner_correct": 0,
+              "owner_total": 0,
+              "provenance_correct": 0,
+              "provenance_total": 0,
+              "state_correct": 0,
+              "state_total": 0,
+              "transition_correct": 0,
+              "transition_total": 0,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "comprimido",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-032",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "b55622e9e97c0476b613e5c647dfedb2fb93ac0cea3e9e93e67fdd0ff684ca01",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "14bd5c3982116703e9549fa3517bd6accfbed61d4a278e175287d1e037b22973",
+      "output_hash": "a426b179d6d6d8c5786b9b7db54530e68abf6b8e43a1af949fda02bab7b15c4a",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": "medication.unknown",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "relations": [],
+            "surface": "comprimido"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-032",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "d85cb89f6607de47be12423d4342abe7c0e3f6541ac56a0b32ce190825b7232f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "a426b179d6d6d8c5786b9b7db54530e68abf6b8e43a1af949fda02bab7b15c4a",
+      "output_hash": "abc08072535a5ce80ba0f3e2fb7c99f458f0251824a8a6b51b68ec95c714ceb5",
+      "payload": {
+        "case_id": "D4-032",
+        "mismatch_count": 4
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-032",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

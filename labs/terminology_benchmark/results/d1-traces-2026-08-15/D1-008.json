@@ -1,0 +1,397 @@
+{
+  "case_id": "D1-008",
+  "corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "corpus_version": "D1",
+  "decisions": [],
+  "evaluation_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "mismatches": [
+    {
+      "actual": true,
+      "confidence": 0.55,
+      "details": {
+        "mention": "queda",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": false,
+      "policy_rules": [],
+      "semantic_dimension": "negated",
+      "stage": "prediction"
+    },
+    {
+      "actual": "current",
+      "confidence": 0.55,
+      "details": {
+        "mention": "queda",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": "past",
+      "policy_rules": [],
+      "semantic_dimension": "temporality",
+      "stage": "prediction"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "62d24024a667bfdd25aab2cc9d1c16d2efa5131e7e9214fa375859e8f63927e8",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": null,
+      "output_hash": "65c4a96c64e97d4158ff2bc0ba10bcafdbd50a3a016782e81900c0826b270db0",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "patient",
+            "text": "Tive uma queda no corredor."
+          },
+          {
+            "segment_id": "s2",
+            "speaker": "patient",
+            "text": "O episódio aconteceu há três meses, sem repetição."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-008",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "76c3b1967bb9eb3fd6cbb69f14239f0cf8c24fe4a8a07ded3495594973eb8d3c",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "65c4a96c64e97d4158ff2bc0ba10bcafdbd50a3a016782e81900c0826b270db0",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "f8c856074f46da487447bcf871f12e91988960ebfca7f995fc578052485884d8",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "3a980b7fd4b64afc9e6946f7e1f25f19493d3d3e536340c17e31597ad092ce0b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "128ccac4014fa12b937e970c702118875a3576fead7c7b3061999838b0402f4e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "2699cccccd6c3de3469729080b7e61f60ce997d147f7f7ae79f39dbfcd925ee2",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "a1fb8b9955463ba5a4f6be18e640ab04c349f2549741f91a86aed21e095f238e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "a1359dafa7e61caff2ab0cd0d7243e032f53ec2e8496cef055b23d0a342cbab9",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            }
+          },
+          "candidate_source": "s1",
+          "source_segment_ids": [
+            "s1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tive uma queda no corredor.\\npatient: O episódio aconteceu há três meses, sem repetição.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:9:14', 'owner_span': (9, 14), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:9:14', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 99, 'resolver_decisions_preserved': 92, 'resolver_decisions_overwritten': 7, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [],
+            "surface": "queda"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "dc5352a32f2cbddf97e542fb690ccb9969f645fcd1b724493cb453ee9e94ebe9",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a1359dafa7e61caff2ab0cd0d7243e032f53ec2e8496cef055b23d0a342cbab9",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "1a47e68c95ab991c6a5d58668f2b9391e1259586d26a163c6204c3b16d8d3e3b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "6f163b65c219203064ed74e6c301c2a8389582bd391720f9f0c08a9eb029bd6b",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tive uma queda no corredor.\\npatient: O episódio aconteceu há três meses, sem repetição.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:9:14', 'owner_span': (9, 14), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:9:14', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 99, 'resolver_decisions_preserved': 92, 'resolver_decisions_overwritten': 7, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [],
+            "surface": "queda"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "c684d50e5a09093ba4ce7a399f2f7ff37fc9dc2a041146e379091b1e2651d444",
+      "changed_fields": [
+        "negated",
+        "temporality"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "6f163b65c219203064ed74e6c301c2a8389582bd391720f9f0c08a9eb029bd6b",
+      "output_hash": "6f163b65c219203064ed74e6c301c2a8389582bd391720f9f0c08a9eb029bd6b",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tive uma queda no corredor.\\npatient: O episódio aconteceu há três meses, sem repetição.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:9:14', 'owner_span': (9, 14), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:9:14', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 99, 'resolver_decisions_preserved': 92, 'resolver_decisions_overwritten': 7, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [],
+            "surface": "queda"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "f89828583f8bc5a6dfe3f08c5def156703842be826c7f05efb84bb53f6e6a564",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "6f163b65c219203064ed74e6c301c2a8389582bd391720f9f0c08a9eb029bd6b",
+      "output_hash": "04c05f803369c11dfba85b11aa3716196bfbac8c2cf71d09352070f751855fee",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "temporality": [
+                "s2"
+              ]
+            },
+            "concept_id": "event.fall",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "s1",
+              "s2"
+            ],
+            "surface": "queda"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-008",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "477096a572a26835a8f1d379012ac9480d59a4cbe1a2f6a485b3090637a186c7",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "04c05f803369c11dfba85b11aa3716196bfbac8c2cf71d09352070f751855fee",
+      "output_hash": "8018607570deb9393d51bce84f6b80f4d29cb90adf2071b9b1798614093664dd",
+      "payload": {
+        "case_id": "D1-008"
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-008",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v1"
+}

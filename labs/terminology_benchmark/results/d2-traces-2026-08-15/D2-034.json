@@ -1,0 +1,851 @@
+{
+  "case_id": "D2-034",
+  "corpus_checksum": "3711d88475bd81da311be795b13c971c805ee3509eec8ddf352daec79b11a021",
+  "corpus_version": "D2",
+  "decisions": [],
+  "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+  "mismatches": [
+    {
+      "actual": true,
+      "confidence": 0.55,
+      "details": {
+        "mention": "asma",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": false,
+      "policy_rules": [
+        "ptbr-past-tense-before-target",
+        "ptbr-family-experiencer"
+      ],
+      "semantic_dimension": "negated",
+      "stage": "prediction"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "ff09e39196d8458637629dce70da5bd20c4c5b0f5af5cd83a0d19b27e3a186ab",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "a7f41ae4e1f547ae4ff7c9fd6afc3f800aafa7c81c83e77b1fa6d06dc3953d30",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "46fbcb9db1db83de1e4c7c28391123ae97a3427551d290bc0895e677a6fdfc12",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "l1",
+            "speaker": "patient",
+            "text": "Minha mãe teve asma."
+          },
+          {
+            "segment_id": "l2",
+            "speaker": "patient",
+            "text": "Não, pensando bem foi minha tia."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-034",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "bb27b944c88f6f1dab91dea17d3306fcc5cde69f5444b4d754bb887453cd9e43",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "46fbcb9db1db83de1e4c7c28391123ae97a3427551d290bc0895e677a6fdfc12",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-034",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "56ab6b6887740a88969bc8af6188a31195b132a2aaf48d02fbc8b5ff81c5cc9d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "surface": "asma"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "family",
+            "frequency": null,
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": null,
+            "temporality": "past"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-034",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "24e0144420b85d28756cd2787040035ecc3d4720f4c9f61b354831909b32099d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "surface": "asma"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "family",
+            "frequency": null,
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": null,
+            "temporality": "past"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-034",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "3a9ee6fefd51c85dca23322125380220e9785611311ecf14e2d49e9d84590683",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "surface": "asma"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "family",
+            "frequency": null,
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": null,
+            "temporality": "past"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "5721d8742650eb394b6bf9649994b39e827c53fc0d3c1d777494299c3885a600",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:l1",
+            "owner_segment_id": "l1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-034",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "98488b177b2041e742095e07fde0e2f3089cb0e47ce89e4b76a243c7e754b598",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "5721d8742650eb394b6bf9649994b39e827c53fc0d3c1d777494299c3885a600",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-034",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "5e7c49f7c206cd6f73cfd614e20ee7c5b5888357f4c4a733eca5e3fd6ace5e5f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "c7f85431d70c14f86f1ec4eec49123aeb765c0a58243a61fed0706080524e4d8",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1"
+            }
+          },
+          "candidate_source": "l1",
+          "source_segment_ids": [
+            "l1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Minha mãe teve asma.\\npatient: Não, pensando bem foi minha tia.', 'rules': ('ptbr-past-tense-before-target', 'ptbr-family-experiencer'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:l1:15:19', 'owner_span': (15, 19), 'source_evidence_id': 'context:l1'}}, 'projection': {'mention_id': 'context:l1:15:19', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('l1',), 'candidate_source': 'l1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1'}}}, 'authority_metrics': {'resolver_decisions_total': 462, 'resolver_decisions_preserved': 435, 'resolver_decisions_overwritten': 27, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'l1', 'conversation_segment_ids': ['l2']}",
+            "relations": [],
+            "surface": "asma"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-034",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "d27f70d54ddef98780ee5cea9ae685e8a0bfae21775c4249ad63ea49c1f36874",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "surface": "asma"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "family",
+            "frequency": null,
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": null,
+            "temporality": "past"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "c7f85431d70c14f86f1ec4eec49123aeb765c0a58243a61fed0706080524e4d8",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-034",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "b2bbfcf1a9854b2429ed03552392a3fc09bf0fa9f1a1f0426d830fccfeca2888",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "surface": "asma"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "family",
+            "frequency": null,
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": null,
+            "temporality": "past"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "d7fc074df9da63327d32818b61bf66204f50737a8b781c0e34d47c678435bad0",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Minha mãe teve asma.\\npatient: Não, pensando bem foi minha tia.', 'rules': ('ptbr-past-tense-before-target', 'ptbr-family-experiencer'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:l1:15:19', 'owner_span': (15, 19), 'source_evidence_id': 'context:l1'}}, 'projection': {'mention_id': 'context:l1:15:19', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('l1',), 'candidate_source': 'l1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1'}}}, 'authority_metrics': {'resolver_decisions_total': 462, 'resolver_decisions_preserved': 435, 'resolver_decisions_overwritten': 27, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'l1', 'conversation_segment_ids': ['l2']}",
+            "relations": [],
+            "surface": "asma"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-034",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "11a7bae9ed0c65735b939e36c740b96ab8d83df283cdf55fdf20bbbba8e90fb7",
+      "changed_fields": [
+        "negated"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7fc074df9da63327d32818b61bf66204f50737a8b781c0e34d47c678435bad0",
+      "output_hash": "d7fc074df9da63327d32818b61bf66204f50737a8b781c0e34d47c678435bad0",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Minha mãe teve asma.\\npatient: Não, pensando bem foi minha tia.', 'rules': ('ptbr-past-tense-before-target', 'ptbr-family-experiencer'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:l1:15:19', 'owner_span': (15, 19), 'source_evidence_id': 'context:l1'}}, 'projection': {'mention_id': 'context:l1:15:19', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('l1',), 'candidate_source': 'l1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1'}}}, 'authority_metrics': {'resolver_decisions_total': 462, 'resolver_decisions_preserved': 435, 'resolver_decisions_overwritten': 27, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'l1', 'conversation_segment_ids': ['l2']}",
+            "relations": [],
+            "surface": "asma"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-034",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "30e990edfea7b36fca98bb2a330eee7cf3df8ae3982e7cfedbfbc38db3b5c466",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7fc074df9da63327d32818b61bf66204f50737a8b781c0e34d47c678435bad0",
+      "output_hash": "7bb1aa7b19b814202468766fee38b191fd1d2c42b7ee62d02165f805cb0793d2",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "experiencer": [
+                "l2"
+              ],
+              "temporality": [
+                "l1"
+              ]
+            },
+            "concept_id": "condition.asthma",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "l1",
+              "l2"
+            ],
+            "surface": "asma"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-034",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "5359d2e6943000e7befd5f32f4735d0a09a8832d7775c49b73d1e9527464b1c1",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "7bb1aa7b19b814202468766fee38b191fd1d2c42b7ee62d02165f805cb0793d2",
+      "output_hash": "13f3e7f9d6794189ffecaa03cf8d0cc9c4d3e29764c690cc8b1ce1d2f9ac75e0",
+      "payload": {
+        "case_id": "D2-034",
+        "mismatch_count": 1
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-034",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

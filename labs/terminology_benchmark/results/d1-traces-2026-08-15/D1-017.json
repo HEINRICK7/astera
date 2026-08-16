@@ -1,0 +1,550 @@
+{
+  "case_id": "D1-017",
+  "corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "corpus_version": "D1",
+  "decisions": [],
+  "evaluation_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "mismatches": [
+    {
+      "actual": "depois do jantar",
+      "confidence": 0.55,
+      "details": {
+        "mention": "hidroclorotiazida",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": "à noite",
+      "policy_rules": [],
+      "semantic_dimension": "frequency",
+      "stage": "prediction"
+    },
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "hidroclorotiazida",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s3"
+            ]
+          },
+          "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+          "relation_type": "HAS_FREQUENCY",
+          "source": "context:s1",
+          "source_mention_id": "context:s1",
+          "source_segment_ids": [
+            "s3"
+          ],
+          "target": "frequency",
+          "target_mention_id": "frequency",
+          "value": "depois do jantar"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "hidroclorotiazida",
+        "projection_relation_count": 1
+      },
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "pela manhã"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "à noite"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "d38330c1d0593b7c9a9b189bf02ec7db4f6810220fdbd1abc3f1aaa0e33ff067",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": null,
+      "output_hash": "ab56c3ace812dce666fbd29aa39320c63c3efa1ae7537410697e0bd64530b062",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "patient",
+            "text": "A hidroclorotiazida era tomada pela manhã."
+          },
+          {
+            "segment_id": "s2",
+            "speaker": "clinician",
+            "text": "Mudou o horário?"
+          },
+          {
+            "segment_id": "s3",
+            "speaker": "patient",
+            "text": "Agora tomo à noite, depois do jantar."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-017",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "bad71ce9cc82c8b671b47286e48767ec6d6f724a3d5e0afb5bbfcf1d554ff5ea",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "ab56c3ace812dce666fbd29aa39320c63c3efa1ae7537410697e0bd64530b062",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-017",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "0e6dd310a52ef522522193ff74c16f2b6b92576c6314776e29aa02b6293602e0",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-017",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "0018baef6e83f87f4c5b2e275f9657c39a9785a43caa0185183f4a93391d7276",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-017",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "e395cac329e115b24a0a4b2276d76f1c73007a3c4a6b0d679ccfcd5a6f6f93e8",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-017",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "cc21e5ad696fd0178f6ebd8a9932139371771209e136cd1446a48f663bceab13",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-017",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "4bda3f9d74eb0c2760044976251f6f96f33d1cfd3eda29ad9fabc93dc4f518dc",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "f529c95d727334abc57326c8eb533862fd1e91ac0ae6f3e9d17a76c3acf35c50",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            }
+          },
+          "candidate_source": "s1",
+          "source_segment_ids": [
+            "s1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "depois do jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A hidroclorotiazida era tomada pela manhã.\\nclinician: Mudou o horário?\\npatient: Agora tomo à noite, depois do jantar.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:19', 'owner_span': (2, 19), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:19', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:s1', 'target': 'frequency', 'value': 'depois do jantar', 'source_mention_id': 'context:s1', 'target_mention_id': 'frequency', 'source_segment_ids': ['s3'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'frequency', 'source_segment_ids': ('s3',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 198, 'resolver_decisions_preserved': 182, 'resolver_decisions_overwritten': 16, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2', 's3']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "frequency",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s3"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+                "relation_type": "HAS_FREQUENCY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s3"
+                ],
+                "target": "frequency",
+                "target_mention_id": "frequency",
+                "value": "depois do jantar"
+              }
+            ],
+            "surface": "hidroclorotiazida"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-017",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "a794e8f35d6310a5b093a946e16f06e69b47994d998486756cbd81ffeddd7ec0",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "f529c95d727334abc57326c8eb533862fd1e91ac0ae6f3e9d17a76c3acf35c50",
+      "output_hash": "35ac5c54010eb719b104b4e7ef705f6b76185c87275b253afd7eb1630ceaf43e",
+      "payload": {
+        "relations": [
+          [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "resolved-attribute-materialization",
+                "source_segment_ids": [
+                  "s3"
+                ]
+              },
+              "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:s1",
+              "source_mention_id": "context:s1",
+              "source_segment_ids": [
+                "s3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "depois do jantar"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-017",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "2033c2a7cb1ca5215042f92bb81c041ef0ebebd90fb2d88aa3bb7716cd57f537",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "35ac5c54010eb719b104b4e7ef705f6b76185c87275b253afd7eb1630ceaf43e",
+      "output_hash": "d3f84c7adb239f8ea3491bb40ab6eaf0aa25b57079752ecaaa85bb854b38ec3f",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "depois do jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A hidroclorotiazida era tomada pela manhã.\\nclinician: Mudou o horário?\\npatient: Agora tomo à noite, depois do jantar.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:19', 'owner_span': (2, 19), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:19', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:s1', 'target': 'frequency', 'value': 'depois do jantar', 'source_mention_id': 'context:s1', 'target_mention_id': 'frequency', 'source_segment_ids': ['s3'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'frequency', 'source_segment_ids': ('s3',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 198, 'resolver_decisions_preserved': 182, 'resolver_decisions_overwritten': 16, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2', 's3']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "frequency",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s3"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+                "relation_type": "HAS_FREQUENCY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s3"
+                ],
+                "target": "frequency",
+                "target_mention_id": "frequency",
+                "value": "depois do jantar"
+              }
+            ],
+            "surface": "hidroclorotiazida"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-017",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "f43093a7de99aa3327b3c673d83bb9e6222c7ae52266769ad88705422bccec52",
+      "changed_fields": [
+        "frequency",
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d3f84c7adb239f8ea3491bb40ab6eaf0aa25b57079752ecaaa85bb854b38ec3f",
+      "output_hash": "d3f84c7adb239f8ea3491bb40ab6eaf0aa25b57079752ecaaa85bb854b38ec3f",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "depois do jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A hidroclorotiazida era tomada pela manhã.\\nclinician: Mudou o horário?\\npatient: Agora tomo à noite, depois do jantar.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:19', 'owner_span': (2, 19), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:19', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:s1', 'target': 'frequency', 'value': 'depois do jantar', 'source_mention_id': 'context:s1', 'target_mention_id': 'frequency', 'source_segment_ids': ['s3'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'frequency', 'source_segment_ids': ('s3',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 198, 'resolver_decisions_preserved': 182, 'resolver_decisions_overwritten': 16, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2', 's3']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "frequency",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s3"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+                "relation_type": "HAS_FREQUENCY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s3"
+                ],
+                "target": "frequency",
+                "target_mention_id": "frequency",
+                "value": "depois do jantar"
+              }
+            ],
+            "surface": "hidroclorotiazida"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-017",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "399219cb9f546430a52983fdc56aad6aec7fc9595934101292191f70f2b0d592",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d3f84c7adb239f8ea3491bb40ab6eaf0aa25b57079752ecaaa85bb854b38ec3f",
+      "output_hash": "e7ea382e075277779473d6832c627c71df5b72c5f884b3e1bb740d6f87e095f5",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "frequency": [
+                "s3"
+              ],
+              "status": [
+                "s3"
+              ]
+            },
+            "concept_id": "medication.hydrochlorothiazide",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "CHANGED_FROM": [
+                "s3"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "pela manhã"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "segment_ids": [
+              "s1",
+              "s3"
+            ],
+            "surface": "hidroclorotiazida"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-017",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "d29a9879851549275256dd6494ea6d993cf71b6f97679bc6d37e6836a9faaf8f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "e7ea382e075277779473d6832c627c71df5b72c5f884b3e1bb740d6f87e095f5",
+      "output_hash": "181378b8e8be8699a9eb2752a06ff4b221f672d296bde87e34367e5f771586c1",
+      "payload": {
+        "case_id": "D1-017"
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-017",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v1"
+}

@@ -1,0 +1,384 @@
+{
+  "case_id": "D1-036",
+  "corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "corpus_version": "D1",
+  "decisions": [],
+  "evaluation_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "mismatches": [
+    {
+      "actual": "confirmed",
+      "confidence": 0.55,
+      "details": {
+        "mention": "anemia",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": "possible",
+      "policy_rules": [],
+      "semantic_dimension": "certainty",
+      "stage": "prediction"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "955d339a98ec297baec530f63d63fe4068f4239ca340b696ed11523dbe31aa1b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": null,
+      "output_hash": "93d3726903b9d9627e1dfc4cfa80e62ac4664889365ce0ac7f3c107932865f37",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "patient",
+            "text": "O exame mostrou anemia."
+          },
+          {
+            "segment_id": "s2",
+            "speaker": "patient",
+            "text": "Melhor dizendo, mostrou apenas ferro baixo."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-036",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "f7d29e64fe43308e686c89f6be38cc4545bb37c1712c861a1acdf330a41ecde2",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "93d3726903b9d9627e1dfc4cfa80e62ac4664889365ce0ac7f3c107932865f37",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "6a0f7b82c0a296ca96b990c09ed7efc5568fefd9e376a6f72160b08689f31259",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "77b2ac2de5d852258d288dd17235c0b0f11b52a8bac83f2256ebe57317b01c2a",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "474a6fc39a50cae23bd678dd689cd695ddeaf2ba79752d1aa297251331563d3d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "5ad24677c52eb601bb05c257e6e85ab995119f73e93c87fd034edde38648f14a",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "e9ffa6e53cce8ce25597e52f405ef2c710efc6f03c389a92475815c234fa226e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "7be53c526c1b5cfa31a0389eabff29a167b9566d8973f92b03e8466970e60375",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            }
+          },
+          "candidate_source": "s1",
+          "source_segment_ids": [
+            "s1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O exame mostrou anemia.\\npatient: Melhor dizendo, mostrou apenas ferro baixo.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:16:22', 'owner_span': (16, 22), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:16:22', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 473, 'resolver_decisions_preserved': 438, 'resolver_decisions_overwritten': 35, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [],
+            "surface": "anemia"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "3d459159bcafa654d041cec21ba24f21e1739a8b7462e3e6283403c4c0b2eab3",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "7be53c526c1b5cfa31a0389eabff29a167b9566d8973f92b03e8466970e60375",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "1e2a9f8001dca59391b898776a9919d81c2baea4ba2dab3e2718a2c21d635f59",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "ba741ddd6df84802af2c862cd619c36b1e6e3e21eda1420db0d0e10360151d75",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O exame mostrou anemia.\\npatient: Melhor dizendo, mostrou apenas ferro baixo.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:16:22', 'owner_span': (16, 22), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:16:22', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 473, 'resolver_decisions_preserved': 438, 'resolver_decisions_overwritten': 35, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [],
+            "surface": "anemia"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "3bbd30fb694d14d42ea36f7b2a9312c405bb08426188bdb62465460f8bbcd788",
+      "changed_fields": [
+        "certainty"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "ba741ddd6df84802af2c862cd619c36b1e6e3e21eda1420db0d0e10360151d75",
+      "output_hash": "ba741ddd6df84802af2c862cd619c36b1e6e3e21eda1420db0d0e10360151d75",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O exame mostrou anemia.\\npatient: Melhor dizendo, mostrou apenas ferro baixo.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:16:22', 'owner_span': (16, 22), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:16:22', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 473, 'resolver_decisions_preserved': 438, 'resolver_decisions_overwritten': 35, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [],
+            "surface": "anemia"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-036",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "0313f2d4c1e96fe350e56bb7edc453e42b3fcd28d60132433f500fd9067560f5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "ba741ddd6df84802af2c862cd619c36b1e6e3e21eda1420db0d0e10360151d75",
+      "output_hash": "bb4d7cbac630df2bd4c66d10e9a4da0906b14948d8463d02f7f3ea917718a0e4",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "certainty": [
+                "s2"
+              ]
+            },
+            "concept_id": "condition.anemia",
+            "fields": {
+              "certainty": "possible",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "s1",
+              "s2"
+            ],
+            "surface": "anemia"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-036",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "3fe1b86a23438eab3be82651be9de99c3e55a1f2610a01a44aa59c92b20c9c8e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "bb4d7cbac630df2bd4c66d10e9a4da0906b14948d8463d02f7f3ea917718a0e4",
+      "output_hash": "9d6ecd48fb5d57f9e4a87ca039593a373084f6b5b15289516abf3c755c5f786a",
+      "payload": {
+        "case_id": "D1-036"
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-036",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v1"
+}

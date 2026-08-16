@@ -1,0 +1,14 @@
+{
+  "status": "ABORTED_PRECONDITION",
+  "execution_id": "d2-one-shot-342737a2-4876-4ba2-9755-d34ed189c60d",
+  "started_at_utc": "2026-08-16T00:30:17.595379+00:00",
+  "one_shot": true,
+  "official_corpus_checksum": "53c4df8e56f1567c329588c64687a552e8d210b57fba9b5f6f71ab70627753c5",
+  "resolver_checksum": "ff09e39196d8458637629dce70da5bd20c4c5b0f5af5cd83a0d19b27e3a186ab",
+  "policy_checksum": "b2bf0b98e4544ac6d2d94fe1e8d8c244a7edc11845820ac9978e4d0f6016e153",
+  "trace_schema": "clinical-evaluation-trace/v2",
+  "resolver_repair_after_run": "NOT_AUTHORIZED",
+  "d1_rerun": false,
+  "v7_rerun": false,
+  "reason": "D2-006 gold surface occurrence was absent from the text; partial traces quarantined and not reused"
+}

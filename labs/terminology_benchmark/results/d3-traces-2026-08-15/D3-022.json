@@ -1,0 +1,1416 @@
+{
+  "case_id": "D3-022",
+  "corpus_checksum": "cef75b21b8eae6ec940b9f6cffe3d27fbe5b050db838569f3f19ef68434f1b0d",
+  "corpus_version": "D3",
+  "decisions": [],
+  "evaluation_id": "d3-one-shot-4c137795-99d1-4973-a98d-20eb89de0617",
+  "mismatches": [
+    {
+      "actual": "de manhã",
+      "confidence": 0.55,
+      "details": {
+        "mention": "levotiroxina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "à noite",
+      "policy_rules": [
+        "ptbr-active-status"
+      ],
+      "semantic_dimension": "frequency",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "de manhã"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "levotiroxina",
+        "relation_output_count": 1
+      },
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "de manhã"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "à noite"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "d7dda54457cf896392e41edc8c259098b190c1c9bfa1ed82c6a1e5c7a46a59a7",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "edf8dd78d955b98f84178db0a07c0d8abaa3fd3d53c88ef8f3724bb6b0ef010b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "41da7dc847512d7fb65d24c53265c66aeb369805d572d9a896895c82490b2768",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "t1",
+            "speaker": "patient",
+            "text": "Eu tomava a levotiroxina de manhã."
+          },
+          {
+            "segment_id": "t2",
+            "speaker": "patient",
+            "text": "Com a orientação nova, passei para a noite."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-022",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "934500dad2cceed9257c4e070c8630a70c9c67ac5eceb06e869b758da4369e3b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "41da7dc847512d7fb65d24c53265c66aeb369805d572d9a896895c82490b2768",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "dd57075d5a9fb231c41234f420a2a143e93c39f21b9fab6f2cd230510a0acba9",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t2"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "levotiroxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "de manhã"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "de manhã",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "de manhã"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "de manhã"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "ebcdde4677e2816da15aa2c65f9210d7de822a862c65d880e7b20758a7bf1c2d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t2"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "levotiroxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "de manhã"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "de manhã",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "de manhã"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "de manhã"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "3e0cbb53b51716d65dfd58c60e9ed9ff29071389c5e5f5d6f76f736ab82f8ca0",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t2"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "levotiroxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "de manhã"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "de manhã",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "de manhã"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "de manhã"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "fa9f8b81e360206fcb416c4cecdf237c18130ae74af61b38166dddff64921ee6",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "frequency": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "status": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t2"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t2"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "cbba83ff49f8c48b844fc1c0c0246ea1687d07ae4d935b42f87fd84fc7656723",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "fa9f8b81e360206fcb416c4cecdf237c18130ae74af61b38166dddff64921ee6",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "a41b94ca4fae1b9d27ff0c470e45773d1041d8069f623bf1349c84f1359b7682",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "d7ad29697ffa44f9a09da1f3f16c49be6cbcfec979ac9acee9dbe6546f95a0f0",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t2"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "frequency": [
+              "t1"
+            ],
+            "status": [
+              "t2"
+            ],
+            "temporality": [
+              "t2"
+            ]
+          },
+          "candidate_source": "t1",
+          "owner_mention_id": "context:t1",
+          "owner_type": "medication",
+          "source_segment_ids": [
+            "t1"
+          ],
+          "transition_attribute_ownership": {},
+          "transition_evidence": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Eu tomava a levotiroxina de manhã.\\npatient: Com a orientação nova, passei para a noite.', 'rules': ('ptbr-active-status',), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:12:24', 'owner_span': (12, 24), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:t1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:t1', 'target': 'frequency', 'value': 'de manhã', 'source_mention_id': 'context:t1', 'target_mention_id': 'frequency', 'source_segment_ids': ['t1'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('t1',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': 'medication', 'owner_mention_id': 'context:t1', 'attribute_provenance': {'status': ['t2'], 'temporality': ['t2'], 'frequency': ['t1']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t2',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'frequency': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'status': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t2',)}}, 'transition_evidence': [], 'transition_attribute_ownership': {}}, 'authority_metrics': {'resolver_decisions_total': 242, 'resolver_decisions_preserved': 209, 'resolver_decisions_overwritten': 33, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t2']}",
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "de manhã"
+              }
+            ],
+            "surface": "levotiroxina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "c863057d7cd658b79cbe50fa056624ee755fcdad13424c5cb6ecc81ae4e92aea",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        },
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t2"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "levotiroxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "de manhã"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "de manhã",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "de manhã"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "de manhã"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        }
+      },
+      "input_hash": "d7ad29697ffa44f9a09da1f3f16c49be6cbcfec979ac9acee9dbe6546f95a0f0",
+      "output_hash": "458b8821f70a77c23640be775d4e3b79f3cd8c6627ccc8306029fa1447738fc4",
+      "payload": {
+        "relations": [
+          [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "de manhã"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "bb85ea2a788475e3d06fcba6b02604a9dae90b22ab30c0435f8218cbba36719a",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t2"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "levotiroxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "de manhã"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "de manhã",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "de manhã"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "de manhã"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "458b8821f70a77c23640be775d4e3b79f3cd8c6627ccc8306029fa1447738fc4",
+      "output_hash": "21c6e357cee5cca704fbc669acd2f3ec959ceb1bc699f5d17ede4ff574d40be2",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Eu tomava a levotiroxina de manhã.\\npatient: Com a orientação nova, passei para a noite.', 'rules': ('ptbr-active-status',), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:12:24', 'owner_span': (12, 24), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:t1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:t1', 'target': 'frequency', 'value': 'de manhã', 'source_mention_id': 'context:t1', 'target_mention_id': 'frequency', 'source_segment_ids': ['t1'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('t1',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': 'medication', 'owner_mention_id': 'context:t1', 'attribute_provenance': {'status': ['t2'], 'temporality': ['t2'], 'frequency': ['t1']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t2',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'frequency': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'status': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t2',)}}, 'transition_evidence': [], 'transition_attribute_ownership': {}}, 'authority_metrics': {'resolver_decisions_total': 242, 'resolver_decisions_preserved': 209, 'resolver_decisions_overwritten': 33, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t2']}",
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "de manhã"
+              }
+            ],
+            "surface": "levotiroxina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "5c72bfe62efe94aabd9e47f56e94c8027c5dec093eb74f289e4edf00f82027d7",
+      "changed_fields": [
+        "frequency"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "21c6e357cee5cca704fbc669acd2f3ec959ceb1bc699f5d17ede4ff574d40be2",
+      "output_hash": "21c6e357cee5cca704fbc669acd2f3ec959ceb1bc699f5d17ede4ff574d40be2",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Eu tomava a levotiroxina de manhã.\\npatient: Com a orientação nova, passei para a noite.', 'rules': ('ptbr-active-status',), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:12:24', 'owner_span': (12, 24), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:t1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:t1', 'target': 'frequency', 'value': 'de manhã', 'source_mention_id': 'context:t1', 'target_mention_id': 'frequency', 'source_segment_ids': ['t1'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('t1',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': 'medication', 'owner_mention_id': 'context:t1', 'attribute_provenance': {'status': ['t2'], 'temporality': ['t2'], 'frequency': ['t1']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t2',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'frequency': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'status': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t2',)}}, 'transition_evidence': [], 'transition_attribute_ownership': {}}, 'authority_metrics': {'resolver_decisions_total': 242, 'resolver_decisions_preserved': 209, 'resolver_decisions_overwritten': 33, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t2']}",
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "de manhã"
+              }
+            ],
+            "surface": "levotiroxina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "dcab5ff566006bfd9876688623272e3e8bec04c443e586d45aa073ac59b24f5f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "21c6e357cee5cca704fbc669acd2f3ec959ceb1bc699f5d17ede4ff574d40be2",
+      "output_hash": "e0b4a3f8da10012128d77a5f8aa494174b30173821f22c5084bda56640ab933b",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "frequency": [
+                "t2"
+              ],
+              "status": [
+                "t2"
+              ]
+            },
+            "concept_id": "medication.levothyroxine",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "CHANGED_FROM": [
+                "t2"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "de manhã"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "segment_ids": [
+              "t1",
+              "t2"
+            ],
+            "surface": "levotiroxina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-022",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "ad81d9b909368631280d8220c8d6cab0ae780d989f26153854692467acbc54a9",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "e0b4a3f8da10012128d77a5f8aa494174b30173821f22c5084bda56640ab933b",
+      "output_hash": "c7378c0bdc3cf06300cd046ff3774636656053d56452a264dcd9b27a2fa2ce9b",
+      "payload": {
+        "case_id": "D3-022",
+        "mismatch_count": 2
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-022",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

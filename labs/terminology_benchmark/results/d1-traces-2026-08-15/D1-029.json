@@ -1,0 +1,467 @@
+{
+  "case_id": "D1-029",
+  "corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "corpus_version": "D1",
+  "decisions": [],
+  "evaluation_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "mismatches": [],
+  "policy_version": "1.3",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "ccedfa0b570394fb848ef9aa4db0d0219885855e7c0764eda674eb38da10e1f5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": null,
+      "output_hash": "e9fceafad33fde4d4252c67c16a299ffc3958d285b0001c0887cde0b47ac8c76",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "clinician",
+            "text": "Em que lado é a dor no ombro?"
+          },
+          {
+            "segment_id": "s2",
+            "speaker": "patient",
+            "text": "Direito."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-029",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "9910632836860bd8daf8461f5c4a129c3819e46924ad2c21f8bd896b967fca48",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "e9fceafad33fde4d4252c67c16a299ffc3958d285b0001c0887cde0b47ac8c76",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-029",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "a6586a8b352cf72a33510dbfae63e2338a72745489289e08112aaa0a4c82f893",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-029",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "e4bd3d77a7dabef27170aa5726890ec0bffebd8483a4de6d95266a3e575a97a4",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-029",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "e8a4da6068d48030c87095e8ce68bde4a100dc38c4b46c0c2416a0fc61b755d3",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "3df70b82a1e74f68b5e57bd556c4b2f69b2624219b1f3071783e04cabd25701b",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          },
+          "laterality": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-029",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "e5c1cc9ef31324df9e86063e5272bc67a10eeda74e2c688043de7a5f2377483d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "3df70b82a1e74f68b5e57bd556c4b2f69b2624219b1f3071783e04cabd25701b",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-029",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "d83bb25e5d5c0dea3abae8dd59fbbbcc96602e9a712f6c175098ba91c4f03a83",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "cb43c9746b3784d20dc4cec8d4db66309dd559066ea2e51e40da413e84096f82",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            },
+            "laterality": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            }
+          },
+          "candidate_source": "s1",
+          "source_segment_ids": [
+            "s1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: Em que lado é a dor no ombro?\\npatient: Direito.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:16:19', 'owner_span': (16, 19), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:16:19', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s1:HAS_LATERALITY:laterality', 'relation_type': 'HAS_LATERALITY', 'source': 'context:s1', 'target': 'laterality', 'value': 'right', 'source_mention_id': 'context:s1', 'target_mention_id': 'laterality', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'laterality', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}, 'laterality': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 396, 'resolver_decisions_preserved': 368, 'resolver_decisions_overwritten': 28, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "laterality",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_LATERALITY:laterality",
+                "relation_type": "HAS_LATERALITY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "laterality",
+                "target_mention_id": "laterality",
+                "value": "right"
+              }
+            ],
+            "surface": "dor"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-029",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "8c50cccdc9575480075ffb0069485d5618ade475518b5d0d9dc8e22c64e767ac",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "cb43c9746b3784d20dc4cec8d4db66309dd559066ea2e51e40da413e84096f82",
+      "output_hash": "998f6195aa193fe555197d216ed00c2ad3dba8d0f55f7cc7e2df7b89ff0cc911",
+      "payload": {
+        "relations": [
+          [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "laterality",
+                "rule": "resolved-attribute-materialization",
+                "source_segment_ids": [
+                  "s2"
+                ]
+              },
+              "relation_id": "context:s1:HAS_LATERALITY:laterality",
+              "relation_type": "HAS_LATERALITY",
+              "source": "context:s1",
+              "source_mention_id": "context:s1",
+              "source_segment_ids": [
+                "s2"
+              ],
+              "target": "laterality",
+              "target_mention_id": "laterality",
+              "value": "right"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-029",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "8b072a4abe347ef3978ebd1dec151e2405c88313a6b7210b1cf6d7553cd81e04",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "998f6195aa193fe555197d216ed00c2ad3dba8d0f55f7cc7e2df7b89ff0cc911",
+      "output_hash": "dfa958e9105b63d3fcb7ee3be65d5f9b2e943c69abcd45cbe6ceba9265b9d524",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: Em que lado é a dor no ombro?\\npatient: Direito.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:16:19', 'owner_span': (16, 19), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:16:19', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s1:HAS_LATERALITY:laterality', 'relation_type': 'HAS_LATERALITY', 'source': 'context:s1', 'target': 'laterality', 'value': 'right', 'source_mention_id': 'context:s1', 'target_mention_id': 'laterality', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'laterality', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}, 'laterality': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 396, 'resolver_decisions_preserved': 368, 'resolver_decisions_overwritten': 28, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "laterality",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_LATERALITY:laterality",
+                "relation_type": "HAS_LATERALITY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "laterality",
+                "target_mention_id": "laterality",
+                "value": "right"
+              }
+            ],
+            "surface": "dor"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-029",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "f57fbff6a3d278ff9b4ed5d4fb49d148051f985a0c21a7ebfc73ff7493c6d363",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "dfa958e9105b63d3fcb7ee3be65d5f9b2e943c69abcd45cbe6ceba9265b9d524",
+      "output_hash": "dfa958e9105b63d3fcb7ee3be65d5f9b2e943c69abcd45cbe6ceba9265b9d524",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: Em que lado é a dor no ombro?\\npatient: Direito.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:16:19', 'owner_span': (16, 19), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:16:19', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s1:HAS_LATERALITY:laterality', 'relation_type': 'HAS_LATERALITY', 'source': 'context:s1', 'target': 'laterality', 'value': 'right', 'source_mention_id': 'context:s1', 'target_mention_id': 'laterality', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'laterality', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}, 'laterality': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 396, 'resolver_decisions_preserved': 368, 'resolver_decisions_overwritten': 28, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "laterality",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_LATERALITY:laterality",
+                "relation_type": "HAS_LATERALITY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "laterality",
+                "target_mention_id": "laterality",
+                "value": "right"
+              }
+            ],
+            "surface": "dor"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-029",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "cbbac93b0e575edaa1ad06d7dfe2df0a1fd41883832205e53672cc309e76963b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "dfa958e9105b63d3fcb7ee3be65d5f9b2e943c69abcd45cbe6ceba9265b9d524",
+      "output_hash": "596c4d69027b21a720e834309043bbdd9b407adec0e60f02a828755a2116c492",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "laterality": [
+                "s2"
+              ]
+            },
+            "concept_id": "symptom.shoulder_pain",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "relation_provenance": {},
+            "relations": [
+              {
+                "relation_type": "HAS_LATERALITY",
+                "target": "laterality",
+                "value": "right"
+              }
+            ],
+            "segment_ids": [
+              "s1",
+              "s2"
+            ],
+            "surface": "dor"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-029",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "01e3e938e87b50fa2ef847ee9fcfd9e35e5af0165148c07846a70c79f56829c8",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "596c4d69027b21a720e834309043bbdd9b407adec0e60f02a828755a2116c492",
+      "output_hash": "402fef82de7cb2ad60080ab25cc9c80103d4c89b98f5ec12ef042ca2afef4134",
+      "payload": {
+        "case_id": "D1-029"
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-029",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v1"
+}

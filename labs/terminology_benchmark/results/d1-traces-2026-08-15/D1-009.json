@@ -1,0 +1,375 @@
+{
+  "case_id": "D1-009",
+  "corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "corpus_version": "D1",
+  "decisions": [],
+  "evaluation_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "mismatches": [],
+  "policy_version": "1.3",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "a65d153b4a986638fb30e45045c0fe7d695860d11315b56c390b6dedca1652a9",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": null,
+      "output_hash": "78fe3e62a5a30f7f11b7633e5b91ab606aa41ca720255ad74e5adcd5e50e6508",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "patient",
+            "text": "A tosse começou na segunda-feira."
+          },
+          {
+            "segment_id": "s2",
+            "speaker": "clinician",
+            "text": "Ainda existe tosse agora?"
+          },
+          {
+            "segment_id": "s3",
+            "speaker": "patient",
+            "text": "Existe, mas está bem mais fraca."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-009",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "4be65fa8eca77924969b6e074e89a311dfbb47eb847f8469baa000ff2bf784e5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "78fe3e62a5a30f7f11b7633e5b91ab606aa41ca720255ad74e5adcd5e50e6508",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-009",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "598bb3846c1948c4c83cee3a72e0999f7a8bc10b67b9325211a790fb005ca395",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-009",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "0736405d42e36253dc956d8486ebfb8acaddd33b0b3249fbe977b78b24208ad5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-009",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "f458ea83234219e54cff39629373e381f0482725829383282856c31d827444c5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-009",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "d220351c27bf861fb6227916a258466d2228e5e9aef0b27a51c2f18a1a888653",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-009",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "03a41cf8417283ff43dc2a7266e3d2d523b4674a7d40b474117f7b7b93fa4bda",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "056cf515d14ce88779c791b9e27d790658e57afdf0d669d5e99dad52395d28e7",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            }
+          },
+          "candidate_source": "s1",
+          "source_segment_ids": [
+            "s1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A tosse começou na segunda-feira.\\nclinician: Ainda existe tosse agora?\\npatient: Existe, mas está bem mais fraca.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:7', 'owner_span': (2, 7), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:7', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 110, 'resolver_decisions_preserved': 103, 'resolver_decisions_overwritten': 7, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2', 's3']}",
+            "relations": [],
+            "surface": "tosse"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-009",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "b75bcb727988dde3352409c3545d981d30b8c43996cc11113acd80543eba0967",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "056cf515d14ce88779c791b9e27d790658e57afdf0d669d5e99dad52395d28e7",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-009",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "9549e8f72a2c33b0070eb649204c9d7a07c57d3ee7bc0788115645a4806e11e5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "c07750a5e098c42d8af0267586289ae8c39f30cc980651449aa81dc64b21ce3d",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A tosse começou na segunda-feira.\\nclinician: Ainda existe tosse agora?\\npatient: Existe, mas está bem mais fraca.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:7', 'owner_span': (2, 7), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:7', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 110, 'resolver_decisions_preserved': 103, 'resolver_decisions_overwritten': 7, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2', 's3']}",
+            "relations": [],
+            "surface": "tosse"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-009",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "3c613eb2364808e4cd280e21c3713a0c1092ddab6e6e5e181c34f71d408f99c3",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "c07750a5e098c42d8af0267586289ae8c39f30cc980651449aa81dc64b21ce3d",
+      "output_hash": "c07750a5e098c42d8af0267586289ae8c39f30cc980651449aa81dc64b21ce3d",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A tosse começou na segunda-feira.\\nclinician: Ainda existe tosse agora?\\npatient: Existe, mas está bem mais fraca.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:7', 'owner_span': (2, 7), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:7', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 110, 'resolver_decisions_preserved': 103, 'resolver_decisions_overwritten': 7, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2', 's3']}",
+            "relations": [],
+            "surface": "tosse"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-009",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "e2deab5e769ea3a33770a5982db7e6e9fa571b3f871a5026e6852036a85b0dda",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "c07750a5e098c42d8af0267586289ae8c39f30cc980651449aa81dc64b21ce3d",
+      "output_hash": "dfd21ff8611806d0adedff6e877d8ec6887fae70a0c207aff1fa6c120ada980d",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "temporality": [
+                "s3"
+              ]
+            },
+            "concept_id": "symptom.cough",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "s1",
+              "s2",
+              "s3"
+            ],
+            "surface": "tosse"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-009",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "c543a9ccf85543167a690911157b3259d8c5acf96433a4ac1f3ac70f54b1fae2",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "dfd21ff8611806d0adedff6e877d8ec6887fae70a0c207aff1fa6c120ada980d",
+      "output_hash": "6f1f4adece7d12b968571f5e2845064b69513d7ea3368d5309ab01848e1380ef",
+      "payload": {
+        "case_id": "D1-009"
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-009",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v1"
+}

@@ -1,0 +1,1818 @@
+{
+  "case_id": "D4-007",
+  "corpus_checksum": "1ad10a39a899906ab35455d6ce51bedcfd20f2f7776a9e6e59155ed9a1cb0938",
+  "corpus_version": "D4",
+  "decisions": [],
+  "evaluation_id": "d4-one-shot-0877e9b7-fac6-4881-8ab7-18d46356f719",
+  "mismatches": [
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "dipirona",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "7451a83307e83f27f337297bdf2c3fc72c390ccae4f76e2cc7a1ad880a186852",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "37eda93c6af58c4150a83d4001b6dca354adb1daf421ee9ce203fdf75dc4e034",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "c1c677b52a147c0b266923736a224ae23bba4741715ec7dfe6c6b157170892dd",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "f1",
+            "speaker": "patient",
+            "text": "Dipirona está ao lado do termômetro."
+          },
+          {
+            "segment_id": "f2",
+            "speaker": "patient",
+            "text": "Para ela, o intervalo é a cada oito horas."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-007",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "be05958edec6ab6d671a5090c89fcefa8b34997398925ae1b0024c4825acf355",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "c1c677b52a147c0b266923736a224ae23bba4741715ec7dfe6c6b157170892dd",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "6fdfb2bd00334394bba4348e5e1045f67ac74885e3ac30782cbf4003b495ed6c",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "dipirona"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "a cada oito horas"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "a cada oito horas",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "f2"
+                ]
+              },
+              "relation_id": "context:f1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:f1",
+              "source_mention_id": "context:f1",
+              "source_segment_ids": [
+                "f2"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "a cada oito horas"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "a cada oito horas"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "b32be957c90af3c7dcc80b9d37ff8a77102180b14d01fae7acca7eb110bb2ae6",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "dipirona"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "a cada oito horas"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "a cada oito horas",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "f2"
+                ]
+              },
+              "relation_id": "context:f1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:f1",
+              "source_mention_id": "context:f1",
+              "source_segment_ids": [
+                "f2"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "a cada oito horas"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "a cada oito horas"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "61248c79c83d603d035e9a1565ab6e7aabe6f437cb57b351cb6c73360d8fd702",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "dipirona"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "a cada oito horas"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "a cada oito horas",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "f2"
+                ]
+              },
+              "relation_id": "context:f1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:f1",
+              "source_mention_id": "context:f1",
+              "source_segment_ids": [
+                "f2"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "a cada oito horas"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "a cada oito horas"
+              }
+            ]
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 0,
+            "actual_signal_count": 1,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 1,
+            "complete_but_wrong": 0,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "f2"
+                  ],
+                  "owner_mention_id": "context:f1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "f2"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "a cada oito horas"
+                },
+                "classification": "COMPLETE_AND_CORRECT",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "f2"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "a cada oito horas"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 1,
+            "provenance_correct": 1,
+            "provenance_total": 1,
+            "state_correct": 1,
+            "state_total": 1,
+            "transition_correct": 0,
+            "transition_total": 0,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f2"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f2"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "a cada oito horas"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "2e6ed363e64d3c2acca33836763ed3a6cb995da661e2f448f952969525a5a38a",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "f1"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "f1"
+            ]
+          },
+          "frequency": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "f2"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "f1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "f1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "f4a6fdc141852495c4fc9cd63d808909a1fc1b1015949683f7b70120493cf912",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "2e6ed363e64d3c2acca33836763ed3a6cb995da661e2f448f952969525a5a38a",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "d3079a5241e2845bd686b2273c62e864918c08fa7eb4724efc865c49d61f381f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "2a21e4faad1a7db6a07af050601712d37116087666256a9af4675778186235d1",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "frequency": [
+              "f2"
+            ]
+          },
+          "candidate_source": "f1",
+          "historical_attributes": {},
+          "owner_mention_id": "context:f1",
+          "owner_type": "medication",
+          "relation_input_contract": {
+            "attribute_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f2"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f2"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "a cada oito horas"
+              }
+            ],
+            "has_blocking_signal": false,
+            "relation_input_owner_completeness": 1.0,
+            "relation_input_provenance": 1.0,
+            "relation_input_state_completeness": 1.0,
+            "transition_contract_validity": 1.0,
+            "transition_signals": []
+          },
+          "relation_input_signals": [
+            {
+              "attribute_type": "frequency",
+              "confidence": 1.0,
+              "evidence": [
+                "f2"
+              ],
+              "owner_mention_id": "context:f1",
+              "owner_type": "medication",
+              "provenance": {
+                "evidence_id": null,
+                "semantic_policy": null,
+                "source_segment_ids": [
+                  "f2"
+                ]
+              },
+              "relation_ready": true,
+              "state": "current",
+              "status": "RESOLVED",
+              "value": "a cada oito horas"
+            }
+          ],
+          "source_segment_ids": [
+            "f1"
+          ],
+          "transition_evidence": [],
+          "transition_input_signals": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Dipirona está ao lado do termômetro.\\npatient: Para ela, o intervalo é a cada oito horas.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:f1:0:8', 'owner_span': (0, 8), 'source_evidence_id': 'context:f1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:f1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:f1', 'target': 'frequency', 'value': 'a cada oito horas', 'source_mention_id': 'context:f1', 'target_mention_id': 'frequency', 'source_segment_ids': ['f2'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('f2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('f1',), 'candidate_source': 'f1', 'owner_type': 'medication', 'owner_mention_id': 'context:f1', 'attribute_provenance': {'frequency': ['f2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'certainty': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'temporality': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'experiencer': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'frequency': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f2',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'frequency', 'value': 'a cada oito horas', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f2',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f2'], 'relation_ready': True}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'frequency', 'value': 'a cada oito horas', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f2',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f2'], 'relation_ready': True}], 'transition_signals': [], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': False}}, 'authority_metrics': {'resolver_decisions_total': 77, 'resolver_decisions_preserved': 58, 'resolver_decisions_overwritten': 19, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'f1', 'conversation_segment_ids': ['f2']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f2"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f2"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "a cada oito horas"
+              }
+            ],
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "a cada oito horas"
+              }
+            ],
+            "signal_quality": {
+              "actual_nonready_signal_count": 0,
+              "actual_signal_count": 1,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 1,
+              "complete_but_wrong": 0,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "f2"
+                    ],
+                    "owner_mention_id": "context:f1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "f2"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "a cada oito horas"
+                  },
+                  "classification": "COMPLETE_AND_CORRECT",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "f2"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "a cada oito horas"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 1,
+              "provenance_correct": 1,
+              "provenance_total": 1,
+              "state_correct": 1,
+              "state_total": 1,
+              "transition_correct": 0,
+              "transition_total": 0,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "dipirona",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "64a8f5e56a324aebcebbc23457b291d84cb4e856cd0513d3446754ee9a22cd92",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "dipirona"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "a cada oito horas"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "a cada oito horas",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "f2"
+                ]
+              },
+              "relation_id": "context:f1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:f1",
+              "source_mention_id": "context:f1",
+              "source_segment_ids": [
+                "f2"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "a cada oito horas"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "a cada oito horas"
+              }
+            ]
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 0,
+            "actual_signal_count": 1,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 1,
+            "complete_but_wrong": 0,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "f2"
+                  ],
+                  "owner_mention_id": "context:f1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "f2"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "a cada oito horas"
+                },
+                "classification": "COMPLETE_AND_CORRECT",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "f2"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "a cada oito horas"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 1,
+            "provenance_correct": 1,
+            "provenance_total": 1,
+            "state_correct": 1,
+            "state_total": 1,
+            "transition_correct": 0,
+            "transition_total": 0,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f2"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f2"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "a cada oito horas"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "2a21e4faad1a7db6a07af050601712d37116087666256a9af4675778186235d1",
+      "output_hash": "d4f8232223989a3173da140629a59d601480d65179df07cc2acffcfdb1e7c080",
+      "payload": {
+        "relations": [
+          [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "a cada oito horas"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "2e03bc6ca598cab2e0c73d0d50d4ae972977d8ca4a58eb65dcd89143c3c3b4af",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "dipirona"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "a cada oito horas"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "a cada oito horas",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "f2"
+                ]
+              },
+              "relation_id": "context:f1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:f1",
+              "source_mention_id": "context:f1",
+              "source_segment_ids": [
+                "f2"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "a cada oito horas"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "a cada oito horas"
+              }
+            ]
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 0,
+            "actual_signal_count": 1,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 1,
+            "complete_but_wrong": 0,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "f2"
+                  ],
+                  "owner_mention_id": "context:f1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "f2"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "a cada oito horas"
+                },
+                "classification": "COMPLETE_AND_CORRECT",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "f2"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "a cada oito horas"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 1,
+            "provenance_correct": 1,
+            "provenance_total": 1,
+            "state_correct": 1,
+            "state_total": 1,
+            "transition_correct": 0,
+            "transition_total": 0,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f2"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f2"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "a cada oito horas"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "d4f8232223989a3173da140629a59d601480d65179df07cc2acffcfdb1e7c080",
+      "output_hash": "773c8e1431175e6bdbf0eb38e3d86e1fd65dc3bcea4efff0032f50fb03207b1b",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Dipirona está ao lado do termômetro.\\npatient: Para ela, o intervalo é a cada oito horas.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:f1:0:8', 'owner_span': (0, 8), 'source_evidence_id': 'context:f1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:f1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:f1', 'target': 'frequency', 'value': 'a cada oito horas', 'source_mention_id': 'context:f1', 'target_mention_id': 'frequency', 'source_segment_ids': ['f2'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('f2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('f1',), 'candidate_source': 'f1', 'owner_type': 'medication', 'owner_mention_id': 'context:f1', 'attribute_provenance': {'frequency': ['f2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'certainty': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'temporality': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'experiencer': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'frequency': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f2',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'frequency', 'value': 'a cada oito horas', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f2',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f2'], 'relation_ready': True}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'frequency', 'value': 'a cada oito horas', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f2',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f2'], 'relation_ready': True}], 'transition_signals': [], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': False}}, 'authority_metrics': {'resolver_decisions_total': 77, 'resolver_decisions_preserved': 58, 'resolver_decisions_overwritten': 19, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'f1', 'conversation_segment_ids': ['f2']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f2"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f2"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "a cada oito horas"
+              }
+            ],
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "a cada oito horas"
+              }
+            ],
+            "signal_quality": {
+              "actual_nonready_signal_count": 0,
+              "actual_signal_count": 1,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 1,
+              "complete_but_wrong": 0,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "f2"
+                    ],
+                    "owner_mention_id": "context:f1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "f2"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "a cada oito horas"
+                  },
+                  "classification": "COMPLETE_AND_CORRECT",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "f2"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "a cada oito horas"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 1,
+              "provenance_correct": 1,
+              "provenance_total": 1,
+              "state_correct": 1,
+              "state_total": 1,
+              "transition_correct": 0,
+              "transition_total": 0,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "dipirona",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "861a31d2d5b680101b5ee3b04c0ec090112d89af1f941b1d1fc20c8a2324830e",
+      "changed_fields": [
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "773c8e1431175e6bdbf0eb38e3d86e1fd65dc3bcea4efff0032f50fb03207b1b",
+      "output_hash": "773c8e1431175e6bdbf0eb38e3d86e1fd65dc3bcea4efff0032f50fb03207b1b",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Dipirona está ao lado do termômetro.\\npatient: Para ela, o intervalo é a cada oito horas.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:f1:0:8', 'owner_span': (0, 8), 'source_evidence_id': 'context:f1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:f1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:f1', 'target': 'frequency', 'value': 'a cada oito horas', 'source_mention_id': 'context:f1', 'target_mention_id': 'frequency', 'source_segment_ids': ['f2'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('f2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('f1',), 'candidate_source': 'f1', 'owner_type': 'medication', 'owner_mention_id': 'context:f1', 'attribute_provenance': {'frequency': ['f2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'certainty': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'temporality': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'experiencer': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'frequency': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f2',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'frequency', 'value': 'a cada oito horas', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f2',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f2'], 'relation_ready': True}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'frequency', 'value': 'a cada oito horas', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f2',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f2'], 'relation_ready': True}], 'transition_signals': [], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': False}}, 'authority_metrics': {'resolver_decisions_total': 77, 'resolver_decisions_preserved': 58, 'resolver_decisions_overwritten': 19, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'f1', 'conversation_segment_ids': ['f2']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f2"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f2"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "a cada oito horas"
+              }
+            ],
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "a cada oito horas"
+              }
+            ],
+            "signal_quality": {
+              "actual_nonready_signal_count": 0,
+              "actual_signal_count": 1,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 1,
+              "complete_but_wrong": 0,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "f2"
+                    ],
+                    "owner_mention_id": "context:f1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "f2"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "a cada oito horas"
+                  },
+                  "classification": "COMPLETE_AND_CORRECT",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "f2"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "a cada oito horas"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 1,
+              "provenance_correct": 1,
+              "provenance_total": 1,
+              "state_correct": 1,
+              "state_total": 1,
+              "transition_correct": 0,
+              "transition_total": 0,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "dipirona",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "0fed90953e463f084cfa19ba528f3d4d553db16d8aa7327c1e03447fb6405745",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "773c8e1431175e6bdbf0eb38e3d86e1fd65dc3bcea4efff0032f50fb03207b1b",
+      "output_hash": "e5e8de45a951652b809dec3cc516793b6432fd8e94fdc1f40d5f88ec3360cf53",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": "medication.dipyrone",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "a cada oito horas",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "a cada oito horas"
+              }
+            ],
+            "surface": "dipirona"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-007",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "cf3c4831c5617f2303255df11318732c2d1c4f0960f6ab962a9f9d3741707ac5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "e5e8de45a951652b809dec3cc516793b6432fd8e94fdc1f40d5f88ec3360cf53",
+      "output_hash": "a812d503d0b498ad87d5b51efa9bec4696ef3370f97b76232408c0f3eaf3f7dd",
+      "payload": {
+        "case_id": "D4-007",
+        "mismatch_count": 1
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-007",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

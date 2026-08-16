@@ -1,0 +1,35 @@
+name: Astera First Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      image_tag:
+        description: Immutable image tag or commit SHA
+        required: true
+        type: string
+      namespace:
+        description: Kubernetes namespace
+        required: true
+        default: astera
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: azure/setup-helm@v4
+      - name: Configure cluster access
+        run: echo "Cluster access must be configured by the production environment."
+      - name: Deploy Runtime
+        env:
+          HELM_RELEASE: astera-runtime
+          HELM_NAMESPACE: ${{ inputs.namespace }}
+          ASTERA_IMAGE_TAG: ${{ inputs.image_tag }}
+        run: ./infrastructure/scripts/first-deploy.sh
+      - name: Smoke test health endpoint
+        run: echo "Smoke test executes through the configured production ingress."

@@ -1,0 +1,385 @@
+{
+  "case_id": "D1-003",
+  "corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "corpus_version": "D1",
+  "decisions": [],
+  "evaluation_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "mismatches": [
+    {
+      "actual": "current",
+      "confidence": 0.55,
+      "details": {
+        "mention": "pressão",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": "past",
+      "policy_rules": [],
+      "semantic_dimension": "temporality",
+      "stage": "prediction"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "e66d3a476026fb6d671f40933bc31998ad3634a2355f2a66dc7216e2ee1944d6",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": null,
+      "output_hash": "f1bb21133d76fb4c7e901891779ab42630ee29618320b17f06a1f9ea12be10df",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "patient",
+            "text": "Senti uma pressão no peito durante a caminhada."
+          },
+          {
+            "segment_id": "s2",
+            "speaker": "patient",
+            "text": "Ela desapareceu depois de alguns minutos."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-003",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "adcfc1d0b593b0de60a8b240a9481282fadb401fd30566c4d902c39bfe7b9df2",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "f1bb21133d76fb4c7e901891779ab42630ee29618320b17f06a1f9ea12be10df",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "87c6a5cc1919133cbcd884d46802e5df883c838b8588991a38be538f2797836b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "5f716d455ea278575f8d7f864d6f43e36b84ea26413e4ddb6352f6a092770648",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "dcb059533ec1643fc4de451ef2e8446742e7e60715e1b52577b26812fb00ad0a",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "ecc4085757d6b8c5e21f2ac398edb43057c527e43d7b9f43b67fb31c8ee27d9b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "f0504562aff476cc081fcaad48d005c3d3e7e383724821e52a902d389c2604dc",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "11b779c77640f70a022123723a70019351de6d81e3950828b525585e174a6147",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            }
+          },
+          "candidate_source": "s1",
+          "source_segment_ids": [
+            "s1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Senti uma pressão no peito durante a caminhada.\\npatient: Ela desapareceu depois de alguns minutos.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:10:17', 'owner_span': (10, 17), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:10:17', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 33, 'resolver_decisions_preserved': 32, 'resolver_decisions_overwritten': 1, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [],
+            "surface": "pressão"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "554d982b663dff1b01249f7916e13e00336b338989ee7a3a851e50f8f1db4495",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "11b779c77640f70a022123723a70019351de6d81e3950828b525585e174a6147",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "ff99f993ebcc10f421025732f76c7120460e516fbf914c26b1fc16ed17cf7f8f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "bbd476ab8218dd8a70db225d37eddfd38006c4495a1e85cede3869967b48ee9f",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Senti uma pressão no peito durante a caminhada.\\npatient: Ela desapareceu depois de alguns minutos.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:10:17', 'owner_span': (10, 17), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:10:17', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 33, 'resolver_decisions_preserved': 32, 'resolver_decisions_overwritten': 1, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [],
+            "surface": "pressão"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "9da49e2ed85ab4dfffb2ae91754b9273a5bb678b0e207b9eae236dac61ffa681",
+      "changed_fields": [
+        "temporality"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "bbd476ab8218dd8a70db225d37eddfd38006c4495a1e85cede3869967b48ee9f",
+      "output_hash": "bbd476ab8218dd8a70db225d37eddfd38006c4495a1e85cede3869967b48ee9f",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Senti uma pressão no peito durante a caminhada.\\npatient: Ela desapareceu depois de alguns minutos.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:10:17', 'owner_span': (10, 17), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:10:17', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 33, 'resolver_decisions_preserved': 32, 'resolver_decisions_overwritten': 1, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [],
+            "surface": "pressão"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "98817d865a175167b8edd1e68c50ff6091d99a33bf88212ad4f7d48c75b3aa15",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "bbd476ab8218dd8a70db225d37eddfd38006c4495a1e85cede3869967b48ee9f",
+      "output_hash": "6e9e69b1a22008128d76af1ec14a6fedb475300ae007e50929c850c07e0ed534",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "temporality": [
+                "s1",
+                "s2"
+              ]
+            },
+            "concept_id": "symptom.chest_pressure",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "s1",
+              "s2"
+            ],
+            "surface": "pressão"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-003",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "d866f58255318cabaa2f2dce2b2639ca66f7aa0bcbfd3c743353d2cc5ded1bcf",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "6e9e69b1a22008128d76af1ec14a6fedb475300ae007e50929c850c07e0ed534",
+      "output_hash": "e97b3d744cc0c211062afdab8b74734f379a2f9340b0ee5d477523babcb1c420",
+      "payload": {
+        "case_id": "D1-003"
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-003",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v1"
+}

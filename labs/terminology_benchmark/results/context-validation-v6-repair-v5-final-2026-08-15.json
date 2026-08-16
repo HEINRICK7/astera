@@ -1,0 +1,100 @@
+{
+  "status": "executed",
+  "run_type": "v6-repair-v5-final",
+  "repair_version": "v5",
+  "official_corpus": true,
+  "official_corpus_sha256": "1721ad71b7ef92c20a06fa9cae956098fefad0e079f92464d67f1bf9255a3f10",
+  "policy_version": "1.1",
+  "type_b_findings_excluded_from_quality_gate": 10,
+  "policy_aligned_v6_score": {
+    "mention_exact_match": 0.7275449101796407,
+    "relation_exact_match": 1.0,
+    "scope_accuracy": 0.9987951807228915,
+    "cross_mention_isolation": 0.5912408759124088,
+    "cross_segment_resolution": 0.8629032258064516,
+    "speaker_attribution": 1.0,
+    "provenance": 1.0,
+    "field_accuracy": {
+      "negated": 0.9970059880239521,
+      "certainty": 1.0,
+      "temporality": 0.9969135802469136,
+      "experiencer": 1.0,
+      "laterality": 1.0,
+      "dose": 1.0,
+      "dose_value": 1.0,
+      "dose_unit": 1.0,
+      "frequency": 1.0,
+      "route": 1.0,
+      "status": 0.7305389221556886
+    },
+    "hard_gate_passed": false
+  },
+  "policy_harness_raw": {
+    "provider": "niede-pt-br-cross-segment-context",
+    "metadata": null,
+    "cases": 150,
+    "attribute_accuracy": {
+      "negated": 0.9970059880239521,
+      "certainty": 1.0,
+      "temporality": 0.9760479041916168,
+      "experiencer": 1.0,
+      "laterality": 1.0,
+      "status": 0.43037974683544306,
+      "dose": 1.0,
+      "dose_value": 1.0,
+      "dose_unit": 1.0,
+      "frequency": 1.0,
+      "provenance": 1.0,
+      "mention_exact_match": 0.7275449101796407,
+      "relation_exact_match": 1.0,
+      "scope_accuracy": 0.9946107784431137,
+      "cross_mention_isolation": 0.5912408759124088
+    },
+    "hard_gate_thresholds": {
+      "negated": 0.9,
+      "certainty": 0.9,
+      "temporality": 0.9,
+      "experiencer": 0.95,
+      "dose": 0.9,
+      "provenance": 1.0,
+      "mention_exact_match": 0.9,
+      "relation_exact_match": 0.95,
+      "scope_accuracy": 0.97,
+      "cross_mention_isolation": 0.95,
+      "cross_segment_resolution": 0.9,
+      "speaker_attribution": 0.95
+    },
+    "mean_latency_ms": 0.4689819191783439,
+    "startup_seconds": 0.0,
+    "hard_gate_passed": false,
+    "v6_metrics": {
+      "conversation_cases": 60,
+      "cross_segment_resolution": 0.8629032258064516,
+      "speaker_attribution": 1.0,
+      "cross_segment_mentions": 124,
+      "cross_segment_mean_latency_ms": 0.6281146370530487
+    }
+  },
+  "raw_v6_score": {
+    "mention_exact_match": 0.8592814371257484,
+    "relation_exact_match": 1.0,
+    "scope_accuracy": 0.9946107784431137,
+    "cross_mention_isolation": 0.7664233576642335,
+    "cross_segment_resolution": 0.6532258064516129,
+    "speaker_attribution": 1.0,
+    "provenance": 1.0,
+    "hard_gate_passed": false
+  },
+  "authority_metrics": {
+    "resolver_decisions_total": 4092,
+    "resolver_decisions_preserved": 4011,
+    "resolver_decisions_overwritten": 81,
+    "legacy_fallback_count": 0,
+    "ambiguous_forced_resolution_count": 0
+  },
+  "holdout_evaluation": "NOT_EXECUTED",
+  "v7": "BLOCKED",
+  "shadow_integration": "BLOCKED",
+  "production_promotion": "BLOCKED",
+  "next_action": "HUMAN_GATE_V5_FAILURE"
+}

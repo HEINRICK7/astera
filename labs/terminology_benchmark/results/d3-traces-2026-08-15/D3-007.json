@@ -1,0 +1,1140 @@
+{
+  "case_id": "D3-007",
+  "corpus_checksum": "cef75b21b8eae6ec940b9f6cffe3d27fbe5b050db838569f3f19ef68434f1b0d",
+  "corpus_version": "D3",
+  "decisions": [],
+  "evaluation_id": "d3-one-shot-4c137795-99d1-4973-a98d-20eb89de0617",
+  "mismatches": [
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "duloxetina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    },
+    {
+      "actual": [],
+      "confidence": 0.86,
+      "details": {
+        "mention": "duloxetina",
+        "relation_output_count": 0
+      },
+      "expected": [
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "ao acordar"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "d7dda54457cf896392e41edc8c259098b190c1c9bfa1ed82c6a1e5c7a46a59a7",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "8ce3270cf3c997dafed02f42c900c9f95a552c411db1efa6d45b9f2d3935efb8",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "d24eabb411aaea8c48800b7cb92c08ddbc4b4dbb0dcb2b35ecf4f2aefb662b46",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "f1",
+            "speaker": "patient",
+            "text": "A duloxetina eu tomo ao acordar."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-007",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "2e12a37baf9963170bc40a7f20a188e999917320e3026aa86b21d41094945375",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d24eabb411aaea8c48800b7cb92c08ddbc4b4dbb0dcb2b35ecf4f2aefb662b46",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "a900a085151a44601a975d7d8b12c85bdc10ebfac252c723573a5fb4b5eba4e4",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "duloxetina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "ao acordar",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "38a1b550a76ec034f5679bdf90d33defa911709563962b960aff2e6aaf998a0a",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "duloxetina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "ao acordar",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "e14769e257d5d0c3cd66da4690655d1ae95602ad0deed6a2da48b07249177c06",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "duloxetina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "ao acordar",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "d8da043dd39eab5d115285a7923e334e9af016f3108718ad96ca282ae939342f",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "f1"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "f1"
+            ]
+          },
+          "frequency": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "f1"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "f1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "f1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "5da225e93d071a3059faab6625fb4cbf705870ee9dc9634f172c756aff0dde61",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d8da043dd39eab5d115285a7923e334e9af016f3108718ad96ca282ae939342f",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "e873baa2f5a6974ea5f7a69b70a42c241f89ec9256b670b354b85ac2060ee370",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "166f41001171d6eb55bf0eebf5d765074e41cfd0cf409257394c524aea2630cf",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "frequency": [
+              "f1"
+            ]
+          },
+          "candidate_source": "f1",
+          "owner_mention_id": "context:f1",
+          "owner_type": null,
+          "source_segment_ids": [
+            "f1"
+          ],
+          "transition_evidence": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A duloxetina eu tomo ao acordar.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:f1:2:12', 'owner_span': (2, 12), 'source_evidence_id': 'context:f1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('f1',), 'candidate_source': 'f1', 'owner_type': None, 'owner_mention_id': 'context:f1', 'attribute_provenance': {'frequency': ['f1']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': None, 'source_segment_ids': ('f1',)}, 'certainty': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': None, 'source_segment_ids': ('f1',)}, 'temporality': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': None, 'source_segment_ids': ('f1',)}, 'experiencer': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': None, 'source_segment_ids': ('f1',)}, 'frequency': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': None, 'source_segment_ids': ('f1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 77, 'resolver_decisions_preserved': 55, 'resolver_decisions_overwritten': 22, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'f1', 'conversation_segment_ids': []}",
+            "relations": [],
+            "surface": "duloxetina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "a8d0f21fdece82304c25b15c5c9d80bb9bbd14d5c64ca6744a7652e3c8fa7822",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        },
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "duloxetina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "ao acordar",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        }
+      },
+      "input_hash": "166f41001171d6eb55bf0eebf5d765074e41cfd0cf409257394c524aea2630cf",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "6d5b8b39f7a94384e7f9261c1d726863e5ba1129aeada6f66a68ea50f37888d8",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "duloxetina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "ao acordar",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "467e0889a51efa8926344c61e8c020bc9cf67ab4038645c9dc578af91ceba692",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A duloxetina eu tomo ao acordar.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:f1:2:12', 'owner_span': (2, 12), 'source_evidence_id': 'context:f1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('f1',), 'candidate_source': 'f1', 'owner_type': None, 'owner_mention_id': 'context:f1', 'attribute_provenance': {'frequency': ['f1']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': None, 'source_segment_ids': ('f1',)}, 'certainty': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': None, 'source_segment_ids': ('f1',)}, 'temporality': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': None, 'source_segment_ids': ('f1',)}, 'experiencer': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': None, 'source_segment_ids': ('f1',)}, 'frequency': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': None, 'source_segment_ids': ('f1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 77, 'resolver_decisions_preserved': 55, 'resolver_decisions_overwritten': 22, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'f1', 'conversation_segment_ids': []}",
+            "relations": [],
+            "surface": "duloxetina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "a95ee212dcf51f06bfeb97f83eb287f0851f2c290e8fa47ce228bede74bf87df",
+      "changed_fields": [
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "467e0889a51efa8926344c61e8c020bc9cf67ab4038645c9dc578af91ceba692",
+      "output_hash": "467e0889a51efa8926344c61e8c020bc9cf67ab4038645c9dc578af91ceba692",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A duloxetina eu tomo ao acordar.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:f1:2:12', 'owner_span': (2, 12), 'source_evidence_id': 'context:f1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('f1',), 'candidate_source': 'f1', 'owner_type': None, 'owner_mention_id': 'context:f1', 'attribute_provenance': {'frequency': ['f1']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': None, 'source_segment_ids': ('f1',)}, 'certainty': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': None, 'source_segment_ids': ('f1',)}, 'temporality': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': None, 'source_segment_ids': ('f1',)}, 'experiencer': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': None, 'source_segment_ids': ('f1',)}, 'frequency': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': None, 'source_segment_ids': ('f1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 77, 'resolver_decisions_preserved': 55, 'resolver_decisions_overwritten': 22, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'f1', 'conversation_segment_ids': []}",
+            "relations": [],
+            "surface": "duloxetina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-007",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "0ef454dcc1a7a4d4124658a1485db6be4a0aecfdbaadc35b60872a7412aab465",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "467e0889a51efa8926344c61e8c020bc9cf67ab4038645c9dc578af91ceba692",
+      "output_hash": "f96ca4e7d4b239b8487960cec5ba2a4ca34d5a37378cff0417d6c3ddcefeea52",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "frequency": [
+                "f1"
+              ],
+              "status": [
+                "f1"
+              ]
+            },
+            "concept_id": "medication.duloxetine",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "HAS_FREQUENCY": [
+                "f1"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "ao acordar"
+              }
+            ],
+            "segment_ids": [
+              "f1"
+            ],
+            "surface": "duloxetina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-007",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "0866fc8c99f4487836f91d884fbc4f873a25ee402bd6137c684949638de791f6",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "f96ca4e7d4b239b8487960cec5ba2a4ca34d5a37378cff0417d6c3ddcefeea52",
+      "output_hash": "41bbb8f5eace3cf32d215cadcdd80a3bdad56762a93c5cbb017b007fed42e6ab",
+      "payload": {
+        "case_id": "D3-007",
+        "mismatch_count": 2
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-007",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

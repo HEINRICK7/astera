@@ -1,0 +1,4250 @@
+{
+  "status": "AI_ASSISTED_PROPOSAL_PENDING_HUMAN_GATE",
+  "batch_id": "v7-batch-05",
+  "case_range": "121-150",
+  "policy_version": "clinical-semantic-policy-v1.2",
+  "source_batch": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-adjudication-batches-2026-08-15/v7-batch-05-cases-121-150.json",
+  "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+  "resolver_executed": false,
+  "corpus_freeze_complete": false,
+  "decision_counts": {
+    "APPROVED": 19,
+    "REJECTED": 0,
+    "AMBIGUOUS": 11,
+    "PENDING_HUMAN": 0
+  },
+  "reviews": [
+    {
+      "review_id": "v7-review-0121",
+      "candidate_id": "v7-draft-0121",
+      "text": "Médico: Vamos revisar seus remédios. Você ainda usa losartana?\nPaciente: Uso losartana 25 mg de manhã, mas às vezes esqueço.\nMédico: E o amlodipino, entrou depois da última consulta?\nPaciente: Sim, comecei o amlodipino; a receita dizia 10 mg e continuo assim.\nMédico: Então mantenho os dois no esquema atual, correto?",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0121:segment-01",
+          "speaker": "clinician",
+          "text": "Vamos revisar seus remédios. Você ainda usa losartana?"
+        },
+        {
+          "segment_id": "v7-draft-0121:segment-02",
+          "speaker": "patient",
+          "text": "Uso losartana 25 mg de manhã, mas às vezes esqueço."
+        },
+        {
+          "segment_id": "v7-draft-0121:segment-03",
+          "speaker": "clinician",
+          "text": "E o amlodipino, entrou depois da última consulta?"
+        },
+        {
+          "segment_id": "v7-draft-0121:segment-04",
+          "speaker": "patient",
+          "text": "Sim, comecei o amlodipino; a receita dizia 10 mg e continuo assim."
+        },
+        {
+          "segment_id": "v7-draft-0121:segment-05",
+          "speaker": "clinician",
+          "text": "Então mantenho os dois no esquema atual, correto?"
+        }
+      ],
+      "scenario_family": "MEDICATION_RECONCILIATION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:MEDICATION_RECONCILIATION",
+      "gold": [
+        {
+          "surface": "losartana",
+          "concept_id": "medication.losartan",
+          "experiencer": "patient",
+          "dose": "25 mg",
+          "dose_value": "25",
+          "dose_unit": "mg",
+          "frequency": "de manhã",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0121:segment-01",
+            "v7-draft-0121:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0121:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0121:segment-02"
+            ],
+            "dose": [
+              "v7-draft-0121:segment-02"
+            ],
+            "dose_value": [
+              "v7-draft-0121:segment-02"
+            ],
+            "dose_unit": [
+              "v7-draft-0121:segment-02"
+            ],
+            "frequency": [
+              "v7-draft-0121:segment-02"
+            ],
+            "status": [
+              "v7-draft-0121:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0121:segment-02"
+            ],
+            "HAS_FREQUENCY": [
+              "v7-draft-0121:segment-02"
+            ],
+            "status": [
+              "v7-draft-0121:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "25 mg",
+              "segment_ids": [
+                "v7-draft-0121:segment-02"
+              ]
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "de manhã",
+              "segment_ids": [
+                "v7-draft-0121:segment-02"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "amlodipino",
+          "concept_id": "medication.amlodipine",
+          "experiencer": "patient",
+          "dose": "10 mg",
+          "dose_value": "10",
+          "dose_unit": "mg",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0121:segment-03",
+            "v7-draft-0121:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0121:segment-03"
+            ],
+            "experiencer": [
+              "v7-draft-0121:segment-04"
+            ],
+            "dose": [
+              "v7-draft-0121:segment-04"
+            ],
+            "dose_value": [
+              "v7-draft-0121:segment-04"
+            ],
+            "dose_unit": [
+              "v7-draft-0121:segment-04"
+            ],
+            "status": [
+              "v7-draft-0121:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0121:segment-04"
+            ],
+            "status": [
+              "v7-draft-0121:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "10 mg",
+              "segment_ids": [
+                "v7-draft-0121:segment-04"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "losartana",
+          "segment_ids": [
+            "v7-draft-0121:segment-01",
+            "v7-draft-0121:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "amlodipino",
+          "segment_ids": [
+            "v7-draft-0121:segment-03",
+            "v7-draft-0121:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0122",
+      "candidate_id": "v7-draft-0122",
+      "text": "Médico: Como ficou a dose do losartana depois da mudança?\nPaciente: Antes era 25 mg de manhã.\nMédico: O que aconteceu na última orientação?\nPaciente: Eu corrigi: agora uso 10 mg de manhã e o ajuste ocorreu no inverno passado.\nMédico: A dose atual é a segunda, não a primeira?\nPaciente: Isso, a segunda é a atual.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0122:segment-01",
+          "speaker": "clinician",
+          "text": "Como ficou a dose do losartana depois da mudança?"
+        },
+        {
+          "segment_id": "v7-draft-0122:segment-02",
+          "speaker": "patient",
+          "text": "Antes era 25 mg de manhã."
+        },
+        {
+          "segment_id": "v7-draft-0122:segment-03",
+          "speaker": "clinician",
+          "text": "O que aconteceu na última orientação?"
+        },
+        {
+          "segment_id": "v7-draft-0122:segment-04",
+          "speaker": "patient",
+          "text": "Eu corrigi: agora uso 10 mg de manhã e o ajuste ocorreu no inverno passado."
+        },
+        {
+          "segment_id": "v7-draft-0122:segment-05",
+          "speaker": "clinician",
+          "text": "A dose atual é a segunda, não a primeira?"
+        },
+        {
+          "segment_id": "v7-draft-0122:segment-06",
+          "speaker": "patient",
+          "text": "Isso, a segunda é a atual."
+        }
+      ],
+      "scenario_family": "DOSE_TRANSITION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:DOSE_TRANSITION",
+      "gold": [
+        {
+          "surface": "losartana",
+          "concept_id": "medication.losartan",
+          "experiencer": "patient",
+          "dose": "10 mg",
+          "dose_value": "10",
+          "dose_unit": "mg",
+          "frequency": "de manhã",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0122:segment-01",
+            "v7-draft-0122:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0122:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0122:segment-04"
+            ],
+            "dose": [
+              "v7-draft-0122:segment-04"
+            ],
+            "dose_value": [
+              "v7-draft-0122:segment-04"
+            ],
+            "dose_unit": [
+              "v7-draft-0122:segment-04"
+            ],
+            "frequency": [
+              "v7-draft-0122:segment-04"
+            ],
+            "status": [
+              "v7-draft-0122:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0122:segment-04"
+            ],
+            "HAS_FREQUENCY": [
+              "v7-draft-0122:segment-04"
+            ],
+            "status": [
+              "v7-draft-0122:segment-04"
+            ],
+            "CHANGED_FROM": [
+              "v7-draft-0122:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "10 mg",
+              "segment_ids": [
+                "v7-draft-0122:segment-04"
+              ]
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "de manhã",
+              "segment_ids": [
+                "v7-draft-0122:segment-04"
+              ]
+            },
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "25 mg",
+              "segment_ids": [
+                "v7-draft-0122:segment-04"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "losartana",
+          "segment_ids": [
+            "v7-draft-0122:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0123",
+      "candidate_id": "v7-draft-0123",
+      "text": "Médico: Com que frequência você toma amlodipino?\nPaciente: De início era de manhã, mas mudei o horário.\nMédico: Você está falando do horário anterior ou do atual?\nPaciente: Do atual: de manhã; a mudança foi registrada no inverno passado.\nMédico: E o losartana continua separado dessa rotina?",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0123:segment-01",
+          "speaker": "clinician",
+          "text": "Com que frequência você toma amlodipino?"
+        },
+        {
+          "segment_id": "v7-draft-0123:segment-02",
+          "speaker": "patient",
+          "text": "De início era de manhã, mas mudei o horário."
+        },
+        {
+          "segment_id": "v7-draft-0123:segment-03",
+          "speaker": "clinician",
+          "text": "Você está falando do horário anterior ou do atual?"
+        },
+        {
+          "segment_id": "v7-draft-0123:segment-04",
+          "speaker": "patient",
+          "text": "Do atual: de manhã; a mudança foi registrada no inverno passado."
+        },
+        {
+          "segment_id": "v7-draft-0123:segment-05",
+          "speaker": "clinician",
+          "text": "E o losartana continua separado dessa rotina?"
+        }
+      ],
+      "scenario_family": "FREQUENCY_STATUS_TRANSITION",
+      "decision": "AMBIGUOUS",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "A fala declara mudança de horário, mas repete a mesma frequência como valor inicial e atual; não há valor novo inequívoco.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:FREQUENCY_STATUS_TRANSITION",
+      "gold": null,
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "losartana",
+          "segment_ids": [
+            "v7-draft-0123:segment-05"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "amlodipino",
+          "segment_ids": [
+            "v7-draft-0123:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": "AMB-FREQ-001",
+      "policy_ids": [
+        "SEM-FREQ-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0124",
+      "candidate_id": "v7-draft-0124",
+      "text": "Médico: Além de formigamento, há outra queixa?\nPaciente: A formigamento fica em rosto direito; também tenho cansaço.\nMédico: O cansaço começou junto ou depois?\nPaciente: Depois. A formigamento é a que mais incomoda agora, mas a outra melhorou no inverno passado.\nMédico: Vou registrar as duas sem misturar os lados.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0124:segment-01",
+          "speaker": "clinician",
+          "text": "Além de formigamento, há outra queixa?"
+        },
+        {
+          "segment_id": "v7-draft-0124:segment-02",
+          "speaker": "patient",
+          "text": "A formigamento fica em rosto direito; também tenho cansaço."
+        },
+        {
+          "segment_id": "v7-draft-0124:segment-03",
+          "speaker": "clinician",
+          "text": "O cansaço começou junto ou depois?"
+        },
+        {
+          "segment_id": "v7-draft-0124:segment-04",
+          "speaker": "patient",
+          "text": "Depois. A formigamento é a que mais incomoda agora, mas a outra melhorou no inverno passado."
+        },
+        {
+          "segment_id": "v7-draft-0124:segment-05",
+          "speaker": "clinician",
+          "text": "Vou registrar as duas sem misturar os lados."
+        }
+      ],
+      "scenario_family": "MULTIPLE_SYMPTOMS",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:MULTIPLE_SYMPTOMS",
+      "gold": [
+        {
+          "surface": "formigamento",
+          "concept_id": "symptom.tingling",
+          "experiencer": "patient",
+          "temporality": "current",
+          "laterality": "right",
+          "segment_ids": [
+            "v7-draft-0124:segment-01",
+            "v7-draft-0124:segment-02",
+            "v7-draft-0124:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0124:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0124:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0124:segment-02"
+            ],
+            "laterality": [
+              "v7-draft-0124:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_LATERALITY": [
+              "v7-draft-0124:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_LATERALITY",
+              "target": "laterality",
+              "value": "right",
+              "segment_ids": [
+                "v7-draft-0124:segment-02"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "cansaço",
+          "concept_id": "symptom.fatigue",
+          "experiencer": "patient",
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0124:segment-02",
+            "v7-draft-0124:segment-03"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0124:segment-02"
+            ],
+            "experiencer": [
+              "v7-draft-0124:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0124:segment-02"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "formigamento",
+          "segment_ids": [
+            "v7-draft-0124:segment-01",
+            "v7-draft-0124:segment-02",
+            "v7-draft-0124:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "rosto direito",
+          "segment_ids": [
+            "v7-draft-0124:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0125",
+      "candidate_id": "v7-draft-0125",
+      "text": "Médico: Há formigamento na família?\nPaciente: Sim, minha prima teve isso, mas eu não tenho essa queixa.\nMédico: Quem está com o diagnóstico, então?\nPaciente: A pessoa da família; eu vim por causa de rosto direito.\nMédico: Vou separar o experiencer familiar do paciente.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0125:segment-01",
+          "speaker": "clinician",
+          "text": "Há formigamento na família?"
+        },
+        {
+          "segment_id": "v7-draft-0125:segment-02",
+          "speaker": "patient",
+          "text": "Sim, minha prima teve isso, mas eu não tenho essa queixa."
+        },
+        {
+          "segment_id": "v7-draft-0125:segment-03",
+          "speaker": "clinician",
+          "text": "Quem está com o diagnóstico, então?"
+        },
+        {
+          "segment_id": "v7-draft-0125:segment-04",
+          "speaker": "patient",
+          "text": "A pessoa da família; eu vim por causa de rosto direito."
+        },
+        {
+          "segment_id": "v7-draft-0125:segment-05",
+          "speaker": "clinician",
+          "text": "Vou separar o experiencer familiar do paciente."
+        }
+      ],
+      "scenario_family": "FAMILY_PATIENT_EXPERIENCER",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:FAMILY_PATIENT_EXPERIENCER",
+      "gold": [
+        {
+          "surface": "formigamento",
+          "concept_id": "symptom.tingling",
+          "experiencer": "family",
+          "temporality": "past",
+          "segment_ids": [
+            "v7-draft-0125:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0125:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0125:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0125:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        },
+        {
+          "surface": "formigamento",
+          "concept_id": "symptom.tingling",
+          "experiencer": "patient",
+          "negated": true,
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0125:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0125:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0125:segment-01"
+            ],
+            "negated": [
+              "v7-draft-0125:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0125:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "formigamento",
+          "segment_ids": [
+            "v7-draft-0125:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "rosto direito",
+          "segment_ids": [
+            "v7-draft-0125:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "minha prima",
+          "segment_ids": [
+            "v7-draft-0125:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0126",
+      "candidate_id": "v7-draft-0126",
+      "text": "Médico: Você sente formigamento?\nPaciente: No começo eu disse que sim, mas corrijo: não sinto formigamento.\nMédico: E a queixa que permanece?\nPaciente: Só um desconforto em rosto direito, sem formigamento.\nMédico: Então a negação vale para formigamento, não para o desconforto.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0126:segment-01",
+          "speaker": "clinician",
+          "text": "Você sente formigamento?"
+        },
+        {
+          "segment_id": "v7-draft-0126:segment-02",
+          "speaker": "patient",
+          "text": "No começo eu disse que sim, mas corrijo: não sinto formigamento."
+        },
+        {
+          "segment_id": "v7-draft-0126:segment-03",
+          "speaker": "clinician",
+          "text": "E a queixa que permanece?"
+        },
+        {
+          "segment_id": "v7-draft-0126:segment-04",
+          "speaker": "patient",
+          "text": "Só um desconforto em rosto direito, sem formigamento."
+        },
+        {
+          "segment_id": "v7-draft-0126:segment-05",
+          "speaker": "clinician",
+          "text": "Então a negação vale para formigamento, não para o desconforto."
+        }
+      ],
+      "scenario_family": "NEGATION_REVERSAL",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:NEGATION_REVERSAL",
+      "gold": [
+        {
+          "surface": "formigamento",
+          "concept_id": "symptom.tingling",
+          "experiencer": "patient",
+          "negated": true,
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0126:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0126:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0126:segment-01"
+            ],
+            "negated": [
+              "v7-draft-0126:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0126:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "formigamento",
+          "segment_ids": [
+            "v7-draft-0126:segment-01",
+            "v7-draft-0126:segment-02",
+            "v7-draft-0126:segment-04",
+            "v7-draft-0126:segment-05"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "rosto direito",
+          "segment_ids": [
+            "v7-draft-0126:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0127",
+      "candidate_id": "v7-draft-0127",
+      "text": "Médico: Quando começou a história de formigamento?\nPaciente: A primeira ocorrência foi no inverno passado, mas hoje a situação é outra.\nMédico: O que está presente agora?\nPaciente: Agora noto a queixa em rosto direito; o episódio antigo já passou.\nMédico: Vou manter o tempo do evento separado do estado atual.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0127:segment-01",
+          "speaker": "clinician",
+          "text": "Quando começou a história de formigamento?"
+        },
+        {
+          "segment_id": "v7-draft-0127:segment-02",
+          "speaker": "patient",
+          "text": "A primeira ocorrência foi no inverno passado, mas hoje a situação é outra."
+        },
+        {
+          "segment_id": "v7-draft-0127:segment-03",
+          "speaker": "clinician",
+          "text": "O que está presente agora?"
+        },
+        {
+          "segment_id": "v7-draft-0127:segment-04",
+          "speaker": "patient",
+          "text": "Agora noto a queixa em rosto direito; o episódio antigo já passou."
+        },
+        {
+          "segment_id": "v7-draft-0127:segment-05",
+          "speaker": "clinician",
+          "text": "Vou manter o tempo do evento separado do estado atual."
+        }
+      ],
+      "scenario_family": "DISTRIBUTED_TEMPORALITY",
+      "decision": "AMBIGUOUS",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "A expressão atual 'a queixa em <local>' não identifica inequivocamente a entidade clínica; não transferir o conceito do evento antigo por anáfora implícita.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:DISTRIBUTED_TEMPORALITY",
+      "gold": null,
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "formigamento",
+          "segment_ids": [
+            "v7-draft-0127:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "rosto direito",
+          "segment_ids": [
+            "v7-draft-0127:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": "AMB-TEMP-001",
+      "policy_ids": [
+        "SEM-TEMP-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0128",
+      "candidate_id": "v7-draft-0128",
+      "text": "Médico: Vamos falar de losartana.\nPaciente: Antes disso, queria comentar formigamento em rosto direito.\nMédico: Certo; depois voltamos ao losartana. O que mudou?\nPaciente: O losartana ficou em 10 mg; sobre formigamento, melhorou no inverno passado.\nMédico: São tópicos diferentes e vou mantê-los separados.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0128:segment-01",
+          "speaker": "clinician",
+          "text": "Vamos falar de losartana."
+        },
+        {
+          "segment_id": "v7-draft-0128:segment-02",
+          "speaker": "patient",
+          "text": "Antes disso, queria comentar formigamento em rosto direito."
+        },
+        {
+          "segment_id": "v7-draft-0128:segment-03",
+          "speaker": "clinician",
+          "text": "Certo; depois voltamos ao losartana. O que mudou?"
+        },
+        {
+          "segment_id": "v7-draft-0128:segment-04",
+          "speaker": "patient",
+          "text": "O losartana ficou em 10 mg; sobre formigamento, melhorou no inverno passado."
+        },
+        {
+          "segment_id": "v7-draft-0128:segment-05",
+          "speaker": "clinician",
+          "text": "São tópicos diferentes e vou mantê-los separados."
+        }
+      ],
+      "scenario_family": "TOPIC_SWITCH",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:TOPIC_SWITCH",
+      "gold": [
+        {
+          "surface": "losartana",
+          "concept_id": "medication.losartan",
+          "experiencer": "patient",
+          "dose": "10 mg",
+          "dose_value": "10",
+          "dose_unit": "mg",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0128:segment-01",
+            "v7-draft-0128:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0128:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0128:segment-04"
+            ],
+            "dose": [
+              "v7-draft-0128:segment-04"
+            ],
+            "dose_value": [
+              "v7-draft-0128:segment-04"
+            ],
+            "dose_unit": [
+              "v7-draft-0128:segment-04"
+            ],
+            "status": [
+              "v7-draft-0128:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0128:segment-04"
+            ],
+            "status": [
+              "v7-draft-0128:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "10 mg",
+              "segment_ids": [
+                "v7-draft-0128:segment-04"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "formigamento",
+          "concept_id": "symptom.tingling",
+          "experiencer": "patient",
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0128:segment-02",
+            "v7-draft-0128:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0128:segment-02"
+            ],
+            "experiencer": [
+              "v7-draft-0128:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0128:segment-02"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "losartana",
+          "segment_ids": [
+            "v7-draft-0128:segment-01",
+            "v7-draft-0128:segment-03",
+            "v7-draft-0128:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "formigamento",
+          "segment_ids": [
+            "v7-draft-0128:segment-02",
+            "v7-draft-0128:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "rosto direito",
+          "segment_ids": [
+            "v7-draft-0128:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0129",
+      "candidate_id": "v7-draft-0129",
+      "text": "Médico: Qual a dose do losartana?\nPaciente: 10 mg.\nMédico: E a frequência do losartana?\nPaciente: de manhã.\nMédico: Essas respostas se referem à mesma medicação?\nPaciente: Sim, à mesma.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0129:segment-01",
+          "speaker": "clinician",
+          "text": "Qual a dose do losartana?"
+        },
+        {
+          "segment_id": "v7-draft-0129:segment-02",
+          "speaker": "patient",
+          "text": "10 mg."
+        },
+        {
+          "segment_id": "v7-draft-0129:segment-03",
+          "speaker": "clinician",
+          "text": "E a frequência do losartana?"
+        },
+        {
+          "segment_id": "v7-draft-0129:segment-04",
+          "speaker": "patient",
+          "text": "de manhã."
+        },
+        {
+          "segment_id": "v7-draft-0129:segment-05",
+          "speaker": "clinician",
+          "text": "Essas respostas se referem à mesma medicação?"
+        },
+        {
+          "segment_id": "v7-draft-0129:segment-06",
+          "speaker": "patient",
+          "text": "Sim, à mesma."
+        }
+      ],
+      "scenario_family": "ELLIPTICAL_ANSWER",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:ELLIPTICAL_ANSWER",
+      "gold": [
+        {
+          "surface": "losartana",
+          "concept_id": "medication.losartan",
+          "experiencer": "patient",
+          "dose": "10 mg",
+          "dose_value": "10",
+          "dose_unit": "mg",
+          "frequency": "de manhã",
+          "segment_ids": [
+            "v7-draft-0129:segment-01",
+            "v7-draft-0129:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0129:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0129:segment-02"
+            ],
+            "dose": [
+              "v7-draft-0129:segment-02"
+            ],
+            "dose_value": [
+              "v7-draft-0129:segment-02"
+            ],
+            "dose_unit": [
+              "v7-draft-0129:segment-02"
+            ],
+            "frequency": [
+              "v7-draft-0129:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0129:segment-02"
+            ],
+            "HAS_FREQUENCY": [
+              "v7-draft-0129:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "10 mg",
+              "segment_ids": [
+                "v7-draft-0129:segment-02"
+              ]
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "de manhã",
+              "segment_ids": [
+                "v7-draft-0129:segment-02"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "losartana",
+          "segment_ids": [
+            "v7-draft-0129:segment-01",
+            "v7-draft-0129:segment-03"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0130",
+      "candidate_id": "v7-draft-0130",
+      "text": "Médico: Você relatou formigamento ontem, correto?\nPaciente: Correção: eu quis dizer rosto direito, não formigamento.\nMédico: Entendi; a primeira anotação era uma hipótese?\nPaciente: Era uma confusão na fala, a queixa correta é a segunda.\nMédico: Vou manter a correção e não duplicar formigamento.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0130:segment-01",
+          "speaker": "clinician",
+          "text": "Você relatou formigamento ontem, correto?"
+        },
+        {
+          "segment_id": "v7-draft-0130:segment-02",
+          "speaker": "patient",
+          "text": "Correção: eu quis dizer rosto direito, não formigamento."
+        },
+        {
+          "segment_id": "v7-draft-0130:segment-03",
+          "speaker": "clinician",
+          "text": "Entendi; a primeira anotação era uma hipótese?"
+        },
+        {
+          "segment_id": "v7-draft-0130:segment-04",
+          "speaker": "patient",
+          "text": "Era uma confusão na fala, a queixa correta é a segunda."
+        },
+        {
+          "segment_id": "v7-draft-0130:segment-05",
+          "speaker": "clinician",
+          "text": "Vou manter a correção e não duplicar formigamento."
+        }
+      ],
+      "scenario_family": "CLINICIAN_CORRECTION",
+      "decision": "AMBIGUOUS",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "A autocorreção invalida a menção clínica inicial e deixa apenas uma localização; não criar uma entidade clínica artificial para a localização.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:CLINICIAN_CORRECTION",
+      "gold": null,
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "formigamento",
+          "segment_ids": [
+            "v7-draft-0130:segment-01",
+            "v7-draft-0130:segment-02",
+            "v7-draft-0130:segment-05"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "rosto direito",
+          "segment_ids": [
+            "v7-draft-0130:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": "AMB-CORR-001",
+      "policy_ids": [
+        "SEM-NEG-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0131",
+      "candidate_id": "v7-draft-0131",
+      "text": "Médico: Você usa losartana 25 mg?\nPaciente: Usava; pensando melhor, era 10 mg.\nMédico: Qual informação vale para o estado atual?\nPaciente: A dose de 10 mg, desde no inverno passado; a anterior está superada.\nMédico: Vou registrar a autocorreção e a transição.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0131:segment-01",
+          "speaker": "clinician",
+          "text": "Você usa losartana 25 mg?"
+        },
+        {
+          "segment_id": "v7-draft-0131:segment-02",
+          "speaker": "patient",
+          "text": "Usava; pensando melhor, era 10 mg."
+        },
+        {
+          "segment_id": "v7-draft-0131:segment-03",
+          "speaker": "clinician",
+          "text": "Qual informação vale para o estado atual?"
+        },
+        {
+          "segment_id": "v7-draft-0131:segment-04",
+          "speaker": "patient",
+          "text": "A dose de 10 mg, desde no inverno passado; a anterior está superada."
+        },
+        {
+          "segment_id": "v7-draft-0131:segment-05",
+          "speaker": "clinician",
+          "text": "Vou registrar a autocorreção e a transição."
+        }
+      ],
+      "scenario_family": "PATIENT_SELF_CORRECTION",
+      "decision": "AMBIGUOUS",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "A autocorreção fornece valor atual e histórico, mas a verdade do valor inicial não é suficientemente estável para gold normativo sem forçar CHANGED_FROM.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:PATIENT_SELF_CORRECTION",
+      "gold": null,
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "losartana",
+          "segment_ids": [
+            "v7-draft-0131:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": "AMB-SELF-001",
+      "policy_ids": [
+        "SEM-DOSE-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0132",
+      "candidate_id": "v7-draft-0132",
+      "text": "Médico: A pessoa anterior mencionou formigamento. Você confirma?\nPaciente: Eu confirmo só a parte sobre rosto direito; a outra fala era de minha prima.\nMédico: Agora falando de você, qual medicamento usa?\nPaciente: Eu uso amlodipino de manhã, e não tenho formigamento.\nMédico: A mudança de falante altera o experiencer, não o tópico automaticamente.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0132:segment-01",
+          "speaker": "clinician",
+          "text": "A pessoa anterior mencionou formigamento. Você confirma?"
+        },
+        {
+          "segment_id": "v7-draft-0132:segment-02",
+          "speaker": "patient",
+          "text": "Eu confirmo só a parte sobre rosto direito; a outra fala era de minha prima."
+        },
+        {
+          "segment_id": "v7-draft-0132:segment-03",
+          "speaker": "clinician",
+          "text": "Agora falando de você, qual medicamento usa?"
+        },
+        {
+          "segment_id": "v7-draft-0132:segment-04",
+          "speaker": "patient",
+          "text": "Eu uso amlodipino de manhã, e não tenho formigamento."
+        },
+        {
+          "segment_id": "v7-draft-0132:segment-05",
+          "speaker": "clinician",
+          "text": "A mudança de falante altera o experiencer, não o tópico automaticamente."
+        }
+      ],
+      "scenario_family": "ANAPHORA_SPEAKER_TRANSITION",
+      "decision": "AMBIGUOUS",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "A mudança de falante informa que parte da fala era de um familiar, mas não fixa qual entidade clínica recebe o antecedente; ownership não deve ser inferido.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:ANAPHORA_SPEAKER_TRANSITION",
+      "gold": null,
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "amlodipino",
+          "segment_ids": [
+            "v7-draft-0132:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "formigamento",
+          "segment_ids": [
+            "v7-draft-0132:segment-01",
+            "v7-draft-0132:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "rosto direito",
+          "segment_ids": [
+            "v7-draft-0132:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "minha prima",
+          "segment_ids": [
+            "v7-draft-0132:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": "AMB-SPEAKER-001",
+      "policy_ids": [
+        "SEM-EXP-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0133",
+      "candidate_id": "v7-draft-0133",
+      "text": "Médico: Vamos revisar seus remédios. Você ainda usa enalapril?\nPaciente: Uso enalapril 10 mg ao deitar, mas às vezes esqueço.\nMédico: E o prednisona, entrou depois da última consulta?\nPaciente: Sim, comecei o prednisona; a receita dizia 5 mg e continuo assim.\nMédico: Então mantenho os dois no esquema atual, correto?",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0133:segment-01",
+          "speaker": "clinician",
+          "text": "Vamos revisar seus remédios. Você ainda usa enalapril?"
+        },
+        {
+          "segment_id": "v7-draft-0133:segment-02",
+          "speaker": "patient",
+          "text": "Uso enalapril 10 mg ao deitar, mas às vezes esqueço."
+        },
+        {
+          "segment_id": "v7-draft-0133:segment-03",
+          "speaker": "clinician",
+          "text": "E o prednisona, entrou depois da última consulta?"
+        },
+        {
+          "segment_id": "v7-draft-0133:segment-04",
+          "speaker": "patient",
+          "text": "Sim, comecei o prednisona; a receita dizia 5 mg e continuo assim."
+        },
+        {
+          "segment_id": "v7-draft-0133:segment-05",
+          "speaker": "clinician",
+          "text": "Então mantenho os dois no esquema atual, correto?"
+        }
+      ],
+      "scenario_family": "MEDICATION_RECONCILIATION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:MEDICATION_RECONCILIATION",
+      "gold": [
+        {
+          "surface": "enalapril",
+          "concept_id": "medication.enalapril",
+          "experiencer": "patient",
+          "dose": "10 mg",
+          "dose_value": "10",
+          "dose_unit": "mg",
+          "frequency": "ao deitar",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0133:segment-01",
+            "v7-draft-0133:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0133:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0133:segment-02"
+            ],
+            "dose": [
+              "v7-draft-0133:segment-02"
+            ],
+            "dose_value": [
+              "v7-draft-0133:segment-02"
+            ],
+            "dose_unit": [
+              "v7-draft-0133:segment-02"
+            ],
+            "frequency": [
+              "v7-draft-0133:segment-02"
+            ],
+            "status": [
+              "v7-draft-0133:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0133:segment-02"
+            ],
+            "HAS_FREQUENCY": [
+              "v7-draft-0133:segment-02"
+            ],
+            "status": [
+              "v7-draft-0133:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "10 mg",
+              "segment_ids": [
+                "v7-draft-0133:segment-02"
+              ]
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "ao deitar",
+              "segment_ids": [
+                "v7-draft-0133:segment-02"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "prednisona",
+          "concept_id": "medication.prednisone",
+          "experiencer": "patient",
+          "dose": "5 mg",
+          "dose_value": "5",
+          "dose_unit": "mg",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0133:segment-03",
+            "v7-draft-0133:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0133:segment-03"
+            ],
+            "experiencer": [
+              "v7-draft-0133:segment-04"
+            ],
+            "dose": [
+              "v7-draft-0133:segment-04"
+            ],
+            "dose_value": [
+              "v7-draft-0133:segment-04"
+            ],
+            "dose_unit": [
+              "v7-draft-0133:segment-04"
+            ],
+            "status": [
+              "v7-draft-0133:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0133:segment-04"
+            ],
+            "status": [
+              "v7-draft-0133:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "5 mg",
+              "segment_ids": [
+                "v7-draft-0133:segment-04"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "enalapril",
+          "segment_ids": [
+            "v7-draft-0133:segment-01",
+            "v7-draft-0133:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "prednisona",
+          "segment_ids": [
+            "v7-draft-0133:segment-03",
+            "v7-draft-0133:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0134",
+      "candidate_id": "v7-draft-0134",
+      "text": "Médico: Como ficou a dose do enalapril depois da mudança?\nPaciente: Antes era 10 mg ao deitar.\nMédico: O que aconteceu na última orientação?\nPaciente: Eu corrigi: agora uso 5 mg ao deitar e o ajuste ocorreu há quinze dias.\nMédico: A dose atual é a segunda, não a primeira?\nPaciente: Isso, a segunda é a atual.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0134:segment-01",
+          "speaker": "clinician",
+          "text": "Como ficou a dose do enalapril depois da mudança?"
+        },
+        {
+          "segment_id": "v7-draft-0134:segment-02",
+          "speaker": "patient",
+          "text": "Antes era 10 mg ao deitar."
+        },
+        {
+          "segment_id": "v7-draft-0134:segment-03",
+          "speaker": "clinician",
+          "text": "O que aconteceu na última orientação?"
+        },
+        {
+          "segment_id": "v7-draft-0134:segment-04",
+          "speaker": "patient",
+          "text": "Eu corrigi: agora uso 5 mg ao deitar e o ajuste ocorreu há quinze dias."
+        },
+        {
+          "segment_id": "v7-draft-0134:segment-05",
+          "speaker": "clinician",
+          "text": "A dose atual é a segunda, não a primeira?"
+        },
+        {
+          "segment_id": "v7-draft-0134:segment-06",
+          "speaker": "patient",
+          "text": "Isso, a segunda é a atual."
+        }
+      ],
+      "scenario_family": "DOSE_TRANSITION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:DOSE_TRANSITION",
+      "gold": [
+        {
+          "surface": "enalapril",
+          "concept_id": "medication.enalapril",
+          "experiencer": "patient",
+          "dose": "5 mg",
+          "dose_value": "5",
+          "dose_unit": "mg",
+          "frequency": "ao deitar",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0134:segment-01",
+            "v7-draft-0134:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0134:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0134:segment-04"
+            ],
+            "dose": [
+              "v7-draft-0134:segment-04"
+            ],
+            "dose_value": [
+              "v7-draft-0134:segment-04"
+            ],
+            "dose_unit": [
+              "v7-draft-0134:segment-04"
+            ],
+            "frequency": [
+              "v7-draft-0134:segment-04"
+            ],
+            "status": [
+              "v7-draft-0134:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0134:segment-04"
+            ],
+            "HAS_FREQUENCY": [
+              "v7-draft-0134:segment-04"
+            ],
+            "status": [
+              "v7-draft-0134:segment-04"
+            ],
+            "CHANGED_FROM": [
+              "v7-draft-0134:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "5 mg",
+              "segment_ids": [
+                "v7-draft-0134:segment-04"
+              ]
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "ao deitar",
+              "segment_ids": [
+                "v7-draft-0134:segment-04"
+              ]
+            },
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "10 mg",
+              "segment_ids": [
+                "v7-draft-0134:segment-04"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "enalapril",
+          "segment_ids": [
+            "v7-draft-0134:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0135",
+      "candidate_id": "v7-draft-0135",
+      "text": "Médico: Com que frequência você toma prednisona?\nPaciente: De início era ao deitar, mas mudei o horário.\nMédico: Você está falando do horário anterior ou do atual?\nPaciente: Do atual: ao deitar; a mudança foi registrada há quinze dias.\nMédico: E o enalapril continua separado dessa rotina?",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0135:segment-01",
+          "speaker": "clinician",
+          "text": "Com que frequência você toma prednisona?"
+        },
+        {
+          "segment_id": "v7-draft-0135:segment-02",
+          "speaker": "patient",
+          "text": "De início era ao deitar, mas mudei o horário."
+        },
+        {
+          "segment_id": "v7-draft-0135:segment-03",
+          "speaker": "clinician",
+          "text": "Você está falando do horário anterior ou do atual?"
+        },
+        {
+          "segment_id": "v7-draft-0135:segment-04",
+          "speaker": "patient",
+          "text": "Do atual: ao deitar; a mudança foi registrada há quinze dias."
+        },
+        {
+          "segment_id": "v7-draft-0135:segment-05",
+          "speaker": "clinician",
+          "text": "E o enalapril continua separado dessa rotina?"
+        }
+      ],
+      "scenario_family": "FREQUENCY_STATUS_TRANSITION",
+      "decision": "AMBIGUOUS",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "A fala declara mudança de horário, mas repete a mesma frequência como valor inicial e atual; não há valor novo inequívoco.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:FREQUENCY_STATUS_TRANSITION",
+      "gold": null,
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "enalapril",
+          "segment_ids": [
+            "v7-draft-0135:segment-05"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "prednisona",
+          "segment_ids": [
+            "v7-draft-0135:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": "AMB-FREQ-001",
+      "policy_ids": [
+        "SEM-FREQ-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0136",
+      "candidate_id": "v7-draft-0136",
+      "text": "Médico: Além de tosse, há outra queixa?\nPaciente: A tosse fica em garganta; também tenho cansaço.\nMédico: O cansaço começou junto ou depois?\nPaciente: Depois. A tosse é a que mais incomoda agora, mas a outra melhorou há quinze dias.\nMédico: Vou registrar as duas sem misturar os lados.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0136:segment-01",
+          "speaker": "clinician",
+          "text": "Além de tosse, há outra queixa?"
+        },
+        {
+          "segment_id": "v7-draft-0136:segment-02",
+          "speaker": "patient",
+          "text": "A tosse fica em garganta; também tenho cansaço."
+        },
+        {
+          "segment_id": "v7-draft-0136:segment-03",
+          "speaker": "clinician",
+          "text": "O cansaço começou junto ou depois?"
+        },
+        {
+          "segment_id": "v7-draft-0136:segment-04",
+          "speaker": "patient",
+          "text": "Depois. A tosse é a que mais incomoda agora, mas a outra melhorou há quinze dias."
+        },
+        {
+          "segment_id": "v7-draft-0136:segment-05",
+          "speaker": "clinician",
+          "text": "Vou registrar as duas sem misturar os lados."
+        }
+      ],
+      "scenario_family": "MULTIPLE_SYMPTOMS",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:MULTIPLE_SYMPTOMS",
+      "gold": [
+        {
+          "surface": "tosse",
+          "concept_id": "symptom.cough",
+          "experiencer": "patient",
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0136:segment-01",
+            "v7-draft-0136:segment-02",
+            "v7-draft-0136:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0136:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0136:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0136:segment-02"
+            ]
+          },
+          "relation_provenance": {}
+        },
+        {
+          "surface": "cansaço",
+          "concept_id": "symptom.fatigue",
+          "experiencer": "patient",
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0136:segment-02",
+            "v7-draft-0136:segment-03"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0136:segment-02"
+            ],
+            "experiencer": [
+              "v7-draft-0136:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0136:segment-02"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "tosse",
+          "segment_ids": [
+            "v7-draft-0136:segment-01",
+            "v7-draft-0136:segment-02",
+            "v7-draft-0136:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "garganta",
+          "segment_ids": [
+            "v7-draft-0136:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0137",
+      "candidate_id": "v7-draft-0137",
+      "text": "Médico: Há tosse na família?\nPaciente: Sim, meu primo teve isso, mas eu não tenho essa queixa.\nMédico: Quem está com o diagnóstico, então?\nPaciente: A pessoa da família; eu vim por causa de garganta.\nMédico: Vou separar o experiencer familiar do paciente.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0137:segment-01",
+          "speaker": "clinician",
+          "text": "Há tosse na família?"
+        },
+        {
+          "segment_id": "v7-draft-0137:segment-02",
+          "speaker": "patient",
+          "text": "Sim, meu primo teve isso, mas eu não tenho essa queixa."
+        },
+        {
+          "segment_id": "v7-draft-0137:segment-03",
+          "speaker": "clinician",
+          "text": "Quem está com o diagnóstico, então?"
+        },
+        {
+          "segment_id": "v7-draft-0137:segment-04",
+          "speaker": "patient",
+          "text": "A pessoa da família; eu vim por causa de garganta."
+        },
+        {
+          "segment_id": "v7-draft-0137:segment-05",
+          "speaker": "clinician",
+          "text": "Vou separar o experiencer familiar do paciente."
+        }
+      ],
+      "scenario_family": "FAMILY_PATIENT_EXPERIENCER",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:FAMILY_PATIENT_EXPERIENCER",
+      "gold": [
+        {
+          "surface": "tosse",
+          "concept_id": "symptom.cough",
+          "experiencer": "family",
+          "temporality": "past",
+          "segment_ids": [
+            "v7-draft-0137:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0137:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0137:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0137:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        },
+        {
+          "surface": "tosse",
+          "concept_id": "symptom.cough",
+          "experiencer": "patient",
+          "negated": true,
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0137:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0137:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0137:segment-01"
+            ],
+            "negated": [
+              "v7-draft-0137:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0137:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "tosse",
+          "segment_ids": [
+            "v7-draft-0137:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "garganta",
+          "segment_ids": [
+            "v7-draft-0137:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "meu primo",
+          "segment_ids": [
+            "v7-draft-0137:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0138",
+      "candidate_id": "v7-draft-0138",
+      "text": "Médico: Você sente tosse?\nPaciente: No começo eu disse que sim, mas corrijo: não sinto tosse.\nMédico: E a queixa que permanece?\nPaciente: Só um desconforto em garganta, sem tosse.\nMédico: Então a negação vale para tosse, não para o desconforto.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0138:segment-01",
+          "speaker": "clinician",
+          "text": "Você sente tosse?"
+        },
+        {
+          "segment_id": "v7-draft-0138:segment-02",
+          "speaker": "patient",
+          "text": "No começo eu disse que sim, mas corrijo: não sinto tosse."
+        },
+        {
+          "segment_id": "v7-draft-0138:segment-03",
+          "speaker": "clinician",
+          "text": "E a queixa que permanece?"
+        },
+        {
+          "segment_id": "v7-draft-0138:segment-04",
+          "speaker": "patient",
+          "text": "Só um desconforto em garganta, sem tosse."
+        },
+        {
+          "segment_id": "v7-draft-0138:segment-05",
+          "speaker": "clinician",
+          "text": "Então a negação vale para tosse, não para o desconforto."
+        }
+      ],
+      "scenario_family": "NEGATION_REVERSAL",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:NEGATION_REVERSAL",
+      "gold": [
+        {
+          "surface": "tosse",
+          "concept_id": "symptom.cough",
+          "experiencer": "patient",
+          "negated": true,
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0138:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0138:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0138:segment-01"
+            ],
+            "negated": [
+              "v7-draft-0138:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0138:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "tosse",
+          "segment_ids": [
+            "v7-draft-0138:segment-01",
+            "v7-draft-0138:segment-02",
+            "v7-draft-0138:segment-04",
+            "v7-draft-0138:segment-05"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "garganta",
+          "segment_ids": [
+            "v7-draft-0138:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0139",
+      "candidate_id": "v7-draft-0139",
+      "text": "Médico: Quando começou a história de tosse?\nPaciente: A primeira ocorrência foi há quinze dias, mas hoje a situação é outra.\nMédico: O que está presente agora?\nPaciente: Agora noto a queixa em garganta; o episódio antigo já passou.\nMédico: Vou manter o tempo do evento separado do estado atual.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0139:segment-01",
+          "speaker": "clinician",
+          "text": "Quando começou a história de tosse?"
+        },
+        {
+          "segment_id": "v7-draft-0139:segment-02",
+          "speaker": "patient",
+          "text": "A primeira ocorrência foi há quinze dias, mas hoje a situação é outra."
+        },
+        {
+          "segment_id": "v7-draft-0139:segment-03",
+          "speaker": "clinician",
+          "text": "O que está presente agora?"
+        },
+        {
+          "segment_id": "v7-draft-0139:segment-04",
+          "speaker": "patient",
+          "text": "Agora noto a queixa em garganta; o episódio antigo já passou."
+        },
+        {
+          "segment_id": "v7-draft-0139:segment-05",
+          "speaker": "clinician",
+          "text": "Vou manter o tempo do evento separado do estado atual."
+        }
+      ],
+      "scenario_family": "DISTRIBUTED_TEMPORALITY",
+      "decision": "AMBIGUOUS",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "A expressão atual 'a queixa em <local>' não identifica inequivocamente a entidade clínica; não transferir o conceito do evento antigo por anáfora implícita.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:DISTRIBUTED_TEMPORALITY",
+      "gold": null,
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "tosse",
+          "segment_ids": [
+            "v7-draft-0139:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "garganta",
+          "segment_ids": [
+            "v7-draft-0139:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": "AMB-TEMP-001",
+      "policy_ids": [
+        "SEM-TEMP-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0140",
+      "candidate_id": "v7-draft-0140",
+      "text": "Médico: Vamos falar de enalapril.\nPaciente: Antes disso, queria comentar tosse em garganta.\nMédico: Certo; depois voltamos ao enalapril. O que mudou?\nPaciente: O enalapril ficou em 5 mg; sobre tosse, melhorou há quinze dias.\nMédico: São tópicos diferentes e vou mantê-los separados.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0140:segment-01",
+          "speaker": "clinician",
+          "text": "Vamos falar de enalapril."
+        },
+        {
+          "segment_id": "v7-draft-0140:segment-02",
+          "speaker": "patient",
+          "text": "Antes disso, queria comentar tosse em garganta."
+        },
+        {
+          "segment_id": "v7-draft-0140:segment-03",
+          "speaker": "clinician",
+          "text": "Certo; depois voltamos ao enalapril. O que mudou?"
+        },
+        {
+          "segment_id": "v7-draft-0140:segment-04",
+          "speaker": "patient",
+          "text": "O enalapril ficou em 5 mg; sobre tosse, melhorou há quinze dias."
+        },
+        {
+          "segment_id": "v7-draft-0140:segment-05",
+          "speaker": "clinician",
+          "text": "São tópicos diferentes e vou mantê-los separados."
+        }
+      ],
+      "scenario_family": "TOPIC_SWITCH",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:TOPIC_SWITCH",
+      "gold": [
+        {
+          "surface": "enalapril",
+          "concept_id": "medication.enalapril",
+          "experiencer": "patient",
+          "dose": "5 mg",
+          "dose_value": "5",
+          "dose_unit": "mg",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0140:segment-01",
+            "v7-draft-0140:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0140:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0140:segment-04"
+            ],
+            "dose": [
+              "v7-draft-0140:segment-04"
+            ],
+            "dose_value": [
+              "v7-draft-0140:segment-04"
+            ],
+            "dose_unit": [
+              "v7-draft-0140:segment-04"
+            ],
+            "status": [
+              "v7-draft-0140:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0140:segment-04"
+            ],
+            "status": [
+              "v7-draft-0140:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "5 mg",
+              "segment_ids": [
+                "v7-draft-0140:segment-04"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "tosse",
+          "concept_id": "symptom.cough",
+          "experiencer": "patient",
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0140:segment-02",
+            "v7-draft-0140:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0140:segment-02"
+            ],
+            "experiencer": [
+              "v7-draft-0140:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0140:segment-02"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "enalapril",
+          "segment_ids": [
+            "v7-draft-0140:segment-01",
+            "v7-draft-0140:segment-03",
+            "v7-draft-0140:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "tosse",
+          "segment_ids": [
+            "v7-draft-0140:segment-02",
+            "v7-draft-0140:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "garganta",
+          "segment_ids": [
+            "v7-draft-0140:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0141",
+      "candidate_id": "v7-draft-0141",
+      "text": "Médico: Qual a dose do enalapril?\nPaciente: 5 mg.\nMédico: E a frequência do enalapril?\nPaciente: ao deitar.\nMédico: Essas respostas se referem à mesma medicação?\nPaciente: Sim, à mesma.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0141:segment-01",
+          "speaker": "clinician",
+          "text": "Qual a dose do enalapril?"
+        },
+        {
+          "segment_id": "v7-draft-0141:segment-02",
+          "speaker": "patient",
+          "text": "5 mg."
+        },
+        {
+          "segment_id": "v7-draft-0141:segment-03",
+          "speaker": "clinician",
+          "text": "E a frequência do enalapril?"
+        },
+        {
+          "segment_id": "v7-draft-0141:segment-04",
+          "speaker": "patient",
+          "text": "ao deitar."
+        },
+        {
+          "segment_id": "v7-draft-0141:segment-05",
+          "speaker": "clinician",
+          "text": "Essas respostas se referem à mesma medicação?"
+        },
+        {
+          "segment_id": "v7-draft-0141:segment-06",
+          "speaker": "patient",
+          "text": "Sim, à mesma."
+        }
+      ],
+      "scenario_family": "ELLIPTICAL_ANSWER",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:ELLIPTICAL_ANSWER",
+      "gold": [
+        {
+          "surface": "enalapril",
+          "concept_id": "medication.enalapril",
+          "experiencer": "patient",
+          "dose": "5 mg",
+          "dose_value": "5",
+          "dose_unit": "mg",
+          "frequency": "ao deitar",
+          "segment_ids": [
+            "v7-draft-0141:segment-01",
+            "v7-draft-0141:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0141:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0141:segment-02"
+            ],
+            "dose": [
+              "v7-draft-0141:segment-02"
+            ],
+            "dose_value": [
+              "v7-draft-0141:segment-02"
+            ],
+            "dose_unit": [
+              "v7-draft-0141:segment-02"
+            ],
+            "frequency": [
+              "v7-draft-0141:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0141:segment-02"
+            ],
+            "HAS_FREQUENCY": [
+              "v7-draft-0141:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "5 mg",
+              "segment_ids": [
+                "v7-draft-0141:segment-02"
+              ]
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "ao deitar",
+              "segment_ids": [
+                "v7-draft-0141:segment-02"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "enalapril",
+          "segment_ids": [
+            "v7-draft-0141:segment-01",
+            "v7-draft-0141:segment-03"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0142",
+      "candidate_id": "v7-draft-0142",
+      "text": "Médico: Você relatou tosse ontem, correto?\nPaciente: Correção: eu quis dizer garganta, não tosse.\nMédico: Entendi; a primeira anotação era uma hipótese?\nPaciente: Era uma confusão na fala, a queixa correta é a segunda.\nMédico: Vou manter a correção e não duplicar tosse.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0142:segment-01",
+          "speaker": "clinician",
+          "text": "Você relatou tosse ontem, correto?"
+        },
+        {
+          "segment_id": "v7-draft-0142:segment-02",
+          "speaker": "patient",
+          "text": "Correção: eu quis dizer garganta, não tosse."
+        },
+        {
+          "segment_id": "v7-draft-0142:segment-03",
+          "speaker": "clinician",
+          "text": "Entendi; a primeira anotação era uma hipótese?"
+        },
+        {
+          "segment_id": "v7-draft-0142:segment-04",
+          "speaker": "patient",
+          "text": "Era uma confusão na fala, a queixa correta é a segunda."
+        },
+        {
+          "segment_id": "v7-draft-0142:segment-05",
+          "speaker": "clinician",
+          "text": "Vou manter a correção e não duplicar tosse."
+        }
+      ],
+      "scenario_family": "CLINICIAN_CORRECTION",
+      "decision": "AMBIGUOUS",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "A autocorreção invalida a menção clínica inicial e deixa apenas uma localização; não criar uma entidade clínica artificial para a localização.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:CLINICIAN_CORRECTION",
+      "gold": null,
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "tosse",
+          "segment_ids": [
+            "v7-draft-0142:segment-01",
+            "v7-draft-0142:segment-02",
+            "v7-draft-0142:segment-05"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "garganta",
+          "segment_ids": [
+            "v7-draft-0142:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": "AMB-CORR-001",
+      "policy_ids": [
+        "SEM-NEG-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0143",
+      "candidate_id": "v7-draft-0143",
+      "text": "Médico: Você usa enalapril 10 mg?\nPaciente: Usava; pensando melhor, era 5 mg.\nMédico: Qual informação vale para o estado atual?\nPaciente: A dose de 5 mg, desde há quinze dias; a anterior está superada.\nMédico: Vou registrar a autocorreção e a transição.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0143:segment-01",
+          "speaker": "clinician",
+          "text": "Você usa enalapril 10 mg?"
+        },
+        {
+          "segment_id": "v7-draft-0143:segment-02",
+          "speaker": "patient",
+          "text": "Usava; pensando melhor, era 5 mg."
+        },
+        {
+          "segment_id": "v7-draft-0143:segment-03",
+          "speaker": "clinician",
+          "text": "Qual informação vale para o estado atual?"
+        },
+        {
+          "segment_id": "v7-draft-0143:segment-04",
+          "speaker": "patient",
+          "text": "A dose de 5 mg, desde há quinze dias; a anterior está superada."
+        },
+        {
+          "segment_id": "v7-draft-0143:segment-05",
+          "speaker": "clinician",
+          "text": "Vou registrar a autocorreção e a transição."
+        }
+      ],
+      "scenario_family": "PATIENT_SELF_CORRECTION",
+      "decision": "AMBIGUOUS",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "A autocorreção fornece valor atual e histórico, mas a verdade do valor inicial não é suficientemente estável para gold normativo sem forçar CHANGED_FROM.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:PATIENT_SELF_CORRECTION",
+      "gold": null,
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "enalapril",
+          "segment_ids": [
+            "v7-draft-0143:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": "AMB-SELF-001",
+      "policy_ids": [
+        "SEM-DOSE-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0144",
+      "candidate_id": "v7-draft-0144",
+      "text": "Médico: A pessoa anterior mencionou tosse. Você confirma?\nPaciente: Eu confirmo só a parte sobre garganta; a outra fala era de meu primo.\nMédico: Agora falando de você, qual medicamento usa?\nPaciente: Eu uso prednisona ao deitar, e não tenho tosse.\nMédico: A mudança de falante altera o experiencer, não o tópico automaticamente.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0144:segment-01",
+          "speaker": "clinician",
+          "text": "A pessoa anterior mencionou tosse. Você confirma?"
+        },
+        {
+          "segment_id": "v7-draft-0144:segment-02",
+          "speaker": "patient",
+          "text": "Eu confirmo só a parte sobre garganta; a outra fala era de meu primo."
+        },
+        {
+          "segment_id": "v7-draft-0144:segment-03",
+          "speaker": "clinician",
+          "text": "Agora falando de você, qual medicamento usa?"
+        },
+        {
+          "segment_id": "v7-draft-0144:segment-04",
+          "speaker": "patient",
+          "text": "Eu uso prednisona ao deitar, e não tenho tosse."
+        },
+        {
+          "segment_id": "v7-draft-0144:segment-05",
+          "speaker": "clinician",
+          "text": "A mudança de falante altera o experiencer, não o tópico automaticamente."
+        }
+      ],
+      "scenario_family": "ANAPHORA_SPEAKER_TRANSITION",
+      "decision": "AMBIGUOUS",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "A mudança de falante informa que parte da fala era de um familiar, mas não fixa qual entidade clínica recebe o antecedente; ownership não deve ser inferido.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:ANAPHORA_SPEAKER_TRANSITION",
+      "gold": null,
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "prednisona",
+          "segment_ids": [
+            "v7-draft-0144:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "tosse",
+          "segment_ids": [
+            "v7-draft-0144:segment-01",
+            "v7-draft-0144:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "garganta",
+          "segment_ids": [
+            "v7-draft-0144:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "meu primo",
+          "segment_ids": [
+            "v7-draft-0144:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": "AMB-SPEAKER-001",
+      "policy_ids": [
+        "SEM-EXP-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0145",
+      "candidate_id": "v7-draft-0145",
+      "text": "Médico: Vamos revisar seus remédios. Você ainda usa metformina?\nPaciente: Uso metformina 500 mg após o almoço, mas às vezes esqueço.\nMédico: E o ibuprofeno, entrou depois da última consulta?\nPaciente: Sim, comecei o ibuprofeno; a receita dizia 600 mg e continuo assim.\nMédico: Então mantenho os dois no esquema atual, correto?",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0145:segment-01",
+          "speaker": "clinician",
+          "text": "Vamos revisar seus remédios. Você ainda usa metformina?"
+        },
+        {
+          "segment_id": "v7-draft-0145:segment-02",
+          "speaker": "patient",
+          "text": "Uso metformina 500 mg após o almoço, mas às vezes esqueço."
+        },
+        {
+          "segment_id": "v7-draft-0145:segment-03",
+          "speaker": "clinician",
+          "text": "E o ibuprofeno, entrou depois da última consulta?"
+        },
+        {
+          "segment_id": "v7-draft-0145:segment-04",
+          "speaker": "patient",
+          "text": "Sim, comecei o ibuprofeno; a receita dizia 600 mg e continuo assim."
+        },
+        {
+          "segment_id": "v7-draft-0145:segment-05",
+          "speaker": "clinician",
+          "text": "Então mantenho os dois no esquema atual, correto?"
+        }
+      ],
+      "scenario_family": "MEDICATION_RECONCILIATION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:MEDICATION_RECONCILIATION",
+      "gold": [
+        {
+          "surface": "metformina",
+          "concept_id": "medication.metformin",
+          "experiencer": "patient",
+          "dose": "500 mg",
+          "dose_value": "500",
+          "dose_unit": "mg",
+          "frequency": "após o almoço",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0145:segment-01",
+            "v7-draft-0145:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0145:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0145:segment-02"
+            ],
+            "dose": [
+              "v7-draft-0145:segment-02"
+            ],
+            "dose_value": [
+              "v7-draft-0145:segment-02"
+            ],
+            "dose_unit": [
+              "v7-draft-0145:segment-02"
+            ],
+            "frequency": [
+              "v7-draft-0145:segment-02"
+            ],
+            "status": [
+              "v7-draft-0145:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0145:segment-02"
+            ],
+            "HAS_FREQUENCY": [
+              "v7-draft-0145:segment-02"
+            ],
+            "status": [
+              "v7-draft-0145:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "500 mg",
+              "segment_ids": [
+                "v7-draft-0145:segment-02"
+              ]
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "após o almoço",
+              "segment_ids": [
+                "v7-draft-0145:segment-02"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "ibuprofeno",
+          "concept_id": "medication.ibuprofen",
+          "experiencer": "patient",
+          "dose": "600 mg",
+          "dose_value": "600",
+          "dose_unit": "mg",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0145:segment-03",
+            "v7-draft-0145:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0145:segment-03"
+            ],
+            "experiencer": [
+              "v7-draft-0145:segment-04"
+            ],
+            "dose": [
+              "v7-draft-0145:segment-04"
+            ],
+            "dose_value": [
+              "v7-draft-0145:segment-04"
+            ],
+            "dose_unit": [
+              "v7-draft-0145:segment-04"
+            ],
+            "status": [
+              "v7-draft-0145:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0145:segment-04"
+            ],
+            "status": [
+              "v7-draft-0145:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "600 mg",
+              "segment_ids": [
+                "v7-draft-0145:segment-04"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "metformina",
+          "segment_ids": [
+            "v7-draft-0145:segment-01",
+            "v7-draft-0145:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "ibuprofeno",
+          "segment_ids": [
+            "v7-draft-0145:segment-03",
+            "v7-draft-0145:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0146",
+      "candidate_id": "v7-draft-0146",
+      "text": "Médico: Como ficou a dose do metformina depois da mudança?\nPaciente: Antes era 500 mg após o almoço.\nMédico: O que aconteceu na última orientação?\nPaciente: Eu corrigi: agora uso 600 mg após o almoço e o ajuste ocorreu no feriado passado.\nMédico: A dose atual é a segunda, não a primeira?\nPaciente: Isso, a segunda é a atual.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0146:segment-01",
+          "speaker": "clinician",
+          "text": "Como ficou a dose do metformina depois da mudança?"
+        },
+        {
+          "segment_id": "v7-draft-0146:segment-02",
+          "speaker": "patient",
+          "text": "Antes era 500 mg após o almoço."
+        },
+        {
+          "segment_id": "v7-draft-0146:segment-03",
+          "speaker": "clinician",
+          "text": "O que aconteceu na última orientação?"
+        },
+        {
+          "segment_id": "v7-draft-0146:segment-04",
+          "speaker": "patient",
+          "text": "Eu corrigi: agora uso 600 mg após o almoço e o ajuste ocorreu no feriado passado."
+        },
+        {
+          "segment_id": "v7-draft-0146:segment-05",
+          "speaker": "clinician",
+          "text": "A dose atual é a segunda, não a primeira?"
+        },
+        {
+          "segment_id": "v7-draft-0146:segment-06",
+          "speaker": "patient",
+          "text": "Isso, a segunda é a atual."
+        }
+      ],
+      "scenario_family": "DOSE_TRANSITION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:DOSE_TRANSITION",
+      "gold": [
+        {
+          "surface": "metformina",
+          "concept_id": "medication.metformin",
+          "experiencer": "patient",
+          "dose": "600 mg",
+          "dose_value": "600",
+          "dose_unit": "mg",
+          "frequency": "após o almoço",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0146:segment-01",
+            "v7-draft-0146:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0146:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0146:segment-04"
+            ],
+            "dose": [
+              "v7-draft-0146:segment-04"
+            ],
+            "dose_value": [
+              "v7-draft-0146:segment-04"
+            ],
+            "dose_unit": [
+              "v7-draft-0146:segment-04"
+            ],
+            "frequency": [
+              "v7-draft-0146:segment-04"
+            ],
+            "status": [
+              "v7-draft-0146:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0146:segment-04"
+            ],
+            "HAS_FREQUENCY": [
+              "v7-draft-0146:segment-04"
+            ],
+            "status": [
+              "v7-draft-0146:segment-04"
+            ],
+            "CHANGED_FROM": [
+              "v7-draft-0146:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "600 mg",
+              "segment_ids": [
+                "v7-draft-0146:segment-04"
+              ]
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "após o almoço",
+              "segment_ids": [
+                "v7-draft-0146:segment-04"
+              ]
+            },
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "500 mg",
+              "segment_ids": [
+                "v7-draft-0146:segment-04"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "metformina",
+          "segment_ids": [
+            "v7-draft-0146:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0147",
+      "candidate_id": "v7-draft-0147",
+      "text": "Médico: Com que frequência você toma ibuprofeno?\nPaciente: De início era após o almoço, mas mudei o horário.\nMédico: Você está falando do horário anterior ou do atual?\nPaciente: Do atual: após o almoço; a mudança foi registrada no feriado passado.\nMédico: E o metformina continua separado dessa rotina?",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0147:segment-01",
+          "speaker": "clinician",
+          "text": "Com que frequência você toma ibuprofeno?"
+        },
+        {
+          "segment_id": "v7-draft-0147:segment-02",
+          "speaker": "patient",
+          "text": "De início era após o almoço, mas mudei o horário."
+        },
+        {
+          "segment_id": "v7-draft-0147:segment-03",
+          "speaker": "clinician",
+          "text": "Você está falando do horário anterior ou do atual?"
+        },
+        {
+          "segment_id": "v7-draft-0147:segment-04",
+          "speaker": "patient",
+          "text": "Do atual: após o almoço; a mudança foi registrada no feriado passado."
+        },
+        {
+          "segment_id": "v7-draft-0147:segment-05",
+          "speaker": "clinician",
+          "text": "E o metformina continua separado dessa rotina?"
+        }
+      ],
+      "scenario_family": "FREQUENCY_STATUS_TRANSITION",
+      "decision": "AMBIGUOUS",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "A fala declara mudança de horário, mas repete a mesma frequência como valor inicial e atual; não há valor novo inequívoco.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:FREQUENCY_STATUS_TRANSITION",
+      "gold": null,
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "metformina",
+          "segment_ids": [
+            "v7-draft-0147:segment-05"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "ibuprofeno",
+          "segment_ids": [
+            "v7-draft-0147:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": "AMB-FREQ-001",
+      "policy_ids": [
+        "SEM-FREQ-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0148",
+      "candidate_id": "v7-draft-0148",
+      "text": "Médico: Além de dor, há outra queixa?\nPaciente: A dor fica em joelho esquerdo; também tenho cansaço.\nMédico: O cansaço começou junto ou depois?\nPaciente: Depois. A dor é a que mais incomoda agora, mas a outra melhorou no feriado passado.\nMédico: Vou registrar as duas sem misturar os lados.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0148:segment-01",
+          "speaker": "clinician",
+          "text": "Além de dor, há outra queixa?"
+        },
+        {
+          "segment_id": "v7-draft-0148:segment-02",
+          "speaker": "patient",
+          "text": "A dor fica em joelho esquerdo; também tenho cansaço."
+        },
+        {
+          "segment_id": "v7-draft-0148:segment-03",
+          "speaker": "clinician",
+          "text": "O cansaço começou junto ou depois?"
+        },
+        {
+          "segment_id": "v7-draft-0148:segment-04",
+          "speaker": "patient",
+          "text": "Depois. A dor é a que mais incomoda agora, mas a outra melhorou no feriado passado."
+        },
+        {
+          "segment_id": "v7-draft-0148:segment-05",
+          "speaker": "clinician",
+          "text": "Vou registrar as duas sem misturar os lados."
+        }
+      ],
+      "scenario_family": "MULTIPLE_SYMPTOMS",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:MULTIPLE_SYMPTOMS",
+      "gold": [
+        {
+          "surface": "dor",
+          "concept_id": "symptom.pain",
+          "experiencer": "patient",
+          "temporality": "current",
+          "laterality": "left",
+          "segment_ids": [
+            "v7-draft-0148:segment-01",
+            "v7-draft-0148:segment-02",
+            "v7-draft-0148:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0148:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0148:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0148:segment-02"
+            ],
+            "laterality": [
+              "v7-draft-0148:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_LATERALITY": [
+              "v7-draft-0148:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_LATERALITY",
+              "target": "laterality",
+              "value": "left",
+              "segment_ids": [
+                "v7-draft-0148:segment-02"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "cansaço",
+          "concept_id": "symptom.fatigue",
+          "experiencer": "patient",
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0148:segment-02",
+            "v7-draft-0148:segment-03"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0148:segment-02"
+            ],
+            "experiencer": [
+              "v7-draft-0148:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0148:segment-02"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "dor",
+          "segment_ids": [
+            "v7-draft-0148:segment-01",
+            "v7-draft-0148:segment-02",
+            "v7-draft-0148:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "joelho esquerdo",
+          "segment_ids": [
+            "v7-draft-0148:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0149",
+      "candidate_id": "v7-draft-0149",
+      "text": "Médico: Há dor na família?\nPaciente: Sim, minha madrinha teve isso, mas eu não tenho essa queixa.\nMédico: Quem está com o diagnóstico, então?\nPaciente: A pessoa da família; eu vim por causa de joelho esquerdo.\nMédico: Vou separar o experiencer familiar do paciente.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0149:segment-01",
+          "speaker": "clinician",
+          "text": "Há dor na família?"
+        },
+        {
+          "segment_id": "v7-draft-0149:segment-02",
+          "speaker": "patient",
+          "text": "Sim, minha madrinha teve isso, mas eu não tenho essa queixa."
+        },
+        {
+          "segment_id": "v7-draft-0149:segment-03",
+          "speaker": "clinician",
+          "text": "Quem está com o diagnóstico, então?"
+        },
+        {
+          "segment_id": "v7-draft-0149:segment-04",
+          "speaker": "patient",
+          "text": "A pessoa da família; eu vim por causa de joelho esquerdo."
+        },
+        {
+          "segment_id": "v7-draft-0149:segment-05",
+          "speaker": "clinician",
+          "text": "Vou separar o experiencer familiar do paciente."
+        }
+      ],
+      "scenario_family": "FAMILY_PATIENT_EXPERIENCER",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:FAMILY_PATIENT_EXPERIENCER",
+      "gold": [
+        {
+          "surface": "dor",
+          "concept_id": "symptom.pain",
+          "experiencer": "family",
+          "temporality": "past",
+          "segment_ids": [
+            "v7-draft-0149:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0149:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0149:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0149:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        },
+        {
+          "surface": "dor",
+          "concept_id": "symptom.pain",
+          "experiencer": "patient",
+          "negated": true,
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0149:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0149:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0149:segment-01"
+            ],
+            "negated": [
+              "v7-draft-0149:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0149:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "dor",
+          "segment_ids": [
+            "v7-draft-0149:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "joelho esquerdo",
+          "segment_ids": [
+            "v7-draft-0149:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "minha madrinha",
+          "segment_ids": [
+            "v7-draft-0149:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    },
+    {
+      "review_id": "v7-review-0150",
+      "candidate_id": "v7-draft-0150",
+      "text": "Médico: Você sente dor?\nPaciente: No começo eu disse que sim, mas corrijo: não sinto dor.\nMédico: E a queixa que permanece?\nPaciente: Só um desconforto em joelho esquerdo, sem dor.\nMédico: Então a negação vale para dor, não para o desconforto.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0150:segment-01",
+          "speaker": "clinician",
+          "text": "Você sente dor?"
+        },
+        {
+          "segment_id": "v7-draft-0150:segment-02",
+          "speaker": "patient",
+          "text": "No começo eu disse que sim, mas corrijo: não sinto dor."
+        },
+        {
+          "segment_id": "v7-draft-0150:segment-03",
+          "speaker": "clinician",
+          "text": "E a queixa que permanece?"
+        },
+        {
+          "segment_id": "v7-draft-0150:segment-04",
+          "speaker": "patient",
+          "text": "Só um desconforto em joelho esquerdo, sem dor."
+        },
+        {
+          "segment_id": "v7-draft-0150:segment-05",
+          "speaker": "clinician",
+          "text": "Então a negação vale para dor, não para o desconforto."
+        }
+      ],
+      "scenario_family": "NEGATION_REVERSAL",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance",
+      "review_notes": "Proposta assistida por policy v1.2; requer HUMAN GATE final antes de composição/freeze.",
+      "policy_version": "clinical-semantic-policy-v1.2",
+      "semantic_equivalence_group": "template:NEGATION_REVERSAL",
+      "gold": [
+        {
+          "surface": "dor",
+          "concept_id": "symptom.pain",
+          "experiencer": "patient",
+          "negated": true,
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0150:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0150:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0150:segment-01"
+            ],
+            "negated": [
+              "v7-draft-0150:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0150:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "dor",
+          "segment_ids": [
+            "v7-draft-0150:segment-01",
+            "v7-draft-0150:segment-02",
+            "v7-draft-0150:segment-04",
+            "v7-draft-0150:segment-05"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "joelho esquerdo",
+          "segment_ids": [
+            "v7-draft-0150:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "gold_generation": "AI_ASSISTED_PROPOSAL_NOT_OFFICIAL",
+      "ambiguity_cluster": null,
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ]
+    }
+  ]
+}

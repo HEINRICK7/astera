@@ -1,0 +1,436 @@
+{
+  "case_id": "D1-005",
+  "corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "corpus_version": "D1",
+  "decisions": [],
+  "evaluation_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "mismatches": [
+    {
+      "actual": true,
+      "confidence": 0.55,
+      "details": {
+        "mention": "budesonida",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": false,
+      "policy_rules": [],
+      "semantic_dimension": "negated",
+      "stage": "prediction"
+    },
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "budesonida",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": "todas as noites",
+      "policy_rules": [],
+      "semantic_dimension": "frequency",
+      "stage": "prediction"
+    },
+    {
+      "actual": [],
+      "confidence": 0.86,
+      "details": {
+        "mention": "budesonida",
+        "projection_relation_count": 0
+      },
+      "expected": [
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "todas as noites"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "85b742a17e4a730efde2f2b1753909dc16b1e07dd84e0d5108689adf819adfc4",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": null,
+      "output_hash": "dce43f525379cfcb189419e7181397cfe3798b41dff00ef6544ebd2919ef061f",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "clinician",
+            "text": "Quem usa o spray nasal?"
+          },
+          {
+            "segment_id": "s2",
+            "speaker": "patient",
+            "text": "Eu uso a budesonida todas as noites."
+          },
+          {
+            "segment_id": "s3",
+            "speaker": "clinician",
+            "text": "E sua esposa?"
+          },
+          {
+            "segment_id": "s4",
+            "speaker": "patient",
+            "text": "Ela não usa."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-005",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "d317ad9499b519e9606548007432d0939c1de976b38e87ffaaa250b4f387335f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "dce43f525379cfcb189419e7181397cfe3798b41dff00ef6544ebd2919ef061f",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-005",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "e14c85c3a9ed05aa6d23ebd263d0bf90521842f69f12457d39d5dec33fad4954",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-005",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "79235aecbc18fe04484ad0b9e283fef67c9e23ea65946df39387b58885d629b5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-005",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "a0cfac4842a3fab6fcd9fa5b01c1594c2a2ca2af72151256c523331b847df499",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "7e774361d82a5d92131b3d28b333ad6c394ac63e57b7a064bf61ec577a0ae7d9",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:s2",
+            "owner_segment_id": "s2"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-005",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "db0851fd22dbc7035f3de347ba41945e0fc3ed6515f5c8883e6a919cb8546204",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "7e774361d82a5d92131b3d28b333ad6c394ac63e57b7a064bf61ec577a0ae7d9",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-005",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "048c2b9991f9ea925d68db381299936356b441f63d4e70206fab933df97c9147",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "1cd962d9b276136796cba35c73ff12001cad9318416cb1c8104101e5f9e98fb9",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:s2",
+              "owner_segment_id": "s2"
+            }
+          },
+          "candidate_source": "s2",
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: Quem usa o spray nasal?\\npatient: Eu uso a budesonida todas as noites.\\nclinician: E sua esposa?\\npatient: Ela não usa.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2:9:19', 'owner_span': (9, 19), 'source_evidence_id': 'context:s2'}}, 'projection': {'mention_id': 'context:s2:9:19', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s2',), 'candidate_source': 's2', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2', 'owner_segment_id': 's2'}}}, 'authority_metrics': {'resolver_decisions_total': 66, 'resolver_decisions_preserved': 60, 'resolver_decisions_overwritten': 6, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's2', 'conversation_segment_ids': ['s1', 's3', 's4']}",
+            "relations": [],
+            "surface": "budesonida"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-005",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "be6af9966dadf88201816ed920d530f38057a6b788774a0569f663b561c322c7",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "1cd962d9b276136796cba35c73ff12001cad9318416cb1c8104101e5f9e98fb9",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-005",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "80f8699aac024ab30a9b736fd37d6d8ef6a7423b728587b36383079469056ddf",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "5034451a1d745a8e68b4beaca60ca36eb17127031e92fdb03687cd906e587547",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: Quem usa o spray nasal?\\npatient: Eu uso a budesonida todas as noites.\\nclinician: E sua esposa?\\npatient: Ela não usa.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2:9:19', 'owner_span': (9, 19), 'source_evidence_id': 'context:s2'}}, 'projection': {'mention_id': 'context:s2:9:19', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s2',), 'candidate_source': 's2', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2', 'owner_segment_id': 's2'}}}, 'authority_metrics': {'resolver_decisions_total': 66, 'resolver_decisions_preserved': 60, 'resolver_decisions_overwritten': 6, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's2', 'conversation_segment_ids': ['s1', 's3', 's4']}",
+            "relations": [],
+            "surface": "budesonida"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-005",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "dbb2b93cbe841cebcb9aa80bac1bc409dd80f935e71542fcb43b79233d5a4a79",
+      "changed_fields": [
+        "frequency",
+        "negated"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "5034451a1d745a8e68b4beaca60ca36eb17127031e92fdb03687cd906e587547",
+      "output_hash": "5034451a1d745a8e68b4beaca60ca36eb17127031e92fdb03687cd906e587547",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: Quem usa o spray nasal?\\npatient: Eu uso a budesonida todas as noites.\\nclinician: E sua esposa?\\npatient: Ela não usa.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2:9:19', 'owner_span': (9, 19), 'source_evidence_id': 'context:s2'}}, 'projection': {'mention_id': 'context:s2:9:19', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s2',), 'candidate_source': 's2', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2', 'owner_segment_id': 's2'}}}, 'authority_metrics': {'resolver_decisions_total': 66, 'resolver_decisions_preserved': 60, 'resolver_decisions_overwritten': 6, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's2', 'conversation_segment_ids': ['s1', 's3', 's4']}",
+            "relations": [],
+            "surface": "budesonida"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-005",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "a557fa7c5fe97ccafe555309a37b8f140e2489b49ddb00676912017a823948cb",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "5034451a1d745a8e68b4beaca60ca36eb17127031e92fdb03687cd906e587547",
+      "output_hash": "f32786148ef6e38bea585a470e5ef85825a68f494147a1d0e3a306c3d12ff20c",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "frequency": [
+                "s2"
+              ],
+              "status": [
+                "s2"
+              ]
+            },
+            "concept_id": "medication.budesonide",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "todas as noites",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {},
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "todas as noites"
+              }
+            ],
+            "segment_ids": [
+              "s1",
+              "s2"
+            ],
+            "surface": "budesonida"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-005",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "18251ee259f9bcd38cb332d35e660659d37cebc515d7f55ca6bdb61ae9139374",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "f32786148ef6e38bea585a470e5ef85825a68f494147a1d0e3a306c3d12ff20c",
+      "output_hash": "6820a03ea5f151fea9bf97662f57ba9b8538def70a2650e46de378e3fd52d624",
+      "payload": {
+        "case_id": "D1-005"
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-005",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v1"
+}

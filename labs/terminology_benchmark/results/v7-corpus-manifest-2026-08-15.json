@@ -1,0 +1,32 @@
+{
+  "status": "DRAFT_NOT_FROZEN",
+  "corpus": "V7 Unseen Generalization Foundation",
+  "version": "v7-draft-0.1",
+  "draft_path": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/v7_unseen_generalization_draft.jsonl",
+  "review_queue_path": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-human-review-queue-2026-08-15.json",
+  "disjointness_report_path": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-disjointness-report-2026-08-15.json",
+  "case_count": 240,
+  "category_counts": {
+    "MEDICATION_RECONCILIATION": 20,
+    "DOSE_TRANSITION": 20,
+    "FREQUENCY_STATUS_TRANSITION": 20,
+    "MULTIPLE_SYMPTOMS": 20,
+    "FAMILY_PATIENT_EXPERIENCER": 20,
+    "NEGATION_REVERSAL": 20,
+    "DISTRIBUTED_TEMPORALITY": 20,
+    "TOPIC_SWITCH": 20,
+    "ELLIPTICAL_ANSWER": 20,
+    "CLINICIAN_CORRECTION": 20,
+    "PATIENT_SELF_CORRECTION": 20,
+    "ANAPHORA_SPEAKER_TRANSITION": 20
+  },
+  "gold_approved": 0,
+  "human_review_complete": false,
+  "gold_validation_complete": false,
+  "corpus_freeze_complete": false,
+  "official_evaluation": "BLOCKED",
+  "resolver_changed": false,
+  "policy_version": "1.2",
+  "holdouts_reused": false,
+  "v7_foundation_ready": false
+}

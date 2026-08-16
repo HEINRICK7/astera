@@ -1,5 +1,9 @@
 # Astera Engineering Execution Plan v1.0
 
+> **Operating Model atual:** Product Engineering — Architecture Complete
+> ([ADR-011](../adrs/ADR-011-platform-complete.md)). Os Agents não criam novas
+> abstrações; entregam Capabilities, Providers, evidências e certificações.
+
 > Documento destinado exclusivamente aos Agentes de Engenharia.
 >
 > Este documento define a ordem oficial de construção da plataforma Astera.
@@ -412,6 +416,105 @@ Platform Bootstrap completo e operacional.
 
 ---
 
+# FASE C.5 — Cognitive Architecture (CONCLUÍDA)
+
+> Esta fase histórica foi aprovada pelo Astera Flow, consolidada na RFC-001 e
+> implementada na Construction sob a ADR-010. O trabalho novo segue o modelo
+> Capability-first.
+
+## Objetivo
+
+Modelar como o Astera representa Conversation, Transcript, Clinical Facts,
+Evidence, Clinical Context, Knowledge, Hypotheses, Validation e Clinical
+Representation antes de ampliar a implementação cognitiva.
+
+## Workshops
+
+1. Clinical Facts
+2. Clinical Context / Modelo Cognitivo
+3. Clinical Reasoning Model / Clinical Reasoning Loop
+4. Medical Knowledge Layer
+5. Specialists e Clinical Representation
+6. End-to-End Clinical Encounter / Validation Scenarios
+
+## Entregáveis
+
+- Glossário cognitivo.
+- Modelo de provenance e temporalidade.
+- Separação entre fato, evidência, conhecimento e hipótese.
+- Contrato conceitual de Specialists e Context Enrichment.
+- Separação entre Clinical World e Medical World, com Knowledge Query e Knowledge Object.
+- Contrato de Specialists que recebem e devolvem Clinical Context enriquecido.
+- RFC-001 e documentos normativos 01–09 da Cognitive Architecture.
+- Workshop 6 de validação ponta a ponta do atendimento clínico.
+- Architecture Review e Clinical Simulation antes da implementação.
+- Cognitive Validation Lab contra dez consultas públicas reais antes da Medical Validation.
+- ADRs e decisões abertas para implementação posterior.
+
+## Regra histórica
+
+Os workshops não recebem novas abstrações durante a Construction. Contratos
+aprovados são implementados pelos Builders; qualquer limitação concreta segue
+o fluxo da ADR-010.
+
+Referências:
+
+- `docs/astera-flow/cognitive-architecture-phase.md`
+- `docs/astera-flow/cognitive-architecture-research.md`
+- `docs/adrs/ADR-003-cognitive-architecture-workshops.md`
+
+---
+
+# FASE CONSTRUCTION
+
+> A arquitetura v1.0 está congelada pela ADR-010. Esta fase transforma os
+> contratos aprovados em software executável. Builders não criam novos
+> conceitos, domínios, entidades, especialistas ou ciclos.
+
+## Ordem oficial
+
+```
+1 Speech Plugin
+↓
+2 Clinical Facts Plugin
+↓
+3 Context Builder
+↓
+4 Reasoning Plugin
+↓
+5 Knowledge Plugin
+↓
+6 Documentation Plugin
+↓
+7 End-to-End Consultation
+```
+
+Cada sprint deve possuir código, testes, health check, observabilidade e
+registro no Engineering Journal. O Cognitive Validation Lab continua medindo o
+modelo cognitivo e não altera a arquitetura por conta própria.
+
+Referência: [Construction](construction/README.md) e
+[ADR-010 — Architecture Freeze](../adrs/ADR-010-architecture-freeze.md).
+
+---
+
+# OPERATING MODEL — CAPABILITY FIRST
+
+Após a Construction, cada entrega deve responder às cinco perguntas do
+[Capability Definition Template](capabilities/capability-definition-template.md).
+
+```text
+Capability → Provider → Plugin → Engineering
+           → Medical Validation → CQA → Regression
+           → Certification → Production Ready
+```
+
+Builders não criam novas fases, checkpoints ou abstrações para uma capability.
+Eles implementam o contrato, conectam providers aprovados e perseguem a
+certificação com evidências.
+
+---
+
 # FASE D
 
 Cognitive Platform
@@ -765,9 +868,13 @@ A plataforma será considerada pronta quando:
 
 ---
 
-# Missão dos Agents
+# Missão dos Agents — Product Engineers
 
-Os Agents são responsáveis por transformar a arquitetura oficial do Astera em uma plataforma real.
+Os Agents são responsáveis por transformar a plataforma oficial do Astera em
+produto utilizável. Antes de iniciar uma tarefa, devem confirmar que ela
+entrega uma Capability, Provider, evidência ou certificação para o usuário
+final. Mudança arquitetural só pode ocorrer com evidência concreta e ADR
+aprovada conforme ADR-011.
 
 Eles não possuem autonomia para alterar decisões arquiteturais.
 

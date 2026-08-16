@@ -1,0 +1,1936 @@
+{
+  "case_id": "D4-027",
+  "corpus_checksum": "1ad10a39a899906ab35455d6ce51bedcfd20f2f7776a9e6e59155ed9a1cb0938",
+  "corpus_version": "D4",
+  "decisions": [],
+  "evaluation_id": "d4-one-shot-0877e9b7-fac6-4881-8ab7-18d46356f719",
+  "mismatches": [
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "metformina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "7451a83307e83f27f337297bdf2c3fc72c390ccae4f76e2cc7a1ad880a186852",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "33869b993d11f78eebdcb10503327e66e04a36050951ad7600c7e66354f1cb83",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "1fa3e940dc5a5b6b7c129b1f94bb88de6970140f66da889b71c60ffe3287cc72",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "p1",
+            "speaker": "patient",
+            "text": "Metformina e losartana estão na mesma sacola."
+          },
+          {
+            "segment_id": "p2",
+            "speaker": "patient",
+            "text": "A etiqueta da metformina marca 500 mg."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-027",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "f407b73513cf358036d0335fada0dbcecb393c6ea707671bc8df2cc194318b57",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "1fa3e940dc5a5b6b7c129b1f94bb88de6970140f66da889b71c60ffe3287cc72",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-027",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "8b64afdea0bb113896355c54a27aae8fb9cbc7d0133a7db54f93b47ef216f416",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "metformina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "500 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "500 mg",
+            "dose_unit": "mg",
+            "dose_value": "500",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "p2"
+                ]
+              },
+              "relation_id": "context:p1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:p1",
+              "source_mention_id": "context:p1",
+              "source_segment_ids": [
+                "p2"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "500 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "500 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-027",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "9830d33b8cf19ec420daff541f405b7232e6277235822eaae6d9d837547c142d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "metformina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "500 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "500 mg",
+            "dose_unit": "mg",
+            "dose_value": "500",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "p2"
+                ]
+              },
+              "relation_id": "context:p1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:p1",
+              "source_mention_id": "context:p1",
+              "source_segment_ids": [
+                "p2"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "500 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "500 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-027",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "2ba8ddec4f9dbfd89238d95caeb567e2a48b6324efca0bff63814af0d670f319",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "metformina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "500 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "500 mg",
+            "dose_unit": "mg",
+            "dose_value": "500",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "p2"
+                ]
+              },
+              "relation_id": "context:p1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:p1",
+              "source_mention_id": "context:p1",
+              "source_segment_ids": [
+                "p2"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "500 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "500 mg"
+              }
+            ]
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 0,
+            "actual_signal_count": 1,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 1,
+            "complete_but_wrong": 0,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "dose",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "p2"
+                  ],
+                  "owner_mention_id": "context:p1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "p2"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "500 mg"
+                },
+                "classification": "COMPLETE_AND_CORRECT",
+                "expected": {
+                  "attribute_type": "dose",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "p2"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "500 mg"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 1,
+            "provenance_correct": 1,
+            "provenance_total": 1,
+            "state_correct": 1,
+            "state_total": 1,
+            "transition_correct": 0,
+            "transition_total": 0,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "dose",
+                "confidence": 1.0,
+                "evidence": [
+                  "p2"
+                ],
+                "owner_mention_id": "context:p1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "p2"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "500 mg"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "29f285a17d1ece9411d7f2bad9f219d8853f9d3c0652d158edc9302478bc07d6",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p1"
+            ]
+          },
+          "dose": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p2"
+            ]
+          },
+          "dose_unit": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p2"
+            ]
+          },
+          "dose_value": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p2"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p1"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-027",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "b63611cce92e1528bf2bbe0576bda4eca19334e5df3027dd93119c6ef19152f5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "29f285a17d1ece9411d7f2bad9f219d8853f9d3c0652d158edc9302478bc07d6",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-027",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "a7d22773f7de7c4611cc71a445fc88fee9c1a30a966bb8bddb2777fb506a6071",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "4b4a28eb7cc21e702a5505fd1c54c785ec2907b851c0e301ed76fbf7d493c76c",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "dose": [
+              "p2"
+            ],
+            "dose_unit": [
+              "p2"
+            ],
+            "dose_value": [
+              "p2"
+            ]
+          },
+          "candidate_source": "p1",
+          "historical_attributes": {},
+          "owner_mention_id": "context:p1",
+          "owner_type": "medication",
+          "relation_input_contract": {
+            "attribute_signals": [
+              {
+                "attribute_type": "dose",
+                "confidence": 1.0,
+                "evidence": [
+                  "p2"
+                ],
+                "owner_mention_id": "context:p1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "p2"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "500 mg"
+              }
+            ],
+            "has_blocking_signal": false,
+            "relation_input_owner_completeness": 1.0,
+            "relation_input_provenance": 1.0,
+            "relation_input_state_completeness": 1.0,
+            "transition_contract_validity": 1.0,
+            "transition_signals": []
+          },
+          "relation_input_signals": [
+            {
+              "attribute_type": "dose",
+              "confidence": 1.0,
+              "evidence": [
+                "p2"
+              ],
+              "owner_mention_id": "context:p1",
+              "owner_type": "medication",
+              "provenance": {
+                "evidence_id": null,
+                "semantic_policy": null,
+                "source_segment_ids": [
+                  "p2"
+                ]
+              },
+              "relation_ready": true,
+              "state": "current",
+              "status": "RESOLVED",
+              "value": "500 mg"
+            }
+          ],
+          "source_segment_ids": [
+            "p1"
+          ],
+          "transition_evidence": [],
+          "transition_input_signals": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Metformina e losartana estão na mesma sacola.\\npatient: A etiqueta da metformina marca 500 mg.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:p1:0:10', 'owner_span': (0, 10), 'source_evidence_id': 'context:p1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:p1:HAS_DOSE:dose', 'relation_type': 'HAS_DOSE', 'source': 'context:p1', 'target': 'dose', 'value': '500 mg', 'source_mention_id': 'context:p1', 'target_mention_id': 'dose', 'source_segment_ids': ['p2'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'dose', 'source_segment_ids': ('p2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('p1',), 'candidate_source': 'p1', 'owner_type': 'medication', 'owner_mention_id': 'context:p1', 'attribute_provenance': {'dose': ['p2'], 'dose_value': ['p2'], 'dose_unit': ['p2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'certainty': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'temporality': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'experiencer': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p2',)}, 'dose_value': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p2',)}, 'dose_unit': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p2',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'dose', 'value': '500 mg', 'owner_mention_id': 'context:p1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('p2',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['p2'], 'relation_ready': True}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'dose', 'value': '500 mg', 'owner_mention_id': 'context:p1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('p2',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['p2'], 'relation_ready': True}], 'transition_signals': [], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': False}}, 'authority_metrics': {'resolver_decisions_total': 231, 'resolver_decisions_preserved': 204, 'resolver_decisions_overwritten': 27, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'p1', 'conversation_segment_ids': ['p2']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "dose",
+                "confidence": 1.0,
+                "evidence": [
+                  "p2"
+                ],
+                "owner_mention_id": "context:p1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "p2"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "500 mg"
+              }
+            ],
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "500 mg"
+              }
+            ],
+            "signal_quality": {
+              "actual_nonready_signal_count": 0,
+              "actual_signal_count": 1,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 1,
+              "complete_but_wrong": 0,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "dose",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "p2"
+                    ],
+                    "owner_mention_id": "context:p1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "p2"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "500 mg"
+                  },
+                  "classification": "COMPLETE_AND_CORRECT",
+                  "expected": {
+                    "attribute_type": "dose",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "p2"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "500 mg"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 1,
+              "provenance_correct": 1,
+              "provenance_total": 1,
+              "state_correct": 1,
+              "state_total": 1,
+              "transition_correct": 0,
+              "transition_total": 0,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "metformina",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-027",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "1e338bc2e422334dc1300cac3366a7f7f78984a6235dfed42194b62ee1a91539",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "metformina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "500 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "500 mg",
+            "dose_unit": "mg",
+            "dose_value": "500",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "p2"
+                ]
+              },
+              "relation_id": "context:p1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:p1",
+              "source_mention_id": "context:p1",
+              "source_segment_ids": [
+                "p2"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "500 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "500 mg"
+              }
+            ]
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 0,
+            "actual_signal_count": 1,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 1,
+            "complete_but_wrong": 0,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "dose",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "p2"
+                  ],
+                  "owner_mention_id": "context:p1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "p2"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "500 mg"
+                },
+                "classification": "COMPLETE_AND_CORRECT",
+                "expected": {
+                  "attribute_type": "dose",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "p2"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "500 mg"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 1,
+            "provenance_correct": 1,
+            "provenance_total": 1,
+            "state_correct": 1,
+            "state_total": 1,
+            "transition_correct": 0,
+            "transition_total": 0,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "dose",
+                "confidence": 1.0,
+                "evidence": [
+                  "p2"
+                ],
+                "owner_mention_id": "context:p1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "p2"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "500 mg"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "4b4a28eb7cc21e702a5505fd1c54c785ec2907b851c0e301ed76fbf7d493c76c",
+      "output_hash": "75d21f66e5635454c5952fe095fb5fa7272abe30652f04324bd60acca68a40c4",
+      "payload": {
+        "relations": [
+          [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "500 mg"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-027",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "f0cb8df8329dd31d3fc02b261de1a78e8f11e89dad75dcfd00b1daae479ffbab",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "metformina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "500 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "500 mg",
+            "dose_unit": "mg",
+            "dose_value": "500",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "p2"
+                ]
+              },
+              "relation_id": "context:p1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:p1",
+              "source_mention_id": "context:p1",
+              "source_segment_ids": [
+                "p2"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "500 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "500 mg"
+              }
+            ]
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 0,
+            "actual_signal_count": 1,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 1,
+            "complete_but_wrong": 0,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "dose",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "p2"
+                  ],
+                  "owner_mention_id": "context:p1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "p2"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "500 mg"
+                },
+                "classification": "COMPLETE_AND_CORRECT",
+                "expected": {
+                  "attribute_type": "dose",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "p2"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "500 mg"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 1,
+            "provenance_correct": 1,
+            "provenance_total": 1,
+            "state_correct": 1,
+            "state_total": 1,
+            "transition_correct": 0,
+            "transition_total": 0,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "dose",
+                "confidence": 1.0,
+                "evidence": [
+                  "p2"
+                ],
+                "owner_mention_id": "context:p1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "p2"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "500 mg"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "75d21f66e5635454c5952fe095fb5fa7272abe30652f04324bd60acca68a40c4",
+      "output_hash": "30f758bfbb2ba9dfc75bc9acafd31f0a2be74a6e491b8740b3d860e4fc001f64",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Metformina e losartana estão na mesma sacola.\\npatient: A etiqueta da metformina marca 500 mg.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:p1:0:10', 'owner_span': (0, 10), 'source_evidence_id': 'context:p1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:p1:HAS_DOSE:dose', 'relation_type': 'HAS_DOSE', 'source': 'context:p1', 'target': 'dose', 'value': '500 mg', 'source_mention_id': 'context:p1', 'target_mention_id': 'dose', 'source_segment_ids': ['p2'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'dose', 'source_segment_ids': ('p2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('p1',), 'candidate_source': 'p1', 'owner_type': 'medication', 'owner_mention_id': 'context:p1', 'attribute_provenance': {'dose': ['p2'], 'dose_value': ['p2'], 'dose_unit': ['p2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'certainty': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'temporality': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'experiencer': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p2',)}, 'dose_value': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p2',)}, 'dose_unit': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p2',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'dose', 'value': '500 mg', 'owner_mention_id': 'context:p1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('p2',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['p2'], 'relation_ready': True}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'dose', 'value': '500 mg', 'owner_mention_id': 'context:p1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('p2',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['p2'], 'relation_ready': True}], 'transition_signals': [], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': False}}, 'authority_metrics': {'resolver_decisions_total': 231, 'resolver_decisions_preserved': 204, 'resolver_decisions_overwritten': 27, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'p1', 'conversation_segment_ids': ['p2']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "dose",
+                "confidence": 1.0,
+                "evidence": [
+                  "p2"
+                ],
+                "owner_mention_id": "context:p1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "p2"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "500 mg"
+              }
+            ],
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "500 mg"
+              }
+            ],
+            "signal_quality": {
+              "actual_nonready_signal_count": 0,
+              "actual_signal_count": 1,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 1,
+              "complete_but_wrong": 0,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "dose",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "p2"
+                    ],
+                    "owner_mention_id": "context:p1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "p2"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "500 mg"
+                  },
+                  "classification": "COMPLETE_AND_CORRECT",
+                  "expected": {
+                    "attribute_type": "dose",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "p2"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "500 mg"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 1,
+              "provenance_correct": 1,
+              "provenance_total": 1,
+              "state_correct": 1,
+              "state_total": 1,
+              "transition_correct": 0,
+              "transition_total": 0,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "metformina",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-027",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "acb2c6133ccfb5fed5421226c41e4a256f58314f6d6692696f49ce6b1c370dd6",
+      "changed_fields": [
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "30f758bfbb2ba9dfc75bc9acafd31f0a2be74a6e491b8740b3d860e4fc001f64",
+      "output_hash": "30f758bfbb2ba9dfc75bc9acafd31f0a2be74a6e491b8740b3d860e4fc001f64",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Metformina e losartana estão na mesma sacola.\\npatient: A etiqueta da metformina marca 500 mg.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:p1:0:10', 'owner_span': (0, 10), 'source_evidence_id': 'context:p1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:p1:HAS_DOSE:dose', 'relation_type': 'HAS_DOSE', 'source': 'context:p1', 'target': 'dose', 'value': '500 mg', 'source_mention_id': 'context:p1', 'target_mention_id': 'dose', 'source_segment_ids': ['p2'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'dose', 'source_segment_ids': ('p2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('p1',), 'candidate_source': 'p1', 'owner_type': 'medication', 'owner_mention_id': 'context:p1', 'attribute_provenance': {'dose': ['p2'], 'dose_value': ['p2'], 'dose_unit': ['p2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'certainty': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'temporality': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'experiencer': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p2',)}, 'dose_value': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p2',)}, 'dose_unit': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p2',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'dose', 'value': '500 mg', 'owner_mention_id': 'context:p1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('p2',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['p2'], 'relation_ready': True}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'dose', 'value': '500 mg', 'owner_mention_id': 'context:p1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('p2',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['p2'], 'relation_ready': True}], 'transition_signals': [], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': False}}, 'authority_metrics': {'resolver_decisions_total': 231, 'resolver_decisions_preserved': 204, 'resolver_decisions_overwritten': 27, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'p1', 'conversation_segment_ids': ['p2']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "dose",
+                "confidence": 1.0,
+                "evidence": [
+                  "p2"
+                ],
+                "owner_mention_id": "context:p1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "p2"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "500 mg"
+              }
+            ],
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "500 mg"
+              }
+            ],
+            "signal_quality": {
+              "actual_nonready_signal_count": 0,
+              "actual_signal_count": 1,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 1,
+              "complete_but_wrong": 0,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "dose",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "p2"
+                    ],
+                    "owner_mention_id": "context:p1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "p2"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "500 mg"
+                  },
+                  "classification": "COMPLETE_AND_CORRECT",
+                  "expected": {
+                    "attribute_type": "dose",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "p2"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "500 mg"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 1,
+              "provenance_correct": 1,
+              "provenance_total": 1,
+              "state_correct": 1,
+              "state_total": 1,
+              "transition_correct": 0,
+              "transition_total": 0,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "metformina",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-027",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "6b110d6d964642e5733a047945a5d1de83f223cbec2ea55ff13c5b0e082e4994",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "30f758bfbb2ba9dfc75bc9acafd31f0a2be74a6e491b8740b3d860e4fc001f64",
+      "output_hash": "6ca78c6af8ee4d045d7ba8487042eb9dc1d50e5e5f565f4cf369887e136c67ac",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": "medication.metformin",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "500 mg",
+              "dose_unit": "mg",
+              "dose_value": "500",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "500 mg"
+              }
+            ],
+            "surface": "metformina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-027",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "a156ac118735c8123b91f2c534074a61a71ab1b819151cf9465ef73c7f09a184",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "6ca78c6af8ee4d045d7ba8487042eb9dc1d50e5e5f565f4cf369887e136c67ac",
+      "output_hash": "c29ac2b88c8dd551c19fdd2c27da41a103df334f40042238f8d577f1980d795b",
+      "payload": {
+        "case_id": "D4-027",
+        "mismatch_count": 1
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-027",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

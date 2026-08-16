@@ -1,0 +1,1958 @@
+{
+  "case_id": "D4-020",
+  "corpus_checksum": "1ad10a39a899906ab35455d6ce51bedcfd20f2f7776a9e6e59155ed9a1cb0938",
+  "corpus_version": "D4",
+  "decisions": [],
+  "evaluation_id": "d4-one-shot-0877e9b7-fac6-4881-8ab7-18d46356f719",
+  "mismatches": [
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "atenolol",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "duas vezes ao dia"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "atenolol",
+        "relation_output_count": 1
+      },
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "três vezes ao dia"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "duas vezes ao dia"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "7451a83307e83f27f337297bdf2c3fc72c390ccae4f76e2cc7a1ad880a186852",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "2fef3717abfc615a14098b7e82b9df6e770d5a533f8590633b44eb30682ebb87",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "c6c2ff429819ad67de08a8f7a4f2446c266e184ac74f091b6605f0a45e87037b",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "t1",
+            "speaker": "patient",
+            "text": "O atenolol era tomado três vezes ao dia."
+          },
+          {
+            "segment_id": "t3",
+            "speaker": "patient",
+            "text": "A orientação nova deixou duas vezes ao dia."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-020",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "a67fa355af31c29a06848e6c7706ccccfba662d1502cbc0198c618b65738de73",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "c6c2ff429819ad67de08a8f7a4f2446c266e184ac74f091b6605f0a45e87037b",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "056a19ef7be31e0ef2fba3968e6d67553ba5eb3dbdef3856faa9c58f1254bd4d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "atenolol"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "duas vezes ao dia"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "duas vezes ao dia",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t3"
+                ]
+              },
+              "relation_id": "context:t1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "duas vezes ao dia"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "duas vezes ao dia"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "f3a90fa9751b8bb8637146fb1cb97459c1996a78f448709dd2b0f1aa99a6b229",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "atenolol"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "duas vezes ao dia"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "duas vezes ao dia",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t3"
+                ]
+              },
+              "relation_id": "context:t1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "duas vezes ao dia"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "duas vezes ao dia"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "d4695f07e277b3b510e9b9693220f46acd57b235ab7c1ab0daa7a788e06d6c9b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "atenolol"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "duas vezes ao dia"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "duas vezes ao dia",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t3"
+                ]
+              },
+              "relation_id": "context:t1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "duas vezes ao dia"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "duas vezes ao dia"
+              }
+            ]
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 0,
+            "actual_signal_count": 1,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 1,
+            "complete_but_wrong": 1,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "t3"
+                  ],
+                  "owner_mention_id": "context:t1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "t3"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "duas vezes ao dia"
+                },
+                "classification": "COMPLETE_AND_CORRECT",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "t3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "duas vezes ao dia"
+                }
+              },
+              {
+                "actual": null,
+                "classification": "COMPLETE_BUT_WRONG",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "current_value": "duas vezes ao dia",
+                  "owner_type": "medication",
+                  "previous_value": "três vezes ao dia",
+                  "source_segment_ids": [
+                    "t3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "transition_type": "CHANGED_FROM"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 2,
+            "provenance_correct": 1,
+            "provenance_total": 2,
+            "state_correct": 1,
+            "state_total": 2,
+            "transition_correct": 0,
+            "transition_total": 1,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "t3"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "duas vezes ao dia"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "a53e1782b3a004a9b7b5d016f7ccd0a09eb0db165f75f1f8426473e80a61f081",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "frequency": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t3"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "ce909de5f3fa6e1c61c19a1829246ae1b38b32e46f5fbbf77c6ad6d7b375a570",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "a53e1782b3a004a9b7b5d016f7ccd0a09eb0db165f75f1f8426473e80a61f081",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "ed007fc3684a6f6c876dda2aa3f0677b8bab142b0a17218f3679fd399dd05f32",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "5c646242e01bddcb123b555beae6d51fd1b58be49974e8baacb88dc5fb8d9773",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "frequency": [
+              "t3"
+            ]
+          },
+          "candidate_source": "t1",
+          "historical_attributes": {},
+          "owner_mention_id": "context:t1",
+          "owner_type": "medication",
+          "relation_input_contract": {
+            "attribute_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "t3"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "duas vezes ao dia"
+              }
+            ],
+            "has_blocking_signal": false,
+            "relation_input_owner_completeness": 1.0,
+            "relation_input_provenance": 1.0,
+            "relation_input_state_completeness": 1.0,
+            "transition_contract_validity": 1.0,
+            "transition_signals": []
+          },
+          "relation_input_signals": [
+            {
+              "attribute_type": "frequency",
+              "confidence": 1.0,
+              "evidence": [
+                "t3"
+              ],
+              "owner_mention_id": "context:t1",
+              "owner_type": "medication",
+              "provenance": {
+                "evidence_id": null,
+                "semantic_policy": null,
+                "source_segment_ids": [
+                  "t3"
+                ]
+              },
+              "relation_ready": true,
+              "state": "current",
+              "status": "RESOLVED",
+              "value": "duas vezes ao dia"
+            }
+          ],
+          "source_segment_ids": [
+            "t1"
+          ],
+          "transition_evidence": [],
+          "transition_input_signals": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O atenolol era tomado três vezes ao dia.\\npatient: A orientação nova deixou duas vezes ao dia.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:2:10', 'owner_span': (2, 10), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:t1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:t1', 'target': 'frequency', 'value': 'duas vezes ao dia', 'source_mention_id': 'context:t1', 'target_mention_id': 'frequency', 'source_segment_ids': ['t3'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('t3',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': 'medication', 'owner_mention_id': 'context:t1', 'attribute_provenance': {'frequency': ['t3']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'frequency': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t3',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'frequency', 'value': 'duas vezes ao dia', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t3'], 'relation_ready': True}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'frequency', 'value': 'duas vezes ao dia', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t3'], 'relation_ready': True}], 'transition_signals': [], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': False}}, 'authority_metrics': {'resolver_decisions_total': 187, 'resolver_decisions_preserved': 164, 'resolver_decisions_overwritten': 23, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t3']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "t3"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "duas vezes ao dia"
+              }
+            ],
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "duas vezes ao dia"
+              }
+            ],
+            "signal_quality": {
+              "actual_nonready_signal_count": 0,
+              "actual_signal_count": 1,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 1,
+              "complete_but_wrong": 1,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "t3"
+                    ],
+                    "owner_mention_id": "context:t1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "t3"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "duas vezes ao dia"
+                  },
+                  "classification": "COMPLETE_AND_CORRECT",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "t3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "duas vezes ao dia"
+                  }
+                },
+                {
+                  "actual": null,
+                  "classification": "COMPLETE_BUT_WRONG",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "current_value": "duas vezes ao dia",
+                    "owner_type": "medication",
+                    "previous_value": "três vezes ao dia",
+                    "source_segment_ids": [
+                      "t3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "transition_type": "CHANGED_FROM"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 2,
+              "provenance_correct": 1,
+              "provenance_total": 2,
+              "state_correct": 1,
+              "state_total": 2,
+              "transition_correct": 0,
+              "transition_total": 1,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "atenolol",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "91af3eeaf40bdf4a06d11dcbc8468b21db42807d5f02a0217fd051df976e714f",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        },
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "atenolol"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "duas vezes ao dia"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "duas vezes ao dia",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t3"
+                ]
+              },
+              "relation_id": "context:t1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "duas vezes ao dia"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "duas vezes ao dia"
+              }
+            ]
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 0,
+            "actual_signal_count": 1,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 1,
+            "complete_but_wrong": 1,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "t3"
+                  ],
+                  "owner_mention_id": "context:t1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "t3"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "duas vezes ao dia"
+                },
+                "classification": "COMPLETE_AND_CORRECT",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "t3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "duas vezes ao dia"
+                }
+              },
+              {
+                "actual": null,
+                "classification": "COMPLETE_BUT_WRONG",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "current_value": "duas vezes ao dia",
+                  "owner_type": "medication",
+                  "previous_value": "três vezes ao dia",
+                  "source_segment_ids": [
+                    "t3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "transition_type": "CHANGED_FROM"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 2,
+            "provenance_correct": 1,
+            "provenance_total": 2,
+            "state_correct": 1,
+            "state_total": 2,
+            "transition_correct": 0,
+            "transition_total": 1,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "t3"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "duas vezes ao dia"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        }
+      },
+      "input_hash": "5c646242e01bddcb123b555beae6d51fd1b58be49974e8baacb88dc5fb8d9773",
+      "output_hash": "2294f41a22d1965370ce1927ed07b789e37cab2b8d8f6ef7a9eca995aabd0485",
+      "payload": {
+        "relations": [
+          [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "duas vezes ao dia"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "11dba580b09c804bb9ed1a64701560bf6d53f6356566536bbbf270bb265ac49d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "atenolol"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "duas vezes ao dia"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "duas vezes ao dia",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t3"
+                ]
+              },
+              "relation_id": "context:t1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "duas vezes ao dia"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "duas vezes ao dia"
+              }
+            ]
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 0,
+            "actual_signal_count": 1,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 1,
+            "complete_but_wrong": 1,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "t3"
+                  ],
+                  "owner_mention_id": "context:t1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "t3"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "duas vezes ao dia"
+                },
+                "classification": "COMPLETE_AND_CORRECT",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "t3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "duas vezes ao dia"
+                }
+              },
+              {
+                "actual": null,
+                "classification": "COMPLETE_BUT_WRONG",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "current_value": "duas vezes ao dia",
+                  "owner_type": "medication",
+                  "previous_value": "três vezes ao dia",
+                  "source_segment_ids": [
+                    "t3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "transition_type": "CHANGED_FROM"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 2,
+            "provenance_correct": 1,
+            "provenance_total": 2,
+            "state_correct": 1,
+            "state_total": 2,
+            "transition_correct": 0,
+            "transition_total": 1,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "t3"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "duas vezes ao dia"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "2294f41a22d1965370ce1927ed07b789e37cab2b8d8f6ef7a9eca995aabd0485",
+      "output_hash": "d32b5932e9a9e1d8f5aeb88081a8fb21b6feb6247546c347d8a09c5ae1c452a4",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O atenolol era tomado três vezes ao dia.\\npatient: A orientação nova deixou duas vezes ao dia.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:2:10', 'owner_span': (2, 10), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:t1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:t1', 'target': 'frequency', 'value': 'duas vezes ao dia', 'source_mention_id': 'context:t1', 'target_mention_id': 'frequency', 'source_segment_ids': ['t3'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('t3',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': 'medication', 'owner_mention_id': 'context:t1', 'attribute_provenance': {'frequency': ['t3']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'frequency': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t3',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'frequency', 'value': 'duas vezes ao dia', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t3'], 'relation_ready': True}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'frequency', 'value': 'duas vezes ao dia', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t3'], 'relation_ready': True}], 'transition_signals': [], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': False}}, 'authority_metrics': {'resolver_decisions_total': 187, 'resolver_decisions_preserved': 164, 'resolver_decisions_overwritten': 23, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t3']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "t3"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "duas vezes ao dia"
+              }
+            ],
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "duas vezes ao dia"
+              }
+            ],
+            "signal_quality": {
+              "actual_nonready_signal_count": 0,
+              "actual_signal_count": 1,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 1,
+              "complete_but_wrong": 1,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "t3"
+                    ],
+                    "owner_mention_id": "context:t1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "t3"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "duas vezes ao dia"
+                  },
+                  "classification": "COMPLETE_AND_CORRECT",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "t3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "duas vezes ao dia"
+                  }
+                },
+                {
+                  "actual": null,
+                  "classification": "COMPLETE_BUT_WRONG",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "current_value": "duas vezes ao dia",
+                    "owner_type": "medication",
+                    "previous_value": "três vezes ao dia",
+                    "source_segment_ids": [
+                      "t3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "transition_type": "CHANGED_FROM"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 2,
+              "provenance_correct": 1,
+              "provenance_total": 2,
+              "state_correct": 1,
+              "state_total": 2,
+              "transition_correct": 0,
+              "transition_total": 1,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "atenolol",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "89e84e41c3dca5e2cb5a6c6f83aa250a986ee6274e1651ee64554721eee92e28",
+      "changed_fields": [
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d32b5932e9a9e1d8f5aeb88081a8fb21b6feb6247546c347d8a09c5ae1c452a4",
+      "output_hash": "d32b5932e9a9e1d8f5aeb88081a8fb21b6feb6247546c347d8a09c5ae1c452a4",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O atenolol era tomado três vezes ao dia.\\npatient: A orientação nova deixou duas vezes ao dia.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:2:10', 'owner_span': (2, 10), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:t1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:t1', 'target': 'frequency', 'value': 'duas vezes ao dia', 'source_mention_id': 'context:t1', 'target_mention_id': 'frequency', 'source_segment_ids': ['t3'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('t3',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': 'medication', 'owner_mention_id': 'context:t1', 'attribute_provenance': {'frequency': ['t3']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'frequency': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t3',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'frequency', 'value': 'duas vezes ao dia', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t3'], 'relation_ready': True}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'frequency', 'value': 'duas vezes ao dia', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t3'], 'relation_ready': True}], 'transition_signals': [], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': False}}, 'authority_metrics': {'resolver_decisions_total': 187, 'resolver_decisions_preserved': 164, 'resolver_decisions_overwritten': 23, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t3']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "t3"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "duas vezes ao dia"
+              }
+            ],
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "duas vezes ao dia"
+              }
+            ],
+            "signal_quality": {
+              "actual_nonready_signal_count": 0,
+              "actual_signal_count": 1,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 1,
+              "complete_but_wrong": 1,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "t3"
+                    ],
+                    "owner_mention_id": "context:t1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "t3"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "duas vezes ao dia"
+                  },
+                  "classification": "COMPLETE_AND_CORRECT",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "t3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "duas vezes ao dia"
+                  }
+                },
+                {
+                  "actual": null,
+                  "classification": "COMPLETE_BUT_WRONG",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "current_value": "duas vezes ao dia",
+                    "owner_type": "medication",
+                    "previous_value": "três vezes ao dia",
+                    "source_segment_ids": [
+                      "t3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "transition_type": "CHANGED_FROM"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 2,
+              "provenance_correct": 1,
+              "provenance_total": 2,
+              "state_correct": 1,
+              "state_total": 2,
+              "transition_correct": 0,
+              "transition_total": 1,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "atenolol",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "9b3fdd3abea1047b85e729a0111f150c0a8d4566e095b58f90865326a0126c18",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d32b5932e9a9e1d8f5aeb88081a8fb21b6feb6247546c347d8a09c5ae1c452a4",
+      "output_hash": "d04e7fcffcdb889b581f3555002d6729b02ecee420f3150ff31a150b52eb489c",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": "medication.atenolol",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "três vezes ao dia"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "duas vezes ao dia"
+              }
+            ],
+            "surface": "atenolol"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-020",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "1873d12710337cae1f39351014ef4e9b78508ec071c1631043e17f63df956fd6",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d04e7fcffcdb889b581f3555002d6729b02ecee420f3150ff31a150b52eb489c",
+      "output_hash": "003ac30bc7b1e8e62941d56ce5d0bd39d6ba651f3f91529f026ec9b980117948",
+      "payload": {
+        "case_id": "D4-020",
+        "mismatch_count": 2
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-020",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

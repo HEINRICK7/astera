@@ -1,0 +1,335 @@
+{
+  "status": "executed",
+  "run_type": "v6-cross-segment-residual-analysis",
+  "corpus": "pt_br_clinical_semantics_v6",
+  "official_corpus": true,
+  "official_corpus_sha256": "1721ad71b7ef92c20a06fa9cae956098fefad0e079f92464d67f1bf9255a3f10",
+  "blind_baseline_path": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/context-validation-v6-blind-2026-08-15.json",
+  "repair_result_path": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/context-validation-v6-cross-segment-repair-2026-08-15.json",
+  "repair_version": "v1",
+  "repair_applied": false,
+  "holdout_ids_excluded": [
+    "sim-v6-0056",
+    "sim-v6-0057",
+    "sim-v6-0058"
+  ],
+  "mention_counts": {
+    "baseline_exact": 241,
+    "repair_exact": 257,
+    "total": 334
+  },
+  "relation_counts": {
+    "expected": 86,
+    "baseline_exact": 64,
+    "repair_exact": 64,
+    "RELATION_MISSING": 22,
+    "RELATION_WRONG_TARGET": 3
+  },
+  "cross_segment_relation_counts": {
+    "expected": 3,
+    "repair_exact": 0,
+    "RELATION_MISSING": 3,
+    "RELATION_WRONG_TARGET": 0
+  },
+  "residual_field_counts": {
+    "temporality": 3,
+    "status": 1
+  },
+  "residual_error_categories": {
+    "STATUS_CARRY_OVER": 1,
+    "TEMPORAL_CARRY_OVER": 3,
+    "LATERALITY_CARRY_OVER": 0,
+    "NEGATION_CARRY_OVER": 0,
+    "DOSE_CARRY_OVER": 0,
+    "EXPERIENCER_CARRY_OVER": 0,
+    "REFERENCE_RESOLUTION": 0,
+    "RELATION_MISSING": 3,
+    "RELATION_WRONG_TARGET": 0,
+    "RELATION_WRONG_SOURCE": 0,
+    "CONTEXT_OVERWRITE": 0,
+    "CONTEXT_STALE": 0,
+    "AMBIGUOUS_ANTECEDENT": 0,
+    "WRONG_SEGMENT_PROVENANCE": 4
+  },
+  "architecture_area_counts": {
+    "CONTEXT_STATE": 4,
+    "REFERENCE_RESOLUTION": 0,
+    "ATTRIBUTE_ATTACHMENT": 4,
+    "RELATION_RESOLUTION": 3
+  },
+  "cases_by_error_category": {
+    "STATUS_CARRY_OVER": 1,
+    "TEMPORAL_CARRY_OVER": 3
+  },
+  "examples": {
+    "TEMPORAL_CARRY_OVER": [
+      {
+        "case_id": "v6-c-002-1",
+        "surface": "mãe",
+        "text": "Médico: Sua mãe teve câncer e diabetes?\nPaciente: Teve, de mama. na consulta de hoje",
+        "segments": [
+          "seg_02_0_01",
+          "seg_02_0_02"
+        ],
+        "mismatches": {
+          "baseline": [
+            "temporality",
+            "experiencer"
+          ],
+          "repair": [
+            "temporality"
+          ]
+        },
+        "expected_relations": [],
+        "actual_relations": {
+          "baseline": [],
+          "repair": []
+        }
+      },
+      {
+        "case_id": "v6-c-002-2",
+        "surface": "mãe",
+        "text": "Médico: Sua mãe teve câncer e diabetes?\nPaciente: Teve, de mama. no retorno desta semana",
+        "segments": [
+          "seg_02_1_01",
+          "seg_02_1_02"
+        ],
+        "mismatches": {
+          "baseline": [
+            "temporality",
+            "experiencer"
+          ],
+          "repair": [
+            "temporality"
+          ]
+        },
+        "expected_relations": [],
+        "actual_relations": {
+          "baseline": [],
+          "repair": []
+        }
+      },
+      {
+        "case_id": "v6-c-002-3",
+        "surface": "mãe",
+        "text": "Médico: Sua mãe teve câncer e diabetes?\nPaciente: Teve, de mama. durante a revisão clínica",
+        "segments": [
+          "seg_02_2_01",
+          "seg_02_2_02"
+        ],
+        "mismatches": {
+          "baseline": [
+            "temporality",
+            "experiencer"
+          ],
+          "repair": [
+            "temporality"
+          ]
+        },
+        "expected_relations": [],
+        "actual_relations": {
+          "baseline": [],
+          "repair": []
+        }
+      }
+    ],
+    "RELATION_RESOLUTION": [
+      {
+        "case_id": "sim-v6-0049",
+        "surface": "losartana",
+        "text": "Médico: Continua usando losartana?\nPaciente: Não, parei na semana passada.",
+        "segments": [
+          "sim-v6-0049:segment-01",
+          "sim-v6-0049:segment-02"
+        ],
+        "mismatches": {
+          "baseline": [
+            "temporality",
+            "status"
+          ],
+          "repair": []
+        },
+        "expected_relations": [
+          [
+            "DISCONTINUED_AT",
+            "status",
+            "discontinued"
+          ]
+        ],
+        "actual_relations": {
+          "baseline": [],
+          "repair": []
+        }
+      },
+      {
+        "case_id": "sim-v6-0054",
+        "surface": "metformina",
+        "text": "Médico: Está tomando metformina?\nPaciente: Passei de 500 para 850 depois do jantar.",
+        "segments": [
+          "sim-v6-0054:segment-01",
+          "sim-v6-0054:segment-02"
+        ],
+        "mismatches": {
+          "baseline": [
+            "dose",
+            "dose_value",
+            "frequency",
+            "status"
+          ],
+          "repair": []
+        },
+        "expected_relations": [
+          [
+            "CHANGED_FROM",
+            "dose",
+            "500"
+          ],
+          [
+            "HAS_DOSE",
+            "dose",
+            "850"
+          ],
+          [
+            "HAS_FREQUENCY",
+            "frequency",
+            "depois do jantar"
+          ]
+        ],
+        "actual_relations": {
+          "baseline": [],
+          "repair": []
+        }
+      },
+      {
+        "case_id": "sim-v6-0055",
+        "surface": "enalapril",
+        "text": "Médico: Você ainda usa enalapril?\nPaciente: Parei no mês passado.",
+        "segments": [
+          "sim-v6-0055:segment-01",
+          "sim-v6-0055:segment-02"
+        ],
+        "mismatches": {
+          "baseline": [
+            "temporality",
+            "status"
+          ],
+          "repair": []
+        },
+        "expected_relations": [
+          [
+            "DISCONTINUED_AT",
+            "status",
+            "discontinued"
+          ]
+        ],
+        "actual_relations": {
+          "baseline": [],
+          "repair": []
+        }
+      }
+    ],
+    "STATUS_CARRY_OVER": [
+      {
+        "case_id": "sim-v6-0051",
+        "surface": "formigamento",
+        "text": "Médico: A dor melhorou?\nPaciente: Sim, não sinto mais, só formigamento na mão direita.",
+        "segments": [
+          "sim-v6-0051:segment-01",
+          "sim-v6-0051:segment-02"
+        ],
+        "mismatches": {
+          "baseline": [
+            "status"
+          ],
+          "repair": [
+            "status"
+          ]
+        },
+        "expected_relations": [
+          [
+            "HAS_LATERALITY",
+            "laterality",
+            "right"
+          ]
+        ],
+        "actual_relations": {
+          "baseline": [
+            [
+              "HAS_LATERALITY",
+              "laterality",
+              "right"
+            ]
+          ],
+          "repair": [
+            [
+              "HAS_LATERALITY",
+              "laterality",
+              "right"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "metrics_comparison": {
+    "baseline": {
+      "provider": "niede-pt-br-safety-rules",
+      "metadata": null,
+      "cases": 150,
+      "attribute_accuracy": {
+        "negated": 0.9401197604790419,
+        "certainty": 1.0,
+        "temporality": 0.9131736526946108,
+        "experiencer": 0.9880239520958084,
+        "laterality": 0.8461538461538461,
+        "dose": 0.9310344827586207,
+        "dose_value": 0.9310344827586207,
+        "dose_unit": 1.0,
+        "frequency": 0.7931034482758621,
+        "status": 0.4025974025974026,
+        "provenance": 1.0,
+        "mention_exact_match": 0.7215568862275449,
+        "relation_exact_match": 0.7441860465116279,
+        "scope_accuracy": 0.9634730538922156,
+        "cross_mention_isolation": 0.5766423357664233
+      },
+      "hard_gate_thresholds": {
+        "negated": 0.9,
+        "certainty": 0.9,
+        "temporality": 0.9,
+        "experiencer": 0.95,
+        "dose": 0.9,
+        "provenance": 1.0,
+        "mention_exact_match": 0.9,
+        "relation_exact_match": 0.95,
+        "scope_accuracy": 0.97,
+        "cross_mention_isolation": 0.95,
+        "cross_segment_resolution": 0.9,
+        "speaker_attribution": 0.95
+      },
+      "mean_latency_ms": 0.1875309101591712,
+      "startup_seconds": 0.0,
+      "hard_gate_passed": false,
+      "v6_metrics": {
+        "conversation_cases": 60,
+        "cross_segment_resolution": 0.4596774193548387,
+        "speaker_attribution": 0.967741935483871,
+        "cross_segment_mentions": 124,
+        "cross_segment_mean_latency_ms": 0.14375257348048412
+      }
+    },
+    "repair_v1": {
+      "mention_exact_match": 0.7694610778443114,
+      "relation_exact_match": 0.7441860465116279,
+      "scope_accuracy": 0.974251497005988,
+      "cross_mention_isolation": 0.6204379562043796,
+      "cross_segment_resolution": 0.5887096774193549,
+      "speaker_attribution": 0.9919354838709677,
+      "provenance": 1.0,
+      "hard_gate_passed": false
+    }
+  },
+  "next_step": "design-second-repair-after-residual-analysis",
+  "shadow_integration": false,
+  "production_promotion": false
+}

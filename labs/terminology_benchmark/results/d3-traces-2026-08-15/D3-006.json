@@ -1,0 +1,1270 @@
+{
+  "case_id": "D3-006",
+  "corpus_checksum": "cef75b21b8eae6ec940b9f6cffe3d27fbe5b050db838569f3f19ef68434f1b0d",
+  "corpus_version": "D3",
+  "decisions": [],
+  "evaluation_id": "d3-one-shot-4c137795-99d1-4973-a98d-20eb89de0617",
+  "mismatches": [
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "apixabana",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    },
+    {
+      "actual": [],
+      "confidence": 0.86,
+      "details": {
+        "mention": "apixabana",
+        "relation_output_count": 0
+      },
+      "expected": [
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "5 mg"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "d7dda54457cf896392e41edc8c259098b190c1c9bfa1ed82c6a1e5c7a46a59a7",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "b3dec209781d30ffa944dc7cf5843a6c4631610ed69c19b8a18ce92704fb36f0",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "fd843d2f528e394f170fc6039d8dc930c1661fb523fc02a7d983cea31f7404d6",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "q1",
+            "speaker": "clinician",
+            "text": "O anticoagulante apixabana aparece no plano."
+          },
+          {
+            "segment_id": "q2",
+            "speaker": "patient",
+            "text": "Uso 5 mg em cada tomada."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-006",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "560237a5d97e144b556c2941d301615d236944163acb71ed88fd135929e987fe",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "fd843d2f528e394f170fc6039d8dc930c1661fb523fc02a7d983cea31f7404d6",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "1bf3e028bf658e771ac06f36d129c8061a82893eb691c9a3462abf360e1b763c",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "apixabana"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "5 mg",
+            "dose_unit": "mg",
+            "dose_value": "5",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "0f8bd6aa7c47bff0303a068b821baec6bf731d9e1e3b66078322d7ddf51ea9f2",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "apixabana"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "5 mg",
+            "dose_unit": "mg",
+            "dose_value": "5",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "75416a0058cc0fdf1d6d2c48c58486357d88067b5a2ef8367fd2b03d09e18184",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "apixabana"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "5 mg",
+            "dose_unit": "mg",
+            "dose_value": "5",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "e07a53152f675420bc619fd095eb5353fe3757dbcfc606d4152a65b2cc068cd5",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          },
+          "dose": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q2"
+            ]
+          },
+          "dose_unit": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q2"
+            ]
+          },
+          "dose_value": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q2"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "8719c39f15108a8eafe9379931cbc26fc7322321de812b2b6d0102c3c4f7014d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "e07a53152f675420bc619fd095eb5353fe3757dbcfc606d4152a65b2cc068cd5",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "63262aa682626c0bb41ccfc7b9a102e996d41ca0e349ec0f14e6765f53a180c2",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "7108c1bba059776653326aae5e8124be20767bbc3f61fa503c8560a01b6a886d",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "dose": [
+              "q2"
+            ],
+            "dose_unit": [
+              "q2"
+            ],
+            "dose_value": [
+              "q2"
+            ]
+          },
+          "candidate_source": "q1",
+          "owner_mention_id": "context:q1",
+          "owner_type": null,
+          "source_segment_ids": [
+            "q1"
+          ],
+          "transition_evidence": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: O anticoagulante apixabana aparece no plano.\\npatient: Uso 5 mg em cada tomada.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:q1:17:26', 'owner_span': (17, 26), 'source_evidence_id': 'context:q1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('q1',), 'candidate_source': 'q1', 'owner_type': None, 'owner_mention_id': 'context:q1', 'attribute_provenance': {'dose': ['q2'], 'dose_value': ['q2'], 'dose_unit': ['q2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'certainty': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'temporality': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'experiencer': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'dose': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_value': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_unit': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 66, 'resolver_decisions_preserved': 45, 'resolver_decisions_overwritten': 21, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'q1', 'conversation_segment_ids': ['q2']}",
+            "relations": [],
+            "surface": "apixabana"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "f353d31bbe0da33be056a25ec0570232a00f9e35d2a459c4008a7dcce7f056d8",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        },
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "apixabana"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "5 mg",
+            "dose_unit": "mg",
+            "dose_value": "5",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        }
+      },
+      "input_hash": "7108c1bba059776653326aae5e8124be20767bbc3f61fa503c8560a01b6a886d",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "089e0c9d4f07e471605986d4af0dc0063b3489a9cfe7ae73a0a7fcd5fb8db6fb",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "apixabana"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "5 mg",
+            "dose_unit": "mg",
+            "dose_value": "5",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "e2582cf1f4ab065e760a230c3785e289ca2925e8dfd766dd1bb84428e2305979",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: O anticoagulante apixabana aparece no plano.\\npatient: Uso 5 mg em cada tomada.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:q1:17:26', 'owner_span': (17, 26), 'source_evidence_id': 'context:q1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('q1',), 'candidate_source': 'q1', 'owner_type': None, 'owner_mention_id': 'context:q1', 'attribute_provenance': {'dose': ['q2'], 'dose_value': ['q2'], 'dose_unit': ['q2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'certainty': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'temporality': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'experiencer': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'dose': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_value': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_unit': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 66, 'resolver_decisions_preserved': 45, 'resolver_decisions_overwritten': 21, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'q1', 'conversation_segment_ids': ['q2']}",
+            "relations": [],
+            "surface": "apixabana"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "c0fc3183e5ec89ad99ab8855e7e2b8e68769b36195de5845975a036b22800235",
+      "changed_fields": [
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "e2582cf1f4ab065e760a230c3785e289ca2925e8dfd766dd1bb84428e2305979",
+      "output_hash": "e2582cf1f4ab065e760a230c3785e289ca2925e8dfd766dd1bb84428e2305979",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: O anticoagulante apixabana aparece no plano.\\npatient: Uso 5 mg em cada tomada.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:q1:17:26', 'owner_span': (17, 26), 'source_evidence_id': 'context:q1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('q1',), 'candidate_source': 'q1', 'owner_type': None, 'owner_mention_id': 'context:q1', 'attribute_provenance': {'dose': ['q2'], 'dose_value': ['q2'], 'dose_unit': ['q2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'certainty': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'temporality': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'experiencer': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'dose': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_value': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_unit': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 66, 'resolver_decisions_preserved': 45, 'resolver_decisions_overwritten': 21, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'q1', 'conversation_segment_ids': ['q2']}",
+            "relations": [],
+            "surface": "apixabana"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "1f2dcc60e35e433b37a522c9b8fad760ae8afdeceabdb3728773bf855a68bdc4",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "e2582cf1f4ab065e760a230c3785e289ca2925e8dfd766dd1bb84428e2305979",
+      "output_hash": "5ba65145e705ec0b237faae6d503865c6cd5521ca80e47a86d0a966b8bed5298",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "dose": [
+                "q2"
+              ],
+              "dose_unit": [
+                "q2"
+              ],
+              "dose_value": [
+                "q2"
+              ],
+              "status": [
+                "q2"
+              ]
+            },
+            "concept_id": "medication.apixaban",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "5 mg",
+              "dose_unit": "mg",
+              "dose_value": "5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "HAS_DOSE": [
+                "q2"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "5 mg"
+              }
+            ],
+            "segment_ids": [
+              "q1",
+              "q2"
+            ],
+            "surface": "apixabana"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-006",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "adf4ef6fbe81dc5f6803644697c9d5038c02e195ab819df1e50e6125e8ecb9aa",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "5ba65145e705ec0b237faae6d503865c6cd5521ca80e47a86d0a966b8bed5298",
+      "output_hash": "3c966a60831888cbb03f62f2057fd00f03b1fe8cbe77c69c3bbb289c10b9c790",
+      "payload": {
+        "case_id": "D3-006",
+        "mismatch_count": 2
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-006",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

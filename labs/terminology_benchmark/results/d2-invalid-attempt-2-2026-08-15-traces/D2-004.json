@@ -1,0 +1,1076 @@
+{
+  "case_id": "D2-004",
+  "corpus_checksum": "d09c6ca1351ba31d1ece7cc371abc70ec79318f46bff04412149d23ccccb9811",
+  "corpus_version": "D2",
+  "decisions": [],
+  "evaluation_id": "d2-one-shot-d050b788-bba5-4d47-8460-b6b2cbb71529",
+  "mismatches": [
+    {
+      "actual": "past",
+      "confidence": 0.55,
+      "details": {
+        "mention": "enalapril",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "current",
+      "policy_rules": [
+        "ptbr-active-status",
+        "ptbr-current-active-medication"
+      ],
+      "semantic_dimension": "temporality",
+      "stage": "prediction"
+    },
+    {
+      "actual": "discontinued",
+      "confidence": 0.55,
+      "details": {
+        "mention": "enalapril",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [
+        "ptbr-active-status",
+        "ptbr-current-active-medication"
+      ],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "relation_type": "DISCONTINUED_AT",
+          "target": "status",
+          "value": "discontinued"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "enalapril",
+        "relation_output_count": 1
+      },
+      "expected": [],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "ff09e39196d8458637629dce70da5bd20c4c5b0f5af5cd83a0d19b27e3a186ab",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "4efc292c51bd562d2a8e03de50e7f8b226e5242bf5adf0d00dfb6f390331522d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "ca1bfa5a123a4b7e1f5aa5e24e4ca91d01861fb58da2e601de69b0e772b4f986",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "b1",
+            "speaker": "clinician",
+            "text": "A senhora ainda usa enalapril?"
+          },
+          {
+            "segment_id": "b2",
+            "speaker": "patient",
+            "text": "Uso, mas meu marido não usa mais nenhum remédio."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-004",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "bb5327d0d73dc307518ed19ec32237471e762ffbc60bd562bee9a126389bd7f5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "ca1bfa5a123a4b7e1f5aa5e24e4ca91d01861fb58da2e601de69b0e772b4f986",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-004",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "ae7b332ddad736a8342927599e8a2949e1e1588553a8dd5dedf83b3c70c58db5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:b1",
+              "owner_segment_id": "b1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            },
+            "surface": "enalapril"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "DISCONTINUED_AT",
+              "target": "status",
+              "value": "discontinued"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "discontinued",
+            "temporality": "past"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "resolved-discontinued-materialization-v2",
+                "source_segment_ids": [
+                  "b2"
+                ]
+              },
+              "relation_id": "context:b1:DISCONTINUED_AT:status",
+              "relation_type": "DISCONTINUED_AT",
+              "source": "context:b1",
+              "source_mention_id": "context:b1",
+              "source_segment_ids": [
+                "b2"
+              ],
+              "target": "status",
+              "target_mention_id": "status",
+              "value": "discontinued"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "DISCONTINUED_AT",
+                "target": "status",
+                "value": "discontinued"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-004",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "4bd77581cc03f332d7ffdee31af8b4f9ae824118fdca7d9cbdbecbfb92917120",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:b1",
+              "owner_segment_id": "b1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            },
+            "surface": "enalapril"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "DISCONTINUED_AT",
+              "target": "status",
+              "value": "discontinued"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "discontinued",
+            "temporality": "past"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "resolved-discontinued-materialization-v2",
+                "source_segment_ids": [
+                  "b2"
+                ]
+              },
+              "relation_id": "context:b1:DISCONTINUED_AT:status",
+              "relation_type": "DISCONTINUED_AT",
+              "source": "context:b1",
+              "source_mention_id": "context:b1",
+              "source_segment_ids": [
+                "b2"
+              ],
+              "target": "status",
+              "target_mention_id": "status",
+              "value": "discontinued"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "DISCONTINUED_AT",
+                "target": "status",
+                "value": "discontinued"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-004",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "f7b8720e1960ceb3c3de09cc77193b82cd5cd31640e72e5577f68ea02b821a24",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:b1",
+              "owner_segment_id": "b1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            },
+            "surface": "enalapril"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "DISCONTINUED_AT",
+              "target": "status",
+              "value": "discontinued"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "discontinued",
+            "temporality": "past"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "resolved-discontinued-materialization-v2",
+                "source_segment_ids": [
+                  "b2"
+                ]
+              },
+              "relation_id": "context:b1:DISCONTINUED_AT:status",
+              "relation_type": "DISCONTINUED_AT",
+              "source": "context:b1",
+              "source_mention_id": "context:b1",
+              "source_segment_ids": [
+                "b2"
+              ],
+              "target": "status",
+              "target_mention_id": "status",
+              "value": "discontinued"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "DISCONTINUED_AT",
+                "target": "status",
+                "value": "discontinued"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "500bb391a76b76e6f230254735838d907c2ea031f44c920fbd7c116195ed16d0",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:b1",
+            "owner_segment_id": "b1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-004",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "a587d63af6d8fc72220ab72ae8126b1a52614b356ac43e380782cc8c27e35576",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "500bb391a76b76e6f230254735838d907c2ea031f44c920fbd7c116195ed16d0",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-004",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "044915a33d439cbcaee13213511520a768fd7a7da3699a3f3baea15e2e6cd3ec",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "2c5d185b4f66f4d28c46dfc9f579c6f901096aca881bc4eded7245f824ea60dd",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:b1",
+              "owner_segment_id": "b1"
+            }
+          },
+          "candidate_source": "b1",
+          "source_segment_ids": [
+            "b1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: A senhora ainda usa enalapril?\\npatient: Uso, mas meu marido não usa mais nenhum remédio.', 'rules': ('ptbr-active-status', 'ptbr-current-active-medication'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b1:20:29', 'owner_span': (20, 29), 'source_evidence_id': 'context:b1'}}, 'projection': {'mention_id': 'context:b1:20:29', 'attributes': {'laterality': None, 'status': 'active'}, 'relations': [{'relation_id': 'context:b1:DISCONTINUED_AT:status', 'relation_type': 'DISCONTINUED_AT', 'source': 'context:b1', 'target': 'status', 'value': 'discontinued', 'source_mention_id': 'context:b1', 'target_mention_id': 'status', 'source_segment_ids': ['b2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-discontinued-materialization-v2', 'source_segment_ids': ('b2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('b1',), 'candidate_source': 'b1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b1', 'owner_segment_id': 'b1'}}}, 'authority_metrics': {'resolver_decisions_total': 44, 'resolver_decisions_preserved': 40, 'resolver_decisions_overwritten': 4, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'b1', 'conversation_segment_ids': ['b2']}",
+            "relations": [
+              {
+                "relation_type": "DISCONTINUED_AT",
+                "target": "status",
+                "value": "discontinued"
+              }
+            ],
+            "surface": "enalapril"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-004",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "c7201a428698ca08fd047c804cf2bb1c1c30686976d07030e3fc9a7028ac7166",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        },
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:b1",
+              "owner_segment_id": "b1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            },
+            "surface": "enalapril"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "DISCONTINUED_AT",
+              "target": "status",
+              "value": "discontinued"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "discontinued",
+            "temporality": "past"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "resolved-discontinued-materialization-v2",
+                "source_segment_ids": [
+                  "b2"
+                ]
+              },
+              "relation_id": "context:b1:DISCONTINUED_AT:status",
+              "relation_type": "DISCONTINUED_AT",
+              "source": "context:b1",
+              "source_mention_id": "context:b1",
+              "source_segment_ids": [
+                "b2"
+              ],
+              "target": "status",
+              "target_mention_id": "status",
+              "value": "discontinued"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "DISCONTINUED_AT",
+                "target": "status",
+                "value": "discontinued"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        }
+      },
+      "input_hash": "2c5d185b4f66f4d28c46dfc9f579c6f901096aca881bc4eded7245f824ea60dd",
+      "output_hash": "d16b474224cb4dc8720a2d1a969ba1dd730521974d7e625d183d367ebe28a448",
+      "payload": {
+        "relations": [
+          [
+            {
+              "relation_type": "DISCONTINUED_AT",
+              "target": "status",
+              "value": "discontinued"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-004",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "07aa3289e1c97845b86db4a94a1f095e3a1d213747ad268e8ec8085577dca95b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:b1",
+              "owner_segment_id": "b1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            },
+            "surface": "enalapril"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "DISCONTINUED_AT",
+              "target": "status",
+              "value": "discontinued"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "discontinued",
+            "temporality": "past"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "resolved-discontinued-materialization-v2",
+                "source_segment_ids": [
+                  "b2"
+                ]
+              },
+              "relation_id": "context:b1:DISCONTINUED_AT:status",
+              "relation_type": "DISCONTINUED_AT",
+              "source": "context:b1",
+              "source_mention_id": "context:b1",
+              "source_segment_ids": [
+                "b2"
+              ],
+              "target": "status",
+              "target_mention_id": "status",
+              "value": "discontinued"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "DISCONTINUED_AT",
+                "target": "status",
+                "value": "discontinued"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "d16b474224cb4dc8720a2d1a969ba1dd730521974d7e625d183d367ebe28a448",
+      "output_hash": "db3cca28352bb3ab1623b6349db17349d317bcc72ef279c44bb83fdfd9f5e9a8",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: A senhora ainda usa enalapril?\\npatient: Uso, mas meu marido não usa mais nenhum remédio.', 'rules': ('ptbr-active-status', 'ptbr-current-active-medication'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b1:20:29', 'owner_span': (20, 29), 'source_evidence_id': 'context:b1'}}, 'projection': {'mention_id': 'context:b1:20:29', 'attributes': {'laterality': None, 'status': 'active'}, 'relations': [{'relation_id': 'context:b1:DISCONTINUED_AT:status', 'relation_type': 'DISCONTINUED_AT', 'source': 'context:b1', 'target': 'status', 'value': 'discontinued', 'source_mention_id': 'context:b1', 'target_mention_id': 'status', 'source_segment_ids': ['b2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-discontinued-materialization-v2', 'source_segment_ids': ('b2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('b1',), 'candidate_source': 'b1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b1', 'owner_segment_id': 'b1'}}}, 'authority_metrics': {'resolver_decisions_total': 44, 'resolver_decisions_preserved': 40, 'resolver_decisions_overwritten': 4, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'b1', 'conversation_segment_ids': ['b2']}",
+            "relations": [
+              {
+                "relation_type": "DISCONTINUED_AT",
+                "target": "status",
+                "value": "discontinued"
+              }
+            ],
+            "surface": "enalapril"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-004",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "a2bee6b80dec75d54b1f2c4837b799686403b8ac3079d9ba549b46760c95ebe9",
+      "changed_fields": [
+        "status",
+        "temporality"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "db3cca28352bb3ab1623b6349db17349d317bcc72ef279c44bb83fdfd9f5e9a8",
+      "output_hash": "db3cca28352bb3ab1623b6349db17349d317bcc72ef279c44bb83fdfd9f5e9a8",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: A senhora ainda usa enalapril?\\npatient: Uso, mas meu marido não usa mais nenhum remédio.', 'rules': ('ptbr-active-status', 'ptbr-current-active-medication'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b1:20:29', 'owner_span': (20, 29), 'source_evidence_id': 'context:b1'}}, 'projection': {'mention_id': 'context:b1:20:29', 'attributes': {'laterality': None, 'status': 'active'}, 'relations': [{'relation_id': 'context:b1:DISCONTINUED_AT:status', 'relation_type': 'DISCONTINUED_AT', 'source': 'context:b1', 'target': 'status', 'value': 'discontinued', 'source_mention_id': 'context:b1', 'target_mention_id': 'status', 'source_segment_ids': ['b2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-discontinued-materialization-v2', 'source_segment_ids': ('b2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('b1',), 'candidate_source': 'b1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b1', 'owner_segment_id': 'b1'}}}, 'authority_metrics': {'resolver_decisions_total': 44, 'resolver_decisions_preserved': 40, 'resolver_decisions_overwritten': 4, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'b1', 'conversation_segment_ids': ['b2']}",
+            "relations": [
+              {
+                "relation_type": "DISCONTINUED_AT",
+                "target": "status",
+                "value": "discontinued"
+              }
+            ],
+            "surface": "enalapril"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-004",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "c6288491229e1462fd6980806292f1085a350fafd00c3d4393fbd1e2cdd8fe51",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "db3cca28352bb3ab1623b6349db17349d317bcc72ef279c44bb83fdfd9f5e9a8",
+      "output_hash": "1eda19cada361968efcf57abb7ce686a4091e6c96d722fc91657173caa072396",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "status": [
+                "b2"
+              ]
+            },
+            "concept_id": "medication.enalapril",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "b1",
+              "b2"
+            ],
+            "surface": "enalapril"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-004",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "bba7654e7937c9fee67bce840687328f5755ab16e21cbaf2d458b675caaa62d5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "1eda19cada361968efcf57abb7ce686a4091e6c96d722fc91657173caa072396",
+      "output_hash": "8167724dcc8e9e501691952e59dbc89d1b60ed20240fd036a34991a2322697c3",
+      "payload": {
+        "case_id": "D2-004",
+        "mismatch_count": 3
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-004",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

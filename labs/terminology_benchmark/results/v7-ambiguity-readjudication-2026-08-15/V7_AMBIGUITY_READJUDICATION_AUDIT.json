@@ -1,0 +1,82 @@
+{
+  "status": "V7_COMPOSITION_AUTHORIZATION_GATE",
+  "policy_version": "1.3",
+  "scope": "AMBIGUOUS_ONLY_BATCHES_05_08",
+  "total_cases_in_audited_scope": 120,
+  "decision_counts": {
+    "APPROVED": 110,
+    "AMBIGUOUS": 0,
+    "REJECTED": 10,
+    "PENDING_HUMAN": 0
+  },
+  "mentions": 160,
+  "relations": 129,
+  "provenance_completeness": "PASS",
+  "adjudication_consistency": "PASS",
+  "adjudication_consistency_errors": [],
+  "policy_conformance": "PASS",
+  "policy_conformance_errors": [],
+  "structural_validation": "PASS",
+  "structural_errors": [],
+  "cluster_remaining": {
+    "AMB-CORR-001": 0,
+    "AMB-FREQ-001": 0,
+    "AMB-SELF-001": 0,
+    "AMB-SPEAKER-001": 0,
+    "AMB-TEMP-001": 0
+  },
+  "cluster_final_counts": {
+    "AMB-CORR-001": {
+      "REJECTED": 10
+    },
+    "AMB-FREQ-001": {
+      "APPROVED": 10
+    },
+    "AMB-SELF-001": {
+      "APPROVED": 10
+    },
+    "AMB-SPEAKER-001": {
+      "APPROVED": 10
+    },
+    "AMB-TEMP-001": {
+      "APPROVED": 10
+    }
+  },
+  "integrity_leakage_gate": "PASS",
+  "integrity_details": {
+    "changed_case_count": 50,
+    "source_ambiguous_count": 50,
+    "changed_ids_match_source_ambiguous": true,
+    "approved_carry_forward_unchanged": true,
+    "resolver_execution": true,
+    "runtime_predictions_used": true,
+    "previous_benchmark_predictions_used": true,
+    "official_composition_materialized": false,
+    "corpus_freeze_complete": false
+  },
+  "proposed_composition_and_manifest": {
+    "status": "PROPOSED_NOT_MATERIALIZED",
+    "policy_version": "1.3",
+    "scope": "V7 cases 121-240 readjudication audit",
+    "include_decisions": [
+      "APPROVED"
+    ],
+    "exclude_decisions": [
+      "REJECTED"
+    ],
+    "case_count_in_scope": 120,
+    "approved_in_scope": 110,
+    "rejected_in_scope": 10,
+    "pending_or_ambiguous_in_scope": 0,
+    "official_240_case_manifest_ready": false,
+    "manifest_blockers": [
+      "official composition not authorized",
+      "batches 01-04 are not materialized in this readjudication artifact"
+    ],
+    "manifest_rule": "include only cases with final APPROVED adjudication; exclude REJECTED; preserve source/provenance and policy version"
+  },
+  "blind_run": "BLOCKED",
+  "shadow_integration": "BLOCKED",
+  "production": "BLOCKED",
+  "next_action": "HUMAN_GATE_COMPOSITION_AUTHORIZATION"
+}

@@ -36,3 +36,19 @@ Todos os agentes devem ler obrigatoriamente:
 - DOCUMENT_CONVENTIONS.md
 - GLOSSARY.md
 - Astera Flow
+- Constituição de Engenharia (`engineering/README.md` e documentos
+  `engineering/ASTERA-ENG-*.md` aplicáveis)
+
+## Hierarquia de governança
+
+Em conflitos, a ordem oficial é:
+
+1. Constituição de Engenharia;
+2. ADRs;
+3. AGENTS.md;
+4. documentação complementar;
+5. README.
+
+Essa ordem é instituída pelo [ADR-015 — Engineering Governance](adrs/ADR-015-engineering-governance.md).
+Os documentos são obrigatórios para desenvolvimento humano, agentes de IA,
+revisão de código, validação de PR, Definition of Done, auditorias e releases.

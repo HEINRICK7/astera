@@ -1,0 +1,421 @@
+{
+  "status": "executed",
+  "run_type": "v6-repair-v6-status-only",
+  "repair_version": "v6",
+  "repair_scope": "STATUS_ONLY",
+  "official_corpus": true,
+  "official_corpus_sha256": "1721ad71b7ef92c20a06fa9cae956098fefad0e079f92464d67f1bf9255a3f10",
+  "policy": "SEM-STATUS-001",
+  "policy_version": "1.2",
+  "type_b_status_findings_excluded_from_quality_gate": 39,
+  "status_findings_from_prior_v1_1_queue": 9,
+  "new_status_gold_review_findings_exposed_by_v1_2": 30,
+  "status_gold_review_queue": [
+    {
+      "case_id": "sim-v6-0005",
+      "surface": "dor",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0005",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0006",
+      "surface": "formigamento",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0006",
+      "surface": "dor",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0007",
+      "surface": "formigamento",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0008",
+      "surface": "queimação",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0008",
+      "surface": "dormência",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0009",
+      "surface": "falta de ar",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0010",
+      "surface": "tosse seca",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0013",
+      "surface": "peso",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0014",
+      "surface": "dor",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "historical",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0014",
+      "surface": "dormência",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0027",
+      "surface": "dormência",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0027",
+      "surface": "dor",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0028",
+      "surface": "dor",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0028",
+      "surface": "tremor",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0029",
+      "surface": "pressão",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0029",
+      "surface": "zumbido",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0030",
+      "surface": "rigidez",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0030",
+      "surface": "sensibilidade",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0031",
+      "surface": "inchaço",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0031",
+      "surface": "coceira",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0032",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0033",
+      "surface": "queimação",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0033",
+      "surface": "dormência",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0034",
+      "surface": "cólica",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0034",
+      "surface": "tontura",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0035",
+      "surface": "dor",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0036",
+      "surface": "dor abdominal",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0036",
+      "surface": "sensibilidade",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0037",
+      "surface": "náusea",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0038",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0039",
+      "surface": "cólica",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0040",
+      "surface": "desequilíbrio",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0041",
+      "surface": "dor epigástrica",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0042",
+      "surface": "mal-estar",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0048",
+      "surface": "queda",
+      "occurrence": 0,
+      "entity_type": "event",
+      "gold_status": "historical",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0048",
+      "surface": "dor",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    },
+    {
+      "case_id": "sim-v6-0051",
+      "surface": "formigamento",
+      "occurrence": 0,
+      "entity_type": "symptom",
+      "gold_status": "present",
+      "reason": "v1.2 reserves status for explicit lifecycle; assertion/past status requires gold review"
+    }
+  ],
+  "preexisting_type_b_fields_excluded_from_quality_gate": 10,
+  "type_b_fields_excluded_from_quality_gate": 49,
+  "policy_aligned_v6_score": {
+    "mention_exact_match": 0.9940119760479041,
+    "relation_exact_match": 1.0,
+    "scope_accuracy": 0.9987951807228915,
+    "cross_mention_isolation": 0.9854014598540146,
+    "cross_segment_resolution": 0.9838709677419355,
+    "speaker_attribution": 1.0,
+    "provenance": 1.0,
+    "field_accuracy": {
+      "negated": 0.9970059880239521,
+      "certainty": 1.0,
+      "temporality": 0.9969135802469136,
+      "experiencer": 1.0,
+      "laterality": 1.0,
+      "dose": 1.0,
+      "dose_value": 1.0,
+      "dose_unit": 1.0,
+      "frequency": 1.0,
+      "route": 1.0,
+      "status": 1.0
+    },
+    "hard_gate_passed": true
+  },
+  "policy_harness_v1_2": {
+    "mention_exact_match": 0.8592814371257484,
+    "relation_exact_match": 1.0,
+    "scope_accuracy": 0.9946107784431137,
+    "cross_mention_isolation": 0.7664233576642335,
+    "cross_segment_resolution": 0.6532258064516129,
+    "speaker_attribution": 1.0,
+    "provenance": 1.0,
+    "hard_gate_passed": false,
+    "field_accuracy": {
+      "negated": 0.9970059880239521,
+      "certainty": 1.0,
+      "temporality": 0.9760479041916168,
+      "experiencer": 1.0,
+      "laterality": 1.0,
+      "dose": 1.0,
+      "dose_value": 1.0,
+      "dose_unit": 1.0,
+      "frequency": 1.0,
+      "status": 0.4935064935064935,
+      "provenance": 1.0,
+      "mention_exact_match": 0.8592814371257484,
+      "relation_exact_match": 1.0,
+      "scope_accuracy": 0.9946107784431137,
+      "cross_mention_isolation": 0.7664233576642335
+    }
+  },
+  "raw_v6_score": {
+    "mention_exact_match": 0.8592814371257484,
+    "relation_exact_match": 1.0,
+    "scope_accuracy": 0.9946107784431137,
+    "cross_mention_isolation": 0.7664233576642335,
+    "cross_segment_resolution": 0.6532258064516129,
+    "speaker_attribution": 1.0,
+    "provenance": 1.0,
+    "hard_gate_passed": false,
+    "field_accuracy": {
+      "negated": 0.9970059880239521,
+      "certainty": 1.0,
+      "temporality": 0.9760479041916168,
+      "experiencer": 1.0,
+      "laterality": 1.0,
+      "dose": 1.0,
+      "dose_value": 1.0,
+      "dose_unit": 1.0,
+      "frequency": 1.0,
+      "status": 0.4935064935064935,
+      "provenance": 1.0,
+      "mention_exact_match": 0.8592814371257484,
+      "relation_exact_match": 1.0,
+      "scope_accuracy": 0.9946107784431137,
+      "cross_mention_isolation": 0.7664233576642335
+    }
+  },
+  "authority_metrics": {
+    "resolver_decisions_total": 4092,
+    "resolver_decisions_preserved": 4011,
+    "resolver_decisions_overwritten": 81,
+    "legacy_fallback_count": 0,
+    "ambiguous_forced_resolution_count": 0
+  },
+  "resolver_changes": 1,
+  "gold_changes": 0,
+  "corpus_changes": 0,
+  "holdout_evaluation": "NOT_EXECUTED",
+  "v7": "BLOCKED",
+  "shadow_integration": "BLOCKED",
+  "production_promotion": "BLOCKED",
+  "next_action": "FREEZE_RESOLVER_AND_HUMAN_GATE_FOR_HOLDOUTS"
+}

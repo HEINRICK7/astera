@@ -1,0 +1,545 @@
+{
+  "case_id": "D1-035",
+  "corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "corpus_version": "D1",
+  "decisions": [],
+  "evaluation_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "mismatches": [
+    {
+      "actual": true,
+      "confidence": 0.55,
+      "details": {
+        "mention": "atenolol",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": false,
+      "policy_rules": [],
+      "semantic_dimension": "negated",
+      "stage": "prediction"
+    },
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "atenolol",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+          "relation_type": "HAS_FREQUENCY",
+          "source": "context:s1",
+          "source_mention_id": "context:s1",
+          "source_segment_ids": [
+            "s2"
+          ],
+          "target": "frequency",
+          "target_mention_id": "frequency",
+          "value": "de manhã"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "atenolol",
+        "projection_relation_count": 1
+      },
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "à noite"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "de manhã"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "10f74d814b502ba4d7d0c8b1b68057b800c0cd039d4f9c10ec89716d67f4f87a",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": null,
+      "output_hash": "4b278c333673eb6e6f2bcf0d9e5eba5287e6145c9e295557f8726a8dcbd122ce",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "patient",
+            "text": "Tomo atenolol à noite."
+          },
+          {
+            "segment_id": "s2",
+            "speaker": "patient",
+            "text": "Não, corrijo: tomo de manhã."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-035",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "d1aaa06713362ef1b397b0037fc3b97f4b15699ade4da64c80d0a0941f7fc8fa",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "4b278c333673eb6e6f2bcf0d9e5eba5287e6145c9e295557f8726a8dcbd122ce",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-035",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "021127e273cd18155124031f716dbdfeeb2351b15255ebe2d3bb74e080b599a5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-035",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "947ff7e67ea83bfac46b1292034c028b883f36ed8c4535f1efc3912282d00550",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-035",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "399fcd8044db10424a0be33ae4f93ab66c990e905fdb2d4a0d89acdfd595d6b9",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-035",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "9e0f0e03f2078f0358f295bbd2b3077b8cf9b7a77d22e4ac952a35dd1c92e0c7",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-035",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "ac116f7429ce43e639c912076c9298cb5071c31beafa83dd090f0e1e200e8388",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "c1b8e978b29417a9aebe8c0abc52e80d0d08ea81c94f40b1dad812486fe6ff66",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            }
+          },
+          "candidate_source": "s1",
+          "source_segment_ids": [
+            "s1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tomo atenolol à noite.\\npatient: Não, corrijo: tomo de manhã.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:5:13', 'owner_span': (5, 13), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:5:13', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:s1', 'target': 'frequency', 'value': 'de manhã', 'source_mention_id': 'context:s1', 'target_mention_id': 'frequency', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'frequency', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 462, 'resolver_decisions_preserved': 427, 'resolver_decisions_overwritten': 35, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "frequency",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+                "relation_type": "HAS_FREQUENCY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "frequency",
+                "target_mention_id": "frequency",
+                "value": "de manhã"
+              }
+            ],
+            "surface": "atenolol"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-035",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "ad7a9545e5ccd4980015b1369fe6cddb0ce67d831461e2f644d717d83df467ed",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "c1b8e978b29417a9aebe8c0abc52e80d0d08ea81c94f40b1dad812486fe6ff66",
+      "output_hash": "38eed97fffd4b38800d7aad4b37f4ba64a91ab522317bdf5abe4abd3ab8ff125",
+      "payload": {
+        "relations": [
+          [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "resolved-attribute-materialization",
+                "source_segment_ids": [
+                  "s2"
+                ]
+              },
+              "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:s1",
+              "source_mention_id": "context:s1",
+              "source_segment_ids": [
+                "s2"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "de manhã"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-035",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "5e950e0406f6b8e3ad7e1f5217d568ba7b6f1448d3c86757c0b0e60d72e8ab83",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "38eed97fffd4b38800d7aad4b37f4ba64a91ab522317bdf5abe4abd3ab8ff125",
+      "output_hash": "6109bea3865f8988e6fe3544d520295ea1638d58c4a88986936dce54e1836152",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tomo atenolol à noite.\\npatient: Não, corrijo: tomo de manhã.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:5:13', 'owner_span': (5, 13), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:5:13', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:s1', 'target': 'frequency', 'value': 'de manhã', 'source_mention_id': 'context:s1', 'target_mention_id': 'frequency', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'frequency', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 462, 'resolver_decisions_preserved': 427, 'resolver_decisions_overwritten': 35, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "frequency",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+                "relation_type": "HAS_FREQUENCY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "frequency",
+                "target_mention_id": "frequency",
+                "value": "de manhã"
+              }
+            ],
+            "surface": "atenolol"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-035",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "cee8166a0219c4a874e18e72d4a34e73bec79457a2640a3770a973d43d932109",
+      "changed_fields": [
+        "negated",
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "6109bea3865f8988e6fe3544d520295ea1638d58c4a88986936dce54e1836152",
+      "output_hash": "6109bea3865f8988e6fe3544d520295ea1638d58c4a88986936dce54e1836152",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tomo atenolol à noite.\\npatient: Não, corrijo: tomo de manhã.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:5:13', 'owner_span': (5, 13), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:5:13', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:s1', 'target': 'frequency', 'value': 'de manhã', 'source_mention_id': 'context:s1', 'target_mention_id': 'frequency', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'frequency', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 462, 'resolver_decisions_preserved': 427, 'resolver_decisions_overwritten': 35, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "frequency",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+                "relation_type": "HAS_FREQUENCY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "frequency",
+                "target_mention_id": "frequency",
+                "value": "de manhã"
+              }
+            ],
+            "surface": "atenolol"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-035",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "5c1d583a4a5e6a651aaf46d2a84e3bde468f00f5ecef0ce35ddce2d944731edf",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "6109bea3865f8988e6fe3544d520295ea1638d58c4a88986936dce54e1836152",
+      "output_hash": "cfc617c569fa10a6807037f753c05fdadcc67fbb7792e04768cadccf7ba8659f",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "frequency": [
+                "s2"
+              ],
+              "status": [
+                "s1"
+              ]
+            },
+            "concept_id": "medication.atenolol",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "de manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "CHANGED_FROM": [
+                "s2"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "à noite"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "de manhã"
+              }
+            ],
+            "segment_ids": [
+              "s1",
+              "s2"
+            ],
+            "surface": "atenolol"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-035",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "38266dd04728756f753bca1d93bb1abfe1624b785c3fd94a8ba6776335daf8cd",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "cfc617c569fa10a6807037f753c05fdadcc67fbb7792e04768cadccf7ba8659f",
+      "output_hash": "d90314d0209fa7a62ace5e6e4082911434bb8ba5c1b6166473d879ce652c5201",
+      "payload": {
+        "case_id": "D1-035"
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-035",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v1"
+}

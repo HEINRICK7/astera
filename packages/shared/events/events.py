@@ -1,11 +1,11 @@
 from pydantic import BaseModel, Field
 from typing import Any, Dict, Optional
-from datetime import datetime
+from datetime import datetime, timezone
 import uuid
 
 class BaseEvent(BaseModel):
     event_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    timestamp: datetime = Field(default_factory=datetime.utcnow)
+    timestamp: datetime = Field(default_factory=lambda: datetime.now(tz=timezone.utc))
     version: str = "1.0"
 
 class WorkflowStartedEvent(BaseEvent):

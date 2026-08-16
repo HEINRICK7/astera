@@ -1,0 +1,508 @@
+{
+  "case_id": "D1-002",
+  "corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "corpus_version": "D1",
+  "decisions": [],
+  "evaluation_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "mismatches": [
+    {
+      "actual": "à noite",
+      "confidence": 0.55,
+      "details": {
+        "mention": "tremor",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": null,
+      "policy_rules": [],
+      "semantic_dimension": "frequency",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s3"
+            ]
+          },
+          "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+          "relation_type": "HAS_FREQUENCY",
+          "source": "context:s1",
+          "source_mention_id": "context:s1",
+          "source_segment_ids": [
+            "s3"
+          ],
+          "target": "frequency",
+          "target_mention_id": "frequency",
+          "value": "à noite"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "tremor",
+        "projection_relation_count": 1
+      },
+      "expected": [],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "e73cd6a327f9757e91bade04e5fb654b2596e6d1ceb3f6c52372884600ba8ced",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": null,
+      "output_hash": "8749a1d39c7283463673062d154269f607582a706fd690d7f80562a298277ccc",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "patient",
+            "text": "Tenho um tremor discreto nas mãos."
+          },
+          {
+            "segment_id": "s2",
+            "speaker": "clinician",
+            "text": "Esse sintoma acontece em repouso ou em movimento?"
+          },
+          {
+            "segment_id": "s3",
+            "speaker": "patient",
+            "text": "Em repouso, principalmente à noite."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-002",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "9f51ccd5c8ed626c195113818dbe9daa23341ce759b6db27c644c7240ffaf34d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "8749a1d39c7283463673062d154269f607582a706fd690d7f80562a298277ccc",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "812e4f296df9a4164bcf937be9f5d9e3995369056bc3984943eaea4962b95bee",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "7967a9c91125805c66a6517c657675b8bfefacbbc43fea8a9da96db83c12007e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "b945b5d4399c8d333794b70ca3e860fd77480e1ad1991aa9e1a3570166ed549d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "7b3af5309f5859bdeca517615601ae9906e442b3ba39601b0d4dd1904b8511b9",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "55263712292d9f3e99d757fe3b99dceb1a6f802157f2263535587f0e3387cecb",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "1f9e6e3acde7431a03b7642e9e26eaeebb3649d9f0a2e599137e290221b6c252",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            }
+          },
+          "candidate_source": "s1",
+          "source_segment_ids": [
+            "s1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tenho um tremor discreto nas mãos.\\nclinician: Esse sintoma acontece em repouso ou em movimento?\\npatient: Em repouso, principalmente à noite.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:9:15', 'owner_span': (9, 15), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:9:15', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:s1', 'target': 'frequency', 'value': 'à noite', 'source_mention_id': 'context:s1', 'target_mention_id': 'frequency', 'source_segment_ids': ['s3'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'frequency', 'source_segment_ids': ('s3',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 22, 'resolver_decisions_preserved': 21, 'resolver_decisions_overwritten': 1, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2', 's3']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "frequency",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s3"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+                "relation_type": "HAS_FREQUENCY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s3"
+                ],
+                "target": "frequency",
+                "target_mention_id": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "surface": "tremor"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "5a8acefe10d7158b68844e1bf8be0be4c37db8c0bb1f93a9dbae7625a4965cf4",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "1f9e6e3acde7431a03b7642e9e26eaeebb3649d9f0a2e599137e290221b6c252",
+      "output_hash": "0783a11cb8b11d22ba1a3c45a5596491a1b3f2814b0107b3f8c2bcbd16af7aad",
+      "payload": {
+        "relations": [
+          [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "resolved-attribute-materialization",
+                "source_segment_ids": [
+                  "s3"
+                ]
+              },
+              "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:s1",
+              "source_mention_id": "context:s1",
+              "source_segment_ids": [
+                "s3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "à noite"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "d8cd3898a6506553656206230ffffa94c997cdb58251b3af30523f2501a0a05e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "0783a11cb8b11d22ba1a3c45a5596491a1b3f2814b0107b3f8c2bcbd16af7aad",
+      "output_hash": "5e09fa16c4ea36d2287424e48a74c5dbe554a0c69703aa9accb9b544273ad480",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tenho um tremor discreto nas mãos.\\nclinician: Esse sintoma acontece em repouso ou em movimento?\\npatient: Em repouso, principalmente à noite.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:9:15', 'owner_span': (9, 15), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:9:15', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:s1', 'target': 'frequency', 'value': 'à noite', 'source_mention_id': 'context:s1', 'target_mention_id': 'frequency', 'source_segment_ids': ['s3'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'frequency', 'source_segment_ids': ('s3',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 22, 'resolver_decisions_preserved': 21, 'resolver_decisions_overwritten': 1, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2', 's3']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "frequency",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s3"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+                "relation_type": "HAS_FREQUENCY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s3"
+                ],
+                "target": "frequency",
+                "target_mention_id": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "surface": "tremor"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "36534dd9f76559ab53fb29bd0402922b80dbb264421248ba0516466feebdd3c6",
+      "changed_fields": [
+        "frequency"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "5e09fa16c4ea36d2287424e48a74c5dbe554a0c69703aa9accb9b544273ad480",
+      "output_hash": "5e09fa16c4ea36d2287424e48a74c5dbe554a0c69703aa9accb9b544273ad480",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tenho um tremor discreto nas mãos.\\nclinician: Esse sintoma acontece em repouso ou em movimento?\\npatient: Em repouso, principalmente à noite.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:9:15', 'owner_span': (9, 15), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:9:15', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:s1', 'target': 'frequency', 'value': 'à noite', 'source_mention_id': 'context:s1', 'target_mention_id': 'frequency', 'source_segment_ids': ['s3'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'frequency', 'source_segment_ids': ('s3',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 22, 'resolver_decisions_preserved': 21, 'resolver_decisions_overwritten': 1, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2', 's3']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "frequency",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s3"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+                "relation_type": "HAS_FREQUENCY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s3"
+                ],
+                "target": "frequency",
+                "target_mention_id": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "surface": "tremor"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "3929c683c2c84a9b7a08da36d468ec916dc8ff505ba2275f4420becf8b891a18",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "5e09fa16c4ea36d2287424e48a74c5dbe554a0c69703aa9accb9b544273ad480",
+      "output_hash": "cff0db924b50ddc02116e0a739fa898a24686826ce0fa8f5575b18dcba5dda16",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "temporality": [
+                "s1"
+              ]
+            },
+            "concept_id": "symptom.tremor",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "s1",
+              "s3"
+            ],
+            "surface": "tremor"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-002",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "4004e45537cad64baf09bda320ac1acb99470f9d5813835f7aa53b5ff1b5225f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "cff0db924b50ddc02116e0a739fa898a24686826ce0fa8f5575b18dcba5dda16",
+      "output_hash": "786b0b294f21dbfc7c37473555f80b8fd16782e298a60073b5dbd09f8ed20e62",
+      "payload": {
+        "case_id": "D1-002"
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-002",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v1"
+}

@@ -1,0 +1,1818 @@
+{
+  "case_id": "D4-010",
+  "corpus_checksum": "1ad10a39a899906ab35455d6ce51bedcfd20f2f7776a9e6e59155ed9a1cb0938",
+  "corpus_version": "D4",
+  "decisions": [],
+  "evaluation_id": "d4-one-shot-0877e9b7-fac6-4881-8ab7-18d46356f719",
+  "mismatches": [
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "levotiroxina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "7451a83307e83f27f337297bdf2c3fc72c390ccae4f76e2cc7a1ad880a186852",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "5ae093cc83ca189af90ecd7ee0a6be7887a04e1e80e4160ce4dcaa6d1f5e7763",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "afa91a9a8a1431e8d6d743d208bed79ee6304569dbcb0e2ba3b37cb5abe65d66",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "f1",
+            "speaker": "patient",
+            "text": "Levotiroxina foi separada dos comprimidos da noite."
+          },
+          {
+            "segment_id": "f3",
+            "speaker": "patient",
+            "text": "Ela deve ser tomada antes do café."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-010",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "c133b8c64a5d0e585991717862404b61b11dc1fc66f027d459084d22dc6c7ffd",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "afa91a9a8a1431e8d6d743d208bed79ee6304569dbcb0e2ba3b37cb5abe65d66",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "7020743ac028bc62c914776ddf564e1122cf8357f5b56114d18348d6e304ab3e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "levotiroxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "antes do café"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "antes do café",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "f3"
+                ]
+              },
+              "relation_id": "context:f1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:f1",
+              "source_mention_id": "context:f1",
+              "source_segment_ids": [
+                "f3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "antes do café"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "antes do café"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "80eb50a2a178a798f3de9be7ff32c1fed69b4c7fcba6b2c13728bc2d3824f109",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "levotiroxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "antes do café"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "antes do café",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "f3"
+                ]
+              },
+              "relation_id": "context:f1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:f1",
+              "source_mention_id": "context:f1",
+              "source_segment_ids": [
+                "f3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "antes do café"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "antes do café"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "ae691ecb81bde88f32fd0107dc2a2867ce85d479806fdae7571e1dab413d99fd",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "levotiroxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "antes do café"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "antes do café",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "f3"
+                ]
+              },
+              "relation_id": "context:f1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:f1",
+              "source_mention_id": "context:f1",
+              "source_segment_ids": [
+                "f3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "antes do café"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "antes do café"
+              }
+            ]
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 0,
+            "actual_signal_count": 1,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 1,
+            "complete_but_wrong": 0,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "f3"
+                  ],
+                  "owner_mention_id": "context:f1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "f3"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "antes do café"
+                },
+                "classification": "COMPLETE_AND_CORRECT",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "f3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "antes do café"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 1,
+            "provenance_correct": 1,
+            "provenance_total": 1,
+            "state_correct": 1,
+            "state_total": 1,
+            "transition_correct": 0,
+            "transition_total": 0,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f3"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "antes do café"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "accaa74212ba76e52c471c3025d7022dd95077febf9080196b410a9983f60cee",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "f1"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "f1"
+            ]
+          },
+          "frequency": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "f3"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "f1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "f1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "ca275bfe4d6caf514c7ab120e47e98354a9d83492f4a889ca294f2336d5a027b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "accaa74212ba76e52c471c3025d7022dd95077febf9080196b410a9983f60cee",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "bf1f1b4c2fb33b8139e5f4ea74db2f9a625cfa557a2c53106240bc3fd554f79f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "44726d4b8313e3396272db99dad854a37da849f6b6492124ce7257aebed41e01",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "frequency": [
+              "f3"
+            ]
+          },
+          "candidate_source": "f1",
+          "historical_attributes": {},
+          "owner_mention_id": "context:f1",
+          "owner_type": "medication",
+          "relation_input_contract": {
+            "attribute_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f3"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "antes do café"
+              }
+            ],
+            "has_blocking_signal": false,
+            "relation_input_owner_completeness": 1.0,
+            "relation_input_provenance": 1.0,
+            "relation_input_state_completeness": 1.0,
+            "transition_contract_validity": 1.0,
+            "transition_signals": []
+          },
+          "relation_input_signals": [
+            {
+              "attribute_type": "frequency",
+              "confidence": 1.0,
+              "evidence": [
+                "f3"
+              ],
+              "owner_mention_id": "context:f1",
+              "owner_type": "medication",
+              "provenance": {
+                "evidence_id": null,
+                "semantic_policy": null,
+                "source_segment_ids": [
+                  "f3"
+                ]
+              },
+              "relation_ready": true,
+              "state": "current",
+              "status": "RESOLVED",
+              "value": "antes do café"
+            }
+          ],
+          "source_segment_ids": [
+            "f1"
+          ],
+          "transition_evidence": [],
+          "transition_input_signals": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Levotiroxina foi separada dos comprimidos da noite.\\npatient: Ela deve ser tomada antes do café.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:f1:0:12', 'owner_span': (0, 12), 'source_evidence_id': 'context:f1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:f1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:f1', 'target': 'frequency', 'value': 'antes do café', 'source_mention_id': 'context:f1', 'target_mention_id': 'frequency', 'source_segment_ids': ['f3'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('f3',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('f1',), 'candidate_source': 'f1', 'owner_type': 'medication', 'owner_mention_id': 'context:f1', 'attribute_provenance': {'frequency': ['f3']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'certainty': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'temporality': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'experiencer': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'frequency': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f3',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'frequency', 'value': 'antes do café', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f3'], 'relation_ready': True}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'frequency', 'value': 'antes do café', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f3'], 'relation_ready': True}], 'transition_signals': [], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': False}}, 'authority_metrics': {'resolver_decisions_total': 110, 'resolver_decisions_preserved': 89, 'resolver_decisions_overwritten': 21, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'f1', 'conversation_segment_ids': ['f3']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f3"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "antes do café"
+              }
+            ],
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "antes do café"
+              }
+            ],
+            "signal_quality": {
+              "actual_nonready_signal_count": 0,
+              "actual_signal_count": 1,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 1,
+              "complete_but_wrong": 0,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "f3"
+                    ],
+                    "owner_mention_id": "context:f1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "f3"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "antes do café"
+                  },
+                  "classification": "COMPLETE_AND_CORRECT",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "f3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "antes do café"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 1,
+              "provenance_correct": 1,
+              "provenance_total": 1,
+              "state_correct": 1,
+              "state_total": 1,
+              "transition_correct": 0,
+              "transition_total": 0,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "levotiroxina",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "8bd391d756e1ebb50babf0234f04d26b9d7e8a694c30b1d3395dbe6480c00085",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "levotiroxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "antes do café"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "antes do café",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "f3"
+                ]
+              },
+              "relation_id": "context:f1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:f1",
+              "source_mention_id": "context:f1",
+              "source_segment_ids": [
+                "f3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "antes do café"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "antes do café"
+              }
+            ]
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 0,
+            "actual_signal_count": 1,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 1,
+            "complete_but_wrong": 0,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "f3"
+                  ],
+                  "owner_mention_id": "context:f1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "f3"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "antes do café"
+                },
+                "classification": "COMPLETE_AND_CORRECT",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "f3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "antes do café"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 1,
+            "provenance_correct": 1,
+            "provenance_total": 1,
+            "state_correct": 1,
+            "state_total": 1,
+            "transition_correct": 0,
+            "transition_total": 0,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f3"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "antes do café"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "44726d4b8313e3396272db99dad854a37da849f6b6492124ce7257aebed41e01",
+      "output_hash": "0cfd860b0e317fb52ed42c2806b007d6b422a8fb2968fba48e36380d6419fd8a",
+      "payload": {
+        "relations": [
+          [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "antes do café"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "4b3201c1816a732c0c883c2f5f19af3df23998df23f30dbe7fda1401925b241a",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "levotiroxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "antes do café"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "antes do café",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "f3"
+                ]
+              },
+              "relation_id": "context:f1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:f1",
+              "source_mention_id": "context:f1",
+              "source_segment_ids": [
+                "f3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "antes do café"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "antes do café"
+              }
+            ]
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 0,
+            "actual_signal_count": 1,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 1,
+            "complete_but_wrong": 0,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "f3"
+                  ],
+                  "owner_mention_id": "context:f1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "f3"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "antes do café"
+                },
+                "classification": "COMPLETE_AND_CORRECT",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "f3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "antes do café"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 1,
+            "provenance_correct": 1,
+            "provenance_total": 1,
+            "state_correct": 1,
+            "state_total": 1,
+            "transition_correct": 0,
+            "transition_total": 0,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f3"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "antes do café"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "0cfd860b0e317fb52ed42c2806b007d6b422a8fb2968fba48e36380d6419fd8a",
+      "output_hash": "f066c343587164bd89f9b72d70c6600dfd64403ec66f59319183a575c56b021c",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Levotiroxina foi separada dos comprimidos da noite.\\npatient: Ela deve ser tomada antes do café.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:f1:0:12', 'owner_span': (0, 12), 'source_evidence_id': 'context:f1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:f1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:f1', 'target': 'frequency', 'value': 'antes do café', 'source_mention_id': 'context:f1', 'target_mention_id': 'frequency', 'source_segment_ids': ['f3'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('f3',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('f1',), 'candidate_source': 'f1', 'owner_type': 'medication', 'owner_mention_id': 'context:f1', 'attribute_provenance': {'frequency': ['f3']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'certainty': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'temporality': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'experiencer': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'frequency': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f3',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'frequency', 'value': 'antes do café', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f3'], 'relation_ready': True}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'frequency', 'value': 'antes do café', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f3'], 'relation_ready': True}], 'transition_signals': [], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': False}}, 'authority_metrics': {'resolver_decisions_total': 110, 'resolver_decisions_preserved': 89, 'resolver_decisions_overwritten': 21, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'f1', 'conversation_segment_ids': ['f3']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f3"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "antes do café"
+              }
+            ],
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "antes do café"
+              }
+            ],
+            "signal_quality": {
+              "actual_nonready_signal_count": 0,
+              "actual_signal_count": 1,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 1,
+              "complete_but_wrong": 0,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "f3"
+                    ],
+                    "owner_mention_id": "context:f1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "f3"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "antes do café"
+                  },
+                  "classification": "COMPLETE_AND_CORRECT",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "f3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "antes do café"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 1,
+              "provenance_correct": 1,
+              "provenance_total": 1,
+              "state_correct": 1,
+              "state_total": 1,
+              "transition_correct": 0,
+              "transition_total": 0,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "levotiroxina",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "21b9a435b94fad951c1accd3cbb695b39668d767481a8d022decdb3f8c64de86",
+      "changed_fields": [
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "f066c343587164bd89f9b72d70c6600dfd64403ec66f59319183a575c56b021c",
+      "output_hash": "f066c343587164bd89f9b72d70c6600dfd64403ec66f59319183a575c56b021c",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Levotiroxina foi separada dos comprimidos da noite.\\npatient: Ela deve ser tomada antes do café.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:f1:0:12', 'owner_span': (0, 12), 'source_evidence_id': 'context:f1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:f1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:f1', 'target': 'frequency', 'value': 'antes do café', 'source_mention_id': 'context:f1', 'target_mention_id': 'frequency', 'source_segment_ids': ['f3'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('f3',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('f1',), 'candidate_source': 'f1', 'owner_type': 'medication', 'owner_mention_id': 'context:f1', 'attribute_provenance': {'frequency': ['f3']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'certainty': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'temporality': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'experiencer': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'frequency': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f3',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'frequency', 'value': 'antes do café', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f3'], 'relation_ready': True}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'frequency', 'value': 'antes do café', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f3'], 'relation_ready': True}], 'transition_signals': [], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': False}}, 'authority_metrics': {'resolver_decisions_total': 110, 'resolver_decisions_preserved': 89, 'resolver_decisions_overwritten': 21, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'f1', 'conversation_segment_ids': ['f3']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f3"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "antes do café"
+              }
+            ],
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "antes do café"
+              }
+            ],
+            "signal_quality": {
+              "actual_nonready_signal_count": 0,
+              "actual_signal_count": 1,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 1,
+              "complete_but_wrong": 0,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "f3"
+                    ],
+                    "owner_mention_id": "context:f1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "f3"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "antes do café"
+                  },
+                  "classification": "COMPLETE_AND_CORRECT",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "f3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "antes do café"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 1,
+              "provenance_correct": 1,
+              "provenance_total": 1,
+              "state_correct": 1,
+              "state_total": 1,
+              "transition_correct": 0,
+              "transition_total": 0,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "levotiroxina",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "1d2735b3e770d5661de2273e507f6f549c3021437dab11bd789b1f74ee6c2a66",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "f066c343587164bd89f9b72d70c6600dfd64403ec66f59319183a575c56b021c",
+      "output_hash": "1762a9ce008edbde0171c35c275f7d5fcecf78fd2dd1e03a0d3b149ed1bf3643",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": "medication.levothyroxine",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "antes do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "antes do café"
+              }
+            ],
+            "surface": "levotiroxina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-010",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "1d97e5b9b02169a7af0e3f62914f5c70486a316b8344efc32f618b172f745c28",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "1762a9ce008edbde0171c35c275f7d5fcecf78fd2dd1e03a0d3b149ed1bf3643",
+      "output_hash": "89ec4e9ce11c0474c7854879b44e1a8e9b0caabb27bbfdf814260a87d9aaae3e",
+      "payload": {
+        "case_id": "D4-010",
+        "mismatch_count": 1
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-010",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

@@ -1,0 +1,532 @@
+{
+  "case_id": "D1-013",
+  "corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "corpus_version": "D1",
+  "decisions": [],
+  "evaluation_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "mismatches": [
+    {
+      "actual": "300 mg",
+      "confidence": 0.55,
+      "details": {
+        "mention": "gabapentina",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": "400 mg",
+      "policy_rules": [
+        "ptbr-dose",
+        "ptbr-active-medication-context"
+      ],
+      "semantic_dimension": "dose",
+      "stage": "prediction"
+    },
+    {
+      "actual": "300",
+      "confidence": 0.55,
+      "details": {
+        "mention": "gabapentina",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": "400",
+      "policy_rules": [
+        "ptbr-dose",
+        "ptbr-active-medication-context"
+      ],
+      "semantic_dimension": "dose_value",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "rule": "ptbr-dose"
+          },
+          "relation_id": null,
+          "relation_type": "HAS_DOSE",
+          "source": "context:s1:2:13",
+          "source_mention_id": "context:s1:2:13",
+          "source_segment_ids": [],
+          "target": "dose",
+          "target_mention_id": "dose",
+          "value": "300 mg"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "gabapentina",
+        "projection_relation_count": 1
+      },
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "300 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "400 mg"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "89ff9349535c88e1fcc496acdee46b98cbba316497e71e6ca31e840e1f2193fd",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": null,
+      "output_hash": "df4041201f69d732a1c808a3ce90efadd4b444c72810309f7ade934b48e6f409",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "patient",
+            "text": "A gabapentina estava em 300 mg."
+          },
+          {
+            "segment_id": "s2",
+            "speaker": "clinician",
+            "text": "Qual é a dose depois do ajuste?"
+          },
+          {
+            "segment_id": "s3",
+            "speaker": "patient",
+            "text": "Ficou em 400 mg por cápsula."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-013",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "b150fa8de9d2f8eed2de798bfdeb696f0ee8c4ed10f00c39b2b1706ef5255c7d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "df4041201f69d732a1c808a3ce90efadd4b444c72810309f7ade934b48e6f409",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-013",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "aabe339a79ec2c37c7ffb7ae9cf54d9b9cdadd666c7408abbe9f62da62ed6a05",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-013",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "e5bf4963b7ffd26d354f78db407143bc5132749aacb13948d63184ea7699cfaf",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-013",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "8396b4607c9ab797cdf08775c54c1eb305e0d6a0988e09b0b239875274501093",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-013",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "886fe5c42747582eaceb4e3608b444b0f03dac572594a2bcf74797fb0b8ade42",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-013",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "ff81b8452ae2b56ad00e31a66b1d9a1a8c8f5154676a57780feffdd59369529f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "fbbb24e8a5da2aaecb3659ac2a3996f6390734081427b014bd050589987f5898",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            }
+          },
+          "candidate_source": "s1",
+          "source_segment_ids": [
+            "s1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "300 mg",
+              "dose_unit": "mg",
+              "dose_value": "300",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A gabapentina estava em 300 mg.\\nclinician: Qual é a dose depois do ajuste?\\npatient: Ficou em 400 mg por cápsula.', 'rules': ('ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:13', 'owner_span': (2, 13), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:13', 'attributes': {'laterality': None, 'status': 'active'}, 'relations': [{'relation_id': None, 'relation_type': 'HAS_DOSE', 'source': 'context:s1:2:13', 'target': 'dose', 'value': '300 mg', 'source_mention_id': 'context:s1:2:13', 'target_mention_id': 'dose', 'source_segment_ids': [], 'confidence': 1.0, 'provenance': {'rule': 'ptbr-dose'}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 154, 'resolver_decisions_preserved': 143, 'resolver_decisions_overwritten': 11, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2', 's3']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "rule": "ptbr-dose"
+                },
+                "relation_id": null,
+                "relation_type": "HAS_DOSE",
+                "source": "context:s1:2:13",
+                "source_mention_id": "context:s1:2:13",
+                "source_segment_ids": [],
+                "target": "dose",
+                "target_mention_id": "dose",
+                "value": "300 mg"
+              }
+            ],
+            "surface": "gabapentina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-013",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "9f99761b37036fe39d61c5afa65fed29a4ea5397fc550c02ea88f406664f0bfe",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "fbbb24e8a5da2aaecb3659ac2a3996f6390734081427b014bd050589987f5898",
+      "output_hash": "6cb29cdeb099b562ecf379b971cc170e29e3e48bc2e521a952497de58f86dc6c",
+      "payload": {
+        "relations": [
+          [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "ptbr-dose"
+              },
+              "relation_id": null,
+              "relation_type": "HAS_DOSE",
+              "source": "context:s1:2:13",
+              "source_mention_id": "context:s1:2:13",
+              "source_segment_ids": [],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "300 mg"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-013",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "d007a2c77894d203bce8fb2f3d059a882c5237d61aea117d027316c5cd549795",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "6cb29cdeb099b562ecf379b971cc170e29e3e48bc2e521a952497de58f86dc6c",
+      "output_hash": "250e6e1bace4b99c2565c4293f470d2b49767752891030167c3758c33db57647",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "300 mg",
+              "dose_unit": "mg",
+              "dose_value": "300",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A gabapentina estava em 300 mg.\\nclinician: Qual é a dose depois do ajuste?\\npatient: Ficou em 400 mg por cápsula.', 'rules': ('ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:13', 'owner_span': (2, 13), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:13', 'attributes': {'laterality': None, 'status': 'active'}, 'relations': [{'relation_id': None, 'relation_type': 'HAS_DOSE', 'source': 'context:s1:2:13', 'target': 'dose', 'value': '300 mg', 'source_mention_id': 'context:s1:2:13', 'target_mention_id': 'dose', 'source_segment_ids': [], 'confidence': 1.0, 'provenance': {'rule': 'ptbr-dose'}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 154, 'resolver_decisions_preserved': 143, 'resolver_decisions_overwritten': 11, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2', 's3']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "rule": "ptbr-dose"
+                },
+                "relation_id": null,
+                "relation_type": "HAS_DOSE",
+                "source": "context:s1:2:13",
+                "source_mention_id": "context:s1:2:13",
+                "source_segment_ids": [],
+                "target": "dose",
+                "target_mention_id": "dose",
+                "value": "300 mg"
+              }
+            ],
+            "surface": "gabapentina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-013",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "e505ca6feba9c6f04e8d241c37f8dde5432d2a872c01f2b673059408c5e19967",
+      "changed_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "250e6e1bace4b99c2565c4293f470d2b49767752891030167c3758c33db57647",
+      "output_hash": "250e6e1bace4b99c2565c4293f470d2b49767752891030167c3758c33db57647",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "300 mg",
+              "dose_unit": "mg",
+              "dose_value": "300",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A gabapentina estava em 300 mg.\\nclinician: Qual é a dose depois do ajuste?\\npatient: Ficou em 400 mg por cápsula.', 'rules': ('ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:13', 'owner_span': (2, 13), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:13', 'attributes': {'laterality': None, 'status': 'active'}, 'relations': [{'relation_id': None, 'relation_type': 'HAS_DOSE', 'source': 'context:s1:2:13', 'target': 'dose', 'value': '300 mg', 'source_mention_id': 'context:s1:2:13', 'target_mention_id': 'dose', 'source_segment_ids': [], 'confidence': 1.0, 'provenance': {'rule': 'ptbr-dose'}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 154, 'resolver_decisions_preserved': 143, 'resolver_decisions_overwritten': 11, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2', 's3']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "rule": "ptbr-dose"
+                },
+                "relation_id": null,
+                "relation_type": "HAS_DOSE",
+                "source": "context:s1:2:13",
+                "source_mention_id": "context:s1:2:13",
+                "source_segment_ids": [],
+                "target": "dose",
+                "target_mention_id": "dose",
+                "value": "300 mg"
+              }
+            ],
+            "surface": "gabapentina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-013",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "6f62298aebfdae7beaf25edf71006460c0e0c14e47c79b2294602f31dde9ecf2",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "250e6e1bace4b99c2565c4293f470d2b49767752891030167c3758c33db57647",
+      "output_hash": "b1042f0cbd9735f0fb5f3f92427b7608367f34cdc6446fe9d6df69a5a26e1213",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "dose": [
+                "s3"
+              ],
+              "dose_unit": [
+                "s3"
+              ],
+              "dose_value": [
+                "s3"
+              ],
+              "status": [
+                "s3"
+              ]
+            },
+            "concept_id": "medication.gabapentin",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "400 mg",
+              "dose_unit": "mg",
+              "dose_value": "400",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "CHANGED_FROM": [
+                "s3"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "300 mg"
+              },
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "400 mg"
+              }
+            ],
+            "segment_ids": [
+              "s1",
+              "s3"
+            ],
+            "surface": "gabapentina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-013",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "a3c4ddfb29b424fa41cc0cdd7b2929597bc56d92c8a3903138060af1776adb09",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "b1042f0cbd9735f0fb5f3f92427b7608367f34cdc6446fe9d6df69a5a26e1213",
+      "output_hash": "d40f86f8f80b1ca25db91e90b400a0fd6bdd7b32aa125d9c3be34688d7ae247a",
+      "payload": {
+        "case_id": "D1-013"
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-013",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v1"
+}

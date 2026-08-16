@@ -1,0 +1,74 @@
+{
+  "run_id": "provider-evaluation-2026-08-15-local",
+  "status": "experimental-only",
+  "corpus": "pt_br_terminology_v1",
+  "cases": 10,
+  "environment": {
+    "python": "3.12",
+    "medspacy": "1.3.1",
+    "spacy": "3.8.15",
+    "assets_downloaded_by_niede": false
+  },
+  "production_promotion": false,
+  "terminology": {
+    "deterministic-baseline": {
+      "status": "executed",
+      "entity_precision": 0.8,
+      "entity_recall": 0.6666666667,
+      "linking_accuracy": 1.0,
+      "false_positive_rate": 0.2,
+      "attribute_accuracy": {
+        "negated": 1.0,
+        "certainty": 0.125,
+        "temporality": 0.75,
+        "experiencer": 0.75,
+        "dose": 0.0,
+        "provenance": 1.0
+      },
+      "concept_stability": 1.0,
+      "hard_gate_passed": false
+    },
+    "quickumls": {
+      "status": "not_configured",
+      "reason": "UMLS-derived vocabulary is PENDING_REVIEW"
+    },
+    "medcat": {
+      "status": "not_configured",
+      "reason": "model pack and embedded terminology are PENDING_REVIEW"
+    }
+  },
+  "clinical_context": {
+    "deterministic-context-baseline": {
+      "status": "executed",
+      "attribute_accuracy": {
+        "negated": 1.0,
+        "certainty": 0.25,
+        "temporality": 0.75,
+        "experiencer": 0.8333333333,
+        "dose": 0.0,
+        "laterality": 0.0,
+        "provenance": 1.0
+      },
+      "hard_gate_passed": false
+    },
+    "medspacy+niede-pt-br": {
+      "status": "executed",
+      "version": "1.3.1",
+      "rules_version": "niede-pt-br-context-v1",
+      "rules_sha256": "2025e1592be4d731350530e37fb1c7034b08e815cd3f590095cb3c3cccd747dc",
+      "attribute_accuracy": {
+        "negated": 0.8333333333,
+        "certainty": 0.9166666667,
+        "temporality": 0.8333333333,
+        "experiencer": 1.0,
+        "dose": 0.0,
+        "laterality": 0.0,
+        "provenance": 1.0
+      },
+      "mean_latency_ms": 2.3031620828,
+      "startup_seconds": 1.4378152000,
+      "hard_gate_passed": false
+    }
+  },
+  "decision": "No provider promoted; smoke corpus and hard gate remain insufficient for production."
+}

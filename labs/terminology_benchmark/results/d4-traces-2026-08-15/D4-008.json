@@ -1,0 +1,1818 @@
+{
+  "case_id": "D4-008",
+  "corpus_checksum": "1ad10a39a899906ab35455d6ce51bedcfd20f2f7776a9e6e59155ed9a1cb0938",
+  "corpus_version": "D4",
+  "decisions": [],
+  "evaluation_id": "d4-one-shot-0877e9b7-fac6-4881-8ab7-18d46356f719",
+  "mismatches": [
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "ibuprofeno",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "7451a83307e83f27f337297bdf2c3fc72c390ccae4f76e2cc7a1ad880a186852",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "381197d75a97ce010342ced90bd657e0961a29aa959ec2992e75834e38b483a0",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "db063b1e48f1b80c5c68a623e1a4b89e297456242ca08a4462a97020476f417b",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "f1",
+            "speaker": "patient",
+            "text": "Ibuprofeno foi listado no papel azul."
+          },
+          {
+            "segment_id": "f3",
+            "speaker": "patient",
+            "text": "A orientação deste remédio é após o almoço."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-008",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "b832cf7caabe367ca1b3a3a45ca4f2bd9ef260f87173b8d62318d4292ac2884f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "db063b1e48f1b80c5c68a623e1a4b89e297456242ca08a4462a97020476f417b",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "bbfd1f1e8cd5a12c5d79bade04dbb512eb8bc98f5c1ebafb4e485b51760d45aa",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "ibuprofeno"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "após o almoço"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "após o almoço",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "f3"
+                ]
+              },
+              "relation_id": "context:f1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:f1",
+              "source_mention_id": "context:f1",
+              "source_segment_ids": [
+                "f3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "após o almoço"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "após o almoço"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "d19f61f9b935402486d2e17e22f77f6e25b51de8b45a62f0e68a043d5c4ab9fe",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "ibuprofeno"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "após o almoço"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "após o almoço",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "f3"
+                ]
+              },
+              "relation_id": "context:f1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:f1",
+              "source_mention_id": "context:f1",
+              "source_segment_ids": [
+                "f3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "após o almoço"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "após o almoço"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "6e09c05aef3840f382186bce1da1e67d29156e0047e2a1735e140030898ba211",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "ibuprofeno"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "após o almoço"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "após o almoço",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "f3"
+                ]
+              },
+              "relation_id": "context:f1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:f1",
+              "source_mention_id": "context:f1",
+              "source_segment_ids": [
+                "f3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "após o almoço"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "após o almoço"
+              }
+            ]
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 0,
+            "actual_signal_count": 1,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 1,
+            "complete_but_wrong": 0,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "f3"
+                  ],
+                  "owner_mention_id": "context:f1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "f3"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "após o almoço"
+                },
+                "classification": "COMPLETE_AND_CORRECT",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "f3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "após o almoço"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 1,
+            "provenance_correct": 1,
+            "provenance_total": 1,
+            "state_correct": 1,
+            "state_total": 1,
+            "transition_correct": 0,
+            "transition_total": 0,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f3"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "após o almoço"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "accaa74212ba76e52c471c3025d7022dd95077febf9080196b410a9983f60cee",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "f1"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "f1"
+            ]
+          },
+          "frequency": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "f3"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "f1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:f1",
+            "owner_segment_id": "f1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "f1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "adcf1cefd37d8e94aaca82a74701eea95bca05cb2180ea69e7cfee160a6f3562",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "accaa74212ba76e52c471c3025d7022dd95077febf9080196b410a9983f60cee",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "3c6bb152ff4e355642d848924edc2c43c5a29a6a7d9a05cbe4fe8b926e63aa32",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "10d3a9187b88c40f39ba0bb0645def1c5a984ebe3a0290c2000dd6bc25e24e1f",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "frequency": [
+              "f3"
+            ]
+          },
+          "candidate_source": "f1",
+          "historical_attributes": {},
+          "owner_mention_id": "context:f1",
+          "owner_type": "medication",
+          "relation_input_contract": {
+            "attribute_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f3"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "após o almoço"
+              }
+            ],
+            "has_blocking_signal": false,
+            "relation_input_owner_completeness": 1.0,
+            "relation_input_provenance": 1.0,
+            "relation_input_state_completeness": 1.0,
+            "transition_contract_validity": 1.0,
+            "transition_signals": []
+          },
+          "relation_input_signals": [
+            {
+              "attribute_type": "frequency",
+              "confidence": 1.0,
+              "evidence": [
+                "f3"
+              ],
+              "owner_mention_id": "context:f1",
+              "owner_type": "medication",
+              "provenance": {
+                "evidence_id": null,
+                "semantic_policy": null,
+                "source_segment_ids": [
+                  "f3"
+                ]
+              },
+              "relation_ready": true,
+              "state": "current",
+              "status": "RESOLVED",
+              "value": "após o almoço"
+            }
+          ],
+          "source_segment_ids": [
+            "f1"
+          ],
+          "transition_evidence": [],
+          "transition_input_signals": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Ibuprofeno foi listado no papel azul.\\npatient: A orientação deste remédio é após o almoço.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:f1:0:10', 'owner_span': (0, 10), 'source_evidence_id': 'context:f1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:f1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:f1', 'target': 'frequency', 'value': 'após o almoço', 'source_mention_id': 'context:f1', 'target_mention_id': 'frequency', 'source_segment_ids': ['f3'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('f3',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('f1',), 'candidate_source': 'f1', 'owner_type': 'medication', 'owner_mention_id': 'context:f1', 'attribute_provenance': {'frequency': ['f3']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'certainty': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'temporality': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'experiencer': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'frequency': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f3',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'frequency', 'value': 'após o almoço', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f3'], 'relation_ready': True}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'frequency', 'value': 'após o almoço', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f3'], 'relation_ready': True}], 'transition_signals': [], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': False}}, 'authority_metrics': {'resolver_decisions_total': 88, 'resolver_decisions_preserved': 68, 'resolver_decisions_overwritten': 20, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'f1', 'conversation_segment_ids': ['f3']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f3"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "após o almoço"
+              }
+            ],
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "após o almoço"
+              }
+            ],
+            "signal_quality": {
+              "actual_nonready_signal_count": 0,
+              "actual_signal_count": 1,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 1,
+              "complete_but_wrong": 0,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "f3"
+                    ],
+                    "owner_mention_id": "context:f1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "f3"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "após o almoço"
+                  },
+                  "classification": "COMPLETE_AND_CORRECT",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "f3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "após o almoço"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 1,
+              "provenance_correct": 1,
+              "provenance_total": 1,
+              "state_correct": 1,
+              "state_total": 1,
+              "transition_correct": 0,
+              "transition_total": 0,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "ibuprofeno",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "6ab3f395ab17e0b9f67f3e91c7ad4b95347ce34bd742a6c164c1328380658f10",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "ibuprofeno"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "após o almoço"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "após o almoço",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "f3"
+                ]
+              },
+              "relation_id": "context:f1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:f1",
+              "source_mention_id": "context:f1",
+              "source_segment_ids": [
+                "f3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "após o almoço"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "após o almoço"
+              }
+            ]
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 0,
+            "actual_signal_count": 1,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 1,
+            "complete_but_wrong": 0,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "f3"
+                  ],
+                  "owner_mention_id": "context:f1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "f3"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "após o almoço"
+                },
+                "classification": "COMPLETE_AND_CORRECT",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "f3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "após o almoço"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 1,
+            "provenance_correct": 1,
+            "provenance_total": 1,
+            "state_correct": 1,
+            "state_total": 1,
+            "transition_correct": 0,
+            "transition_total": 0,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f3"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "após o almoço"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "10d3a9187b88c40f39ba0bb0645def1c5a984ebe3a0290c2000dd6bc25e24e1f",
+      "output_hash": "f91b4f582830f1ae16fc48b8622ad5b7e5b7826dc932da25d7d836790457f15d",
+      "payload": {
+        "relations": [
+          [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "após o almoço"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "ac55ca8049a91a2d288fd8bdd497b6a0e6775a54ce6b5209d543f048a622c25f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f3"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:f1",
+              "owner_segment_id": "f1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "f1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "ibuprofeno"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "após o almoço"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "após o almoço",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "f3"
+                ]
+              },
+              "relation_id": "context:f1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:f1",
+              "source_mention_id": "context:f1",
+              "source_segment_ids": [
+                "f3"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "após o almoço"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "após o almoço"
+              }
+            ]
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 0,
+            "actual_signal_count": 1,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 1,
+            "complete_but_wrong": 0,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "f3"
+                  ],
+                  "owner_mention_id": "context:f1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "f3"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "após o almoço"
+                },
+                "classification": "COMPLETE_AND_CORRECT",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "f3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "após o almoço"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 1,
+            "provenance_correct": 1,
+            "provenance_total": 1,
+            "state_correct": 1,
+            "state_total": 1,
+            "transition_correct": 0,
+            "transition_total": 0,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f3"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "após o almoço"
+              }
+            ],
+            "transitions": []
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "f91b4f582830f1ae16fc48b8622ad5b7e5b7826dc932da25d7d836790457f15d",
+      "output_hash": "72121c675f07c38f7741ad9a5ffd0501b681297a1e6b34d3bcc66698ddffa1dd",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Ibuprofeno foi listado no papel azul.\\npatient: A orientação deste remédio é após o almoço.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:f1:0:10', 'owner_span': (0, 10), 'source_evidence_id': 'context:f1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:f1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:f1', 'target': 'frequency', 'value': 'após o almoço', 'source_mention_id': 'context:f1', 'target_mention_id': 'frequency', 'source_segment_ids': ['f3'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('f3',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('f1',), 'candidate_source': 'f1', 'owner_type': 'medication', 'owner_mention_id': 'context:f1', 'attribute_provenance': {'frequency': ['f3']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'certainty': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'temporality': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'experiencer': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'frequency': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f3',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'frequency', 'value': 'após o almoço', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f3'], 'relation_ready': True}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'frequency', 'value': 'após o almoço', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f3'], 'relation_ready': True}], 'transition_signals': [], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': False}}, 'authority_metrics': {'resolver_decisions_total': 88, 'resolver_decisions_preserved': 68, 'resolver_decisions_overwritten': 20, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'f1', 'conversation_segment_ids': ['f3']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f3"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "após o almoço"
+              }
+            ],
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "após o almoço"
+              }
+            ],
+            "signal_quality": {
+              "actual_nonready_signal_count": 0,
+              "actual_signal_count": 1,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 1,
+              "complete_but_wrong": 0,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "f3"
+                    ],
+                    "owner_mention_id": "context:f1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "f3"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "após o almoço"
+                  },
+                  "classification": "COMPLETE_AND_CORRECT",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "f3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "após o almoço"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 1,
+              "provenance_correct": 1,
+              "provenance_total": 1,
+              "state_correct": 1,
+              "state_total": 1,
+              "transition_correct": 0,
+              "transition_total": 0,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "ibuprofeno",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "ac64a859c16afaf64f3ea7bc325b02624f4bfb8e9c54ee6c87a2fd678631cfcf",
+      "changed_fields": [
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "72121c675f07c38f7741ad9a5ffd0501b681297a1e6b34d3bcc66698ddffa1dd",
+      "output_hash": "72121c675f07c38f7741ad9a5ffd0501b681297a1e6b34d3bcc66698ddffa1dd",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Ibuprofeno foi listado no papel azul.\\npatient: A orientação deste remédio é após o almoço.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:f1:0:10', 'owner_span': (0, 10), 'source_evidence_id': 'context:f1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:f1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:f1', 'target': 'frequency', 'value': 'após o almoço', 'source_mention_id': 'context:f1', 'target_mention_id': 'frequency', 'source_segment_ids': ['f3'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('f3',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('f1',), 'candidate_source': 'f1', 'owner_type': 'medication', 'owner_mention_id': 'context:f1', 'attribute_provenance': {'frequency': ['f3']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'certainty': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'temporality': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'experiencer': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f1',)}, 'frequency': {'owner_mention_id': 'context:f1', 'owner_segment_id': 'f1', 'owner_type': 'medication', 'source_segment_ids': ('f3',)}}, 'transition_evidence': [], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'frequency', 'value': 'após o almoço', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f3'], 'relation_ready': True}], 'transition_input_signals': [], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'frequency', 'value': 'após o almoço', 'owner_mention_id': 'context:f1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('f3',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['f3'], 'relation_ready': True}], 'transition_signals': [], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 1.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': False}}, 'authority_metrics': {'resolver_decisions_total': 88, 'resolver_decisions_preserved': 68, 'resolver_decisions_overwritten': 20, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'f1', 'conversation_segment_ids': ['f3']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "f3"
+                ],
+                "owner_mention_id": "context:f1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "f3"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "após o almoço"
+              }
+            ],
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "após o almoço"
+              }
+            ],
+            "signal_quality": {
+              "actual_nonready_signal_count": 0,
+              "actual_signal_count": 1,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 1,
+              "complete_but_wrong": 0,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "f3"
+                    ],
+                    "owner_mention_id": "context:f1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "f3"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "após o almoço"
+                  },
+                  "classification": "COMPLETE_AND_CORRECT",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "f3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "após o almoço"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 1,
+              "provenance_correct": 1,
+              "provenance_total": 1,
+              "state_correct": 1,
+              "state_total": 1,
+              "transition_correct": 0,
+              "transition_total": 0,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "ibuprofeno",
+            "transition_input_signals": []
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-008",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "9d1167a40eccea87bf0c976886872613b8b28d563007c54bb1483497b14503ad",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "72121c675f07c38f7741ad9a5ffd0501b681297a1e6b34d3bcc66698ddffa1dd",
+      "output_hash": "8f58dbdd0a8df277dac947f63dd345f8f04a426a3eb12774b5cea3f0da15ba04",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": "medication.ibuprofen",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "após o almoço",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relations": [
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "após o almoço"
+              }
+            ],
+            "surface": "ibuprofeno"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-008",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "17e36083cbadb36fe440a4a3935e2861b51ca3b2954df699fd3f3d2386eb9dce",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "8f58dbdd0a8df277dac947f63dd345f8f04a426a3eb12774b5cea3f0da15ba04",
+      "output_hash": "7a92de500b80942a06ff1b0236d69b7db8b53589a05900b911377cd99078075e",
+      "payload": {
+        "case_id": "D4-008",
+        "mismatch_count": 1
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-008",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

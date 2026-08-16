@@ -1,0 +1,1256 @@
+{
+  "case_id": "D2-006",
+  "corpus_checksum": "d09c6ca1351ba31d1ece7cc371abc70ec79318f46bff04412149d23ccccb9811",
+  "corpus_version": "D2",
+  "decisions": [],
+  "evaluation_id": "d2-one-shot-d050b788-bba5-4d47-8460-b6b2cbb71529",
+  "mismatches": [
+    {
+      "actual": true,
+      "confidence": 0.55,
+      "details": {
+        "mention": "falta de ar",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": false,
+      "policy_rules": [
+        "ptbr-family-experiencer"
+      ],
+      "semantic_dimension": "negated",
+      "stage": "prediction"
+    },
+    {
+      "actual": "à noite",
+      "confidence": 0.55,
+      "details": {
+        "mention": "falta de ar",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": null,
+      "policy_rules": [
+        "ptbr-family-experiencer"
+      ],
+      "semantic_dimension": "frequency",
+      "stage": "prediction"
+    },
+    {
+      "actual": "family",
+      "confidence": 0.55,
+      "details": {
+        "mention": "falta de ar",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "patient",
+      "policy_rules": [],
+      "semantic_dimension": "experiencer",
+      "stage": "prediction"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "ff09e39196d8458637629dce70da5bd20c4c5b0f5af5cd83a0d19b27e3a186ab",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "da7bd9df0ba2b99a345f299b14f2ff04835df83c39722f7e41d67c25572a8b31",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "6ced35646adba549f26590fa07ba18ff783a79337cf8212794bb0c57967eb2ff",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "b1",
+            "speaker": "patient",
+            "text": "Minha irmã sente falta de ar à noite."
+          },
+          {
+            "segment_id": "b2",
+            "speaker": "clinician",
+            "text": "E você sente falta de ar também?"
+          },
+          {
+            "segment_id": "b3",
+            "speaker": "patient",
+            "text": "Eu não sinto."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-006",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "8edb7223d3c633789097a1df145dc5debd0c44b0992398261c3a3b4244ddbb74",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "6ced35646adba549f26590fa07ba18ff783a79337cf8212794bb0c57967eb2ff",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "1e92b0dcb8df55d91b970b247b4e2c0c87d1ac6301886f9e00da0f3876e383b8",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:b1",
+              "owner_segment_id": "b1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "falta de ar"
+          },
+          "m2": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "falta de ar"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [],
+          "m2": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "family",
+            "frequency": "à noite",
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          },
+          "m2": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "family",
+            "frequency": null,
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [],
+            "m2": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "8d1ce731300409bcaec4ebaabdd1ff48877104a7ca532eb0a02895adeaa25f42",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:b1",
+              "owner_segment_id": "b1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "falta de ar"
+          },
+          "m2": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "falta de ar"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [],
+          "m2": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "family",
+            "frequency": "à noite",
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          },
+          "m2": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "family",
+            "frequency": null,
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [],
+            "m2": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "34b6b7b76dfe3dcfb6dc2b6dcf573e4bd0d2a3c7f3d59dfe4be72c4d9fd87a87",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:b1",
+              "owner_segment_id": "b1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "falta de ar"
+          },
+          "m2": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "falta de ar"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [],
+          "m2": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "family",
+            "frequency": "à noite",
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          },
+          "m2": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "family",
+            "frequency": null,
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [],
+            "m2": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "500bb391a76b76e6f230254735838d907c2ea031f44c920fbd7c116195ed16d0",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:b1",
+            "owner_segment_id": "b1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "ff48e8ba21947cab0a874f7159c2de6bbe451d05ece5db7070211048db3124e4",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "500bb391a76b76e6f230254735838d907c2ea031f44c920fbd7c116195ed16d0",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "34d60a8d6a69b30839dc8975de9f36ad54983672372c2e06bf80ab0971600d4d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "61efb8d39ae944859add525792f668c5b554f7a4aa6ab829d6bdefd385e47511",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:b1",
+              "owner_segment_id": "b1"
+            }
+          },
+          "candidate_source": "b1",
+          "source_segment_ids": [
+            "b1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Minha irmã sente falta de ar à noite.\\nclinician: E você sente falta de ar também?\\npatient: Eu não sinto.', 'rules': ('ptbr-family-experiencer',), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b1:17:28', 'owner_span': (17, 28), 'source_evidence_id': 'context:b1'}}, 'projection': {'mention_id': 'context:b1:17:28', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('b1',), 'candidate_source': 'b1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b1', 'owner_segment_id': 'b1'}}}, 'authority_metrics': {'resolver_decisions_total': 77, 'resolver_decisions_preserved': 71, 'resolver_decisions_overwritten': 6, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'b1', 'conversation_segment_ids': ['b2', 'b3']}",
+            "relations": [],
+            "surface": "falta de ar"
+          },
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m2",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Minha irmã sente falta de ar à noite.\\nclinician: E você sente falta de ar também?\\npatient: Eu não sinto.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b2:13:24', 'owner_span': (13, 24), 'source_evidence_id': 'context:b2'}}, 'projection': {'mention_id': 'context:b2:13:24', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('b2',), 'candidate_source': 'b2', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b2', 'owner_segment_id': 'b2'}}}, 'authority_metrics': {'resolver_decisions_total': 88, 'resolver_decisions_preserved': 80, 'resolver_decisions_overwritten': 8, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'b2', 'conversation_segment_ids': ['b1', 'b3']}",
+            "relations": [],
+            "surface": "falta de ar"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "0bf0dfd89b1061aee5b690dcc4af8ff768da657582501107781d40623947baa9",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:b1",
+              "owner_segment_id": "b1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "falta de ar"
+          },
+          "m2": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "falta de ar"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [],
+          "m2": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "family",
+            "frequency": "à noite",
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          },
+          "m2": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "family",
+            "frequency": null,
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [],
+            "m2": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "61efb8d39ae944859add525792f668c5b554f7a4aa6ab829d6bdefd385e47511",
+      "output_hash": "5a58e890c707ae0a002465394b791a36c7a5eb65b2048ec932ee99323b2350ff",
+      "payload": {
+        "relations": [
+          [],
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "52abc1f14855a7aaa91f704ee022f72c04df16c41145528a0cf0d5176f179aed",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:b1",
+              "owner_segment_id": "b1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "falta de ar"
+          },
+          "m2": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "falta de ar"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [],
+          "m2": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "family",
+            "frequency": "à noite",
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          },
+          "m2": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "family",
+            "frequency": null,
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [],
+            "m2": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "5a58e890c707ae0a002465394b791a36c7a5eb65b2048ec932ee99323b2350ff",
+      "output_hash": "c5db26bcb5e3c88efed97ad597b9e49ad3cb478ee0ec84bcc3591ababf2d6fa8",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Minha irmã sente falta de ar à noite.\\nclinician: E você sente falta de ar também?\\npatient: Eu não sinto.', 'rules': ('ptbr-family-experiencer',), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b1:17:28', 'owner_span': (17, 28), 'source_evidence_id': 'context:b1'}}, 'projection': {'mention_id': 'context:b1:17:28', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('b1',), 'candidate_source': 'b1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b1', 'owner_segment_id': 'b1'}}}, 'authority_metrics': {'resolver_decisions_total': 77, 'resolver_decisions_preserved': 71, 'resolver_decisions_overwritten': 6, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'b1', 'conversation_segment_ids': ['b2', 'b3']}",
+            "relations": [],
+            "surface": "falta de ar"
+          },
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m2",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Minha irmã sente falta de ar à noite.\\nclinician: E você sente falta de ar também?\\npatient: Eu não sinto.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b2:13:24', 'owner_span': (13, 24), 'source_evidence_id': 'context:b2'}}, 'projection': {'mention_id': 'context:b2:13:24', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('b2',), 'candidate_source': 'b2', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b2', 'owner_segment_id': 'b2'}}}, 'authority_metrics': {'resolver_decisions_total': 88, 'resolver_decisions_preserved': 80, 'resolver_decisions_overwritten': 8, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'b2', 'conversation_segment_ids': ['b1', 'b3']}",
+            "relations": [],
+            "surface": "falta de ar"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "6ef444f67256ea486a67416ebfb664554b7d3c6c7758de5cd69cc84679df76a8",
+      "changed_fields": [
+        "experiencer",
+        "frequency",
+        "negated"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "c5db26bcb5e3c88efed97ad597b9e49ad3cb478ee0ec84bcc3591ababf2d6fa8",
+      "output_hash": "c5db26bcb5e3c88efed97ad597b9e49ad3cb478ee0ec84bcc3591ababf2d6fa8",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Minha irmã sente falta de ar à noite.\\nclinician: E você sente falta de ar também?\\npatient: Eu não sinto.', 'rules': ('ptbr-family-experiencer',), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b1:17:28', 'owner_span': (17, 28), 'source_evidence_id': 'context:b1'}}, 'projection': {'mention_id': 'context:b1:17:28', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('b1',), 'candidate_source': 'b1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b1', 'owner_segment_id': 'b1'}}}, 'authority_metrics': {'resolver_decisions_total': 77, 'resolver_decisions_preserved': 71, 'resolver_decisions_overwritten': 6, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'b1', 'conversation_segment_ids': ['b2', 'b3']}",
+            "relations": [],
+            "surface": "falta de ar"
+          },
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m2",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Minha irmã sente falta de ar à noite.\\nclinician: E você sente falta de ar também?\\npatient: Eu não sinto.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b2:13:24', 'owner_span': (13, 24), 'source_evidence_id': 'context:b2'}}, 'projection': {'mention_id': 'context:b2:13:24', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('b2',), 'candidate_source': 'b2', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:b2', 'owner_segment_id': 'b2'}}}, 'authority_metrics': {'resolver_decisions_total': 88, 'resolver_decisions_preserved': 80, 'resolver_decisions_overwritten': 8, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'b2', 'conversation_segment_ids': ['b1', 'b3']}",
+            "relations": [],
+            "surface": "falta de ar"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-006",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "721a2898f74e82677bdfb8b5b8418cc69b9553d4d48a09c64f98a609918ae09d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "c5db26bcb5e3c88efed97ad597b9e49ad3cb478ee0ec84bcc3591ababf2d6fa8",
+      "output_hash": "a2d1d989666aa3df2c4a8cf59fe88aaaa1e9a41f01af7a4b3bb87a7c10f85aa3",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "experiencer": [
+                "b1"
+              ]
+            },
+            "concept_id": "symptom.dyspnea",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "b1"
+            ],
+            "surface": "falta de ar"
+          },
+          {
+            "attribute_provenance": {
+              "experiencer": [
+                "b3"
+              ],
+              "negated": [
+                "b3"
+              ]
+            },
+            "concept_id": "symptom.dyspnea",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "b2",
+              "b3"
+            ],
+            "surface": "falta de ar"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-006",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "218d593262c80f4f81b6bc942d2d1437bbb8138c48609fd3077ede9b0cfd0599",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "a2d1d989666aa3df2c4a8cf59fe88aaaa1e9a41f01af7a4b3bb87a7c10f85aa3",
+      "output_hash": "b86fc57d554ba8704295133ee959c8865920318447a47170f11df6362b0c083c",
+      "payload": {
+        "case_id": "D2-006",
+        "mismatch_count": 3
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-006",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

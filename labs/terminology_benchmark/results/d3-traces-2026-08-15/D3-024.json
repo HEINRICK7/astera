@@ -1,0 +1,1374 @@
+{
+  "case_id": "D3-024",
+  "corpus_checksum": "cef75b21b8eae6ec940b9f6cffe3d27fbe5b050db838569f3f19ef68434f1b0d",
+  "corpus_version": "D3",
+  "decisions": [],
+  "evaluation_id": "d3-one-shot-4c137795-99d1-4973-a98d-20eb89de0617",
+  "mismatches": [
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "gabapentina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "à noite"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "gabapentina",
+        "relation_output_count": 1
+      },
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "à noite"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "pela manhã"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "d7dda54457cf896392e41edc8c259098b190c1c9bfa1ed82c6a1e5c7a46a59a7",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "f6f340c873644170e94ce676c489dfa7e8077720dd44e415ba418fbb74683fa3",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "690a13e50b1eab4ffa2babcccebe2fac895df1f24add13d97c93391907f35f15",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "t1",
+            "speaker": "patient",
+            "text": "A frequência da gabapentina era à noite."
+          },
+          {
+            "segment_id": "t2",
+            "speaker": "patient",
+            "text": "Na alta, ficou pela manhã."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-024",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "ae0b087e24f4d4bc690d5f29759256616ba0b76c3d98a67e6ef2673bfc0ac686",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "690a13e50b1eab4ffa2babcccebe2fac895df1f24add13d97c93391907f35f15",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-024",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "368a838e0fbac471110e3cee1070cf17d4b06084ea342683e31b539307de465f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "gabapentina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "pela manhã",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:25:36:CHANGED_FROM:frequency:à noite",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "à noite"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-024",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "d993ccc4608867bd24c0f36005d4fc70efab83afe2e17e1890b9d7bf3223869d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "gabapentina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "pela manhã",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:25:36:CHANGED_FROM:frequency:à noite",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "à noite"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-024",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "775516911ea6d02b2b71977768d1232a0ca6b714b32372d07f135318d71f5e45",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "gabapentina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "pela manhã",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:25:36:CHANGED_FROM:frequency:à noite",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "à noite"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "6bc64159851bbe472bc506e95782017bc55589dc998ece74436a6145bced3ef4",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "frequency": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t2"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-024",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "48b2cac400c5754e6e52f9a9fe60f711e30e9c56d74e4c9c528c7f6befff821a",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "6bc64159851bbe472bc506e95782017bc55589dc998ece74436a6145bced3ef4",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-024",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "92b0b0fe3fc8244946f2ba78f457f7fbed6e18b75880a98e9b1942a361bb4905",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "ea237d904be402eb2705c197ef105fcc12c777df647b51fd0d115ff06b881698",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "frequency": [
+              "t2"
+            ]
+          },
+          "candidate_source": "t1",
+          "owner_mention_id": "context:t1",
+          "owner_type": null,
+          "source_segment_ids": [
+            "t1"
+          ],
+          "transition_attribute_ownership": {
+            "frequency": {
+              "current": "pela manhã",
+              "owner_mention_id": "context:t1:25:36",
+              "previous": "à noite",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "transition_evidence": [
+            {
+              "provenance": {
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:25:36:CHANGED_FROM:frequency:à noite",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1:25:36",
+              "source_mention_id": "context:t1:25:36",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": null,
+              "value": "à noite"
+            }
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A frequência da gabapentina era à noite.\\npatient: Na alta, ficou pela manhã.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:16:27', 'owner_span': (16, 27), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:t1:25:36:CHANGED_FROM:frequency:à noite', 'relation_type': 'CHANGED_FROM', 'source': 'context:t1', 'target': 'frequency', 'value': 'à noite', 'source_mention_id': 'context:t1', 'target_mention_id': 'frequency', 'source_segment_ids': ['t1'], 'confidence': 1.0, 'provenance': {'source_segment_ids': ('t1',), 'rule': 'clinical-relation-compiler-v1'}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': None, 'owner_mention_id': 'context:t1', 'attribute_provenance': {'frequency': ['t2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'frequency': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t2',)}}, 'transition_evidence': [{'relation_type': 'CHANGED_FROM', 'source': 'context:t1:25:36', 'target': 'frequency', 'value': 'à noite', 'relation_id': 'context:t1:25:36:CHANGED_FROM:frequency:à noite', 'source_mention_id': 'context:t1:25:36', 'target_mention_id': None, 'source_segment_ids': ['t1'], 'provenance': {'source_segment_ids': ('t1',)}}], 'transition_attribute_ownership': {'frequency': {'current': 'pela manhã', 'previous': 'à noite', 'owner_mention_id': 'context:t1:25:36', 'source_segment_ids': ('t1',)}}}, 'authority_metrics': {'resolver_decisions_total': 264, 'resolver_decisions_preserved': 230, 'resolver_decisions_overwritten': 34, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t2']}",
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "surface": "gabapentina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-024",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "89d05b462d5489116b773c077105db4c891f89fe19e3ab24574bf2e8dd87f56f",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        },
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "gabapentina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "pela manhã",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:25:36:CHANGED_FROM:frequency:à noite",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "à noite"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        }
+      },
+      "input_hash": "ea237d904be402eb2705c197ef105fcc12c777df647b51fd0d115ff06b881698",
+      "output_hash": "f5b5608cdc0fe8d652937d324d2a37744c99b76e5f0e93ecf9630a41068fce29",
+      "payload": {
+        "relations": [
+          [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-024",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "b9257a9f0cfe1575ccc4786f4161b2a9339ac2a83526668026ff208d61797684",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "gabapentina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "pela manhã",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:25:36:CHANGED_FROM:frequency:à noite",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "à noite"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "f5b5608cdc0fe8d652937d324d2a37744c99b76e5f0e93ecf9630a41068fce29",
+      "output_hash": "55b91f10d892262200d6f2fbd589e8eea1e2e60e508e325e9dc722cfa335a261",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A frequência da gabapentina era à noite.\\npatient: Na alta, ficou pela manhã.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:16:27', 'owner_span': (16, 27), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:t1:25:36:CHANGED_FROM:frequency:à noite', 'relation_type': 'CHANGED_FROM', 'source': 'context:t1', 'target': 'frequency', 'value': 'à noite', 'source_mention_id': 'context:t1', 'target_mention_id': 'frequency', 'source_segment_ids': ['t1'], 'confidence': 1.0, 'provenance': {'source_segment_ids': ('t1',), 'rule': 'clinical-relation-compiler-v1'}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': None, 'owner_mention_id': 'context:t1', 'attribute_provenance': {'frequency': ['t2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'frequency': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t2',)}}, 'transition_evidence': [{'relation_type': 'CHANGED_FROM', 'source': 'context:t1:25:36', 'target': 'frequency', 'value': 'à noite', 'relation_id': 'context:t1:25:36:CHANGED_FROM:frequency:à noite', 'source_mention_id': 'context:t1:25:36', 'target_mention_id': None, 'source_segment_ids': ['t1'], 'provenance': {'source_segment_ids': ('t1',)}}], 'transition_attribute_ownership': {'frequency': {'current': 'pela manhã', 'previous': 'à noite', 'owner_mention_id': 'context:t1:25:36', 'source_segment_ids': ('t1',)}}}, 'authority_metrics': {'resolver_decisions_total': 264, 'resolver_decisions_preserved': 230, 'resolver_decisions_overwritten': 34, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t2']}",
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "surface": "gabapentina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-024",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "32810f3141355b754306c7ca0e924b31653ec9350c1fd0a6a56f9d27ce5b7fb3",
+      "changed_fields": [
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "55b91f10d892262200d6f2fbd589e8eea1e2e60e508e325e9dc722cfa335a261",
+      "output_hash": "55b91f10d892262200d6f2fbd589e8eea1e2e60e508e325e9dc722cfa335a261",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A frequência da gabapentina era à noite.\\npatient: Na alta, ficou pela manhã.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:16:27', 'owner_span': (16, 27), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:t1:25:36:CHANGED_FROM:frequency:à noite', 'relation_type': 'CHANGED_FROM', 'source': 'context:t1', 'target': 'frequency', 'value': 'à noite', 'source_mention_id': 'context:t1', 'target_mention_id': 'frequency', 'source_segment_ids': ['t1'], 'confidence': 1.0, 'provenance': {'source_segment_ids': ('t1',), 'rule': 'clinical-relation-compiler-v1'}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': None, 'owner_mention_id': 'context:t1', 'attribute_provenance': {'frequency': ['t2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'frequency': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t2',)}}, 'transition_evidence': [{'relation_type': 'CHANGED_FROM', 'source': 'context:t1:25:36', 'target': 'frequency', 'value': 'à noite', 'relation_id': 'context:t1:25:36:CHANGED_FROM:frequency:à noite', 'source_mention_id': 'context:t1:25:36', 'target_mention_id': None, 'source_segment_ids': ['t1'], 'provenance': {'source_segment_ids': ('t1',)}}], 'transition_attribute_ownership': {'frequency': {'current': 'pela manhã', 'previous': 'à noite', 'owner_mention_id': 'context:t1:25:36', 'source_segment_ids': ('t1',)}}}, 'authority_metrics': {'resolver_decisions_total': 264, 'resolver_decisions_preserved': 230, 'resolver_decisions_overwritten': 34, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t2']}",
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "surface": "gabapentina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-024",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "ce0def4a500662dcbda96c23294b8ba2ca1dbba19dbb3faae9d4059697204491",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "55b91f10d892262200d6f2fbd589e8eea1e2e60e508e325e9dc722cfa335a261",
+      "output_hash": "85693917a1d8c9e0b1a1cd4e0e75a20724252c23effc233fbeb7047ce44c471c",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "frequency": [
+                "t2"
+              ],
+              "status": [
+                "t2"
+              ]
+            },
+            "concept_id": "medication.gabapentin",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "CHANGED_FROM": [
+                "t2"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "à noite"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "pela manhã"
+              }
+            ],
+            "segment_ids": [
+              "t1",
+              "t2"
+            ],
+            "surface": "gabapentina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-024",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "408b4d624cfd296e37bc0cd64b0c450e6226a833bd5c61f96bf11cf130cde49b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "85693917a1d8c9e0b1a1cd4e0e75a20724252c23effc233fbeb7047ce44c471c",
+      "output_hash": "18d0c727634f8f51fe3f5ffe20cf305d1e2de4487c4ee9b9c3533d00d3235786",
+      "payload": {
+        "case_id": "D3-024",
+        "mismatch_count": 2
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-024",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

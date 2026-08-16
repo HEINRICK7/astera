@@ -1,0 +1,21 @@
+{"case_id":"negation-001","language":"pt-BR","text":"Paciente nega dor torácica.","gold":[{"surface":"dor torácica","concept_id":"symptom.chest_pain","negated":true}]}
+{"case_id":"negation-002","language":"pt-BR","text":"Paciente não apresenta febre.","gold":[{"surface":"febre","concept_id":"symptom.fever","negated":true}]}
+{"case_id":"negation-003","language":"pt-BR","text":"Sem febre, calafrios ou dispneia.","gold":[{"surface":"febre","concept_id":"symptom.fever","negated":true},{"surface":"dispneia","concept_id":"symptom.dyspnea","negated":true}]}
+{"case_id":"certainty-001","language":"pt-BR","text":"Possível alergia à dipirona.","gold":[{"surface":"alergia","concept_id":"allergy.unspecified","certainty":"possible"},{"surface":"dipirona","concept_id":"medication.dipyrone","certainty":"possible"}]}
+{"case_id":"certainty-002","language":"pt-BR","text":"Suspeita de pneumonia, ainda sem confirmação.","gold":[{"surface":"pneumonia","concept_id":"condition.pneumonia","certainty":"suspected"}]}
+{"case_id":"certainty-003","language":"pt-BR","text":"Provável infecção urinária.","gold":[{"surface":"infecção urinária","concept_id":"condition.urinary_infection","certainty":"possible"}]}
+{"case_id":"temporal-001","language":"pt-BR","text":"Refere dor no peito há três dias.","gold":[{"surface":"dor no peito","concept_id":"symptom.chest_pain","temporality":"current"}]}
+{"case_id":"temporal-002","language":"pt-BR","text":"Teve IAM há cinco anos.","gold":[{"surface":"IAM","concept_id":"condition.myocardial_infarction","temporality":"past"}]}
+{"case_id":"temporal-003","language":"pt-BR","text":"Histórico de diabetes na família.","gold":[{"surface":"diabetes","concept_id":"condition.diabetes","temporality":"past","experiencer":"family"}]}
+{"case_id":"experiencer-001","language":"pt-BR","text":"Mãe relata histórico de diabetes.","gold":[{"surface":"diabetes","concept_id":"condition.diabetes","temporality":"past","experiencer":"family"}]}
+{"case_id":"experiencer-002","language":"pt-BR","text":"O pai teve AVC aos 60 anos.","gold":[{"surface":"AVC","concept_id":"condition.stroke","temporality":"past","experiencer":"family"}]}
+{"case_id":"dose-001","language":"pt-BR","text":"Usa losartana 50 mg.","gold":[{"surface":"losartana","concept_id":"medication.losartan","dose":"50 mg","dose_value":"50","dose_unit":"mg","status":"active"}]}
+{"case_id":"dose-002","language":"pt-BR","text":"Metformina 850 mg 2x ao dia.","gold":[{"surface":"Metformina","concept_id":"medication.metformin","dose":"850 mg","dose_value":"850","dose_unit":"mg","frequency":"2x ao dia","status":"active"}]}
+{"case_id":"dose-003","language":"pt-BR","text":"Insulina 10 UI pela manhã.","gold":[{"surface":"Insulina","concept_id":"medication.insulin","dose":"10 UI","dose_value":"10","dose_unit":"UI","frequency":"pela manhã","status":"active"}]}
+{"case_id":"dose-004","language":"pt-BR","text":"Dipirona se dor.","gold":[{"surface":"Dipirona","concept_id":"medication.dipyrone","frequency":"se dor","status":"active"}]}
+{"case_id":"dose-005","language":"pt-BR","text":"Usava 25 mg, passou para 50 mg de losartana.","gold":[{"surface":"losartana","concept_id":"medication.losartan","dose":"50 mg","dose_value":"50","dose_unit":"mg","status":"active"}]}
+{"case_id":"dose-006","language":"pt-BR","text":"Suspendeu enalapril 10 mg.","gold":[{"surface":"enalapril","concept_id":"medication.enalapril","dose":"10 mg","dose_value":"10","dose_unit":"mg","status":"discontinued","temporality":"past"}]}
+{"case_id":"route-001","language":"pt-BR","text":"Toma amoxicilina 500 mg por via oral.","gold":[{"surface":"amoxicilina","concept_id":"medication.amoxicillin","dose":"500 mg","dose_value":"500","dose_unit":"mg","route":"oral","status":"active"}]}
+{"case_id":"route-002","language":"pt-BR","text":"Recebe insulina 10 UI por via subcutânea.","gold":[{"surface":"insulina","concept_id":"medication.insulin","dose":"10 UI","dose_value":"10","dose_unit":"UI","route":"subcutaneous","status":"active"}]}
+{"case_id":"laterality-001","language":"pt-BR","text":"Dor no lado esquerdo do abdome.","gold":[{"surface":"Dor no lado esquerdo do abdome","concept_id":"symptom.abdominal_pain","laterality":"left"}]}
+{"case_id":"laterality-002","language":"pt-BR","text":"Dor no joelho direito.","gold":[{"surface":"Dor no joelho direito","concept_id":"symptom.knee_pain","laterality":"right"}]}

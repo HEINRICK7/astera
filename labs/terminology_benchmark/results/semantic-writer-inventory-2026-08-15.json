@@ -1,0 +1,2750 @@
+{
+  "status": "executed",
+  "critical_fields": [
+    "dose",
+    "dose_unit",
+    "dose_value",
+    "experiencer",
+    "frequency",
+    "laterality",
+    "negated",
+    "route",
+    "status",
+    "temporality"
+  ],
+  "writer_count": 274,
+  "writers": [
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 37,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [],
+      "source": "relation_candidates: tuple[ClinicalRelation, ...]"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 48,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [],
+      "source": "resolved_relations: tuple[ClinicalRelation, ...]"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 51,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "resolution_status: ResolutionStatus = ResolutionStatus.RESOLVED"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 171,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "experiencer"
+      ],
+      "source": "experiencer: str"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 174,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 291,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status: ResolutionStatus"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 310,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status: ResolutionStatus"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 531,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "ambiguity_status: ResolutionStatus = ResolutionStatus.UNRESOLVED"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 159,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "replace",
+      "critical_fields": [],
+      "source": "return replace(result, **{field_name: value})"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 250,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "active = tuple(item for item in ordered_mentions if item.status not in {\"resolved\", \"discontinued\"})"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 413,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status = self.ambiguity_policy.decide(ordered)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 471,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [],
+      "source": "relations: list[ClinicalRelation] = []"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 133,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [],
+      "source": "projection[\"relations\"] = ["
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 149,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "ClinicalContextResult",
+      "critical_fields": [],
+      "source": "return ClinicalContextResult("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 250,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "tuple",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "active = tuple(item for item in ordered_mentions if item.status not in {\"resolved\", \"discontinued\"})"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 393,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "experiencer"
+      ],
+      "source": "experience = 1.0 if experiencer is None or mention.experiencer == experiencer else 0.35"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 413,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "self.ambiguity_policy.decide",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status = self.ambiguity_policy.decide(ordered)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 419,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "ReferenceResolution",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "return ReferenceResolution(status, ordered[0] if status is ResolutionStatus.RESOLVED else None, ordered, reason)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 105,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "ClinicalContextResult",
+      "critical_fields": [],
+      "source": "return ClinicalContextResult("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 479,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "ClinicalRelation",
+      "critical_fields": [],
+      "source": "ClinicalRelation("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 493,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "ClinicalRelation",
+      "critical_fields": [],
+      "source": "ClinicalRelation("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py",
+      "line": 506,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "ClinicalRelation",
+      "critical_fields": [],
+      "source": "ClinicalRelation("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_projection.py",
+      "line": 27,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [],
+      "source": "relations: tuple[ClinicalRelation, ...]"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_adapters.py",
+      "line": 54,
+      "classification": "LEGACY_OVERRIDE",
+      "operation": "ClinicalContextResult",
+      "critical_fields": [],
+      "source": "return ClinicalContextResult("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_adapters.py",
+      "line": 140,
+      "classification": "LEGACY_OVERRIDE",
+      "operation": "ClinicalContextResult",
+      "critical_fields": [],
+      "source": "return ClinicalContextResult("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_adapters.py",
+      "line": 51,
+      "classification": "LEGACY_OVERRIDE",
+      "operation": "ClinicalContextResult",
+      "critical_fields": [],
+      "source": "return ClinicalContextResult("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_adapters.py",
+      "line": 137,
+      "classification": "LEGACY_OVERRIDE",
+      "operation": "ClinicalContextResult",
+      "critical_fields": [],
+      "source": "return ClinicalContextResult("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_adapters.py",
+      "line": 141,
+      "classification": "LEGACY_OVERRIDE",
+      "operation": "bool",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "negated=bool(_extension(target, \"is_negated\", False)),"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_adapters.py",
+      "line": 141,
+      "classification": "LEGACY_OVERRIDE",
+      "operation": "_extension",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "negated=bool(_extension(target, \"is_negated\", False)),"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_adapters.py",
+      "line": 143,
+      "classification": "LEGACY_OVERRIDE",
+      "operation": "bool",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality=\"past\" if bool(_extension(target, \"is_historical\", False)) else \"current\","
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_adapters.py",
+      "line": 144,
+      "classification": "LEGACY_OVERRIDE",
+      "operation": "bool",
+      "critical_fields": [
+        "experiencer"
+      ],
+      "source": "experiencer=\"family\" if bool(_extension(target, \"is_family\", False)) else \"patient\","
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_adapters.py",
+      "line": 143,
+      "classification": "LEGACY_OVERRIDE",
+      "operation": "_extension",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality=\"past\" if bool(_extension(target, \"is_historical\", False)) else \"current\","
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_adapters.py",
+      "line": 144,
+      "classification": "LEGACY_OVERRIDE",
+      "operation": "_extension",
+      "critical_fields": [
+        "experiencer"
+      ],
+      "source": "experiencer=\"family\" if bool(_extension(target, \"is_family\", False)) else \"patient\","
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 17,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "negated: bool | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 19,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 20,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "experiencer"
+      ],
+      "source": "experiencer: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 21,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "laterality: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 22,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 23,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "source": "dose_value: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 24,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "dose",
+        "dose_unit"
+      ],
+      "source": "dose_unit: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 25,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "frequency: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 26,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "route"
+      ],
+      "source": "route: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 27,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 682,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "doses = list(_DOSE.finditer(before_marker))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 683,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "following = [dose for dose in doses if dose.start() >= target_start]"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 724,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "doses = list(_DOSE.finditer(sentence[: target_end + marker.start()]))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 725,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "following = [dose for dose in doses if dose.start() >= target_start]"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 48,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "negated = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 84,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 146,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "experiencer"
+      ],
+      "source": "experiencer = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 171,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "laterality = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 183,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose_match = _attached_candidates(list(_DOSE.finditer(sentence)), sentence, relative_start)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 186,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose",
+        "dose_unit",
+        "dose_value"
+      ],
+      "source": "dose = dose_value = dose_unit = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 233,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "frequency_candidates = list("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 240,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "frequency_candidates = _attached_candidates(frequency_candidates, sentence, relative_start)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 241,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "frequency_candidates = _mention_frequency_candidates("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 252,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "frequency_match = ("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 264,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "frequency = frequency_match.group(0).casefold() if frequency_match else None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 268,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "route"
+      ],
+      "source": "route = _first_match("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 279,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "route"
+      ],
+      "source": "route = {"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 290,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 291,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose",
+        "frequency",
+        "route",
+        "status"
+      ],
+      "source": "status_relevant = _status_target_relevant(mention_text, before, dose, frequency, route)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 366,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [],
+      "source": "projection = ClinicalMentionProjection("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 645,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "later_doses = ["
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 682,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "list",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "doses = list(_DOSE.finditer(before_marker))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 724,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "list",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "doses = list(_DOSE.finditer(sentence[: target_end + marker.start()]))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 53,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "negated = True"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 92,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"current\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 113,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"past\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 119,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"past\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 122,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"current\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 131,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"current\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 134,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"current\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 137,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"current\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 140,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"current\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 143,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"current\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 162,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "experiencer"
+      ],
+      "source": "experiencer = \"patient\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 173,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "laterality = \"left\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 183,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_attached_candidates",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose_match = _attached_candidates(list(_DOSE.finditer(sentence)), sentence, relative_start)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 185,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose_match = [match for match in _DOSE.finditer(sentence) if match.start() < relative_start]"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 200,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "source": "dose_value = _normalize_dose_value(selected.group(\"value\"), selected.group(\"unit\"))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 201,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose",
+        "dose_unit"
+      ],
+      "source": "dose_unit = _normalize_dose_unit(selected.group(\"unit\"))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 206,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose = f\"{display_value} {selected.group('unit')}\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 233,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "list",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "frequency_candidates = list("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 240,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_attached_candidates",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "frequency_candidates = _attached_candidates(frequency_candidates, sentence, relative_start)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 241,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_mention_frequency_candidates",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "frequency_candidates = _mention_frequency_candidates("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 248,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "frequency_candidates = ["
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 268,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_first_match",
+      "critical_fields": [
+        "route"
+      ],
+      "source": "route = _first_match("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 279,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "{'via oral': 'oral', 'via subcutânea': 'subcutaneous', 'via intravenosa': 'intravenous', 'via intramuscular': 'intramuscular', 'pela veia': 'intravenous', 'na veia': 'intravenous'}.get",
+      "critical_fields": [
+        "route"
+      ],
+      "source": "route = {"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 291,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_status_target_relevant",
+      "critical_fields": [
+        "dose",
+        "frequency",
+        "route",
+        "status"
+      ],
+      "source": "status_relevant = _status_target_relevant(mention_text, before, dose, frequency, route)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 293,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status = \"active\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 317,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 319,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status = \"active\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 333,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"current\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 336,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"current\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 339,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"past\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 351,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"past\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 366,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "ClinicalMentionProjection",
+      "critical_fields": [],
+      "source": "projection = ClinicalMentionProjection("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 373,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "ClinicalContextResult",
+      "critical_fields": [],
+      "source": "return ClinicalContextResult("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 411,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "ClinicalContextResult",
+      "critical_fields": [],
+      "source": "return ClinicalContextResult("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 682,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_DOSE.finditer",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "doses = list(_DOSE.finditer(before_marker))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 724,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_DOSE.finditer",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "doses = list(_DOSE.finditer(sentence[: target_end + marker.start()]))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 55,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_negated_coordinated_list",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "elif _negated_coordinated_list(sentence, relative_start):"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 56,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "negated = True"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 101,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"current\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 116,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"past\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 125,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"past\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 133,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "re.search",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "if negated and re.search(r\"\\b(?:histórico|história|teve)\\b\", before):"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 135,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "rules.append(\"ptbr-current-negated-history\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 168,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "experiencer"
+      ],
+      "source": "experiencer = \"family\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 174,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "rules.append(\"ptbr-left-laterality\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 176,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "laterality = \"right\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 179,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "laterality = _nearest_attribute(sentence, relative_start, (\"esquerdo\", \"esquerda\", \"direito\", \"direita\"))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 183,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "list",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose_match = _attached_candidates(list(_DOSE.finditer(sentence)), sentence, relative_start)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 184,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "re.search",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "if not dose_match and re.search(r\"\\b(?:aumentou|reduziu|passou|mudou)\\s+para\\b\", before, re.IGNORECASE):"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 200,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_normalize_dose_value",
+      "critical_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "source": "dose_value = _normalize_dose_value(selected.group(\"value\"), selected.group(\"unit\"))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 201,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_normalize_dose_unit",
+      "critical_fields": [
+        "dose",
+        "dose_unit"
+      ],
+      "source": "dose_unit = _normalize_dose_unit(selected.group(\"unit\"))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 222,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "rules.append(\"ptbr-dose\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 224,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose = \"850 mg\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 225,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "source": "dose_value = \"850\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 226,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose",
+        "dose_unit"
+      ],
+      "source": "dose_unit = \"mg\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 264,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "frequency_match.group(0).casefold",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "frequency = frequency_match.group(0).casefold() if frequency_match else None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 266,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "rules.append(\"ptbr-frequency\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 288,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "route"
+      ],
+      "source": "rules.append(\"ptbr-route\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 292,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "re.search",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "if status_relevant and re.search(r\"\\b(?:não\\s+suspendeu|não\\s+interrompeu)\\b\", before):"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 294,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "rules.append(\"ptbr-not-discontinued-status\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 296,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 318,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_target_has_restart",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "if status_relevant and _target_has_restart(sentence, relative_start, relative_end):"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 325,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status = \"active\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 352,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "rules.append(\"ptbr-past-discontinued-status\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 62,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "negated = True"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 104,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"current\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 128,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"current\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 169,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "experiencer"
+      ],
+      "source": "rules.append(\"ptbr-family-experiencer\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 177,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "rules.append(\"ptbr-right-laterality\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 179,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_nearest_attribute",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "laterality = _nearest_attribute(sentence, relative_start, (\"esquerdo\", \"esquerda\", \"direito\", \"direita\"))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 183,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_DOSE.finditer",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose_match = _attached_candidates(list(_DOSE.finditer(sentence)), sentence, relative_start)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 200,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "selected.group",
+      "critical_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "source": "dose_value = _normalize_dose_value(selected.group(\"value\"), selected.group(\"unit\"))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 200,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "selected.group",
+      "critical_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "source": "dose_value = _normalize_dose_value(selected.group(\"value\"), selected.group(\"unit\"))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 201,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "selected.group",
+      "critical_fields": [
+        "dose",
+        "dose_unit"
+      ],
+      "source": "dose_unit = _normalize_dose_unit(selected.group(\"unit\"))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 220,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "source": "dose_value = _normalize_dose_value(implicit_value, selected.group(\"unit\"))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 221,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose = f\"{implicit_value} {selected.group('unit')}\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 227,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "rules.append(\"ptbr-dose-word-number\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 229,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose",
+        "dose_unit",
+        "dose_value"
+      ],
+      "source": "dose_value, dose_unit = implicit_dose"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 230,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose",
+        "dose_unit",
+        "dose_value"
+      ],
+      "source": "dose = f\"{dose_value} {dose_unit}\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 295,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "re.search",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "elif status_relevant and re.search(r\"\\bnão\\s+parou\\s+de\\b\", before):"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 297,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "rules.append(\"ptbr-continuing-action-status\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 303,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status = \"discontinued\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 328,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "re.search",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "if status == \"active\" and not re.search("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 649,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "len",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "if len(later_doses) > 1 and not re.search("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 649,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "re.search",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "if len(later_doses) > 1 and not re.search("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 683,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "dose.start",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "following = [dose for dose in doses if dose.start() >= target_start]"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 725,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "dose.start",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "following = [dose for dose in doses if dose.start() >= target_start]"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 65,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "negated = True"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 110,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality = \"past\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 181,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "rules.append(\"ptbr-nearest-laterality\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 185,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_DOSE.finditer",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose_match = [match for match in _DOSE.finditer(sentence) if match.start() < relative_start]"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 206,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "selected.group",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose = f\"{display_value} {selected.group('unit')}\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 220,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_normalize_dose_value",
+      "critical_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "source": "dose_value = _normalize_dose_value(implicit_value, selected.group(\"unit\"))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 228,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_implicit_dose",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "elif implicit_dose := _implicit_dose(sentence, relative_start, lower):"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 231,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "rules.append(\"ptbr-dose-implicit-mg\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 264,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "frequency_match.group",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "frequency = frequency_match.group(0).casefold() if frequency_match else None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 304,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "rules.append(\"ptbr-discontinued-status\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 306,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status = \"discontinued\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 185,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "match.start",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose_match = [match for match in _DOSE.finditer(sentence) if match.start() < relative_start]"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 220,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "selected.group",
+      "critical_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "source": "dose_value = _normalize_dose_value(implicit_value, selected.group(\"unit\"))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 305,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "_target_has_discontinuation",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "elif status_relevant and _target_has_discontinuation(sentence, relative_start, relative_end):"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 307,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "rules.append(\"ptbr-discontinued-status-after-target\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 309,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status = \"active\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 323,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "re.search",
+      "critical_fields": [
+        "dose",
+        "frequency"
+      ],
+      "source": "or re.search(r\"\\b(?:mudou|passou|aumentou|reduziu|voltou|recomeçou)\\b\", lower) and (dose or frequency)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 647,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "dose.start",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "if dose.start() >= target_start and dose.start() < candidate.start()"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 647,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "dose.start",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "if dose.start() >= target_start and dose.start() < candidate.start()"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 647,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "candidate.start",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "if dose.start() >= target_start and dose.start() < candidate.start()"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 724,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "marker.start",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "doses = list(_DOSE.finditer(sentence[: target_end + marker.start()]))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 221,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "selected.group",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose = f\"{implicit_value} {selected.group('unit')}\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 301,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "re.search",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "and (status_relevant or re.search(r\"\\b(?:medicação|remédio|antibiótico|fumar|bebida|uso)\\b\", before))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 308,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "re.search",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "elif status_relevant and re.search(r\"\\b(?:usa|usar|toma|tomar|aplica|tomava|usava|usando|passou\\s+para|relata uso|mantém)\\b\", before):"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 310,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "rules.append",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "rules.append(\"ptbr-active-status\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 314,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status = \"active\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 358,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "ClinicalRelation",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "ClinicalRelation(\"HAS_DOSE\", mention_id, \"dose\", dose, {\"rule\": \"ptbr-dose\"}) if dose else None,"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 359,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "ClinicalRelation",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "ClinicalRelation(\"HAS_FREQUENCY\", mention_id, \"frequency\", frequency, {\"rule\": \"ptbr-frequency\"}) if frequency else None,"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 360,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "ClinicalRelation",
+      "critical_fields": [
+        "route"
+      ],
+      "source": "ClinicalRelation(\"HAS_ROUTE\", mention_id, \"route\", route, {\"rule\": \"ptbr-route\"}) if route else None,"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 361,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "ClinicalRelation",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "ClinicalRelation(\"HAS_LATERALITY\", mention_id, \"laterality\", laterality, {\"rule\": \"ptbr-nearest-laterality\"}) if laterality else None,"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 362,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "ClinicalRelation",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "ClinicalRelation(\"DISCONTINUED_AT\", mention_id, \"status\", status, {\"rule\": \"ptbr-discontinued-status\"}) if status == \"discontinued\" else None,"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py",
+      "line": 311,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "re.search",
+      "critical_fields": [
+        "dose",
+        "frequency",
+        "status"
+      ],
+      "source": "elif status_relevant and (dose or frequency) and not re.search("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 484,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose",
+        "status"
+      ],
+      "source": "entity_type = \"medication\" if result.dose or result.status else None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 667,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [],
+      "source": "relations = ClinicalRelationResolver().resolve("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 697,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [],
+      "source": "projection[\"relations\"] = projected_relations"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 183,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [],
+      "source": "semantic_candidate = ClinicalSemanticCandidate("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 193,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [],
+      "source": "resolved = ResolvedClinicalSemantics("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 667,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "ClinicalRelationResolver().resolve",
+      "critical_fields": [],
+      "source": "relations = ClinicalRelationResolver().resolve("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 183,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "ClinicalSemanticCandidate",
+      "critical_fields": [],
+      "source": "semantic_candidate = ClinicalSemanticCandidate("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 193,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "ResolvedClinicalSemantics",
+      "critical_fields": [],
+      "source": "resolved = ResolvedClinicalSemantics("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 282,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "result = replace(result, negated=True)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 283,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "fields[\"negated\"] = (target.segment_id,)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 285,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "result = replace(result, temporality=\"past\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 286,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "fields[\"temporality\"] = (target.segment_id,)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 292,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "result = replace(result, status=\"active\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 293,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "fields[\"status\"] = (target.segment_id,)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 296,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status",
+        "temporality"
+      ],
+      "source": "result = replace(result, status=\"discontinued\", temporality=\"past\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 314,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "result = replace(result, negated=True)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 315,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "fields[\"negated\"] = (state.segments[-1].segment_id,)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 318,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "experiencer"
+      ],
+      "source": "result = replace(result, experiencer=\"family\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 319,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "experiencer"
+      ],
+      "source": "fields[\"experiencer\"] = tuple("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 326,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "lateral = _last_laterality(following_text)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 335,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose = _last_dose(following_text)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 347,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "frequency = _last_frequency(following_text)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 357,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "local_frequency = _last_frequency(target.text)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 397,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "replace",
+      "critical_fields": [],
+      "source": "return replace(result, provenance=provenance)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 282,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "replace",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "result = replace(result, negated=True)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 285,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "replace",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "result = replace(result, temporality=\"past\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 292,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "replace",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "result = replace(result, status=\"active\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 296,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "replace",
+      "critical_fields": [
+        "status",
+        "temporality"
+      ],
+      "source": "result = replace(result, status=\"discontinued\", temporality=\"past\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 297,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "fields.update",
+      "critical_fields": [
+        "status",
+        "temporality"
+      ],
+      "source": "fields.update(status=(state.segments[-1].segment_id,), temporality=(state.segments[-1].segment_id,))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 299,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "negated",
+        "status"
+      ],
+      "source": "result = replace(result, status=\"resolved\", negated=True)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 314,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "replace",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "result = replace(result, negated=True)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 318,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "replace",
+      "critical_fields": [
+        "experiencer"
+      ],
+      "source": "result = replace(result, experiencer=\"family\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 326,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "_last_laterality",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "lateral = _last_laterality(following_text)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 332,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "result = replace(result, laterality=lateral)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 333,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "fields[\"laterality\"] = (state.segments[-1].segment_id,)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 335,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "_last_dose",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose = _last_dose(following_text)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 337,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "value, unit, rendered = dose"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 338,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose",
+        "dose_unit",
+        "dose_value"
+      ],
+      "source": "result = replace(result, dose=rendered, dose_value=value, dose_unit=unit)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 347,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "_last_frequency",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "frequency = _last_frequency(following_text)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 349,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "result = replace(result, frequency=frequency)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 350,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "fields[\"frequency\"] = (state.segments[-1].segment_id,)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 353,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "result = replace(result, temporality=\"past\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 354,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "fields[\"temporality\"] = (state.segments[-1].segment_id,)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 357,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "_last_frequency",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "local_frequency = _last_frequency(target.text)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 359,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "result = replace(result, frequency=local_frequency)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 360,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "fields[\"frequency\"] = (target.segment_id,)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 667,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "ClinicalRelationResolver",
+      "critical_fields": [],
+      "source": "relations = ClinicalRelationResolver().resolve("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 149,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "ClinicalRelation",
+      "critical_fields": [],
+      "source": "ClinicalRelation("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 299,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "replace",
+      "critical_fields": [
+        "negated",
+        "status"
+      ],
+      "source": "result = replace(result, status=\"resolved\", negated=True)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 300,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "fields.update",
+      "critical_fields": [
+        "negated",
+        "status"
+      ],
+      "source": "fields.update(status=(state.segments[-1].segment_id,), negated=(state.segments[-1].segment_id,))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 302,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status",
+        "temporality"
+      ],
+      "source": "result = replace(result, status=\"active\", temporality=\"current\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 319,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "tuple",
+      "critical_fields": [
+        "experiencer"
+      ],
+      "source": "fields[\"experiencer\"] = tuple("
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 332,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "replace",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "result = replace(result, laterality=lateral)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 338,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "replace",
+      "critical_fields": [
+        "dose",
+        "dose_unit",
+        "dose_value"
+      ],
+      "source": "result = replace(result, dose=rendered, dose_value=value, dose_unit=unit)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 339,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "fields.update",
+      "critical_fields": [
+        "dose",
+        "dose_unit",
+        "dose_value"
+      ],
+      "source": "fields.update(dose=(state.segments[-1].segment_id,), dose_value=(state.segments[-1].segment_id,), dose_unit=(state.segments[-1].segment_id,))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 341,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "implicit_dose = _last_implicit_dose(following_text)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 349,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "replace",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "result = replace(result, frequency=frequency)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 352,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "_PAST_CUE.search",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "if _PAST_CUE.search(following_text) and result.temporality == \"current\":"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 353,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "replace",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "result = replace(result, temporality=\"past\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 359,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "replace",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "result = replace(result, frequency=local_frequency)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 302,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "replace",
+      "critical_fields": [
+        "status",
+        "temporality"
+      ],
+      "source": "result = replace(result, status=\"active\", temporality=\"current\")"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 303,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "fields.update",
+      "critical_fields": [
+        "status",
+        "temporality"
+      ],
+      "source": "fields.update(status=(state.segments[-1].segment_id,), temporality=(state.segments[-1].segment_id,))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 341,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "_last_implicit_dose",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "implicit_dose = _last_implicit_dose(following_text)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 343,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "value = implicit_dose"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 344,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "Assign",
+      "critical_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "source": "result = replace(result, dose=value, dose_value=value)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 344,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "replace",
+      "critical_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "source": "result = replace(result, dose=value, dose_value=value)"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 345,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "fields.update",
+      "critical_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "source": "fields.update(dose=(state.segments[-1].segment_id,), dose_value=(state.segments[-1].segment_id,))"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 393,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "tuple",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "provenance={\"source_segment_ids\": tuple(fields.get(\"temporality\", ()))},"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py",
+      "line": 393,
+      "classification": "CONTEXT_RESOLVER",
+      "operation": "fields.get",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "provenance={\"source_segment_ids\": tuple(fields.get(\"temporality\", ()))},"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/run_context_hardening.py",
+      "line": 54,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "result[\"hybrid\"] = {\"status\": \"blocked\", \"authorization\": decision.to_dict()}"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/run_context_hardening.py",
+      "line": 54,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "decision.to_dict",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "result[\"hybrid\"] = {\"status\": \"blocked\", \"authorization\": decision.to_dict()}"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/run_context_hardening.py",
+      "line": 85,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "result[\"medspacy\"] = {\"status\": \"unavailable\", \"reason\": str(error)}"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/run_context_hardening.py",
+      "line": 86,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "result[\"hybrid\"] = {\"status\": \"unavailable\", \"reason\": str(error)}"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/run_context_hardening.py",
+      "line": 85,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "str",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "result[\"medspacy\"] = {\"status\": \"unavailable\", \"reason\": str(error)}"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/run_context_hardening.py",
+      "line": 86,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "str",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "result[\"hybrid\"] = {\"status\": \"unavailable\", \"reason\": str(error)}"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/run_error_taxonomy.py",
+      "line": 24,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "Assign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "result = {\"status\": \"blocked\", \"authorization\": decision.to_dict()}"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/run_error_taxonomy.py",
+      "line": 24,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "decision.to_dict",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "result = {\"status\": \"blocked\", \"authorization\": decision.to_dict()}"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/run_v6_blind_run.py",
+      "line": 30,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "manifest.get",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "if manifest.get(\"status\") != \"frozen\":"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/semantic_writer_audit.py",
+      "line": 58,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "any",
+      "critical_fields": [],
+      "source": "if not critical and not any(token in line for token in (\"ClinicalContextResult\", \"ClinicalMentionProjection\", \"ClinicalRelation\", \"ClinicalSemanticCandidate\", \"ResolvedClinicalSemantics\", \"replace(result\", \"projection[\")):"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/apps/runtime/src/ports/outbound/clinical_semantics.py",
+      "line": 57,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "negated"
+      ],
+      "source": "negated: bool = False"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/apps/runtime/src/ports/outbound/clinical_semantics.py",
+      "line": 59,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "temporality"
+      ],
+      "source": "temporality: str = \"current\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/apps/runtime/src/ports/outbound/clinical_semantics.py",
+      "line": 60,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "experiencer"
+      ],
+      "source": "experiencer: str = \"patient\""
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/apps/runtime/src/ports/outbound/clinical_semantics.py",
+      "line": 61,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "laterality"
+      ],
+      "source": "laterality: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/apps/runtime/src/ports/outbound/clinical_semantics.py",
+      "line": 62,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "dose"
+      ],
+      "source": "dose: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/apps/runtime/src/ports/outbound/clinical_semantics.py",
+      "line": 63,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "source": "dose_value: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/apps/runtime/src/ports/outbound/clinical_semantics.py",
+      "line": 64,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "dose",
+        "dose_unit"
+      ],
+      "source": "dose_unit: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/apps/runtime/src/ports/outbound/clinical_semantics.py",
+      "line": 65,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "frequency"
+      ],
+      "source": "frequency: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/apps/runtime/src/ports/outbound/clinical_semantics.py",
+      "line": 66,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "route"
+      ],
+      "source": "route: str | None = None"
+    },
+    {
+      "file": "/home/carlos-henrique/Documentos/workspace/astera/apps/runtime/src/ports/outbound/clinical_semantics.py",
+      "line": 67,
+      "classification": "LOCAL_CANDIDATE_PRODUCER",
+      "operation": "AnnAssign",
+      "critical_fields": [
+        "status"
+      ],
+      "source": "status: str | None = None"
+    }
+  ],
+  "authority_rule": "LOCAL_CANDIDATE_PRODUCER -> CONTEXT_RESOLVER -> PROJECTION_WRITER",
+  "legacy_override_count": 10
+}

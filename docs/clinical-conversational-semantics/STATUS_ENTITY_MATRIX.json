@@ -1,0 +1,78 @@
+{
+  "policy": "clinical-semantic-policy-v1.1 (under review; v1.2 not approved)",
+  "status": "candidate_matrix_only",
+  "entity_types": {
+    "event": {
+      "EVENT_LIFECYCLE": 10
+    },
+    "person": {
+      "TEMPORALITY_ONLY": 3
+    },
+    "procedure": {
+      "PROCEDURE_LIFECYCLE": 1
+    },
+    "symptom": {
+      "IMPLICIT_ASSERTION_ONLY": 9,
+      "NO_STATUS_EVIDENCE": 63,
+      "TEMPORALITY_ONLY": 4
+    }
+  },
+  "candidate_allowed_status": {
+    "symptom": {
+      "default_status": null,
+      "explicit_lifecycle_values": [
+        "ongoing",
+        "resolved"
+      ],
+      "temporal_history_representation": "temporality=past; status=null"
+    },
+    "condition": {
+      "default_status": null,
+      "explicit_lifecycle_values": [
+        "ongoing",
+        "resolved"
+      ],
+      "temporal_history_representation": "temporality=past; status=null"
+    },
+    "person": {
+      "default_status": null,
+      "explicit_lifecycle_values": [],
+      "temporal_history_representation": "experiencer mention does not inherit event status"
+    },
+    "event": {
+      "default_status": null,
+      "explicit_lifecycle_values": [],
+      "temporal_history_representation": "temporality=past; status=null"
+    },
+    "procedure": {
+      "default_status": null,
+      "explicit_lifecycle_values": [
+        "planned"
+      ],
+      "temporal_history_representation": "temporality=past; status=null"
+    },
+    "medication": {
+      "default_status": "lifecycle_explicit",
+      "explicit_lifecycle_values": [
+        "active",
+        "discontinued"
+      ],
+      "temporal_history_representation": "discontinuation event owns past time"
+    },
+    "device": {
+      "default_status": "lifecycle_explicit",
+      "explicit_lifecycle_values": [
+        "active",
+        "discontinued"
+      ],
+      "temporal_history_representation": "discontinuation event owns past time"
+    }
+  },
+  "status_mismatch_findings": 90,
+  "status_transitions": {
+    "None → historical": 18,
+    "None → present": 63,
+    "present → None": 9
+  },
+  "frozen_v6_checksum": "1721ad71b7ef92c20a06fa9cae956098fefad0e079f92464d67f1bf9255a3f10"
+}

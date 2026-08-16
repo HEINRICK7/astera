@@ -9,6 +9,7 @@ It receives it via Dependency Injection through the EventBusPort interface.
 """
 from __future__ import annotations
 
+import asyncio
 import logging
 from typing import Callable, Awaitable
 
@@ -26,30 +27,56 @@ class NatsEventBusAdapter(EventBusPort):
     reconnection logic, and structured logging.
     """
 
-    def __init__(self, nats_url: str, connect_timeout: float = 5.0) -> None:
+    def __init__(
+        self,
+        nats_url: str,
+        connect_timeout: float = 5.0,
+        reconnect_time_wait: float = 2.0,
+        max_reconnect_attempts: int = 10,
+        startup_retries: int = 3,
+    ) -> None:
         self._nats_url = nats_url
         self._connect_timeout = connect_timeout
+        self._reconnect_time_wait = reconnect_time_wait
+        self._max_reconnect_attempts = max_reconnect_attempts
+        self._startup_retries = max(1, startup_retries)
         self._client = None  # nats.aio.client.Client — imported lazily
 
     async def connect(self) -> None:
         """Establish connection to NATS."""
-        try:
-            import nats
+        if await self.is_connected():
+            return
+        import nats
 
-            self._client = await nats.connect(
-                servers=[self._nats_url],
-                connect_timeout=self._connect_timeout,
-                error_cb=self._on_error,
-                disconnected_cb=self._on_disconnect,
-                reconnected_cb=self._on_reconnect,
-            )
-            logger.info(
-                "Connected to NATS",
-                extra={"url": self._nats_url, "server_id": self._client.connected_url.netloc},
-            )
-        except Exception as exc:
-            logger.error("Failed to connect to NATS", extra={"url": self._nats_url, "error": str(exc)})
-            raise EventBusError(f"NATS connection failed: {exc}") from exc
+        last_error: Exception | None = None
+        for attempt in range(1, self._startup_retries + 1):
+            try:
+                self._client = await nats.connect(
+                    servers=[self._nats_url],
+                    connect_timeout=self._connect_timeout,
+                    reconnect_time_wait=self._reconnect_time_wait,
+                    max_reconnect_attempts=self._max_reconnect_attempts,
+                    error_cb=self._on_error,
+                    disconnected_cb=self._on_disconnect,
+                    reconnected_cb=self._on_reconnect,
+                )
+                logger.info(
+                    "Connected to NATS",
+                    extra={"url": self._nats_url, "attempt": attempt},
+                )
+                return
+            except Exception as exc:
+                last_error = exc
+                self._client = None
+                logger.warning(
+                    "NATS connection attempt failed",
+                    extra={"url": self._nats_url, "attempt": attempt, "error": str(exc)},
+                )
+                if attempt < self._startup_retries:
+                    await asyncio.sleep(min(2.0, 0.25 * (2 ** (attempt - 1))))
+        assert last_error is not None
+        logger.error("Failed to connect to NATS", extra={"url": self._nats_url, "error": str(last_error)})
+        raise EventBusError(f"NATS connection failed: {last_error}") from last_error
 
     async def disconnect(self) -> None:
         """Gracefully drain and close NATS connection."""
@@ -97,6 +124,10 @@ class NatsEventBusAdapter(EventBusPort):
     async def is_connected(self) -> bool:
         """Return True if the NATS client is connected and not closed."""
         return self._client is not None and not self._client.is_closed
+
+    async def health_check(self) -> None:
+        if not await self.is_connected():
+            raise EventBusNotConnectedError()
 
     # ── NATS Callbacks ────────────────────────────────────────────────────────
 

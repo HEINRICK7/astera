@@ -1,0 +1,1798 @@
+{
+  "status": "HUMAN_GATE_REQUIRED",
+  "policy": "SEM-STATUS-001",
+  "version": "1.2",
+  "decision": "APPROVE_DOCUMENTATION_ONLY",
+  "frozen_v6_checksum": "1721ad71b7ef92c20a06fa9cae956098fefad0e079f92464d67f1bf9255a3f10",
+  "status_findings": 90,
+  "status_only_failures": 89,
+  "normative_null": 90,
+  "explicit_lifecycle": 0,
+  "medication_lifecycle": 0,
+  "classification_counts": {
+    "TYPE_A_RESOLVER_ERROR": 81,
+    "TYPE_B_GOLD_ISSUE": 9,
+    "TYPE_C_POLICY_UNDEFINED": 0,
+    "ALIGNED": 0
+  },
+  "transition_counts": [
+    {
+      "transition": "None → historical",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "count": 18
+    },
+    {
+      "transition": "None → present",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "count": 63
+    },
+    {
+      "transition": "present → None",
+      "classification": "TYPE_B_GOLD_ISSUE",
+      "count": 9
+    }
+  ],
+  "mutations": {
+    "policy_changes": "documentation_only",
+    "resolver_changes": 0,
+    "gold_changes": 0,
+    "corpus_changes": 0,
+    "repair_started": false
+  },
+  "records": [
+    {
+      "case_id": "sim-v6-0013",
+      "surface": "cirurgia",
+      "entity_type": "procedure",
+      "text": "A cirurgia foi há anos; atualmente sente peso na perna esquerda.",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "PROCEDURE_LIFECYCLE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\batualmente\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0027",
+      "surface": "dor",
+      "entity_type": "symptom",
+      "text": "A dormência ocupa o lado direito do rosto e a dor está na perna esquerda.",
+      "gold_status": "present",
+      "resolved_status": null,
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "IMPLICIT_ASSERTION_ONLY",
+      "classification": "TYPE_B_GOLD_ISSUE",
+      "reason": "gold retains status although v1.2 defines this assertion/temporal expression as status null",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0027",
+      "surface": "dormência",
+      "entity_type": "symptom",
+      "text": "A dormência ocupa o lado direito do rosto e a dor está na perna esquerda.",
+      "gold_status": "present",
+      "resolved_status": null,
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "IMPLICIT_ASSERTION_ONLY",
+      "classification": "TYPE_B_GOLD_ISSUE",
+      "reason": "gold retains status although v1.2 defines this assertion/temporal expression as status null",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0029",
+      "surface": "pressão",
+      "entity_type": "symptom",
+      "text": "A pressão incomoda o ouvido esquerdo, enquanto o zumbido aparece no direito.",
+      "gold_status": "present",
+      "resolved_status": null,
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "IMPLICIT_ASSERTION_ONLY",
+      "classification": "TYPE_B_GOLD_ISSUE",
+      "reason": "gold retains status although v1.2 defines this assertion/temporal expression as status null",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0029",
+      "surface": "zumbido",
+      "entity_type": "symptom",
+      "text": "A pressão incomoda o ouvido esquerdo, enquanto o zumbido aparece no direito.",
+      "gold_status": "present",
+      "resolved_status": null,
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "IMPLICIT_ASSERTION_ONLY",
+      "classification": "TYPE_B_GOLD_ISSUE",
+      "reason": "gold retains status although v1.2 defines this assertion/temporal expression as status null",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0031",
+      "surface": "coceira",
+      "entity_type": "symptom",
+      "text": "O inchaço está no tornozelo esquerdo e a coceira na mão direita.",
+      "gold_status": "present",
+      "resolved_status": null,
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "IMPLICIT_ASSERTION_ONLY",
+      "classification": "TYPE_B_GOLD_ISSUE",
+      "reason": "gold retains status although v1.2 defines this assertion/temporal expression as status null",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0031",
+      "surface": "inchaço",
+      "entity_type": "symptom",
+      "text": "O inchaço está no tornozelo esquerdo e a coceira na mão direita.",
+      "gold_status": "present",
+      "resolved_status": null,
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "IMPLICIT_ASSERTION_ONLY",
+      "classification": "TYPE_B_GOLD_ISSUE",
+      "reason": "gold retains status although v1.2 defines this assertion/temporal expression as status null",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0038",
+      "surface": "fraqueza",
+      "entity_type": "symptom",
+      "text": "Nega formigamento na mão, embora tenha fraqueza no braço.",
+      "gold_status": "present",
+      "resolved_status": null,
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "IMPLICIT_ASSERTION_ONLY",
+      "classification": "TYPE_B_GOLD_ISSUE",
+      "reason": "gold retains status although v1.2 defines this assertion/temporal expression as status null",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0040",
+      "surface": "desequilíbrio",
+      "entity_type": "symptom",
+      "text": "Diz que não tem tontura e que sente apenas desequilíbrio ao andar.",
+      "gold_status": "present",
+      "resolved_status": null,
+      "normative_status_v1_2": null,
+      "status_failure_scope": "status_plus_other_field",
+      "source_classification": "IMPLICIT_ASSERTION_ONLY",
+      "classification": "TYPE_B_GOLD_ISSUE",
+      "reason": "gold retains status although v1.2 defines this assertion/temporal expression as status null",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0051",
+      "surface": "formigamento",
+      "entity_type": "symptom",
+      "text": "Médico: A dor melhorou?\nPaciente: Sim, não sinto mais, só formigamento na mão direita.",
+      "gold_status": "present",
+      "resolved_status": null,
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "IMPLICIT_ASSERTION_ONLY",
+      "classification": "TYPE_B_GOLD_ISSUE",
+      "reason": "gold retains status although v1.2 defines this assertion/temporal expression as status null",
+      "explicit_status_cue": [
+        "\\bmelhorou\\b"
+      ],
+      "temporal_cues": [],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-c-002-1",
+      "surface": "mãe",
+      "entity_type": "person",
+      "text": "Médico: Sua mãe teve câncer e diabetes?\nPaciente: Teve, de mama. na consulta de hoje",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "TEMPORALITY_ONLY",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b",
+        "\\bna consulta de hoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-c-002-2",
+      "surface": "mãe",
+      "entity_type": "person",
+      "text": "Médico: Sua mãe teve câncer e diabetes?\nPaciente: Teve, de mama. no retorno desta semana",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "TEMPORALITY_ONLY",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bretorno desta semana\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-c-002-3",
+      "surface": "mãe",
+      "entity_type": "person",
+      "text": "Médico: Sua mãe teve câncer e diabetes?\nPaciente: Teve, de mama. durante a revisão clínica",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "TEMPORALITY_ONLY",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation": false,
+      "type_b_fields_ignored": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-c-004-1",
+      "surface": "chiado",
+      "entity_type": "symptom",
+      "text": "Médico: Ele ainda usa a bombinha?\nPaciente: Usa quando começa com chiado, mas não sente falta de ar. na consulta de hoje",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [
+        "\\bainda usa\\b",
+        "\\busa\\b"
+      ],
+      "temporal_cues": [
+        "\\bhoje\\b",
+        "\\bna consulta de hoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-c-004-2",
+      "surface": "chiado",
+      "entity_type": "symptom",
+      "text": "Médico: Ele ainda usa a bombinha?\nPaciente: Usa quando começa com chiado, mas não sente falta de ar. no retorno desta semana",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [
+        "\\bainda usa\\b",
+        "\\busa\\b"
+      ],
+      "temporal_cues": [
+        "\\bretorno desta semana\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-c-004-3",
+      "surface": "chiado",
+      "entity_type": "symptom",
+      "text": "Médico: Ele ainda usa a bombinha?\nPaciente: Usa quando começa com chiado, mas não sente falta de ar. durante a revisão clínica",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [
+        "\\bainda usa\\b",
+        "\\busa\\b"
+      ],
+      "temporal_cues": [],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-001",
+      "surface": "dor no joelho esquerdo",
+      "entity_type": "symptom",
+      "text": "Refere dor no joelho esquerdo ao acordar e formigamento na mão direita depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-001",
+      "surface": "formigamento na mão direita",
+      "entity_type": "symptom",
+      "text": "Refere dor no joelho esquerdo ao acordar e formigamento na mão direita depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-002",
+      "surface": "peso na perna direita",
+      "entity_type": "symptom",
+      "text": "Refere queimação no pé esquerdo ao acordar e peso na perna direita depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-002",
+      "surface": "queimação no pé esquerdo",
+      "entity_type": "symptom",
+      "text": "Refere queimação no pé esquerdo ao acordar e peso na perna direita depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-003",
+      "surface": "dor no ombro esquerdo",
+      "entity_type": "symptom",
+      "text": "Refere dor no ombro esquerdo ao acordar e fraqueza no braço direito depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-003",
+      "surface": "fraqueza no braço direito",
+      "entity_type": "symptom",
+      "text": "Refere dor no ombro esquerdo ao acordar e fraqueza no braço direito depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-004",
+      "surface": "dormência na coxa direita",
+      "entity_type": "symptom",
+      "text": "Refere inchaço no tornozelo esquerdo ao acordar e dormência na coxa direita depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-004",
+      "surface": "inchaço no tornozelo esquerdo",
+      "entity_type": "symptom",
+      "text": "Refere inchaço no tornozelo esquerdo ao acordar e dormência na coxa direita depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-005",
+      "surface": "pontada no lado esquerdo",
+      "entity_type": "symptom",
+      "text": "Refere pontada no lado esquerdo ao acordar e sensibilidade no lado direito depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-005",
+      "surface": "sensibilidade no lado direito",
+      "entity_type": "symptom",
+      "text": "Refere pontada no lado esquerdo ao acordar e sensibilidade no lado direito depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-006",
+      "surface": "dor na mama esquerda",
+      "entity_type": "symptom",
+      "text": "Refere dor na mama esquerda ao acordar e nódulo na axila direita depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-006",
+      "surface": "nódulo na axila direita",
+      "entity_type": "symptom",
+      "text": "Refere dor na mama esquerda ao acordar e nódulo na axila direita depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-007",
+      "surface": "ardor no pé direito",
+      "entity_type": "symptom",
+      "text": "Refere coceira na mão esquerda ao acordar e ardor no pé direito depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-007",
+      "surface": "coceira na mão esquerda",
+      "entity_type": "symptom",
+      "text": "Refere coceira na mão esquerda ao acordar e ardor no pé direito depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-008",
+      "surface": "dor na panturrilha direita",
+      "entity_type": "symptom",
+      "text": "Refere rigidez no quadril esquerdo ao acordar e dor na panturrilha direita depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-008",
+      "surface": "rigidez no quadril esquerdo",
+      "entity_type": "symptom",
+      "text": "Refere rigidez no quadril esquerdo ao acordar e dor na panturrilha direita depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-009",
+      "surface": "perda de força na perna direita",
+      "entity_type": "symptom",
+      "text": "Refere tremor na mão esquerda ao acordar e perda de força na perna direita depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-009",
+      "surface": "tremor na mão esquerda",
+      "entity_type": "symptom",
+      "text": "Refere tremor na mão esquerda ao acordar e perda de força na perna direita depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-010",
+      "surface": "desconforto no ouvido esquerdo",
+      "entity_type": "symptom",
+      "text": "Refere desconforto no ouvido esquerdo ao acordar e zumbido no ouvido direito depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-010",
+      "surface": "zumbido no ouvido direito",
+      "entity_type": "symptom",
+      "text": "Refere desconforto no ouvido esquerdo ao acordar e zumbido no ouvido direito depois de caminhar.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-011",
+      "surface": "tosse seca",
+      "entity_type": "symptom",
+      "text": "Nega febre, mas relata tosse seca desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-012",
+      "surface": "dor abdominal",
+      "entity_type": "symptom",
+      "text": "Nega náusea, mas relata dor abdominal desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-013",
+      "surface": "cansaço",
+      "entity_type": "symptom",
+      "text": "Nega calafrio, mas relata cansaço desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-014",
+      "surface": "azia",
+      "entity_type": "symptom",
+      "text": "Nega vômito, mas relata azia desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-015",
+      "surface": "chiado",
+      "entity_type": "symptom",
+      "text": "Nega dispneia, mas relata chiado desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-016",
+      "surface": "tontura",
+      "entity_type": "symptom",
+      "text": "Nega sangramento, mas relata tontura desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-017",
+      "surface": "palpitação",
+      "entity_type": "symptom",
+      "text": "Nega dor torácica, mas relata palpitação desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-018",
+      "surface": "cólica",
+      "entity_type": "symptom",
+      "text": "Nega diarreia, mas relata cólica desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-019",
+      "surface": "vermelhidão",
+      "entity_type": "symptom",
+      "text": "Nega prurido, mas relata vermelhidão desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-020",
+      "surface": "fraqueza",
+      "entity_type": "symptom",
+      "text": "Nega desmaio, mas relata fraqueza desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-051",
+      "surface": "cirurgia no ombro",
+      "entity_type": "event",
+      "text": "Teve cirurgia no ombro há anos, mas hoje sente dormência no braço.",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "EVENT_LIFECYCLE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-051",
+      "surface": "dormência no braço",
+      "entity_type": "symptom",
+      "text": "Teve cirurgia no ombro há anos, mas hoje sente dormência no braço.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-052",
+      "surface": "dor no quadril",
+      "entity_type": "symptom",
+      "text": "Teve queda há anos, mas hoje sente dor no quadril.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-052",
+      "surface": "queda",
+      "entity_type": "event",
+      "text": "Teve queda há anos, mas hoje sente dor no quadril.",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "EVENT_LIFECYCLE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-053",
+      "surface": "pneumonia",
+      "entity_type": "event",
+      "text": "Teve pneumonia há anos, mas hoje sente tosse.",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "EVENT_LIFECYCLE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-053",
+      "surface": "tosse",
+      "entity_type": "symptom",
+      "text": "Teve pneumonia há anos, mas hoje sente tosse.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-054",
+      "surface": "inchaço no tornozelo",
+      "entity_type": "symptom",
+      "text": "Teve lesão no joelho há anos, mas hoje sente inchaço no tornozelo.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-054",
+      "surface": "lesão no joelho",
+      "entity_type": "event",
+      "text": "Teve lesão no joelho há anos, mas hoje sente inchaço no tornozelo.",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "EVENT_LIFECYCLE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-055",
+      "surface": "fratura na mão",
+      "entity_type": "event",
+      "text": "Teve fratura na mão há anos, mas hoje sente rigidez nos dedos.",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "EVENT_LIFECYCLE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-055",
+      "surface": "rigidez nos dedos",
+      "entity_type": "symptom",
+      "text": "Teve fratura na mão há anos, mas hoje sente rigidez nos dedos.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-056",
+      "surface": "cansaço",
+      "entity_type": "symptom",
+      "text": "Teve infarto há anos, mas hoje sente cansaço.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-056",
+      "surface": "infarto",
+      "entity_type": "event",
+      "text": "Teve infarto há anos, mas hoje sente cansaço.",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "EVENT_LIFECYCLE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-057",
+      "surface": "chiado",
+      "entity_type": "symptom",
+      "text": "Teve crise de asma há anos, mas hoje sente chiado.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-057",
+      "surface": "crise de asma",
+      "entity_type": "event",
+      "text": "Teve crise de asma há anos, mas hoje sente chiado.",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "EVENT_LIFECYCLE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-058",
+      "surface": "dor lombar",
+      "entity_type": "event",
+      "text": "Teve dor lombar há anos, mas hoje sente formigamento na perna.",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "EVENT_LIFECYCLE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-058",
+      "surface": "formigamento na perna",
+      "entity_type": "symptom",
+      "text": "Teve dor lombar há anos, mas hoje sente formigamento na perna.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-059",
+      "surface": "peso na panturrilha",
+      "entity_type": "symptom",
+      "text": "Teve trombose há anos, mas hoje sente peso na panturrilha.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-059",
+      "surface": "trombose",
+      "entity_type": "event",
+      "text": "Teve trombose há anos, mas hoje sente peso na panturrilha.",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "EVENT_LIFECYCLE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-060",
+      "surface": "otite",
+      "entity_type": "event",
+      "text": "Teve otite há anos, mas hoje sente zumbido.",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "EVENT_LIFECYCLE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-060",
+      "surface": "zumbido",
+      "entity_type": "symptom",
+      "text": "Teve otite há anos, mas hoje sente zumbido.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-003-1",
+      "surface": "azia",
+      "entity_type": "symptom",
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte hoje.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-003-1",
+      "surface": "enjoo",
+      "entity_type": "symptom",
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte hoje.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-003-2",
+      "surface": "azia",
+      "entity_type": "symptom",
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-003-2",
+      "surface": "enjoo",
+      "entity_type": "symptom",
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-003-3",
+      "surface": "azia",
+      "entity_type": "symptom",
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte depois do almoço.",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "TEMPORALITY_ONLY",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-r-003-3",
+      "surface": "enjoo",
+      "entity_type": "symptom",
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte depois do almoço.",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "TEMPORALITY_ONLY",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-r-005-1",
+      "surface": "inchaço",
+      "entity_type": "symptom",
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço hoje.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-005-1",
+      "surface": "vermelhidão",
+      "entity_type": "symptom",
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço hoje.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-005-2",
+      "surface": "inchaço",
+      "entity_type": "symptom",
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-005-2",
+      "surface": "vermelhidão",
+      "entity_type": "symptom",
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-005-3",
+      "surface": "inchaço",
+      "entity_type": "symptom",
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço depois do almoço.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-005-3",
+      "surface": "vermelhidão",
+      "entity_type": "symptom",
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço depois do almoço.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-006-1",
+      "surface": "cansaço",
+      "entity_type": "symptom",
+      "text": "Nega palpitação, refere cansaço e peso no peito hoje.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-006-1",
+      "surface": "peso no peito",
+      "entity_type": "symptom",
+      "text": "Nega palpitação, refere cansaço e peso no peito hoje.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-006-2",
+      "surface": "cansaço",
+      "entity_type": "symptom",
+      "text": "Nega palpitação, refere cansaço e peso no peito desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-006-2",
+      "surface": "peso no peito",
+      "entity_type": "symptom",
+      "text": "Nega palpitação, refere cansaço e peso no peito desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-006-3",
+      "surface": "cansaço",
+      "entity_type": "symptom",
+      "text": "Nega palpitação, refere cansaço e peso no peito depois do almoço.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-006-3",
+      "surface": "peso no peito",
+      "entity_type": "symptom",
+      "text": "Nega palpitação, refere cansaço e peso no peito depois do almoço.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-008-1",
+      "surface": "dor no corpo",
+      "entity_type": "symptom",
+      "text": "Não relata calafrio mas teve febre e dor no corpo hoje.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-008-1",
+      "surface": "febre",
+      "entity_type": "symptom",
+      "text": "Não relata calafrio mas teve febre e dor no corpo hoje.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-008-2",
+      "surface": "dor no corpo",
+      "entity_type": "symptom",
+      "text": "Não relata calafrio mas teve febre e dor no corpo desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-008-2",
+      "surface": "febre",
+      "entity_type": "symptom",
+      "text": "Não relata calafrio mas teve febre e dor no corpo desde ontem.",
+      "gold_status": null,
+      "resolved_status": "present",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "NO_STATUS_EVIDENCE",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-008-3",
+      "surface": "dor no corpo",
+      "entity_type": "symptom",
+      "text": "Não relata calafrio mas teve febre e dor no corpo depois do almoço.",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "TEMPORALITY_ONLY",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-r-008-3",
+      "surface": "febre",
+      "entity_type": "symptom",
+      "text": "Não relata calafrio mas teve febre e dor no corpo depois do almoço.",
+      "gold_status": null,
+      "resolved_status": "historical",
+      "normative_status_v1_2": null,
+      "status_failure_scope": "only_status",
+      "source_classification": "TEMPORALITY_ONLY",
+      "classification": "TYPE_A_RESOLVER_ERROR",
+      "reason": "resolver materialized status although v1.2 requires null without explicit lifecycle evidence",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation": false,
+      "type_b_fields_ignored": [
+        "temporality"
+      ]
+    }
+  ]
+}

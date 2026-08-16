@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "niede://clinical-semantics/relation-input-signal/v1",
+  "title": "Resolved Semantic Relation Input Signals",
+  "type": "object",
+  "required": ["attribute_signals", "transition_signals"],
+  "properties": {
+    "attribute_signals": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/attributeSignal"}
+    },
+    "transition_signals": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/transitionSignal"}
+    },
+    "relation_input_owner_completeness": {"type": "number", "minimum": 0, "maximum": 1},
+    "relation_input_state_completeness": {"type": "number", "minimum": 0, "maximum": 1},
+    "transition_contract_validity": {"type": "number", "minimum": 0, "maximum": 1},
+    "relation_input_provenance": {"type": "number", "minimum": 0, "maximum": 1},
+    "has_blocking_signal": {"type": "boolean"}
+  },
+  "$defs": {
+    "provenance": {
+      "type": "object",
+      "required": ["source_segment_ids"],
+      "properties": {
+        "source_segment_ids": {"type": "array", "items": {"type": "string"}},
+        "evidence_id": {"type": ["string", "null"]},
+        "semantic_policy": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "attributeSignal": {
+      "type": "object",
+      "required": ["attribute_type", "value", "owner_mention_id", "owner_type", "state", "status", "provenance"],
+      "properties": {
+        "attribute_type": {"type": "string"},
+        "value": {},
+        "owner_mention_id": {"type": ["string", "null"]},
+        "owner_type": {"type": ["string", "null"]},
+        "state": {"enum": ["current", "historical", "unresolved"]},
+        "status": {"enum": ["RESOLVED", "UNRESOLVED_OWNER", "UNRESOLVED_STATE", "AMBIGUOUS"]},
+        "provenance": {"$ref": "#/$defs/provenance"},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "evidence": {"type": "array", "items": {"type": "string"}},
+        "relation_ready": {"type": "boolean"}
+      },
+      "additionalProperties": true
+    },
+    "transitionSignal": {
+      "type": "object",
+      "required": ["attribute_type", "owner_mention_id", "owner_type", "previous_value", "current_value", "transition_type", "state", "status", "provenance"],
+      "properties": {
+        "attribute_type": {"type": "string"},
+        "owner_mention_id": {"type": ["string", "null"]},
+        "owner_type": {"type": ["string", "null"]},
+        "previous_value": {},
+        "current_value": {},
+        "transition_type": {"type": "string"},
+        "temporal_anchor": {},
+        "state": {"enum": ["current", "historical", "unresolved"]},
+        "status": {"enum": ["RESOLVED", "UNRESOLVED_OWNER", "UNRESOLVED_STATE", "AMBIGUOUS"]},
+        "provenance": {"$ref": "#/$defs/provenance"},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "relation_ready": {"type": "boolean"}
+      },
+      "additionalProperties": true
+    }
+  }
+}

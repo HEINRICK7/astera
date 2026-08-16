@@ -1,0 +1,1182 @@
+[
+  {
+    "candidate_id": "sim-v6-0015",
+    "language": "pt-BR",
+    "text": "Ficou com atenolol 25 mg de manhã e aumentou para 50 mg à noite.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-002"
+    ],
+    "source_error_types": [
+      "DOSE_ATTACHMENT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "8ccbfd5407ebe018db2d6c3c70a26aa90e29dffb437665aebce94f5336127b2d",
+      "candidate_text_sha256": "11f5a312599a52749375314c034ecb04c0538bb03df1386b39110b1187db47f4",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0015:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0016",
+    "language": "pt-BR",
+    "text": "A dose de sertralina era 50 mg antes de dormir e virou 75 mg pela manhã.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-002"
+    ],
+    "source_error_types": [
+      "DOSE_ATTACHMENT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "8ccbfd5407ebe018db2d6c3c70a26aa90e29dffb437665aebce94f5336127b2d",
+      "candidate_text_sha256": "55e22f450bdb112c4beb7306c9269b1c9d15dbb9e17bb28a8c3617fad0568a0e",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0016:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0017",
+    "language": "pt-BR",
+    "text": "Tomava ibuprofeno 200 mg se dor e passou a usar 400 mg a cada oito horas.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-002"
+    ],
+    "source_error_types": [
+      "DOSE_ATTACHMENT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "8ccbfd5407ebe018db2d6c3c70a26aa90e29dffb437665aebce94f5336127b2d",
+      "candidate_text_sha256": "3e807759325fc34b1b5cd141a5fcab0a58d84d6a091d4fa4c56f9b39a01296db",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0017:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0018",
+    "language": "pt-BR",
+    "text": "Reduziu a prednisona de 20 mg para 10 mg depois do café.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-002"
+    ],
+    "source_error_types": [
+      "DOSE_ATTACHMENT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "8ccbfd5407ebe018db2d6c3c70a26aa90e29dffb437665aebce94f5336127b2d",
+      "candidate_text_sha256": "5aa43fcaf0712c5eb30b7dfaa0747bc267d4b2eec3b04f482f743e3539c9456c",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0018:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0019",
+    "language": "pt-BR",
+    "text": "Usava amlodipino 5 mg à noite e mudou para 10 mg pela manhã.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-002"
+    ],
+    "source_error_types": [
+      "DOSE_ATTACHMENT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "8ccbfd5407ebe018db2d6c3c70a26aa90e29dffb437665aebce94f5336127b2d",
+      "candidate_text_sha256": "1336b4d5338c559459c5792769b6e844d0f98b0e63e1882b5c97415c241b6a08",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0019:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0020",
+    "language": "pt-BR",
+    "text": "A levotiroxina passou de 75 mcg em jejum para 88 mcg antes do café.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v5-002"
+    ],
+    "source_error_types": [
+      "DOSE_ATTACHMENT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v5",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "a21596554a5a1d63d5da7e4bf843301e087352f16e338e6423369025fc598c0b",
+      "candidate_text_sha256": "41b3eb6716a568b04801a8520022a9e6dd0acc0b78e49ff11faa7bde2b43c4a4",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0020:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0021",
+    "language": "pt-BR",
+    "text": "A irmã teve alergia a penicilina; o paciente não relata reação ao antibiótico.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-005"
+    ],
+    "source_error_types": [
+      "FAMILY_EXPERIENCER_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "22cbdf28a21777b18c805153a746936900e64faca8c2b8281420a2b464621153",
+      "candidate_text_sha256": "17644fdd9309364582994bdf41ccfad5b5ae8dde6c8309879830383c0466496c",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0021:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0022",
+    "language": "pt-BR",
+    "text": "A filha conta que a mãe teve câncer, sem que o paciente tenha esse diagnóstico.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-005"
+    ],
+    "source_error_types": [
+      "FAMILY_EXPERIENCER_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "22cbdf28a21777b18c805153a746936900e64faca8c2b8281420a2b464621153",
+      "candidate_text_sha256": "44d5111a148589a1500e014095cbf565ecd6e53fed1f99b5c706ad81d055a180",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0022:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0023",
+    "language": "pt-BR",
+    "text": "O avô teve insuficiência cardíaca, enquanto a paciente não refere inchaço.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-005"
+    ],
+    "source_error_types": [
+      "FAMILY_EXPERIENCER_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "22cbdf28a21777b18c805153a746936900e64faca8c2b8281420a2b464621153",
+      "candidate_text_sha256": "42eb915b53a43d90c0f9abd20848a5c7bc6a6514bb9528efa4de3fc932383ad6",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0023:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0024",
+    "language": "pt-BR",
+    "text": "A tia apresentou epilepsia, mas o paciente nega crises convulsivas.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-005"
+    ],
+    "source_error_types": [
+      "FAMILY_EXPERIENCER_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "22cbdf28a21777b18c805153a746936900e64faca8c2b8281420a2b464621153",
+      "candidate_text_sha256": "9215fc15559e724e152ce8bc33c64333ce0baeef3fc7270fde583522d4777e01",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0024:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0025",
+    "language": "pt-BR",
+    "text": "O pai conviveu com hipertensão, enquanto a paciente nega pressão alta.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v4-006"
+    ],
+    "source_error_types": [
+      "FAMILY_EXPERIENCER_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v4",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "410fd871b868dd2491990202c339038f2e241baaefa6775621a582313173b8d0",
+      "candidate_text_sha256": "cda7a6425426265902f581d03a0f816a203d83d3f088d3e50fbeb2c92bb98c98",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0025:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0026",
+    "language": "pt-BR",
+    "text": "A avó sofreu um AVC, mas o paciente não apresenta fraqueza hoje.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v5-006"
+    ],
+    "source_error_types": [
+      "FAMILY_EXPERIENCER_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v5",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "c444c7dd79c72e4a887848d6216972527538a998c546507d0af1ad60094bffa6",
+      "candidate_text_sha256": "72fde59a72cd0c9b00be0bfa6d187fb034773aba30f22ee36ef348f5df8cf2ea",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0026:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0027",
+    "language": "pt-BR",
+    "text": "A dormência ocupa o lado direito do rosto e a dor está na perna esquerda.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v4-007"
+    ],
+    "source_error_types": [
+      "LATERALITY_ATTACHMENT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v4",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "34494e3d044e20599a69058ca29c92f40914a75dcbea185d03c0e005f44b195a",
+      "candidate_text_sha256": "f0bb8edfd33640235ae9c0015498a919ff81425d77779ec4d34f8f099ef49a0b",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0027:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0028",
+    "language": "pt-BR",
+    "text": "Refere dor no punho esquerdo e tremor na mão direita ao escrever.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v4-007"
+    ],
+    "source_error_types": [
+      "LATERALITY_ATTACHMENT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v4",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "34494e3d044e20599a69058ca29c92f40914a75dcbea185d03c0e005f44b195a",
+      "candidate_text_sha256": "9cd243f5ded4f4511422097d4a25bf52349fce48c97bc2fcbecfc5e9cb2b9973",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0028:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0029",
+    "language": "pt-BR",
+    "text": "A pressão incomoda o ouvido esquerdo, enquanto o zumbido aparece no direito.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v4-007"
+    ],
+    "source_error_types": [
+      "LATERALITY_ATTACHMENT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v4",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "34494e3d044e20599a69058ca29c92f40914a75dcbea185d03c0e005f44b195a",
+      "candidate_text_sha256": "6304cf4fa55c1efa9757dee6a033305b72225b70ea8f8a71b903aa2fb18e7bf4",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0029:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0030",
+    "language": "pt-BR",
+    "text": "Refere rigidez no quadril direito e sensibilidade na panturrilha esquerda.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v4-007"
+    ],
+    "source_error_types": [
+      "LATERALITY_ATTACHMENT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v4",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "34494e3d044e20599a69058ca29c92f40914a75dcbea185d03c0e005f44b195a",
+      "candidate_text_sha256": "ad8c52172a51645602c1a5acce75b95e31a7f1d0772b40d14299c5b7033e3ab0",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0030:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0031",
+    "language": "pt-BR",
+    "text": "O inchaço está no tornozelo esquerdo e a coceira na mão direita.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v5-007"
+    ],
+    "source_error_types": [
+      "LATERALITY_ATTACHMENT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v5",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "6cf8966d267e621da81931809bc5196b302f093821d85aa604dafd0484b936aa",
+      "candidate_text_sha256": "e7453a907a1d8bc499e1a92ccb691aa0bdb359aef3f8dff2de57a56b6f53b964",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0031:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0032",
+    "language": "pt-BR",
+    "text": "Sem dor no ombro direito, porém percebe fraqueza na perna esquerda ao subir escadas.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-001"
+    ],
+    "source_error_types": [
+      "MULTI_MENTION_COLLISION"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "e090e1ff87c6338c973e20e0ec07020f87d4631a682b7f947b5c00ed8a4cc610",
+      "candidate_text_sha256": "8474e0cade31796038b7e3af0eb24e72fc7d42027d5cc9ada4ba9fcab94c2530",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0032:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0033",
+    "language": "pt-BR",
+    "text": "A queimação ficou no pé esquerdo e a dormência apareceu na mão direita.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-001"
+    ],
+    "source_error_types": [
+      "MULTI_MENTION_COLLISION"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "e090e1ff87c6338c973e20e0ec07020f87d4631a682b7f947b5c00ed8a4cc610",
+      "candidate_text_sha256": "1a39d8bf4af3f0ebc18170828feac96bd8126c70a16add3a62d89c72cbb7e8fa",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0033:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0034",
+    "language": "pt-BR",
+    "text": "Nega enjoo, mas relata cólica no lado esquerdo e tontura ao levantar.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-001"
+    ],
+    "source_error_types": [
+      "MULTI_MENTION_COLLISION"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "e090e1ff87c6338c973e20e0ec07020f87d4631a682b7f947b5c00ed8a4cc610",
+      "candidate_text_sha256": "b7763a68aa449e8cae8b4cb8bd537070ad315547630715cc375d91b4e391b05a",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0034:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0035",
+    "language": "pt-BR",
+    "text": "Não sente pressão no peito; refere dor no braço direito desde ontem.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-001"
+    ],
+    "source_error_types": [
+      "MULTI_MENTION_COLLISION"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "e090e1ff87c6338c973e20e0ec07020f87d4631a682b7f947b5c00ed8a4cc610",
+      "candidate_text_sha256": "7cf46f50bc2baf87a77872484df19668c33bb6f4c1ff04ed9f6c366ef99eb938",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0035:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0036",
+    "language": "pt-BR",
+    "text": "A dor abdominal ficou à direita e a sensibilidade surgiu no flanco esquerdo.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v5-001"
+    ],
+    "source_error_types": [
+      "MULTI_MENTION_COLLISION"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v5",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "a4ad8105b2a596e838559bb85d070b63434c4a1f9139ac81a4c086eedd1de8fc",
+      "candidate_text_sha256": "826ec4ac58eae259effbc29a04651ed10dfca9aa0f8449f414b5db69589eea8d",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0036:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0037",
+    "language": "pt-BR",
+    "text": "Não relata vômitos, mas mantém náusea desde cedo.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-003"
+    ],
+    "source_error_types": [
+      "NEGATION_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "15627179511f7c61202ef2187ce714fe3bcce1fcb98b327cf91722e27a49cd2f",
+      "candidate_text_sha256": "3748746d9b4d33ea866c14cc938839c8060616480a37eb2a9d96320a1054559b",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0037:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0038",
+    "language": "pt-BR",
+    "text": "Nega formigamento na mão, embora tenha fraqueza no braço.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-003"
+    ],
+    "source_error_types": [
+      "NEGATION_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "15627179511f7c61202ef2187ce714fe3bcce1fcb98b327cf91722e27a49cd2f",
+      "candidate_text_sha256": "e048580387ffb34a2f2dd2998d74093ce99911f6a9e4f64f509a2c81e6212876",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0038:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0039",
+    "language": "pt-BR",
+    "text": "Sem sangramento, mas refere cólica forte no abdome.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-003"
+    ],
+    "source_error_types": [
+      "NEGATION_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "15627179511f7c61202ef2187ce714fe3bcce1fcb98b327cf91722e27a49cd2f",
+      "candidate_text_sha256": "7ce2a91f52a16380b1e13f6f32843752d3a5130e7fc4a36b3a94a9a048ca4609",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0039:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0040",
+    "language": "pt-BR",
+    "text": "Diz que não tem tontura e que sente apenas desequilíbrio ao andar.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-003"
+    ],
+    "source_error_types": [
+      "NEGATION_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "15627179511f7c61202ef2187ce714fe3bcce1fcb98b327cf91722e27a49cd2f",
+      "candidate_text_sha256": "8096efd43e23d93283af260bb20aa06171d3faddd3e48f08c3111859d4cf3749",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0040:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0041",
+    "language": "pt-BR",
+    "text": "Não sente azia, embora apresente dor epigástrica depois das refeições.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-003"
+    ],
+    "source_error_types": [
+      "NEGATION_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "15627179511f7c61202ef2187ce714fe3bcce1fcb98b327cf91722e27a49cd2f",
+      "candidate_text_sha256": "680437ab620ebcc738036205848c72deec612730e2281db0ca35adcccddad5c2",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0041:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0042",
+    "language": "pt-BR",
+    "text": "Nega febre e calafrios, mas começou a sentir mal-estar hoje.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-003"
+    ],
+    "source_error_types": [
+      "NEGATION_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "15627179511f7c61202ef2187ce714fe3bcce1fcb98b327cf91722e27a49cd2f",
+      "candidate_text_sha256": "ff43cd41d6325dfdadf43728b091e29744b064bcc506f11d185b650f50bac5f8",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0042:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0043",
+    "language": "pt-BR",
+    "text": "A medicação foi suspensa no inverno e voltou a ser usada nesta semana.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v4-005"
+    ],
+    "source_error_types": [
+      "STATUS_CONFLICT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v4",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "d59c41ee5e5f6a105d98201260851811de5fac07d9621ba4f5af986e1c4968fd",
+      "candidate_text_sha256": "a431628b22860551b7453ae8014ca19be8c2ac61dab8b8819aa08ebb7c8b6bb0",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0043:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0044",
+    "language": "pt-BR",
+    "text": "Parou o tratamento por conta própria e depois retomou conforme orientação.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v4-005"
+    ],
+    "source_error_types": [
+      "STATUS_CONFLICT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v4",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "d59c41ee5e5f6a105d98201260851811de5fac07d9621ba4f5af986e1c4968fd",
+      "candidate_text_sha256": "f86b0027596e2c8768a413c7286b0ca26e6422000fcd1892d6c19aca0a887d74",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0044:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0045",
+    "language": "pt-BR",
+    "text": "Suspendeu as gotas por alguns dias e reiniciou o uso ontem à noite.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v4-005"
+    ],
+    "source_error_types": [
+      "STATUS_CONFLICT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v4",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "d59c41ee5e5f6a105d98201260851811de5fac07d9621ba4f5af986e1c4968fd",
+      "candidate_text_sha256": "8a42a8909e97beee134bf0001d78b1ebb70b56a033e30e8e17ddff749ceb0e9d",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0045:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0046",
+    "language": "pt-BR",
+    "text": "Interrompeu a terapia no feriado e retomou o esquema habitual no retorno.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v4-005"
+    ],
+    "source_error_types": [
+      "STATUS_CONFLICT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v4",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "d59c41ee5e5f6a105d98201260851811de5fac07d9621ba4f5af986e1c4968fd",
+      "candidate_text_sha256": "336d491125968be8a6ffe8e50b3986987c876cd4bbb108d65a0e065ead15fbb4",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0046:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0047",
+    "language": "pt-BR",
+    "text": "Interrompeu o comprimido por três dias e reiniciou ao perceber a pressão alta.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v5-005"
+    ],
+    "source_error_types": [
+      "STATUS_CONFLICT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v5",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "8dd439ef98eb60741834df4d71553be338477b2f7b77346f290d8dcf92f47e54",
+      "candidate_text_sha256": "c068be00e702327ec9c93296888761afded7b40841cc0e57d97ef634693be276",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0047:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0048",
+    "language": "pt-BR",
+    "text": "A queda aconteceu no mês passado, mas a dor no quadril começou hoje.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-004"
+    ],
+    "source_error_types": [
+      "TEMPORAL_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "578997e64021eace38b40d6accb4167f99504467ce783bd14578830410884da9",
+      "candidate_text_sha256": "2b2407805689207a794f1f469f9c8b7060a47c51ee5a3c2bdb3cbc0e4e88f6ef",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0048:segment-01",
+    "segments": [],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0049",
+    "language": "pt-BR",
+    "text": "Médico: Continua usando losartana?\nPaciente: Não, parei na semana passada.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v6-cross-segment-001"
+    ],
+    "source_error_types": [
+      "CROSS_SEGMENT_RESOLUTION"
+    ],
+    "provenance": {
+      "source_corpus": "v6-cross-segment-gap-analysis",
+      "history_status": "medication carry-over",
+      "candidate_text_sha256": "2ce4705acb3d690205e88975576062849f3441c0e653426a4dd1d185f2027996",
+      "official_corpus_mutation": false
+    },
+    "segment_id": null,
+    "segments": [
+      {
+        "segment_id": "sim-v6-0049:segment-01",
+        "speaker": "clinician",
+        "text": "Continua usando losartana?"
+      },
+      {
+        "segment_id": "sim-v6-0049:segment-02",
+        "speaker": "patient",
+        "text": "Não, parei na semana passada."
+      }
+    ],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0050",
+    "language": "pt-BR",
+    "text": "Médico: Sua mãe teve câncer?\nPaciente: Teve, de mama.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v6-cross-segment-002"
+    ],
+    "source_error_types": [
+      "CROSS_SEGMENT_RESOLUTION"
+    ],
+    "provenance": {
+      "source_corpus": "v6-cross-segment-gap-analysis",
+      "history_status": "family experiencer carry-over",
+      "candidate_text_sha256": "623d5bbfd52bbe7c8d92793ee047c6d40279fc2816e6cabca88a01c3e0c822df",
+      "official_corpus_mutation": false
+    },
+    "segment_id": null,
+    "segments": [
+      {
+        "segment_id": "sim-v6-0050:segment-01",
+        "speaker": "clinician",
+        "text": "Sua mãe teve câncer?"
+      },
+      {
+        "segment_id": "sim-v6-0050:segment-02",
+        "speaker": "patient",
+        "text": "Teve, de mama."
+      }
+    ],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0051",
+    "language": "pt-BR",
+    "text": "Médico: A dor melhorou?\nPaciente: Sim, não sinto mais, só formigamento na mão direita.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v6-cross-segment-003"
+    ],
+    "source_error_types": [
+      "CROSS_SEGMENT_RESOLUTION"
+    ],
+    "provenance": {
+      "source_corpus": "v6-cross-segment-gap-analysis",
+      "history_status": "multi-turn negation",
+      "candidate_text_sha256": "e1ce30b65641ff68199858c75a6dbc93668798b306bfde0a9eeb8d247f9a8d0a",
+      "official_corpus_mutation": false
+    },
+    "segment_id": null,
+    "segments": [
+      {
+        "segment_id": "sim-v6-0051:segment-01",
+        "speaker": "clinician",
+        "text": "A dor melhorou?"
+      },
+      {
+        "segment_id": "sim-v6-0051:segment-02",
+        "speaker": "patient",
+        "text": "Sim, não sinto mais, só formigamento na mão direita."
+      }
+    ],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0052",
+    "language": "pt-BR",
+    "text": "Médico: Ainda usa a bombinha?\nPaciente: Só quando tem chiado.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v6-cross-segment-004"
+    ],
+    "source_error_types": [
+      "CROSS_SEGMENT_RESOLUTION"
+    ],
+    "provenance": {
+      "source_corpus": "v6-cross-segment-gap-analysis",
+      "history_status": "medication context carry-over",
+      "candidate_text_sha256": "3af587af6087c03dd3da70be7cddc95eeee4fe06dc0fd713a81c8859aaface9f",
+      "official_corpus_mutation": false
+    },
+    "segment_id": null,
+    "segments": [
+      {
+        "segment_id": "sim-v6-0052:segment-01",
+        "speaker": "clinician",
+        "text": "Ainda usa a bombinha?"
+      },
+      {
+        "segment_id": "sim-v6-0052:segment-02",
+        "speaker": "patient",
+        "text": "Só quando tem chiado."
+      }
+    ],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0053",
+    "language": "pt-BR",
+    "text": "Médico: O pai teve AVC?\nPaciente: Teve aos 60.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v6-cross-segment-005"
+    ],
+    "source_error_types": [
+      "CROSS_SEGMENT_RESOLUTION"
+    ],
+    "provenance": {
+      "source_corpus": "v6-cross-segment-gap-analysis",
+      "history_status": "family temporal carry-over",
+      "candidate_text_sha256": "97d91a39e644e7470598c6affaef88d0ddbcc19adf07a3078702dd6c61602607",
+      "official_corpus_mutation": false
+    },
+    "segment_id": null,
+    "segments": [
+      {
+        "segment_id": "sim-v6-0053:segment-01",
+        "speaker": "clinician",
+        "text": "O pai teve AVC?"
+      },
+      {
+        "segment_id": "sim-v6-0053:segment-02",
+        "speaker": "patient",
+        "text": "Teve aos 60."
+      }
+    ],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0054",
+    "language": "pt-BR",
+    "text": "Médico: Está tomando metformina?\nPaciente: Passei de 500 para 850 depois do jantar.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v6-cross-segment-006"
+    ],
+    "source_error_types": [
+      "CROSS_SEGMENT_RESOLUTION"
+    ],
+    "provenance": {
+      "source_corpus": "v6-cross-segment-gap-analysis",
+      "history_status": "dose carry-over",
+      "candidate_text_sha256": "997be71be07d2c50561ab5256990ac199563fc3e7ff7e6556d37f2527c99c880",
+      "official_corpus_mutation": false
+    },
+    "segment_id": null,
+    "segments": [
+      {
+        "segment_id": "sim-v6-0054:segment-01",
+        "speaker": "clinician",
+        "text": "Está tomando metformina?"
+      },
+      {
+        "segment_id": "sim-v6-0054:segment-02",
+        "speaker": "patient",
+        "text": "Passei de 500 para 850 depois do jantar."
+      }
+    ],
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  }
+]

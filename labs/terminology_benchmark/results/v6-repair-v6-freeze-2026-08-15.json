@@ -1,0 +1,102 @@
+{
+  "status": "FROZEN_BEFORE_HOLDOUT",
+  "freeze_version": "v6-status-only",
+  "frozen_at": "2026-08-15T22:01:07.860114+00:00",
+  "resolver_version": "repair-v6-status-only",
+  "semantic_policy": "SEM-STATUS-001",
+  "semantic_policy_version": "1.2",
+  "resolver_rule_checksum": {
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/context_safety.py": "e3f4fed46bac92613695020da1f9b6e477a185d2c5aa153dbed11202964ef66e",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/cross_segment_context.py": "5cce0b891439a96e39fcd379f75858b8d8865e30323dbc486268024daa2510b4",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/clinical_conversational_semantics.py": "61633f7683dad086490cc4f2f37b7854eb758ed385ae9184448cf9f91a00567b",
+    "apps/runtime/src/ports/outbound/clinical_semantics.py": "07aed59785a2a81d42af7742dda01cb8b39b23c5d6b9aeaee5519cfcf62b7f26"
+  },
+  "policy_checksum": "612a844a0c2b13bf22b2d3cbbe15ecae93521374a634cd01b19ce70a17fb522f",
+  "v6_corpus_path": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_clinical_semantics_v6.jsonl",
+  "v6_corpus_sha256": "1721ad71b7ef92c20a06fa9cae956098fefad0e079f92464d67f1bf9255a3f10",
+  "v6_result_path": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/context-validation-v6-repair-v6-status-final-2026-08-15.json",
+  "v6_policy_aligned_score": {
+    "mention_exact_match": 0.9940119760479041,
+    "relation_exact_match": 1.0,
+    "scope_accuracy": 0.9987951807228915,
+    "cross_mention_isolation": 0.9854014598540146,
+    "cross_segment_resolution": 0.9838709677419355,
+    "speaker_attribution": 1.0,
+    "provenance": 1.0,
+    "field_accuracy": {
+      "negated": 0.9970059880239521,
+      "certainty": 1.0,
+      "temporality": 0.9969135802469136,
+      "experiencer": 1.0,
+      "laterality": 1.0,
+      "dose": 1.0,
+      "dose_value": 1.0,
+      "dose_unit": 1.0,
+      "frequency": 1.0,
+      "route": 1.0,
+      "status": 1.0
+    },
+    "hard_gate_passed": true
+  },
+  "v6_raw_score": {
+    "mention_exact_match": 0.8592814371257484,
+    "relation_exact_match": 1.0,
+    "scope_accuracy": 0.9946107784431137,
+    "cross_mention_isolation": 0.7664233576642335,
+    "cross_segment_resolution": 0.6532258064516129,
+    "speaker_attribution": 1.0,
+    "provenance": 1.0,
+    "hard_gate_passed": false,
+    "field_accuracy": {
+      "negated": 0.9970059880239521,
+      "certainty": 1.0,
+      "temporality": 0.9760479041916168,
+      "experiencer": 1.0,
+      "laterality": 1.0,
+      "dose": 1.0,
+      "dose_value": 1.0,
+      "dose_unit": 1.0,
+      "frequency": 1.0,
+      "status": 0.4935064935064935,
+      "provenance": 1.0,
+      "mention_exact_match": 0.8592814371257484,
+      "relation_exact_match": 1.0,
+      "scope_accuracy": 0.9946107784431137,
+      "cross_mention_isolation": 0.7664233576642335
+    }
+  },
+  "code_revision": {
+    "git_head": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+    "worktree_status": "dirty-preserved",
+    "resolver_worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "test_suite": {
+    "command": [
+      "./.venv/bin/pytest",
+      "-q",
+      "apps/runtime/tests/test_clinical_conversational_semantics.py",
+      "apps/runtime/tests/test_terminology_benchmark.py"
+    ],
+    "result": "46 passed in 0.54s",
+    "returncode": 0
+  },
+  "holdout_source_path": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v6-human-review-micro-expansion-submission-2026-08-15.json",
+  "holdout_source_sha256": "efca8f8a858e26ae5960dc8fa5a6f695f4d4c1993aca6501d0a4c96e342adbee",
+  "holdout_ids": [
+    "sim-v6-0056",
+    "sim-v6-0057",
+    "sim-v6-0058"
+  ],
+  "holdout_run_count": 0,
+  "freeze_invariants": {
+    "resolver_mutable": false,
+    "policy_mutable": false,
+    "rules_mutable": false,
+    "gold_mutable": false,
+    "corpus_mutable": false,
+    "holdout_reruns_allowed": false,
+    "v7": "BLOCKED",
+    "shadow": "BLOCKED",
+    "production": "BLOCKED"
+  }
+}

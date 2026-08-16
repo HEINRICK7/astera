@@ -1,0 +1,14 @@
+services:
+  parakeet-nim:
+    image: nvcr.io/nim/nvidia/${PARAKEET_CONTAINER_ID:-parakeet-1-1b-ctc-en-us}:latest
+    runtime: nvidia
+    shm_size: 8gb
+    environment:
+      NGC_API_KEY: ${NGC_API_KEY:?Set NGC_API_KEY in .env before starting the lab}
+      NIM_HTTP_API_PORT: 9000
+      NIM_GRPC_API_PORT: 50051
+      NIM_TAGS_SELECTOR: ${NIM_TAGS_SELECTOR:-name=parakeet-1-1b-ctc-en-us,mode=all}
+    ports:
+      - "9000:9000"
+      - "50051:50051"
+    restart: unless-stopped

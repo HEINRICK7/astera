@@ -1,0 +1,37 @@
+{
+  "status": "FROZEN_BEFORE_POST_HOLDOUT_V2",
+  "freeze_version": "post-holdout-generalization-repair",
+  "resolver_version": "post-holdout-generalization-repair",
+  "semantic_policy_version": "1.2",
+  "policy_checksum": "612a844a0c2b13bf22b2d3cbbe15ecae93521374a634cd01b19ce70a17fb522f",
+  "v6_corpus_checksum": "1721ad71b7ef92c20a06fa9cae956098fefad0e079f92464d67f1bf9255a3f10",
+  "repair_code_checksum": "3959672718c93809a2120b2d59d6fd2c2927a9dc215843836eb1e07ae0c83b49",
+  "repair_code_files": [
+    "cross_segment_context.py",
+    "clinical_conversational_semantics.py",
+    "context_safety.py"
+  ],
+  "internal_gate": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/post-holdout-generalization-repair-internal-gate-2026-08-15.json",
+  "internal_gate_status": "PASS",
+  "new_holdout_source": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/post_holdout_generalization_holdout_v2.json",
+  "new_holdout_source_sha256": "3b19e79cfa77d1a1a0bcc2ad5ad02249984a59cb5e6504d0c3882662397179d9",
+  "old_holdouts": {
+    "ids": [
+      "sim-v6-0056",
+      "sim-v6-0057",
+      "sim-v6-0058"
+    ],
+    "consumed": true,
+    "rerun": false,
+    "used_for_approval": false
+  },
+  "v6_corpus_frozen": true,
+  "gold_changed": false,
+  "policy_changed": false,
+  "holdout_v2_run_count": 0,
+  "git_revision": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "worktree_dirty_preserved": true,
+  "v7": "BLOCKED",
+  "shadow_integration": "BLOCKED",
+  "production": "BLOCKED"
+}

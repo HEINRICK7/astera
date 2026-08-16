@@ -1,0 +1,14 @@
+{
+  "status": "D1_DIAGNOSTIC_COMPLETE",
+  "execution_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "started_at_utc": "2026-08-15T23:59:03.104133+00:00",
+  "one_shot": true,
+  "official_corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "policy_checksum": "b2bf0b98e4544ac6d2d94fe1e8d8c244a7edc11845820ac9978e4d0f6016e153",
+  "resolver_repair": "NOT_AUTHORIZED",
+  "v7_rerun": false,
+  "finished_at_utc": "2026-08-15T23:59:04.348545+00:00",
+  "result": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/D1_ONE_SHOT_RESULT.json",
+  "trace_directory": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15"
+}

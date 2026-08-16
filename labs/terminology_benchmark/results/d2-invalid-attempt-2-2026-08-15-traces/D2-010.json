@@ -1,0 +1,1290 @@
+{
+  "case_id": "D2-010",
+  "corpus_checksum": "d09c6ca1351ba31d1ece7cc371abc70ec79318f46bff04412149d23ccccb9811",
+  "corpus_version": "D2",
+  "decisions": [],
+  "evaluation_id": "d2-one-shot-d050b788-bba5-4d47-8460-b6b2cbb71529",
+  "mismatches": [
+    {
+      "actual": "past",
+      "confidence": 0.55,
+      "details": {
+        "mention": "losartana",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "current",
+      "policy_rules": [
+        "ptbr-past-tense-before-target",
+        "ptbr-dose",
+        "ptbr-active-medication-context"
+      ],
+      "semantic_dimension": "temporality",
+      "stage": "prediction"
+    },
+    {
+      "actual": "50 mg",
+      "confidence": 0.55,
+      "details": {
+        "mention": "losartana",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "25 mg",
+      "policy_rules": [
+        "ptbr-past-tense-before-target",
+        "ptbr-dose",
+        "ptbr-active-medication-context"
+      ],
+      "semantic_dimension": "dose",
+      "stage": "prediction"
+    },
+    {
+      "actual": "50",
+      "confidence": 0.55,
+      "details": {
+        "mention": "losartana",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "25",
+      "policy_rules": [
+        "ptbr-past-tense-before-target",
+        "ptbr-dose",
+        "ptbr-active-medication-context"
+      ],
+      "semantic_dimension": "dose_value",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "50 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "50 mg"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "losartana",
+        "relation_output_count": 2
+      },
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "50 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "25 mg"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "ff09e39196d8458637629dce70da5bd20c4c5b0f5af5cd83a0d19b27e3a186ab",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "503099a44d0e3b0ea4937fc630ca992bc91a6289ae929d2cd8b7cd7c91eba8c5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "f439abcf2b94f3d6342e8d7f44d8e042cc47225cd7df1f816acec96abd4922d0",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "d1",
+            "speaker": "patient",
+            "text": "Na receita antiga constava losartana de 50 mg."
+          },
+          {
+            "segment_id": "d2",
+            "speaker": "patient",
+            "text": "Depois da internação ficou 25 mg por comprimido."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-010",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "da9164d3d11e26e8c2dd77000dd659e9adc1e6fcfc8e56fa230d5732e279d1ae",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "f439abcf2b94f3d6342e8d7f44d8e042cc47225cd7df1f816acec96abd4922d0",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "16a01e40feed1918f0e6fd3e7ff61014bf1d426d8bb79c2502abc0ee1209c82e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:d1",
+              "owner_segment_id": "d1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            },
+            "surface": "losartana"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "50 mg"
+            },
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "50 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "50 mg",
+            "dose_unit": "mg",
+            "dose_value": "50",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "past"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "resolved-attribute-materialization-v2",
+                "source_segment_ids": []
+              },
+              "relation_id": "context:d1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:d1",
+              "source_mention_id": "context:d1",
+              "source_segment_ids": [],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "50 mg"
+            },
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "source_segment_ids": [
+                  "d1"
+                ]
+              },
+              "relation_id": "context:d1:36:45:CHANGED_FROM:dose:50 mg",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:d1:36:45",
+              "source_mention_id": "context:d1:36:45",
+              "source_segment_ids": [
+                "d1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "50 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "50 mg"
+              },
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "50 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "73b3dc7679a3d2360fda08c64d166a4208c41fa6e6df8778aaa0d0d9c2562d7d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:d1",
+              "owner_segment_id": "d1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            },
+            "surface": "losartana"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "50 mg"
+            },
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "50 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "50 mg",
+            "dose_unit": "mg",
+            "dose_value": "50",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "past"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "resolved-attribute-materialization-v2",
+                "source_segment_ids": []
+              },
+              "relation_id": "context:d1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:d1",
+              "source_mention_id": "context:d1",
+              "source_segment_ids": [],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "50 mg"
+            },
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "source_segment_ids": [
+                  "d1"
+                ]
+              },
+              "relation_id": "context:d1:36:45:CHANGED_FROM:dose:50 mg",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:d1:36:45",
+              "source_mention_id": "context:d1:36:45",
+              "source_segment_ids": [
+                "d1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "50 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "50 mg"
+              },
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "50 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "71320ebfb2052d2e1e60f13cf6dc511dfd27420517d5e52318d9b8cd3c2e5c6d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:d1",
+              "owner_segment_id": "d1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            },
+            "surface": "losartana"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "50 mg"
+            },
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "50 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "50 mg",
+            "dose_unit": "mg",
+            "dose_value": "50",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "past"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "resolved-attribute-materialization-v2",
+                "source_segment_ids": []
+              },
+              "relation_id": "context:d1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:d1",
+              "source_mention_id": "context:d1",
+              "source_segment_ids": [],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "50 mg"
+            },
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "source_segment_ids": [
+                  "d1"
+                ]
+              },
+              "relation_id": "context:d1:36:45:CHANGED_FROM:dose:50 mg",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:d1:36:45",
+              "source_mention_id": "context:d1:36:45",
+              "source_segment_ids": [
+                "d1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "50 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "50 mg"
+              },
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "50 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "8af32c9a123da2890d90d7e2e22af869bb2a38bfcc1cb17046602fc6884d85a0",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:d1",
+            "owner_segment_id": "d1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "fe3680d4a1e8cea1afd2321727b641e371971eadacab684c13b6b7a5ed76cec1",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "8af32c9a123da2890d90d7e2e22af869bb2a38bfcc1cb17046602fc6884d85a0",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "f38fc66b72047e2f3049f4d02c640a674de261756359f48389321c85a9ae13b5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "daf5e1a58124ec8aa36214f8ab856c3348526a2029e1167a61f49340a01489bd",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:d1",
+              "owner_segment_id": "d1"
+            }
+          },
+          "candidate_source": "d1",
+          "source_segment_ids": [
+            "d1"
+          ],
+          "transition_attribute_ownership": {
+            "dose": {
+              "current": "50 mg",
+              "owner_mention_id": "context:d1:36:45",
+              "previous": "50 mg",
+              "source_segment_ids": [
+                "d1"
+              ]
+            }
+          }
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Na receita antiga constava losartana de 50 mg.\\npatient: Depois da internação ficou 25 mg por comprimido.', 'rules': ('ptbr-past-tense-before-target', 'ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:d1:27:36', 'owner_span': (27, 36), 'source_evidence_id': 'context:d1'}}, 'projection': {'mention_id': 'context:d1:27:36', 'attributes': {'laterality': None, 'status': 'active'}, 'relations': [{'relation_id': 'context:d1:HAS_DOSE:dose', 'relation_type': 'HAS_DOSE', 'source': 'context:d1', 'target': 'dose', 'value': '50 mg', 'source_mention_id': 'context:d1', 'target_mention_id': 'dose', 'source_segment_ids': [], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization-v2', 'attribute': 'dose', 'source_segment_ids': ()}}, {'relation_id': 'context:d1:36:45:CHANGED_FROM:dose:50 mg', 'relation_type': 'CHANGED_FROM', 'source': 'context:d1:36:45', 'target': 'dose', 'value': '50 mg', 'source_mention_id': 'context:d1:36:45', 'target_mention_id': 'dose', 'source_segment_ids': ['d1'], 'confidence': 1.0, 'provenance': {'source_segment_ids': ('d1',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('d1',), 'candidate_source': 'd1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:d1', 'owner_segment_id': 'd1'}}, 'transition_attribute_ownership': {'dose': {'current': '50 mg', 'previous': '50 mg', 'owner_mention_id': 'context:d1:36:45', 'source_segment_ids': ('d1',)}}}, 'authority_metrics': {'resolver_decisions_total': 132, 'resolver_decisions_preserved': 122, 'resolver_decisions_overwritten': 10, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'd1', 'conversation_segment_ids': ['d2']}",
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "50 mg"
+              },
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "50 mg"
+              }
+            ],
+            "surface": "losartana"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "ec4103ac3da56c78f8261d55e6f1acdc921a81336d829313dd8e1f046764fb2e",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        },
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:d1",
+              "owner_segment_id": "d1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            },
+            "surface": "losartana"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "50 mg"
+            },
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "50 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "50 mg",
+            "dose_unit": "mg",
+            "dose_value": "50",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "past"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "resolved-attribute-materialization-v2",
+                "source_segment_ids": []
+              },
+              "relation_id": "context:d1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:d1",
+              "source_mention_id": "context:d1",
+              "source_segment_ids": [],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "50 mg"
+            },
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "source_segment_ids": [
+                  "d1"
+                ]
+              },
+              "relation_id": "context:d1:36:45:CHANGED_FROM:dose:50 mg",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:d1:36:45",
+              "source_mention_id": "context:d1:36:45",
+              "source_segment_ids": [
+                "d1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "50 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "50 mg"
+              },
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "50 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        }
+      },
+      "input_hash": "daf5e1a58124ec8aa36214f8ab856c3348526a2029e1167a61f49340a01489bd",
+      "output_hash": "0ea5056028dc93e2f87a3d20533e3a5f81525c967a8e138fd30cf746a214477b",
+      "payload": {
+        "relations": [
+          [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "50 mg"
+            },
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "50 mg"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "ab174ce702f0294cc12e8267b9fcb931ae7a0d786aadd9b99699d46409194fe7",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:d1",
+              "owner_segment_id": "d1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            },
+            "surface": "losartana"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "50 mg"
+            },
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "50 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "50 mg",
+            "dose_unit": "mg",
+            "dose_value": "50",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "past"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "resolved-attribute-materialization-v2",
+                "source_segment_ids": []
+              },
+              "relation_id": "context:d1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:d1",
+              "source_mention_id": "context:d1",
+              "source_segment_ids": [],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "50 mg"
+            },
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "source_segment_ids": [
+                  "d1"
+                ]
+              },
+              "relation_id": "context:d1:36:45:CHANGED_FROM:dose:50 mg",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:d1:36:45",
+              "source_mention_id": "context:d1:36:45",
+              "source_segment_ids": [
+                "d1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "50 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "50 mg"
+              },
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "50 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "0ea5056028dc93e2f87a3d20533e3a5f81525c967a8e138fd30cf746a214477b",
+      "output_hash": "d26b037cdb929f00bfc60a0ca17e3f48a0df3096e93c67b78b335bc105929554",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Na receita antiga constava losartana de 50 mg.\\npatient: Depois da internação ficou 25 mg por comprimido.', 'rules': ('ptbr-past-tense-before-target', 'ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:d1:27:36', 'owner_span': (27, 36), 'source_evidence_id': 'context:d1'}}, 'projection': {'mention_id': 'context:d1:27:36', 'attributes': {'laterality': None, 'status': 'active'}, 'relations': [{'relation_id': 'context:d1:HAS_DOSE:dose', 'relation_type': 'HAS_DOSE', 'source': 'context:d1', 'target': 'dose', 'value': '50 mg', 'source_mention_id': 'context:d1', 'target_mention_id': 'dose', 'source_segment_ids': [], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization-v2', 'attribute': 'dose', 'source_segment_ids': ()}}, {'relation_id': 'context:d1:36:45:CHANGED_FROM:dose:50 mg', 'relation_type': 'CHANGED_FROM', 'source': 'context:d1:36:45', 'target': 'dose', 'value': '50 mg', 'source_mention_id': 'context:d1:36:45', 'target_mention_id': 'dose', 'source_segment_ids': ['d1'], 'confidence': 1.0, 'provenance': {'source_segment_ids': ('d1',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('d1',), 'candidate_source': 'd1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:d1', 'owner_segment_id': 'd1'}}, 'transition_attribute_ownership': {'dose': {'current': '50 mg', 'previous': '50 mg', 'owner_mention_id': 'context:d1:36:45', 'source_segment_ids': ('d1',)}}}, 'authority_metrics': {'resolver_decisions_total': 132, 'resolver_decisions_preserved': 122, 'resolver_decisions_overwritten': 10, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'd1', 'conversation_segment_ids': ['d2']}",
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "50 mg"
+              },
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "50 mg"
+              }
+            ],
+            "surface": "losartana"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "f1cf15ab304266b86c44265394911e1030b57fc7f6fb931b19d87733741ecb2b",
+      "changed_fields": [
+        "dose",
+        "dose_value",
+        "temporality"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d26b037cdb929f00bfc60a0ca17e3f48a0df3096e93c67b78b335bc105929554",
+      "output_hash": "d26b037cdb929f00bfc60a0ca17e3f48a0df3096e93c67b78b335bc105929554",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "50 mg",
+              "dose_unit": "mg",
+              "dose_value": "50",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "past"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Na receita antiga constava losartana de 50 mg.\\npatient: Depois da internação ficou 25 mg por comprimido.', 'rules': ('ptbr-past-tense-before-target', 'ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:d1:27:36', 'owner_span': (27, 36), 'source_evidence_id': 'context:d1'}}, 'projection': {'mention_id': 'context:d1:27:36', 'attributes': {'laterality': None, 'status': 'active'}, 'relations': [{'relation_id': 'context:d1:HAS_DOSE:dose', 'relation_type': 'HAS_DOSE', 'source': 'context:d1', 'target': 'dose', 'value': '50 mg', 'source_mention_id': 'context:d1', 'target_mention_id': 'dose', 'source_segment_ids': [], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization-v2', 'attribute': 'dose', 'source_segment_ids': ()}}, {'relation_id': 'context:d1:36:45:CHANGED_FROM:dose:50 mg', 'relation_type': 'CHANGED_FROM', 'source': 'context:d1:36:45', 'target': 'dose', 'value': '50 mg', 'source_mention_id': 'context:d1:36:45', 'target_mention_id': 'dose', 'source_segment_ids': ['d1'], 'confidence': 1.0, 'provenance': {'source_segment_ids': ('d1',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('d1',), 'candidate_source': 'd1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:d1', 'owner_segment_id': 'd1'}}, 'transition_attribute_ownership': {'dose': {'current': '50 mg', 'previous': '50 mg', 'owner_mention_id': 'context:d1:36:45', 'source_segment_ids': ('d1',)}}}, 'authority_metrics': {'resolver_decisions_total': 132, 'resolver_decisions_preserved': 122, 'resolver_decisions_overwritten': 10, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'd1', 'conversation_segment_ids': ['d2']}",
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "50 mg"
+              },
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "50 mg"
+              }
+            ],
+            "surface": "losartana"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-010",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "376f742dd186f45e6e5fc2b5b0f1e19cfb225357c06f391478c98864ee1f5c6e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d26b037cdb929f00bfc60a0ca17e3f48a0df3096e93c67b78b335bc105929554",
+      "output_hash": "a65a06b76fdc310407ac4af1c24c9c0c6c2b47973c38d7db2969b8fd99950dbe",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "dose": [
+                "d2"
+              ],
+              "dose_unit": [
+                "d2"
+              ],
+              "dose_value": [
+                "d2"
+              ],
+              "status": [
+                "d2"
+              ]
+            },
+            "concept_id": "medication.losartan",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "CHANGED_FROM": [
+                "d2"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "50 mg"
+              },
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "25 mg"
+              }
+            ],
+            "segment_ids": [
+              "d1",
+              "d2"
+            ],
+            "surface": "losartana"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-010",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "3340dd77c494d9d528d52d65bd7c6a5341be744aedc1e421102478320a93547e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "a65a06b76fdc310407ac4af1c24c9c0c6c2b47973c38d7db2969b8fd99950dbe",
+      "output_hash": "91c819f227dc243117920d789ab83c415e9bea599205ec270a0dacccda5beaac",
+      "payload": {
+        "case_id": "D2-010",
+        "mismatch_count": 4
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-010",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

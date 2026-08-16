@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://niede.invalid/clinical-evaluation-trace/v2",
+  "title": "ClinicalEvaluationTrace v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["trace_schema", "evaluation_id", "case_id", "corpus_version", "corpus_checksum", "resolver_version", "resolver_checksum", "policy_version", "stage_order", "snapshots", "decisions", "mismatches"],
+  "properties": {
+    "trace_schema": {"const": "clinical-evaluation-trace/v2"},
+    "evaluation_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "corpus_version": {"type": "string", "minLength": 1},
+    "corpus_checksum": {"type": "string", "minLength": 1},
+    "resolver_version": {"type": "string", "minLength": 1},
+    "resolver_checksum": {"type": "string", "minLength": 1},
+    "policy_version": {"type": "string", "minLength": 1},
+    "stage_order": {"type": "array", "minItems": 12, "maxItems": 12, "items": {"type": "string"}},
+    "snapshots": {"type": "array", "minItems": 12, "maxItems": 12, "items": {"$ref": "#/$defs/snapshot"}},
+    "decisions": {"type": "array", "items": {"type": "object"}},
+    "mismatches": {"type": "array", "items": {"type": "object"}}
+  },
+  "$defs": {
+    "stage": {"type": "string", "enum": ["input_segments", "local_mentions", "semantic_candidates", "reference_resolution", "ownership_resolution", "cross_segment_state", "resolved_semantics", "generated_relations", "final_projection", "prediction", "gold", "comparison"]},
+    "granularity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["per_mention_attributes", "per_mention_relations", "candidate_to_resolved_field_map", "ownership_decisions", "relation_generation_inputs", "relation_generation_outputs", "projection_field_map", "dropped_fields_by_stage", "transformed_fields_by_stage"],
+      "properties": {
+        "per_mention_attributes": {"type": "object"},
+        "per_mention_relations": {"type": "object"},
+        "candidate_to_resolved_field_map": {"type": "object"},
+        "ownership_decisions": {"type": "object"},
+        "relation_generation_inputs": {"type": "object"},
+        "relation_generation_outputs": {"type": "object"},
+        "projection_field_map": {"type": "object"},
+        "dropped_fields_by_stage": {"type": "object"},
+        "transformed_fields_by_stage": {"type": "object"}
+      }
+    },
+    "snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stage", "input_hash", "output_hash", "chain_hash", "payload", "decisions", "preserved_fields", "changed_fields", "dropped_fields", "provenance", "granularity"],
+      "properties": {
+        "stage": {"$ref": "#/$defs/stage"},
+        "input_hash": {"type": ["string", "null"]},
+        "output_hash": {"type": "string", "minLength": 1},
+        "chain_hash": {"type": ["string", "null"]},
+        "payload": {},
+        "decisions": {"type": "array", "items": {"type": "object"}},
+        "preserved_fields": {"type": "array", "items": {"type": "string"}},
+        "changed_fields": {"type": "array", "items": {"type": "string"}},
+        "dropped_fields": {"type": "array", "items": {"type": "string"}},
+        "provenance": {"type": "object"},
+        "granularity": {"type": "object"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"stage": {"enum": ["semantic_candidates", "reference_resolution", "ownership_resolution", "generated_relations", "final_projection"]}}},
+          "then": {"properties": {"granularity": {"$ref": "#/$defs/granularity"}}}
+        }
+      ]
+    }
+  }
+}

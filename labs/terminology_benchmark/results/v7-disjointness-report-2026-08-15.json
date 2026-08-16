@@ -1,0 +1,39 @@
+{
+  "status": "PASS_DRAFT_ONLY",
+  "draft_corpus": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/v7_unseen_generalization_draft.jsonl",
+  "draft_case_count": 240,
+  "existing_sources_checked": [
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_clinical_semantics_v3.jsonl",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_clinical_semantics_v4.jsonl",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_clinical_semantics_v5.jsonl",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_clinical_semantics_v6_draft.jsonl",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_clinical_semantics_v6.jsonl",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v6-human-review-micro-expansion-submission-2026-08-15.json",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/post_holdout_generalization_holdout_v2.json",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v6-human-review-expansion-submission-2026-08-15.json",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v6-human-review-submission-2026-08-15.json"
+  ],
+  "existing_text_count": 466,
+  "text_overlaps": [],
+  "case_id_prefix": "v7-draft-",
+  "id_overlap_with_previous": false,
+  "gold_overlap_check": "NOT_APPLICABLE_DRAFT_GOLD_EMPTY",
+  "holdouts_reused": false,
+  "category_counts": {
+    "MEDICATION_RECONCILIATION": 20,
+    "DOSE_TRANSITION": 20,
+    "FREQUENCY_STATUS_TRANSITION": 20,
+    "MULTIPLE_SYMPTOMS": 20,
+    "FAMILY_PATIENT_EXPERIENCER": 20,
+    "NEGATION_REVERSAL": 20,
+    "DISTRIBUTED_TEMPORALITY": 20,
+    "TOPIC_SWITCH": 20,
+    "ELLIPTICAL_ANSWER": 20,
+    "CLINICIAN_CORRECTION": 20,
+    "PATIENT_SELF_CORRECTION": 20,
+    "ANAPHORA_SPEAKER_TRANSITION": 20
+  },
+  "draft_sha256": "81a3c62eeba3b56e69f18e5906ccd4db364c1c7d1021593d7779a323a0400c34",
+  "queue_sha256": "93eed1d09d38af600bd2049b1645e66ca097ac91935c90e852277b433e9b2f54",
+  "official_v7_run": false
+}

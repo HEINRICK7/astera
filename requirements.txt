@@ -1,0 +1,17 @@
+# Astera Runtime — production dependencies
+fastapi>=0.110,<1.0
+nats-py>=2.7,<3.0
+pydantic>=2.6,<3.0
+pydantic-settings>=2.2,<3.0
+uvicorn[standard]>=0.29,<1.0
+opentelemetry-api==1.42.1
+opentelemetry-sdk==1.42.1
+opentelemetry-exporter-otlp-proto-grpc==1.42.1
+google-adk>=2.0.0,<3.0.0
+httpx>=0.27,<1.0
+websockets>=12,<16
+PyJWT>=2.8,<3.0
+SQLAlchemy>=2.0,<3.0
+psycopg[binary]>=3.1,<4.0
+redis>=5.0,<6.0
+minio>=7.2,<8.0

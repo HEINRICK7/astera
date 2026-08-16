@@ -1,0 +1,3175 @@
+{
+  "status": "D2_DIAGNOSTIC_COMPLETE",
+  "execution_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+  "one_shot": true,
+  "corpus_version": "D2",
+  "official_corpus_checksum": "3711d88475bd81da311be795b13c971c805ee3509eec8ddf352daec79b11a021",
+  "policy_version": "1.3",
+  "policy_checksum": "b2bf0b98e4544ac6d2d94fe1e8d8c244a7edc11845820ac9978e4d0f6016e153",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "resolver_checksum": "ff09e39196d8458637629dce70da5bd20c4c5b0f5af5cd83a0d19b27e3a186ab",
+  "cases": 36,
+  "mentions": 44,
+  "traces": 36,
+  "trace_contract": {
+    "schema": "clinical-evaluation-trace/v2",
+    "all_saved": true,
+    "all_valid": true,
+    "stage_count": 12,
+    "granularity_stages": 5,
+    "analyzer_rerun_resolver": false
+  },
+  "findings": [
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-001",
+      "first_divergence_stage": "generated_relations",
+      "semantic_dimension": "relations",
+      "expected": [
+        {
+          "relation_type": "HAS_LATERALITY",
+          "target": "laterality",
+          "value": "left"
+        }
+      ],
+      "actual": [],
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "b57e16a11aaec046e09d05e2731420729dc5c451703557c23f437e1c9ad04c14"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "b574600a2f80c5f5789ba148531e6544085b881acc2cdfa3bfd0bca16fe012ce"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "fb2da1fdfd28ed9149d57ca3016869a5f5751911b1bc35a8fdf43259fff0a2c2"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.86,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "relations",
+          "expected": [
+            {
+              "relation_type": "HAS_LATERALITY",
+              "target": "laterality",
+              "value": "left"
+            }
+          ],
+          "actual": [],
+          "stage": "generated_relations",
+          "confidence": 0.86,
+          "policy_rules": [],
+          "details": {
+            "mention": "ardor",
+            "relation_output_count": 0
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "G1"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-002",
+      "first_divergence_stage": "prediction",
+      "semantic_dimension": "status",
+      "expected": null,
+      "actual": "discontinued",
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "2ba204e068470d438cfa206d4c1222784d2fb70c32686c7a115c1eafe7d0d4a8"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "24e9dbe89767a97715e840920a9db047bb69c0ba79927c8152c7a7aca286c4b6"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "f5330c7bf3aab5e434da0c415981ea97f57fdbb14a3f5eea4887ab5d63a2d15c"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764"
+        },
+        {
+          "stage": "final_projection",
+          "output_hash": "0f725f888a0e7022dab8db92219cd6b5ad5d3536e2f0c6288739243d110eb456"
+        },
+        {
+          "stage": "prediction",
+          "output_hash": "0f725f888a0e7022dab8db92219cd6b5ad5d3536e2f0c6288739243d110eb456"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.55,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "status",
+          "expected": null,
+          "actual": "discontinued",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "peso",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "status": "PASS",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-003",
+      "first_divergence_stage": null,
+      "semantic_dimension": null,
+      "expected": null,
+      "actual": null,
+      "upstream_state": [],
+      "downstream_effects": [],
+      "confidence": 1.0,
+      "mismatches": [],
+      "inferred": false,
+      "repair_class": "PASS"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-004",
+      "first_divergence_stage": "generated_relations",
+      "semantic_dimension": "relations",
+      "expected": [],
+      "actual": [
+        {
+          "relation_type": "DISCONTINUED_AT",
+          "target": "status",
+          "value": "discontinued"
+        }
+      ],
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "ca1bfa5a123a4b7e1f5aa5e24e4ca91d01861fb58da2e601de69b0e772b4f986"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "500bb391a76b76e6f230254735838d907c2ea031f44c920fbd7c116195ed16d0"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "2c5d185b4f66f4d28c46dfc9f579c6f901096aca881bc4eded7245f824ea60dd"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "d16b474224cb4dc8720a2d1a969ba1dd730521974d7e625d183d367ebe28a448"
+        }
+      ],
+      "downstream_effects": [
+        {
+          "stage": "prediction",
+          "changed_fields": [
+            "status",
+            "temporality"
+          ],
+          "dropped_fields": []
+        }
+      ],
+      "confidence": 0.86,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "relations",
+          "expected": [],
+          "actual": [
+            {
+              "relation_type": "DISCONTINUED_AT",
+              "target": "status",
+              "value": "discontinued"
+            }
+          ],
+          "stage": "generated_relations",
+          "confidence": 0.86,
+          "policy_rules": [],
+          "details": {
+            "mention": "enalapril",
+            "relation_output_count": 1
+          }
+        },
+        {
+          "semantic_dimension": "status",
+          "expected": "active",
+          "actual": "discontinued",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [
+            "ptbr-active-status",
+            "ptbr-current-active-medication"
+          ],
+          "details": {
+            "mention": "enalapril",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "temporality",
+          "expected": "current",
+          "actual": "past",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [
+            "ptbr-active-status",
+            "ptbr-current-active-medication"
+          ],
+          "details": {
+            "mention": "enalapril",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "G1"
+    },
+    {
+      "status": "PASS",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-005",
+      "first_divergence_stage": null,
+      "semantic_dimension": null,
+      "expected": null,
+      "actual": null,
+      "upstream_state": [],
+      "downstream_effects": [],
+      "confidence": 1.0,
+      "mismatches": [],
+      "inferred": false,
+      "repair_class": "PASS"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-006",
+      "first_divergence_stage": "prediction",
+      "semantic_dimension": "experiencer",
+      "expected": "patient",
+      "actual": "family",
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "6ced35646adba549f26590fa07ba18ff783a79337cf8212794bb0c57967eb2ff"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "500bb391a76b76e6f230254735838d907c2ea031f44c920fbd7c116195ed16d0"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "61efb8d39ae944859add525792f668c5b554f7a4aa6ab829d6bdefd385e47511"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "5a58e890c707ae0a002465394b791a36c7a5eb65b2048ec932ee99323b2350ff"
+        },
+        {
+          "stage": "final_projection",
+          "output_hash": "c5db26bcb5e3c88efed97ad597b9e49ad3cb478ee0ec84bcc3591ababf2d6fa8"
+        },
+        {
+          "stage": "prediction",
+          "output_hash": "c5db26bcb5e3c88efed97ad597b9e49ad3cb478ee0ec84bcc3591ababf2d6fa8"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.55,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "experiencer",
+          "expected": "patient",
+          "actual": "family",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "falta de ar",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "frequency",
+          "expected": null,
+          "actual": "à noite",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [
+            "ptbr-family-experiencer"
+          ],
+          "details": {
+            "mention": "falta de ar",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "negated",
+          "expected": false,
+          "actual": true,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [
+            "ptbr-family-experiencer"
+          ],
+          "details": {
+            "mention": "falta de ar",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "status": "PASS",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-007",
+      "first_divergence_stage": null,
+      "semantic_dimension": null,
+      "expected": null,
+      "actual": null,
+      "upstream_state": [],
+      "downstream_effects": [],
+      "confidence": 1.0,
+      "mismatches": [],
+      "inferred": false,
+      "repair_class": "PASS"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-008",
+      "first_divergence_stage": "prediction",
+      "semantic_dimension": "negated",
+      "expected": false,
+      "actual": true,
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "05680cd2e05d91ab9554a017df25e3234b7665ed6266757f86317a692afff7f6"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "c161eb9491a0f242e27efee24c44f3d1760307830cee6d924c8ed9c91865508d"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "661538c2355b9561ef2fbc14ba4e01d799e8fa85fbeefaece2b4984dc41cb516"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764"
+        },
+        {
+          "stage": "final_projection",
+          "output_hash": "5610b3e556b43ea169d001df3e82069dcd1afda5de35e65d9a2885123788da2c"
+        },
+        {
+          "stage": "prediction",
+          "output_hash": "5610b3e556b43ea169d001df3e82069dcd1afda5de35e65d9a2885123788da2c"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.55,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "negated",
+          "expected": false,
+          "actual": true,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "queda",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "status",
+          "expected": null,
+          "actual": "active",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "queda",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "temporality",
+          "expected": "past",
+          "actual": "current",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "queda",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "status": "PASS",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-009",
+      "first_divergence_stage": null,
+      "semantic_dimension": null,
+      "expected": null,
+      "actual": null,
+      "upstream_state": [],
+      "downstream_effects": [],
+      "confidence": 1.0,
+      "mismatches": [],
+      "inferred": false,
+      "repair_class": "PASS"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-010",
+      "first_divergence_stage": "generated_relations",
+      "semantic_dimension": "relations",
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "50 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "25 mg"
+        }
+      ],
+      "actual": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "50 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "50 mg"
+        }
+      ],
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "f439abcf2b94f3d6342e8d7f44d8e042cc47225cd7df1f816acec96abd4922d0"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "8af32c9a123da2890d90d7e2e22af869bb2a38bfcc1cb17046602fc6884d85a0"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "daf5e1a58124ec8aa36214f8ab856c3348526a2029e1167a61f49340a01489bd"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "0ea5056028dc93e2f87a3d20533e3a5f81525c967a8e138fd30cf746a214477b"
+        }
+      ],
+      "downstream_effects": [
+        {
+          "stage": "prediction",
+          "changed_fields": [
+            "dose",
+            "dose_value",
+            "temporality"
+          ],
+          "dropped_fields": []
+        }
+      ],
+      "confidence": 0.86,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "relations",
+          "expected": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "50 mg"
+            },
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "25 mg"
+            }
+          ],
+          "actual": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "50 mg"
+            },
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "50 mg"
+            }
+          ],
+          "stage": "generated_relations",
+          "confidence": 0.86,
+          "policy_rules": [],
+          "details": {
+            "mention": "losartana",
+            "relation_output_count": 2
+          }
+        },
+        {
+          "semantic_dimension": "dose",
+          "expected": "25 mg",
+          "actual": "50 mg",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [
+            "ptbr-past-tense-before-target",
+            "ptbr-dose",
+            "ptbr-active-medication-context"
+          ],
+          "details": {
+            "mention": "losartana",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "dose_value",
+          "expected": "25",
+          "actual": "50",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [
+            "ptbr-past-tense-before-target",
+            "ptbr-dose",
+            "ptbr-active-medication-context"
+          ],
+          "details": {
+            "mention": "losartana",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "temporality",
+          "expected": "current",
+          "actual": "past",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [
+            "ptbr-past-tense-before-target",
+            "ptbr-dose",
+            "ptbr-active-medication-context"
+          ],
+          "details": {
+            "mention": "losartana",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "G1"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-011",
+      "first_divergence_stage": "generated_relations",
+      "semantic_dimension": "relations",
+      "expected": [
+        {
+          "relation_type": "DISCONTINUED_AT",
+          "target": "status",
+          "value": "discontinued"
+        },
+        {
+          "relation_type": "DISCONTINUED_AT",
+          "target": "status",
+          "value": "discontinued"
+        }
+      ],
+      "actual": [],
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "83595c2c7fa609c42eb3798b07c74d29d9fda79e3a6d8476f4180442dc7ea857"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "8af32c9a123da2890d90d7e2e22af869bb2a38bfcc1cb17046602fc6884d85a0"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "e96d38771f65ca7539ad2a682c79abfe7f86896a6bd02053cbdd7ee26f04f8cb"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764"
+        }
+      ],
+      "downstream_effects": [
+        {
+          "stage": "prediction",
+          "changed_fields": [
+            "negated",
+            "status"
+          ],
+          "dropped_fields": []
+        }
+      ],
+      "confidence": 0.86,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "relations",
+          "expected": [
+            {
+              "relation_type": "DISCONTINUED_AT",
+              "target": "status",
+              "value": "discontinued"
+            },
+            {
+              "relation_type": "DISCONTINUED_AT",
+              "target": "status",
+              "value": "discontinued"
+            }
+          ],
+          "actual": [],
+          "stage": "generated_relations",
+          "confidence": 0.86,
+          "policy_rules": [],
+          "details": {
+            "mention": "metformina",
+            "relation_output_count": 0
+          }
+        },
+        {
+          "semantic_dimension": "negated",
+          "expected": false,
+          "actual": true,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "metformina",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "status",
+          "expected": "discontinued",
+          "actual": null,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "metformina",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "G1"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-012",
+      "first_divergence_stage": "prediction",
+      "semantic_dimension": "negated",
+      "expected": false,
+      "actual": true,
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "530c21d00bf1a9a682507c0130dc468d1b4fe615b0025fcf42c9d821f9881260"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "8af32c9a123da2890d90d7e2e22af869bb2a38bfcc1cb17046602fc6884d85a0"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "74acf9da849d5ddb48aadeb75b9afb432e6ffaf1cb0cb30d56bc10d7a613d0de"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764"
+        },
+        {
+          "stage": "final_projection",
+          "output_hash": "0ca316b5454eb97a74d75953de9ceaea70e220ccb4e43e7e16a0cd7e41ada963"
+        },
+        {
+          "stage": "prediction",
+          "output_hash": "0ca316b5454eb97a74d75953de9ceaea70e220ccb4e43e7e16a0cd7e41ada963"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.55,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "negated",
+          "expected": false,
+          "actual": true,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "dipirona",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "status",
+          "expected": "active",
+          "actual": null,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "dipirona",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-013",
+      "first_divergence_stage": "generated_relations",
+      "semantic_dimension": "relations",
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "20 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "10 mg"
+        }
+      ],
+      "actual": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "20 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "20 mg"
+        }
+      ],
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "f2c69528a06ceb984a40577759fb64f40296144e3ade733b2af3d48a94be782b"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "a17a4c273ea1c085f59b1b2ace2cb5b9f91cd2cdcd264a7c75be5ee71e33adbb"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "c123dacef6b39905cb1cd4554e122f8a094ca97924ea359b6cff401c59191fb5"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "15eb7fc9b35684a47df9b168112e8527f41fd1d1ae0bcd9818dff3d9b0131d7b"
+        }
+      ],
+      "downstream_effects": [
+        {
+          "stage": "prediction",
+          "changed_fields": [
+            "dose",
+            "dose_value"
+          ],
+          "dropped_fields": []
+        }
+      ],
+      "confidence": 0.86,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "relations",
+          "expected": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "20 mg"
+            },
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "10 mg"
+            }
+          ],
+          "actual": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "20 mg"
+            },
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "20 mg"
+            }
+          ],
+          "stage": "generated_relations",
+          "confidence": 0.86,
+          "policy_rules": [],
+          "details": {
+            "mention": "prednisona",
+            "relation_output_count": 2
+          }
+        },
+        {
+          "semantic_dimension": "dose",
+          "expected": "10 mg",
+          "actual": "20 mg",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [
+            "ptbr-dose",
+            "ptbr-active-medication-context"
+          ],
+          "details": {
+            "mention": "prednisona",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "dose_value",
+          "expected": "10",
+          "actual": "20",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [
+            "ptbr-dose",
+            "ptbr-active-medication-context"
+          ],
+          "details": {
+            "mention": "prednisona",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "G1"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-014",
+      "first_divergence_stage": "generated_relations",
+      "semantic_dimension": "relations",
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "50 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "75 mg"
+        }
+      ],
+      "actual": [
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "75 mg"
+        }
+      ],
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "c0c92c7c73ece2c8edd8f8442ff2280561471dc463105518e8b9868ddf55be91"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "a17a4c273ea1c085f59b1b2ace2cb5b9f91cd2cdcd264a7c75be5ee71e33adbb"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "3f6ffd90cb4ab1a1ad24bee804585c23cc13b05381ab99ce947949da17d4e006"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "d7bf64ca3b1db1f78a8634ebfb31d849a129084862a0f9da1707accb516679b3"
+        }
+      ],
+      "downstream_effects": [
+        {
+          "stage": "prediction",
+          "changed_fields": [
+            "status"
+          ],
+          "dropped_fields": []
+        }
+      ],
+      "confidence": 0.86,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "relations",
+          "expected": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "50 mg"
+            },
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "75 mg"
+            }
+          ],
+          "actual": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "75 mg"
+            }
+          ],
+          "stage": "generated_relations",
+          "confidence": 0.86,
+          "policy_rules": [],
+          "details": {
+            "mention": "sertralina",
+            "relation_output_count": 1
+          }
+        },
+        {
+          "semantic_dimension": "status",
+          "expected": "active",
+          "actual": null,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "sertralina",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "G1"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-015",
+      "first_divergence_stage": "generated_relations",
+      "semantic_dimension": "relations",
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "14 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "7 mg"
+        }
+      ],
+      "actual": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "14 mg"
+        }
+      ],
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "cd47668726c36bbcafa9147e2b52cc7698d6ebcf20d11c534da3a1e3c80701da"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "a17a4c273ea1c085f59b1b2ace2cb5b9f91cd2cdcd264a7c75be5ee71e33adbb"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "92133b0edfa11d78af2957b1c490ac7864c459faab62922f35f5c41ab80d1dd8"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "18eec91a231a04ef18aecab1a499af2e9c7bbf5704fdf3c26ef6d742df07beed"
+        }
+      ],
+      "downstream_effects": [
+        {
+          "stage": "prediction",
+          "changed_fields": [
+            "dose",
+            "dose_value"
+          ],
+          "dropped_fields": []
+        }
+      ],
+      "confidence": 0.86,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "relations",
+          "expected": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "14 mg"
+            },
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "7 mg"
+            }
+          ],
+          "actual": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "14 mg"
+            }
+          ],
+          "stage": "generated_relations",
+          "confidence": 0.86,
+          "policy_rules": [],
+          "details": {
+            "mention": "adesivo",
+            "relation_output_count": 1
+          }
+        },
+        {
+          "semantic_dimension": "dose",
+          "expected": "7 mg",
+          "actual": "14 mg",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [
+            "ptbr-dose",
+            "ptbr-active-medication-context"
+          ],
+          "details": {
+            "mention": "adesivo",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "dose_value",
+          "expected": "7",
+          "actual": "14",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [
+            "ptbr-dose",
+            "ptbr-active-medication-context"
+          ],
+          "details": {
+            "mention": "adesivo",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "G1"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-016",
+      "first_divergence_stage": "generated_relations",
+      "semantic_dimension": "relations",
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "duas vezes ao dia"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "uma vez ao dia"
+        }
+      ],
+      "actual": [
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "duas vezes ao dia"
+        }
+      ],
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "f2c8ab096bd984b488e02ecfb8ac858f354d1a6672dd8f485d2cb9d2c6c66185"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "60054286619cf4cedb8349e3fd55d302090e7bc8412be1284df278cae485c9a7"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "1db3f411a71900368d1958f803f4f18a69f3f8033a858be25b17ba00381cbb97"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "2294f41a22d1965370ce1927ed07b789e37cab2b8d8f6ef7a9eca995aabd0485"
+        }
+      ],
+      "downstream_effects": [
+        {
+          "stage": "prediction",
+          "changed_fields": [
+            "frequency"
+          ],
+          "dropped_fields": []
+        }
+      ],
+      "confidence": 0.86,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "relations",
+          "expected": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "frequency",
+              "value": "duas vezes ao dia"
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "uma vez ao dia"
+            }
+          ],
+          "actual": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "duas vezes ao dia"
+            }
+          ],
+          "stage": "generated_relations",
+          "confidence": 0.86,
+          "policy_rules": [],
+          "details": {
+            "mention": "bombinha",
+            "relation_output_count": 1
+          }
+        },
+        {
+          "semantic_dimension": "frequency",
+          "expected": "uma vez ao dia",
+          "actual": "duas vezes ao dia",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [
+            "ptbr-frequency",
+            "ptbr-active-status"
+          ],
+          "details": {
+            "mention": "bombinha",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "G1"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-017",
+      "first_divergence_stage": "prediction",
+      "semantic_dimension": "status",
+      "expected": "active",
+      "actual": null,
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "72b92f0fe8e98a6f0a8e872d10502ef5b8cb549e045a5a2d787464d8feabdcc2"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "60054286619cf4cedb8349e3fd55d302090e7bc8412be1284df278cae485c9a7"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "ea3978931de248ac28b282a6e4e3c1d147d7018708c8788fdbf2f6b3d7bca6be"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "4374bbba7412cb64bef7436374afced00557b13fd8fee4eee6a021454173f0a9"
+        },
+        {
+          "stage": "final_projection",
+          "output_hash": "5ebf0325f620f79592e095fcb980cee10d0164a48c9509abe71a4de75d271e60"
+        },
+        {
+          "stage": "prediction",
+          "output_hash": "5ebf0325f620f79592e095fcb980cee10d0164a48c9509abe71a4de75d271e60"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.55,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "status",
+          "expected": "active",
+          "actual": null,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "levotiroxina",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-018",
+      "first_divergence_stage": "generated_relations",
+      "semantic_dimension": "relations",
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "todos os dias"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "dias alternados"
+        }
+      ],
+      "actual": [],
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "03197ce29f39fb9dc3b8f0a8a1d058f8541ef176a2f14197e34a0ea49965986a"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "60054286619cf4cedb8349e3fd55d302090e7bc8412be1284df278cae485c9a7"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "4b05a01cc16098d56e4cfaa3f5e4efa43af59e5ca73e229f70e855f026788c53"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764"
+        }
+      ],
+      "downstream_effects": [
+        {
+          "stage": "prediction",
+          "changed_fields": [
+            "frequency",
+            "status"
+          ],
+          "dropped_fields": []
+        }
+      ],
+      "confidence": 0.86,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "relations",
+          "expected": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "frequency",
+              "value": "todos os dias"
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "dias alternados"
+            }
+          ],
+          "actual": [],
+          "stage": "generated_relations",
+          "confidence": 0.86,
+          "policy_rules": [],
+          "details": {
+            "mention": "ibuprofeno",
+            "relation_output_count": 0
+          }
+        },
+        {
+          "semantic_dimension": "frequency",
+          "expected": "dias alternados",
+          "actual": null,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "ibuprofeno",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "status",
+          "expected": "active",
+          "actual": null,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "ibuprofeno",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "G1"
+    },
+    {
+      "status": "PASS",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-019",
+      "first_divergence_stage": null,
+      "semantic_dimension": null,
+      "expected": null,
+      "actual": null,
+      "upstream_state": [],
+      "downstream_effects": [],
+      "confidence": 1.0,
+      "mismatches": [],
+      "inferred": false,
+      "repair_class": "PASS"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-020",
+      "first_divergence_stage": "prediction",
+      "semantic_dimension": "negated",
+      "expected": false,
+      "actual": true,
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "e0faff2c5fc879bb4c6d73a6f010348c0a1c0dfd5926e88cf9233b3d7bf63109"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "374ad6c1c40659a552e0a06dd0022b1346ba90e149d31a8bb63d997edd77a552"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "2b94359bac50d0185b9a85b4aed080b66b35bf0f16a5e2de628afcef05b1f47e"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "5a58e890c707ae0a002465394b791a36c7a5eb65b2048ec932ee99323b2350ff"
+        },
+        {
+          "stage": "final_projection",
+          "output_hash": "23dfa9e3ef5d30ffd39b0010e9843b3cf51591e2202fe7d06778d1994ebf4cc6"
+        },
+        {
+          "stage": "prediction",
+          "output_hash": "23dfa9e3ef5d30ffd39b0010e9843b3cf51591e2202fe7d06778d1994ebf4cc6"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.55,
+      "policy_rules": [
+        "ptbr-recent-duration",
+        "ptbr-family-experiencer"
+      ],
+      "mismatches": [
+        {
+          "semantic_dimension": "negated",
+          "expected": false,
+          "actual": true,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [
+            "ptbr-recent-duration",
+            "ptbr-family-experiencer"
+          ],
+          "details": {
+            "mention": "hipertensão",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "status": "PASS",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-021",
+      "first_divergence_stage": null,
+      "semantic_dimension": null,
+      "expected": null,
+      "actual": null,
+      "upstream_state": [],
+      "downstream_effects": [],
+      "confidence": 1.0,
+      "mismatches": [],
+      "inferred": false,
+      "repair_class": "PASS"
+    },
+    {
+      "status": "PASS",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-022",
+      "first_divergence_stage": null,
+      "semantic_dimension": null,
+      "expected": null,
+      "actual": null,
+      "upstream_state": [],
+      "downstream_effects": [],
+      "confidence": 1.0,
+      "mismatches": [],
+      "inferred": false,
+      "repair_class": "PASS"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-023",
+      "first_divergence_stage": "prediction",
+      "semantic_dimension": "negated",
+      "expected": false,
+      "actual": true,
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "e7cdac601cf8fd776b1c681c80a185c58c57e5722f1b51f2472e72adb136d730"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "9e031396c10bc5d1289e1be25ec17f1c797a83f48d9af2cee6fd8653ca3a2ae4"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "7937cffe236a6cbaebc1f6cd8f1c526c359eea211632ccd7a34319e5d8d5a63a"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764"
+        },
+        {
+          "stage": "final_projection",
+          "output_hash": "6449703342ae52add4b2f0bb8be6cf534c0b3d8fbb68e65dad8efea756b2a403"
+        },
+        {
+          "stage": "prediction",
+          "output_hash": "6449703342ae52add4b2f0bb8be6cf534c0b3d8fbb68e65dad8efea756b2a403"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.55,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "negated",
+          "expected": false,
+          "actual": true,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "náusea",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "temporality",
+          "expected": "past",
+          "actual": "current",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "náusea",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-024",
+      "first_divergence_stage": "prediction",
+      "semantic_dimension": "temporality",
+      "expected": "past",
+      "actual": "current",
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "835bdc4c953ebde2caecea62927690211a6b083fe1c9ea7daacc6e30809ffd5d"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "9e031396c10bc5d1289e1be25ec17f1c797a83f48d9af2cee6fd8653ca3a2ae4"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "b3e4f1d7caf988cd55ef46608027d0265a36bf0f484d5865a219759d623cf570"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764"
+        },
+        {
+          "stage": "final_projection",
+          "output_hash": "e7484c812d76d2370931bb32ca8bededd8c8bd690b432b10361f89ee4a769b60"
+        },
+        {
+          "stage": "prediction",
+          "output_hash": "e7484c812d76d2370931bb32ca8bededd8c8bd690b432b10361f89ee4a769b60"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.55,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "temporality",
+          "expected": "past",
+          "actual": "current",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "dor",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-025",
+      "first_divergence_stage": "prediction",
+      "semantic_dimension": "frequency",
+      "expected": null,
+      "actual": "após o almoço",
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "add408577ed25f670c9b7d53e71ffca80b8f4d9e2842393bfd46970014c58be7"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "dc699820081ec8f403ff9c3b644892251b6f2c348a3ae83375c0aaaca2e88ee0"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "91d7b17ddc5394689f6c0cf2bb645f6592b24074619e735f205890803a8733a0"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "5a58e890c707ae0a002465394b791a36c7a5eb65b2048ec932ee99323b2350ff"
+        },
+        {
+          "stage": "final_projection",
+          "output_hash": "c55e1c2dfd4c7b8f7e5804f47564bff1543288aac6ed1f42685a0460bf43cb4a"
+        },
+        {
+          "stage": "prediction",
+          "output_hash": "c55e1c2dfd4c7b8f7e5804f47564bff1543288aac6ed1f42685a0460bf43cb4a"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.55,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "frequency",
+          "expected": null,
+          "actual": "após o almoço",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "dor lombar",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "frequency",
+          "expected": null,
+          "actual": "após o almoço",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "estômago",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "temporality",
+          "expected": "past",
+          "actual": "current",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "dor lombar",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-026",
+      "first_divergence_stage": "generated_relations",
+      "semantic_dimension": "relations",
+      "expected": [
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "5 mg"
+        }
+      ],
+      "actual": [],
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "0efa130fa4a74c14099ec132cc7d43c4ee53724a7560813edfa48fc25e145ace"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "dc699820081ec8f403ff9c3b644892251b6f2c348a3ae83375c0aaaca2e88ee0"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "c3dc8cb082f4db01ae39cd0f3f654cc8d754aa33b72a467a14f13959eda71e07"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "5a58e890c707ae0a002465394b791a36c7a5eb65b2048ec932ee99323b2350ff"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.86,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "relations",
+          "expected": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "5 mg"
+            }
+          ],
+          "actual": [],
+          "stage": "generated_relations",
+          "confidence": 0.86,
+          "policy_rules": [],
+          "details": {
+            "mention": "amlodipina",
+            "relation_output_count": 0
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "G1"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-027",
+      "first_divergence_stage": "prediction",
+      "semantic_dimension": "frequency",
+      "expected": null,
+      "actual": "à noite",
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "d9e8e757d2e4018bd2a80db222973451606e95680b873229e19a14a87dc897a1"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "dc699820081ec8f403ff9c3b644892251b6f2c348a3ae83375c0aaaca2e88ee0"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "4a502e50d8b988fdecfed64eca9d60515cab5dfd2ca9cf1ccbe4bd577cfeb753"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "5a58e890c707ae0a002465394b791a36c7a5eb65b2048ec932ee99323b2350ff"
+        },
+        {
+          "stage": "final_projection",
+          "output_hash": "d3f07b0733f56732b45a048c90077d4408e52d34c302e177e8d6a216f735d41a"
+        },
+        {
+          "stage": "prediction",
+          "output_hash": "d3f07b0733f56732b45a048c90077d4408e52d34c302e177e8d6a216f735d41a"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.55,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "frequency",
+          "expected": null,
+          "actual": "à noite",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "glicose",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "frequency",
+          "expected": null,
+          "actual": "à noite",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "pontos brilhantes",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-028",
+      "first_divergence_stage": "generated_relations",
+      "semantic_dimension": "relations",
+      "expected": [
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "850 mg"
+        }
+      ],
+      "actual": [],
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "7ce1d598eda9334687647daec19e1cc5a048958684007b4575d607fb314848fa"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "34be46e4f5e451cd0111f6cabfe987393b95feab136ceef11dd8d8b03bc2c19b"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "eabf274829b9d05b671249cf7cceba4f73dc123e23e60db42cae5774fab8b0b3"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764"
+        }
+      ],
+      "downstream_effects": [
+        {
+          "stage": "prediction",
+          "changed_fields": [
+            "dose",
+            "dose_unit",
+            "dose_value",
+            "status"
+          ],
+          "dropped_fields": []
+        }
+      ],
+      "confidence": 0.86,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "relations",
+          "expected": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "850 mg"
+            }
+          ],
+          "actual": [],
+          "stage": "generated_relations",
+          "confidence": 0.86,
+          "policy_rules": [],
+          "details": {
+            "mention": "metformina",
+            "relation_output_count": 0
+          }
+        },
+        {
+          "semantic_dimension": "dose",
+          "expected": "850 mg",
+          "actual": null,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "metformina",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "dose_unit",
+          "expected": "mg",
+          "actual": null,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "metformina",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "dose_value",
+          "expected": "850",
+          "actual": null,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "metformina",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        },
+        {
+          "semantic_dimension": "status",
+          "expected": "active",
+          "actual": null,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "metformina",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "G1"
+    },
+    {
+      "status": "PASS",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-029",
+      "first_divergence_stage": null,
+      "semantic_dimension": null,
+      "expected": null,
+      "actual": null,
+      "upstream_state": [],
+      "downstream_effects": [],
+      "confidence": 1.0,
+      "mismatches": [],
+      "inferred": false,
+      "repair_class": "PASS"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-030",
+      "first_divergence_stage": "generated_relations",
+      "semantic_dimension": "relations",
+      "expected": [
+        {
+          "relation_type": "DISCONTINUED_AT",
+          "target": "status",
+          "value": "discontinued"
+        },
+        {
+          "relation_type": "DISCONTINUED_AT",
+          "target": "status",
+          "value": "discontinued"
+        }
+      ],
+      "actual": [],
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "cf858f0e57dd23757c0d21d4953c6984e89173ddec9453647ea8657ced4fdfa2"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "34be46e4f5e451cd0111f6cabfe987393b95feab136ceef11dd8d8b03bc2c19b"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "98d16d4f9b107adb6b13126affd1a78b5ff7a54956e0c0c8509a901616cb8a7b"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764"
+        }
+      ],
+      "downstream_effects": [
+        {
+          "stage": "prediction",
+          "changed_fields": [
+            "temporality"
+          ],
+          "dropped_fields": []
+        }
+      ],
+      "confidence": 0.86,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "relations",
+          "expected": [
+            {
+              "relation_type": "DISCONTINUED_AT",
+              "target": "status",
+              "value": "discontinued"
+            },
+            {
+              "relation_type": "DISCONTINUED_AT",
+              "target": "status",
+              "value": "discontinued"
+            }
+          ],
+          "actual": [],
+          "stage": "generated_relations",
+          "confidence": 0.86,
+          "policy_rules": [],
+          "details": {
+            "mention": "adesivo",
+            "relation_output_count": 0
+          }
+        },
+        {
+          "semantic_dimension": "temporality",
+          "expected": "current",
+          "actual": "past",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "adesivo",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "G1"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-031",
+      "first_divergence_stage": "prediction",
+      "semantic_dimension": "certainty",
+      "expected": "possible",
+      "actual": "confirmed",
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "c3db59771d2953e3df6b73effa2b290de39df5decc09a84f3222752ef066bd82"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "83b6dd546fadc952334c4f06748456a0de5358b0344aec1ba73db6e0035b4ca4"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "d865c9349853a4e8950942d5a21ca9a62babf8735c25d64ace497a672cb05adc"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764"
+        },
+        {
+          "stage": "final_projection",
+          "output_hash": "f816687758d3635ebc0c77d9791beac972467d0c72e3c96dfb0b3d47463fa9f3"
+        },
+        {
+          "stage": "prediction",
+          "output_hash": "f816687758d3635ebc0c77d9791beac972467d0c72e3c96dfb0b3d47463fa9f3"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.55,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "certainty",
+          "expected": "possible",
+          "actual": "confirmed",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "hipertensão",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-032",
+      "first_divergence_stage": "prediction",
+      "semantic_dimension": "temporality",
+      "expected": "past",
+      "actual": "current",
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "e41662c85461a95f4dae15460e81f418c344f9d59ba2ec2437a580033fe44155"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "83b6dd546fadc952334c4f06748456a0de5358b0344aec1ba73db6e0035b4ca4"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "549fa458f325195616cdd8cf6aef436ddaf7ddabc521c63d9502737ccd7d45cd"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764"
+        },
+        {
+          "stage": "final_projection",
+          "output_hash": "7d092227c54d27c62422bc0322f0ec6a3d5d626c90e41649b103bb900981d66d"
+        },
+        {
+          "stage": "prediction",
+          "output_hash": "7d092227c54d27c62422bc0322f0ec6a3d5d626c90e41649b103bb900981d66d"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.55,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "temporality",
+          "expected": "past",
+          "actual": "current",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "cirurgia",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-033",
+      "first_divergence_stage": "generated_relations",
+      "semantic_dimension": "relations",
+      "expected": [
+        {
+          "relation_type": "HAS_LATERALITY",
+          "target": "laterality",
+          "value": "left"
+        }
+      ],
+      "actual": [],
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "0ae307a45ee97ce285cb0822e5f20134d9c37e4aa90aed390bc1ace19203ee12"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "0acfd6fd1f26d9d246129160e6f2fb67560653ee0db10b399f283d3ea2625033"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "5f0e24ebc57df2ee50f589b3c47b325e11dd780f0320c43876d89037186f55de"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.86,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "relations",
+          "expected": [
+            {
+              "relation_type": "HAS_LATERALITY",
+              "target": "laterality",
+              "value": "left"
+            }
+          ],
+          "actual": [],
+          "stage": "generated_relations",
+          "confidence": 0.86,
+          "policy_rules": [],
+          "details": {
+            "mention": "lesão",
+            "relation_output_count": 0
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "G1"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-034",
+      "first_divergence_stage": "prediction",
+      "semantic_dimension": "negated",
+      "expected": false,
+      "actual": true,
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "46fbcb9db1db83de1e4c7c28391123ae97a3427551d290bc0895e677a6fdfc12"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "5721d8742650eb394b6bf9649994b39e827c53fc0d3c1d777494299c3885a600"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "c7f85431d70c14f86f1ec4eec49123aeb765c0a58243a61fed0706080524e4d8"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764"
+        },
+        {
+          "stage": "final_projection",
+          "output_hash": "d7fc074df9da63327d32818b61bf66204f50737a8b781c0e34d47c678435bad0"
+        },
+        {
+          "stage": "prediction",
+          "output_hash": "d7fc074df9da63327d32818b61bf66204f50737a8b781c0e34d47c678435bad0"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.55,
+      "policy_rules": [
+        "ptbr-past-tense-before-target",
+        "ptbr-family-experiencer"
+      ],
+      "mismatches": [
+        {
+          "semantic_dimension": "negated",
+          "expected": false,
+          "actual": true,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [
+            "ptbr-past-tense-before-target",
+            "ptbr-family-experiencer"
+          ],
+          "details": {
+            "mention": "asma",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-035",
+      "first_divergence_stage": "generated_relations",
+      "semantic_dimension": "relations",
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "à noite"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "pela manhã"
+        }
+      ],
+      "actual": [
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "pela manhã"
+        }
+      ],
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "ce4bbbcaddbced998e140e5acc81fb13b62aab0564216fe1cef4c475b8b8a440"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "5721d8742650eb394b6bf9649994b39e827c53fc0d3c1d777494299c3885a600"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "6f2e9d6e7bd0a6df99f5cd90e7cfd92d115b8816cd3d03e6ee62fe0db421f42e"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "ce588cf5c738d212390ad41634a5f2b4d8626e2c78b01ee1fd7f28103951a4b3"
+        }
+      ],
+      "downstream_effects": [
+        {
+          "stage": "prediction",
+          "changed_fields": [
+            "status"
+          ],
+          "dropped_fields": []
+        }
+      ],
+      "confidence": 0.86,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "relations",
+          "expected": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "frequency",
+              "value": "à noite"
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "pela manhã"
+            }
+          ],
+          "actual": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "pela manhã"
+            }
+          ],
+          "stage": "generated_relations",
+          "confidence": 0.86,
+          "policy_rules": [],
+          "details": {
+            "mention": "atenolol",
+            "relation_output_count": 1
+          }
+        },
+        {
+          "semantic_dimension": "status",
+          "expected": "active",
+          "actual": null,
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "atenolol",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "G1"
+    },
+    {
+      "status": "FAIL",
+      "evaluation_id": "d2-one-shot-4368c4a3-530d-4ffc-bb41-610928825409",
+      "case_id": "D2-036",
+      "first_divergence_stage": "prediction",
+      "semantic_dimension": "certainty",
+      "expected": "possible",
+      "actual": "confirmed",
+      "upstream_state": [
+        {
+          "stage": "input_segments",
+          "output_hash": "4a60bb4fbb3add6cb85edab6a70d147222ce7f6a7505227b7d4b0478393141fd"
+        },
+        {
+          "stage": "local_mentions",
+          "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d"
+        },
+        {
+          "stage": "semantic_candidates",
+          "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad"
+        },
+        {
+          "stage": "reference_resolution",
+          "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87"
+        },
+        {
+          "stage": "ownership_resolution",
+          "output_hash": "5721d8742650eb394b6bf9649994b39e827c53fc0d3c1d777494299c3885a600"
+        },
+        {
+          "stage": "cross_segment_state",
+          "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844"
+        },
+        {
+          "stage": "resolved_semantics",
+          "output_hash": "eeb5b341e86d161b8e631f76e27394d17c88a0941a43143b5bb7887f8cbdd1ed"
+        },
+        {
+          "stage": "generated_relations",
+          "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764"
+        },
+        {
+          "stage": "final_projection",
+          "output_hash": "dc3f17a8fa5f3986282c4f5b328af4545c27125d726239b5b239b42114a56e51"
+        },
+        {
+          "stage": "prediction",
+          "output_hash": "dc3f17a8fa5f3986282c4f5b328af4545c27125d726239b5b239b42114a56e51"
+        }
+      ],
+      "downstream_effects": [],
+      "confidence": 0.55,
+      "policy_rules": [],
+      "mismatches": [
+        {
+          "semantic_dimension": "certainty",
+          "expected": "possible",
+          "actual": "confirmed",
+          "stage": "prediction",
+          "confidence": 0.55,
+          "policy_rules": [],
+          "details": {
+            "mention": "anemia",
+            "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+          }
+        }
+      ],
+      "inferred": false,
+      "repair_class": "INDETERMINATE"
+    }
+  ],
+  "metrics": {
+    "mention_exact_match": 0.25,
+    "cross_segment_resolution": 0.1935483870967742,
+    "cross_mention_isolation": 0.2222222222222222,
+    "provenance": 1.0,
+    "relation_exact_match": 0.13333333333333333,
+    "relation_materialization": 0.23529411764705882,
+    "relation_provenance": 0.23529411764705882
+  },
+  "repair_class_counts": {
+    "G1": 14,
+    "G2": 0,
+    "G3": 0,
+    "G4": 0,
+    "INDETERMINATE": 14
+  },
+  "first_divergence_stage_counts": {
+    "generated_relations": 14,
+    "prediction": 14
+  },
+  "semantic_dimension_counts": {
+    "relations": 14,
+    "status": 2,
+    "experiencer": 1,
+    "negated": 5,
+    "temporality": 2,
+    "frequency": 2,
+    "certainty": 2
+  },
+  "top_root_causes": [
+    [
+      "relations",
+      14
+    ],
+    [
+      "negated",
+      5
+    ],
+    [
+      "status",
+      2
+    ],
+    [
+      "temporality",
+      2
+    ],
+    [
+      "frequency",
+      2
+    ],
+    [
+      "certainty",
+      2
+    ],
+    [
+      "experiencer",
+      1
+    ]
+  ],
+  "case_records": [
+    {
+      "case_id": "D2-001",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-001.json",
+      "mention_count": 1,
+      "mismatch_count": 1,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-002",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-002.json",
+      "mention_count": 1,
+      "mismatch_count": 1,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-003",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-003.json",
+      "mention_count": 1,
+      "mismatch_count": 0,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-004",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-004.json",
+      "mention_count": 1,
+      "mismatch_count": 3,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-005",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-005.json",
+      "mention_count": 2,
+      "mismatch_count": 0,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-006",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-006.json",
+      "mention_count": 2,
+      "mismatch_count": 3,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-007",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-007.json",
+      "mention_count": 1,
+      "mismatch_count": 0,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-008",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-008.json",
+      "mention_count": 1,
+      "mismatch_count": 3,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-009",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-009.json",
+      "mention_count": 1,
+      "mismatch_count": 0,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-010",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-010.json",
+      "mention_count": 1,
+      "mismatch_count": 4,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-011",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-011.json",
+      "mention_count": 1,
+      "mismatch_count": 3,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-012",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-012.json",
+      "mention_count": 1,
+      "mismatch_count": 2,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-013",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-013.json",
+      "mention_count": 1,
+      "mismatch_count": 3,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-014",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-014.json",
+      "mention_count": 1,
+      "mismatch_count": 2,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-015",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-015.json",
+      "mention_count": 1,
+      "mismatch_count": 3,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-016",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-016.json",
+      "mention_count": 1,
+      "mismatch_count": 2,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-017",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-017.json",
+      "mention_count": 1,
+      "mismatch_count": 1,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-018",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-018.json",
+      "mention_count": 1,
+      "mismatch_count": 3,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-019",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-019.json",
+      "mention_count": 2,
+      "mismatch_count": 0,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-020",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-020.json",
+      "mention_count": 2,
+      "mismatch_count": 1,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-021",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-021.json",
+      "mention_count": 2,
+      "mismatch_count": 0,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-022",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-022.json",
+      "mention_count": 1,
+      "mismatch_count": 0,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-023",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-023.json",
+      "mention_count": 1,
+      "mismatch_count": 2,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-024",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-024.json",
+      "mention_count": 1,
+      "mismatch_count": 1,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-025",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-025.json",
+      "mention_count": 2,
+      "mismatch_count": 3,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-026",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-026.json",
+      "mention_count": 2,
+      "mismatch_count": 1,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-027",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-027.json",
+      "mention_count": 2,
+      "mismatch_count": 2,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-028",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-028.json",
+      "mention_count": 1,
+      "mismatch_count": 5,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-029",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-029.json",
+      "mention_count": 1,
+      "mismatch_count": 0,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-030",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-030.json",
+      "mention_count": 1,
+      "mismatch_count": 2,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-031",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-031.json",
+      "mention_count": 1,
+      "mismatch_count": 1,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-032",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-032.json",
+      "mention_count": 1,
+      "mismatch_count": 1,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-033",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-033.json",
+      "mention_count": 1,
+      "mismatch_count": 1,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-034",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-034.json",
+      "mention_count": 1,
+      "mismatch_count": 1,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-035",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-035.json",
+      "mention_count": 1,
+      "mismatch_count": 2,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    },
+    {
+      "case_id": "D2-036",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-036.json",
+      "mention_count": 1,
+      "mismatch_count": 1,
+      "trace_schema": "clinical-evaluation-trace/v2"
+    }
+  ],
+  "d1_comparison": {
+    "mention_exact_match": 0.13953488372093023,
+    "relation_exact_match": 0.17647058823529413,
+    "cross_segment_resolution": 0.125,
+    "cross_mention_isolation": 0.1388888888888889,
+    "provenance": 1.0
+  },
+  "resolver_repair": "NOT_AUTHORIZED",
+  "d1": "CONSUMED_IMMUTABLE",
+  "v7": "CONSUMED_IMMUTABLE",
+  "shadow": "BLOCKED",
+  "production": "BLOCKED",
+  "finished_at_utc": "2026-08-16T00:31:47.233037+00:00"
+}

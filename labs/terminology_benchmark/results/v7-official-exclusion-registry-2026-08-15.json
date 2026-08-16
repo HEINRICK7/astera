@@ -1,0 +1,267 @@
+{
+  "status": "FROZEN_EXCLUSION_REGISTRY",
+  "policy_version": "1.3",
+  "case_count": 20,
+  "records": [
+    {
+      "case_id": "v7-draft-0010",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_adjudication_completion",
+        "review_id": "v7-review-0010",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0022",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_adjudication_completion",
+        "review_id": "v7-review-0022",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0034",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_adjudication_completion",
+        "review_id": "v7-review-0034",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0046",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_adjudication_completion",
+        "review_id": "v7-review-0046",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0058",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_adjudication_completion",
+        "review_id": "v7-review-0058",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0070",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_adjudication_completion",
+        "review_id": "v7-review-0070",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0082",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_adjudication_completion",
+        "review_id": "v7-review-0082",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0094",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_adjudication_completion",
+        "review_id": "v7-review-0094",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0106",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_adjudication_completion",
+        "review_id": "v7-review-0106",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0118",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_adjudication_completion",
+        "review_id": "v7-review-0118",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0130",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_ambiguity_readjudication",
+        "review_id": "v7-review-0130",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0142",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_ambiguity_readjudication",
+        "review_id": "v7-review-0142",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0154",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_ambiguity_readjudication",
+        "review_id": "v7-review-0154",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0166",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_ambiguity_readjudication",
+        "review_id": "v7-review-0166",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0178",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_ambiguity_readjudication",
+        "review_id": "v7-review-0178",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0190",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_ambiguity_readjudication",
+        "review_id": "v7-review-0190",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0202",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_ambiguity_readjudication",
+        "review_id": "v7-review-0202",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0214",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_ambiguity_readjudication",
+        "review_id": "v7-review-0214",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0226",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_ambiguity_readjudication",
+        "review_id": "v7-review-0226",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    },
+    {
+      "case_id": "v7-draft-0238",
+      "decision": "REJECTED",
+      "rejection_reason": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "adjudication_provenance": {
+        "source": "v1.3_ambiguity_readjudication",
+        "review_id": "v7-review-0238",
+        "policy_version": "1.3",
+        "policy_ids": [
+          "SEM-CORR-001"
+        ]
+      }
+    }
+  ]
+}

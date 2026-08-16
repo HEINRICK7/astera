@@ -1,0 +1,160 @@
+[
+  {
+    "candidate_id": "post-v6-v2-001",
+    "decision": "APPROVED",
+    "review_status": "REVIEWED",
+    "language": "pt-BR",
+    "text": "Médico: A queimação melhorou?\nPaciente: Hoje está só na perna direita.",
+    "segments": [
+      {"segment_id": "post-v6-v2-001:segment-01", "speaker": "clinician", "text": "A queimação melhorou?"},
+      {"segment_id": "post-v6-v2-001:segment-02", "speaker": "patient", "text": "Hoje está só na perna direita."}
+    ],
+    "gold": [
+      {
+        "surface": "queimação",
+        "concept_id": "symptom.burning",
+        "negated": false,
+        "certainty": "confirmed",
+        "temporality": "current",
+        "experiencer": "patient",
+        "laterality": "right",
+        "status": null,
+        "segment_ids": ["post-v6-v2-001:segment-01", "post-v6-v2-001:segment-02"],
+        "attribute_provenance": {"concept": ["post-v6-v2-001:segment-01"], "laterality": ["post-v6-v2-001:segment-02"]},
+        "relation_provenance": {"laterality": ["post-v6-v2-001:segment-02"]}
+      }
+    ]
+  },
+  {
+    "candidate_id": "post-v6-v2-002",
+    "decision": "APPROVED",
+    "review_status": "REVIEWED",
+    "language": "pt-BR",
+    "text": "Médico: Qual é a dose da sertralina?\nPaciente: Ajustei para 75 mg hoje.",
+    "segments": [
+      {"segment_id": "post-v6-v2-002:segment-01", "speaker": "clinician", "text": "Qual é a dose da sertralina?"},
+      {"segment_id": "post-v6-v2-002:segment-02", "speaker": "patient", "text": "Ajustei para 75 mg hoje."}
+    ],
+    "gold": [
+      {
+        "surface": "sertralina",
+        "concept_id": "medication.sertraline",
+        "negated": false,
+        "certainty": "confirmed",
+        "temporality": "current",
+        "experiencer": "patient",
+        "dose": "75 mg",
+        "dose_value": "75",
+        "dose_unit": "mg",
+        "status": "active",
+        "segment_ids": ["post-v6-v2-002:segment-01", "post-v6-v2-002:segment-02"],
+        "attribute_provenance": {"concept": ["post-v6-v2-002:segment-01"], "dose": ["post-v6-v2-002:segment-02"], "dose_value": ["post-v6-v2-002:segment-02"], "dose_unit": ["post-v6-v2-002:segment-02"]},
+        "relation_provenance": {"dose": ["post-v6-v2-002:segment-02"]}
+      }
+    ]
+  },
+  {
+    "candidate_id": "post-v6-v2-003",
+    "decision": "APPROVED",
+    "review_status": "REVIEWED",
+    "language": "pt-BR",
+    "text": "Médico: Como está o atenolol?\nPaciente: Reduzi para 25 mg na semana passada.",
+    "segments": [
+      {"segment_id": "post-v6-v2-003:segment-01", "speaker": "clinician", "text": "Como está o atenolol?"},
+      {"segment_id": "post-v6-v2-003:segment-02", "speaker": "patient", "text": "Reduzi para 25 mg na semana passada."}
+    ],
+    "gold": [
+      {
+        "surface": "atenolol",
+        "concept_id": "medication.atenolol",
+        "negated": false,
+        "certainty": "confirmed",
+        "temporality": "current",
+        "experiencer": "patient",
+        "dose": "25 mg",
+        "dose_value": "25",
+        "dose_unit": "mg",
+        "status": "active",
+        "segment_ids": ["post-v6-v2-003:segment-01", "post-v6-v2-003:segment-02"],
+        "attribute_provenance": {"concept": ["post-v6-v2-003:segment-01"], "dose": ["post-v6-v2-003:segment-02"], "dose_value": ["post-v6-v2-003:segment-02"], "dose_unit": ["post-v6-v2-003:segment-02"]},
+        "relation_provenance": {"dose": ["post-v6-v2-003:segment-02"]}
+      }
+    ]
+  },
+  {
+    "candidate_id": "post-v6-v2-004",
+    "decision": "APPROVED",
+    "review_status": "REVIEWED",
+    "language": "pt-BR",
+    "text": "Médico: Quem tem enxaqueca na família?\nPaciente: Meu irmão tem.",
+    "segments": [
+      {"segment_id": "post-v6-v2-004:segment-01", "speaker": "clinician", "text": "Quem tem enxaqueca na família?"},
+      {"segment_id": "post-v6-v2-004:segment-02", "speaker": "patient", "text": "Meu irmão tem."}
+    ],
+    "gold": [
+      {
+        "surface": "enxaqueca",
+        "concept_id": "condition.migraine",
+        "negated": false,
+        "certainty": "confirmed",
+        "temporality": "current",
+        "experiencer": "family",
+        "status": null,
+        "segment_ids": ["post-v6-v2-004:segment-01", "post-v6-v2-004:segment-02"],
+        "attribute_provenance": {"concept": ["post-v6-v2-004:segment-01"], "experiencer": ["post-v6-v2-004:segment-02"]},
+        "relation_provenance": {"experiencer": ["post-v6-v2-004:segment-02"]}
+      }
+    ]
+  },
+  {
+    "candidate_id": "post-v6-v2-005",
+    "decision": "APPROVED",
+    "review_status": "REVIEWED",
+    "language": "pt-BR",
+    "text": "Médico: Você ainda usa amlodipino?\nPaciente: Não, suspendi no mês passado.",
+    "segments": [
+      {"segment_id": "post-v6-v2-005:segment-01", "speaker": "clinician", "text": "Você ainda usa amlodipino?"},
+      {"segment_id": "post-v6-v2-005:segment-02", "speaker": "patient", "text": "Não, suspendi no mês passado."}
+    ],
+    "gold": [
+      {
+        "surface": "amlodipino",
+        "concept_id": "medication.amlodipine",
+        "negated": false,
+        "certainty": "confirmed",
+        "temporality": "past",
+        "experiencer": "patient",
+        "status": "discontinued",
+        "segment_ids": ["post-v6-v2-005:segment-01", "post-v6-v2-005:segment-02"],
+        "attribute_provenance": {"concept": ["post-v6-v2-005:segment-01"], "temporality": ["post-v6-v2-005:segment-02"], "status": ["post-v6-v2-005:segment-02"]},
+        "relation_provenance": {"temporality": ["post-v6-v2-005:segment-02"], "status": ["post-v6-v2-005:segment-02"]}
+      }
+    ]
+  },
+  {
+    "candidate_id": "post-v6-v2-006",
+    "decision": "APPROVED",
+    "review_status": "REVIEWED",
+    "language": "pt-BR",
+    "text": "Médico: Com que frequência usa a levotiroxina?\nPaciente: Uma vez pela manhã.",
+    "segments": [
+      {"segment_id": "post-v6-v2-006:segment-01", "speaker": "clinician", "text": "Com que frequência usa a levotiroxina?"},
+      {"segment_id": "post-v6-v2-006:segment-02", "speaker": "patient", "text": "Uma vez pela manhã."}
+    ],
+    "gold": [
+      {
+        "surface": "levotiroxina",
+        "concept_id": "medication.levothyroxine",
+        "negated": false,
+        "certainty": "confirmed",
+        "temporality": "current",
+        "experiencer": "patient",
+        "frequency": "pela manhã",
+        "status": "active",
+        "segment_ids": ["post-v6-v2-006:segment-01", "post-v6-v2-006:segment-02"],
+        "attribute_provenance": {"concept": ["post-v6-v2-006:segment-01"], "frequency": ["post-v6-v2-006:segment-02"]},
+        "relation_provenance": {"frequency": ["post-v6-v2-006:segment-02"]}
+      }
+    ]
+  }
+]

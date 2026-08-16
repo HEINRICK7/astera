@@ -1,0 +1,329 @@
+[
+  {
+    "candidate_id": "sim-v6-0055",
+    "language": "pt-BR",
+    "text": "Médico: Você ainda usa enalapril?\nPaciente: Parei no mês passado.",
+    "review_status": "REVIEWED",
+    "decision": "APPROVED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "Cross-segment claro: o medicamento é identificado na pergunta; a suspensão e a temporalidade vêm da resposta do paciente.",
+    "source_case_ids": [
+      "v6-micro-cross-segment-001"
+    ],
+    "source_error_types": [
+      "CROSS_SEGMENT_RESOLUTION"
+    ],
+    "provenance": {
+      "source_corpus": "v6-micro-expansion-gap-analysis",
+      "history_status": "status medication carry-over",
+      "candidate_text_sha256": "76dd1bbaad0bb49d84c7f7178cd08e294a6641987a62db115bc27669b3c49f50",
+      "official_corpus_mutation": false
+    },
+    "segment_id": null,
+    "segments": [
+      {
+        "segment_id": "sim-v6-0055:segment-01",
+        "speaker": "clinician",
+        "text": "Você ainda usa enalapril?"
+      },
+      {
+        "segment_id": "sim-v6-0055:segment-02",
+        "speaker": "patient",
+        "text": "Parei no mês passado."
+      }
+    ],
+    "gold": [
+      {
+        "surface": "enalapril",
+        "concept_id": "medication.enalapril",
+        "temporality": "past",
+        "experiencer": "patient",
+        "status": "discontinued",
+        "segment_ids": [
+          "sim-v6-0055:segment-01",
+          "sim-v6-0055:segment-02"
+        ],
+        "attribute_provenance": {
+          "concept": [
+            "sim-v6-0055:segment-01"
+          ],
+          "temporality": [
+            "sim-v6-0055:segment-02"
+          ],
+          "experiencer": [
+            "sim-v6-0055:segment-02"
+          ],
+          "status": [
+            "sim-v6-0055:segment-02"
+          ]
+        },
+        "relation_provenance": {
+          "temporality": [
+            "sim-v6-0055:segment-02"
+          ],
+          "experiencer": [
+            "sim-v6-0055:segment-02"
+          ],
+          "status": [
+            "sim-v6-0055:segment-01",
+            "sim-v6-0055:segment-02"
+          ]
+        }
+      }
+    ],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0056",
+    "language": "pt-BR",
+    "text": "Médico: Alguém da família tem diabetes?\nPaciente: Minha irmã tem.",
+    "review_status": "REVIEWED",
+    "decision": "APPROVED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "Cross-segment claro: diabetes é identificado na pergunta e o experiencer familiar é resolvido como irmã na resposta.",
+    "source_case_ids": [
+      "v6-micro-cross-segment-002"
+    ],
+    "source_error_types": [
+      "CROSS_SEGMENT_RESOLUTION"
+    ],
+    "provenance": {
+      "source_corpus": "v6-micro-expansion-gap-analysis",
+      "history_status": "family experiencer carry-over",
+      "candidate_text_sha256": "213d25f8f5367f8ec3dec6cae4f1cb6a24ba8137b8a1de0af85449208821e772",
+      "official_corpus_mutation": false
+    },
+    "segment_id": null,
+    "segments": [
+      {
+        "segment_id": "sim-v6-0056:segment-01",
+        "speaker": "clinician",
+        "text": "Alguém da família tem diabetes?"
+      },
+      {
+        "segment_id": "sim-v6-0056:segment-02",
+        "speaker": "patient",
+        "text": "Minha irmã tem."
+      }
+    ],
+    "gold": [
+      {
+        "surface": "diabetes",
+        "concept_id": "condition.diabetes",
+        "temporality": "current",
+        "experiencer": "family",
+        "segment_ids": [
+          "sim-v6-0056:segment-01",
+          "sim-v6-0056:segment-02"
+        ],
+        "attribute_provenance": {
+          "concept": [
+            "sim-v6-0056:segment-01"
+          ],
+          "temporality": [
+            "sim-v6-0056:segment-02"
+          ],
+          "experiencer": [
+            "sim-v6-0056:segment-02"
+          ]
+        },
+        "relation_provenance": {
+          "temporality": [
+            "sim-v6-0056:segment-02"
+          ],
+          "experiencer": [
+            "sim-v6-0056:segment-01",
+            "sim-v6-0056:segment-02"
+          ]
+        }
+      }
+    ],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0057",
+    "language": "pt-BR",
+    "text": "Médico: A dor voltou?\nPaciente: Só do lado esquerdo agora.",
+    "review_status": "REVIEWED",
+    "decision": "APPROVED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "Cross-segment claro: a mention 'dor' vem da pergunta; recorrência, lateralidade esquerda e temporalidade atual vêm da resposta.",
+    "source_case_ids": [
+      "v6-micro-cross-segment-003"
+    ],
+    "source_error_types": [
+      "CROSS_SEGMENT_RESOLUTION"
+    ],
+    "provenance": {
+      "source_corpus": "v6-micro-expansion-gap-analysis",
+      "history_status": "laterality carry-over",
+      "candidate_text_sha256": "3503be89a6bb90eb7590106399a2f3aa452acb5f4986f014276165dce6288643",
+      "official_corpus_mutation": false
+    },
+    "segment_id": null,
+    "segments": [
+      {
+        "segment_id": "sim-v6-0057:segment-01",
+        "speaker": "clinician",
+        "text": "A dor voltou?"
+      },
+      {
+        "segment_id": "sim-v6-0057:segment-02",
+        "speaker": "patient",
+        "text": "Só do lado esquerdo agora."
+      }
+    ],
+    "gold": [
+      {
+        "surface": "dor",
+        "concept_id": "symptom.pain",
+        "temporality": "current",
+        "experiencer": "patient",
+        "laterality": "left",
+        "status": "present",
+        "segment_ids": [
+          "sim-v6-0057:segment-01",
+          "sim-v6-0057:segment-02"
+        ],
+        "attribute_provenance": {
+          "concept": [
+            "sim-v6-0057:segment-01"
+          ],
+          "temporality": [
+            "sim-v6-0057:segment-02"
+          ],
+          "experiencer": [
+            "sim-v6-0057:segment-02"
+          ],
+          "laterality": [
+            "sim-v6-0057:segment-02"
+          ],
+          "status": [
+            "sim-v6-0057:segment-01",
+            "sim-v6-0057:segment-02"
+          ]
+        },
+        "relation_provenance": {
+          "temporality": [
+            "sim-v6-0057:segment-02"
+          ],
+          "experiencer": [
+            "sim-v6-0057:segment-02"
+          ],
+          "laterality": [
+            "sim-v6-0057:segment-02"
+          ],
+          "status": [
+            "sim-v6-0057:segment-01",
+            "sim-v6-0057:segment-02"
+          ]
+        }
+      }
+    ],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0058",
+    "language": "pt-BR",
+    "text": "Médico: Qual dose da metformina?\nPaciente: Aumentei para 850 mg ontem.",
+    "review_status": "REVIEWED",
+    "decision": "APPROVED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "Cross-segment claro: metformina é identificada na pergunta; dose atual de 850 mg e mudança temporal vêm da resposta. A dose anterior não é informada e não foi inventada.",
+    "source_case_ids": [
+      "v6-micro-cross-segment-004"
+    ],
+    "source_error_types": [
+      "CROSS_SEGMENT_RESOLUTION"
+    ],
+    "provenance": {
+      "source_corpus": "v6-micro-expansion-gap-analysis",
+      "history_status": "dose carry-over",
+      "candidate_text_sha256": "112bfa701787b7a4583a32adf7c2c458d241c93b95eb8b89201ed4c7380deedb",
+      "official_corpus_mutation": false
+    },
+    "segment_id": null,
+    "segments": [
+      {
+        "segment_id": "sim-v6-0058:segment-01",
+        "speaker": "clinician",
+        "text": "Qual dose da metformina?"
+      },
+      {
+        "segment_id": "sim-v6-0058:segment-02",
+        "speaker": "patient",
+        "text": "Aumentei para 850 mg ontem."
+      }
+    ],
+    "gold": [
+      {
+        "surface": "metformina",
+        "concept_id": "medication.metformin",
+        "temporality": "current",
+        "experiencer": "patient",
+        "dose": "850 mg",
+        "dose_value": "850",
+        "dose_unit": "mg",
+        "status": "active",
+        "segment_ids": [
+          "sim-v6-0058:segment-01",
+          "sim-v6-0058:segment-02"
+        ],
+        "attribute_provenance": {
+          "concept": [
+            "sim-v6-0058:segment-01"
+          ],
+          "temporality": [
+            "sim-v6-0058:segment-02"
+          ],
+          "experiencer": [
+            "sim-v6-0058:segment-02"
+          ],
+          "dose": [
+            "sim-v6-0058:segment-02"
+          ],
+          "dose_value": [
+            "sim-v6-0058:segment-02"
+          ],
+          "dose_unit": [
+            "sim-v6-0058:segment-02"
+          ],
+          "status": [
+            "sim-v6-0058:segment-01",
+            "sim-v6-0058:segment-02"
+          ]
+        },
+        "relation_provenance": {
+          "temporality": [
+            "sim-v6-0058:segment-02"
+          ],
+          "experiencer": [
+            "sim-v6-0058:segment-02"
+          ],
+          "dose": [
+            "sim-v6-0058:segment-02"
+          ],
+          "dose_value": [
+            "sim-v6-0058:segment-02"
+          ],
+          "dose_unit": [
+            "sim-v6-0058:segment-02"
+          ],
+          "status": [
+            "sim-v6-0058:segment-01",
+            "sim-v6-0058:segment-02"
+          ]
+        }
+      }
+    ],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  }
+]

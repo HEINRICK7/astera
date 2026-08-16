@@ -1,0 +1,1136 @@
+{
+  "case_id": "D3-025",
+  "corpus_checksum": "cef75b21b8eae6ec940b9f6cffe3d27fbe5b050db838569f3f19ef68434f1b0d",
+  "corpus_version": "D3",
+  "decisions": [],
+  "evaluation_id": "d3-one-shot-4c137795-99d1-4973-a98d-20eb89de0617",
+  "mismatches": [
+    {
+      "actual": true,
+      "confidence": 0.55,
+      "details": {
+        "mention": "amoxicilina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": false,
+      "policy_rules": [],
+      "semantic_dimension": "negated",
+      "stage": "prediction"
+    },
+    {
+      "actual": "current",
+      "confidence": 0.55,
+      "details": {
+        "mention": "amoxicilina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "past",
+      "policy_rules": [],
+      "semantic_dimension": "temporality",
+      "stage": "prediction"
+    },
+    {
+      "actual": "active",
+      "confidence": 0.55,
+      "details": {
+        "mention": "amoxicilina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": null,
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "d7dda54457cf896392e41edc8c259098b190c1c9bfa1ed82c6a1e5c7a46a59a7",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "2a439b1c878801b8f7e361808ec1c239f518b029b764334306b3ceb7bdd9605c",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "812f49e617cb7a4189e38eb2490db104021c7fbb211f4ed4757fab2c13ac05b2",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "h1",
+            "speaker": "patient",
+            "text": "Usei amoxicilina no inverno passado."
+          },
+          {
+            "segment_id": "h2",
+            "speaker": "patient",
+            "text": "Hoje não estou usando antibiótico."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-025",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "af1c01b8724472b480394866d1038609baa2380bbdcd851c0a0a971c3e89c3d0",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "812f49e617cb7a4189e38eb2490db104021c7fbb211f4ed4757fab2c13ac05b2",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "250bea9b96380c9d919b7366ca857ea0cc96176ca5f8391096f4c26d0dabda6e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "amoxicilina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "aaca4d331a8ebafef22e460c69585fb052c636f65ed76daf8fa6c242365ec63b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "amoxicilina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "cc62dce2827bf054342c90024be015636fbb48fa1ea1ad05f8c282068b2831c0",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "amoxicilina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "948064b23eecf16944dc4c9cac26b570c49f135d0953cfee7a0ee65ec9e4f44d",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:h1",
+            "owner_segment_id": "h1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "h1"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:h1",
+            "owner_segment_id": "h1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "h1"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:h1",
+            "owner_segment_id": "h1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "h2"
+            ]
+          },
+          "status": {
+            "owner_mention_id": "context:h1",
+            "owner_segment_id": "h1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "h2"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:h1",
+            "owner_segment_id": "h1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "h2"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "76c2ccede987d9f69df1918c0a9aa30ac1569805fbabf4cbda366dd3e6f76ca0",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "948064b23eecf16944dc4c9cac26b570c49f135d0953cfee7a0ee65ec9e4f44d",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "ddca5391dbab67d5cc1bb14aa1af63f66b1ffdd028b57690bbb8bba02a98d79c",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "04fb2c441ea5d69f62810913849fdeabf2dce4748d039d45efafaddceaa3b003",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "negated": [
+              "h2"
+            ],
+            "status": [
+              "h2"
+            ],
+            "temporality": [
+              "h2"
+            ]
+          },
+          "candidate_source": "h1",
+          "owner_mention_id": "context:h1",
+          "owner_type": null,
+          "source_segment_ids": [
+            "h1"
+          ],
+          "transition_evidence": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Usei amoxicilina no inverno passado.\\npatient: Hoje não estou usando antibiótico.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:h1:5:16', 'owner_span': (5, 16), 'source_evidence_id': 'context:h1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('h1',), 'candidate_source': 'h1', 'owner_type': None, 'owner_mention_id': 'context:h1', 'attribute_provenance': {'status': ['h2'], 'temporality': ['h2'], 'negated': ['h2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h2',)}, 'certainty': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}, 'temporality': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h2',)}, 'experiencer': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}, 'status': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h2',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 275, 'resolver_decisions_preserved': 239, 'resolver_decisions_overwritten': 36, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'h1', 'conversation_segment_ids': ['h2']}",
+            "relations": [],
+            "surface": "amoxicilina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "7dffac5c31a800b154a5d45f2275739251c70a6c02aa1e91daf99fcb79f026f7",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "amoxicilina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "04fb2c441ea5d69f62810913849fdeabf2dce4748d039d45efafaddceaa3b003",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "dfbf2ceb6f5cba084f5c1a2714300635715b37009aa7e3848d18ff3a6e03cb2e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h2"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "amoxicilina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": true,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "835fc1061f37ff8c1a1da11001271eed4602fdb7350f734eb99bd5af77458671",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Usei amoxicilina no inverno passado.\\npatient: Hoje não estou usando antibiótico.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:h1:5:16', 'owner_span': (5, 16), 'source_evidence_id': 'context:h1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('h1',), 'candidate_source': 'h1', 'owner_type': None, 'owner_mention_id': 'context:h1', 'attribute_provenance': {'status': ['h2'], 'temporality': ['h2'], 'negated': ['h2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h2',)}, 'certainty': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}, 'temporality': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h2',)}, 'experiencer': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}, 'status': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h2',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 275, 'resolver_decisions_preserved': 239, 'resolver_decisions_overwritten': 36, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'h1', 'conversation_segment_ids': ['h2']}",
+            "relations": [],
+            "surface": "amoxicilina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "e0924575d426bdc2865bfb4e3a894baa816461cd895271c711c15e9ed1433236",
+      "changed_fields": [
+        "negated",
+        "status",
+        "temporality"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "835fc1061f37ff8c1a1da11001271eed4602fdb7350f734eb99bd5af77458671",
+      "output_hash": "835fc1061f37ff8c1a1da11001271eed4602fdb7350f734eb99bd5af77458671",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Usei amoxicilina no inverno passado.\\npatient: Hoje não estou usando antibiótico.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:h1:5:16', 'owner_span': (5, 16), 'source_evidence_id': 'context:h1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('h1',), 'candidate_source': 'h1', 'owner_type': None, 'owner_mention_id': 'context:h1', 'attribute_provenance': {'status': ['h2'], 'temporality': ['h2'], 'negated': ['h2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h2',)}, 'certainty': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}, 'temporality': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h2',)}, 'experiencer': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}, 'status': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h2',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 275, 'resolver_decisions_preserved': 239, 'resolver_decisions_overwritten': 36, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'h1', 'conversation_segment_ids': ['h2']}",
+            "relations": [],
+            "surface": "amoxicilina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "63a7c4e80726af9eef08c948cb18fd167b9ea2fdc3da7ec0c1c3ffb71cb071f4",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "835fc1061f37ff8c1a1da11001271eed4602fdb7350f734eb99bd5af77458671",
+      "output_hash": "c2abe774f0b349da5ee1eee8f0962b72271cd058cc616868c537f9b8381a08b8",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "temporality": [
+                "h1"
+              ]
+            },
+            "concept_id": "medication.amoxicillin",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "h1"
+            ],
+            "surface": "amoxicilina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-025",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "b7af22c5231aac21b47d715e86f9c2cf936472992ba6a44599b02779bc1f35f2",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "c2abe774f0b349da5ee1eee8f0962b72271cd058cc616868c537f9b8381a08b8",
+      "output_hash": "3d653d0b3e839e209b931b4b0420c0f7eacc1a764590380ae300ef2a75a548a1",
+      "payload": {
+        "case_id": "D3-025",
+        "mismatch_count": 3
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-025",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

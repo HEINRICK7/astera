@@ -1,0 +1,7 @@
+aws_region          = "us-east-1"
+cluster_name        = "astera-production"
+kubernetes_version  = "1.30"
+private_subnet_ids  = ["subnet-REPLACE_ME_1", "subnet-REPLACE_ME_2"]
+cluster_role_arn    = "arn:aws:iam::ACCOUNT_ID:role/astera-eks-control-plane"
+node_role_arn      = "arn:aws:iam::ACCOUNT_ID:role/astera-eks-nodes"
+node_instance_types = ["t3.medium"]

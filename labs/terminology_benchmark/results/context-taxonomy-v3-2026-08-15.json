@@ -1,0 +1,424 @@
+{
+  "status": "executed",
+  "corpus": "pt_br_clinical_semantics_v3",
+  "report": {
+    "provider": "hybrid-medspacy+niede-pt-br",
+    "detection": {
+      "mode": "gold_span_queries",
+      "measured": false,
+      "errors": 0,
+      "note": "Mention boundaries are fixed by the corpus; this report isolates composition."
+    },
+    "composition": {
+      "mention_total": 95,
+      "mention_exact_match": 1.0,
+      "cases_total": 80,
+      "cases_with_errors": 0,
+      "error_counts": {},
+      "cooccurrences": {},
+      "case_classifications": [
+        {
+          "case_id": "neg-001",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "neg-002",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "neg-003",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "neg-004",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "neg-005",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "neg-006",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "neg-007",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "neg-008",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "neg-009",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "neg-010",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "neg-011",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "neg-012",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "certainty-001",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "certainty-002",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "certainty-003",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "certainty-004",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "certainty-005",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "certainty-006",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "certainty-007",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "certainty-008",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "certainty-009",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "certainty-010",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "temporal-001",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "temporal-002",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "temporal-003",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "temporal-004",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "temporal-005",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "temporal-006",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "temporal-007",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "temporal-008",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "temporal-009",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "temporal-010",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "experiencer-001",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "experiencer-002",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "experiencer-003",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "experiencer-004",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "experiencer-005",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "experiencer-006",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "experiencer-007",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "experiencer-008",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-001",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-002",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-003",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-004",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-005",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-006",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-007",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-008",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-009",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-010",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-011",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-012",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-013",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-014",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-015",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "dose-016",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-001",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-002",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-003",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-004",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-005",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-006",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-007",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-008",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-009",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-010",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-011",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-012",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-013",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-014",
+          "mention_count": 3,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-015",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-016",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-017",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-018",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-019",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-020",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-021",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-022",
+          "mention_count": 2,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-023",
+          "mention_count": 1,
+          "error_types": []
+        },
+        {
+          "case_id": "compound-024",
+          "mention_count": 1,
+          "error_types": []
+        }
+      ],
+      "details": []
+    }
+  }
+}

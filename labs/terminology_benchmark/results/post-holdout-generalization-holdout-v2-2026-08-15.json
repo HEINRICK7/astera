@@ -1,0 +1,660 @@
+{
+  "status": "executed_once",
+  "run_count": 1,
+  "holdout_kind": "NEW_UNSEEN_POST_REPAIR_V2",
+  "policy": "clinical-semantic-policy-v1.2",
+  "freeze_manifest": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/post-holdout-generalization-repair-freeze-2026-08-15.json",
+  "source": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/post_holdout_generalization_holdout_v2.json",
+  "source_sha256": "3b19e79cfa77d1a1a0bcc2ad5ad02249984a59cb5e6504d0c3882662397179d9",
+  "old_holdouts": {
+    "ids": [
+      "sim-v6-0056",
+      "sim-v6-0057",
+      "sim-v6-0058"
+    ],
+    "consumed": true,
+    "rerun": false,
+    "used_for_approval": false
+  },
+  "cases": [
+    {
+      "case_id": "post-v6-v2-001",
+      "text": "Médico: A queimação melhorou?\nPaciente: Hoje está só na perna direita.",
+      "mentions": [
+        {
+          "surface": "queimação",
+          "concept_id": "symptom.burning",
+          "fields": {
+            "negated": {
+              "expected": false,
+              "actual": false,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "certainty": {
+              "expected": "confirmed",
+              "actual": "confirmed",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "temporality": {
+              "expected": "current",
+              "actual": "current",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "experiencer": {
+              "expected": "patient",
+              "actual": "patient",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "laterality": {
+              "expected": "right",
+              "actual": "right",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose_value": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose_unit": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "frequency": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "route": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "status": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            }
+          },
+          "mention_exact": true,
+          "relations_expected": [
+            [
+              "HAS_LATERALITY",
+              "laterality",
+              "right"
+            ]
+          ],
+          "relations_actual": [
+            [
+              "HAS_LATERALITY",
+              "laterality",
+              "right"
+            ]
+          ],
+          "relation_exact": true,
+          "attribute_ownership": true,
+          "provenance": true,
+          "temporal_ownership": true,
+          "event_temporality": null
+        }
+      ],
+      "case_pass": true
+    },
+    {
+      "case_id": "post-v6-v2-002",
+      "text": "Médico: Qual é a dose da sertralina?\nPaciente: Ajustei para 75 mg hoje.",
+      "mentions": [
+        {
+          "surface": "sertralina",
+          "concept_id": "medication.sertraline",
+          "fields": {
+            "negated": {
+              "expected": false,
+              "actual": false,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "certainty": {
+              "expected": "confirmed",
+              "actual": "confirmed",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "temporality": {
+              "expected": "current",
+              "actual": "current",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "experiencer": {
+              "expected": "patient",
+              "actual": "patient",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "laterality": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose": {
+              "expected": "75 mg",
+              "actual": "75 mg",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose_value": {
+              "expected": "75",
+              "actual": "75",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose_unit": {
+              "expected": "mg",
+              "actual": "mg",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "frequency": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "route": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "status": {
+              "expected": "active",
+              "actual": "active",
+              "match": true,
+              "excluded_from_policy_gate": false
+            }
+          },
+          "mention_exact": true,
+          "relations_expected": [
+            [
+              "HAS_DOSE",
+              "dose",
+              "75 mg"
+            ]
+          ],
+          "relations_actual": [
+            [
+              "HAS_DOSE",
+              "dose",
+              "75 mg"
+            ]
+          ],
+          "relation_exact": true,
+          "attribute_ownership": true,
+          "provenance": true,
+          "temporal_ownership": true,
+          "event_temporality": null
+        }
+      ],
+      "case_pass": true
+    },
+    {
+      "case_id": "post-v6-v2-003",
+      "text": "Médico: Como está o atenolol?\nPaciente: Reduzi para 25 mg na semana passada.",
+      "mentions": [
+        {
+          "surface": "atenolol",
+          "concept_id": "medication.atenolol",
+          "fields": {
+            "negated": {
+              "expected": false,
+              "actual": false,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "certainty": {
+              "expected": "confirmed",
+              "actual": "confirmed",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "temporality": {
+              "expected": "current",
+              "actual": "current",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "experiencer": {
+              "expected": "patient",
+              "actual": "patient",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "laterality": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose": {
+              "expected": "25 mg",
+              "actual": "25 mg",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose_value": {
+              "expected": "25",
+              "actual": "25",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose_unit": {
+              "expected": "mg",
+              "actual": "mg",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "frequency": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "route": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "status": {
+              "expected": "active",
+              "actual": "active",
+              "match": true,
+              "excluded_from_policy_gate": false
+            }
+          },
+          "mention_exact": true,
+          "relations_expected": [
+            [
+              "HAS_DOSE",
+              "dose",
+              "25 mg"
+            ]
+          ],
+          "relations_actual": [
+            [
+              "HAS_DOSE",
+              "dose",
+              "25 mg"
+            ]
+          ],
+          "relation_exact": true,
+          "attribute_ownership": true,
+          "provenance": true,
+          "temporal_ownership": true,
+          "event_temporality": {
+            "value": "past",
+            "owner": "dose_change_event",
+            "source_segment_ids": [
+              "post-v6-v2-003:segment-02"
+            ]
+          }
+        }
+      ],
+      "case_pass": true
+    },
+    {
+      "case_id": "post-v6-v2-004",
+      "text": "Médico: Quem tem enxaqueca na família?\nPaciente: Meu irmão tem.",
+      "mentions": [
+        {
+          "surface": "enxaqueca",
+          "concept_id": "condition.migraine",
+          "fields": {
+            "negated": {
+              "expected": false,
+              "actual": false,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "certainty": {
+              "expected": "confirmed",
+              "actual": "confirmed",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "temporality": {
+              "expected": "current",
+              "actual": "current",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "experiencer": {
+              "expected": "family",
+              "actual": "family",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "laterality": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose_value": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose_unit": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "frequency": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "route": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "status": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            }
+          },
+          "mention_exact": true,
+          "relations_expected": [],
+          "relations_actual": [],
+          "relation_exact": true,
+          "attribute_ownership": true,
+          "provenance": true,
+          "temporal_ownership": true,
+          "event_temporality": null
+        }
+      ],
+      "case_pass": true
+    },
+    {
+      "case_id": "post-v6-v2-005",
+      "text": "Médico: Você ainda usa amlodipino?\nPaciente: Não, suspendi no mês passado.",
+      "mentions": [
+        {
+          "surface": "amlodipino",
+          "concept_id": "medication.amlodipine",
+          "fields": {
+            "negated": {
+              "expected": false,
+              "actual": false,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "certainty": {
+              "expected": "confirmed",
+              "actual": "confirmed",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "temporality": {
+              "expected": "past",
+              "actual": "past",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "experiencer": {
+              "expected": "patient",
+              "actual": "patient",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "laterality": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose_value": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose_unit": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "frequency": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "route": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "status": {
+              "expected": "discontinued",
+              "actual": "discontinued",
+              "match": true,
+              "excluded_from_policy_gate": false
+            }
+          },
+          "mention_exact": true,
+          "relations_expected": [
+            [
+              "DISCONTINUED_AT",
+              "status",
+              "discontinued"
+            ]
+          ],
+          "relations_actual": [
+            [
+              "DISCONTINUED_AT",
+              "status",
+              "discontinued"
+            ]
+          ],
+          "relation_exact": true,
+          "attribute_ownership": true,
+          "provenance": true,
+          "temporal_ownership": true,
+          "event_temporality": null
+        }
+      ],
+      "case_pass": true
+    },
+    {
+      "case_id": "post-v6-v2-006",
+      "text": "Médico: Com que frequência usa a levotiroxina?\nPaciente: Uma vez pela manhã.",
+      "mentions": [
+        {
+          "surface": "levotiroxina",
+          "concept_id": "medication.levothyroxine",
+          "fields": {
+            "negated": {
+              "expected": false,
+              "actual": false,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "certainty": {
+              "expected": "confirmed",
+              "actual": "confirmed",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "temporality": {
+              "expected": "current",
+              "actual": "current",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "experiencer": {
+              "expected": "patient",
+              "actual": "patient",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "laterality": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose_value": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "dose_unit": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "frequency": {
+              "expected": "pela manhã",
+              "actual": "pela manhã",
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "route": {
+              "expected": null,
+              "actual": null,
+              "match": true,
+              "excluded_from_policy_gate": false
+            },
+            "status": {
+              "expected": "active",
+              "actual": "active",
+              "match": true,
+              "excluded_from_policy_gate": false
+            }
+          },
+          "mention_exact": true,
+          "relations_expected": [
+            [
+              "HAS_FREQUENCY",
+              "frequency",
+              "pela manhã"
+            ]
+          ],
+          "relations_actual": [
+            [
+              "HAS_FREQUENCY",
+              "frequency",
+              "pela manhã"
+            ]
+          ],
+          "relation_exact": true,
+          "attribute_ownership": true,
+          "provenance": true,
+          "temporal_ownership": true,
+          "event_temporality": null
+        }
+      ],
+      "case_pass": true
+    }
+  ],
+  "aggregate": {
+    "cases_total": 6,
+    "mentions_total": 6,
+    "relations_total": 5,
+    "metrics": {
+      "mention_exact_match": 1.0,
+      "relation_exact_match": 1.0,
+      "cross_segment_resolution": 1.0,
+      "attribute_ownership": 1.0,
+      "provenance_contract_rate": 1.0,
+      "temporal_ownership_accuracy": 1.0,
+      "status": 1.0,
+      "temporality": 1.0,
+      "experiencer": 1.0,
+      "laterality": 1.0,
+      "dose": 1.0,
+      "frequency": 1.0
+    },
+    "field_totals": {
+      "negated": 6,
+      "certainty": 6,
+      "temporality": 6,
+      "experiencer": 6,
+      "laterality": 6,
+      "dose": 6,
+      "dose_value": 6,
+      "dose_unit": 6,
+      "frequency": 6,
+      "route": 6,
+      "status": 6
+    },
+    "field_matches": {
+      "negated": 6,
+      "certainty": 6,
+      "temporality": 6,
+      "experiencer": 6,
+      "laterality": 6,
+      "dose": 6,
+      "dose_value": 6,
+      "dose_unit": 6,
+      "frequency": 6,
+      "route": 6,
+      "status": 6
+    }
+  },
+  "policy_aligned_holdout_pass": true,
+  "repair_after_holdout_v2": false,
+  "v7": "AUTHORIZED_ONLY_IF_NEW_HOLDOUT_V2_PASS",
+  "shadow_integration": "BLOCKED",
+  "production": "BLOCKED",
+  "next_action": "V7_FOUNDATION"
+}

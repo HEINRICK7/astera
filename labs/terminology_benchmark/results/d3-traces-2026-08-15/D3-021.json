@@ -1,0 +1,1563 @@
+{
+  "case_id": "D3-021",
+  "corpus_checksum": "cef75b21b8eae6ec940b9f6cffe3d27fbe5b050db838569f3f19ef68434f1b0d",
+  "corpus_version": "D3",
+  "decisions": [],
+  "evaluation_id": "d3-one-shot-4c137795-99d1-4973-a98d-20eb89de0617",
+  "mismatches": [
+    {
+      "actual": "21 mg",
+      "confidence": 0.55,
+      "details": {
+        "mention": "adesivo de nicotina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "14 mg",
+      "policy_rules": [
+        "ptbr-dose",
+        "ptbr-active-medication-context"
+      ],
+      "semantic_dimension": "dose",
+      "stage": "prediction"
+    },
+    {
+      "actual": "21",
+      "confidence": 0.55,
+      "details": {
+        "mention": "adesivo de nicotina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "14",
+      "policy_rules": [
+        "ptbr-dose",
+        "ptbr-active-medication-context"
+      ],
+      "semantic_dimension": "dose_value",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "21 mg"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "adesivo de nicotina",
+        "relation_output_count": 1
+      },
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "21 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "14 mg"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "d7dda54457cf896392e41edc8c259098b190c1c9bfa1ed82c6a1e5c7a46a59a7",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "c05eb55b94e2f0c36aa2828e27fa624b6be70a6d14cc622a66ecd9709690ef34",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "32ff7c98faf0e83d99a56a9d22709383673ceb6bd18c9f37f82ab60d33137d53",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "t1",
+            "speaker": "clinician",
+            "text": "O adesivo de nicotina estava em 21 mg."
+          },
+          {
+            "segment_id": "t2",
+            "speaker": "patient",
+            "text": "Na semana seguinte, ficou em 14 mg."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-021",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "6d51f9d82d1f1ed89e7f071329b29e7072025380452c7b17572be64c5ca454dc",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "32ff7c98faf0e83d99a56a9d22709383673ceb6bd18c9f37f82ab60d33137d53",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "8dd98c4ff4ece8b1c6252407e81a246db0d38a2ba5a38b25c1d8e8ffc5f2f625",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "adesivo de nicotina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "21 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "21 mg",
+            "dose_unit": "mg",
+            "dose_value": "21",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:13:32:CHANGED_FROM:dose:21 mg",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "21 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "21 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "beed05c4db8c410fa2f18e60b6e9769f585883047a292cecc3f29ac0900d5db6",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "adesivo de nicotina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "21 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "21 mg",
+            "dose_unit": "mg",
+            "dose_value": "21",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:13:32:CHANGED_FROM:dose:21 mg",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "21 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "21 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "a5fd3368999771a5f7e5e3f8da2a9c623ed9fac7a022efed8983a83b633033e6",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "adesivo de nicotina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "21 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "21 mg",
+            "dose_unit": "mg",
+            "dose_value": "21",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:13:32:CHANGED_FROM:dose:21 mg",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "21 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "21 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "4625295fa9f4cdeaf7270f655fef1369892f8a5dca8eede4e290ca53882a329e",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "dose": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "dose_unit": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "dose_value": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "status": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "9839a13df941d1f1a7809d80c008aebfa39fbff52cde4dda191ac2ff71511af3",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "4625295fa9f4cdeaf7270f655fef1369892f8a5dca8eede4e290ca53882a329e",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "e61aaa98644587b2775649aa5180a46d999583da0602dadfabe662ff98f91e08",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "5aa1ad14cb52bd2724d3b9013102d976c7e2bfdd72a9cea071ffaefe70ca37cc",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "attribute_provenance": {},
+          "candidate_source": "t1",
+          "owner_mention_id": "context:t1",
+          "owner_type": null,
+          "source_segment_ids": [
+            "t1"
+          ],
+          "transition_attribute_ownership": {
+            "dose": {
+              "current": "21 mg",
+              "owner_mention_id": "context:t1:13:32",
+              "previous": "21 mg",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "transition_evidence": [
+            {
+              "provenance": {
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:13:32:CHANGED_FROM:dose:21 mg",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1:13:32",
+              "source_mention_id": "context:t1:13:32",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "dose",
+              "target_mention_id": null,
+              "value": "21 mg"
+            }
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: O adesivo de nicotina estava em 21 mg.\\npatient: Na semana seguinte, ficou em 14 mg.', 'rules': ('ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:2:21', 'owner_span': (2, 21), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [{'relation_type': 'HAS_DOSE', 'source': 'context:t1:2:21', 'target': 'dose', 'value': '21 mg', 'provenance': {'rule': 'ptbr-dose'}}], 'projection': {'relations': [{'relation_id': 'context:t1:13:32:CHANGED_FROM:dose:21 mg', 'relation_type': 'CHANGED_FROM', 'source': 'context:t1', 'target': 'dose', 'value': '21 mg', 'source_mention_id': 'context:t1', 'target_mention_id': 'dose', 'source_segment_ids': ['t1'], 'confidence': 1.0, 'provenance': {'source_segment_ids': ('t1',), 'rule': 'clinical-relation-compiler-v1'}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': None, 'owner_mention_id': 'context:t1', 'attribute_provenance': {}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'dose': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'dose_value': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'dose_unit': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'status': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}}, 'transition_evidence': [{'relation_type': 'CHANGED_FROM', 'source': 'context:t1:13:32', 'target': 'dose', 'value': '21 mg', 'relation_id': 'context:t1:13:32:CHANGED_FROM:dose:21 mg', 'source_mention_id': 'context:t1:13:32', 'target_mention_id': None, 'source_segment_ids': ['t1'], 'provenance': {'source_segment_ids': ('t1',)}}], 'transition_attribute_ownership': {'dose': {'current': '21 mg', 'previous': '21 mg', 'owner_mention_id': 'context:t1:13:32', 'source_segment_ids': ('t1',)}}}, 'authority_metrics': {'resolver_decisions_total': 231, 'resolver_decisions_preserved': 199, 'resolver_decisions_overwritten': 32, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t2']}",
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "21 mg"
+              }
+            ],
+            "surface": "adesivo de nicotina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "ce24e867a910c16d44ed2439683b363d356888db9c1764d01831b8e181606217",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        },
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "adesivo de nicotina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "21 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "21 mg",
+            "dose_unit": "mg",
+            "dose_value": "21",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:13:32:CHANGED_FROM:dose:21 mg",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "21 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "21 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        }
+      },
+      "input_hash": "5aa1ad14cb52bd2724d3b9013102d976c7e2bfdd72a9cea071ffaefe70ca37cc",
+      "output_hash": "41e5c19714b7bfb7410eb67b745c46abbc809e70253d1132884fb6f6fffe8e82",
+      "payload": {
+        "relations": [
+          [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "21 mg"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "fa6627f562c55d1e58482199f85a19f53dab5ac7e406258f901363ee5bf22150",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "adesivo de nicotina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "21 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "21 mg",
+            "dose_unit": "mg",
+            "dose_value": "21",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:13:32:CHANGED_FROM:dose:21 mg",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "21 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "21 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "41e5c19714b7bfb7410eb67b745c46abbc809e70253d1132884fb6f6fffe8e82",
+      "output_hash": "b0bfeb385bbfbcea6352a6f354106db581c5026de8485e9502e9adb0e5a12bc6",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: O adesivo de nicotina estava em 21 mg.\\npatient: Na semana seguinte, ficou em 14 mg.', 'rules': ('ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:2:21', 'owner_span': (2, 21), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [{'relation_type': 'HAS_DOSE', 'source': 'context:t1:2:21', 'target': 'dose', 'value': '21 mg', 'provenance': {'rule': 'ptbr-dose'}}], 'projection': {'relations': [{'relation_id': 'context:t1:13:32:CHANGED_FROM:dose:21 mg', 'relation_type': 'CHANGED_FROM', 'source': 'context:t1', 'target': 'dose', 'value': '21 mg', 'source_mention_id': 'context:t1', 'target_mention_id': 'dose', 'source_segment_ids': ['t1'], 'confidence': 1.0, 'provenance': {'source_segment_ids': ('t1',), 'rule': 'clinical-relation-compiler-v1'}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': None, 'owner_mention_id': 'context:t1', 'attribute_provenance': {}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'dose': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'dose_value': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'dose_unit': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'status': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}}, 'transition_evidence': [{'relation_type': 'CHANGED_FROM', 'source': 'context:t1:13:32', 'target': 'dose', 'value': '21 mg', 'relation_id': 'context:t1:13:32:CHANGED_FROM:dose:21 mg', 'source_mention_id': 'context:t1:13:32', 'target_mention_id': None, 'source_segment_ids': ['t1'], 'provenance': {'source_segment_ids': ('t1',)}}], 'transition_attribute_ownership': {'dose': {'current': '21 mg', 'previous': '21 mg', 'owner_mention_id': 'context:t1:13:32', 'source_segment_ids': ('t1',)}}}, 'authority_metrics': {'resolver_decisions_total': 231, 'resolver_decisions_preserved': 199, 'resolver_decisions_overwritten': 32, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t2']}",
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "21 mg"
+              }
+            ],
+            "surface": "adesivo de nicotina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "7314659e94a5b3bbb9a18cfb3bcc8c8621bd6ac2657776ffe4d902f816bc2e6f",
+      "changed_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "b0bfeb385bbfbcea6352a6f354106db581c5026de8485e9502e9adb0e5a12bc6",
+      "output_hash": "b0bfeb385bbfbcea6352a6f354106db581c5026de8485e9502e9adb0e5a12bc6",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "21 mg",
+              "dose_unit": "mg",
+              "dose_value": "21",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: O adesivo de nicotina estava em 21 mg.\\npatient: Na semana seguinte, ficou em 14 mg.', 'rules': ('ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:2:21', 'owner_span': (2, 21), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [{'relation_type': 'HAS_DOSE', 'source': 'context:t1:2:21', 'target': 'dose', 'value': '21 mg', 'provenance': {'rule': 'ptbr-dose'}}], 'projection': {'relations': [{'relation_id': 'context:t1:13:32:CHANGED_FROM:dose:21 mg', 'relation_type': 'CHANGED_FROM', 'source': 'context:t1', 'target': 'dose', 'value': '21 mg', 'source_mention_id': 'context:t1', 'target_mention_id': 'dose', 'source_segment_ids': ['t1'], 'confidence': 1.0, 'provenance': {'source_segment_ids': ('t1',), 'rule': 'clinical-relation-compiler-v1'}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': None, 'owner_mention_id': 'context:t1', 'attribute_provenance': {}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'dose': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'dose_value': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'dose_unit': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'status': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}}, 'transition_evidence': [{'relation_type': 'CHANGED_FROM', 'source': 'context:t1:13:32', 'target': 'dose', 'value': '21 mg', 'relation_id': 'context:t1:13:32:CHANGED_FROM:dose:21 mg', 'source_mention_id': 'context:t1:13:32', 'target_mention_id': None, 'source_segment_ids': ['t1'], 'provenance': {'source_segment_ids': ('t1',)}}], 'transition_attribute_ownership': {'dose': {'current': '21 mg', 'previous': '21 mg', 'owner_mention_id': 'context:t1:13:32', 'source_segment_ids': ('t1',)}}}, 'authority_metrics': {'resolver_decisions_total': 231, 'resolver_decisions_preserved': 199, 'resolver_decisions_overwritten': 32, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t2']}",
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "21 mg"
+              }
+            ],
+            "surface": "adesivo de nicotina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "2d0193401304ff60a2453690fff1964be216f420f8f4a38fdfd0746597334086",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "b0bfeb385bbfbcea6352a6f354106db581c5026de8485e9502e9adb0e5a12bc6",
+      "output_hash": "13dbc22e396cfe82d29f4ac94e1c9dc18af9afa9bf33dc32e7a6052577249634",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "dose": [
+                "t2"
+              ],
+              "dose_unit": [
+                "t2"
+              ],
+              "dose_value": [
+                "t2"
+              ],
+              "status": [
+                "t2"
+              ]
+            },
+            "concept_id": "medication.nicotine_patch",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "14 mg",
+              "dose_unit": "mg",
+              "dose_value": "14",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "CHANGED_FROM": [
+                "t2"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "21 mg"
+              },
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "14 mg"
+              }
+            ],
+            "segment_ids": [
+              "t1",
+              "t2"
+            ],
+            "surface": "adesivo de nicotina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-021",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "2d7073f5ccb6aabb153a1b5d95b2f1c69a401a8aee936060e5ab3990a5e70d36",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "13dbc22e396cfe82d29f4ac94e1c9dc18af9afa9bf33dc32e7a6052577249634",
+      "output_hash": "12a350e364e15f20d4ebaba61fcb8a0f526ac06576a474e3040d232b6891275c",
+      "payload": {
+        "case_id": "D3-021",
+        "mismatch_count": 3
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-021",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

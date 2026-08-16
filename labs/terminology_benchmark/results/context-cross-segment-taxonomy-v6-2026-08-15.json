@@ -1,0 +1,48 @@
+{
+  "status": "diagnosed",
+  "corpus": "pt_br_clinical_semantics_v6",
+  "official_corpus": true,
+  "blind_run": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/context-validation-v6-blind-2026-08-15.json",
+  "taxonomy": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/context-taxonomy-v6-blind-2026-08-15.json",
+  "conversation_cases": 60,
+  "conversation_mentions": 124,
+  "cross_segment_gold_mentions": 6,
+  "cross_segment_resolution": 0.4596774193548387,
+  "speaker_attribution": 0.967741935483871,
+  "cross_segment_mismatch_fields": {
+    "temporality": 15,
+    "status": 46,
+    "negated": 8,
+    "experiencer": 4,
+    "frequency": 6,
+    "laterality": 8,
+    "dose": 2,
+    "dose_value": 2
+  },
+  "cross_segment_error_categories": {
+    "TEMPORAL_CARRY_OVER": 15,
+    "STATUS_CARRY_OVER": 46,
+    "NEGATION_CARRY_OVER": 8,
+    "EXPERIENCER_CARRY_OVER": 4,
+    "LOCAL_OR_COMPOSITION_ERROR": 6,
+    "LATERALITY_CARRY_OVER": 8,
+    "DOSE_CARRY_OVER": 4
+  },
+  "cases_by_error_category": {
+    "NEGATION_CARRY_OVER": 8,
+    "STATUS_CARRY_OVER": 32,
+    "TEMPORAL_CARRY_OVER": 12,
+    "EXPERIENCER_CARRY_OVER": 4,
+    "LOCAL_OR_COMPOSITION_ERROR": 6,
+    "LATERALITY_CARRY_OVER": 8,
+    "DOSE_CARRY_OVER": 2
+  },
+  "cases_with_cross_segment_errors": 46,
+  "diagnostic_only": true,
+  "repair_applied": false,
+  "holdout_ids_excluded": [
+    "sim-v6-0056",
+    "sim-v6-0057",
+    "sim-v6-0058"
+  ]
+}

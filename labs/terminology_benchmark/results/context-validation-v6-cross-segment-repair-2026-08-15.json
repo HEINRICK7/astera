@@ -1,0 +1,51 @@
+{
+  "status": "executed",
+  "run_type": "v6-cross-segment-repair",
+  "corpus": "pt_br_clinical_semantics_v6",
+  "official_corpus": true,
+  "official_corpus_sha256": "1721ad71b7ef92c20a06fa9cae956098fefad0e079f92464d67f1bf9255a3f10",
+  "blind_baseline_path": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/context-validation-v6-blind-2026-08-15.json",
+  "diagnostic_path": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/context-cross-segment-taxonomy-v6-2026-08-15.json",
+  "repair_scope": "generalized cross-segment continuity resolver",
+  "case_specific_rules": false,
+  "canonical_evidence_mutated": false,
+  "holdout_ids_excluded": [
+    "sim-v6-0056",
+    "sim-v6-0057",
+    "sim-v6-0058"
+  ],
+  "shadow_integration": false,
+  "production_promotion": false,
+  "repair_applied": true,
+  "baseline": {
+    "mention_exact_match": 0.7215568862275449,
+    "relation_exact_match": 0.7441860465116279,
+    "scope_accuracy": 0.9634730538922156,
+    "cross_mention_isolation": 0.5766423357664233,
+    "cross_segment_resolution": 0.4596774193548387,
+    "speaker_attribution": 0.967741935483871,
+    "provenance": 1.0,
+    "hard_gate_passed": false
+  },
+  "repaired": {
+    "mention_exact_match": 0.7694610778443114,
+    "relation_exact_match": 0.7441860465116279,
+    "scope_accuracy": 0.974251497005988,
+    "cross_mention_isolation": 0.6204379562043796,
+    "cross_segment_resolution": 0.5887096774193549,
+    "speaker_attribution": 0.9919354838709677,
+    "provenance": 1.0,
+    "hard_gate_passed": false
+  },
+  "delta": {
+    "mention_exact_match": 0.04790419161676651,
+    "relation_exact_match": 0.0,
+    "scope_accuracy": 0.010778443113772407,
+    "cross_mention_isolation": 0.04379562043795626,
+    "cross_segment_resolution": 0.12903225806451618,
+    "speaker_attribution": 0.024193548387096753,
+    "provenance": 0.0
+  },
+  "v6_pass_authorizes_holdout": false,
+  "next_action": "repair-analysis-required"
+}

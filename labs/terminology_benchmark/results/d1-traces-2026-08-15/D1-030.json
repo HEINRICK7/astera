@@ -1,0 +1,482 @@
+{
+  "case_id": "D1-030",
+  "corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "corpus_version": "D1",
+  "decisions": [],
+  "evaluation_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "mismatches": [
+    {
+      "actual": "past",
+      "confidence": 0.55,
+      "details": {
+        "mention": "adesivo",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": "current",
+      "policy_rules": [],
+      "semantic_dimension": "temporality",
+      "stage": "prediction"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "bb629c1c53afbb6d83b23b8484c128112f1b7e9fe6e87f1e24c360017ce30c1f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": null,
+      "output_hash": "8dbc54d7f952b4f602b42891817f5b2892cfcab455fcb2bfdacd95a23ad634e0",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "clinician",
+            "text": "Você ainda usa o adesivo?"
+          },
+          {
+            "segment_id": "s2",
+            "speaker": "patient",
+            "text": "Parei."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-030",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "87849b7bc278af6efdae65f8f15bb7a2bad35e901ee89fe971829d6324f486c7",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "8dbc54d7f952b4f602b42891817f5b2892cfcab455fcb2bfdacd95a23ad634e0",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "9a6c2b322e74ab2b2f24bc666043ddc4ae06ee4ddcde99a343fa2b4b79ecac15",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "f472c88279c05f1456ef6eec671ab5abad30239253ac8fe24424b0614367630d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "95727dd4ee5cd607ed0d1c0a420ac4bb129e1fdc8436b6751c41d8787b0e7859",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "8b20354ccd908e3d8b085571a7df5713bad2ccadfcd9b573bd4bba82917f47ea",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "0aea7d80651d8c327c86ff9fc54dd8df484d4a4b3dc65208f2dff0623bb8b8f4",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "8256da6984db8d3e506a6d8507156b572c605946ffb702075af7563257943493",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            }
+          },
+          "candidate_source": "s1",
+          "source_segment_ids": [
+            "s1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: Você ainda usa o adesivo?\\npatient: Parei.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:17:24', 'owner_span': (17, 24), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:17:24', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': None, 'relation_type': 'DISCONTINUED_AT', 'source': 'context:s1', 'target': 'status', 'value': 'discontinued', 'source_mention_id': 'context:s1', 'target_mention_id': 'status', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'cross-segment-discontinued-status', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 407, 'resolver_decisions_preserved': 377, 'resolver_decisions_overwritten': 30, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "rule": "cross-segment-discontinued-status",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": null,
+                "relation_type": "DISCONTINUED_AT",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "status",
+                "target_mention_id": "status",
+                "value": "discontinued"
+              }
+            ],
+            "surface": "adesivo"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "f88c6eb75a3441f0c259aff05f850e0289562d024fe836835dec132bb796e549",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "8256da6984db8d3e506a6d8507156b572c605946ffb702075af7563257943493",
+      "output_hash": "f616cf5ea46282abdc8913cad3a86045f6307bf31237c65bd6ac800e4667ca84",
+      "payload": {
+        "relations": [
+          [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "cross-segment-discontinued-status",
+                "source_segment_ids": [
+                  "s2"
+                ]
+              },
+              "relation_id": null,
+              "relation_type": "DISCONTINUED_AT",
+              "source": "context:s1",
+              "source_mention_id": "context:s1",
+              "source_segment_ids": [
+                "s2"
+              ],
+              "target": "status",
+              "target_mention_id": "status",
+              "value": "discontinued"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "4b92350559fa81a67b209c2d572226564270d07b7e9d79a800bf200888b62a39",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "f616cf5ea46282abdc8913cad3a86045f6307bf31237c65bd6ac800e4667ca84",
+      "output_hash": "ec740f2a9ccd8a1c71576668ea58b7c631789529dbd2a693812a5efd390d820d",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: Você ainda usa o adesivo?\\npatient: Parei.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:17:24', 'owner_span': (17, 24), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:17:24', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': None, 'relation_type': 'DISCONTINUED_AT', 'source': 'context:s1', 'target': 'status', 'value': 'discontinued', 'source_mention_id': 'context:s1', 'target_mention_id': 'status', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'cross-segment-discontinued-status', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 407, 'resolver_decisions_preserved': 377, 'resolver_decisions_overwritten': 30, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "rule": "cross-segment-discontinued-status",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": null,
+                "relation_type": "DISCONTINUED_AT",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "status",
+                "target_mention_id": "status",
+                "value": "discontinued"
+              }
+            ],
+            "surface": "adesivo"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "72aae0356f56a37324db626dca64574e214daddb29f29d416237575b046c2326",
+      "changed_fields": [
+        "temporality"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "ec740f2a9ccd8a1c71576668ea58b7c631789529dbd2a693812a5efd390d820d",
+      "output_hash": "ec740f2a9ccd8a1c71576668ea58b7c631789529dbd2a693812a5efd390d820d",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "past"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: Você ainda usa o adesivo?\\npatient: Parei.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:17:24', 'owner_span': (17, 24), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:17:24', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': None, 'relation_type': 'DISCONTINUED_AT', 'source': 'context:s1', 'target': 'status', 'value': 'discontinued', 'source_mention_id': 'context:s1', 'target_mention_id': 'status', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'cross-segment-discontinued-status', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 407, 'resolver_decisions_preserved': 377, 'resolver_decisions_overwritten': 30, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "rule": "cross-segment-discontinued-status",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": null,
+                "relation_type": "DISCONTINUED_AT",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "status",
+                "target_mention_id": "status",
+                "value": "discontinued"
+              }
+            ],
+            "surface": "adesivo"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "8b2725a3613eaad6586cdb45d52294b8143c6f44a271fb0f90d8bb303cf2d208",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "ec740f2a9ccd8a1c71576668ea58b7c631789529dbd2a693812a5efd390d820d",
+      "output_hash": "a0e80c82a79ba186f10e9b950c092c3c6e4f32feb873d5408ebe2a4a71548b7c",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "status": [
+                "s2"
+              ],
+              "temporality": [
+                "s2"
+              ]
+            },
+            "concept_id": "medication.patch",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "discontinued",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "DISCONTINUED_AT": [
+                "s2"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "DISCONTINUED_AT",
+                "target": "status",
+                "value": "discontinued"
+              },
+              {
+                "relation_type": "DISCONTINUED_AT",
+                "target": "status",
+                "value": "discontinued"
+              }
+            ],
+            "segment_ids": [
+              "s1",
+              "s2"
+            ],
+            "surface": "adesivo"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-030",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "970ccf5dd902020b7b47457db94064a843417f97871a483fdf04579b7fc83004",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a0e80c82a79ba186f10e9b950c092c3c6e4f32feb873d5408ebe2a4a71548b7c",
+      "output_hash": "5ba4ba24c75eeb8fb747c4fc5e7cded28207fb14134a93a1cb5a5b796705b2f0",
+      "payload": {
+        "case_id": "D1-030"
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-030",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v1"
+}

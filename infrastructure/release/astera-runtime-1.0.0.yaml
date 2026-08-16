@@ -1,0 +1,28 @@
+apiVersion: astera.io/v1
+kind: Release
+metadata:
+  name: astera-runtime-1-0-0
+  labels:
+    app.kubernetes.io/part-of: astera
+spec:
+  version: 1.0.0
+  channel: stable
+  source_candidate: 1.0.0-rc.1
+  image:
+    repository: ghcr.io/astera/astera-runtime
+    tag: 1.0.0
+  helm:
+    chart: infrastructure/helm/astera
+    version: 0.1.0
+  clinical_flow:
+    login: validated
+    patient: validated
+    encounter: validated
+    speech: validated
+    evidence: validated
+    knowledge: validated
+    soap: validated
+    save: validated
+  promotion:
+    strategy: blue-green
+    rollback: helm-revision

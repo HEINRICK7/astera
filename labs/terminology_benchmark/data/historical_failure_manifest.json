@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "status": "historical-summary-only",
+  "note": "Initial-run summaries guide candidate generation; they are not gold annotations and do not replace the repaired taxonomy reports.",
+  "corpora": {
+    "pt_br_clinical_semantics_v3": {
+      "error_types": [
+        "MULTI_MENTION_COLLISION",
+        "DOSE_ATTACHMENT",
+        "NEGATION_SCOPE",
+        "TEMPORAL_SCOPE",
+        "FAMILY_EXPERIENCER_SCOPE"
+      ]
+    },
+    "pt_br_clinical_semantics_v4": {
+      "error_types": [
+        "MULTI_MENTION_COLLISION",
+        "DOSE_ATTACHMENT",
+        "TEMPORAL_SCOPE",
+        "NEGATION_SCOPE",
+        "STATUS_CONFLICT",
+        "FAMILY_EXPERIENCER_SCOPE",
+        "LATERALITY_ATTACHMENT"
+      ]
+    },
+    "pt_br_clinical_semantics_v5": {
+      "error_types": [
+        "MULTI_MENTION_COLLISION",
+        "DOSE_ATTACHMENT",
+        "TEMPORAL_SCOPE",
+        "NEGATION_SCOPE",
+        "STATUS_CONFLICT",
+        "FAMILY_EXPERIENCER_SCOPE",
+        "LATERALITY_ATTACHMENT"
+      ]
+    }
+  }
+}

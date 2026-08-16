@@ -1,0 +1,1410 @@
+{
+  "status": "executed",
+  "run_type": "v6-repair-v2",
+  "official_corpus": true,
+  "official_corpus_sha256": "1721ad71b7ef92c20a06fa9cae956098fefad0e079f92464d67f1bf9255a3f10",
+  "repair_version": "v2",
+  "components": [
+    "CrossSegmentContextState",
+    "ClinicalReferenceResolver",
+    "ClinicalAttributeAttachmentResolver",
+    "ClinicalRelationResolver",
+    "ContextLifetimePolicy",
+    "AmbiguityPolicy"
+  ],
+  "baseline_path": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/context-validation-v6-blind-2026-08-15.json",
+  "v1_path": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/context-validation-v6-cross-segment-repair-2026-08-15.json",
+  "v2": {
+    "mention_exact": 0.7754491017964071,
+    "relation_exact": 0.813953488372093,
+    "scope_accuracy": 0.9670658682634731,
+    "cross_mention_isolation": 0.6204379562043796,
+    "cross_segment": 0.6048387096774194,
+    "speaker": 0.9919354838709677,
+    "provenance": 1.0,
+    "hard_gate_passed": false
+  },
+  "baseline": {
+    "mention_exact": 0.7215568862275449,
+    "relation_exact": 0.7441860465116279,
+    "scope_accuracy": 0.9634730538922156,
+    "cross_mention_isolation": 0.5766423357664233,
+    "cross_segment": 0.4596774193548387,
+    "speaker": 0.967741935483871,
+    "provenance": 1.0,
+    "hard_gate_passed": false
+  },
+  "v1": {
+    "mention_exact_match": 0.7694610778443114,
+    "relation_exact_match": 0.7441860465116279,
+    "scope_accuracy": 0.974251497005988,
+    "cross_mention_isolation": 0.6204379562043796,
+    "cross_segment_resolution": 0.5887096774193549,
+    "speaker_attribution": 0.9919354838709677,
+    "provenance": 1.0,
+    "hard_gate_passed": false
+  },
+  "improved_cases": [
+    "sim-v6-0001",
+    "sim-v6-0002",
+    "sim-v6-0015",
+    "sim-v6-0018",
+    "sim-v6-0019",
+    "sim-v6-0049",
+    "sim-v6-0054",
+    "sim-v6-0055",
+    "v6-c-001-1",
+    "v6-c-001-2",
+    "v6-c-001-3",
+    "v6-c-003-1",
+    "v6-c-003-2",
+    "v6-c-003-3"
+  ],
+  "unchanged_cases": [
+    "sim-v6-0003",
+    "sim-v6-0005",
+    "sim-v6-0006",
+    "sim-v6-0007",
+    "sim-v6-0008",
+    "sim-v6-0009",
+    "sim-v6-0010",
+    "sim-v6-0013",
+    "sim-v6-0014",
+    "sim-v6-0016",
+    "sim-v6-0017",
+    "sim-v6-0020",
+    "sim-v6-0021",
+    "sim-v6-0023",
+    "sim-v6-0024",
+    "sim-v6-0025",
+    "sim-v6-0026",
+    "sim-v6-0027",
+    "sim-v6-0028",
+    "sim-v6-0029",
+    "sim-v6-0030",
+    "sim-v6-0031",
+    "sim-v6-0032",
+    "sim-v6-0033",
+    "sim-v6-0034",
+    "sim-v6-0035",
+    "sim-v6-0036",
+    "sim-v6-0037",
+    "sim-v6-0038",
+    "sim-v6-0039",
+    "sim-v6-0040",
+    "sim-v6-0041",
+    "sim-v6-0042",
+    "sim-v6-0048",
+    "sim-v6-0050",
+    "sim-v6-0051",
+    "sim-v6-0053",
+    "v6-c-002-1",
+    "v6-c-002-2",
+    "v6-c-002-3",
+    "v6-c-004-1",
+    "v6-c-004-2",
+    "v6-c-004-3",
+    "v6-c-005-1",
+    "v6-c-005-2",
+    "v6-c-005-3",
+    "v6-i-001",
+    "v6-i-002",
+    "v6-i-003",
+    "v6-i-004",
+    "v6-i-005",
+    "v6-i-006",
+    "v6-i-007",
+    "v6-i-008",
+    "v6-i-009",
+    "v6-i-010",
+    "v6-i-011",
+    "v6-i-012",
+    "v6-i-013",
+    "v6-i-014",
+    "v6-i-015",
+    "v6-i-016",
+    "v6-i-017",
+    "v6-i-018",
+    "v6-i-019",
+    "v6-i-020",
+    "v6-i-021",
+    "v6-i-022",
+    "v6-i-023",
+    "v6-i-024",
+    "v6-i-025",
+    "v6-i-026",
+    "v6-i-027",
+    "v6-i-028",
+    "v6-i-029",
+    "v6-i-030",
+    "v6-i-031",
+    "v6-i-032",
+    "v6-i-033",
+    "v6-i-034",
+    "v6-i-035",
+    "v6-i-036",
+    "v6-i-037",
+    "v6-i-038",
+    "v6-i-039",
+    "v6-i-040",
+    "v6-i-041",
+    "v6-i-042",
+    "v6-i-043",
+    "v6-i-044",
+    "v6-i-045",
+    "v6-i-046",
+    "v6-i-047",
+    "v6-i-048",
+    "v6-i-049",
+    "v6-i-050",
+    "v6-i-051",
+    "v6-i-052",
+    "v6-i-053",
+    "v6-i-054",
+    "v6-i-055",
+    "v6-i-056",
+    "v6-i-057",
+    "v6-i-058",
+    "v6-i-059",
+    "v6-i-060",
+    "v6-r-001-1",
+    "v6-r-001-2",
+    "v6-r-001-3",
+    "v6-r-002-1",
+    "v6-r-002-2",
+    "v6-r-002-3",
+    "v6-r-003-1",
+    "v6-r-003-2",
+    "v6-r-003-3",
+    "v6-r-004-1",
+    "v6-r-004-2",
+    "v6-r-004-3",
+    "v6-r-005-1",
+    "v6-r-005-2",
+    "v6-r-005-3",
+    "v6-r-006-1",
+    "v6-r-006-2",
+    "v6-r-006-3",
+    "v6-r-007-1",
+    "v6-r-007-2",
+    "v6-r-007-3",
+    "v6-r-008-1",
+    "v6-r-008-2",
+    "v6-r-008-3",
+    "v6-r-009-1",
+    "v6-r-009-2",
+    "v6-r-009-3",
+    "v6-r-010-1",
+    "v6-r-010-2",
+    "v6-r-010-3"
+  ],
+  "regressed_cases": [],
+  "newly_broken_cases": [],
+  "case_outcomes": {
+    "v6-i-001": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-002": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-003": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-004": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-005": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-006": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-007": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-008": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-009": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-010": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-011": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-012": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-013": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-014": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-015": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-016": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-017": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-018": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-019": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-020": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-021": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-022": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-023": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-024": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-025": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-026": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-027": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-028": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-029": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-030": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-031": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-032": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-033": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-034": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-035": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-036": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-037": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-038": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-039": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-040": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "v6-i-041": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-042": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-043": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-044": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-045": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-046": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-047": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-048": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-049": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-050": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-051": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-052": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-053": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-054": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-055": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-056": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-057": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-058": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-059": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-i-060": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-001-1": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-001-2": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-001-3": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-002-1": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-002-2": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-002-3": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-003-1": {
+      "mention_exact": false,
+      "mention_matches": 2,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-003-2": {
+      "mention_exact": false,
+      "mention_matches": 2,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-003-3": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-004-1": {
+      "mention_exact": false,
+      "mention_matches": 2,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-004-2": {
+      "mention_exact": false,
+      "mention_matches": 2,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-004-3": {
+      "mention_exact": false,
+      "mention_matches": 2,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-005-1": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-005-2": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-005-3": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-006-1": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-006-2": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-006-3": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-007-1": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-007-2": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-007-3": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-008-1": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-008-2": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-008-3": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-009-1": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-009-2": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-009-3": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-010-1": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-010-2": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-r-010-3": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-c-001-1": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": false,
+      "relation_matches": 0,
+      "relation_total": 1
+    },
+    "v6-c-001-2": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": false,
+      "relation_matches": 0,
+      "relation_total": 1
+    },
+    "v6-c-001-3": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": false,
+      "relation_matches": 0,
+      "relation_total": 1
+    },
+    "v6-c-002-1": {
+      "mention_exact": false,
+      "mention_matches": 2,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-c-002-2": {
+      "mention_exact": false,
+      "mention_matches": 2,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-c-002-3": {
+      "mention_exact": false,
+      "mention_matches": 2,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-c-003-1": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 1,
+      "relation_total": 1
+    },
+    "v6-c-003-2": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 1,
+      "relation_total": 1
+    },
+    "v6-c-003-3": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 1,
+      "relation_total": 1
+    },
+    "v6-c-004-1": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-c-004-2": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-c-004-3": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-c-005-1": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-c-005-2": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "v6-c-005-3": {
+      "mention_exact": true,
+      "mention_matches": 3,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0001": {
+      "mention_exact": true,
+      "mention_matches": 1,
+      "mention_total": 1,
+      "relation_exact": true,
+      "relation_matches": 1,
+      "relation_total": 1
+    },
+    "sim-v6-0002": {
+      "mention_exact": true,
+      "mention_matches": 1,
+      "mention_total": 1,
+      "relation_exact": true,
+      "relation_matches": 1,
+      "relation_total": 1
+    },
+    "sim-v6-0003": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0005": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 2,
+      "relation_exact": false,
+      "relation_matches": 1,
+      "relation_total": 2
+    },
+    "sim-v6-0006": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "sim-v6-0007": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": false,
+      "relation_matches": 1,
+      "relation_total": 2
+    },
+    "sim-v6-0008": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "sim-v6-0009": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0010": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0013": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 1,
+      "relation_total": 1
+    },
+    "sim-v6-0014": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 2,
+      "relation_exact": false,
+      "relation_matches": 0,
+      "relation_total": 1
+    },
+    "sim-v6-0015": {
+      "mention_exact": true,
+      "mention_matches": 1,
+      "mention_total": 1,
+      "relation_exact": true,
+      "relation_matches": 1,
+      "relation_total": 1
+    },
+    "sim-v6-0016": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 1,
+      "relation_exact": false,
+      "relation_matches": 0,
+      "relation_total": 1
+    },
+    "sim-v6-0017": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 1,
+      "relation_exact": false,
+      "relation_matches": 0,
+      "relation_total": 1
+    },
+    "sim-v6-0018": {
+      "mention_exact": true,
+      "mention_matches": 1,
+      "mention_total": 1,
+      "relation_exact": true,
+      "relation_matches": 1,
+      "relation_total": 1
+    },
+    "sim-v6-0019": {
+      "mention_exact": true,
+      "mention_matches": 1,
+      "mention_total": 1,
+      "relation_exact": true,
+      "relation_matches": 1,
+      "relation_total": 1
+    },
+    "sim-v6-0020": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 1,
+      "relation_exact": false,
+      "relation_matches": 0,
+      "relation_total": 1
+    },
+    "sim-v6-0021": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0023": {
+      "mention_exact": true,
+      "mention_matches": 2,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0024": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0025": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0026": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0027": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 2,
+      "relation_exact": false,
+      "relation_matches": 1,
+      "relation_total": 2
+    },
+    "sim-v6-0028": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "sim-v6-0029": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 2,
+      "relation_exact": false,
+      "relation_matches": 1,
+      "relation_total": 2
+    },
+    "sim-v6-0030": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 2,
+      "relation_exact": false,
+      "relation_matches": 1,
+      "relation_total": 2
+    },
+    "sim-v6-0031": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "sim-v6-0032": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 2,
+      "relation_total": 2
+    },
+    "sim-v6-0033": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 2,
+      "relation_exact": false,
+      "relation_matches": 1,
+      "relation_total": 2
+    },
+    "sim-v6-0034": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 1,
+      "relation_total": 1
+    },
+    "sim-v6-0035": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 1,
+      "relation_total": 1
+    },
+    "sim-v6-0036": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 2,
+      "relation_exact": false,
+      "relation_matches": 1,
+      "relation_total": 2
+    },
+    "sim-v6-0037": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0038": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0039": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0040": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0041": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0042": {
+      "mention_exact": false,
+      "mention_matches": 2,
+      "mention_total": 3,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0048": {
+      "mention_exact": false,
+      "mention_matches": 0,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0049": {
+      "mention_exact": true,
+      "mention_matches": 1,
+      "mention_total": 1,
+      "relation_exact": false,
+      "relation_matches": 0,
+      "relation_total": 1
+    },
+    "sim-v6-0050": {
+      "mention_exact": true,
+      "mention_matches": 1,
+      "mention_total": 1,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0051": {
+      "mention_exact": false,
+      "mention_matches": 1,
+      "mention_total": 2,
+      "relation_exact": true,
+      "relation_matches": 1,
+      "relation_total": 1
+    },
+    "sim-v6-0053": {
+      "mention_exact": true,
+      "mention_matches": 1,
+      "mention_total": 1,
+      "relation_exact": true,
+      "relation_matches": 0,
+      "relation_total": 0
+    },
+    "sim-v6-0054": {
+      "mention_exact": true,
+      "mention_matches": 1,
+      "mention_total": 1,
+      "relation_exact": true,
+      "relation_matches": 1,
+      "relation_total": 1
+    },
+    "sim-v6-0055": {
+      "mention_exact": true,
+      "mention_matches": 1,
+      "mention_total": 1,
+      "relation_exact": false,
+      "relation_matches": 0,
+      "relation_total": 1
+    }
+  },
+  "provenance": 1.0,
+  "holdout_evaluation": "NOT_EXECUTED",
+  "shadow_integration": "BLOCKED",
+  "production_promotion": "BLOCKED",
+  "next_action": "HUMAN_GATE_V6_REPAIR_V2_FAIL"
+}

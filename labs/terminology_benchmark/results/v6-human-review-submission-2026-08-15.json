@@ -1,0 +1,378 @@
+[
+  {
+    "candidate_id": "sim-v6-0001",
+    "decision": "APPROVED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "Caso claro. Mudança explícita da dose e da frequência da metformina.",
+    "segment_id": "sim-v6-0001:segment-01",
+    "gold": [
+      {
+        "surface": "metformina",
+        "concept_id": "medication.metformin",
+        "temporality": "current",
+        "experiencer": "patient",
+        "dose": "850 mg",
+        "dose_value": "850",
+        "dose_unit": "mg",
+        "frequency": "no jantar",
+        "status": "active",
+        "relations": [
+          {"relation_type": "CHANGED_FROM", "target": "dose", "value": "500 mg"},
+          {"relation_type": "CHANGED_FROM", "target": "frequency", "value": "no almoço"}
+        ],
+        "segment_ids": ["sim-v6-0001:segment-01"],
+        "attribute_provenance": {
+          "concept": ["sim-v6-0001:segment-01"],
+          "temporality": ["sim-v6-0001:segment-01"],
+          "experiencer": ["sim-v6-0001:segment-01"],
+          "dose": ["sim-v6-0001:segment-01"],
+          "dose_value": ["sim-v6-0001:segment-01"],
+          "dose_unit": ["sim-v6-0001:segment-01"],
+          "frequency": ["sim-v6-0001:segment-01"],
+          "status": ["sim-v6-0001:segment-01"]
+        },
+        "relation_provenance": {
+          "temporality": ["sim-v6-0001:segment-01"],
+          "experiencer": ["sim-v6-0001:segment-01"],
+          "dose": ["sim-v6-0001:segment-01"],
+          "dose_value": ["sim-v6-0001:segment-01"],
+          "dose_unit": ["sim-v6-0001:segment-01"],
+          "frequency": ["sim-v6-0001:segment-01"],
+          "status": ["sim-v6-0001:segment-01"]
+        }
+      }
+    ]
+  },
+  {
+    "candidate_id": "sim-v6-0002",
+    "decision": "APPROVED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "Mudança de dose e frequência explicitamente descrita.",
+    "segment_id": "sim-v6-0002:segment-01",
+    "gold": [
+      {
+        "surface": "losartana",
+        "concept_id": "medication.losartan",
+        "temporality": "current",
+        "experiencer": "patient",
+        "dose": "50 mg",
+        "dose_value": "50",
+        "dose_unit": "mg",
+        "frequency": "depois do jantar",
+        "status": "active",
+        "relations": [
+          {"relation_type": "CHANGED_FROM", "target": "dose", "value": "25 mg"},
+          {"relation_type": "CHANGED_FROM", "target": "frequency", "value": "pela manhã"}
+        ],
+        "segment_ids": ["sim-v6-0002:segment-01"],
+        "attribute_provenance": {
+          "concept": ["sim-v6-0002:segment-01"],
+          "temporality": ["sim-v6-0002:segment-01"],
+          "experiencer": ["sim-v6-0002:segment-01"],
+          "dose": ["sim-v6-0002:segment-01"],
+          "dose_value": ["sim-v6-0002:segment-01"],
+          "dose_unit": ["sim-v6-0002:segment-01"],
+          "frequency": ["sim-v6-0002:segment-01"],
+          "status": ["sim-v6-0002:segment-01"]
+        },
+        "relation_provenance": {
+          "temporality": ["sim-v6-0002:segment-01"],
+          "experiencer": ["sim-v6-0002:segment-01"],
+          "dose": ["sim-v6-0002:segment-01"],
+          "dose_value": ["sim-v6-0002:segment-01"],
+          "dose_unit": ["sim-v6-0002:segment-01"],
+          "frequency": ["sim-v6-0002:segment-01"],
+          "status": ["sim-v6-0002:segment-01"]
+        }
+      }
+    ]
+  },
+  {
+    "candidate_id": "sim-v6-0003",
+    "decision": "APPROVED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "Diabetes da família e sintomas negados do paciente têm escopos distintos.",
+    "segment_id": "sim-v6-0003:segment-01",
+    "gold": [
+      {
+        "surface": "diabetes",
+        "concept_id": "condition.diabetes",
+        "temporality": "past",
+        "experiencer": "family",
+        "segment_ids": ["sim-v6-0003:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0003:segment-01"], "temporality": ["sim-v6-0003:segment-01"], "experiencer": ["sim-v6-0003:segment-01"]},
+        "relation_provenance": {"temporality": ["sim-v6-0003:segment-01"], "experiencer": ["sim-v6-0003:segment-01"]}
+      },
+      {
+        "surface": "sintomas",
+        "concept_id": "symptom.unspecified",
+        "negated": true,
+        "temporality": "current",
+        "experiencer": "patient",
+        "segment_ids": ["sim-v6-0003:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0003:segment-01"], "negated": ["sim-v6-0003:segment-01"], "temporality": ["sim-v6-0003:segment-01"], "experiencer": ["sim-v6-0003:segment-01"]},
+        "relation_provenance": {"negated": ["sim-v6-0003:segment-01"], "temporality": ["sim-v6-0003:segment-01"], "experiencer": ["sim-v6-0003:segment-01"]}
+      }
+    ]
+  },
+  {
+    "candidate_id": "sim-v6-0004",
+    "decision": "REJECTED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "Ambíguo: não é possível determinar com segurança o experiencer de asma antiga.",
+    "segment_id": "sim-v6-0004:segment-01",
+    "gold": []
+  },
+  {
+    "candidate_id": "sim-v6-0005",
+    "decision": "APPROVED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "Duas mentions com lateralidade e temporalidade isoladas.",
+    "segment_id": "sim-v6-0005:segment-01",
+    "gold": [
+      {
+        "surface": "dor",
+        "concept_id": "symptom.pain",
+        "temporality": "current",
+        "experiencer": "patient",
+        "laterality": "left",
+        "status": "present",
+        "segment_ids": ["sim-v6-0005:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0005:segment-01"], "temporality": ["sim-v6-0005:segment-01"], "experiencer": ["sim-v6-0005:segment-01"], "laterality": ["sim-v6-0005:segment-01"], "status": ["sim-v6-0005:segment-01"]},
+        "relation_provenance": {"temporality": ["sim-v6-0005:segment-01"], "experiencer": ["sim-v6-0005:segment-01"], "laterality": ["sim-v6-0005:segment-01"], "status": ["sim-v6-0005:segment-01"]}
+      },
+      {
+        "surface": "fraqueza",
+        "concept_id": "symptom.weakness",
+        "temporality": "current",
+        "experiencer": "patient",
+        "laterality": "right",
+        "status": "present",
+        "segment_ids": ["sim-v6-0005:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0005:segment-01"], "temporality": ["sim-v6-0005:segment-01"], "experiencer": ["sim-v6-0005:segment-01"], "laterality": ["sim-v6-0005:segment-01"], "status": ["sim-v6-0005:segment-01"]},
+        "relation_provenance": {"temporality": ["sim-v6-0005:segment-01"], "experiencer": ["sim-v6-0005:segment-01"], "laterality": ["sim-v6-0005:segment-01"], "status": ["sim-v6-0005:segment-01"]}
+      }
+    ]
+  },
+  {
+    "candidate_id": "sim-v6-0006",
+    "decision": "APPROVED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "Duas mentions independentes com attachment anatômico/lateral claro.",
+    "segment_id": "sim-v6-0006:segment-01",
+    "gold": [
+      {
+        "surface": "formigamento",
+        "concept_id": "symptom.paresthesia",
+        "experiencer": "patient",
+        "laterality": "right",
+        "status": "present",
+        "segment_ids": ["sim-v6-0006:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0006:segment-01"], "experiencer": ["sim-v6-0006:segment-01"], "laterality": ["sim-v6-0006:segment-01"], "status": ["sim-v6-0006:segment-01"]},
+        "relation_provenance": {"experiencer": ["sim-v6-0006:segment-01"], "laterality": ["sim-v6-0006:segment-01"], "status": ["sim-v6-0006:segment-01"]}
+      },
+      {
+        "surface": "dor",
+        "concept_id": "symptom.pain",
+        "temporality": "current",
+        "experiencer": "patient",
+        "laterality": "left",
+        "status": "present",
+        "segment_ids": ["sim-v6-0006:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0006:segment-01"], "temporality": ["sim-v6-0006:segment-01"], "experiencer": ["sim-v6-0006:segment-01"], "laterality": ["sim-v6-0006:segment-01"], "status": ["sim-v6-0006:segment-01"]},
+        "relation_provenance": {"temporality": ["sim-v6-0006:segment-01"], "experiencer": ["sim-v6-0006:segment-01"], "laterality": ["sim-v6-0006:segment-01"], "status": ["sim-v6-0006:segment-01"]}
+      }
+    ]
+  },
+  {
+    "candidate_id": "sim-v6-0007",
+    "decision": "APPROVED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "A negação e a lateralidade permanecem isoladas entre as duas mentions.",
+    "segment_id": "sim-v6-0007:segment-01",
+    "gold": [
+      {
+        "surface": "dor",
+        "concept_id": "symptom.pain",
+        "negated": true,
+        "experiencer": "patient",
+        "laterality": "left",
+        "segment_ids": ["sim-v6-0007:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0007:segment-01"], "negated": ["sim-v6-0007:segment-01"], "experiencer": ["sim-v6-0007:segment-01"], "laterality": ["sim-v6-0007:segment-01"]},
+        "relation_provenance": {"negated": ["sim-v6-0007:segment-01"], "experiencer": ["sim-v6-0007:segment-01"], "laterality": ["sim-v6-0007:segment-01"]}
+      },
+      {
+        "surface": "formigamento",
+        "concept_id": "symptom.paresthesia",
+        "temporality": "current",
+        "experiencer": "patient",
+        "laterality": "right",
+        "status": "present",
+        "segment_ids": ["sim-v6-0007:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0007:segment-01"], "temporality": ["sim-v6-0007:segment-01"], "experiencer": ["sim-v6-0007:segment-01"], "laterality": ["sim-v6-0007:segment-01"], "status": ["sim-v6-0007:segment-01"]},
+        "relation_provenance": {"temporality": ["sim-v6-0007:segment-01"], "experiencer": ["sim-v6-0007:segment-01"], "laterality": ["sim-v6-0007:segment-01"], "status": ["sim-v6-0007:segment-01"]}
+      }
+    ]
+  },
+  {
+    "candidate_id": "sim-v6-0008",
+    "decision": "APPROVED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "Duas mentions com localização/lateralidade distintas; o gatilho contextual não foi adicionado ao schema.",
+    "segment_id": "sim-v6-0008:segment-01",
+    "gold": [
+      {
+        "surface": "queimação",
+        "concept_id": "symptom.burning",
+        "experiencer": "patient",
+        "laterality": "right",
+        "status": "present",
+        "segment_ids": ["sim-v6-0008:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0008:segment-01"], "experiencer": ["sim-v6-0008:segment-01"], "laterality": ["sim-v6-0008:segment-01"], "status": ["sim-v6-0008:segment-01"]},
+        "relation_provenance": {"experiencer": ["sim-v6-0008:segment-01"], "laterality": ["sim-v6-0008:segment-01"], "status": ["sim-v6-0008:segment-01"]}
+      },
+      {
+        "surface": "dormência",
+        "concept_id": "symptom.numbness",
+        "temporality": "current",
+        "experiencer": "patient",
+        "laterality": "left",
+        "status": "present",
+        "segment_ids": ["sim-v6-0008:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0008:segment-01"], "temporality": ["sim-v6-0008:segment-01"], "experiencer": ["sim-v6-0008:segment-01"], "laterality": ["sim-v6-0008:segment-01"], "status": ["sim-v6-0008:segment-01"]},
+        "relation_provenance": {"temporality": ["sim-v6-0008:segment-01"], "experiencer": ["sim-v6-0008:segment-01"], "laterality": ["sim-v6-0008:segment-01"], "status": ["sim-v6-0008:segment-01"]}
+      }
+    ]
+  },
+  {
+    "candidate_id": "sim-v6-0009",
+    "decision": "APPROVED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "A negação da dor não se aplica à falta de ar.",
+    "segment_id": "sim-v6-0009:segment-01",
+    "gold": [
+      {
+        "surface": "dor",
+        "concept_id": "symptom.pain",
+        "negated": true,
+        "experiencer": "patient",
+        "segment_ids": ["sim-v6-0009:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0009:segment-01"], "negated": ["sim-v6-0009:segment-01"], "experiencer": ["sim-v6-0009:segment-01"]},
+        "relation_provenance": {"negated": ["sim-v6-0009:segment-01"], "experiencer": ["sim-v6-0009:segment-01"]}
+      },
+      {
+        "surface": "falta de ar",
+        "concept_id": "symptom.dyspnea",
+        "experiencer": "patient",
+        "status": "present",
+        "segment_ids": ["sim-v6-0009:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0009:segment-01"], "experiencer": ["sim-v6-0009:segment-01"], "status": ["sim-v6-0009:segment-01"]},
+        "relation_provenance": {"experiencer": ["sim-v6-0009:segment-01"], "status": ["sim-v6-0009:segment-01"]}
+      }
+    ]
+  },
+  {
+    "candidate_id": "sim-v6-0010",
+    "decision": "APPROVED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "Negação e temporalidade possuem escopos separados.",
+    "segment_id": "sim-v6-0010:segment-01",
+    "gold": [
+      {
+        "surface": "febre",
+        "concept_id": "symptom.fever",
+        "negated": true,
+        "temporality": "current",
+        "experiencer": "patient",
+        "segment_ids": ["sim-v6-0010:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0010:segment-01"], "negated": ["sim-v6-0010:segment-01"], "temporality": ["sim-v6-0010:segment-01"], "experiencer": ["sim-v6-0010:segment-01"]},
+        "relation_provenance": {"negated": ["sim-v6-0010:segment-01"], "temporality": ["sim-v6-0010:segment-01"], "experiencer": ["sim-v6-0010:segment-01"]}
+      },
+      {
+        "surface": "tosse seca",
+        "concept_id": "symptom.dry_cough",
+        "temporality": "current",
+        "experiencer": "patient",
+        "status": "present",
+        "segment_ids": ["sim-v6-0010:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0010:segment-01"], "temporality": ["sim-v6-0010:segment-01"], "experiencer": ["sim-v6-0010:segment-01"], "status": ["sim-v6-0010:segment-01"]},
+        "relation_provenance": {"temporality": ["sim-v6-0010:segment-01"], "experiencer": ["sim-v6-0010:segment-01"], "status": ["sim-v6-0010:segment-01"]}
+      }
+    ]
+  },
+  {
+    "candidate_id": "sim-v6-0011",
+    "decision": "REJECTED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "O medicamento não é identificado; não inventar medicamento ou concept_id.",
+    "segment_id": "sim-v6-0011:segment-01",
+    "gold": []
+  },
+  {
+    "candidate_id": "sim-v6-0012",
+    "decision": "REJECTED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "A medicação não é identificada e a dose habitual não informa valor ou unidade.",
+    "segment_id": "sim-v6-0012:segment-01",
+    "gold": []
+  },
+  {
+    "candidate_id": "sim-v6-0013",
+    "decision": "APPROVED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "Evento cirúrgico histórico e sintoma atual têm temporalidades separadas.",
+    "segment_id": "sim-v6-0013:segment-01",
+    "gold": [
+      {
+        "surface": "cirurgia",
+        "concept_id": "procedure.surgery",
+        "temporality": "past",
+        "experiencer": "patient",
+        "segment_ids": ["sim-v6-0013:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0013:segment-01"], "temporality": ["sim-v6-0013:segment-01"], "experiencer": ["sim-v6-0013:segment-01"]},
+        "relation_provenance": {"temporality": ["sim-v6-0013:segment-01"], "experiencer": ["sim-v6-0013:segment-01"]}
+      },
+      {
+        "surface": "peso",
+        "concept_id": "symptom.heaviness",
+        "temporality": "current",
+        "experiencer": "patient",
+        "laterality": "left",
+        "status": "present",
+        "segment_ids": ["sim-v6-0013:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0013:segment-01"], "temporality": ["sim-v6-0013:segment-01"], "experiencer": ["sim-v6-0013:segment-01"], "laterality": ["sim-v6-0013:segment-01"], "status": ["sim-v6-0013:segment-01"]},
+        "relation_provenance": {"temporality": ["sim-v6-0013:segment-01"], "experiencer": ["sim-v6-0013:segment-01"], "laterality": ["sim-v6-0013:segment-01"], "status": ["sim-v6-0013:segment-01"]}
+      }
+    ]
+  },
+  {
+    "candidate_id": "sim-v6-0014",
+    "decision": "APPROVED",
+    "reviewer": "Carlos Henrique",
+    "review_notes": "Duas mentions com temporalidades diferentes; a lateralidade pertence apenas à dormência.",
+    "segment_id": "sim-v6-0014:segment-01",
+    "gold": [
+      {
+        "surface": "dor",
+        "concept_id": "symptom.pain",
+        "temporality": "past",
+        "experiencer": "patient",
+        "status": "historical",
+        "segment_ids": ["sim-v6-0014:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0014:segment-01"], "temporality": ["sim-v6-0014:segment-01"], "experiencer": ["sim-v6-0014:segment-01"], "status": ["sim-v6-0014:segment-01"]},
+        "relation_provenance": {"temporality": ["sim-v6-0014:segment-01"], "experiencer": ["sim-v6-0014:segment-01"], "status": ["sim-v6-0014:segment-01"]}
+      },
+      {
+        "surface": "dormência",
+        "concept_id": "symptom.numbness",
+        "temporality": "current",
+        "experiencer": "patient",
+        "laterality": "right",
+        "status": "present",
+        "segment_ids": ["sim-v6-0014:segment-01"],
+        "attribute_provenance": {"concept": ["sim-v6-0014:segment-01"], "temporality": ["sim-v6-0014:segment-01"], "experiencer": ["sim-v6-0014:segment-01"], "laterality": ["sim-v6-0014:segment-01"], "status": ["sim-v6-0014:segment-01"]},
+        "relation_provenance": {"temporality": ["sim-v6-0014:segment-01"], "experiencer": ["sim-v6-0014:segment-01"], "laterality": ["sim-v6-0014:segment-01"], "status": ["sim-v6-0014:segment-01"]}
+      }
+    ]
+  }
+]

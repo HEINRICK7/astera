@@ -1,0 +1,533 @@
+{
+  "status": "executed_once",
+  "run_count": 1,
+  "freeze_manifest": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v6-repair-v6-freeze-2026-08-15.json",
+  "policy": "clinical-semantic-policy-v1.2",
+  "holdout_ids": [
+    "sim-v6-0056",
+    "sim-v6-0057",
+    "sim-v6-0058"
+  ],
+  "holdout_source_sha256": "efca8f8a858e26ae5960dc8fa5a6f695f4d4c1993aca6501d0a4c96e342adbee",
+  "raw_result_recorded_before_policy_analysis": true,
+  "cases": [
+    {
+      "case_id": "sim-v6-0056",
+      "text": "Médico: Alguém da família tem diabetes?\nPaciente: Minha irmã tem.",
+      "mentions": [
+        {
+          "surface": "diabetes",
+          "concept_id": "condition.diabetes",
+          "raw": {
+            "fields": {
+              "negated": {
+                "expected": false,
+                "actual": false,
+                "match": true
+              },
+              "certainty": {
+                "expected": "confirmed",
+                "actual": "confirmed",
+                "match": true
+              },
+              "temporality": {
+                "expected": "current",
+                "actual": "current",
+                "match": true
+              },
+              "experiencer": {
+                "expected": "family",
+                "actual": "family",
+                "match": true
+              },
+              "laterality": {
+                "expected": null,
+                "actual": null,
+                "match": true
+              },
+              "dose": {
+                "expected": null,
+                "actual": null,
+                "match": true
+              },
+              "dose_value": {
+                "expected": null,
+                "actual": null,
+                "match": true
+              },
+              "dose_unit": {
+                "expected": null,
+                "actual": null,
+                "match": true
+              },
+              "frequency": {
+                "expected": null,
+                "actual": null,
+                "match": true
+              },
+              "route": {
+                "expected": null,
+                "actual": null,
+                "match": true
+              },
+              "status": {
+                "expected": null,
+                "actual": null,
+                "match": true
+              }
+            },
+            "mention_exact": true,
+            "relations_expected": [],
+            "relations_actual": [],
+            "relation_exact": true,
+            "attribute_ownership": true,
+            "provenance": false
+          },
+          "policy_aligned": {
+            "fields": {
+              "negated": {
+                "expected": false,
+                "actual": false,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "certainty": {
+                "expected": "confirmed",
+                "actual": "confirmed",
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "temporality": {
+                "expected": "current",
+                "actual": "current",
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "experiencer": {
+                "expected": "family",
+                "actual": "family",
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "laterality": {
+                "expected": null,
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "dose": {
+                "expected": null,
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "dose_value": {
+                "expected": null,
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "dose_unit": {
+                "expected": null,
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "frequency": {
+                "expected": null,
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "route": {
+                "expected": null,
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "status": {
+                "expected": null,
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": false
+              }
+            },
+            "mention_exact": true,
+            "relations_expected": [],
+            "relations_actual": [],
+            "relation_exact": true,
+            "attribute_ownership": true,
+            "provenance": false,
+            "status_excluded_from_policy_gate": false
+          }
+        }
+      ],
+      "raw_case_pass": true,
+      "policy_aligned_case_pass": true
+    },
+    {
+      "case_id": "sim-v6-0057",
+      "text": "Médico: A dor voltou?\nPaciente: Só do lado esquerdo agora.",
+      "mentions": [
+        {
+          "surface": "dor",
+          "concept_id": "symptom.pain",
+          "raw": {
+            "fields": {
+              "negated": {
+                "expected": false,
+                "actual": false,
+                "match": true
+              },
+              "certainty": {
+                "expected": "confirmed",
+                "actual": "confirmed",
+                "match": true
+              },
+              "temporality": {
+                "expected": "current",
+                "actual": "current",
+                "match": true
+              },
+              "experiencer": {
+                "expected": "patient",
+                "actual": "patient",
+                "match": true
+              },
+              "laterality": {
+                "expected": "left",
+                "actual": "left",
+                "match": true
+              },
+              "dose": {
+                "expected": null,
+                "actual": null,
+                "match": true
+              },
+              "dose_value": {
+                "expected": null,
+                "actual": null,
+                "match": true
+              },
+              "dose_unit": {
+                "expected": null,
+                "actual": null,
+                "match": true
+              },
+              "frequency": {
+                "expected": null,
+                "actual": null,
+                "match": true
+              },
+              "route": {
+                "expected": null,
+                "actual": null,
+                "match": true
+              },
+              "status": {
+                "expected": "present",
+                "actual": null,
+                "match": false
+              }
+            },
+            "mention_exact": false,
+            "relations_expected": [
+              [
+                "HAS_LATERALITY",
+                "laterality",
+                "left"
+              ]
+            ],
+            "relations_actual": [],
+            "relation_exact": false,
+            "attribute_ownership": true,
+            "provenance": false
+          },
+          "policy_aligned": {
+            "fields": {
+              "negated": {
+                "expected": false,
+                "actual": false,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "certainty": {
+                "expected": "confirmed",
+                "actual": "confirmed",
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "temporality": {
+                "expected": "current",
+                "actual": "current",
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "experiencer": {
+                "expected": "patient",
+                "actual": "patient",
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "laterality": {
+                "expected": "left",
+                "actual": "left",
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "dose": {
+                "expected": null,
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "dose_value": {
+                "expected": null,
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "dose_unit": {
+                "expected": null,
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "frequency": {
+                "expected": null,
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "route": {
+                "expected": null,
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "status": {
+                "expected": "present",
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": true
+              }
+            },
+            "mention_exact": true,
+            "relations_expected": [
+              [
+                "HAS_LATERALITY",
+                "laterality",
+                "left"
+              ]
+            ],
+            "relations_actual": [],
+            "relation_exact": false,
+            "attribute_ownership": true,
+            "provenance": false,
+            "status_excluded_from_policy_gate": true
+          }
+        }
+      ],
+      "raw_case_pass": false,
+      "policy_aligned_case_pass": true
+    },
+    {
+      "case_id": "sim-v6-0058",
+      "text": "Médico: Qual dose da metformina?\nPaciente: Aumentei para 850 mg ontem.",
+      "mentions": [
+        {
+          "surface": "metformina",
+          "concept_id": "medication.metformin",
+          "raw": {
+            "fields": {
+              "negated": {
+                "expected": false,
+                "actual": false,
+                "match": true
+              },
+              "certainty": {
+                "expected": "confirmed",
+                "actual": "confirmed",
+                "match": true
+              },
+              "temporality": {
+                "expected": "current",
+                "actual": "past",
+                "match": false
+              },
+              "experiencer": {
+                "expected": "patient",
+                "actual": "patient",
+                "match": true
+              },
+              "laterality": {
+                "expected": null,
+                "actual": null,
+                "match": true
+              },
+              "dose": {
+                "expected": "850 mg",
+                "actual": "850 mg",
+                "match": true
+              },
+              "dose_value": {
+                "expected": "850",
+                "actual": "850",
+                "match": true
+              },
+              "dose_unit": {
+                "expected": "mg",
+                "actual": "mg",
+                "match": true
+              },
+              "frequency": {
+                "expected": null,
+                "actual": null,
+                "match": true
+              },
+              "route": {
+                "expected": null,
+                "actual": null,
+                "match": true
+              },
+              "status": {
+                "expected": "active",
+                "actual": "active",
+                "match": true
+              }
+            },
+            "mention_exact": false,
+            "relations_expected": [
+              [
+                "HAS_DOSE",
+                "dose",
+                "850 mg"
+              ]
+            ],
+            "relations_actual": [],
+            "relation_exact": false,
+            "attribute_ownership": true,
+            "provenance": false
+          },
+          "policy_aligned": {
+            "fields": {
+              "negated": {
+                "expected": false,
+                "actual": false,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "certainty": {
+                "expected": "confirmed",
+                "actual": "confirmed",
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "temporality": {
+                "expected": "current",
+                "actual": "past",
+                "match": false,
+                "excluded_from_policy_gate": false
+              },
+              "experiencer": {
+                "expected": "patient",
+                "actual": "patient",
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "laterality": {
+                "expected": null,
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "dose": {
+                "expected": "850 mg",
+                "actual": "850 mg",
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "dose_value": {
+                "expected": "850",
+                "actual": "850",
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "dose_unit": {
+                "expected": "mg",
+                "actual": "mg",
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "frequency": {
+                "expected": null,
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "route": {
+                "expected": null,
+                "actual": null,
+                "match": true,
+                "excluded_from_policy_gate": false
+              },
+              "status": {
+                "expected": "active",
+                "actual": "active",
+                "match": true,
+                "excluded_from_policy_gate": false
+              }
+            },
+            "mention_exact": false,
+            "relations_expected": [
+              [
+                "HAS_DOSE",
+                "dose",
+                "850 mg"
+              ]
+            ],
+            "relations_actual": [],
+            "relation_exact": false,
+            "attribute_ownership": true,
+            "provenance": false,
+            "status_excluded_from_policy_gate": false
+          }
+        }
+      ],
+      "raw_case_pass": false,
+      "policy_aligned_case_pass": false
+    }
+  ],
+  "aggregate": {
+    "cases_total": 3,
+    "mentions_total": 3,
+    "raw_mentions_exact": 1,
+    "policy_mentions_exact": 2,
+    "raw_relations_exact": 0,
+    "policy_relations_exact": 0,
+    "relations_total": 2,
+    "cross_segment_total": 3,
+    "raw_cross_segment_exact": 1,
+    "policy_cross_segment_exact": 2,
+    "raw_ownership_pass": 3,
+    "policy_ownership_pass": 3,
+    "raw_provenance_pass": 0,
+    "policy_provenance_pass": 0,
+    "raw_mention_exact_match": 0.3333333333333333,
+    "policy_mention_exact_match": 0.6666666666666666,
+    "raw_relation_exact_match": 0.0,
+    "policy_relation_exact_match": 0.0,
+    "raw_cross_segment_resolution": 0.3333333333333333,
+    "policy_cross_segment_resolution": 0.6666666666666666,
+    "policy_attribute_ownership": 1.0,
+    "policy_provenance": 0.0
+  },
+  "raw_holdout_pass": false,
+  "policy_aligned_holdout_pass": false,
+  "semantically_relevant_failure": true,
+  "repair_after_holdout": false,
+  "v7": "AUTHORIZED_ONLY_IF_HOLDOUT_PASS",
+  "shadow_integration": "BLOCKED",
+  "production_promotion": "BLOCKED",
+  "next_action": "HUMAN_GATE_HOLDOUT_FAILURE"
+}

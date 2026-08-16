@@ -1,0 +1,37 @@
+name: Astera Manual Rollback
+
+on:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: Helm release name
+        required: true
+        default: astera-runtime
+      namespace:
+        description: Kubernetes namespace
+        required: true
+        default: astera
+      revision:
+        description: Helm revision to restore
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  rollback:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: azure/setup-helm@v4
+      - name: Configure cluster access
+        run: echo "Cluster access must be configured by the production environment." 
+      - name: Execute rollback
+        env:
+          HELM_RELEASE: ${{ inputs.release }}
+          HELM_NAMESPACE: ${{ inputs.namespace }}
+          HELM_REVISION: ${{ inputs.revision }}
+        run: ./infrastructure/scripts/rollback.sh

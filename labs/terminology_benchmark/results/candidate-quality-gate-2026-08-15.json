@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "run_type": "candidate-quality-audit",
+  "official_corpus_sha256": "1721ad71b7ef92c20a06fa9cae956098fefad0e079f92464d67f1bf9255a3f10",
+  "internal_quality_gate": true,
+  "thresholds": {
+    "candidate_recall": 0.95,
+    "candidate_precision": 0.95,
+    "antecedent_top1_accuracy": 0.9,
+    "attribute_owner_accuracy": 0.95,
+    "relation_candidate_recall": 0.95,
+    "provenance": 1.0
+  },
+  "metrics": {
+    "candidate_recall": 1.0,
+    "candidate_precision": 1.0,
+    "antecedent_top1_accuracy": 1.0,
+    "antecedent_ambiguity_preserved": 1.0,
+    "unresolved_preserved": 1.0,
+    "attribute_owner_accuracy": 1.0,
+    "relation_candidate_recall": 1.0,
+    "relation_endpoint_accuracy": 1.0,
+    "provenance": 1.0,
+    "fixtures": {
+      "generated_candidates": 7,
+      "expected_candidates": 7,
+      "relations": 1
+    }
+  },
+  "frozen_v6_observation": {
+    "official_cases": 150,
+    "official_corpus_sha256": "1721ad71b7ef92c20a06fa9cae956098fefad0e079f92464d67f1bf9255a3f10",
+    "official_expected_cases": 150,
+    "segment_gold_mentions": 130,
+    "local_normalizer_candidate_count": 27,
+    "local_normalizer_surface_recall_observation": 0.16153846153846155,
+    "holdout_evaluation": "NOT_EXECUTED"
+  },
+  "provenance": 1.0,
+  "holdout_evaluation": "NOT_EXECUTED",
+  "v6_repair_v3": "AUTHORIZED"
+}

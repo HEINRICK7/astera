@@ -47,7 +47,7 @@ const TECH_CATALOG = [
     score: '9.0',
     license: 'MIT',
     tags: ['Desktop', 'Security', 'Modern'],
-    alternatives: ['Electron', 'Tauri'],
+    alternatives: ['Electron'],
     motive: 'Segurança por padrão, suporte nativo a TypeScript e runtime moderno para aplicações desktop.',
     integration: 'Deno → React UI'
   },

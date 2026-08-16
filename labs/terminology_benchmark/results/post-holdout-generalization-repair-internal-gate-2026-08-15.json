@@ -1,0 +1,250 @@
+{
+  "status": "PASS",
+  "repair": "post-holdout-generalization-repair",
+  "fixtures": "engineering-only; not consumed holdouts and not holdout-v2",
+  "old_holdouts_used": false,
+  "metrics": {
+    "relation_materialization_rate": 1.0,
+    "temporal_ownership_accuracy": 1.0,
+    "provenance_contract_rate": 1.0
+  },
+  "gate_thresholds": {
+    "relation_materialization_rate": 1.0,
+    "temporal_ownership_accuracy": 1.0,
+    "provenance_contract_rate": 1.0
+  },
+  "cases": [
+    {
+      "case_id": "post-repair-gate-laterality",
+      "mention": "formigamento",
+      "fields": {
+        "temporality": {
+          "expected": "current",
+          "actual": "current",
+          "match": true
+        },
+        "experiencer": {
+          "expected": "patient",
+          "actual": "patient",
+          "match": true
+        },
+        "laterality": {
+          "expected": "left",
+          "actual": "left",
+          "match": true
+        },
+        "dose": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "dose_value": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "dose_unit": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "status": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        }
+      },
+      "relations_expected": [
+        [
+          "HAS_LATERALITY",
+          "laterality",
+          "left"
+        ]
+      ],
+      "relations_actual": [
+        [
+          "HAS_LATERALITY",
+          "laterality",
+          "left"
+        ]
+      ],
+      "provenance_contract": true,
+      "event_temporality": null
+    },
+    {
+      "case_id": "post-repair-gate-dose",
+      "mention": "dipirona",
+      "fields": {
+        "temporality": {
+          "expected": "current",
+          "actual": "current",
+          "match": true
+        },
+        "experiencer": {
+          "expected": "patient",
+          "actual": "patient",
+          "match": true
+        },
+        "laterality": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "dose": {
+          "expected": "1 g",
+          "actual": "1 g",
+          "match": true
+        },
+        "dose_value": {
+          "expected": "1",
+          "actual": "1",
+          "match": true
+        },
+        "dose_unit": {
+          "expected": "g",
+          "actual": "g",
+          "match": true
+        },
+        "status": {
+          "expected": "active",
+          "actual": "active",
+          "match": true
+        }
+      },
+      "relations_expected": [
+        [
+          "HAS_DOSE",
+          "dose",
+          "1 g"
+        ]
+      ],
+      "relations_actual": [
+        [
+          "HAS_DOSE",
+          "dose",
+          "1 g"
+        ]
+      ],
+      "provenance_contract": true,
+      "event_temporality": null
+    },
+    {
+      "case_id": "post-repair-gate-temporality",
+      "mention": "levotiroxina",
+      "fields": {
+        "temporality": {
+          "expected": "current",
+          "actual": "current",
+          "match": true
+        },
+        "experiencer": {
+          "expected": "patient",
+          "actual": "patient",
+          "match": true
+        },
+        "laterality": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "dose": {
+          "expected": "88 mcg",
+          "actual": "88 mcg",
+          "match": true
+        },
+        "dose_value": {
+          "expected": "88",
+          "actual": "88",
+          "match": true
+        },
+        "dose_unit": {
+          "expected": "mcg",
+          "actual": "mcg",
+          "match": true
+        },
+        "status": {
+          "expected": "active",
+          "actual": "active",
+          "match": true
+        }
+      },
+      "relations_expected": [
+        [
+          "HAS_DOSE",
+          "dose",
+          "88 mcg"
+        ]
+      ],
+      "relations_actual": [
+        [
+          "HAS_DOSE",
+          "dose",
+          "88 mcg"
+        ]
+      ],
+      "provenance_contract": true,
+      "event_temporality": {
+        "value": "past",
+        "owner": "dose_change_event",
+        "source_segment_ids": [
+          "post-repair-gate-temporality:a"
+        ]
+      }
+    },
+    {
+      "case_id": "post-repair-gate-family",
+      "mention": "asma",
+      "fields": {
+        "temporality": {
+          "expected": "current",
+          "actual": "current",
+          "match": true
+        },
+        "experiencer": {
+          "expected": "family",
+          "actual": "family",
+          "match": true
+        },
+        "laterality": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "dose": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "dose_value": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "dose_unit": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "status": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        }
+      },
+      "relations_expected": [],
+      "relations_actual": [],
+      "provenance_contract": true,
+      "event_temporality": null
+    }
+  ],
+  "resolver_policy_corpus_changed": {
+    "resolver": true,
+    "policy": false,
+    "corpus": false
+  },
+  "old_holdouts": {
+    "consumed": true,
+    "rerun": false,
+    "used_for_approval": false
+  }
+}

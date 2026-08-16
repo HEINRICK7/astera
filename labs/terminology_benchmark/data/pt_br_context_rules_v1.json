@@ -1,0 +1,16 @@
+{
+  "rule_set": "niede-pt-br-context-v1",
+  "language": "pt-BR",
+  "license": "project-owned",
+  "rules": [
+    {"literal": "nega", "category": "NEGATED_EXISTENCE", "direction": "FORWARD"},
+    {"literal": "sem", "category": "NEGATED_EXISTENCE", "direction": "FORWARD"},
+    {"literal": "possível", "category": "POSSIBLE_EXISTENCE", "direction": "FORWARD"},
+    {"literal": "suspeita de", "category": "POSSIBLE_EXISTENCE", "direction": "FORWARD"},
+    {"literal": "histórico de", "category": "HISTORICAL", "direction": "FORWARD"},
+    {"literal": "mãe", "category": "FAMILY", "direction": "FORWARD"},
+    {"literal": "pai", "category": "FAMILY", "direction": "FORWARD"},
+    {"literal": "genitora", "category": "FAMILY", "direction": "FORWARD"},
+    {"literal": "genitor", "category": "FAMILY", "direction": "FORWARD"}
+  ]
+}

@@ -1,0 +1,4643 @@
+{
+  "status": "V7_ADJUDICATION_COMPLETION_PENDING_GLOBAL_AUDIT",
+  "batch_id": "v7-batch-04",
+  "case_range": "091-120",
+  "policy_version": "clinical-semantic-policy-v1.3",
+  "source_artifact": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-adjudication-batches-2026-08-15/v7-batch-04-cases-091-120.json",
+  "source_status": "PENDING_LOCAL_ADJUDICATION",
+  "readjudication_scope": "BATCH_FULL_PENDING_CASES",
+  "approved_cases_reprocessed": false,
+  "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION",
+  "resolver_execution": false,
+  "runtime_predictions_used": false,
+  "previous_benchmark_predictions_used": false,
+  "decision_counts": {
+    "APPROVED": 27,
+    "REJECTED": 3,
+    "AMBIGUOUS": 0,
+    "PENDING_HUMAN": 0
+  },
+  "changed_case_ids": [],
+  "reviews": [
+    {
+      "review_id": "v7-review-0091",
+      "candidate_id": "v7-draft-0091",
+      "text": "Médico: Quando começou a história de palpitação?\nPaciente: A primeira ocorrência foi no mês retrasado, mas hoje a situação é outra.\nMédico: O que está presente agora?\nPaciente: Agora noto a queixa em peito; o episódio antigo já passou.\nMédico: Vou manter o tempo do evento separado do estado atual.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0091:segment-01",
+          "speaker": "clinician",
+          "text": "Quando começou a história de palpitação?"
+        },
+        {
+          "segment_id": "v7-draft-0091:segment-02",
+          "speaker": "patient",
+          "text": "A primeira ocorrência foi no mês retrasado, mas hoje a situação é outra."
+        },
+        {
+          "segment_id": "v7-draft-0091:segment-03",
+          "speaker": "clinician",
+          "text": "O que está presente agora?"
+        },
+        {
+          "segment_id": "v7-draft-0091:segment-04",
+          "speaker": "patient",
+          "text": "Agora noto a queixa em peito; o episódio antigo já passou."
+        },
+        {
+          "segment_id": "v7-draft-0091:segment-05",
+          "speaker": "clinician",
+          "text": "Vou manter o tempo do evento separado do estado atual."
+        }
+      ],
+      "scenario_family": "DISTRIBUTED_TEMPORALITY",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "SEM-TEMP-001 + SEM-XSEG-001: named past event is retained; generic current phrase does not inherit an unresolved concept.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "palpitação",
+          "concept_id": "symptom.palpitations",
+          "experiencer": "patient",
+          "temporality": "past",
+          "segment_ids": [
+            "v7-draft-0091:segment-01",
+            "v7-draft-0091:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0091:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0091:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0091:segment-02"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "palpitação",
+          "segment_ids": [
+            "v7-draft-0091:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "peito",
+          "segment_ids": [
+            "v7-draft-0091:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-TEMP-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_source_cluster": "AMB-TEMP-001",
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0092",
+      "candidate_id": "v7-draft-0092",
+      "text": "Médico: Vamos falar de amlodipino.\nPaciente: Antes disso, queria comentar palpitação em peito.\nMédico: Certo; depois voltamos ao amlodipino. O que mudou?\nPaciente: O amlodipino ficou em 20 mg; sobre palpitação, melhorou no mês retrasado.\nMédico: São tópicos diferentes e vou mantê-los separados.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0092:segment-01",
+          "speaker": "clinician",
+          "text": "Vamos falar de amlodipino."
+        },
+        {
+          "segment_id": "v7-draft-0092:segment-02",
+          "speaker": "patient",
+          "text": "Antes disso, queria comentar palpitação em peito."
+        },
+        {
+          "segment_id": "v7-draft-0092:segment-03",
+          "speaker": "clinician",
+          "text": "Certo; depois voltamos ao amlodipino. O que mudou?"
+        },
+        {
+          "segment_id": "v7-draft-0092:segment-04",
+          "speaker": "patient",
+          "text": "O amlodipino ficou em 20 mg; sobre palpitação, melhorou no mês retrasado."
+        },
+        {
+          "segment_id": "v7-draft-0092:segment-05",
+          "speaker": "clinician",
+          "text": "São tópicos diferentes e vou mantê-los separados."
+        }
+      ],
+      "scenario_family": "TOPIC_SWITCH",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "amlodipino",
+          "concept_id": "medication.amlodipine",
+          "experiencer": "patient",
+          "dose": "20 mg",
+          "dose_value": "20",
+          "dose_unit": "mg",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0092:segment-01",
+            "v7-draft-0092:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0092:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0092:segment-04"
+            ],
+            "dose": [
+              "v7-draft-0092:segment-04"
+            ],
+            "dose_value": [
+              "v7-draft-0092:segment-04"
+            ],
+            "dose_unit": [
+              "v7-draft-0092:segment-04"
+            ],
+            "status": [
+              "v7-draft-0092:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0092:segment-04"
+            ],
+            "status": [
+              "v7-draft-0092:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "20 mg",
+              "segment_ids": [
+                "v7-draft-0092:segment-04"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "palpitação",
+          "concept_id": "symptom.palpitations",
+          "experiencer": "patient",
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0092:segment-02",
+            "v7-draft-0092:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0092:segment-02"
+            ],
+            "experiencer": [
+              "v7-draft-0092:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0092:segment-02"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "amlodipino",
+          "segment_ids": [
+            "v7-draft-0092:segment-01",
+            "v7-draft-0092:segment-03",
+            "v7-draft-0092:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "palpitação",
+          "segment_ids": [
+            "v7-draft-0092:segment-02",
+            "v7-draft-0092:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "peito",
+          "segment_ids": [
+            "v7-draft-0092:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0093",
+      "candidate_id": "v7-draft-0093",
+      "text": "Médico: Qual a dose do amlodipino?\nPaciente: 20 mg.\nMédico: E a frequência do amlodipino?\nPaciente: duas vezes ao dia.\nMédico: Essas respostas se referem à mesma medicação?\nPaciente: Sim, à mesma.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0093:segment-01",
+          "speaker": "clinician",
+          "text": "Qual a dose do amlodipino?"
+        },
+        {
+          "segment_id": "v7-draft-0093:segment-02",
+          "speaker": "patient",
+          "text": "20 mg."
+        },
+        {
+          "segment_id": "v7-draft-0093:segment-03",
+          "speaker": "clinician",
+          "text": "E a frequência do amlodipino?"
+        },
+        {
+          "segment_id": "v7-draft-0093:segment-04",
+          "speaker": "patient",
+          "text": "duas vezes ao dia."
+        },
+        {
+          "segment_id": "v7-draft-0093:segment-05",
+          "speaker": "clinician",
+          "text": "Essas respostas se referem à mesma medicação?"
+        },
+        {
+          "segment_id": "v7-draft-0093:segment-06",
+          "speaker": "patient",
+          "text": "Sim, à mesma."
+        }
+      ],
+      "scenario_family": "ELLIPTICAL_ANSWER",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "amlodipino",
+          "concept_id": "medication.amlodipine",
+          "experiencer": "patient",
+          "dose": "20 mg",
+          "dose_value": "20",
+          "dose_unit": "mg",
+          "frequency": "duas vezes ao dia",
+          "segment_ids": [
+            "v7-draft-0093:segment-01",
+            "v7-draft-0093:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0093:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0093:segment-02"
+            ],
+            "dose": [
+              "v7-draft-0093:segment-02"
+            ],
+            "dose_value": [
+              "v7-draft-0093:segment-02"
+            ],
+            "dose_unit": [
+              "v7-draft-0093:segment-02"
+            ],
+            "frequency": [
+              "v7-draft-0093:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0093:segment-02"
+            ],
+            "HAS_FREQUENCY": [
+              "v7-draft-0093:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "20 mg",
+              "segment_ids": [
+                "v7-draft-0093:segment-02"
+              ]
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "duas vezes ao dia",
+              "segment_ids": [
+                "v7-draft-0093:segment-02"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "amlodipino",
+          "segment_ids": [
+            "v7-draft-0093:segment-01",
+            "v7-draft-0093:segment-03"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0094",
+      "candidate_id": "v7-draft-0094",
+      "text": "Médico: Você relatou palpitação ontem, correto?\nPaciente: Correção: eu quis dizer peito, não palpitação.\nMédico: Entendi; a primeira anotação era uma hipótese?\nPaciente: Era uma confusão na fala, a queixa correta é a segunda.\nMédico: Vou manter a correção e não duplicar palpitação.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0094:segment-01",
+          "speaker": "clinician",
+          "text": "Você relatou palpitação ontem, correto?"
+        },
+        {
+          "segment_id": "v7-draft-0094:segment-02",
+          "speaker": "patient",
+          "text": "Correção: eu quis dizer peito, não palpitação."
+        },
+        {
+          "segment_id": "v7-draft-0094:segment-03",
+          "speaker": "clinician",
+          "text": "Entendi; a primeira anotação era uma hipótese?"
+        },
+        {
+          "segment_id": "v7-draft-0094:segment-04",
+          "speaker": "patient",
+          "text": "Era uma confusão na fala, a queixa correta é a segunda."
+        },
+        {
+          "segment_id": "v7-draft-0094:segment-05",
+          "speaker": "clinician",
+          "text": "Vou manter a correção e não duplicar palpitação."
+        }
+      ],
+      "scenario_family": "CLINICIAN_CORRECTION",
+      "decision": "REJECTED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": null,
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "palpitação",
+          "segment_ids": [
+            "v7-draft-0094:segment-01",
+            "v7-draft-0094:segment-02",
+            "v7-draft-0094:segment-05"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "peito",
+          "segment_ids": [
+            "v7-draft-0094:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-CORR-001"
+      ],
+      "readjudication_source_cluster": "AMB-CORR-001",
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0095",
+      "candidate_id": "v7-draft-0095",
+      "text": "Médico: Você usa amlodipino 5 mg?\nPaciente: Usava; pensando melhor, era 20 mg.\nMédico: Qual informação vale para o estado atual?\nPaciente: A dose de 20 mg, desde no mês retrasado; a anterior está superada.\nMédico: Vou registrar a autocorreção e a transição.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0095:segment-01",
+          "speaker": "clinician",
+          "text": "Você usa amlodipino 5 mg?"
+        },
+        {
+          "segment_id": "v7-draft-0095:segment-02",
+          "speaker": "patient",
+          "text": "Usava; pensando melhor, era 20 mg."
+        },
+        {
+          "segment_id": "v7-draft-0095:segment-03",
+          "speaker": "clinician",
+          "text": "Qual informação vale para o estado atual?"
+        },
+        {
+          "segment_id": "v7-draft-0095:segment-04",
+          "speaker": "patient",
+          "text": "A dose de 20 mg, desde no mês retrasado; a anterior está superada."
+        },
+        {
+          "segment_id": "v7-draft-0095:segment-05",
+          "speaker": "clinician",
+          "text": "Vou registrar a autocorreção e a transição."
+        }
+      ],
+      "scenario_family": "PATIENT_SELF_CORRECTION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "SEM-SELF-001: later self-corrected dose owns the current attribute; no CHANGED_FROM is created from the correction.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "amlodipino",
+          "concept_id": "medication.amlodipine",
+          "experiencer": "patient",
+          "dose": "20 mg",
+          "dose_value": "20",
+          "dose_unit": "mg",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0095:segment-01",
+            "v7-draft-0095:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0095:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0095:segment-02"
+            ],
+            "dose": [
+              "v7-draft-0095:segment-02"
+            ],
+            "dose_value": [
+              "v7-draft-0095:segment-02"
+            ],
+            "dose_unit": [
+              "v7-draft-0095:segment-02"
+            ],
+            "status": [
+              "v7-draft-0095:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0095:segment-02"
+            ],
+            "status": [
+              "v7-draft-0095:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "20 mg",
+              "segment_ids": [
+                "v7-draft-0095:segment-02"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "amlodipino",
+          "segment_ids": [
+            "v7-draft-0095:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-DOSE-001",
+        "SEM-SELF-001"
+      ],
+      "readjudication_source_cluster": "AMB-SELF-001",
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0096",
+      "candidate_id": "v7-draft-0096",
+      "text": "Médico: A pessoa anterior mencionou palpitação. Você confirma?\nPaciente: Eu confirmo só a parte sobre peito; a outra fala era de meu filho.\nMédico: Agora falando de você, qual medicamento usa?\nPaciente: Eu uso enalapril duas vezes ao dia, e não tenho palpitação.\nMédico: A mudança de falante altera o experiencer, não o tópico automaticamente.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0096:segment-01",
+          "speaker": "clinician",
+          "text": "A pessoa anterior mencionou palpitação. Você confirma?"
+        },
+        {
+          "segment_id": "v7-draft-0096:segment-02",
+          "speaker": "patient",
+          "text": "Eu confirmo só a parte sobre peito; a outra fala era de meu filho."
+        },
+        {
+          "segment_id": "v7-draft-0096:segment-03",
+          "speaker": "clinician",
+          "text": "Agora falando de você, qual medicamento usa?"
+        },
+        {
+          "segment_id": "v7-draft-0096:segment-04",
+          "speaker": "patient",
+          "text": "Eu uso enalapril duas vezes ao dia, e não tenho palpitação."
+        },
+        {
+          "segment_id": "v7-draft-0096:segment-05",
+          "speaker": "clinician",
+          "text": "A mudança de falante altera o experiencer, não o tópico automaticamente."
+        }
+      ],
+      "scenario_family": "ANAPHORA_SPEAKER_TRANSITION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "SEM-EXP-001 + SEM-XSEG-001: speaker is not experiencer; ambiguous prior ownership remains unresolved while explicit patient mentions are retained.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "enalapril",
+          "concept_id": "medication.enalapril",
+          "experiencer": "patient",
+          "frequency": "duas vezes ao dia",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0096:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0096:segment-04"
+            ],
+            "experiencer": [
+              "v7-draft-0096:segment-04"
+            ],
+            "frequency": [
+              "v7-draft-0096:segment-04"
+            ],
+            "status": [
+              "v7-draft-0096:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_FREQUENCY": [
+              "v7-draft-0096:segment-04"
+            ],
+            "status": [
+              "v7-draft-0096:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "duas vezes ao dia",
+              "segment_ids": [
+                "v7-draft-0096:segment-04"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "palpitação",
+          "concept_id": "symptom.palpitations",
+          "experiencer": "patient",
+          "negated": true,
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0096:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0096:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0096:segment-01"
+            ],
+            "negated": [
+              "v7-draft-0096:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0096:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "enalapril",
+          "segment_ids": [
+            "v7-draft-0096:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "palpitação",
+          "segment_ids": [
+            "v7-draft-0096:segment-01",
+            "v7-draft-0096:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "peito",
+          "segment_ids": [
+            "v7-draft-0096:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "meu filho",
+          "segment_ids": [
+            "v7-draft-0096:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-EXP-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_source_cluster": "AMB-SPEAKER-001",
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0097",
+      "candidate_id": "v7-draft-0097",
+      "text": "Médico: Vamos revisar seus remédios. Você ainda usa levotiroxina?\nPaciente: Uso levotiroxina 75 mcg em jejum, mas às vezes esqueço.\nMédico: E o metformina, entrou depois da última consulta?\nPaciente: Sim, comecei o metformina; a receita dizia 88 mcg e continuo assim.\nMédico: Então mantenho os dois no esquema atual, correto?",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0097:segment-01",
+          "speaker": "clinician",
+          "text": "Vamos revisar seus remédios. Você ainda usa levotiroxina?"
+        },
+        {
+          "segment_id": "v7-draft-0097:segment-02",
+          "speaker": "patient",
+          "text": "Uso levotiroxina 75 mcg em jejum, mas às vezes esqueço."
+        },
+        {
+          "segment_id": "v7-draft-0097:segment-03",
+          "speaker": "clinician",
+          "text": "E o metformina, entrou depois da última consulta?"
+        },
+        {
+          "segment_id": "v7-draft-0097:segment-04",
+          "speaker": "patient",
+          "text": "Sim, comecei o metformina; a receita dizia 88 mcg e continuo assim."
+        },
+        {
+          "segment_id": "v7-draft-0097:segment-05",
+          "speaker": "clinician",
+          "text": "Então mantenho os dois no esquema atual, correto?"
+        }
+      ],
+      "scenario_family": "MEDICATION_RECONCILIATION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "levotiroxina",
+          "concept_id": "medication.levothyroxine",
+          "experiencer": "patient",
+          "dose": "75 mcg",
+          "dose_value": "75",
+          "dose_unit": "mcg",
+          "frequency": "em jejum",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0097:segment-01",
+            "v7-draft-0097:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0097:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0097:segment-02"
+            ],
+            "dose": [
+              "v7-draft-0097:segment-02"
+            ],
+            "dose_value": [
+              "v7-draft-0097:segment-02"
+            ],
+            "dose_unit": [
+              "v7-draft-0097:segment-02"
+            ],
+            "frequency": [
+              "v7-draft-0097:segment-02"
+            ],
+            "status": [
+              "v7-draft-0097:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0097:segment-02"
+            ],
+            "HAS_FREQUENCY": [
+              "v7-draft-0097:segment-02"
+            ],
+            "status": [
+              "v7-draft-0097:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "75 mcg",
+              "segment_ids": [
+                "v7-draft-0097:segment-02"
+              ]
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "em jejum",
+              "segment_ids": [
+                "v7-draft-0097:segment-02"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "metformina",
+          "concept_id": "medication.metformin",
+          "experiencer": "patient",
+          "dose": "88 mcg",
+          "dose_value": "88",
+          "dose_unit": "mcg",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0097:segment-03",
+            "v7-draft-0097:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0097:segment-03"
+            ],
+            "experiencer": [
+              "v7-draft-0097:segment-04"
+            ],
+            "dose": [
+              "v7-draft-0097:segment-04"
+            ],
+            "dose_value": [
+              "v7-draft-0097:segment-04"
+            ],
+            "dose_unit": [
+              "v7-draft-0097:segment-04"
+            ],
+            "status": [
+              "v7-draft-0097:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0097:segment-04"
+            ],
+            "status": [
+              "v7-draft-0097:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "88 mcg",
+              "segment_ids": [
+                "v7-draft-0097:segment-04"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "levotiroxina",
+          "segment_ids": [
+            "v7-draft-0097:segment-01",
+            "v7-draft-0097:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "metformina",
+          "segment_ids": [
+            "v7-draft-0097:segment-03",
+            "v7-draft-0097:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0098",
+      "candidate_id": "v7-draft-0098",
+      "text": "Médico: Como ficou a dose do levotiroxina depois da mudança?\nPaciente: Antes era 75 mcg em jejum.\nMédico: O que aconteceu na última orientação?\nPaciente: Eu corrigi: agora uso 88 mcg em jejum e o ajuste ocorreu na consulta anterior.\nMédico: A dose atual é a segunda, não a primeira?\nPaciente: Isso, a segunda é a atual.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0098:segment-01",
+          "speaker": "clinician",
+          "text": "Como ficou a dose do levotiroxina depois da mudança?"
+        },
+        {
+          "segment_id": "v7-draft-0098:segment-02",
+          "speaker": "patient",
+          "text": "Antes era 75 mcg em jejum."
+        },
+        {
+          "segment_id": "v7-draft-0098:segment-03",
+          "speaker": "clinician",
+          "text": "O que aconteceu na última orientação?"
+        },
+        {
+          "segment_id": "v7-draft-0098:segment-04",
+          "speaker": "patient",
+          "text": "Eu corrigi: agora uso 88 mcg em jejum e o ajuste ocorreu na consulta anterior."
+        },
+        {
+          "segment_id": "v7-draft-0098:segment-05",
+          "speaker": "clinician",
+          "text": "A dose atual é a segunda, não a primeira?"
+        },
+        {
+          "segment_id": "v7-draft-0098:segment-06",
+          "speaker": "patient",
+          "text": "Isso, a segunda é a atual."
+        }
+      ],
+      "scenario_family": "DOSE_TRANSITION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "levotiroxina",
+          "concept_id": "medication.levothyroxine",
+          "experiencer": "patient",
+          "dose": "88 mcg",
+          "dose_value": "88",
+          "dose_unit": "mcg",
+          "frequency": "em jejum",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0098:segment-01",
+            "v7-draft-0098:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0098:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0098:segment-04"
+            ],
+            "dose": [
+              "v7-draft-0098:segment-04"
+            ],
+            "dose_value": [
+              "v7-draft-0098:segment-04"
+            ],
+            "dose_unit": [
+              "v7-draft-0098:segment-04"
+            ],
+            "frequency": [
+              "v7-draft-0098:segment-04"
+            ],
+            "status": [
+              "v7-draft-0098:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0098:segment-04"
+            ],
+            "HAS_FREQUENCY": [
+              "v7-draft-0098:segment-04"
+            ],
+            "status": [
+              "v7-draft-0098:segment-04"
+            ],
+            "CHANGED_FROM": [
+              "v7-draft-0098:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "88 mcg",
+              "segment_ids": [
+                "v7-draft-0098:segment-04"
+              ]
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "em jejum",
+              "segment_ids": [
+                "v7-draft-0098:segment-04"
+              ]
+            },
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "75 mcg",
+              "segment_ids": [
+                "v7-draft-0098:segment-04"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "levotiroxina",
+          "segment_ids": [
+            "v7-draft-0098:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0099",
+      "candidate_id": "v7-draft-0099",
+      "text": "Médico: Com que frequência você toma metformina?\nPaciente: De início era em jejum, mas mudei o horário.\nMédico: Você está falando do horário anterior ou do atual?\nPaciente: Do atual: em jejum; a mudança foi registrada na consulta anterior.\nMédico: E o levotiroxina continua separado dessa rotina?",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0099:segment-01",
+          "speaker": "clinician",
+          "text": "Com que frequência você toma metformina?"
+        },
+        {
+          "segment_id": "v7-draft-0099:segment-02",
+          "speaker": "patient",
+          "text": "De início era em jejum, mas mudei o horário."
+        },
+        {
+          "segment_id": "v7-draft-0099:segment-03",
+          "speaker": "clinician",
+          "text": "Você está falando do horário anterior ou do atual?"
+        },
+        {
+          "segment_id": "v7-draft-0099:segment-04",
+          "speaker": "patient",
+          "text": "Do atual: em jejum; a mudança foi registrada na consulta anterior."
+        },
+        {
+          "segment_id": "v7-draft-0099:segment-05",
+          "speaker": "clinician",
+          "text": "E o levotiroxina continua separado dessa rotina?"
+        }
+      ],
+      "scenario_family": "FREQUENCY_STATUS_TRANSITION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "SEM-FREQ-002: explicit current frequency retained; no CHANGED_FROM because old/new values are not distinct.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "metformina",
+          "concept_id": "medication.metformin",
+          "experiencer": "patient",
+          "frequency": "em jejum",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0099:segment-01",
+            "v7-draft-0099:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0099:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0099:segment-02"
+            ],
+            "frequency": [
+              "v7-draft-0099:segment-02"
+            ],
+            "status": [
+              "v7-draft-0099:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_FREQUENCY": [
+              "v7-draft-0099:segment-02"
+            ],
+            "status": [
+              "v7-draft-0099:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "em jejum",
+              "segment_ids": [
+                "v7-draft-0099:segment-02"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "levotiroxina",
+          "segment_ids": [
+            "v7-draft-0099:segment-05"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "metformina",
+          "segment_ids": [
+            "v7-draft-0099:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-FREQ-001",
+        "SEM-FREQ-002"
+      ],
+      "readjudication_source_cluster": "AMB-FREQ-001",
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0100",
+      "candidate_id": "v7-draft-0100",
+      "text": "Médico: Além de coceira, há outra queixa?\nPaciente: A coceira fica em braço esquerdo; também tenho cansaço.\nMédico: O cansaço começou junto ou depois?\nPaciente: Depois. A coceira é a que mais incomoda agora, mas a outra melhorou na consulta anterior.\nMédico: Vou registrar as duas sem misturar os lados.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0100:segment-01",
+          "speaker": "clinician",
+          "text": "Além de coceira, há outra queixa?"
+        },
+        {
+          "segment_id": "v7-draft-0100:segment-02",
+          "speaker": "patient",
+          "text": "A coceira fica em braço esquerdo; também tenho cansaço."
+        },
+        {
+          "segment_id": "v7-draft-0100:segment-03",
+          "speaker": "clinician",
+          "text": "O cansaço começou junto ou depois?"
+        },
+        {
+          "segment_id": "v7-draft-0100:segment-04",
+          "speaker": "patient",
+          "text": "Depois. A coceira é a que mais incomoda agora, mas a outra melhorou na consulta anterior."
+        },
+        {
+          "segment_id": "v7-draft-0100:segment-05",
+          "speaker": "clinician",
+          "text": "Vou registrar as duas sem misturar os lados."
+        }
+      ],
+      "scenario_family": "MULTIPLE_SYMPTOMS",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "coceira",
+          "concept_id": "symptom.itching",
+          "experiencer": "patient",
+          "temporality": "current",
+          "laterality": "left",
+          "segment_ids": [
+            "v7-draft-0100:segment-01",
+            "v7-draft-0100:segment-02",
+            "v7-draft-0100:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0100:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0100:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0100:segment-02"
+            ],
+            "laterality": [
+              "v7-draft-0100:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_LATERALITY": [
+              "v7-draft-0100:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_LATERALITY",
+              "target": "laterality",
+              "value": "left",
+              "segment_ids": [
+                "v7-draft-0100:segment-02"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "cansaço",
+          "concept_id": "symptom.fatigue",
+          "experiencer": "patient",
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0100:segment-02",
+            "v7-draft-0100:segment-03"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0100:segment-02"
+            ],
+            "experiencer": [
+              "v7-draft-0100:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0100:segment-02"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "coceira",
+          "segment_ids": [
+            "v7-draft-0100:segment-01",
+            "v7-draft-0100:segment-02",
+            "v7-draft-0100:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "braço esquerdo",
+          "segment_ids": [
+            "v7-draft-0100:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0101",
+      "candidate_id": "v7-draft-0101",
+      "text": "Médico: Há coceira na família?\nPaciente: Sim, minha tia teve isso, mas eu não tenho essa queixa.\nMédico: Quem está com o diagnóstico, então?\nPaciente: A pessoa da família; eu vim por causa de braço esquerdo.\nMédico: Vou separar o experiencer familiar do paciente.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0101:segment-01",
+          "speaker": "clinician",
+          "text": "Há coceira na família?"
+        },
+        {
+          "segment_id": "v7-draft-0101:segment-02",
+          "speaker": "patient",
+          "text": "Sim, minha tia teve isso, mas eu não tenho essa queixa."
+        },
+        {
+          "segment_id": "v7-draft-0101:segment-03",
+          "speaker": "clinician",
+          "text": "Quem está com o diagnóstico, então?"
+        },
+        {
+          "segment_id": "v7-draft-0101:segment-04",
+          "speaker": "patient",
+          "text": "A pessoa da família; eu vim por causa de braço esquerdo."
+        },
+        {
+          "segment_id": "v7-draft-0101:segment-05",
+          "speaker": "clinician",
+          "text": "Vou separar o experiencer familiar do paciente."
+        }
+      ],
+      "scenario_family": "FAMILY_PATIENT_EXPERIENCER",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "coceira",
+          "concept_id": "symptom.itching",
+          "experiencer": "family",
+          "temporality": "past",
+          "segment_ids": [
+            "v7-draft-0101:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0101:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0101:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0101:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        },
+        {
+          "surface": "coceira",
+          "concept_id": "symptom.itching",
+          "experiencer": "patient",
+          "negated": true,
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0101:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0101:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0101:segment-01"
+            ],
+            "negated": [
+              "v7-draft-0101:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0101:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "coceira",
+          "segment_ids": [
+            "v7-draft-0101:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "braço esquerdo",
+          "segment_ids": [
+            "v7-draft-0101:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "minha tia",
+          "segment_ids": [
+            "v7-draft-0101:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0102",
+      "candidate_id": "v7-draft-0102",
+      "text": "Médico: Você sente coceira?\nPaciente: No começo eu disse que sim, mas corrijo: não sinto coceira.\nMédico: E a queixa que permanece?\nPaciente: Só um desconforto em braço esquerdo, sem coceira.\nMédico: Então a negação vale para coceira, não para o desconforto.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0102:segment-01",
+          "speaker": "clinician",
+          "text": "Você sente coceira?"
+        },
+        {
+          "segment_id": "v7-draft-0102:segment-02",
+          "speaker": "patient",
+          "text": "No começo eu disse que sim, mas corrijo: não sinto coceira."
+        },
+        {
+          "segment_id": "v7-draft-0102:segment-03",
+          "speaker": "clinician",
+          "text": "E a queixa que permanece?"
+        },
+        {
+          "segment_id": "v7-draft-0102:segment-04",
+          "speaker": "patient",
+          "text": "Só um desconforto em braço esquerdo, sem coceira."
+        },
+        {
+          "segment_id": "v7-draft-0102:segment-05",
+          "speaker": "clinician",
+          "text": "Então a negação vale para coceira, não para o desconforto."
+        }
+      ],
+      "scenario_family": "NEGATION_REVERSAL",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "coceira",
+          "concept_id": "symptom.itching",
+          "experiencer": "patient",
+          "negated": true,
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0102:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0102:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0102:segment-01"
+            ],
+            "negated": [
+              "v7-draft-0102:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0102:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "coceira",
+          "segment_ids": [
+            "v7-draft-0102:segment-01",
+            "v7-draft-0102:segment-02",
+            "v7-draft-0102:segment-04",
+            "v7-draft-0102:segment-05"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "braço esquerdo",
+          "segment_ids": [
+            "v7-draft-0102:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0103",
+      "candidate_id": "v7-draft-0103",
+      "text": "Médico: Quando começou a história de coceira?\nPaciente: A primeira ocorrência foi na consulta anterior, mas hoje a situação é outra.\nMédico: O que está presente agora?\nPaciente: Agora noto a queixa em braço esquerdo; o episódio antigo já passou.\nMédico: Vou manter o tempo do evento separado do estado atual.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0103:segment-01",
+          "speaker": "clinician",
+          "text": "Quando começou a história de coceira?"
+        },
+        {
+          "segment_id": "v7-draft-0103:segment-02",
+          "speaker": "patient",
+          "text": "A primeira ocorrência foi na consulta anterior, mas hoje a situação é outra."
+        },
+        {
+          "segment_id": "v7-draft-0103:segment-03",
+          "speaker": "clinician",
+          "text": "O que está presente agora?"
+        },
+        {
+          "segment_id": "v7-draft-0103:segment-04",
+          "speaker": "patient",
+          "text": "Agora noto a queixa em braço esquerdo; o episódio antigo já passou."
+        },
+        {
+          "segment_id": "v7-draft-0103:segment-05",
+          "speaker": "clinician",
+          "text": "Vou manter o tempo do evento separado do estado atual."
+        }
+      ],
+      "scenario_family": "DISTRIBUTED_TEMPORALITY",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "SEM-TEMP-001 + SEM-XSEG-001: named past event is retained; generic current phrase does not inherit an unresolved concept.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "coceira",
+          "concept_id": "symptom.itching",
+          "experiencer": "patient",
+          "temporality": "past",
+          "segment_ids": [
+            "v7-draft-0103:segment-01",
+            "v7-draft-0103:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0103:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0103:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0103:segment-02"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "coceira",
+          "segment_ids": [
+            "v7-draft-0103:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "braço esquerdo",
+          "segment_ids": [
+            "v7-draft-0103:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-TEMP-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_source_cluster": "AMB-TEMP-001",
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0104",
+      "candidate_id": "v7-draft-0104",
+      "text": "Médico: Vamos falar de levotiroxina.\nPaciente: Antes disso, queria comentar coceira em braço esquerdo.\nMédico: Certo; depois voltamos ao levotiroxina. O que mudou?\nPaciente: O levotiroxina ficou em 88 mcg; sobre coceira, melhorou na consulta anterior.\nMédico: São tópicos diferentes e vou mantê-los separados.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0104:segment-01",
+          "speaker": "clinician",
+          "text": "Vamos falar de levotiroxina."
+        },
+        {
+          "segment_id": "v7-draft-0104:segment-02",
+          "speaker": "patient",
+          "text": "Antes disso, queria comentar coceira em braço esquerdo."
+        },
+        {
+          "segment_id": "v7-draft-0104:segment-03",
+          "speaker": "clinician",
+          "text": "Certo; depois voltamos ao levotiroxina. O que mudou?"
+        },
+        {
+          "segment_id": "v7-draft-0104:segment-04",
+          "speaker": "patient",
+          "text": "O levotiroxina ficou em 88 mcg; sobre coceira, melhorou na consulta anterior."
+        },
+        {
+          "segment_id": "v7-draft-0104:segment-05",
+          "speaker": "clinician",
+          "text": "São tópicos diferentes e vou mantê-los separados."
+        }
+      ],
+      "scenario_family": "TOPIC_SWITCH",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "levotiroxina",
+          "concept_id": "medication.levothyroxine",
+          "experiencer": "patient",
+          "dose": "88 mcg",
+          "dose_value": "88",
+          "dose_unit": "mcg",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0104:segment-01",
+            "v7-draft-0104:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0104:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0104:segment-04"
+            ],
+            "dose": [
+              "v7-draft-0104:segment-04"
+            ],
+            "dose_value": [
+              "v7-draft-0104:segment-04"
+            ],
+            "dose_unit": [
+              "v7-draft-0104:segment-04"
+            ],
+            "status": [
+              "v7-draft-0104:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0104:segment-04"
+            ],
+            "status": [
+              "v7-draft-0104:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "88 mcg",
+              "segment_ids": [
+                "v7-draft-0104:segment-04"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "coceira",
+          "concept_id": "symptom.itching",
+          "experiencer": "patient",
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0104:segment-02",
+            "v7-draft-0104:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0104:segment-02"
+            ],
+            "experiencer": [
+              "v7-draft-0104:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0104:segment-02"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "levotiroxina",
+          "segment_ids": [
+            "v7-draft-0104:segment-01",
+            "v7-draft-0104:segment-03",
+            "v7-draft-0104:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "coceira",
+          "segment_ids": [
+            "v7-draft-0104:segment-02",
+            "v7-draft-0104:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "braço esquerdo",
+          "segment_ids": [
+            "v7-draft-0104:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0105",
+      "candidate_id": "v7-draft-0105",
+      "text": "Médico: Qual a dose do levotiroxina?\nPaciente: 88 mcg.\nMédico: E a frequência do levotiroxina?\nPaciente: em jejum.\nMédico: Essas respostas se referem à mesma medicação?\nPaciente: Sim, à mesma.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0105:segment-01",
+          "speaker": "clinician",
+          "text": "Qual a dose do levotiroxina?"
+        },
+        {
+          "segment_id": "v7-draft-0105:segment-02",
+          "speaker": "patient",
+          "text": "88 mcg."
+        },
+        {
+          "segment_id": "v7-draft-0105:segment-03",
+          "speaker": "clinician",
+          "text": "E a frequência do levotiroxina?"
+        },
+        {
+          "segment_id": "v7-draft-0105:segment-04",
+          "speaker": "patient",
+          "text": "em jejum."
+        },
+        {
+          "segment_id": "v7-draft-0105:segment-05",
+          "speaker": "clinician",
+          "text": "Essas respostas se referem à mesma medicação?"
+        },
+        {
+          "segment_id": "v7-draft-0105:segment-06",
+          "speaker": "patient",
+          "text": "Sim, à mesma."
+        }
+      ],
+      "scenario_family": "ELLIPTICAL_ANSWER",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "levotiroxina",
+          "concept_id": "medication.levothyroxine",
+          "experiencer": "patient",
+          "dose": "88 mcg",
+          "dose_value": "88",
+          "dose_unit": "mcg",
+          "frequency": "em jejum",
+          "segment_ids": [
+            "v7-draft-0105:segment-01",
+            "v7-draft-0105:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0105:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0105:segment-02"
+            ],
+            "dose": [
+              "v7-draft-0105:segment-02"
+            ],
+            "dose_value": [
+              "v7-draft-0105:segment-02"
+            ],
+            "dose_unit": [
+              "v7-draft-0105:segment-02"
+            ],
+            "frequency": [
+              "v7-draft-0105:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0105:segment-02"
+            ],
+            "HAS_FREQUENCY": [
+              "v7-draft-0105:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "88 mcg",
+              "segment_ids": [
+                "v7-draft-0105:segment-02"
+              ]
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "em jejum",
+              "segment_ids": [
+                "v7-draft-0105:segment-02"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "levotiroxina",
+          "segment_ids": [
+            "v7-draft-0105:segment-01",
+            "v7-draft-0105:segment-03"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0106",
+      "candidate_id": "v7-draft-0106",
+      "text": "Médico: Você relatou coceira ontem, correto?\nPaciente: Correção: eu quis dizer braço esquerdo, não coceira.\nMédico: Entendi; a primeira anotação era uma hipótese?\nPaciente: Era uma confusão na fala, a queixa correta é a segunda.\nMédico: Vou manter a correção e não duplicar coceira.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0106:segment-01",
+          "speaker": "clinician",
+          "text": "Você relatou coceira ontem, correto?"
+        },
+        {
+          "segment_id": "v7-draft-0106:segment-02",
+          "speaker": "patient",
+          "text": "Correção: eu quis dizer braço esquerdo, não coceira."
+        },
+        {
+          "segment_id": "v7-draft-0106:segment-03",
+          "speaker": "clinician",
+          "text": "Entendi; a primeira anotação era uma hipótese?"
+        },
+        {
+          "segment_id": "v7-draft-0106:segment-04",
+          "speaker": "patient",
+          "text": "Era uma confusão na fala, a queixa correta é a segunda."
+        },
+        {
+          "segment_id": "v7-draft-0106:segment-05",
+          "speaker": "clinician",
+          "text": "Vou manter a correção e não duplicar coceira."
+        }
+      ],
+      "scenario_family": "CLINICIAN_CORRECTION",
+      "decision": "REJECTED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": null,
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "coceira",
+          "segment_ids": [
+            "v7-draft-0106:segment-01",
+            "v7-draft-0106:segment-02",
+            "v7-draft-0106:segment-05"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "braço esquerdo",
+          "segment_ids": [
+            "v7-draft-0106:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-CORR-001"
+      ],
+      "readjudication_source_cluster": "AMB-CORR-001",
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0107",
+      "candidate_id": "v7-draft-0107",
+      "text": "Médico: Você usa levotiroxina 75 mcg?\nPaciente: Usava; pensando melhor, era 88 mcg.\nMédico: Qual informação vale para o estado atual?\nPaciente: A dose de 88 mcg, desde na consulta anterior; a anterior está superada.\nMédico: Vou registrar a autocorreção e a transição.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0107:segment-01",
+          "speaker": "clinician",
+          "text": "Você usa levotiroxina 75 mcg?"
+        },
+        {
+          "segment_id": "v7-draft-0107:segment-02",
+          "speaker": "patient",
+          "text": "Usava; pensando melhor, era 88 mcg."
+        },
+        {
+          "segment_id": "v7-draft-0107:segment-03",
+          "speaker": "clinician",
+          "text": "Qual informação vale para o estado atual?"
+        },
+        {
+          "segment_id": "v7-draft-0107:segment-04",
+          "speaker": "patient",
+          "text": "A dose de 88 mcg, desde na consulta anterior; a anterior está superada."
+        },
+        {
+          "segment_id": "v7-draft-0107:segment-05",
+          "speaker": "clinician",
+          "text": "Vou registrar a autocorreção e a transição."
+        }
+      ],
+      "scenario_family": "PATIENT_SELF_CORRECTION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "SEM-SELF-001: later self-corrected dose owns the current attribute; no CHANGED_FROM is created from the correction.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "levotiroxina",
+          "concept_id": "medication.levothyroxine",
+          "experiencer": "patient",
+          "dose": "88 mcg",
+          "dose_value": "88",
+          "dose_unit": "mcg",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0107:segment-01",
+            "v7-draft-0107:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0107:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0107:segment-02"
+            ],
+            "dose": [
+              "v7-draft-0107:segment-02"
+            ],
+            "dose_value": [
+              "v7-draft-0107:segment-02"
+            ],
+            "dose_unit": [
+              "v7-draft-0107:segment-02"
+            ],
+            "status": [
+              "v7-draft-0107:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0107:segment-02"
+            ],
+            "status": [
+              "v7-draft-0107:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "88 mcg",
+              "segment_ids": [
+                "v7-draft-0107:segment-02"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "levotiroxina",
+          "segment_ids": [
+            "v7-draft-0107:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-DOSE-001",
+        "SEM-SELF-001"
+      ],
+      "readjudication_source_cluster": "AMB-SELF-001",
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0108",
+      "candidate_id": "v7-draft-0108",
+      "text": "Médico: A pessoa anterior mencionou coceira. Você confirma?\nPaciente: Eu confirmo só a parte sobre braço esquerdo; a outra fala era de minha tia.\nMédico: Agora falando de você, qual medicamento usa?\nPaciente: Eu uso metformina em jejum, e não tenho coceira.\nMédico: A mudança de falante altera o experiencer, não o tópico automaticamente.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0108:segment-01",
+          "speaker": "clinician",
+          "text": "A pessoa anterior mencionou coceira. Você confirma?"
+        },
+        {
+          "segment_id": "v7-draft-0108:segment-02",
+          "speaker": "patient",
+          "text": "Eu confirmo só a parte sobre braço esquerdo; a outra fala era de minha tia."
+        },
+        {
+          "segment_id": "v7-draft-0108:segment-03",
+          "speaker": "clinician",
+          "text": "Agora falando de você, qual medicamento usa?"
+        },
+        {
+          "segment_id": "v7-draft-0108:segment-04",
+          "speaker": "patient",
+          "text": "Eu uso metformina em jejum, e não tenho coceira."
+        },
+        {
+          "segment_id": "v7-draft-0108:segment-05",
+          "speaker": "clinician",
+          "text": "A mudança de falante altera o experiencer, não o tópico automaticamente."
+        }
+      ],
+      "scenario_family": "ANAPHORA_SPEAKER_TRANSITION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "SEM-EXP-001 + SEM-XSEG-001: speaker is not experiencer; ambiguous prior ownership remains unresolved while explicit patient mentions are retained.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "metformina",
+          "concept_id": "medication.metformin",
+          "experiencer": "patient",
+          "frequency": "em jejum",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0108:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0108:segment-04"
+            ],
+            "experiencer": [
+              "v7-draft-0108:segment-04"
+            ],
+            "frequency": [
+              "v7-draft-0108:segment-04"
+            ],
+            "status": [
+              "v7-draft-0108:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_FREQUENCY": [
+              "v7-draft-0108:segment-04"
+            ],
+            "status": [
+              "v7-draft-0108:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "em jejum",
+              "segment_ids": [
+                "v7-draft-0108:segment-04"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "coceira",
+          "concept_id": "symptom.itching",
+          "experiencer": "patient",
+          "negated": true,
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0108:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0108:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0108:segment-01"
+            ],
+            "negated": [
+              "v7-draft-0108:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0108:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "metformina",
+          "segment_ids": [
+            "v7-draft-0108:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "coceira",
+          "segment_ids": [
+            "v7-draft-0108:segment-01",
+            "v7-draft-0108:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "braço esquerdo",
+          "segment_ids": [
+            "v7-draft-0108:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "minha tia",
+          "segment_ids": [
+            "v7-draft-0108:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-EXP-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_source_cluster": "AMB-SPEAKER-001",
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0109",
+      "candidate_id": "v7-draft-0109",
+      "text": "Médico: Vamos revisar seus remédios. Você ainda usa dipirona?\nPaciente: Uso dipirona 500 mg a cada oito horas, mas às vezes esqueço.\nMédico: E o sertralina, entrou depois da última consulta?\nPaciente: Sim, comecei o sertralina; a receita dizia 1 g e continuo assim.\nMédico: Então mantenho os dois no esquema atual, correto?",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0109:segment-01",
+          "speaker": "clinician",
+          "text": "Vamos revisar seus remédios. Você ainda usa dipirona?"
+        },
+        {
+          "segment_id": "v7-draft-0109:segment-02",
+          "speaker": "patient",
+          "text": "Uso dipirona 500 mg a cada oito horas, mas às vezes esqueço."
+        },
+        {
+          "segment_id": "v7-draft-0109:segment-03",
+          "speaker": "clinician",
+          "text": "E o sertralina, entrou depois da última consulta?"
+        },
+        {
+          "segment_id": "v7-draft-0109:segment-04",
+          "speaker": "patient",
+          "text": "Sim, comecei o sertralina; a receita dizia 1 g e continuo assim."
+        },
+        {
+          "segment_id": "v7-draft-0109:segment-05",
+          "speaker": "clinician",
+          "text": "Então mantenho os dois no esquema atual, correto?"
+        }
+      ],
+      "scenario_family": "MEDICATION_RECONCILIATION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "dipirona",
+          "concept_id": "medication.dipyrone",
+          "experiencer": "patient",
+          "dose": "500 mg",
+          "dose_value": "500",
+          "dose_unit": "mg",
+          "frequency": "a cada oito horas",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0109:segment-01",
+            "v7-draft-0109:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0109:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0109:segment-02"
+            ],
+            "dose": [
+              "v7-draft-0109:segment-02"
+            ],
+            "dose_value": [
+              "v7-draft-0109:segment-02"
+            ],
+            "dose_unit": [
+              "v7-draft-0109:segment-02"
+            ],
+            "frequency": [
+              "v7-draft-0109:segment-02"
+            ],
+            "status": [
+              "v7-draft-0109:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0109:segment-02"
+            ],
+            "HAS_FREQUENCY": [
+              "v7-draft-0109:segment-02"
+            ],
+            "status": [
+              "v7-draft-0109:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "500 mg",
+              "segment_ids": [
+                "v7-draft-0109:segment-02"
+              ]
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "a cada oito horas",
+              "segment_ids": [
+                "v7-draft-0109:segment-02"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "sertralina",
+          "concept_id": "medication.sertraline",
+          "experiencer": "patient",
+          "dose": "1 g",
+          "dose_value": "1",
+          "dose_unit": "g",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0109:segment-03",
+            "v7-draft-0109:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0109:segment-03"
+            ],
+            "experiencer": [
+              "v7-draft-0109:segment-04"
+            ],
+            "dose": [
+              "v7-draft-0109:segment-04"
+            ],
+            "dose_value": [
+              "v7-draft-0109:segment-04"
+            ],
+            "dose_unit": [
+              "v7-draft-0109:segment-04"
+            ],
+            "status": [
+              "v7-draft-0109:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0109:segment-04"
+            ],
+            "status": [
+              "v7-draft-0109:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "1 g",
+              "segment_ids": [
+                "v7-draft-0109:segment-04"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "dipirona",
+          "segment_ids": [
+            "v7-draft-0109:segment-01",
+            "v7-draft-0109:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "sertralina",
+          "segment_ids": [
+            "v7-draft-0109:segment-03",
+            "v7-draft-0109:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0110",
+      "candidate_id": "v7-draft-0110",
+      "text": "Médico: Como ficou a dose do dipirona depois da mudança?\nPaciente: Antes era 500 mg a cada oito horas.\nMédico: O que aconteceu na última orientação?\nPaciente: Eu corrigi: agora uso 1 g a cada oito horas e o ajuste ocorreu há quatro dias.\nMédico: A dose atual é a segunda, não a primeira?\nPaciente: Isso, a segunda é a atual.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0110:segment-01",
+          "speaker": "clinician",
+          "text": "Como ficou a dose do dipirona depois da mudança?"
+        },
+        {
+          "segment_id": "v7-draft-0110:segment-02",
+          "speaker": "patient",
+          "text": "Antes era 500 mg a cada oito horas."
+        },
+        {
+          "segment_id": "v7-draft-0110:segment-03",
+          "speaker": "clinician",
+          "text": "O que aconteceu na última orientação?"
+        },
+        {
+          "segment_id": "v7-draft-0110:segment-04",
+          "speaker": "patient",
+          "text": "Eu corrigi: agora uso 1 g a cada oito horas e o ajuste ocorreu há quatro dias."
+        },
+        {
+          "segment_id": "v7-draft-0110:segment-05",
+          "speaker": "clinician",
+          "text": "A dose atual é a segunda, não a primeira?"
+        },
+        {
+          "segment_id": "v7-draft-0110:segment-06",
+          "speaker": "patient",
+          "text": "Isso, a segunda é a atual."
+        }
+      ],
+      "scenario_family": "DOSE_TRANSITION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "dipirona",
+          "concept_id": "medication.dipyrone",
+          "experiencer": "patient",
+          "dose": "1 g",
+          "dose_value": "1",
+          "dose_unit": "g",
+          "frequency": "a cada oito horas",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0110:segment-01",
+            "v7-draft-0110:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0110:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0110:segment-04"
+            ],
+            "dose": [
+              "v7-draft-0110:segment-04"
+            ],
+            "dose_value": [
+              "v7-draft-0110:segment-04"
+            ],
+            "dose_unit": [
+              "v7-draft-0110:segment-04"
+            ],
+            "frequency": [
+              "v7-draft-0110:segment-04"
+            ],
+            "status": [
+              "v7-draft-0110:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0110:segment-04"
+            ],
+            "HAS_FREQUENCY": [
+              "v7-draft-0110:segment-04"
+            ],
+            "status": [
+              "v7-draft-0110:segment-04"
+            ],
+            "CHANGED_FROM": [
+              "v7-draft-0110:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "1 g",
+              "segment_ids": [
+                "v7-draft-0110:segment-04"
+              ]
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "a cada oito horas",
+              "segment_ids": [
+                "v7-draft-0110:segment-04"
+              ]
+            },
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "dose",
+              "value": "500 mg",
+              "segment_ids": [
+                "v7-draft-0110:segment-04"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "dipirona",
+          "segment_ids": [
+            "v7-draft-0110:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0111",
+      "candidate_id": "v7-draft-0111",
+      "text": "Médico: Com que frequência você toma sertralina?\nPaciente: De início era a cada oito horas, mas mudei o horário.\nMédico: Você está falando do horário anterior ou do atual?\nPaciente: Do atual: a cada oito horas; a mudança foi registrada há quatro dias.\nMédico: E o dipirona continua separado dessa rotina?",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0111:segment-01",
+          "speaker": "clinician",
+          "text": "Com que frequência você toma sertralina?"
+        },
+        {
+          "segment_id": "v7-draft-0111:segment-02",
+          "speaker": "patient",
+          "text": "De início era a cada oito horas, mas mudei o horário."
+        },
+        {
+          "segment_id": "v7-draft-0111:segment-03",
+          "speaker": "clinician",
+          "text": "Você está falando do horário anterior ou do atual?"
+        },
+        {
+          "segment_id": "v7-draft-0111:segment-04",
+          "speaker": "patient",
+          "text": "Do atual: a cada oito horas; a mudança foi registrada há quatro dias."
+        },
+        {
+          "segment_id": "v7-draft-0111:segment-05",
+          "speaker": "clinician",
+          "text": "E o dipirona continua separado dessa rotina?"
+        }
+      ],
+      "scenario_family": "FREQUENCY_STATUS_TRANSITION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "SEM-FREQ-002: explicit current frequency retained; no CHANGED_FROM because old/new values are not distinct.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "sertralina",
+          "concept_id": "medication.sertraline",
+          "experiencer": "patient",
+          "frequency": "a cada oito horas",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0111:segment-01",
+            "v7-draft-0111:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0111:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0111:segment-02"
+            ],
+            "frequency": [
+              "v7-draft-0111:segment-02"
+            ],
+            "status": [
+              "v7-draft-0111:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_FREQUENCY": [
+              "v7-draft-0111:segment-02"
+            ],
+            "status": [
+              "v7-draft-0111:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "a cada oito horas",
+              "segment_ids": [
+                "v7-draft-0111:segment-02"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "dipirona",
+          "segment_ids": [
+            "v7-draft-0111:segment-05"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "sertralina",
+          "segment_ids": [
+            "v7-draft-0111:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-FREQ-001",
+        "SEM-FREQ-002"
+      ],
+      "readjudication_source_cluster": "AMB-FREQ-001",
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0112",
+      "candidate_id": "v7-draft-0112",
+      "text": "Médico: Além de cólica, há outra queixa?\nPaciente: A cólica fica em flanco direito; também tenho cansaço.\nMédico: O cansaço começou junto ou depois?\nPaciente: Depois. A cólica é a que mais incomoda agora, mas a outra melhorou há quatro dias.\nMédico: Vou registrar as duas sem misturar os lados.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0112:segment-01",
+          "speaker": "clinician",
+          "text": "Além de cólica, há outra queixa?"
+        },
+        {
+          "segment_id": "v7-draft-0112:segment-02",
+          "speaker": "patient",
+          "text": "A cólica fica em flanco direito; também tenho cansaço."
+        },
+        {
+          "segment_id": "v7-draft-0112:segment-03",
+          "speaker": "clinician",
+          "text": "O cansaço começou junto ou depois?"
+        },
+        {
+          "segment_id": "v7-draft-0112:segment-04",
+          "speaker": "patient",
+          "text": "Depois. A cólica é a que mais incomoda agora, mas a outra melhorou há quatro dias."
+        },
+        {
+          "segment_id": "v7-draft-0112:segment-05",
+          "speaker": "clinician",
+          "text": "Vou registrar as duas sem misturar os lados."
+        }
+      ],
+      "scenario_family": "MULTIPLE_SYMPTOMS",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "cólica",
+          "concept_id": "symptom.cramping",
+          "experiencer": "patient",
+          "temporality": "current",
+          "laterality": "right",
+          "segment_ids": [
+            "v7-draft-0112:segment-01",
+            "v7-draft-0112:segment-02",
+            "v7-draft-0112:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0112:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0112:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0112:segment-02"
+            ],
+            "laterality": [
+              "v7-draft-0112:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_LATERALITY": [
+              "v7-draft-0112:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_LATERALITY",
+              "target": "laterality",
+              "value": "right",
+              "segment_ids": [
+                "v7-draft-0112:segment-02"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "cansaço",
+          "concept_id": "symptom.fatigue",
+          "experiencer": "patient",
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0112:segment-02",
+            "v7-draft-0112:segment-03"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0112:segment-02"
+            ],
+            "experiencer": [
+              "v7-draft-0112:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0112:segment-02"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "cólica",
+          "segment_ids": [
+            "v7-draft-0112:segment-01",
+            "v7-draft-0112:segment-02",
+            "v7-draft-0112:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "flanco direito",
+          "segment_ids": [
+            "v7-draft-0112:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0113",
+      "candidate_id": "v7-draft-0113",
+      "text": "Médico: Há cólica na família?\nPaciente: Sim, meu tio teve isso, mas eu não tenho essa queixa.\nMédico: Quem está com o diagnóstico, então?\nPaciente: A pessoa da família; eu vim por causa de flanco direito.\nMédico: Vou separar o experiencer familiar do paciente.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0113:segment-01",
+          "speaker": "clinician",
+          "text": "Há cólica na família?"
+        },
+        {
+          "segment_id": "v7-draft-0113:segment-02",
+          "speaker": "patient",
+          "text": "Sim, meu tio teve isso, mas eu não tenho essa queixa."
+        },
+        {
+          "segment_id": "v7-draft-0113:segment-03",
+          "speaker": "clinician",
+          "text": "Quem está com o diagnóstico, então?"
+        },
+        {
+          "segment_id": "v7-draft-0113:segment-04",
+          "speaker": "patient",
+          "text": "A pessoa da família; eu vim por causa de flanco direito."
+        },
+        {
+          "segment_id": "v7-draft-0113:segment-05",
+          "speaker": "clinician",
+          "text": "Vou separar o experiencer familiar do paciente."
+        }
+      ],
+      "scenario_family": "FAMILY_PATIENT_EXPERIENCER",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "cólica",
+          "concept_id": "symptom.cramping",
+          "experiencer": "family",
+          "temporality": "past",
+          "segment_ids": [
+            "v7-draft-0113:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0113:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0113:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0113:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        },
+        {
+          "surface": "cólica",
+          "concept_id": "symptom.cramping",
+          "experiencer": "patient",
+          "negated": true,
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0113:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0113:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0113:segment-01"
+            ],
+            "negated": [
+              "v7-draft-0113:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0113:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "cólica",
+          "segment_ids": [
+            "v7-draft-0113:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "flanco direito",
+          "segment_ids": [
+            "v7-draft-0113:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "meu tio",
+          "segment_ids": [
+            "v7-draft-0113:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0114",
+      "candidate_id": "v7-draft-0114",
+      "text": "Médico: Você sente cólica?\nPaciente: No começo eu disse que sim, mas corrijo: não sinto cólica.\nMédico: E a queixa que permanece?\nPaciente: Só um desconforto em flanco direito, sem cólica.\nMédico: Então a negação vale para cólica, não para o desconforto.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0114:segment-01",
+          "speaker": "clinician",
+          "text": "Você sente cólica?"
+        },
+        {
+          "segment_id": "v7-draft-0114:segment-02",
+          "speaker": "patient",
+          "text": "No começo eu disse que sim, mas corrijo: não sinto cólica."
+        },
+        {
+          "segment_id": "v7-draft-0114:segment-03",
+          "speaker": "clinician",
+          "text": "E a queixa que permanece?"
+        },
+        {
+          "segment_id": "v7-draft-0114:segment-04",
+          "speaker": "patient",
+          "text": "Só um desconforto em flanco direito, sem cólica."
+        },
+        {
+          "segment_id": "v7-draft-0114:segment-05",
+          "speaker": "clinician",
+          "text": "Então a negação vale para cólica, não para o desconforto."
+        }
+      ],
+      "scenario_family": "NEGATION_REVERSAL",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "cólica",
+          "concept_id": "symptom.cramping",
+          "experiencer": "patient",
+          "negated": true,
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0114:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0114:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0114:segment-01"
+            ],
+            "negated": [
+              "v7-draft-0114:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0114:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "cólica",
+          "segment_ids": [
+            "v7-draft-0114:segment-01",
+            "v7-draft-0114:segment-02",
+            "v7-draft-0114:segment-04",
+            "v7-draft-0114:segment-05"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "flanco direito",
+          "segment_ids": [
+            "v7-draft-0114:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0115",
+      "candidate_id": "v7-draft-0115",
+      "text": "Médico: Quando começou a história de cólica?\nPaciente: A primeira ocorrência foi há quatro dias, mas hoje a situação é outra.\nMédico: O que está presente agora?\nPaciente: Agora noto a queixa em flanco direito; o episódio antigo já passou.\nMédico: Vou manter o tempo do evento separado do estado atual.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0115:segment-01",
+          "speaker": "clinician",
+          "text": "Quando começou a história de cólica?"
+        },
+        {
+          "segment_id": "v7-draft-0115:segment-02",
+          "speaker": "patient",
+          "text": "A primeira ocorrência foi há quatro dias, mas hoje a situação é outra."
+        },
+        {
+          "segment_id": "v7-draft-0115:segment-03",
+          "speaker": "clinician",
+          "text": "O que está presente agora?"
+        },
+        {
+          "segment_id": "v7-draft-0115:segment-04",
+          "speaker": "patient",
+          "text": "Agora noto a queixa em flanco direito; o episódio antigo já passou."
+        },
+        {
+          "segment_id": "v7-draft-0115:segment-05",
+          "speaker": "clinician",
+          "text": "Vou manter o tempo do evento separado do estado atual."
+        }
+      ],
+      "scenario_family": "DISTRIBUTED_TEMPORALITY",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "SEM-TEMP-001 + SEM-XSEG-001: named past event is retained; generic current phrase does not inherit an unresolved concept.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "cólica",
+          "concept_id": "symptom.cramping",
+          "experiencer": "patient",
+          "temporality": "past",
+          "segment_ids": [
+            "v7-draft-0115:segment-01",
+            "v7-draft-0115:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0115:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0115:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0115:segment-02"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "cólica",
+          "segment_ids": [
+            "v7-draft-0115:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "flanco direito",
+          "segment_ids": [
+            "v7-draft-0115:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-TEMP-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_source_cluster": "AMB-TEMP-001",
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0116",
+      "candidate_id": "v7-draft-0116",
+      "text": "Médico: Vamos falar de dipirona.\nPaciente: Antes disso, queria comentar cólica em flanco direito.\nMédico: Certo; depois voltamos ao dipirona. O que mudou?\nPaciente: O dipirona ficou em 1 g; sobre cólica, melhorou há quatro dias.\nMédico: São tópicos diferentes e vou mantê-los separados.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0116:segment-01",
+          "speaker": "clinician",
+          "text": "Vamos falar de dipirona."
+        },
+        {
+          "segment_id": "v7-draft-0116:segment-02",
+          "speaker": "patient",
+          "text": "Antes disso, queria comentar cólica em flanco direito."
+        },
+        {
+          "segment_id": "v7-draft-0116:segment-03",
+          "speaker": "clinician",
+          "text": "Certo; depois voltamos ao dipirona. O que mudou?"
+        },
+        {
+          "segment_id": "v7-draft-0116:segment-04",
+          "speaker": "patient",
+          "text": "O dipirona ficou em 1 g; sobre cólica, melhorou há quatro dias."
+        },
+        {
+          "segment_id": "v7-draft-0116:segment-05",
+          "speaker": "clinician",
+          "text": "São tópicos diferentes e vou mantê-los separados."
+        }
+      ],
+      "scenario_family": "TOPIC_SWITCH",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "dipirona",
+          "concept_id": "medication.dipyrone",
+          "experiencer": "patient",
+          "dose": "1 g",
+          "dose_value": "1",
+          "dose_unit": "g",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0116:segment-01",
+            "v7-draft-0116:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0116:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0116:segment-04"
+            ],
+            "dose": [
+              "v7-draft-0116:segment-04"
+            ],
+            "dose_value": [
+              "v7-draft-0116:segment-04"
+            ],
+            "dose_unit": [
+              "v7-draft-0116:segment-04"
+            ],
+            "status": [
+              "v7-draft-0116:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0116:segment-04"
+            ],
+            "status": [
+              "v7-draft-0116:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "1 g",
+              "segment_ids": [
+                "v7-draft-0116:segment-04"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "cólica",
+          "concept_id": "symptom.cramping",
+          "experiencer": "patient",
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0116:segment-02",
+            "v7-draft-0116:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0116:segment-02"
+            ],
+            "experiencer": [
+              "v7-draft-0116:segment-02"
+            ],
+            "temporality": [
+              "v7-draft-0116:segment-02"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "dipirona",
+          "segment_ids": [
+            "v7-draft-0116:segment-01",
+            "v7-draft-0116:segment-03",
+            "v7-draft-0116:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "cólica",
+          "segment_ids": [
+            "v7-draft-0116:segment-02",
+            "v7-draft-0116:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "flanco direito",
+          "segment_ids": [
+            "v7-draft-0116:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0117",
+      "candidate_id": "v7-draft-0117",
+      "text": "Médico: Qual a dose do dipirona?\nPaciente: 1 g.\nMédico: E a frequência do dipirona?\nPaciente: a cada oito horas.\nMédico: Essas respostas se referem à mesma medicação?\nPaciente: Sim, à mesma.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0117:segment-01",
+          "speaker": "clinician",
+          "text": "Qual a dose do dipirona?"
+        },
+        {
+          "segment_id": "v7-draft-0117:segment-02",
+          "speaker": "patient",
+          "text": "1 g."
+        },
+        {
+          "segment_id": "v7-draft-0117:segment-03",
+          "speaker": "clinician",
+          "text": "E a frequência do dipirona?"
+        },
+        {
+          "segment_id": "v7-draft-0117:segment-04",
+          "speaker": "patient",
+          "text": "a cada oito horas."
+        },
+        {
+          "segment_id": "v7-draft-0117:segment-05",
+          "speaker": "clinician",
+          "text": "Essas respostas se referem à mesma medicação?"
+        },
+        {
+          "segment_id": "v7-draft-0117:segment-06",
+          "speaker": "patient",
+          "text": "Sim, à mesma."
+        }
+      ],
+      "scenario_family": "ELLIPTICAL_ANSWER",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "Policy-bound adjudication under v1.3; no resolver evidence used.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "dipirona",
+          "concept_id": "medication.dipyrone",
+          "experiencer": "patient",
+          "dose": "1 g",
+          "dose_value": "1",
+          "dose_unit": "g",
+          "frequency": "a cada oito horas",
+          "segment_ids": [
+            "v7-draft-0117:segment-01",
+            "v7-draft-0117:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0117:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0117:segment-02"
+            ],
+            "dose": [
+              "v7-draft-0117:segment-02"
+            ],
+            "dose_value": [
+              "v7-draft-0117:segment-02"
+            ],
+            "dose_unit": [
+              "v7-draft-0117:segment-02"
+            ],
+            "frequency": [
+              "v7-draft-0117:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0117:segment-02"
+            ],
+            "HAS_FREQUENCY": [
+              "v7-draft-0117:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "1 g",
+              "segment_ids": [
+                "v7-draft-0117:segment-02"
+              ]
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "a cada oito horas",
+              "segment_ids": [
+                "v7-draft-0117:segment-02"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "dipirona",
+          "segment_ids": [
+            "v7-draft-0117:segment-01",
+            "v7-draft-0117:segment-03"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-STATUS-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0118",
+      "candidate_id": "v7-draft-0118",
+      "text": "Médico: Você relatou cólica ontem, correto?\nPaciente: Correção: eu quis dizer flanco direito, não cólica.\nMédico: Entendi; a primeira anotação era uma hipótese?\nPaciente: Era uma confusão na fala, a queixa correta é a segunda.\nMédico: Vou manter a correção e não duplicar cólica.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0118:segment-01",
+          "speaker": "clinician",
+          "text": "Você relatou cólica ontem, correto?"
+        },
+        {
+          "segment_id": "v7-draft-0118:segment-02",
+          "speaker": "patient",
+          "text": "Correção: eu quis dizer flanco direito, não cólica."
+        },
+        {
+          "segment_id": "v7-draft-0118:segment-03",
+          "speaker": "clinician",
+          "text": "Entendi; a primeira anotação era uma hipótese?"
+        },
+        {
+          "segment_id": "v7-draft-0118:segment-04",
+          "speaker": "patient",
+          "text": "Era uma confusão na fala, a queixa correta é a segunda."
+        },
+        {
+          "segment_id": "v7-draft-0118:segment-05",
+          "speaker": "clinician",
+          "text": "Vou manter a correção e não duplicar cólica."
+        }
+      ],
+      "scenario_family": "CLINICIAN_CORRECTION",
+      "decision": "REJECTED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "SEM-CORR-001: explicit correction supersedes the rejected clinical term; location-only residue is not a clinical entity.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": null,
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "cólica",
+          "segment_ids": [
+            "v7-draft-0118:segment-01",
+            "v7-draft-0118:segment-02",
+            "v7-draft-0118:segment-05"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "flanco direito",
+          "segment_ids": [
+            "v7-draft-0118:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-CORR-001"
+      ],
+      "readjudication_source_cluster": "AMB-CORR-001",
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0119",
+      "candidate_id": "v7-draft-0119",
+      "text": "Médico: Você usa dipirona 500 mg?\nPaciente: Usava; pensando melhor, era 1 g.\nMédico: Qual informação vale para o estado atual?\nPaciente: A dose de 1 g, desde há quatro dias; a anterior está superada.\nMédico: Vou registrar a autocorreção e a transição.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0119:segment-01",
+          "speaker": "clinician",
+          "text": "Você usa dipirona 500 mg?"
+        },
+        {
+          "segment_id": "v7-draft-0119:segment-02",
+          "speaker": "patient",
+          "text": "Usava; pensando melhor, era 1 g."
+        },
+        {
+          "segment_id": "v7-draft-0119:segment-03",
+          "speaker": "clinician",
+          "text": "Qual informação vale para o estado atual?"
+        },
+        {
+          "segment_id": "v7-draft-0119:segment-04",
+          "speaker": "patient",
+          "text": "A dose de 1 g, desde há quatro dias; a anterior está superada."
+        },
+        {
+          "segment_id": "v7-draft-0119:segment-05",
+          "speaker": "clinician",
+          "text": "Vou registrar a autocorreção e a transição."
+        }
+      ],
+      "scenario_family": "PATIENT_SELF_CORRECTION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "SEM-SELF-001: later self-corrected dose owns the current attribute; no CHANGED_FROM is created from the correction.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "dipirona",
+          "concept_id": "medication.dipyrone",
+          "experiencer": "patient",
+          "dose": "1 g",
+          "dose_value": "1",
+          "dose_unit": "g",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0119:segment-01",
+            "v7-draft-0119:segment-02"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0119:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0119:segment-02"
+            ],
+            "dose": [
+              "v7-draft-0119:segment-02"
+            ],
+            "dose_value": [
+              "v7-draft-0119:segment-02"
+            ],
+            "dose_unit": [
+              "v7-draft-0119:segment-02"
+            ],
+            "status": [
+              "v7-draft-0119:segment-02"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_DOSE": [
+              "v7-draft-0119:segment-02"
+            ],
+            "status": [
+              "v7-draft-0119:segment-02"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "1 g",
+              "segment_ids": [
+                "v7-draft-0119:segment-02"
+              ]
+            }
+          ]
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "dipirona",
+          "segment_ids": [
+            "v7-draft-0119:segment-01"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-DOSE-001",
+        "SEM-SELF-001"
+      ],
+      "readjudication_source_cluster": "AMB-SELF-001",
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    },
+    {
+      "review_id": "v7-review-0120",
+      "candidate_id": "v7-draft-0120",
+      "text": "Médico: A pessoa anterior mencionou cólica. Você confirma?\nPaciente: Eu confirmo só a parte sobre flanco direito; a outra fala era de meu tio.\nMédico: Agora falando de você, qual medicamento usa?\nPaciente: Eu uso sertralina a cada oito horas, e não tenho cólica.\nMédico: A mudança de falante altera o experiencer, não o tópico automaticamente.",
+      "segments": [
+        {
+          "segment_id": "v7-draft-0120:segment-01",
+          "speaker": "clinician",
+          "text": "A pessoa anterior mencionou cólica. Você confirma?"
+        },
+        {
+          "segment_id": "v7-draft-0120:segment-02",
+          "speaker": "patient",
+          "text": "Eu confirmo só a parte sobre flanco direito; a outra fala era de meu tio."
+        },
+        {
+          "segment_id": "v7-draft-0120:segment-03",
+          "speaker": "clinician",
+          "text": "Agora falando de você, qual medicamento usa?"
+        },
+        {
+          "segment_id": "v7-draft-0120:segment-04",
+          "speaker": "patient",
+          "text": "Eu uso sertralina a cada oito horas, e não tenho cólica."
+        },
+        {
+          "segment_id": "v7-draft-0120:segment-05",
+          "speaker": "clinician",
+          "text": "A mudança de falante altera o experiencer, não o tópico automaticamente."
+        }
+      ],
+      "scenario_family": "ANAPHORA_SPEAKER_TRANSITION",
+      "decision": "APPROVED",
+      "reviewer": "NIEDE AI-assisted semantic governance — v1.3 completion",
+      "review_notes": "SEM-EXP-001 + SEM-XSEG-001: speaker is not experiencer; ambiguous prior ownership remains unresolved while explicit patient mentions are retained.",
+      "policy_version": "clinical-semantic-policy-v1.3",
+      "semantic_equivalence_group": null,
+      "gold": [
+        {
+          "surface": "sertralina",
+          "concept_id": "medication.sertraline",
+          "experiencer": "patient",
+          "frequency": "a cada oito horas",
+          "status": "active",
+          "segment_ids": [
+            "v7-draft-0120:segment-04"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0120:segment-04"
+            ],
+            "experiencer": [
+              "v7-draft-0120:segment-04"
+            ],
+            "frequency": [
+              "v7-draft-0120:segment-04"
+            ],
+            "status": [
+              "v7-draft-0120:segment-04"
+            ]
+          },
+          "relation_provenance": {
+            "HAS_FREQUENCY": [
+              "v7-draft-0120:segment-04"
+            ],
+            "status": [
+              "v7-draft-0120:segment-04"
+            ]
+          },
+          "relations": [
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "a cada oito horas",
+              "segment_ids": [
+                "v7-draft-0120:segment-04"
+              ]
+            }
+          ]
+        },
+        {
+          "surface": "cólica",
+          "concept_id": "symptom.cramping",
+          "experiencer": "patient",
+          "negated": true,
+          "temporality": "current",
+          "segment_ids": [
+            "v7-draft-0120:segment-01"
+          ],
+          "attribute_provenance": {
+            "concept": [
+              "v7-draft-0120:segment-01"
+            ],
+            "experiencer": [
+              "v7-draft-0120:segment-01"
+            ],
+            "negated": [
+              "v7-draft-0120:segment-01"
+            ],
+            "temporality": [
+              "v7-draft-0120:segment-01"
+            ]
+          },
+          "relation_provenance": {}
+        }
+      ],
+      "adjudication_form": {
+        "mentions": null,
+        "concept_id": null,
+        "negation": null,
+        "certainty": null,
+        "temporality": null,
+        "experiencer": null,
+        "laterality": null,
+        "dose": null,
+        "dose_unit": null,
+        "frequency": null,
+        "status": null,
+        "relations": null,
+        "speaker": null,
+        "segment_ownership": null,
+        "attribute_provenance": null,
+        "relation_provenance": null
+      },
+      "structural_review": {
+        "surface_exists_in_segment": null,
+        "concept_id_valid": null,
+        "segment_ids_exist": null,
+        "provenance_segments_exist": null,
+        "relation_endpoints_exist": null,
+        "attributes_schema_valid": null
+      },
+      "mention_candidates": [
+        {
+          "surface": "sertralina",
+          "segment_ids": [
+            "v7-draft-0120:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "cólica",
+          "segment_ids": [
+            "v7-draft-0120:segment-01",
+            "v7-draft-0120:segment-04"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "flanco direito",
+          "segment_ids": [
+            "v7-draft-0120:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        },
+        {
+          "surface": "meu tio",
+          "segment_ids": [
+            "v7-draft-0120:segment-02"
+          ],
+          "semantic_fields": [],
+          "gold_status": "UNSET"
+        }
+      ],
+      "review_dimensions": [
+        "mention boundaries and concept identity",
+        "attribute ownership by segment and speaker",
+        "relation endpoints and relation provenance",
+        "temporality event-vs-state interpretation",
+        "negation and correction scope"
+      ],
+      "decision_rule": "APPROVED requires explicit human gold; REJECTED/AMBIGUOUS do not create gold; PENDING remains blocked",
+      "effective_policy_version": "clinical-semantic-policy-v1.3",
+      "policy_ids": [
+        "SEM-EXP-001",
+        "SEM-XSEG-001"
+      ],
+      "readjudication_source_cluster": "AMB-SPEAKER-001",
+      "readjudication_scope": "NEW_CASE_ADJUDICATION",
+      "gold_generation": "POLICY_BOUND_ADJUDICATION_NOT_OFFICIAL_COMPOSITION"
+    }
+  ]
+}

@@ -1,0 +1,627 @@
+{
+  "case_id": "D1-014",
+  "corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "corpus_version": "D1",
+  "decisions": [],
+  "evaluation_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "mismatches": [
+    {
+      "actual": "14 mg",
+      "confidence": 0.55,
+      "details": {
+        "mention": "adesivo de nicotina",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": "7 mg",
+      "policy_rules": [
+        "ptbr-dose",
+        "ptbr-active-medication-context"
+      ],
+      "semantic_dimension": "dose",
+      "stage": "prediction"
+    },
+    {
+      "actual": "14",
+      "confidence": 0.55,
+      "details": {
+        "mention": "adesivo de nicotina",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": "7",
+      "policy_rules": [
+        "ptbr-dose",
+        "ptbr-active-medication-context"
+      ],
+      "semantic_dimension": "dose_value",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "rule": "ptbr-dose"
+          },
+          "relation_id": null,
+          "relation_type": "HAS_DOSE",
+          "source": "context:s1:2:21",
+          "source_mention_id": "context:s1:2:21",
+          "source_segment_ids": [],
+          "target": "dose",
+          "target_mention_id": "dose",
+          "value": "14 mg"
+        },
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "source_segment_ids": [
+              "s1"
+            ]
+          },
+          "relation_id": "context:s1:11:30:CHANGED_FROM:dose:14 mg",
+          "relation_type": "CHANGED_FROM",
+          "source": "context:s1:11:30",
+          "source_mention_id": "context:s1:11:30",
+          "source_segment_ids": [
+            "s1"
+          ],
+          "target": "dose",
+          "target_mention_id": "dose",
+          "value": "14 mg"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "adesivo de nicotina",
+        "projection_relation_count": 2
+      },
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "14 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "7 mg"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "1bb10024e1c729860ec01e7137294ef4b999baac43f58b5dd6096fbec2b3419e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": null,
+      "output_hash": "dc11820c0ed41bdd6f7da4a0866971786e15d3b2cc23f067cbedfd2757e484b6",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "patient",
+            "text": "O adesivo de nicotina era de 14 mg."
+          },
+          {
+            "segment_id": "s2",
+            "speaker": "patient",
+            "text": "Depois da consulta, passei para 7 mg."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-014",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "cce316c222e0f6acf4ee420b14acec31040811533dcb73c51c009e284fe4e7f7",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "dc11820c0ed41bdd6f7da4a0866971786e15d3b2cc23f067cbedfd2757e484b6",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "d57e85e3494e4e3d3aaf4a7f1df948850f646ecceebc0130372f0d15e41be1bc",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "d3fd0583b635d31ceec8dcff6f7f0fc79e64ce11f683ab208b3bb16a73e59c52",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "863c9ac415f4c0b36ac5550d0ab479eaf28dfee9e10d04e27cdd4e93b3093f69",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "f8f36ad4d0f5cedd99fc10a3134ffded0244885cd98c69066783a5be096dc40f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "04c329b876294b63a395a667431bf012e3c0db5d4ab04635fb2a0cddfc90af6f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "fc789afba2c624aeb69b78178c718c4e8f8dddcaad8cbbdf679df532a69dfa27",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            }
+          },
+          "candidate_source": "s1",
+          "source_segment_ids": [
+            "s1"
+          ],
+          "transition_attribute_ownership": {
+            "dose": {
+              "current": "14 mg",
+              "owner_mention_id": "context:s1:11:30",
+              "previous": "14 mg",
+              "source_segment_ids": [
+                "s1"
+              ]
+            }
+          }
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "14 mg",
+              "dose_unit": "mg",
+              "dose_value": "14",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O adesivo de nicotina era de 14 mg.\\npatient: Depois da consulta, passei para 7 mg.', 'rules': ('ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:21', 'owner_span': (2, 21), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:21', 'attributes': {'laterality': None, 'status': 'active'}, 'relations': [{'relation_id': None, 'relation_type': 'HAS_DOSE', 'source': 'context:s1:2:21', 'target': 'dose', 'value': '14 mg', 'source_mention_id': 'context:s1:2:21', 'target_mention_id': 'dose', 'source_segment_ids': [], 'confidence': 1.0, 'provenance': {'rule': 'ptbr-dose'}}, {'relation_id': 'context:s1:11:30:CHANGED_FROM:dose:14 mg', 'relation_type': 'CHANGED_FROM', 'source': 'context:s1:11:30', 'target': 'dose', 'value': '14 mg', 'source_mention_id': 'context:s1:11:30', 'target_mention_id': 'dose', 'source_segment_ids': ['s1'], 'confidence': 1.0, 'provenance': {'source_segment_ids': ('s1',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}, 'transition_attribute_ownership': {'dose': {'current': '14 mg', 'previous': '14 mg', 'owner_mention_id': 'context:s1:11:30', 'source_segment_ids': ('s1',)}}}, 'authority_metrics': {'resolver_decisions_total': 165, 'resolver_decisions_preserved': 154, 'resolver_decisions_overwritten': 11, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "rule": "ptbr-dose"
+                },
+                "relation_id": null,
+                "relation_type": "HAS_DOSE",
+                "source": "context:s1:2:21",
+                "source_mention_id": "context:s1:2:21",
+                "source_segment_ids": [],
+                "target": "dose",
+                "target_mention_id": "dose",
+                "value": "14 mg"
+              },
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "source_segment_ids": [
+                    "s1"
+                  ]
+                },
+                "relation_id": "context:s1:11:30:CHANGED_FROM:dose:14 mg",
+                "relation_type": "CHANGED_FROM",
+                "source": "context:s1:11:30",
+                "source_mention_id": "context:s1:11:30",
+                "source_segment_ids": [
+                  "s1"
+                ],
+                "target": "dose",
+                "target_mention_id": "dose",
+                "value": "14 mg"
+              }
+            ],
+            "surface": "adesivo de nicotina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "b1e76fe9cbb5cfc75a2a1e1a5a369b85fdbc851c094b905b2dd1f5c876c50e2c",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "fc789afba2c624aeb69b78178c718c4e8f8dddcaad8cbbdf679df532a69dfa27",
+      "output_hash": "a965dd06011c33740940980ce1ff40bc7bd318ae4bb3bd4a482e0ffbc38b8dc6",
+      "payload": {
+        "relations": [
+          [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "ptbr-dose"
+              },
+              "relation_id": null,
+              "relation_type": "HAS_DOSE",
+              "source": "context:s1:2:21",
+              "source_mention_id": "context:s1:2:21",
+              "source_segment_ids": [],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "14 mg"
+            },
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "source_segment_ids": [
+                  "s1"
+                ]
+              },
+              "relation_id": "context:s1:11:30:CHANGED_FROM:dose:14 mg",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:s1:11:30",
+              "source_mention_id": "context:s1:11:30",
+              "source_segment_ids": [
+                "s1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "14 mg"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "b3d86e871c1b2a73924ad0d597e59fb0227d82c70db9cbe7f6389861f0afbaad",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a965dd06011c33740940980ce1ff40bc7bd318ae4bb3bd4a482e0ffbc38b8dc6",
+      "output_hash": "5db25f77ff33ab51947ba37aaac9474c1ac287379b3607723aa96c04da25fe48",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "14 mg",
+              "dose_unit": "mg",
+              "dose_value": "14",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O adesivo de nicotina era de 14 mg.\\npatient: Depois da consulta, passei para 7 mg.', 'rules': ('ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:21', 'owner_span': (2, 21), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:21', 'attributes': {'laterality': None, 'status': 'active'}, 'relations': [{'relation_id': None, 'relation_type': 'HAS_DOSE', 'source': 'context:s1:2:21', 'target': 'dose', 'value': '14 mg', 'source_mention_id': 'context:s1:2:21', 'target_mention_id': 'dose', 'source_segment_ids': [], 'confidence': 1.0, 'provenance': {'rule': 'ptbr-dose'}}, {'relation_id': 'context:s1:11:30:CHANGED_FROM:dose:14 mg', 'relation_type': 'CHANGED_FROM', 'source': 'context:s1:11:30', 'target': 'dose', 'value': '14 mg', 'source_mention_id': 'context:s1:11:30', 'target_mention_id': 'dose', 'source_segment_ids': ['s1'], 'confidence': 1.0, 'provenance': {'source_segment_ids': ('s1',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}, 'transition_attribute_ownership': {'dose': {'current': '14 mg', 'previous': '14 mg', 'owner_mention_id': 'context:s1:11:30', 'source_segment_ids': ('s1',)}}}, 'authority_metrics': {'resolver_decisions_total': 165, 'resolver_decisions_preserved': 154, 'resolver_decisions_overwritten': 11, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "rule": "ptbr-dose"
+                },
+                "relation_id": null,
+                "relation_type": "HAS_DOSE",
+                "source": "context:s1:2:21",
+                "source_mention_id": "context:s1:2:21",
+                "source_segment_ids": [],
+                "target": "dose",
+                "target_mention_id": "dose",
+                "value": "14 mg"
+              },
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "source_segment_ids": [
+                    "s1"
+                  ]
+                },
+                "relation_id": "context:s1:11:30:CHANGED_FROM:dose:14 mg",
+                "relation_type": "CHANGED_FROM",
+                "source": "context:s1:11:30",
+                "source_mention_id": "context:s1:11:30",
+                "source_segment_ids": [
+                  "s1"
+                ],
+                "target": "dose",
+                "target_mention_id": "dose",
+                "value": "14 mg"
+              }
+            ],
+            "surface": "adesivo de nicotina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "98d9e6781be4e71e8cd8703d37220a6e66439f243f20976de3e29c0287193db2",
+      "changed_fields": [
+        "dose",
+        "dose_value"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "5db25f77ff33ab51947ba37aaac9474c1ac287379b3607723aa96c04da25fe48",
+      "output_hash": "5db25f77ff33ab51947ba37aaac9474c1ac287379b3607723aa96c04da25fe48",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "14 mg",
+              "dose_unit": "mg",
+              "dose_value": "14",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O adesivo de nicotina era de 14 mg.\\npatient: Depois da consulta, passei para 7 mg.', 'rules': ('ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:21', 'owner_span': (2, 21), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:21', 'attributes': {'laterality': None, 'status': 'active'}, 'relations': [{'relation_id': None, 'relation_type': 'HAS_DOSE', 'source': 'context:s1:2:21', 'target': 'dose', 'value': '14 mg', 'source_mention_id': 'context:s1:2:21', 'target_mention_id': 'dose', 'source_segment_ids': [], 'confidence': 1.0, 'provenance': {'rule': 'ptbr-dose'}}, {'relation_id': 'context:s1:11:30:CHANGED_FROM:dose:14 mg', 'relation_type': 'CHANGED_FROM', 'source': 'context:s1:11:30', 'target': 'dose', 'value': '14 mg', 'source_mention_id': 'context:s1:11:30', 'target_mention_id': 'dose', 'source_segment_ids': ['s1'], 'confidence': 1.0, 'provenance': {'source_segment_ids': ('s1',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}, 'transition_attribute_ownership': {'dose': {'current': '14 mg', 'previous': '14 mg', 'owner_mention_id': 'context:s1:11:30', 'source_segment_ids': ('s1',)}}}, 'authority_metrics': {'resolver_decisions_total': 165, 'resolver_decisions_preserved': 154, 'resolver_decisions_overwritten': 11, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "rule": "ptbr-dose"
+                },
+                "relation_id": null,
+                "relation_type": "HAS_DOSE",
+                "source": "context:s1:2:21",
+                "source_mention_id": "context:s1:2:21",
+                "source_segment_ids": [],
+                "target": "dose",
+                "target_mention_id": "dose",
+                "value": "14 mg"
+              },
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "source_segment_ids": [
+                    "s1"
+                  ]
+                },
+                "relation_id": "context:s1:11:30:CHANGED_FROM:dose:14 mg",
+                "relation_type": "CHANGED_FROM",
+                "source": "context:s1:11:30",
+                "source_mention_id": "context:s1:11:30",
+                "source_segment_ids": [
+                  "s1"
+                ],
+                "target": "dose",
+                "target_mention_id": "dose",
+                "value": "14 mg"
+              }
+            ],
+            "surface": "adesivo de nicotina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "7f1f454c71a44bab89aa8c24298b3432825ef1ec93710db9b461bd7b4655f3dc",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "5db25f77ff33ab51947ba37aaac9474c1ac287379b3607723aa96c04da25fe48",
+      "output_hash": "c462845b6ed8f9be5f2dae0d3ead0383a97df353fc675f4a6bc5832dd76a1f52",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "dose": [
+                "s2"
+              ],
+              "dose_unit": [
+                "s2"
+              ],
+              "dose_value": [
+                "s2"
+              ],
+              "status": [
+                "s2"
+              ]
+            },
+            "concept_id": "medication.nicotine_patch",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "7 mg",
+              "dose_unit": "mg",
+              "dose_value": "7",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "CHANGED_FROM": [
+                "s2"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "14 mg"
+              },
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "7 mg"
+              }
+            ],
+            "segment_ids": [
+              "s1",
+              "s2"
+            ],
+            "surface": "adesivo de nicotina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-014",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "4637ce72301d7a1656a0fdfc10edc413a8500d982696fd2adde894e8e9a7e470",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "c462845b6ed8f9be5f2dae0d3ead0383a97df353fc675f4a6bc5832dd76a1f52",
+      "output_hash": "7bca395dbd6d8e10c096eac8c9b52e6955b8c44505d17f33de37a33c7db96659",
+      "payload": {
+        "case_id": "D1-014"
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-014",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v1"
+}

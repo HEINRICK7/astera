@@ -1,0 +1,47 @@
+{
+  "engineering_regression_only": true,
+  "generalization_evidence": false,
+  "purpose": "synthetic mechanism checks; never an official benchmark",
+  "cases": [
+    {
+      "case_id": "eng-reference-medication",
+      "segments": [
+        {"segment_id": "eng-01", "speaker": "clinician", "text": "Você usa o medicamento azul?"},
+        {"segment_id": "eng-02", "speaker": "patient", "text": "Aumentei para 20 mg."}
+      ],
+      "mechanism": "reference_resolution"
+    },
+    {
+      "case_id": "eng-stale-topic",
+      "segments": [
+        {"segment_id": "eng-03", "speaker": "patient", "text": "Tomo um remédio."},
+        {"segment_id": "eng-04", "speaker": "patient", "text": "Depois falamos da dor."},
+        {"segment_id": "eng-05", "speaker": "patient", "text": "Aumentei."}
+      ],
+      "mechanism": "stale_context"
+    },
+    {
+      "case_id": "eng-ambiguous-pronoun",
+      "segments": [
+        {"segment_id": "eng-06", "speaker": "patient", "text": "Uso dois medicamentos."},
+        {"segment_id": "eng-07", "speaker": "patient", "text": "Aumentei."}
+      ],
+      "mechanism": "ambiguity"
+    },
+    {
+      "case_id": "eng-family-experiencer",
+      "segments": [
+        {"segment_id": "eng-08", "speaker": "clinician", "text": "Sua irmã tem diabetes?"},
+        {"segment_id": "eng-09", "speaker": "patient", "text": "Tem."}
+      ],
+      "mechanism": "speaker_experiencer"
+    },
+    {
+      "case_id": "eng-relation-change",
+      "segments": [
+        {"segment_id": "eng-10", "speaker": "patient", "text": "Usava 5 mg e passei para 10 mg."}
+      ],
+      "mechanism": "relation_resolution"
+    }
+  ]
+}

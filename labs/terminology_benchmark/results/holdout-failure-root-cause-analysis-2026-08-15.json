@@ -1,0 +1,400 @@
+{
+  "analysis": "Holdout Failure Root Cause Analysis — Generalization Gap",
+  "analysis_date": "2026-08-15",
+  "analysis_mode": "static reconstruction; no holdout rerun",
+  "input_result": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/context-validation-v6-holdout-0056-0058-2026-08-15.json",
+  "input_holdout_source": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v6-human-review-micro-expansion-submission-2026-08-15.json",
+  "holdout_status": {
+    "consumed_holdout": true,
+    "generalization_evidence": "historical",
+    "holdout_rerun": false,
+    "holdout_ids": [
+      "sim-v6-0056",
+      "sim-v6-0057",
+      "sim-v6-0058"
+    ],
+    "v6_frozen": true,
+    "resolver_policy_corpus_modified": false
+  },
+  "aggregate_observed": {
+    "cases_total": 3,
+    "mentions_total": 3,
+    "raw_mentions_exact": 1,
+    "policy_mentions_exact": 2,
+    "raw_relations_exact": 0,
+    "policy_relations_exact": 0,
+    "relations_total": 2,
+    "cross_segment_total": 3,
+    "raw_cross_segment_exact": 1,
+    "policy_cross_segment_exact": 2,
+    "raw_ownership_pass": 3,
+    "policy_ownership_pass": 3,
+    "raw_provenance_pass": 0,
+    "policy_provenance_pass": 0,
+    "raw_mention_exact_match": 0.3333333333333333,
+    "policy_mention_exact_match": 0.6666666666666666,
+    "raw_relation_exact_match": 0.0,
+    "policy_relation_exact_match": 0.0,
+    "raw_cross_segment_resolution": 0.3333333333333333,
+    "policy_cross_segment_resolution": 0.6666666666666666,
+    "policy_attribute_ownership": 1.0,
+    "policy_provenance": 0.0
+  },
+  "root_cause_summary": {
+    "semantic_findings_total": 3,
+    "generalization_bug_findings": 3,
+    "generalization_capability_gap_confirmed": 0,
+    "classification_counts": {
+      "CANDIDATE_MISSING": 0,
+      "ATTRIBUTE_NOT_PROPAGATED": 0,
+      "RELATION_NOT_GENERATED": 2,
+      "RELATION_FILTERED": 0,
+      "CROSS_SEGMENT_REFERENCE_FAILURE": 0,
+      "TEMPORAL_OWNERSHIP_FAILURE": 1,
+      "PROVENANCE_MATERIALIZATION_FAILURE": 0,
+      "POLICY_MISMATCH": 0
+    },
+    "primary_root_causes": [
+      "0057: cross-segment laterality attribute is resolved but HAS_LATERALITY is not generated",
+      "0058: single answer dose is resolved but HAS_DOSE is not generated",
+      "0058: event cue ontem is assigned to medication state temporality"
+    ],
+    "capability_gap_statement": "No capability gap is proven by these two cases. The existing system identifies the antecedents and values; the observed failures are missing relation materialization and temporal ownership. A future event/state representation may be needed, but that remains a hypothesis, not an authorized repair conclusion."
+  },
+  "provenance_audit": {
+    "observed_check": "0/3",
+    "failed_cases": [
+      "sim-v6-0056",
+      "sim-v6-0057",
+      "sim-v6-0058"
+    ],
+    "classification": "PROVENANCE_MATERIALIZATION_FAILURE",
+    "contributing_evaluator_condition": "HARNESS_NORMALIZATION_MISMATCH",
+    "finding_scope": "independent_of_missing_relation_findings",
+    "cause": "the holdout provenance contract requires provenance.source_text to equal the full conversation text; the local candidate is built from the target segment and the authoritative materialization preserves that segment-scoped source_text",
+    "evidence": [
+      "run_holdout_v6.py:_provenance_ok requires source_text == case.text",
+      "cross_segment_context.py:_local_result passes target.text to the local adapter",
+      "context_safety.py returns source_text=query.text for that localized candidate",
+      "AuthoritativeProjectionWriter preserves local_candidate.provenance before adding resolved metadata"
+    ],
+    "confidence": "high",
+    "not_counted_as_relation_cause": true,
+    "next_action": "human gate; decide whether provenance should be full-conversation or explicitly segment-scoped before any repair"
+  },
+  "traces": [
+    {
+      "case_id": "sim-v6-0056",
+      "text": "Médico: Alguém da família tem diabetes?\nPaciente: Minha irmã tem.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0056:segment-01",
+          "speaker": "clinician",
+          "text": "Alguém da família tem diabetes?"
+        },
+        {
+          "segment_id": "sim-v6-0056:segment-02",
+          "speaker": "patient",
+          "text": "Minha irmã tem."
+        }
+      ],
+      "trace_status": "STATIC_RECONSTRUCTION_FROM_CONSUMED_ONE_SHOT_RESULT",
+      "local_mentions": [
+        {
+          "surface": "diabetes",
+          "concept_id": "condition.diabetes",
+          "segment_id": "sim-v6-0056:segment-01"
+        }
+      ],
+      "candidate_attributes": [
+        {
+          "field": "experiencer",
+          "value": "family",
+          "source_segment_id": "sim-v6-0056:segment-02",
+          "rule": "family continuity"
+        },
+        {
+          "field": "temporality",
+          "value": "current",
+          "source_segment_id": "sim-v6-0056:segment-02",
+          "rule": "current assertion"
+        }
+      ],
+      "selected_antecedent": {
+        "antecedent": "diabetes",
+        "segment_id": "sim-v6-0056:segment-01",
+        "status": "selected"
+      },
+      "resolved_attributes": {
+        "negated": false,
+        "certainty": "confirmed",
+        "temporality": "current",
+        "experiencer": "family",
+        "laterality": null,
+        "dose": null,
+        "dose_value": null,
+        "dose_unit": null,
+        "frequency": null,
+        "route": null,
+        "status": null
+      },
+      "resolved_relations": [],
+      "projected_relations": [],
+      "evaluated_result": {
+        "mention_exact": true,
+        "relation_exact": true,
+        "attribute_ownership": true,
+        "provenance_check": false
+      },
+      "expected": {
+        "fields": {
+          "negated": false,
+          "certainty": "confirmed",
+          "temporality": "current",
+          "experiencer": "family",
+          "laterality": null,
+          "dose": null,
+          "dose_value": null,
+          "dose_unit": null,
+          "frequency": null,
+          "route": null,
+          "status": null
+        },
+        "relations": []
+      },
+      "root_findings": []
+    },
+    {
+      "case_id": "sim-v6-0057",
+      "text": "Médico: A dor voltou?\nPaciente: Só do lado esquerdo agora.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0057:segment-01",
+          "speaker": "clinician",
+          "text": "A dor voltou?"
+        },
+        {
+          "segment_id": "sim-v6-0057:segment-02",
+          "speaker": "patient",
+          "text": "Só do lado esquerdo agora."
+        }
+      ],
+      "trace_status": "STATIC_RECONSTRUCTION_FROM_CONSUMED_ONE_SHOT_RESULT",
+      "local_mentions": [
+        {
+          "surface": "dor",
+          "concept_id": "symptom.pain",
+          "segment_id": "sim-v6-0057:segment-01"
+        }
+      ],
+      "candidate_attributes": [
+        {
+          "field": "laterality",
+          "value": "left",
+          "source_segment_id": "sim-v6-0057:segment-02",
+          "rule": "_last_laterality + continuity attachment"
+        }
+      ],
+      "selected_antecedent": {
+        "antecedent": "dor",
+        "segment_id": "sim-v6-0057:segment-01",
+        "status": "selected"
+      },
+      "resolved_attributes": {
+        "negated": false,
+        "certainty": "confirmed",
+        "temporality": "current",
+        "experiencer": "patient",
+        "laterality": "left",
+        "dose": null,
+        "dose_value": null,
+        "dose_unit": null,
+        "frequency": null,
+        "route": null,
+        "status": null
+      },
+      "resolved_relations": [],
+      "projected_relations": [],
+      "evaluated_result": {
+        "mention_exact": true,
+        "relation_exact": false,
+        "attribute_ownership": true,
+        "provenance_check": false
+      },
+      "expected": {
+        "fields": {
+          "negated": false,
+          "certainty": "confirmed",
+          "temporality": "current",
+          "experiencer": "patient",
+          "laterality": "left",
+          "dose": null,
+          "dose_value": null,
+          "dose_unit": null,
+          "frequency": null,
+          "route": null,
+          "status": "present"
+        },
+        "relations": [
+          {
+            "relation_type": "HAS_LATERALITY",
+            "target": "laterality",
+            "value": "left"
+          }
+        ]
+      },
+      "root_findings": [
+        {
+          "finding_id": "0057-F1",
+          "classification": "RELATION_NOT_GENERATED",
+          "generalization_class": "GENERALIZATION_BUG",
+          "first_divergence_stage": "Relation Resolution",
+          "root_cause": "laterality is attached to the resolved mention, but the continuity path does not create HAS_LATERALITY for a cross-segment attribute-only answer",
+          "evidence": [
+            "stored policy-aligned laterality is left",
+            "stored projected relations are empty",
+            "_apply_continuity assigns laterality at cross_segment_context.py:373-381",
+            "_materialize_authoritative reads only candidate_result.provenance['projection']['relations'] at cross_segment_context.py:153-167"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "case_id": "sim-v6-0058",
+      "text": "Médico: Qual dose da metformina?\nPaciente: Aumentei para 850 mg ontem.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0058:segment-01",
+          "speaker": "clinician",
+          "text": "Qual dose da metformina?"
+        },
+        {
+          "segment_id": "sim-v6-0058:segment-02",
+          "speaker": "patient",
+          "text": "Aumentei para 850 mg ontem."
+        }
+      ],
+      "trace_status": "STATIC_RECONSTRUCTION_FROM_CONSUMED_ONE_SHOT_RESULT",
+      "local_mentions": [
+        {
+          "surface": "metformina",
+          "concept_id": "medication.metformin",
+          "segment_id": "sim-v6-0058:segment-01"
+        }
+      ],
+      "candidate_attributes": [
+        {
+          "field": "dose",
+          "value": "850 mg",
+          "source_segment_id": "sim-v6-0058:segment-02",
+          "rule": "_last_dose + continuity attachment"
+        },
+        {
+          "field": "dose_value",
+          "value": "850",
+          "source_segment_id": "sim-v6-0058:segment-02",
+          "rule": "_last_dose + continuity attachment"
+        },
+        {
+          "field": "dose_unit",
+          "value": "mg",
+          "source_segment_id": "sim-v6-0058:segment-02",
+          "rule": "_last_dose + continuity attachment"
+        },
+        {
+          "field": "temporality",
+          "value": "past",
+          "source_segment_id": "sim-v6-0058:segment-02",
+          "cue": "ontem"
+        }
+      ],
+      "selected_antecedent": {
+        "antecedent": "metformina",
+        "segment_id": "sim-v6-0058:segment-01",
+        "status": "selected"
+      },
+      "resolved_attributes": {
+        "negated": false,
+        "certainty": "confirmed",
+        "temporality": "past",
+        "experiencer": "patient",
+        "laterality": null,
+        "dose": "850 mg",
+        "dose_value": "850",
+        "dose_unit": "mg",
+        "frequency": null,
+        "route": null,
+        "status": "active"
+      },
+      "resolved_relations": [],
+      "projected_relations": [],
+      "evaluated_result": {
+        "mention_exact": false,
+        "relation_exact": false,
+        "attribute_ownership": true,
+        "provenance_check": false
+      },
+      "expected": {
+        "fields": {
+          "negated": false,
+          "certainty": "confirmed",
+          "temporality": "current",
+          "experiencer": "patient",
+          "laterality": null,
+          "dose": "850 mg",
+          "dose_value": "850",
+          "dose_unit": "mg",
+          "frequency": null,
+          "route": null,
+          "status": "active"
+        },
+        "relations": [
+          {
+            "relation_type": "HAS_DOSE",
+            "target": "dose",
+            "value": "850 mg"
+          }
+        ]
+      },
+      "root_findings": [
+        {
+          "finding_id": "0058-F1",
+          "classification": "RELATION_NOT_GENERATED",
+          "generalization_class": "GENERALIZATION_BUG",
+          "first_divergence_stage": "Relation Resolution",
+          "root_cause": "the question-answer dose attachment populates dose fields, but HAS_DOSE is generated only by the local projection or the two-dose transition path; this answer contains one new dose and therefore reaches projection with no relation",
+          "evidence": [
+            "stored policy-aligned dose fields are all correct",
+            "stored projected relations are empty",
+            "_apply_continuity assigns dose fields at cross_segment_context.py:383-393",
+            "_augment_transition_relations returns when fewer than two dose values are available, so a single answer dose is not projected"
+          ],
+          "confidence": "high"
+        },
+        {
+          "finding_id": "0058-F2",
+          "classification": "TEMPORAL_OWNERSHIP_FAILURE",
+          "generalization_class": "GENERALIZATION_BUG",
+          "first_divergence_stage": "Cross-Segment Resolution",
+          "root_cause": "the temporal cue ontem is assigned to the medication mention itself, although the approved semantics treat the dose-change event time separately from the current medication state",
+          "evidence": [
+            "stored expected temporality is current and actual temporality is past",
+            "_PAST_CUE includes ontem at cross_segment_context.py:49-52",
+            "following-text logic overwrites current with past at cross_segment_context.py:400-402",
+            "dose and active status are otherwise resolved correctly"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "controls": {
+    "0056": "semantic pass; retained as a passed historical control, with the same provenance contract failure",
+    "relations": "not frozen as a successful generalization capability; V6 relation score does not cover these unseen relation forms",
+    "repair_after_holdout": "NOT_AUTHORIZED",
+    "v7": "BLOCKED",
+    "shadow": "BLOCKED",
+    "production": "BLOCKED"
+  }
+}

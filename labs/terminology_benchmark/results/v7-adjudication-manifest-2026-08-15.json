@@ -1,0 +1,48 @@
+{
+  "status": "HUMAN_ADJUDICATION_IN_PROGRESS",
+  "corpus": "V7 Unseen Generalization",
+  "policy_version": "clinical-semantic-policy-v1.2",
+  "source_draft": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/v7_unseen_generalization_draft.jsonl",
+  "source_draft_sha256": "81a3c62eeba3b56e69f18e5906ccd4db364c1c7d1021593d7779a323a0400c34",
+  "batch_count": 8,
+  "batch_size": 30,
+  "case_count": 240,
+  "case_ranges": [
+    "001-030",
+    "031-060",
+    "061-090",
+    "091-120",
+    "121-150",
+    "151-180",
+    "181-210",
+    "211-240"
+  ],
+  "batch_paths": [
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-adjudication-batches-2026-08-15/v7-batch-01-cases-001-030.json",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-adjudication-batches-2026-08-15/v7-batch-02-cases-031-060.json",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-adjudication-batches-2026-08-15/v7-batch-03-cases-061-090.json",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-adjudication-batches-2026-08-15/v7-batch-04-cases-091-120.json",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-adjudication-batches-2026-08-15/v7-batch-05-cases-121-150.json",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-adjudication-batches-2026-08-15/v7-batch-06-cases-151-180.json",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-adjudication-batches-2026-08-15/v7-batch-07-cases-181-210.json",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-adjudication-batches-2026-08-15/v7-batch-08-cases-211-240.json"
+  ],
+  "decision_counts": {
+    "APPROVED": 0,
+    "REJECTED": 0,
+    "AMBIGUOUS": 0,
+    "PENDING_HUMAN": 240
+  },
+  "mentions": 0,
+  "relations": 0,
+  "cross_segment_cases": null,
+  "provenance_valid": null,
+  "adjudication_consistency": "NOT_COMPUTABLE_PENDING_HUMAN",
+  "human_review_complete": false,
+  "gold_validation_complete": false,
+  "corpus_freeze_complete": false,
+  "official_v7_run": false,
+  "resolver_executed": false,
+  "shadow_integration": "BLOCKED",
+  "production": "BLOCKED"
+}

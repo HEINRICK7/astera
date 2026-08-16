@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "candidate_cases": 36,
+  "compared_corpus_files": [
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_clinical_semantics_v2.jsonl",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_clinical_semantics_v3.jsonl",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_clinical_semantics_v4.jsonl",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_clinical_semantics_v5.jsonl",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_clinical_semantics_v6.jsonl",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_clinical_semantics_v6_draft.jsonl",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_terminology_v1.jsonl",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/v7_unseen_generalization_draft.jsonl",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/v7_unseen_generalization_official.jsonl",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/EVALUATION_TRACE_SCHEMA.json",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/clinical_conversational_engineering_regression.json",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/historical_failure_manifest.json",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/post_holdout_generalization_holdout_v2.json",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/provider_asset_registry.json",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_context_rules_v1.json"
+  ],
+  "exact_normalized_text_collisions": [],
+  "collision_count": 0,
+  "trace_test_fixture_texts_used": false,
+  "holdouts_consumed_reused": false,
+  "v7_reused": false
+}

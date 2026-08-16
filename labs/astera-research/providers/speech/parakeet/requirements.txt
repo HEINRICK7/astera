@@ -1,0 +1,3 @@
+httpx>=0.27,<1.0
+websockets>=12,<16
+jiwer>=3,<4

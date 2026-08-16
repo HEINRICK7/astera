@@ -1,0 +1,130 @@
+{
+  "status": "experimental-only",
+  "corpus": "pt_br_clinical_semantics_v3",
+  "cases": 80,
+  "production_promotion": false,
+  "baseline": {
+    "provider": "deterministic-context-baseline",
+    "metadata": null,
+    "cases": 80,
+    "attribute_accuracy": {
+      "negated": 0.8736842105263158,
+      "certainty": 0.5894736842105263,
+      "temporality": 0.8,
+      "experiencer": 0.9052631578947369,
+      "dose": 0.0,
+      "dose_value": 0.0,
+      "dose_unit": 0.0,
+      "status": 0.0,
+      "frequency": 0.0,
+      "route": 0.0,
+      "laterality": 0.0,
+      "provenance": 1.0,
+      "mention_exact_match": 0.05263157894736842
+    },
+    "hard_gate_thresholds": {
+      "negated": 0.9,
+      "certainty": 0.9,
+      "temporality": 0.9,
+      "experiencer": 0.95,
+      "dose": 0.9,
+      "provenance": 1.0,
+      "mention_exact_match": 0.9
+    },
+    "mean_latency_ms": 0.5063961897241441,
+    "startup_seconds": 0.0,
+    "hard_gate_passed": false
+  },
+  "medspacy": {
+    "status": "executed",
+    "report": {
+      "provider": "medspacy",
+      "metadata": {
+        "code_license": "MIT",
+        "data_license": "not applicable",
+        "model_license": "not applicable (default medspaCy pipeline)",
+        "vocabulary": "NIEDE PT-BR context rules",
+        "vocabulary_version": "niede-pt-br-context-v1",
+        "source_uri": "local://labs/terminology_benchmark/data/pt_br_context_rules_v1.json",
+        "model_path": null,
+        "asset_bytes": 828,
+        "asset_sha256": "2025e1592be4d731350530e37fb1c7034b08e815cd3f590095cb3c3cccd747dc",
+        "notes": "medspaCy ConText plus project-owned PT-BR rules."
+      },
+      "cases": 80,
+      "attribute_accuracy": {
+        "negated": 0.8421052631578947,
+        "certainty": 0.8736842105263158,
+        "temporality": 0.8210526315789474,
+        "experiencer": 0.9473684210526315,
+        "dose": 0.0,
+        "dose_value": 0.0,
+        "dose_unit": 0.0,
+        "status": 0.0,
+        "frequency": 0.0,
+        "route": 0.0,
+        "laterality": 0.0,
+        "provenance": 1.0,
+        "mention_exact_match": 0.24210526315789474
+      },
+      "hard_gate_thresholds": {
+        "negated": 0.9,
+        "certainty": 0.9,
+        "temporality": 0.9,
+        "experiencer": 0.95,
+        "dose": 0.9,
+        "provenance": 1.0,
+        "mention_exact_match": 0.9
+      },
+      "mean_latency_ms": 5.29984422242514,
+      "startup_seconds": 1.5846679050009698,
+      "hard_gate_passed": false
+    }
+  },
+  "hybrid": {
+    "status": "executed",
+    "report": {
+      "provider": "hybrid-medspacy+niede-pt-br",
+      "metadata": {
+        "code_license": "MIT",
+        "data_license": "not applicable",
+        "model_license": "not applicable (default medspaCy pipeline)",
+        "vocabulary": "NIEDE PT-BR context rules",
+        "vocabulary_version": "niede-pt-br-context-v1",
+        "source_uri": "local://labs/terminology_benchmark/data/pt_br_context_rules_v1.json",
+        "model_path": null,
+        "asset_bytes": 828,
+        "asset_sha256": "2025e1592be4d731350530e37fb1c7034b08e815cd3f590095cb3c3cccd747dc",
+        "notes": "medspaCy ConText plus project-owned PT-BR rules."
+      },
+      "cases": 80,
+      "attribute_accuracy": {
+        "negated": 1.0,
+        "certainty": 1.0,
+        "temporality": 1.0,
+        "experiencer": 1.0,
+        "dose": 1.0,
+        "dose_value": 1.0,
+        "dose_unit": 1.0,
+        "status": 1.0,
+        "frequency": 1.0,
+        "route": 1.0,
+        "laterality": 1.0,
+        "provenance": 1.0,
+        "mention_exact_match": 1.0
+      },
+      "hard_gate_thresholds": {
+        "negated": 0.9,
+        "certainty": 0.9,
+        "temporality": 0.9,
+        "experiencer": 0.95,
+        "dose": 0.9,
+        "provenance": 1.0,
+        "mention_exact_match": 0.9
+      },
+      "mean_latency_ms": 3.9953953369005926,
+      "startup_seconds": 1.5846679050009698,
+      "hard_gate_passed": true
+    }
+  }
+}

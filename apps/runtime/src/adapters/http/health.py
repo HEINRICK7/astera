@@ -18,10 +18,7 @@ from fastapi.responses import JSONResponse
 
 from apps.runtime.src.ports.inbound import KernelPort
 
-router = APIRouter(tags=["Kernel"])
-
-
-def create_health_router(kernel: KernelPort) -> APIRouter:
+def create_health_router(kernel: KernelPort, dependencies: object | None = None) -> APIRouter:
     """
     Factory that creates all health/version routes with the Kernel injected.
 
@@ -31,6 +28,8 @@ def create_health_router(kernel: KernelPort) -> APIRouter:
     Returns:
         A configured APIRouter.
     """
+
+    router = APIRouter(tags=["Kernel"])
 
     @router.get(
         "/health",
@@ -68,7 +67,21 @@ def create_health_router(kernel: KernelPort) -> APIRouter:
             )
         try:
             health = await kernel.get_health()
+            if dependencies is not None:
+                dependency_health = await dependencies.health()
+                if not all(item.get("ready", False) for item in dependency_health.values()):
+                    raise HTTPException(
+                        status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                        detail={
+                            "status": "not_ready",
+                            "reason": "One or more production dependencies are unavailable.",
+                            "dependencies": dependency_health,
+                        },
+                    )
+                health["dependencies"] = dependency_health
             return JSONResponse(content={"status": "ready", **health})
+        except HTTPException:
+            raise
         except Exception as exc:
             raise HTTPException(
                 status_code=status.HTTP_503_SERVICE_UNAVAILABLE,

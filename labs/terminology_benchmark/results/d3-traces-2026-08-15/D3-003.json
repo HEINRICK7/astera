@@ -1,0 +1,1270 @@
+{
+  "case_id": "D3-003",
+  "corpus_checksum": "cef75b21b8eae6ec940b9f6cffe3d27fbe5b050db838569f3f19ef68434f1b0d",
+  "corpus_version": "D3",
+  "decisions": [],
+  "evaluation_id": "d3-one-shot-4c137795-99d1-4973-a98d-20eb89de0617",
+  "mismatches": [
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "lamotrigina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    },
+    {
+      "actual": [],
+      "confidence": 0.86,
+      "details": {
+        "mention": "lamotrigina",
+        "relation_output_count": 0
+      },
+      "expected": [
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "100 mg"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "d7dda54457cf896392e41edc8c259098b190c1c9bfa1ed82c6a1e5c7a46a59a7",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "7651c9a03f02da974bac9eba31f3e0c2b2a910cca2f94d4dfe60af58df9b20c3",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "1fc6005ce18f37f5bb69a26cb6f98a92a82c723e98277af948de3071b3bd91b0",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "q1",
+            "speaker": "clinician",
+            "text": "A receita menciona lamotrigina."
+          },
+          {
+            "segment_id": "q2",
+            "speaker": "patient",
+            "text": "Tomo 100 mg no horário do almoço."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-003",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "dcb6d1c3df816e8b073659a1306a4523366693a12ee3deb26cfd82ee0d89273f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "1fc6005ce18f37f5bb69a26cb6f98a92a82c723e98277af948de3071b3bd91b0",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "fbfbb1c8a9269779a1054e4c9055f0cc2829e1f223d3e5ee98bfd4f7d9981dfe",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "lamotrigina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "100 mg",
+            "dose_unit": "mg",
+            "dose_value": "100",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "106fb1c8170c9d2e651d700d0f6b991ecd126d334a9f5bac8d763e91ea015e8e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "lamotrigina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "100 mg",
+            "dose_unit": "mg",
+            "dose_value": "100",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "d744c248e870864eee04fff4c67ee9fad12d924d06b3c8bbeb8b607df41cfe8e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "lamotrigina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "100 mg",
+            "dose_unit": "mg",
+            "dose_value": "100",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "e07a53152f675420bc619fd095eb5353fe3757dbcfc606d4152a65b2cc068cd5",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          },
+          "dose": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q2"
+            ]
+          },
+          "dose_unit": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q2"
+            ]
+          },
+          "dose_value": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q2"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "a23da583efe90d7f949e2811397db51f133ac84db0eb06533e1b16440c7cab7f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "e07a53152f675420bc619fd095eb5353fe3757dbcfc606d4152a65b2cc068cd5",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "808252260f8d0ca2254ca89ca27f1c3c1f88e9c6ea93cc038ea5cb66c278a5ef",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "f7192f9692e35f4201215602ff412e5d6edf727753193863b16daf6717bae859",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "dose": [
+              "q2"
+            ],
+            "dose_unit": [
+              "q2"
+            ],
+            "dose_value": [
+              "q2"
+            ]
+          },
+          "candidate_source": "q1",
+          "owner_mention_id": "context:q1",
+          "owner_type": null,
+          "source_segment_ids": [
+            "q1"
+          ],
+          "transition_evidence": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: A receita menciona lamotrigina.\\npatient: Tomo 100 mg no horário do almoço.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:q1:19:30', 'owner_span': (19, 30), 'source_evidence_id': 'context:q1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('q1',), 'candidate_source': 'q1', 'owner_type': None, 'owner_mention_id': 'context:q1', 'attribute_provenance': {'dose': ['q2'], 'dose_value': ['q2'], 'dose_unit': ['q2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'certainty': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'temporality': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'experiencer': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'dose': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_value': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_unit': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 33, 'resolver_decisions_preserved': 22, 'resolver_decisions_overwritten': 11, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'q1', 'conversation_segment_ids': ['q2']}",
+            "relations": [],
+            "surface": "lamotrigina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "2fabc1b00d344d0b5a7962927a7c49faf446299caf13fdb3643ce6573c3e7a33",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        },
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "lamotrigina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "100 mg",
+            "dose_unit": "mg",
+            "dose_value": "100",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        }
+      },
+      "input_hash": "f7192f9692e35f4201215602ff412e5d6edf727753193863b16daf6717bae859",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "88c2ec8f25d988217a9a06923437bce12ccca171a833838de44c7fd21f554b4b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "lamotrigina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "100 mg",
+            "dose_unit": "mg",
+            "dose_value": "100",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "43ef86ff9a213fa42049d6ee4983da20cc0c32576442ee084cf026c06d49b8c4",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: A receita menciona lamotrigina.\\npatient: Tomo 100 mg no horário do almoço.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:q1:19:30', 'owner_span': (19, 30), 'source_evidence_id': 'context:q1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('q1',), 'candidate_source': 'q1', 'owner_type': None, 'owner_mention_id': 'context:q1', 'attribute_provenance': {'dose': ['q2'], 'dose_value': ['q2'], 'dose_unit': ['q2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'certainty': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'temporality': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'experiencer': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'dose': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_value': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_unit': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 33, 'resolver_decisions_preserved': 22, 'resolver_decisions_overwritten': 11, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'q1', 'conversation_segment_ids': ['q2']}",
+            "relations": [],
+            "surface": "lamotrigina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "201ead16384ba963b371fd12990a6cb24cebddf53325dd80c24e3cb68f479791",
+      "changed_fields": [
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "43ef86ff9a213fa42049d6ee4983da20cc0c32576442ee084cf026c06d49b8c4",
+      "output_hash": "43ef86ff9a213fa42049d6ee4983da20cc0c32576442ee084cf026c06d49b8c4",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: A receita menciona lamotrigina.\\npatient: Tomo 100 mg no horário do almoço.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:q1:19:30', 'owner_span': (19, 30), 'source_evidence_id': 'context:q1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('q1',), 'candidate_source': 'q1', 'owner_type': None, 'owner_mention_id': 'context:q1', 'attribute_provenance': {'dose': ['q2'], 'dose_value': ['q2'], 'dose_unit': ['q2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'certainty': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'temporality': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'experiencer': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'dose': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_value': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_unit': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 33, 'resolver_decisions_preserved': 22, 'resolver_decisions_overwritten': 11, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'q1', 'conversation_segment_ids': ['q2']}",
+            "relations": [],
+            "surface": "lamotrigina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-003",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "05b5c393ef07e5b6f7dc6a66f614931b958c300f6e667bc44d03ca0d4eb4505f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "43ef86ff9a213fa42049d6ee4983da20cc0c32576442ee084cf026c06d49b8c4",
+      "output_hash": "11b6a2844c0a12e7970c357d099e1e458f7f57de9f878e24aa3c251b5524e203",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "dose": [
+                "q2"
+              ],
+              "dose_unit": [
+                "q2"
+              ],
+              "dose_value": [
+                "q2"
+              ],
+              "status": [
+                "q2"
+              ]
+            },
+            "concept_id": "medication.lamotrigine",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "100 mg",
+              "dose_unit": "mg",
+              "dose_value": "100",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "HAS_DOSE": [
+                "q2"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "100 mg"
+              }
+            ],
+            "segment_ids": [
+              "q1",
+              "q2"
+            ],
+            "surface": "lamotrigina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-003",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "060e44f6430f9418f40a97a8da8289751eb56d0c970fa00823eef989344f3630",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "11b6a2844c0a12e7970c357d099e1e458f7f57de9f878e24aa3c251b5524e203",
+      "output_hash": "7646c56fe233a8a2c6593121f7d8e57cffe8391c68a169011a4feccdb3c40b08",
+      "payload": {
+        "case_id": "D3-003",
+        "mismatch_count": 2
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-003",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

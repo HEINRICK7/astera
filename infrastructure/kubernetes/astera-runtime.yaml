@@ -1,0 +1,115 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: astera
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: astera-runtime
+  namespace: astera
+  labels:
+    app.kubernetes.io/name: astera-runtime
+    app.kubernetes.io/part-of: astera
+spec:
+  replicas: 2
+  revisionHistoryLimit: 5
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: astera-runtime
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: astera-runtime
+        app.kubernetes.io/part-of: astera
+    spec:
+      serviceAccountName: astera-runtime
+      securityContext:
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: runtime
+          image: ghcr.io/astera/astera-runtime:0.1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8000
+          env:
+            - name: ASTERA_ENVIRONMENT
+              value: production
+            - name: ASTERA_API_HOST
+              value: 0.0.0.0
+            - name: ASTERA_API_PORT
+              value: "8000"
+            - name: ASTERA_AUTH_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: astera-runtime-secrets
+                  key: auth-secret
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 6
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 15
+            periodSeconds: 20
+            timeoutSeconds: 3
+            failureThreshold: 3
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 1000m
+              memory: 1Gi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: astera-runtime
+  namespace: astera
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: astera-runtime
+  namespace: astera
+  labels:
+    app.kubernetes.io/name: astera-runtime
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: astera-runtime
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: astera-runtime
+  namespace: astera
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: astera-runtime

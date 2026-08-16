@@ -9,9 +9,11 @@
       "extensions": [
         "ms-python.python",
         "ms-python.vscode-pylance",
-        "ms-python.black-formatter"
+        "ms-python.black-formatter",
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
       ]
     }
   },
-  "postCreateCommand": "pip install -U pip"
+  "postCreateCommand": "pip install -U pip && pip install -r requirements.txt -r requirements-dev.txt"
 }

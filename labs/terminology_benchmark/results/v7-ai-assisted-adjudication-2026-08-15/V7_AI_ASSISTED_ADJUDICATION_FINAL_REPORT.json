@@ -1,0 +1,334 @@
+{
+  "status": "HUMAN_GATE_FINAL_ADJUDICATION",
+  "scope": "BATCHES_05_08_ONLY",
+  "policy_version": "1.2",
+  "case_count": 120,
+  "decision_counts": {
+    "APPROVED": 70,
+    "REJECTED": 0,
+    "AMBIGUOUS": 50,
+    "PENDING_HUMAN": 0
+  },
+  "mentions": 110,
+  "relations": 99,
+  "provenance_valid_approved_cases": 70,
+  "batch_results": [
+    {
+      "batch_id": "v7-batch-05",
+      "case_range": "121-150",
+      "decision_counts": {
+        "APPROVED": 19,
+        "REJECTED": 0,
+        "AMBIGUOUS": 11,
+        "PENDING_HUMAN": 0
+      },
+      "structural_validation": "PASS",
+      "mentions": 30,
+      "relations": 26,
+      "provenance_valid": 19,
+      "output": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-ai-assisted-adjudication-2026-08-15/v7-batch-05-ai-proposal.json"
+    },
+    {
+      "batch_id": "v7-batch-06",
+      "case_range": "151-180",
+      "decision_counts": {
+        "APPROVED": 16,
+        "REJECTED": 0,
+        "AMBIGUOUS": 14,
+        "PENDING_HUMAN": 0
+      },
+      "structural_validation": "PASS",
+      "mentions": 25,
+      "relations": 23,
+      "provenance_valid": 16,
+      "output": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-ai-assisted-adjudication-2026-08-15/v7-batch-06-ai-proposal.json"
+    },
+    {
+      "batch_id": "v7-batch-07",
+      "case_range": "181-210",
+      "decision_counts": {
+        "APPROVED": 19,
+        "REJECTED": 0,
+        "AMBIGUOUS": 11,
+        "PENDING_HUMAN": 0
+      },
+      "structural_validation": "PASS",
+      "mentions": 30,
+      "relations": 27,
+      "provenance_valid": 19,
+      "output": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-ai-assisted-adjudication-2026-08-15/v7-batch-07-ai-proposal.json"
+    },
+    {
+      "batch_id": "v7-batch-08",
+      "case_range": "211-240",
+      "decision_counts": {
+        "APPROVED": 16,
+        "REJECTED": 0,
+        "AMBIGUOUS": 14,
+        "PENDING_HUMAN": 0
+      },
+      "structural_validation": "PASS",
+      "mentions": 25,
+      "relations": 23,
+      "provenance_valid": 16,
+      "output": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v7-ai-assisted-adjudication-2026-08-15/v7-batch-08-ai-proposal.json"
+    }
+  ],
+  "ambiguity_clusters": {
+    "AMB-CORR-001": {
+      "count": 10,
+      "case_ids": [
+        "v7-draft-0130",
+        "v7-draft-0142",
+        "v7-draft-0154",
+        "v7-draft-0166",
+        "v7-draft-0178",
+        "v7-draft-0190",
+        "v7-draft-0202",
+        "v7-draft-0214",
+        "v7-draft-0226",
+        "v7-draft-0238"
+      ]
+    },
+    "AMB-FREQ-001": {
+      "count": 10,
+      "case_ids": [
+        "v7-draft-0123",
+        "v7-draft-0135",
+        "v7-draft-0147",
+        "v7-draft-0159",
+        "v7-draft-0171",
+        "v7-draft-0183",
+        "v7-draft-0195",
+        "v7-draft-0207",
+        "v7-draft-0219",
+        "v7-draft-0231"
+      ]
+    },
+    "AMB-SELF-001": {
+      "count": 10,
+      "case_ids": [
+        "v7-draft-0131",
+        "v7-draft-0143",
+        "v7-draft-0155",
+        "v7-draft-0167",
+        "v7-draft-0179",
+        "v7-draft-0191",
+        "v7-draft-0203",
+        "v7-draft-0215",
+        "v7-draft-0227",
+        "v7-draft-0239"
+      ]
+    },
+    "AMB-SPEAKER-001": {
+      "count": 10,
+      "case_ids": [
+        "v7-draft-0132",
+        "v7-draft-0144",
+        "v7-draft-0156",
+        "v7-draft-0168",
+        "v7-draft-0180",
+        "v7-draft-0192",
+        "v7-draft-0204",
+        "v7-draft-0216",
+        "v7-draft-0228",
+        "v7-draft-0240"
+      ]
+    },
+    "AMB-TEMP-001": {
+      "count": 10,
+      "case_ids": [
+        "v7-draft-0127",
+        "v7-draft-0139",
+        "v7-draft-0151",
+        "v7-draft-0163",
+        "v7-draft-0175",
+        "v7-draft-0187",
+        "v7-draft-0199",
+        "v7-draft-0211",
+        "v7-draft-0223",
+        "v7-draft-0235"
+      ]
+    }
+  },
+  "cross_batch_consistency": {
+    "status": "PASS",
+    "family_decisions": {
+      "ANAPHORA_SPEAKER_TRANSITION": [
+        "AMBIGUOUS"
+      ],
+      "CLINICIAN_CORRECTION": [
+        "AMBIGUOUS"
+      ],
+      "DISTRIBUTED_TEMPORALITY": [
+        "AMBIGUOUS"
+      ],
+      "DOSE_TRANSITION": [
+        "APPROVED"
+      ],
+      "ELLIPTICAL_ANSWER": [
+        "APPROVED"
+      ],
+      "FAMILY_PATIENT_EXPERIENCER": [
+        "APPROVED"
+      ],
+      "FREQUENCY_STATUS_TRANSITION": [
+        "AMBIGUOUS"
+      ],
+      "MEDICATION_RECONCILIATION": [
+        "APPROVED"
+      ],
+      "MULTIPLE_SYMPTOMS": [
+        "APPROVED"
+      ],
+      "NEGATION_REVERSAL": [
+        "APPROVED"
+      ],
+      "PATIENT_SELF_CORRECTION": [
+        "AMBIGUOUS"
+      ],
+      "TOPIC_SWITCH": [
+        "APPROVED"
+      ]
+    },
+    "conflicts": []
+  },
+  "policy_conflicts": [],
+  "schema_blockers": [],
+  "proposed_composition": {
+    "include_ai_proposals": [
+      "v7-draft-0121",
+      "v7-draft-0122",
+      "v7-draft-0124",
+      "v7-draft-0125",
+      "v7-draft-0126",
+      "v7-draft-0128",
+      "v7-draft-0129",
+      "v7-draft-0133",
+      "v7-draft-0134",
+      "v7-draft-0136",
+      "v7-draft-0137",
+      "v7-draft-0138",
+      "v7-draft-0140",
+      "v7-draft-0141",
+      "v7-draft-0145",
+      "v7-draft-0146",
+      "v7-draft-0148",
+      "v7-draft-0149",
+      "v7-draft-0150",
+      "v7-draft-0152",
+      "v7-draft-0153",
+      "v7-draft-0157",
+      "v7-draft-0158",
+      "v7-draft-0160",
+      "v7-draft-0161",
+      "v7-draft-0162",
+      "v7-draft-0164",
+      "v7-draft-0165",
+      "v7-draft-0169",
+      "v7-draft-0170",
+      "v7-draft-0172",
+      "v7-draft-0173",
+      "v7-draft-0174",
+      "v7-draft-0176",
+      "v7-draft-0177",
+      "v7-draft-0181",
+      "v7-draft-0182",
+      "v7-draft-0184",
+      "v7-draft-0185",
+      "v7-draft-0186",
+      "v7-draft-0188",
+      "v7-draft-0189",
+      "v7-draft-0193",
+      "v7-draft-0194",
+      "v7-draft-0196",
+      "v7-draft-0197",
+      "v7-draft-0198",
+      "v7-draft-0200",
+      "v7-draft-0201",
+      "v7-draft-0205",
+      "v7-draft-0206",
+      "v7-draft-0208",
+      "v7-draft-0209",
+      "v7-draft-0210",
+      "v7-draft-0212",
+      "v7-draft-0213",
+      "v7-draft-0217",
+      "v7-draft-0218",
+      "v7-draft-0220",
+      "v7-draft-0221",
+      "v7-draft-0222",
+      "v7-draft-0224",
+      "v7-draft-0225",
+      "v7-draft-0229",
+      "v7-draft-0230",
+      "v7-draft-0232",
+      "v7-draft-0233",
+      "v7-draft-0234",
+      "v7-draft-0236",
+      "v7-draft-0237"
+    ],
+    "exclude_as_ambiguous": [
+      "v7-draft-0123",
+      "v7-draft-0127",
+      "v7-draft-0130",
+      "v7-draft-0131",
+      "v7-draft-0132",
+      "v7-draft-0135",
+      "v7-draft-0139",
+      "v7-draft-0142",
+      "v7-draft-0143",
+      "v7-draft-0144",
+      "v7-draft-0147",
+      "v7-draft-0151",
+      "v7-draft-0154",
+      "v7-draft-0155",
+      "v7-draft-0156",
+      "v7-draft-0159",
+      "v7-draft-0163",
+      "v7-draft-0166",
+      "v7-draft-0167",
+      "v7-draft-0168",
+      "v7-draft-0171",
+      "v7-draft-0175",
+      "v7-draft-0178",
+      "v7-draft-0179",
+      "v7-draft-0180",
+      "v7-draft-0183",
+      "v7-draft-0187",
+      "v7-draft-0190",
+      "v7-draft-0191",
+      "v7-draft-0192",
+      "v7-draft-0195",
+      "v7-draft-0199",
+      "v7-draft-0202",
+      "v7-draft-0203",
+      "v7-draft-0204",
+      "v7-draft-0207",
+      "v7-draft-0211",
+      "v7-draft-0214",
+      "v7-draft-0215",
+      "v7-draft-0216",
+      "v7-draft-0219",
+      "v7-draft-0223",
+      "v7-draft-0226",
+      "v7-draft-0227",
+      "v7-draft-0228",
+      "v7-draft-0231",
+      "v7-draft-0235",
+      "v7-draft-0238",
+      "v7-draft-0239",
+      "v7-draft-0240"
+    ],
+    "rejected": [],
+    "requires_human_confirmation": true,
+    "official_gold_created": false
+  },
+  "resolver_executed": false,
+  "official_v7_run": false,
+  "corpus_freeze_complete": false,
+  "blind_run": "BLOCKED",
+  "shadow_integration": "BLOCKED",
+  "production": "BLOCKED",
+  "next_action": "HUMAN_GATE_REVIEW_AMBIGUITY_CLUSTERS_AND_AUTHORIZE_COMPOSITION_ONLY"
+}

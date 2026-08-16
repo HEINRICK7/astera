@@ -1,0 +1,1638 @@
+{
+  "source_final_result": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/context-validation-v6-repair-v5-final-2026-08-15.json",
+  "official_corpus_sha256": "1721ad71b7ef92c20a06fa9cae956098fefad0e079f92464d67f1bf9255a3f10",
+  "policy": "clinical-semantic-policy-v1.1",
+  "type_b_fields_ignored": 10,
+  "mentions_total": 334,
+  "mentions_exact": 243,
+  "mentions_failed": 91,
+  "failure_reason_counts": {
+    "only_status": 89,
+    "only_temporality": 1,
+    "multiple_fields": 1
+  },
+  "mentions_failed_only_status": 89,
+  "mentions_failed_only_temporality": 1,
+  "mentions_failed_only_negation": 0,
+  "mentions_failed_only_laterality": 0,
+  "mentions_failed_multiple_fields": 1,
+  "status_false_positive": 81,
+  "status_false_negative": 9,
+  "status_wrong_value": 0,
+  "relation_total": 86,
+  "relation_exact": 86,
+  "cross_segment_total": 124,
+  "cross_segment_exact": 107,
+  "field_accuracy": {
+    "negated": 0.9970059880239521,
+    "certainty": 1.0,
+    "temporality": 0.9969135802469136,
+    "experiencer": 1.0,
+    "laterality": 1.0,
+    "status": 0.7305389221556886,
+    "dose": 1.0,
+    "frequency": 1.0
+  },
+  "failures": [
+    {
+      "case_id": "v6-i-001",
+      "surface": "dor no joelho esquerdo",
+      "occurrence": 0,
+      "text": "Refere dor no joelho esquerdo ao acordar e formigamento na mão direita depois de caminhar.",
+      "concept_id": "symptom.independent_1_a",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-001",
+      "surface": "formigamento na mão direita",
+      "occurrence": 0,
+      "text": "Refere dor no joelho esquerdo ao acordar e formigamento na mão direita depois de caminhar.",
+      "concept_id": "symptom.independent_1_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-002",
+      "surface": "queimação no pé esquerdo",
+      "occurrence": 0,
+      "text": "Refere queimação no pé esquerdo ao acordar e peso na perna direita depois de caminhar.",
+      "concept_id": "symptom.independent_2_a",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-002",
+      "surface": "peso na perna direita",
+      "occurrence": 0,
+      "text": "Refere queimação no pé esquerdo ao acordar e peso na perna direita depois de caminhar.",
+      "concept_id": "symptom.independent_2_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-003",
+      "surface": "dor no ombro esquerdo",
+      "occurrence": 0,
+      "text": "Refere dor no ombro esquerdo ao acordar e fraqueza no braço direito depois de caminhar.",
+      "concept_id": "symptom.independent_3_a",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-003",
+      "surface": "fraqueza no braço direito",
+      "occurrence": 0,
+      "text": "Refere dor no ombro esquerdo ao acordar e fraqueza no braço direito depois de caminhar.",
+      "concept_id": "symptom.independent_3_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-004",
+      "surface": "inchaço no tornozelo esquerdo",
+      "occurrence": 0,
+      "text": "Refere inchaço no tornozelo esquerdo ao acordar e dormência na coxa direita depois de caminhar.",
+      "concept_id": "symptom.independent_4_a",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-004",
+      "surface": "dormência na coxa direita",
+      "occurrence": 0,
+      "text": "Refere inchaço no tornozelo esquerdo ao acordar e dormência na coxa direita depois de caminhar.",
+      "concept_id": "symptom.independent_4_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-005",
+      "surface": "pontada no lado esquerdo",
+      "occurrence": 0,
+      "text": "Refere pontada no lado esquerdo ao acordar e sensibilidade no lado direito depois de caminhar.",
+      "concept_id": "symptom.independent_5_a",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-005",
+      "surface": "sensibilidade no lado direito",
+      "occurrence": 0,
+      "text": "Refere pontada no lado esquerdo ao acordar e sensibilidade no lado direito depois de caminhar.",
+      "concept_id": "symptom.independent_5_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-006",
+      "surface": "dor na mama esquerda",
+      "occurrence": 0,
+      "text": "Refere dor na mama esquerda ao acordar e nódulo na axila direita depois de caminhar.",
+      "concept_id": "symptom.independent_6_a",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-006",
+      "surface": "nódulo na axila direita",
+      "occurrence": 0,
+      "text": "Refere dor na mama esquerda ao acordar e nódulo na axila direita depois de caminhar.",
+      "concept_id": "symptom.independent_6_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-007",
+      "surface": "coceira na mão esquerda",
+      "occurrence": 0,
+      "text": "Refere coceira na mão esquerda ao acordar e ardor no pé direito depois de caminhar.",
+      "concept_id": "symptom.independent_7_a",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-007",
+      "surface": "ardor no pé direito",
+      "occurrence": 0,
+      "text": "Refere coceira na mão esquerda ao acordar e ardor no pé direito depois de caminhar.",
+      "concept_id": "symptom.independent_7_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-008",
+      "surface": "rigidez no quadril esquerdo",
+      "occurrence": 0,
+      "text": "Refere rigidez no quadril esquerdo ao acordar e dor na panturrilha direita depois de caminhar.",
+      "concept_id": "symptom.independent_8_a",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-008",
+      "surface": "dor na panturrilha direita",
+      "occurrence": 0,
+      "text": "Refere rigidez no quadril esquerdo ao acordar e dor na panturrilha direita depois de caminhar.",
+      "concept_id": "symptom.independent_8_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-009",
+      "surface": "tremor na mão esquerda",
+      "occurrence": 0,
+      "text": "Refere tremor na mão esquerda ao acordar e perda de força na perna direita depois de caminhar.",
+      "concept_id": "symptom.independent_9_a",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-009",
+      "surface": "perda de força na perna direita",
+      "occurrence": 0,
+      "text": "Refere tremor na mão esquerda ao acordar e perda de força na perna direita depois de caminhar.",
+      "concept_id": "symptom.independent_9_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-010",
+      "surface": "desconforto no ouvido esquerdo",
+      "occurrence": 0,
+      "text": "Refere desconforto no ouvido esquerdo ao acordar e zumbido no ouvido direito depois de caminhar.",
+      "concept_id": "symptom.independent_10_a",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-010",
+      "surface": "zumbido no ouvido direito",
+      "occurrence": 0,
+      "text": "Refere desconforto no ouvido esquerdo ao acordar e zumbido no ouvido direito depois de caminhar.",
+      "concept_id": "symptom.independent_10_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-011",
+      "surface": "tosse seca",
+      "occurrence": 0,
+      "text": "Nega febre, mas relata tosse seca desde ontem.",
+      "concept_id": "symptom.independent_11_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-012",
+      "surface": "dor abdominal",
+      "occurrence": 0,
+      "text": "Nega náusea, mas relata dor abdominal desde ontem.",
+      "concept_id": "symptom.independent_12_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-013",
+      "surface": "cansaço",
+      "occurrence": 0,
+      "text": "Nega calafrio, mas relata cansaço desde ontem.",
+      "concept_id": "symptom.independent_13_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-014",
+      "surface": "azia",
+      "occurrence": 0,
+      "text": "Nega vômito, mas relata azia desde ontem.",
+      "concept_id": "symptom.independent_14_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-015",
+      "surface": "chiado",
+      "occurrence": 0,
+      "text": "Nega dispneia, mas relata chiado desde ontem.",
+      "concept_id": "symptom.independent_15_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-016",
+      "surface": "tontura",
+      "occurrence": 0,
+      "text": "Nega sangramento, mas relata tontura desde ontem.",
+      "concept_id": "symptom.independent_16_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-017",
+      "surface": "palpitação",
+      "occurrence": 0,
+      "text": "Nega dor torácica, mas relata palpitação desde ontem.",
+      "concept_id": "symptom.independent_17_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-018",
+      "surface": "cólica",
+      "occurrence": 0,
+      "text": "Nega diarreia, mas relata cólica desde ontem.",
+      "concept_id": "symptom.independent_18_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-019",
+      "surface": "vermelhidão",
+      "occurrence": 0,
+      "text": "Nega prurido, mas relata vermelhidão desde ontem.",
+      "concept_id": "symptom.independent_19_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-020",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "text": "Nega desmaio, mas relata fraqueza desde ontem.",
+      "concept_id": "symptom.independent_20_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-051",
+      "surface": "cirurgia no ombro",
+      "occurrence": 0,
+      "text": "Teve cirurgia no ombro há anos, mas hoje sente dormência no braço.",
+      "concept_id": "event.independent_51_a",
+      "entity_type": "event",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-051",
+      "surface": "dormência no braço",
+      "occurrence": 0,
+      "text": "Teve cirurgia no ombro há anos, mas hoje sente dormência no braço.",
+      "concept_id": "symptom.independent_51_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-052",
+      "surface": "queda",
+      "occurrence": 0,
+      "text": "Teve queda há anos, mas hoje sente dor no quadril.",
+      "concept_id": "event.independent_52_a",
+      "entity_type": "event",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-052",
+      "surface": "dor no quadril",
+      "occurrence": 0,
+      "text": "Teve queda há anos, mas hoje sente dor no quadril.",
+      "concept_id": "symptom.independent_52_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-053",
+      "surface": "pneumonia",
+      "occurrence": 0,
+      "text": "Teve pneumonia há anos, mas hoje sente tosse.",
+      "concept_id": "event.independent_53_a",
+      "entity_type": "event",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-053",
+      "surface": "tosse",
+      "occurrence": 0,
+      "text": "Teve pneumonia há anos, mas hoje sente tosse.",
+      "concept_id": "symptom.independent_53_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-054",
+      "surface": "lesão no joelho",
+      "occurrence": 0,
+      "text": "Teve lesão no joelho há anos, mas hoje sente inchaço no tornozelo.",
+      "concept_id": "event.independent_54_a",
+      "entity_type": "event",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-054",
+      "surface": "inchaço no tornozelo",
+      "occurrence": 0,
+      "text": "Teve lesão no joelho há anos, mas hoje sente inchaço no tornozelo.",
+      "concept_id": "symptom.independent_54_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-055",
+      "surface": "fratura na mão",
+      "occurrence": 0,
+      "text": "Teve fratura na mão há anos, mas hoje sente rigidez nos dedos.",
+      "concept_id": "event.independent_55_a",
+      "entity_type": "event",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-055",
+      "surface": "rigidez nos dedos",
+      "occurrence": 0,
+      "text": "Teve fratura na mão há anos, mas hoje sente rigidez nos dedos.",
+      "concept_id": "symptom.independent_55_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-056",
+      "surface": "infarto",
+      "occurrence": 0,
+      "text": "Teve infarto há anos, mas hoje sente cansaço.",
+      "concept_id": "event.independent_56_a",
+      "entity_type": "event",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-056",
+      "surface": "cansaço",
+      "occurrence": 0,
+      "text": "Teve infarto há anos, mas hoje sente cansaço.",
+      "concept_id": "symptom.independent_56_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-057",
+      "surface": "crise de asma",
+      "occurrence": 0,
+      "text": "Teve crise de asma há anos, mas hoje sente chiado.",
+      "concept_id": "event.independent_57_a",
+      "entity_type": "event",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-057",
+      "surface": "chiado",
+      "occurrence": 0,
+      "text": "Teve crise de asma há anos, mas hoje sente chiado.",
+      "concept_id": "symptom.independent_57_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-058",
+      "surface": "dor lombar",
+      "occurrence": 0,
+      "text": "Teve dor lombar há anos, mas hoje sente formigamento na perna.",
+      "concept_id": "event.independent_58_a",
+      "entity_type": "event",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-058",
+      "surface": "formigamento na perna",
+      "occurrence": 0,
+      "text": "Teve dor lombar há anos, mas hoje sente formigamento na perna.",
+      "concept_id": "symptom.independent_58_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-059",
+      "surface": "trombose",
+      "occurrence": 0,
+      "text": "Teve trombose há anos, mas hoje sente peso na panturrilha.",
+      "concept_id": "event.independent_59_a",
+      "entity_type": "event",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-059",
+      "surface": "peso na panturrilha",
+      "occurrence": 0,
+      "text": "Teve trombose há anos, mas hoje sente peso na panturrilha.",
+      "concept_id": "symptom.independent_59_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-060",
+      "surface": "otite",
+      "occurrence": 0,
+      "text": "Teve otite há anos, mas hoje sente zumbido.",
+      "concept_id": "event.independent_60_a",
+      "entity_type": "event",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-i-060",
+      "surface": "zumbido",
+      "occurrence": 0,
+      "text": "Teve otite há anos, mas hoje sente zumbido.",
+      "concept_id": "symptom.independent_60_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-003-1",
+      "surface": "enjoo",
+      "occurrence": 0,
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte hoje.",
+      "concept_id": "symptom.realistic_3_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-003-1",
+      "surface": "azia",
+      "occurrence": 0,
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte hoje.",
+      "concept_id": "symptom.realistic_3_c",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-003-2",
+      "surface": "enjoo",
+      "occurrence": 0,
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte desde ontem.",
+      "concept_id": "symptom.realistic_3_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-003-2",
+      "surface": "azia",
+      "occurrence": 0,
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte desde ontem.",
+      "concept_id": "symptom.realistic_3_c",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-003-3",
+      "surface": "enjoo",
+      "occurrence": 0,
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte depois do almoço.",
+      "concept_id": "symptom.realistic_3_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-r-003-3",
+      "surface": "azia",
+      "occurrence": 0,
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte depois do almoço.",
+      "concept_id": "symptom.realistic_3_c",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-r-005-1",
+      "surface": "vermelhidão",
+      "occurrence": 0,
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço hoje.",
+      "concept_id": "symptom.realistic_5_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-005-1",
+      "surface": "inchaço",
+      "occurrence": 0,
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço hoje.",
+      "concept_id": "symptom.realistic_5_c",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-005-2",
+      "surface": "vermelhidão",
+      "occurrence": 0,
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço desde ontem.",
+      "concept_id": "symptom.realistic_5_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-005-2",
+      "surface": "inchaço",
+      "occurrence": 0,
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço desde ontem.",
+      "concept_id": "symptom.realistic_5_c",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-005-3",
+      "surface": "vermelhidão",
+      "occurrence": 0,
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço depois do almoço.",
+      "concept_id": "symptom.realistic_5_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-005-3",
+      "surface": "inchaço",
+      "occurrence": 0,
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço depois do almoço.",
+      "concept_id": "symptom.realistic_5_c",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-006-1",
+      "surface": "cansaço",
+      "occurrence": 0,
+      "text": "Nega palpitação, refere cansaço e peso no peito hoje.",
+      "concept_id": "symptom.realistic_6_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-006-1",
+      "surface": "peso no peito",
+      "occurrence": 0,
+      "text": "Nega palpitação, refere cansaço e peso no peito hoje.",
+      "concept_id": "symptom.realistic_6_c",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-006-2",
+      "surface": "cansaço",
+      "occurrence": 0,
+      "text": "Nega palpitação, refere cansaço e peso no peito desde ontem.",
+      "concept_id": "symptom.realistic_6_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-006-2",
+      "surface": "peso no peito",
+      "occurrence": 0,
+      "text": "Nega palpitação, refere cansaço e peso no peito desde ontem.",
+      "concept_id": "symptom.realistic_6_c",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-006-3",
+      "surface": "cansaço",
+      "occurrence": 0,
+      "text": "Nega palpitação, refere cansaço e peso no peito depois do almoço.",
+      "concept_id": "symptom.realistic_6_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-006-3",
+      "surface": "peso no peito",
+      "occurrence": 0,
+      "text": "Nega palpitação, refere cansaço e peso no peito depois do almoço.",
+      "concept_id": "symptom.realistic_6_c",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-008-1",
+      "surface": "febre",
+      "occurrence": 0,
+      "text": "Não relata calafrio mas teve febre e dor no corpo hoje.",
+      "concept_id": "symptom.realistic_8_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-008-1",
+      "surface": "dor no corpo",
+      "occurrence": 0,
+      "text": "Não relata calafrio mas teve febre e dor no corpo hoje.",
+      "concept_id": "symptom.realistic_8_c",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-008-2",
+      "surface": "febre",
+      "occurrence": 0,
+      "text": "Não relata calafrio mas teve febre e dor no corpo desde ontem.",
+      "concept_id": "symptom.realistic_8_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-008-2",
+      "surface": "dor no corpo",
+      "occurrence": 0,
+      "text": "Não relata calafrio mas teve febre e dor no corpo desde ontem.",
+      "concept_id": "symptom.realistic_8_c",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-r-008-3",
+      "surface": "febre",
+      "occurrence": 0,
+      "text": "Não relata calafrio mas teve febre e dor no corpo depois do almoço.",
+      "concept_id": "symptom.realistic_8_b",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-r-008-3",
+      "surface": "dor no corpo",
+      "occurrence": 0,
+      "text": "Não relata calafrio mas teve febre e dor no corpo depois do almoço.",
+      "concept_id": "symptom.realistic_8_c",
+      "entity_type": "symptom",
+      "segment_ids": [],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-c-002-1",
+      "surface": "mãe",
+      "occurrence": 0,
+      "text": "Médico: Sua mãe teve câncer e diabetes?\nPaciente: Teve, de mama. na consulta de hoje",
+      "concept_id": "person.mother",
+      "entity_type": "person",
+      "segment_ids": [
+        "seg_02_0_02"
+      ],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-c-002-2",
+      "surface": "mãe",
+      "occurrence": 0,
+      "text": "Médico: Sua mãe teve câncer e diabetes?\nPaciente: Teve, de mama. no retorno desta semana",
+      "concept_id": "person.mother",
+      "entity_type": "person",
+      "segment_ids": [
+        "seg_02_1_02"
+      ],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-c-002-3",
+      "surface": "mãe",
+      "occurrence": 0,
+      "text": "Médico: Sua mãe teve câncer e diabetes?\nPaciente: Teve, de mama. durante a revisão clínica",
+      "concept_id": "person.mother",
+      "entity_type": "person",
+      "segment_ids": [
+        "seg_02_2_02"
+      ],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-c-004-1",
+      "surface": "chiado",
+      "occurrence": 0,
+      "text": "Médico: Ele ainda usa a bombinha?\nPaciente: Usa quando começa com chiado, mas não sente falta de ar. na consulta de hoje",
+      "concept_id": "symptom.wheezing",
+      "entity_type": "symptom",
+      "segment_ids": [
+        "seg_04_0_02"
+      ],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-c-004-2",
+      "surface": "chiado",
+      "occurrence": 0,
+      "text": "Médico: Ele ainda usa a bombinha?\nPaciente: Usa quando começa com chiado, mas não sente falta de ar. no retorno desta semana",
+      "concept_id": "symptom.wheezing",
+      "entity_type": "symptom",
+      "segment_ids": [
+        "seg_04_1_02"
+      ],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "v6-c-004-3",
+      "surface": "chiado",
+      "occurrence": 0,
+      "text": "Médico: Ele ainda usa a bombinha?\nPaciente: Usa quando começa com chiado, mas não sente falta de ar. durante a revisão clínica",
+      "concept_id": "symptom.wheezing",
+      "entity_type": "symptom",
+      "segment_ids": [
+        "seg_04_2_02"
+      ],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "present"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "sim-v6-0013",
+      "surface": "cirurgia",
+      "occurrence": 0,
+      "text": "A cirurgia foi há anos; atualmente sente peso na perna esquerda.",
+      "concept_id": "procedure.surgery",
+      "entity_type": "procedure",
+      "segment_ids": [
+        "sim-v6-0013:segment-01"
+      ],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": null,
+          "actual": "historical"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "sim-v6-0026",
+      "surface": "AVC",
+      "occurrence": 0,
+      "text": "A avó sofreu um AVC, mas o paciente não apresenta fraqueza hoje.",
+      "concept_id": "condition.stroke",
+      "entity_type": "condition",
+      "segment_ids": [
+        "sim-v6-0026:segment-01"
+      ],
+      "mismatches": [
+        {
+          "field": "temporality",
+          "expected": "past",
+          "actual": "current"
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "sim-v6-0027",
+      "surface": "dormência",
+      "occurrence": 0,
+      "text": "A dormência ocupa o lado direito do rosto e a dor está na perna esquerda.",
+      "concept_id": "symptom.numbness",
+      "entity_type": "symptom",
+      "segment_ids": [
+        "sim-v6-0027:segment-01"
+      ],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": "present",
+          "actual": null
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "sim-v6-0027",
+      "surface": "dor",
+      "occurrence": 0,
+      "text": "A dormência ocupa o lado direito do rosto e a dor está na perna esquerda.",
+      "concept_id": "symptom.pain",
+      "entity_type": "symptom",
+      "segment_ids": [
+        "sim-v6-0027:segment-01"
+      ],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": "present",
+          "actual": null
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "sim-v6-0029",
+      "surface": "pressão",
+      "occurrence": 0,
+      "text": "A pressão incomoda o ouvido esquerdo, enquanto o zumbido aparece no direito.",
+      "concept_id": "symptom.pressure",
+      "entity_type": "symptom",
+      "segment_ids": [
+        "sim-v6-0029:segment-01"
+      ],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": "present",
+          "actual": null
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "sim-v6-0029",
+      "surface": "zumbido",
+      "occurrence": 0,
+      "text": "A pressão incomoda o ouvido esquerdo, enquanto o zumbido aparece no direito.",
+      "concept_id": "symptom.tinnitus",
+      "entity_type": "symptom",
+      "segment_ids": [
+        "sim-v6-0029:segment-01"
+      ],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": "present",
+          "actual": null
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "sim-v6-0031",
+      "surface": "inchaço",
+      "occurrence": 0,
+      "text": "O inchaço está no tornozelo esquerdo e a coceira na mão direita.",
+      "concept_id": "symptom.swelling",
+      "entity_type": "symptom",
+      "segment_ids": [
+        "sim-v6-0031:segment-01"
+      ],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": "present",
+          "actual": null
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "sim-v6-0031",
+      "surface": "coceira",
+      "occurrence": 0,
+      "text": "O inchaço está no tornozelo esquerdo e a coceira na mão direita.",
+      "concept_id": "symptom.itching",
+      "entity_type": "symptom",
+      "segment_ids": [
+        "sim-v6-0031:segment-01"
+      ],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": "present",
+          "actual": null
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "sim-v6-0038",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "text": "Nega formigamento na mão, embora tenha fraqueza no braço.",
+      "concept_id": "symptom.weakness",
+      "entity_type": "symptom",
+      "segment_ids": [
+        "sim-v6-0038:segment-01"
+      ],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": "present",
+          "actual": null
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "sim-v6-0040",
+      "surface": "desequilíbrio",
+      "occurrence": 0,
+      "text": "Diz que não tem tontura e que sente apenas desequilíbrio ao andar.",
+      "concept_id": "symptom.imbalance",
+      "entity_type": "symptom",
+      "segment_ids": [
+        "sim-v6-0040:segment-01"
+      ],
+      "mismatches": [
+        {
+          "field": "negated",
+          "expected": false,
+          "actual": true
+        },
+        {
+          "field": "status",
+          "expected": "present",
+          "actual": null
+        }
+      ],
+      "ignored_type_b_fields": []
+    },
+    {
+      "case_id": "sim-v6-0051",
+      "surface": "formigamento",
+      "occurrence": 0,
+      "text": "Médico: A dor melhorou?\nPaciente: Sim, não sinto mais, só formigamento na mão direita.",
+      "concept_id": "symptom.paresthesia",
+      "entity_type": "symptom",
+      "segment_ids": [
+        "sim-v6-0051:segment-02"
+      ],
+      "mismatches": [
+        {
+          "field": "status",
+          "expected": "present",
+          "actual": null
+        }
+      ],
+      "ignored_type_b_fields": []
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+[
+  {
+    "candidate_id": "sim-v6-0001",
+    "language": "pt-BR",
+    "text": "Usava metformina 500 mg no almoço e agora toma 850 mg no jantar.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-002"
+    ],
+    "source_error_types": [
+      "DOSE_ATTACHMENT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "8ccbfd5407ebe018db2d6c3c70a26aa90e29dffb437665aebce94f5336127b2d",
+      "candidate_text_sha256": "df4243d34a1f9504c921c67329eeb1c3a1c164753c6ba1021fe674a344f5295e",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0001:segment-01",
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0002",
+    "language": "pt-BR",
+    "text": "Tomava losartana 25 mg pela manhã e passou para 50 mg depois do jantar.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v5-002"
+    ],
+    "source_error_types": [
+      "DOSE_ATTACHMENT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v5",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "a21596554a5a1d63d5da7e4bf843301e087352f16e338e6423369025fc598c0b",
+      "candidate_text_sha256": "18903cb6a7e5393d41c0af2936ab816a91d691bb0e5ec29017616f59775efee4",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0002:segment-01",
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0003",
+    "language": "pt-BR",
+    "text": "A mãe teve diabetes, mas o paciente nega sintomas atuais.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-005"
+    ],
+    "source_error_types": [
+      "FAMILY_EXPERIENCER_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "22cbdf28a21777b18c805153a746936900e64faca8c2b8281420a2b464621153",
+      "candidate_text_sha256": "856959edef61d98f60a5ec3771c8c848e7f9b759812bf6b4392f7b61d1ba468c",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0003:segment-01",
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0004",
+    "language": "pt-BR",
+    "text": "O irmão relata asma antiga e a paciente não refere chiado.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v4-006"
+    ],
+    "source_error_types": [
+      "FAMILY_EXPERIENCER_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v4",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "410fd871b868dd2491990202c339038f2e241baaefa6775621a582313173b8d0",
+      "candidate_text_sha256": "e83079fe26337449f104900cba474076e01a2458bf698bb02f8a113369b136bf",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0004:segment-01",
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0005",
+    "language": "pt-BR",
+    "text": "A dor permanece no joelho esquerdo e a fraqueza surgiu na mão direita.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v4-007"
+    ],
+    "source_error_types": [
+      "LATERALITY_ATTACHMENT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v4",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "34494e3d044e20599a69058ca29c92f40914a75dcbea185d03c0e005f44b195a",
+      "candidate_text_sha256": "0d95186395e7bcaa1c30f6ae6035c70a4721dea710c4a8ccba168ae6809dfa9a",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0005:segment-01",
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0006",
+    "language": "pt-BR",
+    "text": "Queixa de formigamento no braço direito e dor nova no pé esquerdo.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v5-007"
+    ],
+    "source_error_types": [
+      "LATERALITY_ATTACHMENT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v5",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "6cf8966d267e621da81931809bc5196b302f093821d85aa604dafd0484b936aa",
+      "candidate_text_sha256": "a5ade96cc2b5db3675b1b3fd73f4746d26391abc9b5961675fe7c41c2c946905",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0006:segment-01",
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0007",
+    "language": "pt-BR",
+    "text": "Nega dor no joelho esquerdo, mas passou a relatar formigamento na mão direita.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-001"
+    ],
+    "source_error_types": [
+      "MULTI_MENTION_COLLISION"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "e090e1ff87c6338c973e20e0ec07020f87d4631a682b7f947b5c00ed8a4cc610",
+      "candidate_text_sha256": "e064c0ae701d99c80c5e8dc351a44807109e7c2ae85550efa16e5bf752049488",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0007:segment-01",
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0008",
+    "language": "pt-BR",
+    "text": "Refere queimação no pé direito e dormência nova na perna esquerda ao caminhar.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v5-001"
+    ],
+    "source_error_types": [
+      "MULTI_MENTION_COLLISION"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v5",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "a4ad8105b2a596e838559bb85d070b63434c4a1f9139ac81a4c086eedd1de8fc",
+      "candidate_text_sha256": "3b7f1854d58723405849f29d29216056a652b60aaa3a63b0893341cfc7e4600b",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0008:segment-01",
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0009",
+    "language": "pt-BR",
+    "text": "Nega dor no peito, porém refere falta de ar ao esforço.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-003"
+    ],
+    "source_error_types": [
+      "NEGATION_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "15627179511f7c61202ef2187ce714fe3bcce1fcb98b327cf91722e27a49cd2f",
+      "candidate_text_sha256": "455787a506d28f843ec82590c2634e8f21df29f423f8fa778591ee3b2d88f59e",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0009:segment-01",
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0010",
+    "language": "pt-BR",
+    "text": "Sem febre hoje, mas começou tosse seca durante a noite.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v4-004"
+    ],
+    "source_error_types": [
+      "NEGATION_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v4",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "b55913dea28822ccaa461bd555315198eb380a0b827bb4b26056520f8942049a",
+      "candidate_text_sha256": "7f958a58741b15cd2b925725a64da4795f0f9864e396e0f03fcecc802e51c31e",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0010:segment-01",
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0011",
+    "language": "pt-BR",
+    "text": "Suspendeu o remédio há uma semana e voltou a usá-lo ontem.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v4-005"
+    ],
+    "source_error_types": [
+      "STATUS_CONFLICT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v4",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "d59c41ee5e5f6a105d98201260851811de5fac07d9621ba4f5af986e1c4968fd",
+      "candidate_text_sha256": "9018f32c61664b318566530aa5d329e921c1b27ccb324622f771c29a0d35daa0",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0011:segment-01",
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0012",
+    "language": "pt-BR",
+    "text": "Parou a medicação no mês passado, mas retomou a dose habitual hoje.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v5-005"
+    ],
+    "source_error_types": [
+      "STATUS_CONFLICT"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v5",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "8dd439ef98eb60741834df4d71553be338477b2f7b77346f290d8dcf92f47e54",
+      "candidate_text_sha256": "1ac9049a2a5ff4c3db990fa1b488233f74686f89036679059ea12618a6781c0e",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0012:segment-01",
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0013",
+    "language": "pt-BR",
+    "text": "A cirurgia foi há anos; atualmente sente peso na perna esquerda.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "neg-004"
+    ],
+    "source_error_types": [
+      "TEMPORAL_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v3",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "578997e64021eace38b40d6accb4167f99504467ce783bd14578830410884da9",
+      "candidate_text_sha256": "2098806c8b644ac5d5f965b2f6cc7321c759a9925a4d05917412543305aaee35",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0013:segment-01",
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  },
+  {
+    "candidate_id": "sim-v6-0014",
+    "language": "pt-BR",
+    "text": "Teve dor antiga no ombro, mas hoje relata dormência no braço direito.",
+    "review_status": "PENDING_REVIEW",
+    "decision": "PENDING_REVIEW",
+    "reviewer": "",
+    "review_notes": "",
+    "source_case_ids": [
+      "v4-003"
+    ],
+    "source_error_types": [
+      "TEMPORAL_SCOPE"
+    ],
+    "provenance": {
+      "source_corpus": "pt_br_clinical_semantics_v4",
+      "history_status": "initial-run-summary",
+      "source_text_sha256": "edee20e64264a7c1ed6a0369a6228a9e7645124f482dc6d97e6151b100780fb8",
+      "candidate_text_sha256": "c8fefc62bc63a6355aa3d5c2bd7bad7887636618f251b7d9e382cdacda57828b",
+      "official_corpus_mutation": false
+    },
+    "segment_id": "sim-v6-0014:segment-01",
+    "gold": [],
+    "mentions": null,
+    "relations": null,
+    "review_instruction": "Human reviewer must provide mentions, relations, source segment IDs, attribute provenance and relation provenance."
+  }
+]

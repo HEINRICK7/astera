@@ -1,0 +1,2260 @@
+{
+  "case_id": "D4-022",
+  "corpus_checksum": "1ad10a39a899906ab35455d6ce51bedcfd20f2f7776a9e6e59155ed9a1cb0938",
+  "corpus_version": "D4",
+  "decisions": [],
+  "evaluation_id": "d4-one-shot-0877e9b7-fac6-4881-8ab7-18d46356f719",
+  "mismatches": [
+    {
+      "actual": "ao acordar",
+      "confidence": 0.55,
+      "details": {
+        "mention": "levotiroxina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "à noite",
+      "policy_rules": [
+        "ptbr-frequency",
+        "ptbr-active-medication-context"
+      ],
+      "semantic_dimension": "frequency",
+      "stage": "prediction"
+    },
+    {
+      "actual": [],
+      "confidence": 0.86,
+      "details": {
+        "mention": "levotiroxina",
+        "relation_output_count": 0
+      },
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "ao acordar"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "à noite"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "7451a83307e83f27f337297bdf2c3fc72c390ccae4f76e2cc7a1ad880a186852",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "37c71a853a67795215ec64461da75439fdad94277823c94e7371720f50dc0ff1",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "2239f2e04628d952c11a5f4648e488faefdc87b9a02ca357d3e6e57eb6894bef",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "t1",
+            "speaker": "patient",
+            "text": "Levotiroxina era tomada ao acordar."
+          },
+          {
+            "segment_id": "t3",
+            "speaker": "patient",
+            "text": "Na prescrição atual, ficou à noite."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-022",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "8804bb6789b2d8fc164a403c62d0904d45ad8d7cadff2b1c73ce3fed66af213b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "2239f2e04628d952c11a5f4648e488faefdc87b9a02ca357d3e6e57eb6894bef",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "df1ed2f2792ed4ecc2c3b3308f068927578b8f87ba4885c1adb9be97f21a2f91",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "levotiroxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "ao acordar",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "1857b228d5f7d66b8ea210c0972c3454610b60789711d78542f5fe4c41312cef",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "levotiroxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "ao acordar",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "c9f5af1a14a669d83a64261a0e6b9a1fba1ff466dfb111c9e99930c081b977a8",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "levotiroxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "ao acordar",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 1,
+            "actual_signal_count": 3,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 0,
+            "complete_but_wrong": 2,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "t1"
+                  ],
+                  "owner_mention_id": "context:t1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "t1"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "ao acordar"
+                },
+                "classification": "COMPLETE_BUT_WRONG",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "t3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "à noite"
+                }
+              },
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "current_value": "ao acordar",
+                  "owner_mention_id": "context:t1",
+                  "owner_type": "medication",
+                  "previous_value": "ao acordar",
+                  "provenance": {
+                    "source_segment_ids": [
+                      "t1"
+                    ]
+                  },
+                  "relation_ready": false,
+                  "state": "current",
+                  "status": "AMBIGUOUS",
+                  "temporal_anchor": null,
+                  "transition_type": "CHANGED_FROM"
+                },
+                "classification": "COMPLETE_BUT_WRONG",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "current_value": "à noite",
+                  "owner_type": "medication",
+                  "previous_value": "ao acordar",
+                  "source_segment_ids": [
+                    "t3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "transition_type": "CHANGED_FROM"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 2,
+            "provenance_correct": 0,
+            "provenance_total": 2,
+            "state_correct": 1,
+            "state_total": 2,
+            "transition_correct": 0,
+            "transition_total": 1,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "t1"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "ao acordar"
+              },
+              {
+                "attribute_type": "status",
+                "confidence": 1.0,
+                "evidence": [
+                  "t1"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "active"
+              }
+            ],
+            "transitions": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "current_value": "ao acordar",
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "previous_value": "ao acordar",
+                "provenance": {
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "AMBIGUOUS",
+                "temporal_anchor": null,
+                "transition_type": "CHANGED_FROM"
+              }
+            ]
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "c4e7c6640d2ae4f3e805268f2d08009ac179ac0c78c20ba968797500b3893a34",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "frequency": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "status": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "t1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "e122d72c10d511c75ec2950801b4aed2241aa00110d50284836b1c1ccb7fcb9e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "c4e7c6640d2ae4f3e805268f2d08009ac179ac0c78c20ba968797500b3893a34",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "b3753e26cf8e60918a560f958290306a476c0a6d4d9baa9689e215eface337a8",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "487403a6470c6f04429188047998288dcafdfd7e1625d6836dd4a5eb318179c7",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "attribute_provenance": {},
+          "candidate_source": "t1",
+          "historical_attributes": {},
+          "owner_mention_id": "context:t1",
+          "owner_type": "medication",
+          "relation_input_contract": {
+            "attribute_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "t1"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "ao acordar"
+              },
+              {
+                "attribute_type": "status",
+                "confidence": 1.0,
+                "evidence": [
+                  "t1"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "active"
+              }
+            ],
+            "has_blocking_signal": true,
+            "relation_input_owner_completeness": 1.0,
+            "relation_input_provenance": 1.0,
+            "relation_input_state_completeness": 1.0,
+            "transition_contract_validity": 0.0,
+            "transition_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "current_value": "ao acordar",
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "previous_value": "ao acordar",
+                "provenance": {
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "AMBIGUOUS",
+                "temporal_anchor": null,
+                "transition_type": "CHANGED_FROM"
+              }
+            ]
+          },
+          "relation_input_signals": [
+            {
+              "attribute_type": "frequency",
+              "confidence": 1.0,
+              "evidence": [
+                "t1"
+              ],
+              "owner_mention_id": "context:t1",
+              "owner_type": "medication",
+              "provenance": {
+                "evidence_id": null,
+                "semantic_policy": null,
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_ready": true,
+              "state": "current",
+              "status": "RESOLVED",
+              "value": "ao acordar"
+            },
+            {
+              "attribute_type": "status",
+              "confidence": 1.0,
+              "evidence": [
+                "t1"
+              ],
+              "owner_mention_id": "context:t1",
+              "owner_type": "medication",
+              "provenance": {
+                "evidence_id": null,
+                "semantic_policy": null,
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_ready": true,
+              "state": "current",
+              "status": "RESOLVED",
+              "value": "active"
+            }
+          ],
+          "source_segment_ids": [
+            "t1"
+          ],
+          "transition_attribute_ownership": {
+            "frequency": {
+              "current": "ao acordar",
+              "owner_mention_id": "context:t1:9:21",
+              "previous": "ao acordar",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "transition_evidence": [
+            {
+              "provenance": {
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:9:21:CHANGED_FROM:frequency:ao acordar",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1:9:21",
+              "source_mention_id": "context:t1:9:21",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": null,
+              "value": "ao acordar"
+            }
+          ],
+          "transition_input_signals": [
+            {
+              "attribute_type": "frequency",
+              "confidence": 1.0,
+              "current_value": "ao acordar",
+              "owner_mention_id": "context:t1",
+              "owner_type": "medication",
+              "previous_value": "ao acordar",
+              "provenance": {
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_ready": false,
+              "state": "current",
+              "status": "AMBIGUOUS",
+              "temporal_anchor": null,
+              "transition_type": "CHANGED_FROM"
+            }
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Levotiroxina era tomada ao acordar.\\npatient: Na prescrição atual, ficou à noite.', 'rules': ('ptbr-frequency', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:0:12', 'owner_span': (0, 12), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [{'relation_type': 'HAS_FREQUENCY', 'source': 'context:t1:0:12', 'target': 'frequency', 'value': 'ao acordar', 'provenance': {'rule': 'ptbr-frequency'}}], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'UNRESOLVED', 'unresolved': ['AMBIGUOUS:frequency'], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': 'medication', 'owner_mention_id': 'context:t1', 'attribute_provenance': {}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'frequency': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'status': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}}, 'transition_evidence': [{'relation_type': 'CHANGED_FROM', 'source': 'context:t1:9:21', 'target': 'frequency', 'value': 'ao acordar', 'relation_id': 'context:t1:9:21:CHANGED_FROM:frequency:ao acordar', 'source_mention_id': 'context:t1:9:21', 'target_mention_id': None, 'source_segment_ids': ['t1'], 'provenance': {'source_segment_ids': ('t1',)}}], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'frequency', 'value': 'ao acordar', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t1'], 'relation_ready': True}, {'attribute_type': 'status', 'value': 'active', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t1'], 'relation_ready': True}], 'transition_input_signals': [{'attribute_type': 'frequency', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'previous_value': 'ao acordar', 'current_value': 'ao acordar', 'transition_type': 'CHANGED_FROM', 'temporal_anchor': None, 'state': 'current', 'status': 'AMBIGUOUS', 'provenance': {'source_segment_ids': ('t1',)}, 'confidence': 1.0, 'relation_ready': False}], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'frequency', 'value': 'ao acordar', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t1'], 'relation_ready': True}, {'attribute_type': 'status', 'value': 'active', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t1'], 'relation_ready': True}], 'transition_signals': [{'attribute_type': 'frequency', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'previous_value': 'ao acordar', 'current_value': 'ao acordar', 'transition_type': 'CHANGED_FROM', 'temporal_anchor': None, 'state': 'current', 'status': 'AMBIGUOUS', 'provenance': {'source_segment_ids': ('t1',)}, 'confidence': 1.0, 'relation_ready': False}], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 0.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': True}, 'transition_attribute_ownership': {'frequency': {'current': 'ao acordar', 'previous': 'ao acordar', 'owner_mention_id': 'context:t1:9:21', 'source_segment_ids': ('t1',)}}}, 'authority_metrics': {'resolver_decisions_total': 187, 'resolver_decisions_preserved': 164, 'resolver_decisions_overwritten': 23, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t3']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "t1"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "ao acordar"
+              },
+              {
+                "attribute_type": "status",
+                "confidence": 1.0,
+                "evidence": [
+                  "t1"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "active"
+              }
+            ],
+            "relations": [],
+            "signal_quality": {
+              "actual_nonready_signal_count": 1,
+              "actual_signal_count": 3,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 0,
+              "complete_but_wrong": 2,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "t1"
+                    ],
+                    "owner_mention_id": "context:t1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "t1"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "ao acordar"
+                  },
+                  "classification": "COMPLETE_BUT_WRONG",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "t3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "à noite"
+                  }
+                },
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "current_value": "ao acordar",
+                    "owner_mention_id": "context:t1",
+                    "owner_type": "medication",
+                    "previous_value": "ao acordar",
+                    "provenance": {
+                      "source_segment_ids": [
+                        "t1"
+                      ]
+                    },
+                    "relation_ready": false,
+                    "state": "current",
+                    "status": "AMBIGUOUS",
+                    "temporal_anchor": null,
+                    "transition_type": "CHANGED_FROM"
+                  },
+                  "classification": "COMPLETE_BUT_WRONG",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "current_value": "à noite",
+                    "owner_type": "medication",
+                    "previous_value": "ao acordar",
+                    "source_segment_ids": [
+                      "t3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "transition_type": "CHANGED_FROM"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 2,
+              "provenance_correct": 0,
+              "provenance_total": 2,
+              "state_correct": 1,
+              "state_total": 2,
+              "transition_correct": 0,
+              "transition_total": 1,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "levotiroxina",
+            "transition_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "current_value": "ao acordar",
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "previous_value": "ao acordar",
+                "provenance": {
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "AMBIGUOUS",
+                "temporal_anchor": null,
+                "transition_type": "CHANGED_FROM"
+              }
+            ]
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "fc6edc758e5313ed55b09be5bb7da93af1e7ab432ad212e8333581afffe2a4f7",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        },
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "levotiroxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "ao acordar",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 1,
+            "actual_signal_count": 3,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 0,
+            "complete_but_wrong": 2,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "t1"
+                  ],
+                  "owner_mention_id": "context:t1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "t1"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "ao acordar"
+                },
+                "classification": "COMPLETE_BUT_WRONG",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "t3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "à noite"
+                }
+              },
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "current_value": "ao acordar",
+                  "owner_mention_id": "context:t1",
+                  "owner_type": "medication",
+                  "previous_value": "ao acordar",
+                  "provenance": {
+                    "source_segment_ids": [
+                      "t1"
+                    ]
+                  },
+                  "relation_ready": false,
+                  "state": "current",
+                  "status": "AMBIGUOUS",
+                  "temporal_anchor": null,
+                  "transition_type": "CHANGED_FROM"
+                },
+                "classification": "COMPLETE_BUT_WRONG",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "current_value": "à noite",
+                  "owner_type": "medication",
+                  "previous_value": "ao acordar",
+                  "source_segment_ids": [
+                    "t3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "transition_type": "CHANGED_FROM"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 2,
+            "provenance_correct": 0,
+            "provenance_total": 2,
+            "state_correct": 1,
+            "state_total": 2,
+            "transition_correct": 0,
+            "transition_total": 1,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "t1"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "ao acordar"
+              },
+              {
+                "attribute_type": "status",
+                "confidence": 1.0,
+                "evidence": [
+                  "t1"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "active"
+              }
+            ],
+            "transitions": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "current_value": "ao acordar",
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "previous_value": "ao acordar",
+                "provenance": {
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "AMBIGUOUS",
+                "temporal_anchor": null,
+                "transition_type": "CHANGED_FROM"
+              }
+            ]
+          }
+        ],
+        "transformed_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        }
+      },
+      "input_hash": "487403a6470c6f04429188047998288dcafdfd7e1625d6836dd4a5eb318179c7",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "2f116e721612c4eeb2040a730d60847d4868c737705d855a81b6ffb7ea711dd5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "levotiroxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "ao acordar",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "relation_input_quality": [
+          {
+            "actual_nonready_signal_count": 1,
+            "actual_signal_count": 3,
+            "ambiguous_expected": 0,
+            "complete_and_correct": 0,
+            "complete_but_wrong": 2,
+            "details": [
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "evidence": [
+                    "t1"
+                  ],
+                  "owner_mention_id": "context:t1",
+                  "owner_type": "medication",
+                  "provenance": {
+                    "evidence_id": null,
+                    "semantic_policy": null,
+                    "source_segment_ids": [
+                      "t1"
+                    ]
+                  },
+                  "relation_ready": true,
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "ao acordar"
+                },
+                "classification": "COMPLETE_BUT_WRONG",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "owner_type": "medication",
+                  "source_segment_ids": [
+                    "t3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "value": "à noite"
+                }
+              },
+              {
+                "actual": {
+                  "attribute_type": "frequency",
+                  "confidence": 1.0,
+                  "current_value": "ao acordar",
+                  "owner_mention_id": "context:t1",
+                  "owner_type": "medication",
+                  "previous_value": "ao acordar",
+                  "provenance": {
+                    "source_segment_ids": [
+                      "t1"
+                    ]
+                  },
+                  "relation_ready": false,
+                  "state": "current",
+                  "status": "AMBIGUOUS",
+                  "temporal_anchor": null,
+                  "transition_type": "CHANGED_FROM"
+                },
+                "classification": "COMPLETE_BUT_WRONG",
+                "expected": {
+                  "attribute_type": "frequency",
+                  "current_value": "à noite",
+                  "owner_type": "medication",
+                  "previous_value": "ao acordar",
+                  "source_segment_ids": [
+                    "t3"
+                  ],
+                  "state": "current",
+                  "status": "RESOLVED",
+                  "transition_type": "CHANGED_FROM"
+                }
+              }
+            ],
+            "expected_unresolved_count": 0,
+            "owner_correct": 1,
+            "owner_total": 2,
+            "provenance_correct": 0,
+            "provenance_total": 2,
+            "state_correct": 1,
+            "state_total": 2,
+            "transition_correct": 0,
+            "transition_total": 1,
+            "unresolved_owner_expected": 0,
+            "unresolved_state_expected": 0
+          }
+        ],
+        "resolved_signal_snapshots": [
+          {
+            "attributes": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "t1"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "ao acordar"
+              },
+              {
+                "attribute_type": "status",
+                "confidence": 1.0,
+                "evidence": [
+                  "t1"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "active"
+              }
+            ],
+            "transitions": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "current_value": "ao acordar",
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "previous_value": "ao acordar",
+                "provenance": {
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "AMBIGUOUS",
+                "temporal_anchor": null,
+                "transition_type": "CHANGED_FROM"
+              }
+            ]
+          }
+        ],
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "34b8168ba9d6ed8727829f451436c9ac10b66b27b8a94f86ee07ba65128b7e97",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Levotiroxina era tomada ao acordar.\\npatient: Na prescrição atual, ficou à noite.', 'rules': ('ptbr-frequency', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:0:12', 'owner_span': (0, 12), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [{'relation_type': 'HAS_FREQUENCY', 'source': 'context:t1:0:12', 'target': 'frequency', 'value': 'ao acordar', 'provenance': {'rule': 'ptbr-frequency'}}], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'UNRESOLVED', 'unresolved': ['AMBIGUOUS:frequency'], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': 'medication', 'owner_mention_id': 'context:t1', 'attribute_provenance': {}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'frequency': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'status': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}}, 'transition_evidence': [{'relation_type': 'CHANGED_FROM', 'source': 'context:t1:9:21', 'target': 'frequency', 'value': 'ao acordar', 'relation_id': 'context:t1:9:21:CHANGED_FROM:frequency:ao acordar', 'source_mention_id': 'context:t1:9:21', 'target_mention_id': None, 'source_segment_ids': ['t1'], 'provenance': {'source_segment_ids': ('t1',)}}], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'frequency', 'value': 'ao acordar', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t1'], 'relation_ready': True}, {'attribute_type': 'status', 'value': 'active', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t1'], 'relation_ready': True}], 'transition_input_signals': [{'attribute_type': 'frequency', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'previous_value': 'ao acordar', 'current_value': 'ao acordar', 'transition_type': 'CHANGED_FROM', 'temporal_anchor': None, 'state': 'current', 'status': 'AMBIGUOUS', 'provenance': {'source_segment_ids': ('t1',)}, 'confidence': 1.0, 'relation_ready': False}], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'frequency', 'value': 'ao acordar', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t1'], 'relation_ready': True}, {'attribute_type': 'status', 'value': 'active', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t1'], 'relation_ready': True}], 'transition_signals': [{'attribute_type': 'frequency', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'previous_value': 'ao acordar', 'current_value': 'ao acordar', 'transition_type': 'CHANGED_FROM', 'temporal_anchor': None, 'state': 'current', 'status': 'AMBIGUOUS', 'provenance': {'source_segment_ids': ('t1',)}, 'confidence': 1.0, 'relation_ready': False}], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 0.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': True}, 'transition_attribute_ownership': {'frequency': {'current': 'ao acordar', 'previous': 'ao acordar', 'owner_mention_id': 'context:t1:9:21', 'source_segment_ids': ('t1',)}}}, 'authority_metrics': {'resolver_decisions_total': 187, 'resolver_decisions_preserved': 164, 'resolver_decisions_overwritten': 23, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t3']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "t1"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "ao acordar"
+              },
+              {
+                "attribute_type": "status",
+                "confidence": 1.0,
+                "evidence": [
+                  "t1"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "active"
+              }
+            ],
+            "relations": [],
+            "signal_quality": {
+              "actual_nonready_signal_count": 1,
+              "actual_signal_count": 3,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 0,
+              "complete_but_wrong": 2,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "t1"
+                    ],
+                    "owner_mention_id": "context:t1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "t1"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "ao acordar"
+                  },
+                  "classification": "COMPLETE_BUT_WRONG",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "t3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "à noite"
+                  }
+                },
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "current_value": "ao acordar",
+                    "owner_mention_id": "context:t1",
+                    "owner_type": "medication",
+                    "previous_value": "ao acordar",
+                    "provenance": {
+                      "source_segment_ids": [
+                        "t1"
+                      ]
+                    },
+                    "relation_ready": false,
+                    "state": "current",
+                    "status": "AMBIGUOUS",
+                    "temporal_anchor": null,
+                    "transition_type": "CHANGED_FROM"
+                  },
+                  "classification": "COMPLETE_BUT_WRONG",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "current_value": "à noite",
+                    "owner_type": "medication",
+                    "previous_value": "ao acordar",
+                    "source_segment_ids": [
+                      "t3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "transition_type": "CHANGED_FROM"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 2,
+              "provenance_correct": 0,
+              "provenance_total": 2,
+              "state_correct": 1,
+              "state_total": 2,
+              "transition_correct": 0,
+              "transition_total": 1,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "levotiroxina",
+            "transition_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "current_value": "ao acordar",
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "previous_value": "ao acordar",
+                "provenance": {
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "AMBIGUOUS",
+                "temporal_anchor": null,
+                "transition_type": "CHANGED_FROM"
+              }
+            ]
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "69d1c804f2833fd37ddd47f657e59468045024a9e4bb638a40914c164ba57b64",
+      "changed_fields": [
+        "frequency"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "34b8168ba9d6ed8727829f451436c9ac10b66b27b8a94f86ee07ba65128b7e97",
+      "output_hash": "34b8168ba9d6ed8727829f451436c9ac10b66b27b8a94f86ee07ba65128b7e97",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "ao acordar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Levotiroxina era tomada ao acordar.\\npatient: Na prescrição atual, ficou à noite.', 'rules': ('ptbr-frequency', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:0:12', 'owner_span': (0, 12), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [{'relation_type': 'HAS_FREQUENCY', 'source': 'context:t1:0:12', 'target': 'frequency', 'value': 'ao acordar', 'provenance': {'rule': 'ptbr-frequency'}}], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'UNRESOLVED', 'unresolved': ['AMBIGUOUS:frequency'], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': 'medication', 'owner_mention_id': 'context:t1', 'attribute_provenance': {}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'frequency': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}, 'status': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': 'medication', 'source_segment_ids': ('t1',)}}, 'transition_evidence': [{'relation_type': 'CHANGED_FROM', 'source': 'context:t1:9:21', 'target': 'frequency', 'value': 'ao acordar', 'relation_id': 'context:t1:9:21:CHANGED_FROM:frequency:ao acordar', 'source_mention_id': 'context:t1:9:21', 'target_mention_id': None, 'source_segment_ids': ['t1'], 'provenance': {'source_segment_ids': ('t1',)}}], 'historical_attributes': {}, 'relation_input_signals': [{'attribute_type': 'frequency', 'value': 'ao acordar', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t1'], 'relation_ready': True}, {'attribute_type': 'status', 'value': 'active', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t1'], 'relation_ready': True}], 'transition_input_signals': [{'attribute_type': 'frequency', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'previous_value': 'ao acordar', 'current_value': 'ao acordar', 'transition_type': 'CHANGED_FROM', 'temporal_anchor': None, 'state': 'current', 'status': 'AMBIGUOUS', 'provenance': {'source_segment_ids': ('t1',)}, 'confidence': 1.0, 'relation_ready': False}], 'relation_input_contract': {'attribute_signals': [{'attribute_type': 'frequency', 'value': 'ao acordar', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t1'], 'relation_ready': True}, {'attribute_type': 'status', 'value': 'active', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'state': 'current', 'status': 'RESOLVED', 'provenance': {'source_segment_ids': ('t1',), 'evidence_id': None, 'semantic_policy': None}, 'confidence': 1.0, 'evidence': ['t1'], 'relation_ready': True}], 'transition_signals': [{'attribute_type': 'frequency', 'owner_mention_id': 'context:t1', 'owner_type': 'medication', 'previous_value': 'ao acordar', 'current_value': 'ao acordar', 'transition_type': 'CHANGED_FROM', 'temporal_anchor': None, 'state': 'current', 'status': 'AMBIGUOUS', 'provenance': {'source_segment_ids': ('t1',)}, 'confidence': 1.0, 'relation_ready': False}], 'relation_input_owner_completeness': 1.0, 'relation_input_state_completeness': 1.0, 'transition_contract_validity': 0.0, 'relation_input_provenance': 1.0, 'has_blocking_signal': True}, 'transition_attribute_ownership': {'frequency': {'current': 'ao acordar', 'previous': 'ao acordar', 'owner_mention_id': 'context:t1:9:21', 'source_segment_ids': ('t1',)}}}, 'authority_metrics': {'resolver_decisions_total': 187, 'resolver_decisions_preserved': 164, 'resolver_decisions_overwritten': 23, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t3']}",
+            "relation_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "evidence": [
+                  "t1"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "ao acordar"
+              },
+              {
+                "attribute_type": "status",
+                "confidence": 1.0,
+                "evidence": [
+                  "t1"
+                ],
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "provenance": {
+                  "evidence_id": null,
+                  "semantic_policy": null,
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": true,
+                "state": "current",
+                "status": "RESOLVED",
+                "value": "active"
+              }
+            ],
+            "relations": [],
+            "signal_quality": {
+              "actual_nonready_signal_count": 1,
+              "actual_signal_count": 3,
+              "ambiguous_expected": 0,
+              "complete_and_correct": 0,
+              "complete_but_wrong": 2,
+              "details": [
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "evidence": [
+                      "t1"
+                    ],
+                    "owner_mention_id": "context:t1",
+                    "owner_type": "medication",
+                    "provenance": {
+                      "evidence_id": null,
+                      "semantic_policy": null,
+                      "source_segment_ids": [
+                        "t1"
+                      ]
+                    },
+                    "relation_ready": true,
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "ao acordar"
+                  },
+                  "classification": "COMPLETE_BUT_WRONG",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "owner_type": "medication",
+                    "source_segment_ids": [
+                      "t3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "value": "à noite"
+                  }
+                },
+                {
+                  "actual": {
+                    "attribute_type": "frequency",
+                    "confidence": 1.0,
+                    "current_value": "ao acordar",
+                    "owner_mention_id": "context:t1",
+                    "owner_type": "medication",
+                    "previous_value": "ao acordar",
+                    "provenance": {
+                      "source_segment_ids": [
+                        "t1"
+                      ]
+                    },
+                    "relation_ready": false,
+                    "state": "current",
+                    "status": "AMBIGUOUS",
+                    "temporal_anchor": null,
+                    "transition_type": "CHANGED_FROM"
+                  },
+                  "classification": "COMPLETE_BUT_WRONG",
+                  "expected": {
+                    "attribute_type": "frequency",
+                    "current_value": "à noite",
+                    "owner_type": "medication",
+                    "previous_value": "ao acordar",
+                    "source_segment_ids": [
+                      "t3"
+                    ],
+                    "state": "current",
+                    "status": "RESOLVED",
+                    "transition_type": "CHANGED_FROM"
+                  }
+                }
+              ],
+              "expected_unresolved_count": 0,
+              "owner_correct": 1,
+              "owner_total": 2,
+              "provenance_correct": 0,
+              "provenance_total": 2,
+              "state_correct": 1,
+              "state_total": 2,
+              "transition_correct": 0,
+              "transition_total": 1,
+              "unresolved_owner_expected": 0,
+              "unresolved_state_expected": 0
+            },
+            "surface": "levotiroxina",
+            "transition_input_signals": [
+              {
+                "attribute_type": "frequency",
+                "confidence": 1.0,
+                "current_value": "ao acordar",
+                "owner_mention_id": "context:t1",
+                "owner_type": "medication",
+                "previous_value": "ao acordar",
+                "provenance": {
+                  "source_segment_ids": [
+                    "t1"
+                  ]
+                },
+                "relation_ready": false,
+                "state": "current",
+                "status": "AMBIGUOUS",
+                "temporal_anchor": null,
+                "transition_type": "CHANGED_FROM"
+              }
+            ]
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-022",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "c8440d2c6a35543e9e33d365b71e468a0d99418b91f9dc6426f5aab317696752",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "34b8168ba9d6ed8727829f451436c9ac10b66b27b8a94f86ee07ba65128b7e97",
+      "output_hash": "59747be7c6acb193e1b71d9fa86970975fb6826dad6e13bc2164f88d44256d25",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": "medication.levothyroxine",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "ao acordar"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "surface": "levotiroxina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-022",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "4f89d716073b9b83dd53443345dd41452d1bc7db8a854f8f595a6e4b7c545d3d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "59747be7c6acb193e1b71d9fa86970975fb6826dad6e13bc2164f88d44256d25",
+      "output_hash": "47bf4eab2ffe8580c60d336aec62162249768a9d21273f48395e22a26d3c57a8",
+      "payload": {
+        "case_id": "D4-022",
+        "mismatch_count": 2
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D4-022",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D4_trace_granularity_v2_with_c2_signals"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

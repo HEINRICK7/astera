@@ -1,0 +1,7 @@
+{
+  "status": "blocked-pending-human-review",
+  "reason": "V6 requires human-reviewed simulator cases; missing={'independent': 0, 'realistic': 0, 'simulator-approved': 45}, actual_cases=105",
+  "draft_cases": 105,
+  "simulator_candidates": 14,
+  "official_corpus_created": false
+}

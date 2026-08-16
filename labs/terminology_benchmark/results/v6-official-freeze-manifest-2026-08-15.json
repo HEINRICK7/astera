@@ -1,0 +1,156 @@
+{
+  "status": "frozen",
+  "freeze_version": "v6",
+  "official_corpus_created": true,
+  "official_corpus_path": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_clinical_semantics_v6.jsonl",
+  "official_corpus_sha256": "1721ad71b7ef92c20a06fa9cae956098fefad0e079f92464d67f1bf9255a3f10",
+  "selection_policy": "first approved candidates by stable candidate_id order until the pre-registered quota of 45 is reached",
+  "selection_performance_blind": true,
+  "approved_total": 48,
+  "official_selected": 45,
+  "approved_reserve": 3,
+  "reserve_ids": [
+    "sim-v6-0056",
+    "sim-v6-0057",
+    "sim-v6-0058"
+  ],
+  "selected_ids": [
+    "sim-v6-0001",
+    "sim-v6-0002",
+    "sim-v6-0003",
+    "sim-v6-0005",
+    "sim-v6-0006",
+    "sim-v6-0007",
+    "sim-v6-0008",
+    "sim-v6-0009",
+    "sim-v6-0010",
+    "sim-v6-0013",
+    "sim-v6-0014",
+    "sim-v6-0015",
+    "sim-v6-0016",
+    "sim-v6-0017",
+    "sim-v6-0018",
+    "sim-v6-0019",
+    "sim-v6-0020",
+    "sim-v6-0021",
+    "sim-v6-0023",
+    "sim-v6-0024",
+    "sim-v6-0025",
+    "sim-v6-0026",
+    "sim-v6-0027",
+    "sim-v6-0028",
+    "sim-v6-0029",
+    "sim-v6-0030",
+    "sim-v6-0031",
+    "sim-v6-0032",
+    "sim-v6-0033",
+    "sim-v6-0034",
+    "sim-v6-0035",
+    "sim-v6-0036",
+    "sim-v6-0037",
+    "sim-v6-0038",
+    "sim-v6-0039",
+    "sim-v6-0040",
+    "sim-v6-0041",
+    "sim-v6-0042",
+    "sim-v6-0048",
+    "sim-v6-0049",
+    "sim-v6-0050",
+    "sim-v6-0051",
+    "sim-v6-0053",
+    "sim-v6-0054",
+    "sim-v6-0055"
+  ],
+  "review_reports": [
+    {
+      "candidates": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/clinical-language-simulator-v6-candidates-2026-08-15.jsonl",
+      "review": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v6-human-review-submission-2026-08-15.json",
+      "counts": {
+        "APPROVED": 11,
+        "REJECTED": 3,
+        "PENDING_REVIEW": 0
+      },
+      "approved_cases": 11
+    },
+    {
+      "candidates": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/clinical-language-simulator-v6-expansion-2026-08-15.jsonl",
+      "review": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v6-human-review-expansion-submission-2026-08-15.json",
+      "counts": {
+        "APPROVED": 33,
+        "REJECTED": 7,
+        "PENDING_REVIEW": 0
+      },
+      "approved_cases": 33
+    },
+    {
+      "candidates": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/clinical-language-simulator-v6-micro-expansion-2026-08-15.jsonl",
+      "review": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v6-human-review-micro-expansion-submission-2026-08-15.json",
+      "counts": {
+        "APPROVED": 4,
+        "REJECTED": 0,
+        "PENDING_REVIEW": 0
+      },
+      "approved_cases": 4
+    }
+  ],
+  "input_sha256": {
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/data/pt_br_clinical_semantics_v6_draft.jsonl": "2b13f9b833c950a6e2ddc62fc1dbc1a9d442d3e3c790751d2080b682e55ab9b0",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/clinical-language-simulator-v6-candidates-2026-08-15.jsonl": "9563d6b9a620fb97e5e43a6ea1639d20a3b6d6836c147d486e304af3c178aec0",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v6-human-review-submission-2026-08-15.json": "20506a3f8280f263765f33b1bcf2261f1fee52e7f76166be1265b5c84a7f79a7",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/clinical-language-simulator-v6-expansion-2026-08-15.jsonl": "a3de5104a704f6d30c963896e5ca01e74135081ee2a9ec86dde87718a1622ae1",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v6-human-review-expansion-submission-2026-08-15.json": "ef0fc218fc35bfb9d18db276b65f1d4b337c2ed9165d480cfdf4a9d802c8b9bf",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/clinical-language-simulator-v6-micro-expansion-2026-08-15.jsonl": "5682ce1084dc11894bbcd2a598c3b5243b1623796d77ac9976900da34b065f9b",
+    "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/v6-human-review-micro-expansion-submission-2026-08-15.json": "efca8f8a858e26ae5960dc8fa5a6f695f4d4c1993aca6501d0a4c96e342adbee"
+  },
+  "validation": {
+    "official_readiness": {
+      "cases": 150,
+      "mentions": 334,
+      "segments": 81,
+      "sources": {
+        "independent": 60,
+        "realistic": 45,
+        "simulator-approved": 45
+      },
+      "official": true,
+      "composition": {
+        "independent": 60,
+        "realistic": 45,
+        "simulator-approved": 45
+      }
+    },
+    "all_approved_validation": {
+      "cases": 48,
+      "mentions": 82,
+      "segments": 57,
+      "sources": {
+        "simulator-approved": 48
+      },
+      "official": false
+    },
+    "selected_ids_unique": true,
+    "reserve_ids_unique": true,
+    "rejected_or_pending_selected": false,
+    "provenance_valid": true
+  },
+  "composition": {
+    "cases": 150,
+    "mentions": 334,
+    "sources": {
+      "independent": 60,
+      "realistic": 45,
+      "simulator-approved": 45
+    }
+  },
+  "blind_run": {
+    "status": "executed",
+    "run_count": 1,
+    "result_path": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/context-validation-v6-blind-2026-08-15.json",
+    "result_sha256": "a299b5b0b498d4177469fd35c2fb3e49a0d55e3f6ba595f745f24e23733128a1",
+    "taxonomy_path": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/context-taxonomy-v6-blind-2026-08-15.json",
+    "repair_allowed_before_run": false,
+    "repair_applied": false,
+    "shadow_integration": false,
+    "production_promotion": false
+  }
+}

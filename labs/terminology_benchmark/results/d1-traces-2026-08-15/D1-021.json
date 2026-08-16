@@ -1,0 +1,480 @@
+{
+  "case_id": "D1-021",
+  "corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "corpus_version": "D1",
+  "decisions": [],
+  "evaluation_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "mismatches": [
+    {
+      "actual": true,
+      "confidence": 0.55,
+      "details": {
+        "mention": "alergia",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": false,
+      "policy_rules": [
+        "ptbr-past-tense-before-target",
+        "ptbr-family-experiencer"
+      ],
+      "semantic_dimension": "negated",
+      "stage": "prediction"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "8e58496270beb0f5c6cd9429f8da444d617988753b32b187f3433d9fabdd088f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": null,
+      "output_hash": "5c89eaeda5b3739b2cd4844b95c0829bea891af122ebc8c4e43be7884e185828",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "patient",
+            "text": "Meu filho apresentou alergia quando era pequeno."
+          },
+          {
+            "segment_id": "s2",
+            "speaker": "patient",
+            "text": "Hoje eu não tenho alergia conhecida."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-021",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "ce8a8cc2211464948bfe2a111240c7a1995df644d2b786aa6700115ebb77f606",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "5c89eaeda5b3739b2cd4844b95c0829bea891af122ebc8c4e43be7884e185828",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "4341a51d8d40e493e6c7b068d70c5cf75d8f33ed6a834fc74a0eb775ebaee289",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "e6aa93ffadf30165e8a80212931681d8b3d7547c323d1267ed76a66cb839401d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "b2503beee88e6c82abaa0a2f8d7ab7a1396477ace61e944b6bd897a2580bfecb",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "605eb7d79af30a23ec78cb371ac73693022b3952826d4a63f8cada25f35fdcbf",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "9a853a93d7dd604260ee03325fc9265e126db6866a21481888a3e7b9eaffbf71",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "66ed0d442a4226c9f5a1010ca2ea07b85dae996845b36e7af0d7947ae6586352",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            }
+          },
+          "candidate_source": "s1",
+          "source_segment_ids": [
+            "s1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Meu filho apresentou alergia quando era pequeno.\\npatient: Hoje eu não tenho alergia conhecida.', 'rules': ('ptbr-past-tense-before-target', 'ptbr-family-experiencer'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:21:28', 'owner_span': (21, 28), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:21:28', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 264, 'resolver_decisions_preserved': 243, 'resolver_decisions_overwritten': 21, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [],
+            "surface": "alergia"
+          },
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Meu filho apresentou alergia quando era pequeno.\\npatient: Hoje eu não tenho alergia conhecida.', 'rules': ('ptbr-negation-before-target', 'ptbr-current-medication-change'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2:18:25', 'owner_span': (18, 25), 'source_evidence_id': 'context:s2'}}, 'projection': {'mention_id': 'context:s2:18:25', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s2',), 'candidate_source': 's2', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2', 'owner_segment_id': 's2'}}}, 'authority_metrics': {'resolver_decisions_total': 275, 'resolver_decisions_preserved': 254, 'resolver_decisions_overwritten': 21, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's2', 'conversation_segment_ids': ['s1']}",
+            "relations": [],
+            "surface": "alergia"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "b82771d3fa0ffa21d258a403c4e45c3ae66b140e3dd23222cb942bfa3e1877ac",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "66ed0d442a4226c9f5a1010ca2ea07b85dae996845b36e7af0d7947ae6586352",
+      "output_hash": "5a58e890c707ae0a002465394b791a36c7a5eb65b2048ec932ee99323b2350ff",
+      "payload": {
+        "relations": [
+          [],
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "4fa82fc8cc59fae288b40f58668a953d2499caa54f5ada53fe322f416964e126",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "5a58e890c707ae0a002465394b791a36c7a5eb65b2048ec932ee99323b2350ff",
+      "output_hash": "d64d65bbf3d70c399b6a88dca670f4fed6515221c089050deb0b2357bc92fb58",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Meu filho apresentou alergia quando era pequeno.\\npatient: Hoje eu não tenho alergia conhecida.', 'rules': ('ptbr-past-tense-before-target', 'ptbr-family-experiencer'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:21:28', 'owner_span': (21, 28), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:21:28', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 264, 'resolver_decisions_preserved': 243, 'resolver_decisions_overwritten': 21, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [],
+            "surface": "alergia"
+          },
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Meu filho apresentou alergia quando era pequeno.\\npatient: Hoje eu não tenho alergia conhecida.', 'rules': ('ptbr-negation-before-target', 'ptbr-current-medication-change'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2:18:25', 'owner_span': (18, 25), 'source_evidence_id': 'context:s2'}}, 'projection': {'mention_id': 'context:s2:18:25', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s2',), 'candidate_source': 's2', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2', 'owner_segment_id': 's2'}}}, 'authority_metrics': {'resolver_decisions_total': 275, 'resolver_decisions_preserved': 254, 'resolver_decisions_overwritten': 21, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's2', 'conversation_segment_ids': ['s1']}",
+            "relations": [],
+            "surface": "alergia"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "94588086feaf4f41541ebac8489bc630ac72eb212301f0a89c5f5d16165bff91",
+      "changed_fields": [
+        "negated"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d64d65bbf3d70c399b6a88dca670f4fed6515221c089050deb0b2357bc92fb58",
+      "output_hash": "d64d65bbf3d70c399b6a88dca670f4fed6515221c089050deb0b2357bc92fb58",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Meu filho apresentou alergia quando era pequeno.\\npatient: Hoje eu não tenho alergia conhecida.', 'rules': ('ptbr-past-tense-before-target', 'ptbr-family-experiencer'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:21:28', 'owner_span': (21, 28), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:21:28', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 264, 'resolver_decisions_preserved': 243, 'resolver_decisions_overwritten': 21, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [],
+            "surface": "alergia"
+          },
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Meu filho apresentou alergia quando era pequeno.\\npatient: Hoje eu não tenho alergia conhecida.', 'rules': ('ptbr-negation-before-target', 'ptbr-current-medication-change'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2:18:25', 'owner_span': (18, 25), 'source_evidence_id': 'context:s2'}}, 'projection': {'mention_id': 'context:s2:18:25', 'attributes': {'laterality': None, 'status': None}, 'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s2',), 'candidate_source': 's2', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2', 'owner_segment_id': 's2'}}}, 'authority_metrics': {'resolver_decisions_total': 275, 'resolver_decisions_preserved': 254, 'resolver_decisions_overwritten': 21, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's2', 'conversation_segment_ids': ['s1']}",
+            "relations": [],
+            "surface": "alergia"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-021",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "4784421da3fbcc5cc11107c79231be94360dec2553d4cf2849b990cc07e6a571",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d64d65bbf3d70c399b6a88dca670f4fed6515221c089050deb0b2357bc92fb58",
+      "output_hash": "e3ed3296c351b00ff2c098910cca284b188cef45e789b930941034d887d09d8d",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "experiencer": [
+                "s1"
+              ],
+              "temporality": [
+                "s1"
+              ]
+            },
+            "concept_id": "condition.allergy",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "family",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "s1"
+            ],
+            "surface": "alergia"
+          },
+          {
+            "attribute_provenance": {
+              "experiencer": [
+                "s2"
+              ],
+              "negated": [
+                "s2"
+              ],
+              "temporality": [
+                "s2"
+              ]
+            },
+            "concept_id": "condition.allergy",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": true,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "s2"
+            ],
+            "surface": "alergia"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-021",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "5032d6411d80264bd6dc40d40cafc6849132b4e2a7c33df0f94be5893e88b0b8",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "e3ed3296c351b00ff2c098910cca284b188cef45e789b930941034d887d09d8d",
+      "output_hash": "6cce9f50a84b47212827330918ec5931bfeac53847f4e4ca40d4b179b6e52b07",
+      "payload": {
+        "case_id": "D1-021"
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-021",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v1"
+}

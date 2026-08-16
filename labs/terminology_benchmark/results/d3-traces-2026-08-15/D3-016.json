@@ -1,0 +1,1286 @@
+{
+  "case_id": "D3-016",
+  "corpus_checksum": "cef75b21b8eae6ec940b9f6cffe3d27fbe5b050db838569f3f19ef68434f1b0d",
+  "corpus_version": "D3",
+  "decisions": [],
+  "evaluation_id": "d3-one-shot-4c137795-99d1-4973-a98d-20eb89de0617",
+  "mismatches": [],
+  "policy_version": "1.3",
+  "resolver_checksum": "d7dda54457cf896392e41edc8c259098b190c1c9bfa1ed82c6a1e5c7a46a59a7",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "d6c74c9957241483e7d5e711014df4367a3d43b86e2b7516ec40fae4315249b4",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "e3b9fb79b556859189075df3f5aeb2ce1b868553c5687cf0ca8eda2188042a5c",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "l1",
+            "speaker": "patient",
+            "text": "O formigamento migrou para a mão direita."
+          },
+          {
+            "segment_id": "l2",
+            "speaker": "patient",
+            "text": "É só nesse lado."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-016",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "9b3f1457fe7427e076bd2a6c8df7ff8c4b58fd641bfc8d9af5288dd734bda09e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "e3b9fb79b556859189075df3f5aeb2ce1b868553c5687cf0ca8eda2188042a5c",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-016",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "638b2b6a8f912c6d5a1a2e3e1993e2d712007d925ab72cc9642fddccad4c07cb",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "laterality": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "formigamento"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_LATERALITY",
+              "target": "laterality",
+              "value": "right"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": "right",
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "laterality",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "l1"
+                ]
+              },
+              "relation_id": "context:l1:HAS_LATERALITY:laterality",
+              "relation_type": "HAS_LATERALITY",
+              "source": "context:l1",
+              "source_mention_id": "context:l1",
+              "source_segment_ids": [
+                "l1"
+              ],
+              "target": "laterality",
+              "target_mention_id": "laterality",
+              "value": "right"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_LATERALITY",
+                "target": "laterality",
+                "value": "right"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-016",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "a878d22ddac3083c831fa8e9d104223bac7173d3ccf94e3d2c1f4971b2c686cd",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "laterality": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "formigamento"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_LATERALITY",
+              "target": "laterality",
+              "value": "right"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": "right",
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "laterality",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "l1"
+                ]
+              },
+              "relation_id": "context:l1:HAS_LATERALITY:laterality",
+              "relation_type": "HAS_LATERALITY",
+              "source": "context:l1",
+              "source_mention_id": "context:l1",
+              "source_segment_ids": [
+                "l1"
+              ],
+              "target": "laterality",
+              "target_mention_id": "laterality",
+              "value": "right"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_LATERALITY",
+                "target": "laterality",
+                "value": "right"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-016",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "db74ad00f0d41eea0f25aaeb8c941dc19fa51676998ab7a203997f0a924a229a",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "laterality": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "formigamento"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_LATERALITY",
+              "target": "laterality",
+              "value": "right"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": "right",
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "laterality",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "l1"
+                ]
+              },
+              "relation_id": "context:l1:HAS_LATERALITY:laterality",
+              "relation_type": "HAS_LATERALITY",
+              "source": "context:l1",
+              "source_mention_id": "context:l1",
+              "source_segment_ids": [
+                "l1"
+              ],
+              "target": "laterality",
+              "target_mention_id": "laterality",
+              "value": "right"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_LATERALITY",
+                "target": "laterality",
+                "value": "right"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "3f908869426aebad2fcf5727750cd897fd4c70cde2a3cfbc4cf3362fce96f610",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:l1",
+            "owner_segment_id": "l1",
+            "owner_type": "symptom",
+            "source_segment_ids": [
+              "l1"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:l1",
+            "owner_segment_id": "l1",
+            "owner_type": "symptom",
+            "source_segment_ids": [
+              "l1"
+            ]
+          },
+          "laterality": {
+            "owner_mention_id": "context:l1",
+            "owner_segment_id": "l1",
+            "owner_type": "symptom",
+            "source_segment_ids": [
+              "l1"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:l1",
+            "owner_segment_id": "l1",
+            "owner_type": "symptom",
+            "source_segment_ids": [
+              "l1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:l1",
+            "owner_segment_id": "l1",
+            "owner_type": "symptom",
+            "source_segment_ids": [
+              "l1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-016",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "8cf567f1912235bbfa0b398ee481568e52aa2d9350fc5c02267b8b6ad1c10907",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "3f908869426aebad2fcf5727750cd897fd4c70cde2a3cfbc4cf3362fce96f610",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-016",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "b68531855ad7e8f921346b286ec235e50d3f1da66a7588cad663beaa3e56e2cb",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "c360cea732560a7c3f49960911b7217b550284dbbcadc56c991860aa1800538c",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "laterality": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            }
+          },
+          "attribute_provenance": {},
+          "candidate_source": "l1",
+          "owner_mention_id": "context:l1",
+          "owner_type": "symptom",
+          "source_segment_ids": [
+            "l1"
+          ],
+          "transition_evidence": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O formigamento migrou para a mão direita.\\npatient: É só nesse lado.', 'rules': ('ptbr-nearest-laterality',), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:l1:2:14', 'owner_span': (2, 14), 'source_evidence_id': 'context:l1'}, 'laterality': {'owner_mention_id': 'context:l1:2:14', 'owner_span': (2, 14), 'source_evidence_id': 'context:l1'}}, 'relation_signals': [{'relation_type': 'HAS_LATERALITY', 'source': 'context:l1:2:14', 'target': 'laterality', 'value': 'right', 'provenance': {'rule': 'ptbr-nearest-laterality'}}], 'projection': {'relations': [{'relation_id': 'context:l1:HAS_LATERALITY:laterality', 'relation_type': 'HAS_LATERALITY', 'source': 'context:l1', 'target': 'laterality', 'value': 'right', 'source_mention_id': 'context:l1', 'target_mention_id': 'laterality', 'source_segment_ids': ['l1'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'laterality', 'source_segment_ids': ('l1',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('l1',), 'candidate_source': 'l1', 'owner_type': 'symptom', 'owner_mention_id': 'context:l1', 'attribute_provenance': {}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1', 'owner_type': 'symptom', 'source_segment_ids': ('l1',)}, 'certainty': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1', 'owner_type': 'symptom', 'source_segment_ids': ('l1',)}, 'temporality': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1', 'owner_type': 'symptom', 'source_segment_ids': ('l1',)}, 'experiencer': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1', 'owner_type': 'symptom', 'source_segment_ids': ('l1',)}, 'laterality': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1', 'owner_type': 'symptom', 'source_segment_ids': ('l1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 176, 'resolver_decisions_preserved': 148, 'resolver_decisions_overwritten': 28, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'l1', 'conversation_segment_ids': ['l2']}",
+            "relations": [
+              {
+                "relation_type": "HAS_LATERALITY",
+                "target": "laterality",
+                "value": "right"
+              }
+            ],
+            "surface": "formigamento"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-016",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "fe752b06eb4625a5110c69587fc6d5a328a30fd4251ccfd407ad17270d55ae62",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "laterality": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "formigamento"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_LATERALITY",
+              "target": "laterality",
+              "value": "right"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": "right",
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "laterality",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "l1"
+                ]
+              },
+              "relation_id": "context:l1:HAS_LATERALITY:laterality",
+              "relation_type": "HAS_LATERALITY",
+              "source": "context:l1",
+              "source_mention_id": "context:l1",
+              "source_segment_ids": [
+                "l1"
+              ],
+              "target": "laterality",
+              "target_mention_id": "laterality",
+              "value": "right"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_LATERALITY",
+                "target": "laterality",
+                "value": "right"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "c360cea732560a7c3f49960911b7217b550284dbbcadc56c991860aa1800538c",
+      "output_hash": "3785b5c03f73c707cf9541ab31d7ae9b1d03d00527ad217e72cc745c6ae52efd",
+      "payload": {
+        "relations": [
+          [
+            {
+              "relation_type": "HAS_LATERALITY",
+              "target": "laterality",
+              "value": "right"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-016",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "61f4ff7c915081957ad9fdb77c53db45fea5032f4644e6a4747d8345a11c57a1",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "laterality": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:l1",
+              "owner_segment_id": "l1",
+              "owner_type": "symptom",
+              "source_segment_ids": [
+                "l1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "formigamento"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_LATERALITY",
+              "target": "laterality",
+              "value": "right"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": "right",
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "laterality",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "l1"
+                ]
+              },
+              "relation_id": "context:l1:HAS_LATERALITY:laterality",
+              "relation_type": "HAS_LATERALITY",
+              "source": "context:l1",
+              "source_mention_id": "context:l1",
+              "source_segment_ids": [
+                "l1"
+              ],
+              "target": "laterality",
+              "target_mention_id": "laterality",
+              "value": "right"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_LATERALITY",
+                "target": "laterality",
+                "value": "right"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "3785b5c03f73c707cf9541ab31d7ae9b1d03d00527ad217e72cc745c6ae52efd",
+      "output_hash": "ec9aca350f0a8614437059c796618c7100a35fbe640e521f360a0ad5615979f2",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O formigamento migrou para a mão direita.\\npatient: É só nesse lado.', 'rules': ('ptbr-nearest-laterality',), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:l1:2:14', 'owner_span': (2, 14), 'source_evidence_id': 'context:l1'}, 'laterality': {'owner_mention_id': 'context:l1:2:14', 'owner_span': (2, 14), 'source_evidence_id': 'context:l1'}}, 'relation_signals': [{'relation_type': 'HAS_LATERALITY', 'source': 'context:l1:2:14', 'target': 'laterality', 'value': 'right', 'provenance': {'rule': 'ptbr-nearest-laterality'}}], 'projection': {'relations': [{'relation_id': 'context:l1:HAS_LATERALITY:laterality', 'relation_type': 'HAS_LATERALITY', 'source': 'context:l1', 'target': 'laterality', 'value': 'right', 'source_mention_id': 'context:l1', 'target_mention_id': 'laterality', 'source_segment_ids': ['l1'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'laterality', 'source_segment_ids': ('l1',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('l1',), 'candidate_source': 'l1', 'owner_type': 'symptom', 'owner_mention_id': 'context:l1', 'attribute_provenance': {}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1', 'owner_type': 'symptom', 'source_segment_ids': ('l1',)}, 'certainty': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1', 'owner_type': 'symptom', 'source_segment_ids': ('l1',)}, 'temporality': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1', 'owner_type': 'symptom', 'source_segment_ids': ('l1',)}, 'experiencer': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1', 'owner_type': 'symptom', 'source_segment_ids': ('l1',)}, 'laterality': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1', 'owner_type': 'symptom', 'source_segment_ids': ('l1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 176, 'resolver_decisions_preserved': 148, 'resolver_decisions_overwritten': 28, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'l1', 'conversation_segment_ids': ['l2']}",
+            "relations": [
+              {
+                "relation_type": "HAS_LATERALITY",
+                "target": "laterality",
+                "value": "right"
+              }
+            ],
+            "surface": "formigamento"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-016",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "85d1a17a7a8b8bdca5b09b201fa2b2521f0f7fd0180ac9fb8a311e412e844105",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "ec9aca350f0a8614437059c796618c7100a35fbe640e521f360a0ad5615979f2",
+      "output_hash": "ec9aca350f0a8614437059c796618c7100a35fbe640e521f360a0ad5615979f2",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O formigamento migrou para a mão direita.\\npatient: É só nesse lado.', 'rules': ('ptbr-nearest-laterality',), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:l1:2:14', 'owner_span': (2, 14), 'source_evidence_id': 'context:l1'}, 'laterality': {'owner_mention_id': 'context:l1:2:14', 'owner_span': (2, 14), 'source_evidence_id': 'context:l1'}}, 'relation_signals': [{'relation_type': 'HAS_LATERALITY', 'source': 'context:l1:2:14', 'target': 'laterality', 'value': 'right', 'provenance': {'rule': 'ptbr-nearest-laterality'}}], 'projection': {'relations': [{'relation_id': 'context:l1:HAS_LATERALITY:laterality', 'relation_type': 'HAS_LATERALITY', 'source': 'context:l1', 'target': 'laterality', 'value': 'right', 'source_mention_id': 'context:l1', 'target_mention_id': 'laterality', 'source_segment_ids': ['l1'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'laterality', 'source_segment_ids': ('l1',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('l1',), 'candidate_source': 'l1', 'owner_type': 'symptom', 'owner_mention_id': 'context:l1', 'attribute_provenance': {}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1', 'owner_type': 'symptom', 'source_segment_ids': ('l1',)}, 'certainty': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1', 'owner_type': 'symptom', 'source_segment_ids': ('l1',)}, 'temporality': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1', 'owner_type': 'symptom', 'source_segment_ids': ('l1',)}, 'experiencer': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1', 'owner_type': 'symptom', 'source_segment_ids': ('l1',)}, 'laterality': {'owner_mention_id': 'context:l1', 'owner_segment_id': 'l1', 'owner_type': 'symptom', 'source_segment_ids': ('l1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 176, 'resolver_decisions_preserved': 148, 'resolver_decisions_overwritten': 28, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'l1', 'conversation_segment_ids': ['l2']}",
+            "relations": [
+              {
+                "relation_type": "HAS_LATERALITY",
+                "target": "laterality",
+                "value": "right"
+              }
+            ],
+            "surface": "formigamento"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-016",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "9292587569be4b7ee1e606e012dd7074adcaa76a259260e4529b27405cf61448",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "ec9aca350f0a8614437059c796618c7100a35fbe640e521f360a0ad5615979f2",
+      "output_hash": "84c758256314f0ce3b733ff4908264683cbe36bc7e1b6fd1263ca55d0217c0c6",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "laterality": [
+                "l1",
+                "l2"
+              ]
+            },
+            "concept_id": "symptom.tingling",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "right",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "HAS_LATERALITY": [
+                "l1"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "HAS_LATERALITY",
+                "target": "laterality",
+                "value": "right"
+              }
+            ],
+            "segment_ids": [
+              "l1",
+              "l2"
+            ],
+            "surface": "formigamento"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-016",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "45307e04142bf6fcf438c43a82b14d3dfc4519b1e1ff288d20fa4a27e29e18e6",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "84c758256314f0ce3b733ff4908264683cbe36bc7e1b6fd1263ca55d0217c0c6",
+      "output_hash": "012ca8fb820d792d5048555f63d2141250049e1445cb7295f87ff06b9bb00ced",
+      "payload": {
+        "case_id": "D3-016",
+        "mismatch_count": 0
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-016",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

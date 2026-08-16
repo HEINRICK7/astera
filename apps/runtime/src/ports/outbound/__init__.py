@@ -14,57 +14,9 @@ Rule: The application layer calls outbound ports.
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from typing import Any, Callable, Awaitable
+from typing import Any
 
-
-class EventBusPort(ABC):
-    """
-    Outbound port for the Event Bus.
-
-    The application publishes and subscribes to events through this interface.
-    The concrete adapter (NatsEventBusAdapter) implements this for NATS.
-    """
-
-    @abstractmethod
-    async def connect(self) -> None:
-        """Establish connection to the Event Bus."""
-        ...
-
-    @abstractmethod
-    async def disconnect(self) -> None:
-        """Gracefully disconnect from the Event Bus."""
-        ...
-
-    @abstractmethod
-    async def publish(self, subject: str, payload: bytes) -> None:
-        """
-        Publish a message to a subject.
-
-        Args:
-            subject: NATS subject (e.g., 'astera.runtime.started').
-            payload: Raw bytes payload (typically JSON-encoded).
-        """
-        ...
-
-    @abstractmethod
-    async def subscribe(
-        self,
-        subject: str,
-        handler: Callable[[bytes], Awaitable[None]],
-    ) -> None:
-        """
-        Subscribe to a subject with an async handler.
-
-        Args:
-            subject: NATS subject pattern (supports wildcards: *, >).
-            handler: Async callable invoked for each received message.
-        """
-        ...
-
-    @abstractmethod
-    async def is_connected(self) -> bool:
-        """Return True if the Event Bus connection is alive."""
-        ...
+from packages.shared.events import EventBusPort
 
 
 class HealthRepositoryPort(ABC):

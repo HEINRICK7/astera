@@ -1,0 +1,1044 @@
+{
+  "case_id": "D3-030",
+  "corpus_checksum": "cef75b21b8eae6ec940b9f6cffe3d27fbe5b050db838569f3f19ef68434f1b0d",
+  "corpus_version": "D3",
+  "decisions": [],
+  "evaluation_id": "d3-one-shot-4c137795-99d1-4973-a98d-20eb89de0617",
+  "mismatches": [
+    {
+      "actual": "current",
+      "confidence": 0.55,
+      "details": {
+        "mention": "crise de asma",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "past",
+      "policy_rules": [],
+      "semantic_dimension": "temporality",
+      "stage": "prediction"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "d7dda54457cf896392e41edc8c259098b190c1c9bfa1ed82c6a1e5c7a46a59a7",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "01199b9a4951c20dd7724b78362999ba4c51db8984f715f90fc7b5f00ebdacb7",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "60e1124993d1e2555d433e984720be4d7d43ddc72f679c06f9b7233962046410",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "h1",
+            "speaker": "patient",
+            "text": "Tive uma crise de asma na adolescência."
+          },
+          {
+            "segment_id": "h2",
+            "speaker": "patient",
+            "text": "Hoje respiro sem chiado."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-030",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "fc522fd78eb59003ebe49b1ddb58bb6cb9b10588736293c8dd7a8a3ad265d684",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "60e1124993d1e2555d433e984720be4d7d43ddc72f679c06f9b7233962046410",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "75f6afe02c1f8d9289311462d9b92efce56a9eb535ef918f2d877d7a2f76fa38",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "crise de asma"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "52fff93bc377cdeb94f24c39a824b7a6424e3bc1d04b9f4a69ed366aa7e41cec",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "crise de asma"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "294c2167ed7080d30dba5fbd4bc62f6e7c56f2405087da5028c2e03db73557e0",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "crise de asma"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "b8b23ce54028f4a67ec47a4b7bc365814bdb9ad04acdeb883a809b3f460afcee",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:h1",
+            "owner_segment_id": "h1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "h1"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:h1",
+            "owner_segment_id": "h1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "h1"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:h1",
+            "owner_segment_id": "h1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "h1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:h1",
+            "owner_segment_id": "h1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "h1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "91197219e968c5c1555d6aa143da3b24593eda09495c5ab9a8e5d5a0ab870bd7",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "b8b23ce54028f4a67ec47a4b7bc365814bdb9ad04acdeb883a809b3f460afcee",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "8ea0e5d63aa46f129a85a4d7e88590f0930326974d60d3343a9d032031831ecb",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "4ed029d3e85657681d7027759f1ecb5a74bfc845c0102913916fd1d1ec4b330e",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            }
+          },
+          "attribute_provenance": {},
+          "candidate_source": "h1",
+          "owner_mention_id": "context:h1",
+          "owner_type": null,
+          "source_segment_ids": [
+            "h1"
+          ],
+          "transition_evidence": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tive uma crise de asma na adolescência.\\npatient: Hoje respiro sem chiado.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:h1:9:22', 'owner_span': (9, 22), 'source_evidence_id': 'context:h1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('h1',), 'candidate_source': 'h1', 'owner_type': None, 'owner_mention_id': 'context:h1', 'attribute_provenance': {}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}, 'certainty': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}, 'temporality': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}, 'experiencer': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 330, 'resolver_decisions_preserved': 294, 'resolver_decisions_overwritten': 36, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'h1', 'conversation_segment_ids': ['h2']}",
+            "relations": [],
+            "surface": "crise de asma"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "723fe1f7acfe6fc05093e574686faefa233272d2efd5e703d5169215eae2af71",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "crise de asma"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "4ed029d3e85657681d7027759f1ecb5a74bfc845c0102913916fd1d1ec4b330e",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "e880bc440d6900bff0972e0f054540554078a90e8f215c17c88cfc627d36af6b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:h1",
+              "owner_segment_id": "h1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "h1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "crise de asma"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "74595c2622f2d1a76ba36fb7738aae6a4d6abd8414b9b9b5a99b2f0f2f93ce58",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tive uma crise de asma na adolescência.\\npatient: Hoje respiro sem chiado.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:h1:9:22', 'owner_span': (9, 22), 'source_evidence_id': 'context:h1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('h1',), 'candidate_source': 'h1', 'owner_type': None, 'owner_mention_id': 'context:h1', 'attribute_provenance': {}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}, 'certainty': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}, 'temporality': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}, 'experiencer': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 330, 'resolver_decisions_preserved': 294, 'resolver_decisions_overwritten': 36, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'h1', 'conversation_segment_ids': ['h2']}",
+            "relations": [],
+            "surface": "crise de asma"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "19c3173da462e7c9c8fbe713d64272cb1abdd38d6b8192c9efeb9c4c7c29bb04",
+      "changed_fields": [
+        "temporality"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "74595c2622f2d1a76ba36fb7738aae6a4d6abd8414b9b9b5a99b2f0f2f93ce58",
+      "output_hash": "74595c2622f2d1a76ba36fb7738aae6a4d6abd8414b9b9b5a99b2f0f2f93ce58",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tive uma crise de asma na adolescência.\\npatient: Hoje respiro sem chiado.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:h1:9:22', 'owner_span': (9, 22), 'source_evidence_id': 'context:h1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('h1',), 'candidate_source': 'h1', 'owner_type': None, 'owner_mention_id': 'context:h1', 'attribute_provenance': {}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}, 'certainty': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}, 'temporality': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}, 'experiencer': {'owner_mention_id': 'context:h1', 'owner_segment_id': 'h1', 'owner_type': None, 'source_segment_ids': ('h1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 330, 'resolver_decisions_preserved': 294, 'resolver_decisions_overwritten': 36, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'h1', 'conversation_segment_ids': ['h2']}",
+            "relations": [],
+            "surface": "crise de asma"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-030",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "0a212ade1a189534d225e314fd5dccc2fecf373ff462f0f37274bc8c21e38f6e",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "74595c2622f2d1a76ba36fb7738aae6a4d6abd8414b9b9b5a99b2f0f2f93ce58",
+      "output_hash": "b397f6d197aef9d05fada1c06ef60ceda15eee1cd5792e7e184863d2ead2592b",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "temporality": [
+                "h1"
+              ]
+            },
+            "concept_id": "event.asthma_attack",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "h1"
+            ],
+            "surface": "crise de asma"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-030",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "001d21794b7b336ea1c5878f707261b64b5916684676d227027746c157bc4e9b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "b397f6d197aef9d05fada1c06ef60ceda15eee1cd5792e7e184863d2ead2592b",
+      "output_hash": "88abcbeead1abbec5e1eee84fbcd706ba817a9dd3c643963865392ed8865d822",
+      "payload": {
+        "case_id": "D3-030",
+        "mismatch_count": 1
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-030",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

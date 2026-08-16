@@ -1,0 +1,1374 @@
+{
+  "case_id": "D3-020",
+  "corpus_checksum": "cef75b21b8eae6ec940b9f6cffe3d27fbe5b050db838569f3f19ef68434f1b0d",
+  "corpus_version": "D3",
+  "decisions": [],
+  "evaluation_id": "d3-one-shot-4c137795-99d1-4973-a98d-20eb89de0617",
+  "mismatches": [
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "inalador",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "três vezes ao dia"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "inalador",
+        "relation_output_count": 1
+      },
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "três vezes ao dia"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "duas vezes ao dia"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "d7dda54457cf896392e41edc8c259098b190c1c9bfa1ed82c6a1e5c7a46a59a7",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "c844c28091139435a505529dcfa32c77b5cc98c7cb602c650e186a65c7dba9b9",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "a6e4c87b40fed57cfa362187ab0b2bda2b4e070b5fcf312bce13810ba3ee944c",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "t1",
+            "speaker": "patient",
+            "text": "O inalador era usado três vezes ao dia."
+          },
+          {
+            "segment_id": "t2",
+            "speaker": "patient",
+            "text": "Agora fica duas vezes ao dia."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-020",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "11471ede64c86f86481a87f73cb63a4637a26231d73a935078a5db24a2060a0c",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "a6e4c87b40fed57cfa362187ab0b2bda2b4e070b5fcf312bce13810ba3ee944c",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "088596a21fa2c6d2672dcf0478bed3d76127bba4942d7e59bf87fd56c67d5c0f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "inalador"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "frequency",
+              "value": "três vezes ao dia"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "duas vezes ao dia",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:11:19:CHANGED_FROM:frequency:três vezes ao dia",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "três vezes ao dia"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "três vezes ao dia"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "f69bcbd436eaac383a1b9c51a7b35d0dffb4ae09a420e2015b9a9668e7340520",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "inalador"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "frequency",
+              "value": "três vezes ao dia"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "duas vezes ao dia",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:11:19:CHANGED_FROM:frequency:três vezes ao dia",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "três vezes ao dia"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "três vezes ao dia"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "d91b34957903b60356e7a9f5aebb458bd31fd824dfaa2ce80ea32281312d7650",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "inalador"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "frequency",
+              "value": "três vezes ao dia"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "duas vezes ao dia",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:11:19:CHANGED_FROM:frequency:três vezes ao dia",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "três vezes ao dia"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "três vezes ao dia"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "6bc64159851bbe472bc506e95782017bc55589dc998ece74436a6145bced3ef4",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "frequency": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t2"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:t1",
+            "owner_segment_id": "t1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "t1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "8804fce821f86a745875badefde6b21ebb7d1081e048253a6c897f08e729bd47",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "6bc64159851bbe472bc506e95782017bc55589dc998ece74436a6145bced3ef4",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "184448621fc98f08864f1fe59f4631c127656f1e9565c9fe558cec9f4846e94d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "b831ddba0e239d6ef50c299161af4f3846b5f0a6c88e7ba06442d4ba045e7beb",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "frequency": [
+              "t2"
+            ]
+          },
+          "candidate_source": "t1",
+          "owner_mention_id": "context:t1",
+          "owner_type": null,
+          "source_segment_ids": [
+            "t1"
+          ],
+          "transition_attribute_ownership": {
+            "frequency": {
+              "current": "duas vezes ao dia",
+              "owner_mention_id": "context:t1:11:19",
+              "previous": "três vezes ao dia",
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "transition_evidence": [
+            {
+              "provenance": {
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:11:19:CHANGED_FROM:frequency:três vezes ao dia",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1:11:19",
+              "source_mention_id": "context:t1:11:19",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": null,
+              "value": "três vezes ao dia"
+            }
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O inalador era usado três vezes ao dia.\\npatient: Agora fica duas vezes ao dia.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:2:10', 'owner_span': (2, 10), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:t1:11:19:CHANGED_FROM:frequency:três vezes ao dia', 'relation_type': 'CHANGED_FROM', 'source': 'context:t1', 'target': 'frequency', 'value': 'três vezes ao dia', 'source_mention_id': 'context:t1', 'target_mention_id': 'frequency', 'source_segment_ids': ['t1'], 'confidence': 1.0, 'provenance': {'source_segment_ids': ('t1',), 'rule': 'clinical-relation-compiler-v1'}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': None, 'owner_mention_id': 'context:t1', 'attribute_provenance': {'frequency': ['t2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'frequency': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t2',)}}, 'transition_evidence': [{'relation_type': 'CHANGED_FROM', 'source': 'context:t1:11:19', 'target': 'frequency', 'value': 'três vezes ao dia', 'relation_id': 'context:t1:11:19:CHANGED_FROM:frequency:três vezes ao dia', 'source_mention_id': 'context:t1:11:19', 'target_mention_id': None, 'source_segment_ids': ['t1'], 'provenance': {'source_segment_ids': ('t1',)}}], 'transition_attribute_ownership': {'frequency': {'current': 'duas vezes ao dia', 'previous': 'três vezes ao dia', 'owner_mention_id': 'context:t1:11:19', 'source_segment_ids': ('t1',)}}}, 'authority_metrics': {'resolver_decisions_total': 220, 'resolver_decisions_preserved': 188, 'resolver_decisions_overwritten': 32, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t2']}",
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "três vezes ao dia"
+              }
+            ],
+            "surface": "inalador"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "751c6cb581d981319769c6c8e3a5e65df7f74120b8c69dfe8bdada3be6004eb7",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        },
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "inalador"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "frequency",
+              "value": "três vezes ao dia"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "duas vezes ao dia",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:11:19:CHANGED_FROM:frequency:três vezes ao dia",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "três vezes ao dia"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "três vezes ao dia"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        }
+      },
+      "input_hash": "b831ddba0e239d6ef50c299161af4f3846b5f0a6c88e7ba06442d4ba045e7beb",
+      "output_hash": "61a9da0b583d2e386531b251d5ae960c181b3073718b633c6c38f643d733a09d",
+      "payload": {
+        "relations": [
+          [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "frequency",
+              "value": "três vezes ao dia"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "79816ac360c591e62844049274d40fe7cbf7f6dd53e56fbb0fecc4d8c68ee77a",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:t1",
+              "owner_segment_id": "t1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "t1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "inalador"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "CHANGED_FROM",
+              "target": "frequency",
+              "value": "três vezes ao dia"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": null,
+            "dose_unit": null,
+            "dose_value": null,
+            "experiencer": "patient",
+            "frequency": "duas vezes ao dia",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "t1"
+                ]
+              },
+              "relation_id": "context:t1:11:19:CHANGED_FROM:frequency:três vezes ao dia",
+              "relation_type": "CHANGED_FROM",
+              "source": "context:t1",
+              "source_mention_id": "context:t1",
+              "source_segment_ids": [
+                "t1"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "três vezes ao dia"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "três vezes ao dia"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "61a9da0b583d2e386531b251d5ae960c181b3073718b633c6c38f643d733a09d",
+      "output_hash": "470fe699ab703070d3c403e659d6878444846cfe92ad9e9477be3878d6671bb4",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O inalador era usado três vezes ao dia.\\npatient: Agora fica duas vezes ao dia.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:2:10', 'owner_span': (2, 10), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:t1:11:19:CHANGED_FROM:frequency:três vezes ao dia', 'relation_type': 'CHANGED_FROM', 'source': 'context:t1', 'target': 'frequency', 'value': 'três vezes ao dia', 'source_mention_id': 'context:t1', 'target_mention_id': 'frequency', 'source_segment_ids': ['t1'], 'confidence': 1.0, 'provenance': {'source_segment_ids': ('t1',), 'rule': 'clinical-relation-compiler-v1'}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': None, 'owner_mention_id': 'context:t1', 'attribute_provenance': {'frequency': ['t2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'frequency': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t2',)}}, 'transition_evidence': [{'relation_type': 'CHANGED_FROM', 'source': 'context:t1:11:19', 'target': 'frequency', 'value': 'três vezes ao dia', 'relation_id': 'context:t1:11:19:CHANGED_FROM:frequency:três vezes ao dia', 'source_mention_id': 'context:t1:11:19', 'target_mention_id': None, 'source_segment_ids': ['t1'], 'provenance': {'source_segment_ids': ('t1',)}}], 'transition_attribute_ownership': {'frequency': {'current': 'duas vezes ao dia', 'previous': 'três vezes ao dia', 'owner_mention_id': 'context:t1:11:19', 'source_segment_ids': ('t1',)}}}, 'authority_metrics': {'resolver_decisions_total': 220, 'resolver_decisions_preserved': 188, 'resolver_decisions_overwritten': 32, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t2']}",
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "três vezes ao dia"
+              }
+            ],
+            "surface": "inalador"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "765c4ad6b418a82fd524f57ee0f28179253cec893c295d4853606b30ac513dd5",
+      "changed_fields": [
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "470fe699ab703070d3c403e659d6878444846cfe92ad9e9477be3878d6671bb4",
+      "output_hash": "470fe699ab703070d3c403e659d6878444846cfe92ad9e9477be3878d6671bb4",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: O inalador era usado três vezes ao dia.\\npatient: Agora fica duas vezes ao dia.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:t1:2:10', 'owner_span': (2, 10), 'source_evidence_id': 'context:t1'}}, 'relation_signals': [], 'projection': {'relations': [{'relation_id': 'context:t1:11:19:CHANGED_FROM:frequency:três vezes ao dia', 'relation_type': 'CHANGED_FROM', 'source': 'context:t1', 'target': 'frequency', 'value': 'três vezes ao dia', 'source_mention_id': 'context:t1', 'target_mention_id': 'frequency', 'source_segment_ids': ['t1'], 'confidence': 1.0, 'provenance': {'source_segment_ids': ('t1',), 'rule': 'clinical-relation-compiler-v1'}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('t1',), 'candidate_source': 't1', 'owner_type': None, 'owner_mention_id': 'context:t1', 'attribute_provenance': {'frequency': ['t2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'certainty': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'temporality': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'experiencer': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t1',)}, 'frequency': {'owner_mention_id': 'context:t1', 'owner_segment_id': 't1', 'owner_type': None, 'source_segment_ids': ('t2',)}}, 'transition_evidence': [{'relation_type': 'CHANGED_FROM', 'source': 'context:t1:11:19', 'target': 'frequency', 'value': 'três vezes ao dia', 'relation_id': 'context:t1:11:19:CHANGED_FROM:frequency:três vezes ao dia', 'source_mention_id': 'context:t1:11:19', 'target_mention_id': None, 'source_segment_ids': ['t1'], 'provenance': {'source_segment_ids': ('t1',)}}], 'transition_attribute_ownership': {'frequency': {'current': 'duas vezes ao dia', 'previous': 'três vezes ao dia', 'owner_mention_id': 'context:t1:11:19', 'source_segment_ids': ('t1',)}}}, 'authority_metrics': {'resolver_decisions_total': 220, 'resolver_decisions_preserved': 188, 'resolver_decisions_overwritten': 32, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 1, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 't1', 'conversation_segment_ids': ['t2']}",
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "três vezes ao dia"
+              }
+            ],
+            "surface": "inalador"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-020",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "e91071f6cf10939d109b22372080a2f88dd782e2e406cd7591925b261b43a394",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "470fe699ab703070d3c403e659d6878444846cfe92ad9e9477be3878d6671bb4",
+      "output_hash": "a95b8b7937a8a37a56b37c913ccd49fa9f5ad65627559046da5eab3346c3aef0",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "frequency": [
+                "t2"
+              ],
+              "status": [
+                "t2"
+              ]
+            },
+            "concept_id": "medication.inhaler",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "duas vezes ao dia",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "CHANGED_FROM": [
+                "t2"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "frequency",
+                "value": "três vezes ao dia"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "duas vezes ao dia"
+              }
+            ],
+            "segment_ids": [
+              "t1",
+              "t2"
+            ],
+            "surface": "inalador"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-020",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "4144ef9c73d8807e1185488d1468737382d45d02e32aa8333346ea0e7ba7f42c",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "a95b8b7937a8a37a56b37c913ccd49fa9f5ad65627559046da5eab3346c3aef0",
+      "output_hash": "3ed451f4acd70590adfb3e8eafd02547a4dd3458c5392ae07e3faf19fa24e7a3",
+      "payload": {
+        "case_id": "D3-020",
+        "mismatch_count": 2
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-020",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

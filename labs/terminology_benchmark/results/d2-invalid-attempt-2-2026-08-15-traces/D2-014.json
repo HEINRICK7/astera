@@ -1,0 +1,1097 @@
+{
+  "case_id": "D2-014",
+  "corpus_checksum": "d09c6ca1351ba31d1ece7cc371abc70ec79318f46bff04412149d23ccccb9811",
+  "corpus_version": "D2",
+  "decisions": [],
+  "evaluation_id": "d2-one-shot-d050b788-bba5-4d47-8460-b6b2cbb71529",
+  "mismatches": [
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "sertralina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "75 mg"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "sertralina",
+        "relation_output_count": 1
+      },
+      "expected": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "50 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "75 mg"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "ff09e39196d8458637629dce70da5bd20c4c5b0f5af5cd83a0d19b27e3a186ab",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "491f0a10bbbce8b430d25816fe543f9630ad05a0a9453832596a28be265c1254",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "c0c92c7c73ece2c8edd8f8442ff2280561471dc463105518e8b9868ddf55be91",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "e1",
+            "speaker": "clinician",
+            "text": "Qual dose de sertralina você usa?"
+          },
+          {
+            "segment_id": "e2",
+            "speaker": "patient",
+            "text": "Era 50 mg; desde o retorno, 75 mg."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-014",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "dab7e6e5e24da4324cfafe24b46584bb1af242a46b3fb84b5c2386b2b1ead7b6",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "c0c92c7c73ece2c8edd8f8442ff2280561471dc463105518e8b9868ddf55be91",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "93e1cee6aa7f676907d0ef7058318f8d05b1bc3645f7febf9c111c929c4e05bf",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:e1",
+              "owner_segment_id": "e1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "sertralina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "75 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "75 mg",
+            "dose_unit": "mg",
+            "dose_value": "75",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "resolved-attribute-materialization-v2",
+                "source_segment_ids": [
+                  "e2"
+                ]
+              },
+              "relation_id": "context:e1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:e1",
+              "source_mention_id": "context:e1",
+              "source_segment_ids": [
+                "e2"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "75 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "75 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "fb8dcd89cf9e9be4119281193fa044a80a09c0a7e014f415d4dbdd26de897ed2",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:e1",
+              "owner_segment_id": "e1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "sertralina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "75 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "75 mg",
+            "dose_unit": "mg",
+            "dose_value": "75",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "resolved-attribute-materialization-v2",
+                "source_segment_ids": [
+                  "e2"
+                ]
+              },
+              "relation_id": "context:e1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:e1",
+              "source_mention_id": "context:e1",
+              "source_segment_ids": [
+                "e2"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "75 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "75 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "bfd9ea46a6f6886109741a02bccaac2cc621b56748af24284e0e081ec3b58f24",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:e1",
+              "owner_segment_id": "e1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "sertralina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "75 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "75 mg",
+            "dose_unit": "mg",
+            "dose_value": "75",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "resolved-attribute-materialization-v2",
+                "source_segment_ids": [
+                  "e2"
+                ]
+              },
+              "relation_id": "context:e1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:e1",
+              "source_mention_id": "context:e1",
+              "source_segment_ids": [
+                "e2"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "75 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "75 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "a17a4c273ea1c085f59b1b2ace2cb5b9f91cd2cdcd264a7c75be5ee71e33adbb",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:e1",
+            "owner_segment_id": "e1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "1024613150a23ccd9ddd637bce2db4da60f568d34b69273ad0f98871cc5ae842",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "a17a4c273ea1c085f59b1b2ace2cb5b9f91cd2cdcd264a7c75be5ee71e33adbb",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "998504bb282644c02d0f58ce90e15b0bd3ecd0ac61079c32b686e93bde48a71f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "3f6ffd90cb4ab1a1ad24bee804585c23cc13b05381ab99ce947949da17d4e006",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:e1",
+              "owner_segment_id": "e1"
+            }
+          },
+          "candidate_source": "e1",
+          "source_segment_ids": [
+            "e1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: Qual dose de sertralina você usa?\\npatient: Era 50 mg; desde o retorno, 75 mg.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:e1:13:23', 'owner_span': (13, 23), 'source_evidence_id': 'context:e1'}}, 'projection': {'mention_id': 'context:e1:13:23', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:e1:HAS_DOSE:dose', 'relation_type': 'HAS_DOSE', 'source': 'context:e1', 'target': 'dose', 'value': '75 mg', 'source_mention_id': 'context:e1', 'target_mention_id': 'dose', 'source_segment_ids': ['e2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization-v2', 'attribute': 'dose', 'source_segment_ids': ('e2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('e1',), 'candidate_source': 'e1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:e1', 'owner_segment_id': 'e1'}}}, 'authority_metrics': {'resolver_decisions_total': 176, 'resolver_decisions_preserved': 161, 'resolver_decisions_overwritten': 15, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'e1', 'conversation_segment_ids': ['e2']}",
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "75 mg"
+              }
+            ],
+            "surface": "sertralina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "dfaf03ec657224da0519d495c291d85099381def7868a3a8b2dc155d3b4f32fc",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        },
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:e1",
+              "owner_segment_id": "e1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "sertralina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "75 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "75 mg",
+            "dose_unit": "mg",
+            "dose_value": "75",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "resolved-attribute-materialization-v2",
+                "source_segment_ids": [
+                  "e2"
+                ]
+              },
+              "relation_id": "context:e1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:e1",
+              "source_mention_id": "context:e1",
+              "source_segment_ids": [
+                "e2"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "75 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "75 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        }
+      },
+      "input_hash": "3f6ffd90cb4ab1a1ad24bee804585c23cc13b05381ab99ce947949da17d4e006",
+      "output_hash": "d7bf64ca3b1db1f78a8634ebfb31d849a129084862a0f9da1707accb516679b3",
+      "payload": {
+        "relations": [
+          [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "75 mg"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "0f2947b4212a0aa5cfcd34283db9b39195d3d6f0b6dab0f91c13d7644e0d6b14",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:e1",
+              "owner_segment_id": "e1"
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "sertralina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "75 mg"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "75 mg",
+            "dose_unit": "mg",
+            "dose_value": "75",
+            "experiencer": "patient",
+            "frequency": null,
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "resolved-attribute-materialization-v2",
+                "source_segment_ids": [
+                  "e2"
+                ]
+              },
+              "relation_id": "context:e1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:e1",
+              "source_mention_id": "context:e1",
+              "source_segment_ids": [
+                "e2"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "75 mg"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "75 mg"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "d7bf64ca3b1db1f78a8634ebfb31d849a129084862a0f9da1707accb516679b3",
+      "output_hash": "b28fb5dda41e0095b033179f8aa6c4803064a8e2d6810515870e37bff64c629e",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: Qual dose de sertralina você usa?\\npatient: Era 50 mg; desde o retorno, 75 mg.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:e1:13:23', 'owner_span': (13, 23), 'source_evidence_id': 'context:e1'}}, 'projection': {'mention_id': 'context:e1:13:23', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:e1:HAS_DOSE:dose', 'relation_type': 'HAS_DOSE', 'source': 'context:e1', 'target': 'dose', 'value': '75 mg', 'source_mention_id': 'context:e1', 'target_mention_id': 'dose', 'source_segment_ids': ['e2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization-v2', 'attribute': 'dose', 'source_segment_ids': ('e2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('e1',), 'candidate_source': 'e1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:e1', 'owner_segment_id': 'e1'}}}, 'authority_metrics': {'resolver_decisions_total': 176, 'resolver_decisions_preserved': 161, 'resolver_decisions_overwritten': 15, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'e1', 'conversation_segment_ids': ['e2']}",
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "75 mg"
+              }
+            ],
+            "surface": "sertralina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "e62af527c046a025fda103a71d4f8b666040ad1b023ac8a034002ff35d0949dc",
+      "changed_fields": [
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "b28fb5dda41e0095b033179f8aa6c4803064a8e2d6810515870e37bff64c629e",
+      "output_hash": "b28fb5dda41e0095b033179f8aa6c4803064a8e2d6810515870e37bff64c629e",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: Qual dose de sertralina você usa?\\npatient: Era 50 mg; desde o retorno, 75 mg.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:e1:13:23', 'owner_span': (13, 23), 'source_evidence_id': 'context:e1'}}, 'projection': {'mention_id': 'context:e1:13:23', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:e1:HAS_DOSE:dose', 'relation_type': 'HAS_DOSE', 'source': 'context:e1', 'target': 'dose', 'value': '75 mg', 'source_mention_id': 'context:e1', 'target_mention_id': 'dose', 'source_segment_ids': ['e2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization-v2', 'attribute': 'dose', 'source_segment_ids': ('e2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('e1',), 'candidate_source': 'e1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:e1', 'owner_segment_id': 'e1'}}}, 'authority_metrics': {'resolver_decisions_total': 176, 'resolver_decisions_preserved': 161, 'resolver_decisions_overwritten': 15, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 'e1', 'conversation_segment_ids': ['e2']}",
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "75 mg"
+              }
+            ],
+            "surface": "sertralina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-014",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "df3da8fdd431fd95f40261faa421c3af431e0c94fb61f35fc3b4f1cf841a7249",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "b28fb5dda41e0095b033179f8aa6c4803064a8e2d6810515870e37bff64c629e",
+      "output_hash": "004876fb4133282a1d1d091ae98890cbbe580cffce9b6f6264c13e9370b137ac",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "dose": [
+                "e2"
+              ],
+              "dose_unit": [
+                "e2"
+              ],
+              "dose_value": [
+                "e2"
+              ],
+              "status": [
+                "e2"
+              ]
+            },
+            "concept_id": "medication.sertraline",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "75 mg",
+              "dose_unit": "mg",
+              "dose_value": "75",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "CHANGED_FROM": [
+                "e2"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "CHANGED_FROM",
+                "target": "dose",
+                "value": "50 mg"
+              },
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "75 mg"
+              }
+            ],
+            "segment_ids": [
+              "e1",
+              "e2"
+            ],
+            "surface": "sertralina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-014",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "bfe02347e92e4211437ff3fdb8f80bb7ebf712435171c3edc2887591d48fd2aa",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "004876fb4133282a1d1d091ae98890cbbe580cffce9b6f6264c13e9370b137ac",
+      "output_hash": "25d9faaebdf1f7ba3d26480b834dec389b236201f552b515312ed5bb33fe0149",
+      "payload": {
+        "case_id": "D2-014",
+        "mismatch_count": 2
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D2-014",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D2_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

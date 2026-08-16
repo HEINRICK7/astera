@@ -1,0 +1,2046 @@
+{
+  "status": "HUMAN_GATE",
+  "scope": "D1/D2 frozen traces, generated_relations first-divergence findings",
+  "d1_rerun": false,
+  "d2_rerun": false,
+  "resolver_modified": false,
+  "policy_modified": false,
+  "findings_total": 32,
+  "by_dataset": {
+    "D1": 18,
+    "D2": 14
+  },
+  "by_category": {
+    "RELATION_OWNER_SELECTION": 7,
+    "RELATION_SUPPRESSION": 3,
+    "TRANSITION_COMPILATION": 10,
+    "RELATION_DUPLICATION": 3,
+    "CURRENT_VS_HISTORICAL_STATE": 5,
+    "RELATION_NORMALIZATION": 1,
+    "ATTRIBUTE_TO_RELATION_COMPILATION": 3
+  },
+  "dataset_category": {
+    "D1": {
+      "RELATION_OWNER_SELECTION": 7,
+      "RELATION_SUPPRESSION": 2,
+      "TRANSITION_COMPILATION": 6,
+      "RELATION_DUPLICATION": 1,
+      "CURRENT_VS_HISTORICAL_STATE": 1,
+      "RELATION_NORMALIZATION": 1
+    },
+    "D2": {
+      "ATTRIBUTE_TO_RELATION_COMPILATION": 3,
+      "CURRENT_VS_HISTORICAL_STATE": 4,
+      "RELATION_DUPLICATION": 2,
+      "TRANSITION_COMPILATION": 4,
+      "RELATION_SUPPRESSION": 1
+    }
+  },
+  "findings": [
+    {
+      "dataset": "D1",
+      "case_id": "D1-002",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-002.json",
+      "source_mention": "tremor",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": "à noite",
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [],
+      "produced_relations": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s3"
+            ]
+          },
+          "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+          "relation_type": "HAS_FREQUENCY",
+          "source": "context:s1",
+          "source_mention_id": "context:s1",
+          "source_segment_ids": [
+            "s3"
+          ],
+          "target": "frequency",
+          "target_mention_id": "frequency",
+          "value": "à noite"
+        }
+      ],
+      "owner_expected": "symptom",
+      "owner_produced": "context:s1",
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": null,
+        "resolved_status": null
+      },
+      "relation_type": "HAS_FREQUENCY",
+      "relation_endpoint": "frequency",
+      "relation_provenance": {
+        "expected": {},
+        "produced": [
+          {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s3"
+            ]
+          }
+        ]
+      },
+      "category": "RELATION_OWNER_SELECTION",
+      "reason": "HAS_FREQUENCY emitted without a compatible owned attribute",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-005",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-005.json",
+      "source_mention": "budesonida",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": true,
+        "route": null,
+        "status": "active",
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "todas as noites"
+        }
+      ],
+      "produced_relations": [],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": "active"
+      },
+      "relation_type": "HAS_FREQUENCY",
+      "relation_endpoint": "frequency",
+      "relation_provenance": {
+        "expected": {},
+        "produced": []
+      },
+      "category": "RELATION_SUPPRESSION",
+      "reason": "expected relation is absent and no resolved field supports emission",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-010",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-010.json",
+      "source_mention": "carvedilol",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": "25 mg",
+        "dose_unit": "mg",
+        "dose_value": "25",
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": "active",
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "25 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "12,5 mg"
+        }
+      ],
+      "produced_relations": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "rule": "ptbr-dose"
+          },
+          "relation_id": null,
+          "relation_type": "HAS_DOSE",
+          "source": "context:s1:10:20",
+          "source_mention_id": "context:s1:10:20",
+          "source_segment_ids": [],
+          "target": "dose",
+          "target_mention_id": "dose",
+          "value": "25 mg"
+        }
+      ],
+      "owner_expected": "medication",
+      "owner_produced": "context:s1:10:20",
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": "active"
+      },
+      "relation_type": "CHANGED_FROM",
+      "relation_endpoint": "dose",
+      "relation_provenance": {
+        "expected": {
+          "CHANGED_FROM": [
+            "s2"
+          ]
+        },
+        "produced": [
+          {
+            "rule": "ptbr-dose"
+          }
+        ]
+      },
+      "category": "TRANSITION_COMPILATION",
+      "reason": "transition relation expected but not emitted",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-011",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-011.json",
+      "source_mention": "rosuvastatina",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": true,
+        "route": null,
+        "status": "active",
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "DISCONTINUED_AT",
+          "target": "status",
+          "value": "discontinued"
+        },
+        {
+          "relation_type": "DISCONTINUED_AT",
+          "target": "status",
+          "value": "discontinued"
+        }
+      ],
+      "produced_relations": [],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "discontinued",
+        "resolved_status": "active"
+      },
+      "relation_type": "DISCONTINUED_AT",
+      "relation_endpoint": "status",
+      "relation_provenance": {
+        "expected": {
+          "DISCONTINUED_AT": [
+            "s3"
+          ]
+        },
+        "produced": []
+      },
+      "category": "RELATION_DUPLICATION",
+      "reason": "expected-side duplicate; likely explicit relation plus derived expansion",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-013",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-013.json",
+      "source_mention": "gabapentina",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": "300 mg",
+        "dose_unit": "mg",
+        "dose_value": "300",
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": "active",
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "300 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "400 mg"
+        }
+      ],
+      "produced_relations": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "rule": "ptbr-dose"
+          },
+          "relation_id": null,
+          "relation_type": "HAS_DOSE",
+          "source": "context:s1:2:13",
+          "source_mention_id": "context:s1:2:13",
+          "source_segment_ids": [],
+          "target": "dose",
+          "target_mention_id": "dose",
+          "value": "300 mg"
+        }
+      ],
+      "owner_expected": "medication",
+      "owner_produced": "context:s1:2:13",
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": "active"
+      },
+      "relation_type": "CHANGED_FROM",
+      "relation_endpoint": "dose",
+      "relation_provenance": {
+        "expected": {
+          "CHANGED_FROM": [
+            "s3"
+          ]
+        },
+        "produced": [
+          {
+            "rule": "ptbr-dose"
+          }
+        ]
+      },
+      "category": "TRANSITION_COMPILATION",
+      "reason": "transition relation expected but not emitted",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-014",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-014.json",
+      "source_mention": "adesivo de nicotina",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": "14 mg",
+        "dose_unit": "mg",
+        "dose_value": "14",
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": "active",
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "14 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "7 mg"
+        }
+      ],
+      "produced_relations": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "rule": "ptbr-dose"
+          },
+          "relation_id": null,
+          "relation_type": "HAS_DOSE",
+          "source": "context:s1:2:21",
+          "source_mention_id": "context:s1:2:21",
+          "source_segment_ids": [],
+          "target": "dose",
+          "target_mention_id": "dose",
+          "value": "14 mg"
+        },
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "source_segment_ids": [
+              "s1"
+            ]
+          },
+          "relation_id": "context:s1:11:30:CHANGED_FROM:dose:14 mg",
+          "relation_type": "CHANGED_FROM",
+          "source": "context:s1:11:30",
+          "source_mention_id": "context:s1:11:30",
+          "source_segment_ids": [
+            "s1"
+          ],
+          "target": "dose",
+          "target_mention_id": "dose",
+          "value": "14 mg"
+        }
+      ],
+      "owner_expected": "medication",
+      "owner_produced": "context:s1:2:21",
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": "active"
+      },
+      "relation_type": "CHANGED_FROM",
+      "relation_endpoint": "dose",
+      "relation_provenance": {
+        "expected": {
+          "CHANGED_FROM": [
+            "s2"
+          ]
+        },
+        "produced": [
+          {
+            "rule": "ptbr-dose"
+          },
+          {
+            "source_segment_ids": [
+              "s1"
+            ]
+          }
+        ]
+      },
+      "category": "CURRENT_VS_HISTORICAL_STATE",
+      "reason": "resolved dose already differs from gold; relation compiler follows wrong state",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-016",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-016.json",
+      "source_mention": "inalador",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": "duas vezes ao dia",
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": "active",
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "duas vezes ao dia"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "uma vez ao dia"
+        }
+      ],
+      "produced_relations": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "rule": "ptbr-frequency"
+          },
+          "relation_id": null,
+          "relation_type": "HAS_FREQUENCY",
+          "source": "context:s1:11:19",
+          "source_mention_id": "context:s1:11:19",
+          "source_segment_ids": [],
+          "target": "frequency",
+          "target_mention_id": "frequency",
+          "value": "duas vezes ao dia"
+        }
+      ],
+      "owner_expected": "medication",
+      "owner_produced": "context:s1:11:19",
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": "active"
+      },
+      "relation_type": "CHANGED_FROM",
+      "relation_endpoint": "frequency",
+      "relation_provenance": {
+        "expected": {
+          "CHANGED_FROM": [
+            "s2"
+          ]
+        },
+        "produced": [
+          {
+            "rule": "ptbr-frequency"
+          }
+        ]
+      },
+      "category": "TRANSITION_COMPILATION",
+      "reason": "transition relation expected but not emitted",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-017",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-017.json",
+      "source_mention": "hidroclorotiazida",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": "depois do jantar",
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "pela manhã"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "à noite"
+        }
+      ],
+      "produced_relations": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s3"
+            ]
+          },
+          "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+          "relation_type": "HAS_FREQUENCY",
+          "source": "context:s1",
+          "source_mention_id": "context:s1",
+          "source_segment_ids": [
+            "s3"
+          ],
+          "target": "frequency",
+          "target_mention_id": "frequency",
+          "value": "depois do jantar"
+        }
+      ],
+      "owner_expected": "medication",
+      "owner_produced": "context:s1",
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": null
+      },
+      "relation_type": "CHANGED_FROM",
+      "relation_endpoint": "frequency",
+      "relation_provenance": {
+        "expected": {
+          "CHANGED_FROM": [
+            "s3"
+          ]
+        },
+        "produced": [
+          {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s3"
+            ]
+          }
+        ]
+      },
+      "category": "TRANSITION_COMPILATION",
+      "reason": "transition relation expected but not emitted",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-018",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-018.json",
+      "source_mention": "suplemento",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "dias alternados"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "todos os dias"
+        }
+      ],
+      "produced_relations": [],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": null
+      },
+      "relation_type": "CHANGED_FROM",
+      "relation_endpoint": "frequency",
+      "relation_provenance": {
+        "expected": {
+          "CHANGED_FROM": [
+            "s2"
+          ]
+        },
+        "produced": []
+      },
+      "category": "TRANSITION_COMPILATION",
+      "reason": "transition relation expected but not emitted",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-019",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-019.json",
+      "source_mention": "artrite",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "family",
+        "frequency": "pela manhã",
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "past"
+      },
+      "expected_relations": [],
+      "produced_relations": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s3"
+            ]
+          },
+          "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+          "relation_type": "HAS_FREQUENCY",
+          "source": "context:s1",
+          "source_mention_id": "context:s1",
+          "source_segment_ids": [
+            "s3"
+          ],
+          "target": "frequency",
+          "target_mention_id": "frequency",
+          "value": "pela manhã"
+        }
+      ],
+      "owner_expected": "condition",
+      "owner_produced": "context:s1",
+      "historical_current": {
+        "expected_temporality": "past",
+        "resolved_temporality": "past",
+        "expected_status": null,
+        "resolved_status": null
+      },
+      "relation_type": "HAS_FREQUENCY",
+      "relation_endpoint": "frequency",
+      "relation_provenance": {
+        "expected": {},
+        "produced": [
+          {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s3"
+            ]
+          }
+        ]
+      },
+      "category": "RELATION_OWNER_SELECTION",
+      "reason": "HAS_FREQUENCY emitted without a compatible owned attribute",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-019",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-019.json",
+      "source_mention": "rigidez",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": "pela manhã",
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [],
+      "produced_relations": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s3"
+            ]
+          },
+          "relation_id": "context:s3:HAS_FREQUENCY:frequency",
+          "relation_type": "HAS_FREQUENCY",
+          "source": "context:s3",
+          "source_mention_id": "context:s3",
+          "source_segment_ids": [
+            "s3"
+          ],
+          "target": "frequency",
+          "target_mention_id": "frequency",
+          "value": "pela manhã"
+        }
+      ],
+      "owner_expected": "symptom",
+      "owner_produced": "context:s3",
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": null,
+        "resolved_status": null
+      },
+      "relation_type": "HAS_FREQUENCY",
+      "relation_endpoint": "frequency",
+      "relation_provenance": {
+        "expected": {},
+        "produced": [
+          {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s3"
+            ]
+          }
+        ]
+      },
+      "category": "RELATION_OWNER_SELECTION",
+      "reason": "HAS_FREQUENCY emitted without a compatible owned attribute",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-025",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-025.json",
+      "source_mention": "dor lombar",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": "depois do café",
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [],
+      "produced_relations": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+          "relation_type": "HAS_FREQUENCY",
+          "source": "context:s1",
+          "source_mention_id": "context:s1",
+          "source_segment_ids": [
+            "s2"
+          ],
+          "target": "frequency",
+          "target_mention_id": "frequency",
+          "value": "depois do café"
+        }
+      ],
+      "owner_expected": "symptom",
+      "owner_produced": "context:s1",
+      "historical_current": {
+        "expected_temporality": "past",
+        "resolved_temporality": "current",
+        "expected_status": null,
+        "resolved_status": null
+      },
+      "relation_type": "HAS_FREQUENCY",
+      "relation_endpoint": "frequency",
+      "relation_provenance": {
+        "expected": {},
+        "produced": [
+          {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "category": "RELATION_OWNER_SELECTION",
+      "reason": "HAS_FREQUENCY emitted without a compatible owned attribute",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-025",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-025.json",
+      "source_mention": "estômago",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": "depois do café",
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [],
+      "produced_relations": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          "relation_id": "context:s2:HAS_FREQUENCY:frequency",
+          "relation_type": "HAS_FREQUENCY",
+          "source": "context:s2",
+          "source_mention_id": "context:s2",
+          "source_segment_ids": [
+            "s2"
+          ],
+          "target": "frequency",
+          "target_mention_id": "frequency",
+          "value": "depois do café"
+        }
+      ],
+      "owner_expected": "anatomical",
+      "owner_produced": "context:s2",
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": null,
+        "resolved_status": null
+      },
+      "relation_type": "HAS_FREQUENCY",
+      "relation_endpoint": "frequency",
+      "relation_provenance": {
+        "expected": {},
+        "produced": [
+          {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "category": "RELATION_OWNER_SELECTION",
+      "reason": "HAS_FREQUENCY emitted without a compatible owned attribute",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-027",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-027.json",
+      "source_mention": "glicose",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": "à noite",
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [],
+      "produced_relations": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+          "relation_type": "HAS_FREQUENCY",
+          "source": "context:s1",
+          "source_mention_id": "context:s1",
+          "source_segment_ids": [
+            "s2"
+          ],
+          "target": "frequency",
+          "target_mention_id": "frequency",
+          "value": "à noite"
+        }
+      ],
+      "owner_expected": "condition",
+      "owner_produced": "context:s1",
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": null,
+        "resolved_status": null
+      },
+      "relation_type": "HAS_FREQUENCY",
+      "relation_endpoint": "frequency",
+      "relation_provenance": {
+        "expected": {},
+        "produced": [
+          {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "category": "RELATION_OWNER_SELECTION",
+      "reason": "HAS_FREQUENCY emitted without a compatible owned attribute",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-027",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-027.json",
+      "source_mention": "pontos brilhantes",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": "à noite",
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [],
+      "produced_relations": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          "relation_id": "context:s2:HAS_FREQUENCY:frequency",
+          "relation_type": "HAS_FREQUENCY",
+          "source": "context:s2",
+          "source_mention_id": "context:s2",
+          "source_segment_ids": [
+            "s2"
+          ],
+          "target": "frequency",
+          "target_mention_id": "frequency",
+          "value": "à noite"
+        }
+      ],
+      "owner_expected": "symptom",
+      "owner_produced": "context:s2",
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": null,
+        "resolved_status": null
+      },
+      "relation_type": "HAS_FREQUENCY",
+      "relation_endpoint": "frequency",
+      "relation_provenance": {
+        "expected": {},
+        "produced": [
+          {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "category": "RELATION_OWNER_SELECTION",
+      "reason": "HAS_FREQUENCY emitted without a compatible owned attribute",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-028",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-028.json",
+      "source_mention": "omeprazol",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "40 mg"
+        }
+      ],
+      "produced_relations": [],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": null
+      },
+      "relation_type": "HAS_DOSE",
+      "relation_endpoint": "dose",
+      "relation_provenance": {
+        "expected": {},
+        "produced": []
+      },
+      "category": "RELATION_SUPPRESSION",
+      "reason": "expected relation is absent and no resolved field supports emission",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-033",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-033.json",
+      "source_mention": "lesão",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": "left",
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "HAS_LATERALITY",
+          "target": "laterality",
+          "value": "left"
+        }
+      ],
+      "produced_relations": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "rule": "ptbr-nearest-laterality"
+          },
+          "relation_id": null,
+          "relation_type": "HAS_LATERALITY",
+          "source": "context:s1:2:7",
+          "source_mention_id": "context:s1:2:7",
+          "source_segment_ids": [],
+          "target": "laterality",
+          "target_mention_id": "laterality",
+          "value": "right"
+        },
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "laterality",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          "relation_id": "context:s1:HAS_LATERALITY:laterality",
+          "relation_type": "HAS_LATERALITY",
+          "source": "context:s1",
+          "source_mention_id": "context:s1",
+          "source_segment_ids": [
+            "s2"
+          ],
+          "target": "laterality",
+          "target_mention_id": "laterality",
+          "value": "left"
+        }
+      ],
+      "owner_expected": "condition",
+      "owner_produced": "context:s1:2:7",
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": null,
+        "resolved_status": null
+      },
+      "relation_type": "HAS_LATERALITY",
+      "relation_endpoint": "laterality",
+      "relation_provenance": {
+        "expected": {},
+        "produced": [
+          {
+            "rule": "ptbr-nearest-laterality"
+          },
+          {
+            "attribute": "laterality",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "category": "RELATION_NORMALIZATION",
+      "reason": "HAS_LATERALITY value conflicts with resolved laterality",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D1",
+      "case_id": "D1-035",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15/D1-035.json",
+      "source_mention": "atenolol",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": "de manhã",
+        "laterality": null,
+        "negated": true,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "à noite"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "de manhã"
+        }
+      ],
+      "produced_relations": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+          "relation_type": "HAS_FREQUENCY",
+          "source": "context:s1",
+          "source_mention_id": "context:s1",
+          "source_segment_ids": [
+            "s2"
+          ],
+          "target": "frequency",
+          "target_mention_id": "frequency",
+          "value": "de manhã"
+        }
+      ],
+      "owner_expected": "medication",
+      "owner_produced": "context:s1",
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": null
+      },
+      "relation_type": "CHANGED_FROM",
+      "relation_endpoint": "frequency",
+      "relation_provenance": {
+        "expected": {
+          "CHANGED_FROM": [
+            "s2"
+          ]
+        },
+        "produced": [
+          {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "category": "TRANSITION_COMPILATION",
+      "reason": "transition relation expected but not emitted",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D2",
+      "case_id": "D2-001",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-001.json",
+      "source_mention": "ardor",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": "left",
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "HAS_LATERALITY",
+          "target": "laterality",
+          "value": "left"
+        }
+      ],
+      "produced_relations": [],
+      "owner_expected": "symptom",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": null,
+        "resolved_status": null
+      },
+      "relation_type": "HAS_LATERALITY",
+      "relation_endpoint": "laterality",
+      "relation_provenance": {
+        "expected": {},
+        "produced": []
+      },
+      "category": "ATTRIBUTE_TO_RELATION_COMPILATION",
+      "reason": "resolved laterality is available but HAS_LATERALITY is absent",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D2",
+      "case_id": "D2-004",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-004.json",
+      "source_mention": "enalapril",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": "discontinued",
+        "temporality": "past"
+      },
+      "expected_relations": [],
+      "produced_relations": [
+        {
+          "relation_type": "DISCONTINUED_AT",
+          "target": "status",
+          "value": "discontinued"
+        }
+      ],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "past",
+        "expected_status": "active",
+        "resolved_status": "discontinued"
+      },
+      "relation_type": "DISCONTINUED_AT",
+      "relation_endpoint": "status",
+      "relation_provenance": {
+        "expected": {},
+        "produced": [
+          {}
+        ]
+      },
+      "category": "CURRENT_VS_HISTORICAL_STATE",
+      "reason": "DISCONTINUED_AT reflects a non-current resolved state",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D2",
+      "case_id": "D2-010",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-010.json",
+      "source_mention": "losartana",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": "50 mg",
+        "dose_unit": "mg",
+        "dose_value": "50",
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": "active",
+        "temporality": "past"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "50 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "25 mg"
+        }
+      ],
+      "produced_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "50 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "50 mg"
+        }
+      ],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "past",
+        "expected_status": "active",
+        "resolved_status": "active"
+      },
+      "relation_type": "CHANGED_FROM",
+      "relation_endpoint": "dose",
+      "relation_provenance": {
+        "expected": {
+          "CHANGED_FROM": [
+            "d2"
+          ]
+        },
+        "produced": [
+          {},
+          {}
+        ]
+      },
+      "category": "CURRENT_VS_HISTORICAL_STATE",
+      "reason": "resolved dose already differs from gold; relation compiler follows wrong state",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D2",
+      "case_id": "D2-011",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-011.json",
+      "source_mention": "metformina",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": true,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "DISCONTINUED_AT",
+          "target": "status",
+          "value": "discontinued"
+        },
+        {
+          "relation_type": "DISCONTINUED_AT",
+          "target": "status",
+          "value": "discontinued"
+        }
+      ],
+      "produced_relations": [],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "discontinued",
+        "resolved_status": null
+      },
+      "relation_type": "DISCONTINUED_AT",
+      "relation_endpoint": "status",
+      "relation_provenance": {
+        "expected": {
+          "DISCONTINUED_AT": [
+            "d3"
+          ]
+        },
+        "produced": []
+      },
+      "category": "RELATION_DUPLICATION",
+      "reason": "expected-side duplicate; likely explicit relation plus derived expansion",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D2",
+      "case_id": "D2-013",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-013.json",
+      "source_mention": "prednisona",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": "20 mg",
+        "dose_unit": "mg",
+        "dose_value": "20",
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": "active",
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "20 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "10 mg"
+        }
+      ],
+      "produced_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "20 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "20 mg"
+        }
+      ],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": "active"
+      },
+      "relation_type": "CHANGED_FROM",
+      "relation_endpoint": "dose",
+      "relation_provenance": {
+        "expected": {
+          "CHANGED_FROM": [
+            "e2"
+          ]
+        },
+        "produced": [
+          {},
+          {}
+        ]
+      },
+      "category": "CURRENT_VS_HISTORICAL_STATE",
+      "reason": "resolved dose already differs from gold; relation compiler follows wrong state",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D2",
+      "case_id": "D2-014",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-014.json",
+      "source_mention": "sertralina",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": "75 mg",
+        "dose_unit": "mg",
+        "dose_value": "75",
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "50 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "75 mg"
+        }
+      ],
+      "produced_relations": [
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "75 mg"
+        }
+      ],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": null
+      },
+      "relation_type": "CHANGED_FROM",
+      "relation_endpoint": "dose",
+      "relation_provenance": {
+        "expected": {
+          "CHANGED_FROM": [
+            "e2"
+          ]
+        },
+        "produced": [
+          {}
+        ]
+      },
+      "category": "TRANSITION_COMPILATION",
+      "reason": "transition relation expected but not emitted",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D2",
+      "case_id": "D2-015",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-015.json",
+      "source_mention": "adesivo",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": "14 mg",
+        "dose_unit": "mg",
+        "dose_value": "14",
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": "active",
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "14 mg"
+        },
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "7 mg"
+        }
+      ],
+      "produced_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "dose",
+          "value": "14 mg"
+        }
+      ],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": "active"
+      },
+      "relation_type": "CHANGED_FROM",
+      "relation_endpoint": "dose",
+      "relation_provenance": {
+        "expected": {
+          "CHANGED_FROM": [
+            "e2"
+          ]
+        },
+        "produced": [
+          {}
+        ]
+      },
+      "category": "CURRENT_VS_HISTORICAL_STATE",
+      "reason": "resolved dose already differs from gold; relation compiler follows wrong state",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D2",
+      "case_id": "D2-016",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-016.json",
+      "source_mention": "bombinha",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": "duas vezes ao dia",
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": "active",
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "duas vezes ao dia"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "uma vez ao dia"
+        }
+      ],
+      "produced_relations": [
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "duas vezes ao dia"
+        }
+      ],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": "active"
+      },
+      "relation_type": "CHANGED_FROM",
+      "relation_endpoint": "frequency",
+      "relation_provenance": {
+        "expected": {
+          "CHANGED_FROM": [
+            "f2"
+          ]
+        },
+        "produced": [
+          {}
+        ]
+      },
+      "category": "TRANSITION_COMPILATION",
+      "reason": "transition relation expected but not emitted",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D2",
+      "case_id": "D2-018",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-018.json",
+      "source_mention": "ibuprofeno",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "todos os dias"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "dias alternados"
+        }
+      ],
+      "produced_relations": [],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": null
+      },
+      "relation_type": "CHANGED_FROM",
+      "relation_endpoint": "frequency",
+      "relation_provenance": {
+        "expected": {
+          "CHANGED_FROM": [
+            "f2"
+          ]
+        },
+        "produced": []
+      },
+      "category": "TRANSITION_COMPILATION",
+      "reason": "transition relation expected but not emitted",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D2",
+      "case_id": "D2-026",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-026.json",
+      "source_mention": "amlodipina",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": "5 mg",
+        "dose_unit": "mg",
+        "dose_value": "5",
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": "active",
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "5 mg"
+        }
+      ],
+      "produced_relations": [],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": "active"
+      },
+      "relation_type": "HAS_DOSE",
+      "relation_endpoint": "dose",
+      "relation_provenance": {
+        "expected": {},
+        "produced": []
+      },
+      "category": "ATTRIBUTE_TO_RELATION_COMPILATION",
+      "reason": "resolved dose is available but HAS_DOSE is absent",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D2",
+      "case_id": "D2-028",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-028.json",
+      "source_mention": "metformina",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "850 mg"
+        }
+      ],
+      "produced_relations": [],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": null
+      },
+      "relation_type": "HAS_DOSE",
+      "relation_endpoint": "dose",
+      "relation_provenance": {
+        "expected": {},
+        "produced": []
+      },
+      "category": "RELATION_SUPPRESSION",
+      "reason": "expected relation is absent and no resolved field supports emission",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D2",
+      "case_id": "D2-030",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-030.json",
+      "source_mention": "adesivo",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": "discontinued",
+        "temporality": "past"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "DISCONTINUED_AT",
+          "target": "status",
+          "value": "discontinued"
+        },
+        {
+          "relation_type": "DISCONTINUED_AT",
+          "target": "status",
+          "value": "discontinued"
+        }
+      ],
+      "produced_relations": [],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "past",
+        "expected_status": "discontinued",
+        "resolved_status": "discontinued"
+      },
+      "relation_type": "DISCONTINUED_AT",
+      "relation_endpoint": "status",
+      "relation_provenance": {
+        "expected": {
+          "DISCONTINUED_AT": [
+            "j2"
+          ]
+        },
+        "produced": []
+      },
+      "category": "RELATION_DUPLICATION",
+      "reason": "expected-side duplicate; likely explicit relation plus derived expansion",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D2",
+      "case_id": "D2-033",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-033.json",
+      "source_mention": "lesão",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": null,
+        "laterality": "left",
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "HAS_LATERALITY",
+          "target": "laterality",
+          "value": "left"
+        }
+      ],
+      "produced_relations": [],
+      "owner_expected": "condition",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": null,
+        "resolved_status": null
+      },
+      "relation_type": "HAS_LATERALITY",
+      "relation_endpoint": "laterality",
+      "relation_provenance": {
+        "expected": {},
+        "produced": []
+      },
+      "category": "ATTRIBUTE_TO_RELATION_COMPILATION",
+      "reason": "resolved laterality is available but HAS_LATERALITY is absent",
+      "confidence": 0.86
+    },
+    {
+      "dataset": "D2",
+      "case_id": "D2-035",
+      "trace": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d2-traces-2026-08-15/D2-035.json",
+      "source_mention": "atenolol",
+      "resolved_attributes": {
+        "certainty": "confirmed",
+        "dose": null,
+        "dose_unit": null,
+        "dose_value": null,
+        "experiencer": "patient",
+        "frequency": "pela manhã",
+        "laterality": null,
+        "negated": false,
+        "route": null,
+        "status": null,
+        "temporality": "current"
+      },
+      "expected_relations": [
+        {
+          "relation_type": "CHANGED_FROM",
+          "target": "frequency",
+          "value": "à noite"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "pela manhã"
+        }
+      ],
+      "produced_relations": [
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "pela manhã"
+        }
+      ],
+      "owner_expected": "medication",
+      "owner_produced": null,
+      "historical_current": {
+        "expected_temporality": "current",
+        "resolved_temporality": "current",
+        "expected_status": "active",
+        "resolved_status": null
+      },
+      "relation_type": "CHANGED_FROM",
+      "relation_endpoint": "frequency",
+      "relation_provenance": {
+        "expected": {
+          "CHANGED_FROM": [
+            "l2"
+          ]
+        },
+        "produced": [
+          {}
+        ]
+      },
+      "category": "TRANSITION_COMPILATION",
+      "reason": "transition relation expected but not emitted",
+      "confidence": 0.86
+    }
+  ],
+  "writer_inventory": {
+    "relation_writer_sites": 6,
+    "competing_components": 5,
+    "duplicated_vocabularies": [
+      "CHANGED_FROM",
+      "DISCONTINUED_AT",
+      "HAS_DOSE",
+      "HAS_FREQUENCY",
+      "HAS_LATERALITY"
+    ]
+  },
+  "recommendation": "R2",
+  "recommendation_options": {
+    "R1": "maintain architecture and fix local bugs",
+    "R2": "consolidate writers in a single compiler",
+    "R3": "redesign representation model",
+    "R4": "external capability required"
+  }
+}

@@ -12,6 +12,19 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import Any
 
+from apps.runtime.src.application.orchestrator.task_intent import TaskIntent
+from apps.runtime.src.application.orchestrator.task_result import TaskResult
+from .evidence import EvidenceIngressPort
+
+__all__ = [
+    "CapabilityPort",
+    "ContextPort",
+    "EvidenceIngressPort",
+    "KernelPort",
+    "PluginRegistryPort",
+    "TaskExecutionPort",
+]
+
 
 class KernelPort(ABC):
     """
@@ -88,4 +101,13 @@ class PluginRegistryPort(ABC):
     @abstractmethod
     async def get_plugin(self, plugin_name: str) -> dict[str, Any]:
         """Return details of a specific plugin by name."""
+        ...
+
+
+class TaskExecutionPort(ABC):
+    """Inbound port for executing a declarative task intent."""
+
+    @abstractmethod
+    async def execute_task(self, intent: TaskIntent) -> TaskResult:
+        """Execute one capability request through the Kernel."""
         ...

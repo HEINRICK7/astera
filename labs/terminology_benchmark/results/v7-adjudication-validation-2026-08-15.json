@@ -1,0 +1,39 @@
+{
+  "status": "HUMAN_GATE",
+  "scope": "FULL_QUEUE",
+  "validated_batch_file": null,
+  "policy_version": "1.2",
+  "total": 240,
+  "case_count": 240,
+  "batch_count": 8,
+  "decision_counts": {
+    "AMBIGUOUS": 0,
+    "APPROVED": 0,
+    "PENDING_HUMAN": 240,
+    "REJECTED": 0
+  },
+  "mentions": 0,
+  "relations": 0,
+  "cross_segment_cases": null,
+  "provenance_valid": null,
+  "provenance_valid_total_approved": 0,
+  "adjudication_consistency": {
+    "status": "NOT_COMPUTABLE_NO_GROUPS",
+    "groups": 0,
+    "consistent_groups": 0,
+    "rate": null
+  },
+  "structural_errors": [],
+  "structural_validation_passed": true,
+  "pending_before_freeze": 240,
+  "human_review_complete": false,
+  "gold_validation_complete": false,
+  "corpus_freeze_complete": false,
+  "resolver_executed": false,
+  "official_v7_run": false,
+  "blind_run": "BLOCKED",
+  "shadow_integration": "BLOCKED",
+  "production": "BLOCKED",
+  "next_action": "continue-human-adjudication",
+  "draft_sha256": "81a3c62eeba3b56e69f18e5906ccd4db364c1c7d1021593d7779a323a0400c34"
+}

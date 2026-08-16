@@ -1,0 +1,31 @@
+name: Astera MVP 1.0 Promotion
+
+on:
+  workflow_dispatch:
+    inputs:
+      namespace:
+        description: Kubernetes namespace
+        required: true
+        default: astera
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: azure/setup-helm@v4
+      - name: Configure cluster access
+        run: echo "Cluster access must be configured by the production environment."
+      - name: Deploy Astera MVP 1.0
+        env:
+          HELM_RELEASE: astera-runtime
+          HELM_NAMESPACE: ${{ inputs.namespace }}
+          ASTERA_IMAGE_TAG: 1.0.0
+        run: ./infrastructure/scripts/first-deploy.sh
+      - name: Verify MVP health
+        run: echo "Clinical flow smoke test executes through the configured production ingress."

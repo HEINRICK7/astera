@@ -1,0 +1,3908 @@
+{
+  "status": "post_v4_type_a_strategy_analysis",
+  "source": "v6-residual-type-c-adjudication-2026-08-15.json",
+  "policy_version": "1.1",
+  "official_corpus_sha256": "1721ad71b7ef92c20a06fa9cae956098fefad0e079f92464d67f1bf9255a3f10",
+  "corpus_modified": false,
+  "gold_modified": false,
+  "resolver_modified": false,
+  "holdout_evaluation": "NOT_EXECUTED",
+  "v7": "BLOCKED",
+  "shadow_integration": "BLOCKED",
+  "production": "BLOCKED",
+  "total_type_a_findings": 124,
+  "affected_cases": 59,
+  "affected_mentions": 82,
+  "repair_class_counts": {
+    "A1": 103,
+    "A2": 21,
+    "A3": 0,
+    "A4": 0
+  },
+  "dimension_counts": {
+    "ATTRIBUTE_OWNERSHIP": 8,
+    "CROSS_SEGMENT": 6,
+    "DOSE": 2,
+    "EXPERIENCER": 1,
+    "FREQUENCY": 3,
+    "MENTION_EXTRACTION": 0,
+    "MENTION_SCOPE": 22,
+    "NEGATION": 3,
+    "REFERENCE_RESOLUTION": 0,
+    "RELATION_MISSING": 15,
+    "RELATION_WRONG": 8,
+    "STATUS": 42,
+    "TEMPORALITY": 14
+  },
+  "cross_segment_overlay": {
+    "findings_with_cross_segment_provenance": 102,
+    "affected_cases": 40,
+    "affected_mentions": 60,
+    "note": "overlapping diagnostic dimension; not additive to primary semantic dimensions"
+  },
+  "top_root_causes": [
+    {
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "count": 37
+    },
+    {
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "count": 22
+    },
+    {
+      "root_cause": "gold relation was not present in resolved projection",
+      "count": 14
+    },
+    {
+      "root_cause": "historical-event cue conflicts with the resolved current temporality",
+      "count": 11
+    },
+    {
+      "root_cause": "explicit laterality cue was not attached to the target mention",
+      "count": 8
+    },
+    {
+      "root_cause": "discontinued medication state leaked to a non-owner mention",
+      "count": 6
+    },
+    {
+      "root_cause": "gold relation vocabulary requires DISCONTINUED_AT while resolver emits no matching relation",
+      "count": 5
+    },
+    {
+      "root_cause": "status vocabulary or state ownership is not aligned",
+      "count": 5
+    },
+    {
+      "root_cause": "resolved relation has no corresponding gold relation",
+      "count": 4
+    },
+    {
+      "root_cause": "explicit negation cue was not preserved for the target mention",
+      "count": 3
+    }
+  ],
+  "aggregate": [
+    {
+      "semantic_dimension": "STATUS",
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "count": 37,
+      "affected_cases": 26,
+      "affected_mentions": 37,
+      "affected_relations": 0,
+      "policy_rule": "SEM-STATUS-001",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium",
+      "example_cases": [
+        "sim-v6-0005",
+        "sim-v6-0006",
+        "sim-v6-0007",
+        "sim-v6-0008",
+        "sim-v6-0009"
+      ]
+    },
+    {
+      "semantic_dimension": "MENTION_SCOPE",
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "count": 22,
+      "affected_cases": 18,
+      "affected_mentions": 22,
+      "affected_relations": 0,
+      "policy_rule": "SEM-NEG-001",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium",
+      "example_cases": [
+        "sim-v6-0007",
+        "sim-v6-0009",
+        "sim-v6-0010",
+        "sim-v6-0032",
+        "sim-v6-0034"
+      ]
+    },
+    {
+      "semantic_dimension": "TEMPORALITY",
+      "root_cause": "historical-event cue conflicts with the resolved current temporality",
+      "count": 11,
+      "affected_cases": 11,
+      "affected_mentions": 11,
+      "affected_relations": 0,
+      "policy_rule": "SEM-TEMP-001",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high",
+      "example_cases": [
+        "sim-v6-0024",
+        "v6-i-051",
+        "v6-i-052",
+        "v6-i-053",
+        "v6-i-054"
+      ]
+    },
+    {
+      "semantic_dimension": "RELATION_MISSING",
+      "root_cause": "gold relation was not present in resolved projection",
+      "count": 10,
+      "affected_cases": 10,
+      "affected_mentions": 10,
+      "affected_relations": 10,
+      "policy_rule": "SEM-REL-001",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high",
+      "example_cases": [
+        "sim-v6-0005",
+        "sim-v6-0007",
+        "sim-v6-0014",
+        "sim-v6-0017",
+        "sim-v6-0020"
+      ]
+    },
+    {
+      "semantic_dimension": "ATTRIBUTE_OWNERSHIP",
+      "root_cause": "explicit laterality cue was not attached to the target mention",
+      "count": 8,
+      "affected_cases": 8,
+      "affected_mentions": 8,
+      "affected_relations": 0,
+      "policy_rule": "SEM-REL-001",
+      "current_component": "laterality attachment resolver",
+      "recommended_component": "nearest-compatible owner with typed scope",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "medium",
+      "example_cases": [
+        "sim-v6-0005",
+        "sim-v6-0007",
+        "sim-v6-0014",
+        "sim-v6-0027",
+        "sim-v6-0029"
+      ]
+    },
+    {
+      "semantic_dimension": "CROSS_SEGMENT",
+      "root_cause": "discontinued medication state leaked to a non-owner mention",
+      "count": 6,
+      "affected_cases": 3,
+      "affected_mentions": 6,
+      "affected_relations": 0,
+      "policy_rule": "SEM-XSEG-001",
+      "current_component": "CrossSegmentContextResolver owner/state inheritance",
+      "recommended_component": "typed owner-gated state inheritance",
+      "repair_class": "A2",
+      "repairability": "architectural boundary change",
+      "risk": "high",
+      "example_cases": [
+        "v6-c-001-1",
+        "v6-c-001-2",
+        "v6-c-001-3"
+      ]
+    },
+    {
+      "semantic_dimension": "RELATION_MISSING",
+      "root_cause": "gold relation vocabulary requires DISCONTINUED_AT while resolver emits no matching relation",
+      "count": 5,
+      "affected_cases": 5,
+      "affected_mentions": 5,
+      "affected_relations": 5,
+      "policy_rule": "SEM-REL-001",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high",
+      "example_cases": [
+        "sim-v6-0049",
+        "sim-v6-0055",
+        "v6-c-001-1",
+        "v6-c-001-2",
+        "v6-c-001-3"
+      ]
+    },
+    {
+      "semantic_dimension": "STATUS",
+      "root_cause": "status vocabulary or state ownership is not aligned",
+      "count": 5,
+      "affected_cases": 5,
+      "affected_mentions": 5,
+      "affected_relations": 0,
+      "policy_rule": "SEM-STATUS-001",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium",
+      "example_cases": [
+        "sim-v6-0014",
+        "sim-v6-0048",
+        "v6-c-005-1",
+        "v6-c-005-2",
+        "v6-c-005-3"
+      ]
+    },
+    {
+      "semantic_dimension": "RELATION_WRONG",
+      "root_cause": "gold relation was not present in resolved projection",
+      "count": 4,
+      "affected_cases": 3,
+      "affected_mentions": 3,
+      "affected_relations": 4,
+      "policy_rule": "SEM-REL-002",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "current-vs-historical relation admissibility gate",
+      "repair_class": "A1",
+      "repairability": "deterministic under frozen relation policy",
+      "risk": "high",
+      "example_cases": [
+        "sim-v6-0016",
+        "sim-v6-0017",
+        "sim-v6-0020"
+      ]
+    },
+    {
+      "semantic_dimension": "RELATION_WRONG",
+      "root_cause": "resolved relation has no corresponding gold relation",
+      "count": 4,
+      "affected_cases": 3,
+      "affected_mentions": 3,
+      "affected_relations": 4,
+      "policy_rule": "SEM-REL-002",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "current-vs-historical relation admissibility gate",
+      "repair_class": "A1",
+      "repairability": "deterministic under frozen relation policy",
+      "risk": "high",
+      "example_cases": [
+        "sim-v6-0016",
+        "sim-v6-0017",
+        "sim-v6-0020"
+      ]
+    },
+    {
+      "semantic_dimension": "NEGATION",
+      "root_cause": "explicit negation cue was not preserved for the target mention",
+      "count": 3,
+      "affected_cases": 3,
+      "affected_mentions": 3,
+      "affected_relations": 0,
+      "policy_rule": "SEM-NEG-001",
+      "current_component": "NieDEPtBrSafetyRules negation cues",
+      "recommended_component": "local negation target matcher",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium",
+      "example_cases": [
+        "v6-r-003-1",
+        "v6-r-003-2",
+        "v6-r-003-3"
+      ]
+    },
+    {
+      "semantic_dimension": "TEMPORALITY",
+      "root_cause": "temporality requires an explicit event-time versus assertion-time policy",
+      "count": 3,
+      "affected_cases": 3,
+      "affected_mentions": 3,
+      "affected_relations": 0,
+      "policy_rule": "SEM-TEMP-001",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high",
+      "example_cases": [
+        "sim-v6-0013",
+        "sim-v6-0025",
+        "sim-v6-0026"
+      ]
+    },
+    {
+      "semantic_dimension": "DOSE",
+      "root_cause": "latest in-segment dose was not selected under an explicit transition",
+      "count": 2,
+      "affected_cases": 1,
+      "affected_mentions": 1,
+      "affected_relations": 0,
+      "policy_rule": "SEM-DOSE-001",
+      "current_component": "dose transition resolver",
+      "recommended_component": "current-dose plus CHANGED_FROM transition resolver",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit transitions",
+      "risk": "high",
+      "example_cases": [
+        "sim-v6-0016"
+      ]
+    },
+    {
+      "semantic_dimension": "FREQUENCY",
+      "root_cause": "attribute value differs and needs ownership/transition policy review",
+      "count": 2,
+      "affected_cases": 2,
+      "affected_mentions": 2,
+      "affected_relations": 0,
+      "policy_rule": "SEM-FREQ-001",
+      "current_component": "frequency transition resolver",
+      "recommended_component": "current-frequency plus CHANGED_FROM transition resolver",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit transitions",
+      "risk": "high",
+      "example_cases": [
+        "sim-v6-0017",
+        "sim-v6-0020"
+      ]
+    },
+    {
+      "semantic_dimension": "EXPERIENCER",
+      "root_cause": "explicit family cue was not preserved as experiencer",
+      "count": 1,
+      "affected_cases": 1,
+      "affected_mentions": 1,
+      "affected_relations": 0,
+      "policy_rule": "SEM-EXP-001",
+      "current_component": "NieDEPtBrSafetyRules experiencer cue resolver",
+      "recommended_component": "experiencer owner resolver",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium",
+      "example_cases": [
+        "sim-v6-0024"
+      ]
+    },
+    {
+      "semantic_dimension": "FREQUENCY",
+      "root_cause": "latest in-segment frequency was not selected under an explicit transition",
+      "count": 1,
+      "affected_cases": 1,
+      "affected_mentions": 1,
+      "affected_relations": 0,
+      "policy_rule": "SEM-FREQ-001",
+      "current_component": "frequency transition resolver",
+      "recommended_component": "current-frequency plus CHANGED_FROM transition resolver",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit transitions",
+      "risk": "high",
+      "example_cases": [
+        "sim-v6-0016"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "case_id": "v6-i-051",
+      "surface": "cirurgia no ombro",
+      "occurrence": 0,
+      "text": "Teve cirurgia no ombro há anos, mas hoje sente dormência no braço.",
+      "segments": [],
+      "classification": "WRONG_TEMPORALITY",
+      "field": "temporality",
+      "relation": null,
+      "expected": "past",
+      "resolved": "current",
+      "root_cause": "historical-event cue conflicts with the resolved current temporality",
+      "confidence": 0.9,
+      "cross_segment": false,
+      "semantic_dimension": "TEMPORALITY",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "policy_rule": "SEM-TEMP-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-i-052",
+      "surface": "queda",
+      "occurrence": 0,
+      "text": "Teve queda há anos, mas hoje sente dor no quadril.",
+      "segments": [],
+      "classification": "WRONG_TEMPORALITY",
+      "field": "temporality",
+      "relation": null,
+      "expected": "past",
+      "resolved": "current",
+      "root_cause": "historical-event cue conflicts with the resolved current temporality",
+      "confidence": 0.9,
+      "cross_segment": false,
+      "semantic_dimension": "TEMPORALITY",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "policy_rule": "SEM-TEMP-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-i-053",
+      "surface": "pneumonia",
+      "occurrence": 0,
+      "text": "Teve pneumonia há anos, mas hoje sente tosse.",
+      "segments": [],
+      "classification": "WRONG_TEMPORALITY",
+      "field": "temporality",
+      "relation": null,
+      "expected": "past",
+      "resolved": "current",
+      "root_cause": "historical-event cue conflicts with the resolved current temporality",
+      "confidence": 0.9,
+      "cross_segment": false,
+      "semantic_dimension": "TEMPORALITY",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "policy_rule": "SEM-TEMP-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-i-054",
+      "surface": "lesão no joelho",
+      "occurrence": 0,
+      "text": "Teve lesão no joelho há anos, mas hoje sente inchaço no tornozelo.",
+      "segments": [],
+      "classification": "WRONG_TEMPORALITY",
+      "field": "temporality",
+      "relation": null,
+      "expected": "past",
+      "resolved": "current",
+      "root_cause": "historical-event cue conflicts with the resolved current temporality",
+      "confidence": 0.9,
+      "cross_segment": false,
+      "semantic_dimension": "TEMPORALITY",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "policy_rule": "SEM-TEMP-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-i-055",
+      "surface": "fratura na mão",
+      "occurrence": 0,
+      "text": "Teve fratura na mão há anos, mas hoje sente rigidez nos dedos.",
+      "segments": [],
+      "classification": "WRONG_TEMPORALITY",
+      "field": "temporality",
+      "relation": null,
+      "expected": "past",
+      "resolved": "current",
+      "root_cause": "historical-event cue conflicts with the resolved current temporality",
+      "confidence": 0.9,
+      "cross_segment": false,
+      "semantic_dimension": "TEMPORALITY",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "policy_rule": "SEM-TEMP-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-i-056",
+      "surface": "infarto",
+      "occurrence": 0,
+      "text": "Teve infarto há anos, mas hoje sente cansaço.",
+      "segments": [],
+      "classification": "WRONG_TEMPORALITY",
+      "field": "temporality",
+      "relation": null,
+      "expected": "past",
+      "resolved": "current",
+      "root_cause": "historical-event cue conflicts with the resolved current temporality",
+      "confidence": 0.9,
+      "cross_segment": false,
+      "semantic_dimension": "TEMPORALITY",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "policy_rule": "SEM-TEMP-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-i-057",
+      "surface": "crise de asma",
+      "occurrence": 0,
+      "text": "Teve crise de asma há anos, mas hoje sente chiado.",
+      "segments": [],
+      "classification": "WRONG_TEMPORALITY",
+      "field": "temporality",
+      "relation": null,
+      "expected": "past",
+      "resolved": "current",
+      "root_cause": "historical-event cue conflicts with the resolved current temporality",
+      "confidence": 0.9,
+      "cross_segment": false,
+      "semantic_dimension": "TEMPORALITY",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "policy_rule": "SEM-TEMP-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-i-058",
+      "surface": "dor lombar",
+      "occurrence": 0,
+      "text": "Teve dor lombar há anos, mas hoje sente formigamento na perna.",
+      "segments": [],
+      "classification": "WRONG_TEMPORALITY",
+      "field": "temporality",
+      "relation": null,
+      "expected": "past",
+      "resolved": "current",
+      "root_cause": "historical-event cue conflicts with the resolved current temporality",
+      "confidence": 0.9,
+      "cross_segment": false,
+      "semantic_dimension": "TEMPORALITY",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "policy_rule": "SEM-TEMP-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-i-059",
+      "surface": "trombose",
+      "occurrence": 0,
+      "text": "Teve trombose há anos, mas hoje sente peso na panturrilha.",
+      "segments": [],
+      "classification": "WRONG_TEMPORALITY",
+      "field": "temporality",
+      "relation": null,
+      "expected": "past",
+      "resolved": "current",
+      "root_cause": "historical-event cue conflicts with the resolved current temporality",
+      "confidence": 0.9,
+      "cross_segment": false,
+      "semantic_dimension": "TEMPORALITY",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "policy_rule": "SEM-TEMP-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-i-060",
+      "surface": "otite",
+      "occurrence": 0,
+      "text": "Teve otite há anos, mas hoje sente zumbido.",
+      "segments": [],
+      "classification": "WRONG_TEMPORALITY",
+      "field": "temporality",
+      "relation": null,
+      "expected": "past",
+      "resolved": "current",
+      "root_cause": "historical-event cue conflicts with the resolved current temporality",
+      "confidence": 0.9,
+      "cross_segment": false,
+      "semantic_dimension": "TEMPORALITY",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "policy_rule": "SEM-TEMP-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-r-003-1",
+      "surface": "vomitou",
+      "occurrence": 0,
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte hoje.",
+      "segments": [],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": true,
+      "resolved": false,
+      "root_cause": "explicit negation cue was not preserved for the target mention",
+      "confidence": 0.98,
+      "cross_segment": false,
+      "semantic_dimension": "NEGATION",
+      "current_component": "NieDEPtBrSafetyRules negation cues",
+      "recommended_component": "local negation target matcher",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "v6-r-003-2",
+      "surface": "vomitou",
+      "occurrence": 0,
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte desde ontem.",
+      "segments": [],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": true,
+      "resolved": false,
+      "root_cause": "explicit negation cue was not preserved for the target mention",
+      "confidence": 0.98,
+      "cross_segment": false,
+      "semantic_dimension": "NEGATION",
+      "current_component": "NieDEPtBrSafetyRules negation cues",
+      "recommended_component": "local negation target matcher",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "v6-r-003-3",
+      "surface": "vomitou",
+      "occurrence": 0,
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte depois do almoço.",
+      "segments": [],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": true,
+      "resolved": false,
+      "root_cause": "explicit negation cue was not preserved for the target mention",
+      "confidence": 0.98,
+      "cross_segment": false,
+      "semantic_dimension": "NEGATION",
+      "current_component": "NieDEPtBrSafetyRules negation cues",
+      "recommended_component": "local negation target matcher",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "v6-r-004-1",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "text": "Sem tontura, só fraqueza e visão meio turva hoje.",
+      "segments": [],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": false,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "v6-r-004-2",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "text": "Sem tontura, só fraqueza e visão meio turva desde ontem.",
+      "segments": [],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": false,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "v6-r-004-3",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "text": "Sem tontura, só fraqueza e visão meio turva depois do almoço.",
+      "segments": [],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": false,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "v6-r-006-1",
+      "surface": "cansaço",
+      "occurrence": 0,
+      "text": "Nega palpitação, refere cansaço e peso no peito hoje.",
+      "segments": [],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": false,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "v6-r-006-1",
+      "surface": "peso no peito",
+      "occurrence": 0,
+      "text": "Nega palpitação, refere cansaço e peso no peito hoje.",
+      "segments": [],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": false,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "v6-r-006-2",
+      "surface": "cansaço",
+      "occurrence": 0,
+      "text": "Nega palpitação, refere cansaço e peso no peito desde ontem.",
+      "segments": [],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": false,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "v6-r-006-2",
+      "surface": "peso no peito",
+      "occurrence": 0,
+      "text": "Nega palpitação, refere cansaço e peso no peito desde ontem.",
+      "segments": [],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": false,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "v6-r-006-3",
+      "surface": "cansaço",
+      "occurrence": 0,
+      "text": "Nega palpitação, refere cansaço e peso no peito depois do almoço.",
+      "segments": [],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": false,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "v6-r-006-3",
+      "surface": "peso no peito",
+      "occurrence": 0,
+      "text": "Nega palpitação, refere cansaço e peso no peito depois do almoço.",
+      "segments": [],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": false,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "v6-c-001-1",
+      "surface": "losartana",
+      "occurrence": 0,
+      "text": "Médico: Ainda está tomando losartana?\nPaciente: Não, parei semana passada e não tive tontura. na consulta de hoje",
+      "segments": [
+        {
+          "segment_id": "seg_01_0_01",
+          "speaker": "clinician",
+          "text": "Ainda está tomando losartana?"
+        },
+        {
+          "segment_id": "seg_01_0_02",
+          "speaker": "patient",
+          "text": "Não, parei semana passada e não tive tontura. na consulta de hoje"
+        }
+      ],
+      "classification": "MISSING_RELATION",
+      "field": null,
+      "relation": [
+        "DISCONTINUED_AT",
+        "status",
+        "discontinued"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation vocabulary requires DISCONTINUED_AT while resolver emits no matching relation",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_MISSING",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-c-001-1",
+      "surface": "tontura",
+      "occurrence": 0,
+      "text": "Médico: Ainda está tomando losartana?\nPaciente: Não, parei semana passada e não tive tontura. na consulta de hoje",
+      "segments": [
+        {
+          "segment_id": "seg_01_0_01",
+          "speaker": "clinician",
+          "text": "Ainda está tomando losartana?"
+        },
+        {
+          "segment_id": "seg_01_0_02",
+          "speaker": "patient",
+          "text": "Não, parei semana passada e não tive tontura. na consulta de hoje"
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": null,
+      "resolved": "discontinued",
+      "root_cause": "discontinued medication state leaked to a non-owner mention",
+      "confidence": 0.93,
+      "cross_segment": true,
+      "semantic_dimension": "CROSS_SEGMENT",
+      "current_component": "CrossSegmentContextResolver owner/state inheritance",
+      "recommended_component": "typed owner-gated state inheritance",
+      "policy_rule": "SEM-XSEG-001",
+      "repair_class": "A2",
+      "repairability": "architectural boundary change",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-c-001-1",
+      "surface": "semana passada",
+      "occurrence": 0,
+      "text": "Médico: Ainda está tomando losartana?\nPaciente: Não, parei semana passada e não tive tontura. na consulta de hoje",
+      "segments": [
+        {
+          "segment_id": "seg_01_0_01",
+          "speaker": "clinician",
+          "text": "Ainda está tomando losartana?"
+        },
+        {
+          "segment_id": "seg_01_0_02",
+          "speaker": "patient",
+          "text": "Não, parei semana passada e não tive tontura. na consulta de hoje"
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": null,
+      "resolved": "discontinued",
+      "root_cause": "discontinued medication state leaked to a non-owner mention",
+      "confidence": 0.93,
+      "cross_segment": true,
+      "semantic_dimension": "CROSS_SEGMENT",
+      "current_component": "CrossSegmentContextResolver owner/state inheritance",
+      "recommended_component": "typed owner-gated state inheritance",
+      "policy_rule": "SEM-XSEG-001",
+      "repair_class": "A2",
+      "repairability": "architectural boundary change",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-c-001-2",
+      "surface": "losartana",
+      "occurrence": 0,
+      "text": "Médico: Ainda está tomando losartana?\nPaciente: Não, parei semana passada e não tive tontura. no retorno desta semana",
+      "segments": [
+        {
+          "segment_id": "seg_01_1_01",
+          "speaker": "clinician",
+          "text": "Ainda está tomando losartana?"
+        },
+        {
+          "segment_id": "seg_01_1_02",
+          "speaker": "patient",
+          "text": "Não, parei semana passada e não tive tontura. no retorno desta semana"
+        }
+      ],
+      "classification": "MISSING_RELATION",
+      "field": null,
+      "relation": [
+        "DISCONTINUED_AT",
+        "status",
+        "discontinued"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation vocabulary requires DISCONTINUED_AT while resolver emits no matching relation",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_MISSING",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-c-001-2",
+      "surface": "tontura",
+      "occurrence": 0,
+      "text": "Médico: Ainda está tomando losartana?\nPaciente: Não, parei semana passada e não tive tontura. no retorno desta semana",
+      "segments": [
+        {
+          "segment_id": "seg_01_1_01",
+          "speaker": "clinician",
+          "text": "Ainda está tomando losartana?"
+        },
+        {
+          "segment_id": "seg_01_1_02",
+          "speaker": "patient",
+          "text": "Não, parei semana passada e não tive tontura. no retorno desta semana"
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": null,
+      "resolved": "discontinued",
+      "root_cause": "discontinued medication state leaked to a non-owner mention",
+      "confidence": 0.93,
+      "cross_segment": true,
+      "semantic_dimension": "CROSS_SEGMENT",
+      "current_component": "CrossSegmentContextResolver owner/state inheritance",
+      "recommended_component": "typed owner-gated state inheritance",
+      "policy_rule": "SEM-XSEG-001",
+      "repair_class": "A2",
+      "repairability": "architectural boundary change",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-c-001-2",
+      "surface": "semana passada",
+      "occurrence": 0,
+      "text": "Médico: Ainda está tomando losartana?\nPaciente: Não, parei semana passada e não tive tontura. no retorno desta semana",
+      "segments": [
+        {
+          "segment_id": "seg_01_1_01",
+          "speaker": "clinician",
+          "text": "Ainda está tomando losartana?"
+        },
+        {
+          "segment_id": "seg_01_1_02",
+          "speaker": "patient",
+          "text": "Não, parei semana passada e não tive tontura. no retorno desta semana"
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": null,
+      "resolved": "discontinued",
+      "root_cause": "discontinued medication state leaked to a non-owner mention",
+      "confidence": 0.93,
+      "cross_segment": true,
+      "semantic_dimension": "CROSS_SEGMENT",
+      "current_component": "CrossSegmentContextResolver owner/state inheritance",
+      "recommended_component": "typed owner-gated state inheritance",
+      "policy_rule": "SEM-XSEG-001",
+      "repair_class": "A2",
+      "repairability": "architectural boundary change",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-c-001-3",
+      "surface": "losartana",
+      "occurrence": 0,
+      "text": "Médico: Ainda está tomando losartana?\nPaciente: Não, parei semana passada e não tive tontura. durante a revisão clínica",
+      "segments": [
+        {
+          "segment_id": "seg_01_2_01",
+          "speaker": "clinician",
+          "text": "Ainda está tomando losartana?"
+        },
+        {
+          "segment_id": "seg_01_2_02",
+          "speaker": "patient",
+          "text": "Não, parei semana passada e não tive tontura. durante a revisão clínica"
+        }
+      ],
+      "classification": "MISSING_RELATION",
+      "field": null,
+      "relation": [
+        "DISCONTINUED_AT",
+        "status",
+        "discontinued"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation vocabulary requires DISCONTINUED_AT while resolver emits no matching relation",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_MISSING",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-c-001-3",
+      "surface": "tontura",
+      "occurrence": 0,
+      "text": "Médico: Ainda está tomando losartana?\nPaciente: Não, parei semana passada e não tive tontura. durante a revisão clínica",
+      "segments": [
+        {
+          "segment_id": "seg_01_2_01",
+          "speaker": "clinician",
+          "text": "Ainda está tomando losartana?"
+        },
+        {
+          "segment_id": "seg_01_2_02",
+          "speaker": "patient",
+          "text": "Não, parei semana passada e não tive tontura. durante a revisão clínica"
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": null,
+      "resolved": "discontinued",
+      "root_cause": "discontinued medication state leaked to a non-owner mention",
+      "confidence": 0.93,
+      "cross_segment": true,
+      "semantic_dimension": "CROSS_SEGMENT",
+      "current_component": "CrossSegmentContextResolver owner/state inheritance",
+      "recommended_component": "typed owner-gated state inheritance",
+      "policy_rule": "SEM-XSEG-001",
+      "repair_class": "A2",
+      "repairability": "architectural boundary change",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-c-001-3",
+      "surface": "semana passada",
+      "occurrence": 0,
+      "text": "Médico: Ainda está tomando losartana?\nPaciente: Não, parei semana passada e não tive tontura. durante a revisão clínica",
+      "segments": [
+        {
+          "segment_id": "seg_01_2_01",
+          "speaker": "clinician",
+          "text": "Ainda está tomando losartana?"
+        },
+        {
+          "segment_id": "seg_01_2_02",
+          "speaker": "patient",
+          "text": "Não, parei semana passada e não tive tontura. durante a revisão clínica"
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": null,
+      "resolved": "discontinued",
+      "root_cause": "discontinued medication state leaked to a non-owner mention",
+      "confidence": 0.93,
+      "cross_segment": true,
+      "semantic_dimension": "CROSS_SEGMENT",
+      "current_component": "CrossSegmentContextResolver owner/state inheritance",
+      "recommended_component": "typed owner-gated state inheritance",
+      "policy_rule": "SEM-XSEG-001",
+      "repair_class": "A2",
+      "repairability": "architectural boundary change",
+      "risk": "high"
+    },
+    {
+      "case_id": "v6-c-005-1",
+      "surface": "tosse",
+      "occurrence": 0,
+      "text": "Médico: A mãe tinha diabetes e hipertensão?\nPaciente: Sim, mas eu não tenho tosse. na consulta de hoje",
+      "segments": [
+        {
+          "segment_id": "seg_05_0_01",
+          "speaker": "clinician",
+          "text": "A mãe tinha diabetes e hipertensão?"
+        },
+        {
+          "segment_id": "seg_05_0_02",
+          "speaker": "patient",
+          "text": "Sim, mas eu não tenho tosse. na consulta de hoje"
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": null,
+      "resolved": "confirmed",
+      "root_cause": "status vocabulary or state ownership is not aligned",
+      "confidence": 0.7,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "v6-c-005-2",
+      "surface": "tosse",
+      "occurrence": 0,
+      "text": "Médico: A mãe tinha diabetes e hipertensão?\nPaciente: Sim, mas eu não tenho tosse. no retorno desta semana",
+      "segments": [
+        {
+          "segment_id": "seg_05_1_01",
+          "speaker": "clinician",
+          "text": "A mãe tinha diabetes e hipertensão?"
+        },
+        {
+          "segment_id": "seg_05_1_02",
+          "speaker": "patient",
+          "text": "Sim, mas eu não tenho tosse. no retorno desta semana"
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": null,
+      "resolved": "confirmed",
+      "root_cause": "status vocabulary or state ownership is not aligned",
+      "confidence": 0.7,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "v6-c-005-3",
+      "surface": "tosse",
+      "occurrence": 0,
+      "text": "Médico: A mãe tinha diabetes e hipertensão?\nPaciente: Sim, mas eu não tenho tosse. durante a revisão clínica",
+      "segments": [
+        {
+          "segment_id": "seg_05_2_01",
+          "speaker": "clinician",
+          "text": "A mãe tinha diabetes e hipertensão?"
+        },
+        {
+          "segment_id": "seg_05_2_02",
+          "speaker": "patient",
+          "text": "Sim, mas eu não tenho tosse. durante a revisão clínica"
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": null,
+      "resolved": "confirmed",
+      "root_cause": "status vocabulary or state ownership is not aligned",
+      "confidence": 0.7,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0005",
+      "surface": "dor",
+      "occurrence": 0,
+      "text": "A dor permanece no joelho esquerdo e a fraqueza surgiu na mão direita.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0005:segment-01",
+          "speaker": "unknown",
+          "text": "A dor permanece no joelho esquerdo e a fraqueza surgiu na mão direita."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0005",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "text": "A dor permanece no joelho esquerdo e a fraqueza surgiu na mão direita.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0005:segment-01",
+          "speaker": "unknown",
+          "text": "A dor permanece no joelho esquerdo e a fraqueza surgiu na mão direita."
+        }
+      ],
+      "classification": "WRONG_LATERALITY",
+      "field": "laterality",
+      "relation": null,
+      "expected": "right",
+      "resolved": null,
+      "root_cause": "explicit laterality cue was not attached to the target mention",
+      "confidence": 0.98,
+      "cross_segment": true,
+      "semantic_dimension": "ATTRIBUTE_OWNERSHIP",
+      "current_component": "laterality attachment resolver",
+      "recommended_component": "nearest-compatible owner with typed scope",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0005",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "text": "A dor permanece no joelho esquerdo e a fraqueza surgiu na mão direita.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0005:segment-01",
+          "speaker": "unknown",
+          "text": "A dor permanece no joelho esquerdo e a fraqueza surgiu na mão direita."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0005",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "text": "A dor permanece no joelho esquerdo e a fraqueza surgiu na mão direita.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0005:segment-01",
+          "speaker": "unknown",
+          "text": "A dor permanece no joelho esquerdo e a fraqueza surgiu na mão direita."
+        }
+      ],
+      "classification": "MISSING_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_LATERALITY",
+        "laterality",
+        "right"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation was not present in resolved projection",
+      "confidence": 0.82,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_MISSING",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0006",
+      "surface": "formigamento",
+      "occurrence": 0,
+      "text": "Queixa de formigamento no braço direito e dor nova no pé esquerdo.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0006:segment-01",
+          "speaker": "unknown",
+          "text": "Queixa de formigamento no braço direito e dor nova no pé esquerdo."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0006",
+      "surface": "dor",
+      "occurrence": 0,
+      "text": "Queixa de formigamento no braço direito e dor nova no pé esquerdo.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0006:segment-01",
+          "speaker": "unknown",
+          "text": "Queixa de formigamento no braço direito e dor nova no pé esquerdo."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0007",
+      "surface": "formigamento",
+      "occurrence": 0,
+      "text": "Nega dor no joelho esquerdo, mas passou a relatar formigamento na mão direita.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0007:segment-01",
+          "speaker": "unknown",
+          "text": "Nega dor no joelho esquerdo, mas passou a relatar formigamento na mão direita."
+        }
+      ],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0007",
+      "surface": "formigamento",
+      "occurrence": 0,
+      "text": "Nega dor no joelho esquerdo, mas passou a relatar formigamento na mão direita.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0007:segment-01",
+          "speaker": "unknown",
+          "text": "Nega dor no joelho esquerdo, mas passou a relatar formigamento na mão direita."
+        }
+      ],
+      "classification": "WRONG_LATERALITY",
+      "field": "laterality",
+      "relation": null,
+      "expected": "right",
+      "resolved": null,
+      "root_cause": "explicit laterality cue was not attached to the target mention",
+      "confidence": 0.98,
+      "cross_segment": true,
+      "semantic_dimension": "ATTRIBUTE_OWNERSHIP",
+      "current_component": "laterality attachment resolver",
+      "recommended_component": "nearest-compatible owner with typed scope",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0007",
+      "surface": "formigamento",
+      "occurrence": 0,
+      "text": "Nega dor no joelho esquerdo, mas passou a relatar formigamento na mão direita.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0007:segment-01",
+          "speaker": "unknown",
+          "text": "Nega dor no joelho esquerdo, mas passou a relatar formigamento na mão direita."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0007",
+      "surface": "formigamento",
+      "occurrence": 0,
+      "text": "Nega dor no joelho esquerdo, mas passou a relatar formigamento na mão direita.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0007:segment-01",
+          "speaker": "unknown",
+          "text": "Nega dor no joelho esquerdo, mas passou a relatar formigamento na mão direita."
+        }
+      ],
+      "classification": "MISSING_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_LATERALITY",
+        "laterality",
+        "right"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation was not present in resolved projection",
+      "confidence": 0.82,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_MISSING",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0008",
+      "surface": "queimação",
+      "occurrence": 0,
+      "text": "Refere queimação no pé direito e dormência nova na perna esquerda ao caminhar.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0008:segment-01",
+          "speaker": "unknown",
+          "text": "Refere queimação no pé direito e dormência nova na perna esquerda ao caminhar."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0008",
+      "surface": "dormência",
+      "occurrence": 0,
+      "text": "Refere queimação no pé direito e dormência nova na perna esquerda ao caminhar.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0008:segment-01",
+          "speaker": "unknown",
+          "text": "Refere queimação no pé direito e dormência nova na perna esquerda ao caminhar."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0009",
+      "surface": "falta de ar",
+      "occurrence": 0,
+      "text": "Nega dor no peito, porém refere falta de ar ao esforço.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0009:segment-01",
+          "speaker": "unknown",
+          "text": "Nega dor no peito, porém refere falta de ar ao esforço."
+        }
+      ],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0009",
+      "surface": "falta de ar",
+      "occurrence": 0,
+      "text": "Nega dor no peito, porém refere falta de ar ao esforço.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0009:segment-01",
+          "speaker": "unknown",
+          "text": "Nega dor no peito, porém refere falta de ar ao esforço."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0010",
+      "surface": "tosse seca",
+      "occurrence": 0,
+      "text": "Sem febre hoje, mas começou tosse seca durante a noite.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0010:segment-01",
+          "speaker": "unknown",
+          "text": "Sem febre hoje, mas começou tosse seca durante a noite."
+        }
+      ],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0010",
+      "surface": "tosse seca",
+      "occurrence": 0,
+      "text": "Sem febre hoje, mas começou tosse seca durante a noite.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0010:segment-01",
+          "speaker": "unknown",
+          "text": "Sem febre hoje, mas começou tosse seca durante a noite."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0013",
+      "surface": "cirurgia",
+      "occurrence": 0,
+      "text": "A cirurgia foi há anos; atualmente sente peso na perna esquerda.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0013:segment-01",
+          "speaker": "unknown",
+          "text": "A cirurgia foi há anos; atualmente sente peso na perna esquerda."
+        }
+      ],
+      "classification": "WRONG_TEMPORALITY",
+      "field": "temporality",
+      "relation": null,
+      "expected": "past",
+      "resolved": "current",
+      "root_cause": "temporality requires an explicit event-time versus assertion-time policy",
+      "confidence": 0.68,
+      "cross_segment": true,
+      "semantic_dimension": "TEMPORALITY",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "policy_rule": "SEM-TEMP-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0013",
+      "surface": "peso",
+      "occurrence": 0,
+      "text": "A cirurgia foi há anos; atualmente sente peso na perna esquerda.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0013:segment-01",
+          "speaker": "unknown",
+          "text": "A cirurgia foi há anos; atualmente sente peso na perna esquerda."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0014",
+      "surface": "dor",
+      "occurrence": 0,
+      "text": "Teve dor antiga no ombro, mas hoje relata dormência no braço direito.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0014:segment-01",
+          "speaker": "unknown",
+          "text": "Teve dor antiga no ombro, mas hoje relata dormência no braço direito."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "historical",
+      "resolved": null,
+      "root_cause": "status vocabulary or state ownership is not aligned",
+      "confidence": 0.7,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0014",
+      "surface": "dormência",
+      "occurrence": 0,
+      "text": "Teve dor antiga no ombro, mas hoje relata dormência no braço direito.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0014:segment-01",
+          "speaker": "unknown",
+          "text": "Teve dor antiga no ombro, mas hoje relata dormência no braço direito."
+        }
+      ],
+      "classification": "WRONG_LATERALITY",
+      "field": "laterality",
+      "relation": null,
+      "expected": "right",
+      "resolved": null,
+      "root_cause": "explicit laterality cue was not attached to the target mention",
+      "confidence": 0.98,
+      "cross_segment": true,
+      "semantic_dimension": "ATTRIBUTE_OWNERSHIP",
+      "current_component": "laterality attachment resolver",
+      "recommended_component": "nearest-compatible owner with typed scope",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0014",
+      "surface": "dormência",
+      "occurrence": 0,
+      "text": "Teve dor antiga no ombro, mas hoje relata dormência no braço direito.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0014:segment-01",
+          "speaker": "unknown",
+          "text": "Teve dor antiga no ombro, mas hoje relata dormência no braço direito."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0014",
+      "surface": "dormência",
+      "occurrence": 0,
+      "text": "Teve dor antiga no ombro, mas hoje relata dormência no braço direito.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0014:segment-01",
+          "speaker": "unknown",
+          "text": "Teve dor antiga no ombro, mas hoje relata dormência no braço direito."
+        }
+      ],
+      "classification": "MISSING_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_LATERALITY",
+        "laterality",
+        "right"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation was not present in resolved projection",
+      "confidence": 0.82,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_MISSING",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0016",
+      "surface": "sertralina",
+      "occurrence": 0,
+      "text": "A dose de sertralina era 50 mg antes de dormir e virou 75 mg pela manhã.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0016:segment-01",
+          "speaker": "unknown",
+          "text": "A dose de sertralina era 50 mg antes de dormir e virou 75 mg pela manhã."
+        }
+      ],
+      "classification": "WRONG_DOSE",
+      "field": "dose",
+      "relation": null,
+      "expected": "75 mg",
+      "resolved": "50 mg",
+      "root_cause": "latest in-segment dose was not selected under an explicit transition",
+      "confidence": 0.92,
+      "cross_segment": true,
+      "semantic_dimension": "DOSE",
+      "current_component": "dose transition resolver",
+      "recommended_component": "current-dose plus CHANGED_FROM transition resolver",
+      "policy_rule": "SEM-DOSE-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit transitions",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0016",
+      "surface": "sertralina",
+      "occurrence": 0,
+      "text": "A dose de sertralina era 50 mg antes de dormir e virou 75 mg pela manhã.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0016:segment-01",
+          "speaker": "unknown",
+          "text": "A dose de sertralina era 50 mg antes de dormir e virou 75 mg pela manhã."
+        }
+      ],
+      "classification": "WRONG_DOSE",
+      "field": "dose_value",
+      "relation": null,
+      "expected": "75",
+      "resolved": "50",
+      "root_cause": "latest in-segment dose was not selected under an explicit transition",
+      "confidence": 0.92,
+      "cross_segment": true,
+      "semantic_dimension": "DOSE",
+      "current_component": "dose transition resolver",
+      "recommended_component": "current-dose plus CHANGED_FROM transition resolver",
+      "policy_rule": "SEM-DOSE-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit transitions",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0016",
+      "surface": "sertralina",
+      "occurrence": 0,
+      "text": "A dose de sertralina era 50 mg antes de dormir e virou 75 mg pela manhã.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0016:segment-01",
+          "speaker": "unknown",
+          "text": "A dose de sertralina era 50 mg antes de dormir e virou 75 mg pela manhã."
+        }
+      ],
+      "classification": "WRONG_FREQUENCY",
+      "field": "frequency",
+      "relation": null,
+      "expected": "pela manhã",
+      "resolved": "antes de dormir",
+      "root_cause": "latest in-segment frequency was not selected under an explicit transition",
+      "confidence": 0.9,
+      "cross_segment": true,
+      "semantic_dimension": "FREQUENCY",
+      "current_component": "frequency transition resolver",
+      "recommended_component": "current-frequency plus CHANGED_FROM transition resolver",
+      "policy_rule": "SEM-FREQ-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit transitions",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0016",
+      "surface": "sertralina",
+      "occurrence": 0,
+      "text": "A dose de sertralina era 50 mg antes de dormir e virou 75 mg pela manhã.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0016:segment-01",
+          "speaker": "unknown",
+          "text": "A dose de sertralina era 50 mg antes de dormir e virou 75 mg pela manhã."
+        }
+      ],
+      "classification": "WRONG_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_DOSE",
+        "dose",
+        "75 mg"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation was not present in resolved projection",
+      "confidence": 0.82,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_WRONG",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "current-vs-historical relation admissibility gate",
+      "policy_rule": "SEM-REL-002",
+      "repair_class": "A1",
+      "repairability": "deterministic under frozen relation policy",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0016",
+      "surface": "sertralina",
+      "occurrence": 0,
+      "text": "A dose de sertralina era 50 mg antes de dormir e virou 75 mg pela manhã.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0016:segment-01",
+          "speaker": "unknown",
+          "text": "A dose de sertralina era 50 mg antes de dormir e virou 75 mg pela manhã."
+        }
+      ],
+      "classification": "WRONG_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_FREQUENCY",
+        "frequency",
+        "pela manhã"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation was not present in resolved projection",
+      "confidence": 0.82,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_WRONG",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "current-vs-historical relation admissibility gate",
+      "policy_rule": "SEM-REL-002",
+      "repair_class": "A1",
+      "repairability": "deterministic under frozen relation policy",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0016",
+      "surface": "sertralina",
+      "occurrence": 0,
+      "text": "A dose de sertralina era 50 mg antes de dormir e virou 75 mg pela manhã.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0016:segment-01",
+          "speaker": "unknown",
+          "text": "A dose de sertralina era 50 mg antes de dormir e virou 75 mg pela manhã."
+        }
+      ],
+      "classification": "EXTRA_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_DOSE",
+        "dose",
+        "50 mg"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "resolved relation has no corresponding gold relation",
+      "confidence": 0.68,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_WRONG",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "current-vs-historical relation admissibility gate",
+      "policy_rule": "SEM-REL-002",
+      "repair_class": "A1",
+      "repairability": "deterministic under frozen relation policy",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0016",
+      "surface": "sertralina",
+      "occurrence": 0,
+      "text": "A dose de sertralina era 50 mg antes de dormir e virou 75 mg pela manhã.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0016:segment-01",
+          "speaker": "unknown",
+          "text": "A dose de sertralina era 50 mg antes de dormir e virou 75 mg pela manhã."
+        }
+      ],
+      "classification": "EXTRA_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_FREQUENCY",
+        "frequency",
+        "antes de dormir"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "resolved relation has no corresponding gold relation",
+      "confidence": 0.68,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_WRONG",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "current-vs-historical relation admissibility gate",
+      "policy_rule": "SEM-REL-002",
+      "repair_class": "A1",
+      "repairability": "deterministic under frozen relation policy",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0017",
+      "surface": "ibuprofeno",
+      "occurrence": 0,
+      "text": "Tomava ibuprofeno 200 mg se dor e passou a usar 400 mg a cada oito horas.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0017:segment-01",
+          "speaker": "unknown",
+          "text": "Tomava ibuprofeno 200 mg se dor e passou a usar 400 mg a cada oito horas."
+        }
+      ],
+      "classification": "WRONG_FREQUENCY",
+      "field": "frequency",
+      "relation": null,
+      "expected": "a cada oito horas",
+      "resolved": "se dor",
+      "root_cause": "attribute value differs and needs ownership/transition policy review",
+      "confidence": 0.65,
+      "cross_segment": true,
+      "semantic_dimension": "FREQUENCY",
+      "current_component": "frequency transition resolver",
+      "recommended_component": "current-frequency plus CHANGED_FROM transition resolver",
+      "policy_rule": "SEM-FREQ-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit transitions",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0017",
+      "surface": "ibuprofeno",
+      "occurrence": 0,
+      "text": "Tomava ibuprofeno 200 mg se dor e passou a usar 400 mg a cada oito horas.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0017:segment-01",
+          "speaker": "unknown",
+          "text": "Tomava ibuprofeno 200 mg se dor e passou a usar 400 mg a cada oito horas."
+        }
+      ],
+      "classification": "MISSING_RELATION",
+      "field": null,
+      "relation": [
+        "CHANGED_FROM",
+        "frequency",
+        "se dor"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation was not present in resolved projection",
+      "confidence": 0.82,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_MISSING",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0017",
+      "surface": "ibuprofeno",
+      "occurrence": 0,
+      "text": "Tomava ibuprofeno 200 mg se dor e passou a usar 400 mg a cada oito horas.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0017:segment-01",
+          "speaker": "unknown",
+          "text": "Tomava ibuprofeno 200 mg se dor e passou a usar 400 mg a cada oito horas."
+        }
+      ],
+      "classification": "WRONG_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_FREQUENCY",
+        "frequency",
+        "a cada oito horas"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation was not present in resolved projection",
+      "confidence": 0.82,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_WRONG",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "current-vs-historical relation admissibility gate",
+      "policy_rule": "SEM-REL-002",
+      "repair_class": "A1",
+      "repairability": "deterministic under frozen relation policy",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0017",
+      "surface": "ibuprofeno",
+      "occurrence": 0,
+      "text": "Tomava ibuprofeno 200 mg se dor e passou a usar 400 mg a cada oito horas.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0017:segment-01",
+          "speaker": "unknown",
+          "text": "Tomava ibuprofeno 200 mg se dor e passou a usar 400 mg a cada oito horas."
+        }
+      ],
+      "classification": "EXTRA_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_FREQUENCY",
+        "frequency",
+        "se dor"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "resolved relation has no corresponding gold relation",
+      "confidence": 0.68,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_WRONG",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "current-vs-historical relation admissibility gate",
+      "policy_rule": "SEM-REL-002",
+      "repair_class": "A1",
+      "repairability": "deterministic under frozen relation policy",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0020",
+      "surface": "levotiroxina",
+      "occurrence": 0,
+      "text": "A levotiroxina passou de 75 mcg em jejum para 88 mcg antes do café.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0020:segment-01",
+          "speaker": "unknown",
+          "text": "A levotiroxina passou de 75 mcg em jejum para 88 mcg antes do café."
+        }
+      ],
+      "classification": "WRONG_FREQUENCY",
+      "field": "frequency",
+      "relation": null,
+      "expected": "antes do café",
+      "resolved": "em jejum",
+      "root_cause": "attribute value differs and needs ownership/transition policy review",
+      "confidence": 0.65,
+      "cross_segment": true,
+      "semantic_dimension": "FREQUENCY",
+      "current_component": "frequency transition resolver",
+      "recommended_component": "current-frequency plus CHANGED_FROM transition resolver",
+      "policy_rule": "SEM-FREQ-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit transitions",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0020",
+      "surface": "levotiroxina",
+      "occurrence": 0,
+      "text": "A levotiroxina passou de 75 mcg em jejum para 88 mcg antes do café.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0020:segment-01",
+          "speaker": "unknown",
+          "text": "A levotiroxina passou de 75 mcg em jejum para 88 mcg antes do café."
+        }
+      ],
+      "classification": "MISSING_RELATION",
+      "field": null,
+      "relation": [
+        "CHANGED_FROM",
+        "frequency",
+        "em jejum"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation was not present in resolved projection",
+      "confidence": 0.82,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_MISSING",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0020",
+      "surface": "levotiroxina",
+      "occurrence": 0,
+      "text": "A levotiroxina passou de 75 mcg em jejum para 88 mcg antes do café.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0020:segment-01",
+          "speaker": "unknown",
+          "text": "A levotiroxina passou de 75 mcg em jejum para 88 mcg antes do café."
+        }
+      ],
+      "classification": "WRONG_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_FREQUENCY",
+        "frequency",
+        "antes do café"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation was not present in resolved projection",
+      "confidence": 0.82,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_WRONG",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "current-vs-historical relation admissibility gate",
+      "policy_rule": "SEM-REL-002",
+      "repair_class": "A1",
+      "repairability": "deterministic under frozen relation policy",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0020",
+      "surface": "levotiroxina",
+      "occurrence": 0,
+      "text": "A levotiroxina passou de 75 mcg em jejum para 88 mcg antes do café.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0020:segment-01",
+          "speaker": "unknown",
+          "text": "A levotiroxina passou de 75 mcg em jejum para 88 mcg antes do café."
+        }
+      ],
+      "classification": "EXTRA_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_FREQUENCY",
+        "frequency",
+        "em jejum"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "resolved relation has no corresponding gold relation",
+      "confidence": 0.68,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_WRONG",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "current-vs-historical relation admissibility gate",
+      "policy_rule": "SEM-REL-002",
+      "repair_class": "A1",
+      "repairability": "deterministic under frozen relation policy",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0024",
+      "surface": "epilepsia",
+      "occurrence": 0,
+      "text": "A tia apresentou epilepsia, mas o paciente nega crises convulsivas.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0024:segment-01",
+          "speaker": "unknown",
+          "text": "A tia apresentou epilepsia, mas o paciente nega crises convulsivas."
+        }
+      ],
+      "classification": "WRONG_TEMPORALITY",
+      "field": "temporality",
+      "relation": null,
+      "expected": "past",
+      "resolved": "current",
+      "root_cause": "historical-event cue conflicts with the resolved current temporality",
+      "confidence": 0.9,
+      "cross_segment": true,
+      "semantic_dimension": "TEMPORALITY",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "policy_rule": "SEM-TEMP-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0024",
+      "surface": "epilepsia",
+      "occurrence": 0,
+      "text": "A tia apresentou epilepsia, mas o paciente nega crises convulsivas.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0024:segment-01",
+          "speaker": "unknown",
+          "text": "A tia apresentou epilepsia, mas o paciente nega crises convulsivas."
+        }
+      ],
+      "classification": "WRONG_EXPERIENCER",
+      "field": "experiencer",
+      "relation": null,
+      "expected": "family",
+      "resolved": "patient",
+      "root_cause": "explicit family cue was not preserved as experiencer",
+      "confidence": 0.96,
+      "cross_segment": true,
+      "semantic_dimension": "EXPERIENCER",
+      "current_component": "NieDEPtBrSafetyRules experiencer cue resolver",
+      "recommended_component": "experiencer owner resolver",
+      "policy_rule": "SEM-EXP-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0025",
+      "surface": "hipertensão",
+      "occurrence": 0,
+      "text": "O pai conviveu com hipertensão, enquanto a paciente nega pressão alta.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0025:segment-01",
+          "speaker": "unknown",
+          "text": "O pai conviveu com hipertensão, enquanto a paciente nega pressão alta."
+        }
+      ],
+      "classification": "WRONG_TEMPORALITY",
+      "field": "temporality",
+      "relation": null,
+      "expected": "past",
+      "resolved": "current",
+      "root_cause": "temporality requires an explicit event-time versus assertion-time policy",
+      "confidence": 0.68,
+      "cross_segment": true,
+      "semantic_dimension": "TEMPORALITY",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "policy_rule": "SEM-TEMP-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0026",
+      "surface": "AVC",
+      "occurrence": 0,
+      "text": "A avó sofreu um AVC, mas o paciente não apresenta fraqueza hoje.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0026:segment-01",
+          "speaker": "unknown",
+          "text": "A avó sofreu um AVC, mas o paciente não apresenta fraqueza hoje."
+        }
+      ],
+      "classification": "WRONG_TEMPORALITY",
+      "field": "temporality",
+      "relation": null,
+      "expected": "past",
+      "resolved": "current",
+      "root_cause": "temporality requires an explicit event-time versus assertion-time policy",
+      "confidence": 0.68,
+      "cross_segment": true,
+      "semantic_dimension": "TEMPORALITY",
+      "current_component": "NieDEPtBrSafetyRules temporal cue resolver",
+      "recommended_component": "event/state temporal ownership resolver",
+      "policy_rule": "SEM-TEMP-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0027",
+      "surface": "dormência",
+      "occurrence": 0,
+      "text": "A dormência ocupa o lado direito do rosto e a dor está na perna esquerda.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0027:segment-01",
+          "speaker": "unknown",
+          "text": "A dormência ocupa o lado direito do rosto e a dor está na perna esquerda."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0027",
+      "surface": "dor",
+      "occurrence": 0,
+      "text": "A dormência ocupa o lado direito do rosto e a dor está na perna esquerda.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0027:segment-01",
+          "speaker": "unknown",
+          "text": "A dormência ocupa o lado direito do rosto e a dor está na perna esquerda."
+        }
+      ],
+      "classification": "WRONG_LATERALITY",
+      "field": "laterality",
+      "relation": null,
+      "expected": "left",
+      "resolved": null,
+      "root_cause": "explicit laterality cue was not attached to the target mention",
+      "confidence": 0.98,
+      "cross_segment": true,
+      "semantic_dimension": "ATTRIBUTE_OWNERSHIP",
+      "current_component": "laterality attachment resolver",
+      "recommended_component": "nearest-compatible owner with typed scope",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0027",
+      "surface": "dor",
+      "occurrence": 0,
+      "text": "A dormência ocupa o lado direito do rosto e a dor está na perna esquerda.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0027:segment-01",
+          "speaker": "unknown",
+          "text": "A dormência ocupa o lado direito do rosto e a dor está na perna esquerda."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0027",
+      "surface": "dor",
+      "occurrence": 0,
+      "text": "A dormência ocupa o lado direito do rosto e a dor está na perna esquerda.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0027:segment-01",
+          "speaker": "unknown",
+          "text": "A dormência ocupa o lado direito do rosto e a dor está na perna esquerda."
+        }
+      ],
+      "classification": "MISSING_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_LATERALITY",
+        "laterality",
+        "left"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation was not present in resolved projection",
+      "confidence": 0.82,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_MISSING",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0028",
+      "surface": "dor",
+      "occurrence": 0,
+      "text": "Refere dor no punho esquerdo e tremor na mão direita ao escrever.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0028:segment-01",
+          "speaker": "unknown",
+          "text": "Refere dor no punho esquerdo e tremor na mão direita ao escrever."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0028",
+      "surface": "tremor",
+      "occurrence": 0,
+      "text": "Refere dor no punho esquerdo e tremor na mão direita ao escrever.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0028:segment-01",
+          "speaker": "unknown",
+          "text": "Refere dor no punho esquerdo e tremor na mão direita ao escrever."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0029",
+      "surface": "pressão",
+      "occurrence": 0,
+      "text": "A pressão incomoda o ouvido esquerdo, enquanto o zumbido aparece no direito.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0029:segment-01",
+          "speaker": "unknown",
+          "text": "A pressão incomoda o ouvido esquerdo, enquanto o zumbido aparece no direito."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0029",
+      "surface": "zumbido",
+      "occurrence": 0,
+      "text": "A pressão incomoda o ouvido esquerdo, enquanto o zumbido aparece no direito.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0029:segment-01",
+          "speaker": "unknown",
+          "text": "A pressão incomoda o ouvido esquerdo, enquanto o zumbido aparece no direito."
+        }
+      ],
+      "classification": "WRONG_LATERALITY",
+      "field": "laterality",
+      "relation": null,
+      "expected": "right",
+      "resolved": null,
+      "root_cause": "explicit laterality cue was not attached to the target mention",
+      "confidence": 0.98,
+      "cross_segment": true,
+      "semantic_dimension": "ATTRIBUTE_OWNERSHIP",
+      "current_component": "laterality attachment resolver",
+      "recommended_component": "nearest-compatible owner with typed scope",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0029",
+      "surface": "zumbido",
+      "occurrence": 0,
+      "text": "A pressão incomoda o ouvido esquerdo, enquanto o zumbido aparece no direito.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0029:segment-01",
+          "speaker": "unknown",
+          "text": "A pressão incomoda o ouvido esquerdo, enquanto o zumbido aparece no direito."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0029",
+      "surface": "zumbido",
+      "occurrence": 0,
+      "text": "A pressão incomoda o ouvido esquerdo, enquanto o zumbido aparece no direito.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0029:segment-01",
+          "speaker": "unknown",
+          "text": "A pressão incomoda o ouvido esquerdo, enquanto o zumbido aparece no direito."
+        }
+      ],
+      "classification": "MISSING_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_LATERALITY",
+        "laterality",
+        "right"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation was not present in resolved projection",
+      "confidence": 0.82,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_MISSING",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0030",
+      "surface": "rigidez",
+      "occurrence": 0,
+      "text": "Refere rigidez no quadril direito e sensibilidade na panturrilha esquerda.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0030:segment-01",
+          "speaker": "unknown",
+          "text": "Refere rigidez no quadril direito e sensibilidade na panturrilha esquerda."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0030",
+      "surface": "sensibilidade",
+      "occurrence": 0,
+      "text": "Refere rigidez no quadril direito e sensibilidade na panturrilha esquerda.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0030:segment-01",
+          "speaker": "unknown",
+          "text": "Refere rigidez no quadril direito e sensibilidade na panturrilha esquerda."
+        }
+      ],
+      "classification": "WRONG_LATERALITY",
+      "field": "laterality",
+      "relation": null,
+      "expected": "left",
+      "resolved": null,
+      "root_cause": "explicit laterality cue was not attached to the target mention",
+      "confidence": 0.98,
+      "cross_segment": true,
+      "semantic_dimension": "ATTRIBUTE_OWNERSHIP",
+      "current_component": "laterality attachment resolver",
+      "recommended_component": "nearest-compatible owner with typed scope",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0030",
+      "surface": "sensibilidade",
+      "occurrence": 0,
+      "text": "Refere rigidez no quadril direito e sensibilidade na panturrilha esquerda.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0030:segment-01",
+          "speaker": "unknown",
+          "text": "Refere rigidez no quadril direito e sensibilidade na panturrilha esquerda."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0030",
+      "surface": "sensibilidade",
+      "occurrence": 0,
+      "text": "Refere rigidez no quadril direito e sensibilidade na panturrilha esquerda.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0030:segment-01",
+          "speaker": "unknown",
+          "text": "Refere rigidez no quadril direito e sensibilidade na panturrilha esquerda."
+        }
+      ],
+      "classification": "MISSING_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_LATERALITY",
+        "laterality",
+        "left"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation was not present in resolved projection",
+      "confidence": 0.82,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_MISSING",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0031",
+      "surface": "inchaço",
+      "occurrence": 0,
+      "text": "O inchaço está no tornozelo esquerdo e a coceira na mão direita.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0031:segment-01",
+          "speaker": "unknown",
+          "text": "O inchaço está no tornozelo esquerdo e a coceira na mão direita."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0031",
+      "surface": "coceira",
+      "occurrence": 0,
+      "text": "O inchaço está no tornozelo esquerdo e a coceira na mão direita.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0031:segment-01",
+          "speaker": "unknown",
+          "text": "O inchaço está no tornozelo esquerdo e a coceira na mão direita."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0032",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "text": "Sem dor no ombro direito, porém percebe fraqueza na perna esquerda ao subir escadas.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0032:segment-01",
+          "speaker": "unknown",
+          "text": "Sem dor no ombro direito, porém percebe fraqueza na perna esquerda ao subir escadas."
+        }
+      ],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0032",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "text": "Sem dor no ombro direito, porém percebe fraqueza na perna esquerda ao subir escadas.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0032:segment-01",
+          "speaker": "unknown",
+          "text": "Sem dor no ombro direito, porém percebe fraqueza na perna esquerda ao subir escadas."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0033",
+      "surface": "queimação",
+      "occurrence": 0,
+      "text": "A queimação ficou no pé esquerdo e a dormência apareceu na mão direita.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0033:segment-01",
+          "speaker": "unknown",
+          "text": "A queimação ficou no pé esquerdo e a dormência apareceu na mão direita."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0033",
+      "surface": "dormência",
+      "occurrence": 0,
+      "text": "A queimação ficou no pé esquerdo e a dormência apareceu na mão direita.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0033:segment-01",
+          "speaker": "unknown",
+          "text": "A queimação ficou no pé esquerdo e a dormência apareceu na mão direita."
+        }
+      ],
+      "classification": "WRONG_LATERALITY",
+      "field": "laterality",
+      "relation": null,
+      "expected": "right",
+      "resolved": null,
+      "root_cause": "explicit laterality cue was not attached to the target mention",
+      "confidence": 0.98,
+      "cross_segment": true,
+      "semantic_dimension": "ATTRIBUTE_OWNERSHIP",
+      "current_component": "laterality attachment resolver",
+      "recommended_component": "nearest-compatible owner with typed scope",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0033",
+      "surface": "dormência",
+      "occurrence": 0,
+      "text": "A queimação ficou no pé esquerdo e a dormência apareceu na mão direita.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0033:segment-01",
+          "speaker": "unknown",
+          "text": "A queimação ficou no pé esquerdo e a dormência apareceu na mão direita."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0033",
+      "surface": "dormência",
+      "occurrence": 0,
+      "text": "A queimação ficou no pé esquerdo e a dormência apareceu na mão direita.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0033:segment-01",
+          "speaker": "unknown",
+          "text": "A queimação ficou no pé esquerdo e a dormência apareceu na mão direita."
+        }
+      ],
+      "classification": "MISSING_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_LATERALITY",
+        "laterality",
+        "right"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation was not present in resolved projection",
+      "confidence": 0.82,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_MISSING",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0034",
+      "surface": "cólica",
+      "occurrence": 0,
+      "text": "Nega enjoo, mas relata cólica no lado esquerdo e tontura ao levantar.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0034:segment-01",
+          "speaker": "unknown",
+          "text": "Nega enjoo, mas relata cólica no lado esquerdo e tontura ao levantar."
+        }
+      ],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0034",
+      "surface": "cólica",
+      "occurrence": 0,
+      "text": "Nega enjoo, mas relata cólica no lado esquerdo e tontura ao levantar.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0034:segment-01",
+          "speaker": "unknown",
+          "text": "Nega enjoo, mas relata cólica no lado esquerdo e tontura ao levantar."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0034",
+      "surface": "tontura",
+      "occurrence": 0,
+      "text": "Nega enjoo, mas relata cólica no lado esquerdo e tontura ao levantar.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0034:segment-01",
+          "speaker": "unknown",
+          "text": "Nega enjoo, mas relata cólica no lado esquerdo e tontura ao levantar."
+        }
+      ],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0034",
+      "surface": "tontura",
+      "occurrence": 0,
+      "text": "Nega enjoo, mas relata cólica no lado esquerdo e tontura ao levantar.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0034:segment-01",
+          "speaker": "unknown",
+          "text": "Nega enjoo, mas relata cólica no lado esquerdo e tontura ao levantar."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0035",
+      "surface": "dor",
+      "occurrence": 0,
+      "text": "Não sente pressão no peito; refere dor no braço direito desde ontem.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0035:segment-01",
+          "speaker": "unknown",
+          "text": "Não sente pressão no peito; refere dor no braço direito desde ontem."
+        }
+      ],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0035",
+      "surface": "dor",
+      "occurrence": 0,
+      "text": "Não sente pressão no peito; refere dor no braço direito desde ontem.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0035:segment-01",
+          "speaker": "unknown",
+          "text": "Não sente pressão no peito; refere dor no braço direito desde ontem."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0036",
+      "surface": "dor abdominal",
+      "occurrence": 0,
+      "text": "A dor abdominal ficou à direita e a sensibilidade surgiu no flanco esquerdo.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0036:segment-01",
+          "speaker": "unknown",
+          "text": "A dor abdominal ficou à direita e a sensibilidade surgiu no flanco esquerdo."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0036",
+      "surface": "sensibilidade",
+      "occurrence": 0,
+      "text": "A dor abdominal ficou à direita e a sensibilidade surgiu no flanco esquerdo.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0036:segment-01",
+          "speaker": "unknown",
+          "text": "A dor abdominal ficou à direita e a sensibilidade surgiu no flanco esquerdo."
+        }
+      ],
+      "classification": "WRONG_LATERALITY",
+      "field": "laterality",
+      "relation": null,
+      "expected": "left",
+      "resolved": null,
+      "root_cause": "explicit laterality cue was not attached to the target mention",
+      "confidence": 0.98,
+      "cross_segment": true,
+      "semantic_dimension": "ATTRIBUTE_OWNERSHIP",
+      "current_component": "laterality attachment resolver",
+      "recommended_component": "nearest-compatible owner with typed scope",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A1",
+      "repairability": "deterministic for explicit cues",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0036",
+      "surface": "sensibilidade",
+      "occurrence": 0,
+      "text": "A dor abdominal ficou à direita e a sensibilidade surgiu no flanco esquerdo.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0036:segment-01",
+          "speaker": "unknown",
+          "text": "A dor abdominal ficou à direita e a sensibilidade surgiu no flanco esquerdo."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0036",
+      "surface": "sensibilidade",
+      "occurrence": 0,
+      "text": "A dor abdominal ficou à direita e a sensibilidade surgiu no flanco esquerdo.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0036:segment-01",
+          "speaker": "unknown",
+          "text": "A dor abdominal ficou à direita e a sensibilidade surgiu no flanco esquerdo."
+        }
+      ],
+      "classification": "MISSING_RELATION",
+      "field": null,
+      "relation": [
+        "HAS_LATERALITY",
+        "laterality",
+        "left"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation was not present in resolved projection",
+      "confidence": 0.82,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_MISSING",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0037",
+      "surface": "náusea",
+      "occurrence": 0,
+      "text": "Não relata vômitos, mas mantém náusea desde cedo.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0037:segment-01",
+          "speaker": "unknown",
+          "text": "Não relata vômitos, mas mantém náusea desde cedo."
+        }
+      ],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0037",
+      "surface": "náusea",
+      "occurrence": 0,
+      "text": "Não relata vômitos, mas mantém náusea desde cedo.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0037:segment-01",
+          "speaker": "unknown",
+          "text": "Não relata vômitos, mas mantém náusea desde cedo."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0038",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "text": "Nega formigamento na mão, embora tenha fraqueza no braço.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0038:segment-01",
+          "speaker": "unknown",
+          "text": "Nega formigamento na mão, embora tenha fraqueza no braço."
+        }
+      ],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0038",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "text": "Nega formigamento na mão, embora tenha fraqueza no braço.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0038:segment-01",
+          "speaker": "unknown",
+          "text": "Nega formigamento na mão, embora tenha fraqueza no braço."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0039",
+      "surface": "cólica",
+      "occurrence": 0,
+      "text": "Sem sangramento, mas refere cólica forte no abdome.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0039:segment-01",
+          "speaker": "unknown",
+          "text": "Sem sangramento, mas refere cólica forte no abdome."
+        }
+      ],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0039",
+      "surface": "cólica",
+      "occurrence": 0,
+      "text": "Sem sangramento, mas refere cólica forte no abdome.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0039:segment-01",
+          "speaker": "unknown",
+          "text": "Sem sangramento, mas refere cólica forte no abdome."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0040",
+      "surface": "desequilíbrio",
+      "occurrence": 0,
+      "text": "Diz que não tem tontura e que sente apenas desequilíbrio ao andar.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0040:segment-01",
+          "speaker": "unknown",
+          "text": "Diz que não tem tontura e que sente apenas desequilíbrio ao andar."
+        }
+      ],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0040",
+      "surface": "desequilíbrio",
+      "occurrence": 0,
+      "text": "Diz que não tem tontura e que sente apenas desequilíbrio ao andar.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0040:segment-01",
+          "speaker": "unknown",
+          "text": "Diz que não tem tontura e que sente apenas desequilíbrio ao andar."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0041",
+      "surface": "dor epigástrica",
+      "occurrence": 0,
+      "text": "Não sente azia, embora apresente dor epigástrica depois das refeições.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0041:segment-01",
+          "speaker": "unknown",
+          "text": "Não sente azia, embora apresente dor epigástrica depois das refeições."
+        }
+      ],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0041",
+      "surface": "dor epigástrica",
+      "occurrence": 0,
+      "text": "Não sente azia, embora apresente dor epigástrica depois das refeições.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0041:segment-01",
+          "speaker": "unknown",
+          "text": "Não sente azia, embora apresente dor epigástrica depois das refeições."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0042",
+      "surface": "mal-estar",
+      "occurrence": 0,
+      "text": "Nega febre e calafrios, mas começou a sentir mal-estar hoje.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0042:segment-01",
+          "speaker": "unknown",
+          "text": "Nega febre e calafrios, mas começou a sentir mal-estar hoje."
+        }
+      ],
+      "classification": "WRONG_NEGATION",
+      "field": "negated",
+      "relation": null,
+      "expected": false,
+      "resolved": true,
+      "root_cause": "negation cue appears scoped to another mention; target ownership/scope is wrong",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "MENTION_SCOPE",
+      "current_component": "CrossSegmentContextResolver negation scope",
+      "recommended_component": "target-scoped negation resolver",
+      "policy_rule": "SEM-NEG-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0042",
+      "surface": "mal-estar",
+      "occurrence": 0,
+      "text": "Nega febre e calafrios, mas começou a sentir mal-estar hoje.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0042:segment-01",
+          "speaker": "unknown",
+          "text": "Nega febre e calafrios, mas começou a sentir mal-estar hoje."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0048",
+      "surface": "queda",
+      "occurrence": 0,
+      "text": "A queda aconteceu no mês passado, mas a dor no quadril começou hoje.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0048:segment-01",
+          "speaker": "unknown",
+          "text": "A queda aconteceu no mês passado, mas a dor no quadril começou hoje."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "historical",
+      "resolved": null,
+      "root_cause": "status vocabulary or state ownership is not aligned",
+      "confidence": 0.7,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0048",
+      "surface": "dor",
+      "occurrence": 0,
+      "text": "A queda aconteceu no mês passado, mas a dor no quadril começou hoje.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0048:segment-01",
+          "speaker": "unknown",
+          "text": "A queda aconteceu no mês passado, mas a dor no quadril começou hoje."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0049",
+      "surface": "losartana",
+      "occurrence": 0,
+      "text": "Médico: Continua usando losartana?\nPaciente: Não, parei na semana passada.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0049:segment-01",
+          "speaker": "clinician",
+          "text": "Continua usando losartana?"
+        },
+        {
+          "segment_id": "sim-v6-0049:segment-02",
+          "speaker": "patient",
+          "text": "Não, parei na semana passada."
+        }
+      ],
+      "classification": "MISSING_RELATION",
+      "field": null,
+      "relation": [
+        "DISCONTINUED_AT",
+        "status",
+        "discontinued"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation vocabulary requires DISCONTINUED_AT while resolver emits no matching relation",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_MISSING",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high"
+    },
+    {
+      "case_id": "sim-v6-0051",
+      "surface": "formigamento",
+      "occurrence": 0,
+      "text": "Médico: A dor melhorou?\nPaciente: Sim, não sinto mais, só formigamento na mão direita.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0051:segment-01",
+          "speaker": "clinician",
+          "text": "A dor melhorou?"
+        },
+        {
+          "segment_id": "sim-v6-0051:segment-02",
+          "speaker": "patient",
+          "text": "Sim, não sinto mais, só formigamento na mão direita."
+        }
+      ],
+      "classification": "WRONG_STATUS",
+      "field": "status",
+      "relation": null,
+      "expected": "present",
+      "resolved": null,
+      "root_cause": "gold uses present status while the resolver contract represents current assertion as null",
+      "confidence": 0.95,
+      "cross_segment": true,
+      "semantic_dimension": "STATUS",
+      "current_component": "status resolution/materialization path",
+      "recommended_component": "policy-backed status projection",
+      "policy_rule": "SEM-STATUS-001",
+      "repair_class": "A1",
+      "repairability": "deterministic",
+      "risk": "medium"
+    },
+    {
+      "case_id": "sim-v6-0055",
+      "surface": "enalapril",
+      "occurrence": 0,
+      "text": "Médico: Você ainda usa enalapril?\nPaciente: Parei no mês passado.",
+      "segments": [
+        {
+          "segment_id": "sim-v6-0055:segment-01",
+          "speaker": "clinician",
+          "text": "Você ainda usa enalapril?"
+        },
+        {
+          "segment_id": "sim-v6-0055:segment-02",
+          "speaker": "patient",
+          "text": "Parei no mês passado."
+        }
+      ],
+      "classification": "MISSING_RELATION",
+      "field": null,
+      "relation": [
+        "DISCONTINUED_AT",
+        "status",
+        "discontinued"
+      ],
+      "expected": null,
+      "resolved": null,
+      "root_cause": "gold relation vocabulary requires DISCONTINUED_AT while resolver emits no matching relation",
+      "confidence": 0.94,
+      "cross_segment": true,
+      "semantic_dimension": "RELATION_MISSING",
+      "current_component": "ClinicalRelationResolver / relation projection",
+      "recommended_component": "relation candidate emission and endpoint validation",
+      "policy_rule": "SEM-REL-001",
+      "repair_class": "A2",
+      "repairability": "deterministic relation emission; integration-sensitive",
+      "risk": "high"
+    }
+  ],
+  "recommended_next_milestone": "Human review of A1/A2 boundary, then a scoped Type-A repair proposal; do not start Repair V5 yet."
+}

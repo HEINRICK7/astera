@@ -1,0 +1,1356 @@
+{
+  "case_id": "D3-002",
+  "corpus_checksum": "cef75b21b8eae6ec940b9f6cffe3d27fbe5b050db838569f3f19ef68434f1b0d",
+  "corpus_version": "D3",
+  "decisions": [],
+  "evaluation_id": "d3-one-shot-4c137795-99d1-4973-a98d-20eb89de0617",
+  "mismatches": [
+    {
+      "actual": "37,5 mg",
+      "confidence": 0.55,
+      "details": {
+        "mention": "venlafaxina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "37.5 mg",
+      "policy_rules": [],
+      "semantic_dimension": "dose",
+      "stage": "prediction"
+    },
+    {
+      "actual": "pela manhã",
+      "confidence": 0.55,
+      "details": {
+        "mention": "venlafaxina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": null,
+      "policy_rules": [],
+      "semantic_dimension": "frequency",
+      "stage": "prediction"
+    },
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "venlafaxina",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    },
+    {
+      "actual": [],
+      "confidence": 0.86,
+      "details": {
+        "mention": "venlafaxina",
+        "relation_output_count": 0
+      },
+      "expected": [
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "37.5 mg"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "d7dda54457cf896392e41edc8c259098b190c1c9bfa1ed82c6a1e5c7a46a59a7",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "aa2938b9b1d954c2aeb4ec43b9308c13194751754395adadfa817fa3b19d5bd2",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "b7a03125331d35f6bcab54115b710202adb5dd1c2879abda486df96a20d91570",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "q1",
+            "speaker": "patient",
+            "text": "A cápsula de venlafaxina ficou menor na troca."
+          },
+          {
+            "segment_id": "q2",
+            "speaker": "patient",
+            "text": "Agora é de 37,5 mg pela manhã."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-002",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "face40ec2fb5fde75d6f50bc1db7618d122b2960bfe456bc747e9648a2097fbf",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "b7a03125331d35f6bcab54115b710202adb5dd1c2879abda486df96a20d91570",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "431a8317cb5e7450f8cede0a0e4da43fd5132f31102492780807433bf0a2f32b",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "venlafaxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "37,5 mg",
+            "dose_unit": "mg",
+            "dose_value": "37.5",
+            "experiencer": "patient",
+            "frequency": "pela manhã",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "d8126d11f51567d88998c06e7d4f601978ad63ebaeff58959149c7998017f403",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "venlafaxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "37,5 mg",
+            "dose_unit": "mg",
+            "dose_value": "37.5",
+            "experiencer": "patient",
+            "frequency": "pela manhã",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "c69b242a9258f7b0d16133a2ef18bafd1224c61cfacc8f2d503c2c61c410cc09",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "venlafaxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "37,5 mg",
+            "dose_unit": "mg",
+            "dose_value": "37.5",
+            "experiencer": "patient",
+            "frequency": "pela manhã",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "c3e08a454691e84e7cc02c6071cab8cec260032b1bc671e8cc8e497dd141825f",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          },
+          "dose": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q2"
+            ]
+          },
+          "dose_unit": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q2"
+            ]
+          },
+          "dose_value": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q2"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          },
+          "frequency": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q2"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "42c60c0a03e00b82bd3f5f66dd66f5e2b7d268d47c485afd27346dd356c382d7",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "c3e08a454691e84e7cc02c6071cab8cec260032b1bc671e8cc8e497dd141825f",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "523b7dec6e5a06dc58291024dfe1ac2395986ea11ec4d471b01e5fa311ef6dff",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "0a6e1cf12e558c6c853eb30615ac83e67b8534dd09c210a61a72124a053c1f38",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "dose": [
+              "q2"
+            ],
+            "dose_unit": [
+              "q2"
+            ],
+            "dose_value": [
+              "q2"
+            ],
+            "frequency": [
+              "q2"
+            ]
+          },
+          "candidate_source": "q1",
+          "owner_mention_id": "context:q1",
+          "owner_type": null,
+          "source_segment_ids": [
+            "q1"
+          ],
+          "transition_attribute_ownership": {},
+          "transition_evidence": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A cápsula de venlafaxina ficou menor na troca.\\npatient: Agora é de 37,5 mg pela manhã.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:q1:13:24', 'owner_span': (13, 24), 'source_evidence_id': 'context:q1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('q1',), 'candidate_source': 'q1', 'owner_type': None, 'owner_mention_id': 'context:q1', 'attribute_provenance': {'dose': ['q2'], 'dose_value': ['q2'], 'dose_unit': ['q2'], 'frequency': ['q2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'certainty': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'temporality': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'experiencer': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'dose': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_value': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_unit': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'frequency': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}}, 'transition_evidence': [], 'transition_attribute_ownership': {}}, 'authority_metrics': {'resolver_decisions_total': 22, 'resolver_decisions_preserved': 14, 'resolver_decisions_overwritten': 8, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'q1', 'conversation_segment_ids': ['q2']}",
+            "relations": [],
+            "surface": "venlafaxina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "ff060c9bcd6becce3cdbe5d530d769d5cb7a1ac57ffce85fe5a0897db305f6de",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        },
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "venlafaxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "37,5 mg",
+            "dose_unit": "mg",
+            "dose_value": "37.5",
+            "experiencer": "patient",
+            "frequency": "pela manhã",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        }
+      },
+      "input_hash": "0a6e1cf12e558c6c853eb30615ac83e67b8534dd09c210a61a72124a053c1f38",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "f03ffcd922eacd8c09f9d2ac5ac6d57714bd5f34bd9ed35f806d78c1a9e6cf7d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "venlafaxina"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "37,5 mg",
+            "dose_unit": "mg",
+            "dose_value": "37.5",
+            "experiencer": "patient",
+            "frequency": "pela manhã",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "766ba1e3c5b9ad5e4d4583d79fee7c70760d29ab0aa485fe44b154106aa3d8a3",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A cápsula de venlafaxina ficou menor na troca.\\npatient: Agora é de 37,5 mg pela manhã.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:q1:13:24', 'owner_span': (13, 24), 'source_evidence_id': 'context:q1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('q1',), 'candidate_source': 'q1', 'owner_type': None, 'owner_mention_id': 'context:q1', 'attribute_provenance': {'dose': ['q2'], 'dose_value': ['q2'], 'dose_unit': ['q2'], 'frequency': ['q2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'certainty': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'temporality': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'experiencer': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'dose': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_value': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_unit': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'frequency': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}}, 'transition_evidence': [], 'transition_attribute_ownership': {}}, 'authority_metrics': {'resolver_decisions_total': 22, 'resolver_decisions_preserved': 14, 'resolver_decisions_overwritten': 8, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'q1', 'conversation_segment_ids': ['q2']}",
+            "relations": [],
+            "surface": "venlafaxina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "8874b5320e2d3c56925c40d7f576f0054b291ad58d59fac6185bd174f70cb0a8",
+      "changed_fields": [
+        "dose",
+        "frequency",
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "766ba1e3c5b9ad5e4d4583d79fee7c70760d29ab0aa485fe44b154106aa3d8a3",
+      "output_hash": "766ba1e3c5b9ad5e4d4583d79fee7c70760d29ab0aa485fe44b154106aa3d8a3",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "37,5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A cápsula de venlafaxina ficou menor na troca.\\npatient: Agora é de 37,5 mg pela manhã.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:q1:13:24', 'owner_span': (13, 24), 'source_evidence_id': 'context:q1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('q1',), 'candidate_source': 'q1', 'owner_type': None, 'owner_mention_id': 'context:q1', 'attribute_provenance': {'dose': ['q2'], 'dose_value': ['q2'], 'dose_unit': ['q2'], 'frequency': ['q2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'certainty': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'temporality': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'experiencer': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'dose': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_value': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_unit': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'frequency': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}}, 'transition_evidence': [], 'transition_attribute_ownership': {}}, 'authority_metrics': {'resolver_decisions_total': 22, 'resolver_decisions_preserved': 14, 'resolver_decisions_overwritten': 8, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'q1', 'conversation_segment_ids': ['q2']}",
+            "relations": [],
+            "surface": "venlafaxina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-002",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "3186be99bf4e1998be599a436142b447c826485da4aa9d3f499bca817b933e66",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "766ba1e3c5b9ad5e4d4583d79fee7c70760d29ab0aa485fe44b154106aa3d8a3",
+      "output_hash": "f9d7a3602d33ec8805e20dd7dafc777d8dd6032d15258faf4ce6a01078d06310",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "dose": [
+                "q2"
+              ],
+              "dose_unit": [
+                "q2"
+              ],
+              "dose_value": [
+                "q2"
+              ],
+              "status": [
+                "q2"
+              ]
+            },
+            "concept_id": "medication.venlafaxine",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "37.5 mg",
+              "dose_unit": "mg",
+              "dose_value": "37.5",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "HAS_DOSE": [
+                "q2"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "37.5 mg"
+              }
+            ],
+            "segment_ids": [
+              "q1",
+              "q2"
+            ],
+            "surface": "venlafaxina"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-002",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "7b6fe3558684f8bc7f606a3ab2db82e200a52ed8f1740b61aa8029f76d279bd4",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "f9d7a3602d33ec8805e20dd7dafc777d8dd6032d15258faf4ce6a01078d06310",
+      "output_hash": "2b2a78d9501faa0644c94123f508a40cd4233692b983e5641f18df4ded67b50c",
+      "payload": {
+        "case_id": "D3-002",
+        "mismatch_count": 4
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-002",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

@@ -302,7 +302,6 @@ function switchView(viewName) {
   if (eventCatalogContainer) eventCatalogContainer.style.display = 'none';
   if (apiContractsContainer) apiContractsContainer.style.display = 'none';
   if (engineeringRoadmapContainer) engineeringRoadmapContainer.style.display = 'none';
-  
   if (viewName === 'maturity') {
     flowContainer.style.display = 'none';
     minimap.style.display = 'none';

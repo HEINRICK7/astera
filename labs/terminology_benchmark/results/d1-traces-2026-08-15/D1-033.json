@@ -1,0 +1,579 @@
+{
+  "case_id": "D1-033",
+  "corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "corpus_version": "D1",
+  "decisions": [],
+  "evaluation_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "mismatches": [
+    {
+      "actual": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "rule": "ptbr-nearest-laterality"
+          },
+          "relation_id": null,
+          "relation_type": "HAS_LATERALITY",
+          "source": "context:s1:2:7",
+          "source_mention_id": "context:s1:2:7",
+          "source_segment_ids": [],
+          "target": "laterality",
+          "target_mention_id": "laterality",
+          "value": "right"
+        },
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "laterality",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          "relation_id": "context:s1:HAS_LATERALITY:laterality",
+          "relation_type": "HAS_LATERALITY",
+          "source": "context:s1",
+          "source_mention_id": "context:s1",
+          "source_segment_ids": [
+            "s2"
+          ],
+          "target": "laterality",
+          "target_mention_id": "laterality",
+          "value": "left"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "lesão",
+        "projection_relation_count": 2
+      },
+      "expected": [
+        {
+          "relation_type": "HAS_LATERALITY",
+          "target": "laterality",
+          "value": "left"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "754c771c1750d9a829278cb53b9dea26f3d1ed680030f52a7e6533596db4f957",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": null,
+      "output_hash": "5c562cafb11431d262fe3e1ab30b38aafbc663a6346a0f1cb49268099b9564b0",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "clinician",
+            "text": "A lesão é no joelho direito."
+          },
+          {
+            "segment_id": "s2",
+            "speaker": "clinician",
+            "text": "Desculpe, a anotação correta é joelho esquerdo."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-033",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "2af8005dcb169a8b8ae7d7abcb3e92a140df6e073d04f1bdae6d6f8bd1683b24",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "5c562cafb11431d262fe3e1ab30b38aafbc663a6346a0f1cb49268099b9564b0",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-033",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "03402eb2af1e0a7c83a361e20d186fee32e3990e29a4922d818cec5f906bb52c",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-033",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "53edfdf7c80d0c5d21a0b8a2e01ab17a79ea25d55c82c3d7dbb2853d6f785631",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-033",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "8a1e4604c4bae76409257349ae0e42759fbd2da724a8324e7a831417c9c96387",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "3df70b82a1e74f68b5e57bd556c4b2f69b2624219b1f3071783e04cabd25701b",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          },
+          "laterality": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-033",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "2c5cb0f5084a5971bc839242e537a16d50fb5807fd9df6596795b8bd45dffb38",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "3df70b82a1e74f68b5e57bd556c4b2f69b2624219b1f3071783e04cabd25701b",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-033",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "a9ba862d9a2ae1b2843d58116b79881abe12128054844f83f1fb7567c8948607",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "c7ce968fcd190a275f553df04ef07eb48169c8167d693a894c907da59b4ddcd6",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            },
+            "laterality": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            }
+          },
+          "candidate_source": "s1",
+          "source_segment_ids": [
+            "s1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "left",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: A lesão é no joelho direito.\\nclinician: Desculpe, a anotação correta é joelho esquerdo.', 'rules': ('ptbr-nearest-laterality',), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:7', 'owner_span': (2, 7), 'source_evidence_id': 'context:s1'}, 'laterality': {'owner_mention_id': 'context:s1:2:7', 'owner_span': (2, 7), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:7', 'attributes': {'laterality': 'right', 'status': None}, 'relations': [{'relation_id': None, 'relation_type': 'HAS_LATERALITY', 'source': 'context:s1:2:7', 'target': 'laterality', 'value': 'right', 'source_mention_id': 'context:s1:2:7', 'target_mention_id': 'laterality', 'source_segment_ids': [], 'confidence': 1.0, 'provenance': {'rule': 'ptbr-nearest-laterality'}}, {'relation_id': 'context:s1:HAS_LATERALITY:laterality', 'relation_type': 'HAS_LATERALITY', 'source': 'context:s1', 'target': 'laterality', 'value': 'left', 'source_mention_id': 'context:s1', 'target_mention_id': 'laterality', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'laterality', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}, 'laterality': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 440, 'resolver_decisions_preserved': 408, 'resolver_decisions_overwritten': 32, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "rule": "ptbr-nearest-laterality"
+                },
+                "relation_id": null,
+                "relation_type": "HAS_LATERALITY",
+                "source": "context:s1:2:7",
+                "source_mention_id": "context:s1:2:7",
+                "source_segment_ids": [],
+                "target": "laterality",
+                "target_mention_id": "laterality",
+                "value": "right"
+              },
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "laterality",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_LATERALITY:laterality",
+                "relation_type": "HAS_LATERALITY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "laterality",
+                "target_mention_id": "laterality",
+                "value": "left"
+              }
+            ],
+            "surface": "lesão"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-033",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "650ba092d931e08dd2eead8353da47e5be4e913e8c7160de76bd176526b12cb6",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "c7ce968fcd190a275f553df04ef07eb48169c8167d693a894c907da59b4ddcd6",
+      "output_hash": "1cfbe6804f029a39da69c170ca24f8fc2cf16b9880a76a4c1a13ae3c9c1de305",
+      "payload": {
+        "relations": [
+          [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "rule": "ptbr-nearest-laterality"
+              },
+              "relation_id": null,
+              "relation_type": "HAS_LATERALITY",
+              "source": "context:s1:2:7",
+              "source_mention_id": "context:s1:2:7",
+              "source_segment_ids": [],
+              "target": "laterality",
+              "target_mention_id": "laterality",
+              "value": "right"
+            },
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "laterality",
+                "rule": "resolved-attribute-materialization",
+                "source_segment_ids": [
+                  "s2"
+                ]
+              },
+              "relation_id": "context:s1:HAS_LATERALITY:laterality",
+              "relation_type": "HAS_LATERALITY",
+              "source": "context:s1",
+              "source_mention_id": "context:s1",
+              "source_segment_ids": [
+                "s2"
+              ],
+              "target": "laterality",
+              "target_mention_id": "laterality",
+              "value": "left"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-033",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "ce7d97b8f53f62e9eccb24b1f650dbb3d16feea286867bdd4492d6452839e0b0",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "1cfbe6804f029a39da69c170ca24f8fc2cf16b9880a76a4c1a13ae3c9c1de305",
+      "output_hash": "c7ba60e7850fd0ea231c97c9034bd52653e39a9af6547445f539c9feb0e0f136",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "left",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: A lesão é no joelho direito.\\nclinician: Desculpe, a anotação correta é joelho esquerdo.', 'rules': ('ptbr-nearest-laterality',), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:7', 'owner_span': (2, 7), 'source_evidence_id': 'context:s1'}, 'laterality': {'owner_mention_id': 'context:s1:2:7', 'owner_span': (2, 7), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:7', 'attributes': {'laterality': 'right', 'status': None}, 'relations': [{'relation_id': None, 'relation_type': 'HAS_LATERALITY', 'source': 'context:s1:2:7', 'target': 'laterality', 'value': 'right', 'source_mention_id': 'context:s1:2:7', 'target_mention_id': 'laterality', 'source_segment_ids': [], 'confidence': 1.0, 'provenance': {'rule': 'ptbr-nearest-laterality'}}, {'relation_id': 'context:s1:HAS_LATERALITY:laterality', 'relation_type': 'HAS_LATERALITY', 'source': 'context:s1', 'target': 'laterality', 'value': 'left', 'source_mention_id': 'context:s1', 'target_mention_id': 'laterality', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'laterality', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}, 'laterality': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 440, 'resolver_decisions_preserved': 408, 'resolver_decisions_overwritten': 32, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "rule": "ptbr-nearest-laterality"
+                },
+                "relation_id": null,
+                "relation_type": "HAS_LATERALITY",
+                "source": "context:s1:2:7",
+                "source_mention_id": "context:s1:2:7",
+                "source_segment_ids": [],
+                "target": "laterality",
+                "target_mention_id": "laterality",
+                "value": "right"
+              },
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "laterality",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_LATERALITY:laterality",
+                "relation_type": "HAS_LATERALITY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "laterality",
+                "target_mention_id": "laterality",
+                "value": "left"
+              }
+            ],
+            "surface": "lesão"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-033",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "dd1b1e0f8fa0bd7aea359ff1b372efef1e3caf6c70343bd159d896e4612671d0",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "c7ba60e7850fd0ea231c97c9034bd52653e39a9af6547445f539c9feb0e0f136",
+      "output_hash": "c7ba60e7850fd0ea231c97c9034bd52653e39a9af6547445f539c9feb0e0f136",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "left",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: A lesão é no joelho direito.\\nclinician: Desculpe, a anotação correta é joelho esquerdo.', 'rules': ('ptbr-nearest-laterality',), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:7', 'owner_span': (2, 7), 'source_evidence_id': 'context:s1'}, 'laterality': {'owner_mention_id': 'context:s1:2:7', 'owner_span': (2, 7), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:7', 'attributes': {'laterality': 'right', 'status': None}, 'relations': [{'relation_id': None, 'relation_type': 'HAS_LATERALITY', 'source': 'context:s1:2:7', 'target': 'laterality', 'value': 'right', 'source_mention_id': 'context:s1:2:7', 'target_mention_id': 'laterality', 'source_segment_ids': [], 'confidence': 1.0, 'provenance': {'rule': 'ptbr-nearest-laterality'}}, {'relation_id': 'context:s1:HAS_LATERALITY:laterality', 'relation_type': 'HAS_LATERALITY', 'source': 'context:s1', 'target': 'laterality', 'value': 'left', 'source_mention_id': 'context:s1', 'target_mention_id': 'laterality', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'laterality', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}, 'laterality': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 440, 'resolver_decisions_preserved': 408, 'resolver_decisions_overwritten': 32, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "rule": "ptbr-nearest-laterality"
+                },
+                "relation_id": null,
+                "relation_type": "HAS_LATERALITY",
+                "source": "context:s1:2:7",
+                "source_mention_id": "context:s1:2:7",
+                "source_segment_ids": [],
+                "target": "laterality",
+                "target_mention_id": "laterality",
+                "value": "right"
+              },
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "laterality",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_LATERALITY:laterality",
+                "relation_type": "HAS_LATERALITY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "laterality",
+                "target_mention_id": "laterality",
+                "value": "left"
+              }
+            ],
+            "surface": "lesão"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-033",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "98a3386beeaa73b5f430ab37cf072ae236119479ba55ad76d864c938133cc7bd",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "c7ba60e7850fd0ea231c97c9034bd52653e39a9af6547445f539c9feb0e0f136",
+      "output_hash": "e41b900d4021665dcbf9023b9732dd264bda0ccb481f64cd7b363308950049ea",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "laterality": [
+                "s2"
+              ]
+            },
+            "concept_id": "condition.lesion",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": "left",
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "relation_provenance": {},
+            "relations": [
+              {
+                "relation_type": "HAS_LATERALITY",
+                "target": "laterality",
+                "value": "left"
+              }
+            ],
+            "segment_ids": [
+              "s1",
+              "s2"
+            ],
+            "surface": "lesão"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-033",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "c11f5f3f88de0015bf21bce298c135fa490e3710a7c0d3699e3446335dfcad03",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "e41b900d4021665dcbf9023b9732dd264bda0ccb481f64cd7b363308950049ea",
+      "output_hash": "b8bdcb4bc86cab4dbd83b4fa83bf441d5cc4d7ffba20cc91f5ab91e273e77dd4",
+      "payload": {
+        "case_id": "D1-033"
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-033",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v1"
+}

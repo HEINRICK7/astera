@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+data/private/
+data/authorized/
+results/raw/
+results/*.jsonl
+results/*.json
+results/*.csv

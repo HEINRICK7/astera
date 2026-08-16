@@ -1,0 +1,729 @@
+{
+  "case_id": "D1-025",
+  "corpus_checksum": "91e7a9806668bd2755305ac7d327b0ba361da0aad26517842a50a000c3e4edf5",
+  "corpus_version": "D1",
+  "decisions": [],
+  "evaluation_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "mismatches": [
+    {
+      "actual": "current",
+      "confidence": 0.55,
+      "details": {
+        "mention": "dor lombar",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": "past",
+      "policy_rules": [],
+      "semantic_dimension": "temporality",
+      "stage": "prediction"
+    },
+    {
+      "actual": "depois do café",
+      "confidence": 0.55,
+      "details": {
+        "mention": "dor lombar",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": null,
+      "policy_rules": [],
+      "semantic_dimension": "frequency",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+          "relation_type": "HAS_FREQUENCY",
+          "source": "context:s1",
+          "source_mention_id": "context:s1",
+          "source_segment_ids": [
+            "s2"
+          ],
+          "target": "frequency",
+          "target_mention_id": "frequency",
+          "value": "depois do café"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "dor lombar",
+        "projection_relation_count": 1
+      },
+      "expected": [],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    },
+    {
+      "actual": "depois do café",
+      "confidence": 0.55,
+      "details": {
+        "mention": "estômago",
+        "reason": "saved trace contains final semantic mismatch but no earlier boundary evidence"
+      },
+      "expected": null,
+      "policy_rules": [],
+      "semantic_dimension": "frequency",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "confidence": 1.0,
+          "provenance": {
+            "attribute": "frequency",
+            "rule": "resolved-attribute-materialization",
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          "relation_id": "context:s2:HAS_FREQUENCY:frequency",
+          "relation_type": "HAS_FREQUENCY",
+          "source": "context:s2",
+          "source_mention_id": "context:s2",
+          "source_segment_ids": [
+            "s2"
+          ],
+          "target": "frequency",
+          "target_mention_id": "frequency",
+          "value": "depois do café"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "estômago",
+        "projection_relation_count": 1
+      },
+      "expected": [],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "80c16e9eb7852c12a421e4acb6c6e68034bc17843e8779a22ad34128064dc75f",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "021e7de5ce4cfb54d2009f4ab0a11ec6858370d7f86fc7d4f1c7829178e90273",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": null,
+      "output_hash": "27eb566a4c2468e12e336665dc660b7f9927b41ba69985ae9ece8c5fffac53cf",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "patient",
+            "text": "A dor lombar melhorou."
+          },
+          {
+            "segment_id": "s2",
+            "speaker": "patient",
+            "text": "Falando de outra coisa, meu estômago queima depois do café."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-025",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "7501625aee8e6c4531a7cca690c21557f4e8374a2641a54d3773cc0c01d4f7c5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "27eb566a4c2468e12e336665dc660b7f9927b41ba69985ae9ece8c5fffac53cf",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "835411b7eb74ffa33e4c8cf4baf287c959e5df1ab35a9a06655837395ee696cc",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "4c53a708f3184a11c5072cc71ffeecdd8c49552e5fff9dfc7a87b4140ffb1cbf",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "73d638ccdaaaa5e3da46a16f8315eeeaba5f33008b4996fbf73603a7986d7e85",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "payload": {
+        "attribute_ownership": {
+          "experiencer": {
+            "owner_mention_id": "context:s1",
+            "owner_segment_id": "s1"
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "17a1191530f7fa633a98df0ffdf93ac1ff26ad122bac015eabc18ca6269e79dd",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "b11187448c9fbbda80fd4a61878a8e77c75cafa9b39db1635c2a32d7865e8f3b",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "3da2ced21d011637723548e54582a9e21a39ad17b50db18f08e372895b42a3bc",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "fce1ea7aaf91a0dd4b46c5aa5c9fbe394a16a5d598840a6ceda4d706014e7601",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "experiencer": {
+              "owner_mention_id": "context:s1",
+              "owner_segment_id": "s1"
+            }
+          },
+          "candidate_source": "s1",
+          "source_segment_ids": [
+            "s1"
+          ]
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "depois do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A dor lombar melhorou.\\npatient: Falando de outra coisa, meu estômago queima depois do café.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:12', 'owner_span': (2, 12), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:12', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:s1', 'target': 'frequency', 'value': 'depois do café', 'source_mention_id': 'context:s1', 'target_mention_id': 'frequency', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'frequency', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 319, 'resolver_decisions_preserved': 295, 'resolver_decisions_overwritten': 24, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "frequency",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+                "relation_type": "HAS_FREQUENCY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "frequency",
+                "target_mention_id": "frequency",
+                "value": "depois do café"
+              }
+            ],
+            "surface": "dor lombar"
+          },
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "depois do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A dor lombar melhorou.\\npatient: Falando de outra coisa, meu estômago queima depois do café.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2:28:36', 'owner_span': (28, 36), 'source_evidence_id': 'context:s2'}}, 'projection': {'mention_id': 'context:s2:28:36', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s2:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:s2', 'target': 'frequency', 'value': 'depois do café', 'source_mention_id': 'context:s2', 'target_mention_id': 'frequency', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'frequency', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s2',), 'candidate_source': 's2', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2', 'owner_segment_id': 's2'}}}, 'authority_metrics': {'resolver_decisions_total': 330, 'resolver_decisions_preserved': 305, 'resolver_decisions_overwritten': 25, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's2', 'conversation_segment_ids': ['s1']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "frequency",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": "context:s2:HAS_FREQUENCY:frequency",
+                "relation_type": "HAS_FREQUENCY",
+                "source": "context:s2",
+                "source_mention_id": "context:s2",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "frequency",
+                "target_mention_id": "frequency",
+                "value": "depois do café"
+              }
+            ],
+            "surface": "estômago"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "651f2a82e6fb7d6781a27380fc720b89985dd3584a0bb3d29fc32c7de5b58726",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "fce1ea7aaf91a0dd4b46c5aa5c9fbe394a16a5d598840a6ceda4d706014e7601",
+      "output_hash": "d267e83f11fab0e71e88074f16e562765b858fa79d17360c24772ee12dd34527",
+      "payload": {
+        "relations": [
+          [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "resolved-attribute-materialization",
+                "source_segment_ids": [
+                  "s2"
+                ]
+              },
+              "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:s1",
+              "source_mention_id": "context:s1",
+              "source_segment_ids": [
+                "s2"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "depois do café"
+            }
+          ],
+          [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "resolved-attribute-materialization",
+                "source_segment_ids": [
+                  "s2"
+                ]
+              },
+              "relation_id": "context:s2:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:s2",
+              "source_mention_id": "context:s2",
+              "source_segment_ids": [
+                "s2"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "depois do café"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "d3b33f602a9e8bba70283f7bc8607c96c25435493118ac54d847a0c445cac14d",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "d267e83f11fab0e71e88074f16e562765b858fa79d17360c24772ee12dd34527",
+      "output_hash": "4cd4937c6af39be8dfd3b14204fac8374ef79d7bdf990ce270737e736e2952fd",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "depois do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A dor lombar melhorou.\\npatient: Falando de outra coisa, meu estômago queima depois do café.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:12', 'owner_span': (2, 12), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:12', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:s1', 'target': 'frequency', 'value': 'depois do café', 'source_mention_id': 'context:s1', 'target_mention_id': 'frequency', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'frequency', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 319, 'resolver_decisions_preserved': 295, 'resolver_decisions_overwritten': 24, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "frequency",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+                "relation_type": "HAS_FREQUENCY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "frequency",
+                "target_mention_id": "frequency",
+                "value": "depois do café"
+              }
+            ],
+            "surface": "dor lombar"
+          },
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "depois do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A dor lombar melhorou.\\npatient: Falando de outra coisa, meu estômago queima depois do café.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2:28:36', 'owner_span': (28, 36), 'source_evidence_id': 'context:s2'}}, 'projection': {'mention_id': 'context:s2:28:36', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s2:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:s2', 'target': 'frequency', 'value': 'depois do café', 'source_mention_id': 'context:s2', 'target_mention_id': 'frequency', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'frequency', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s2',), 'candidate_source': 's2', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2', 'owner_segment_id': 's2'}}}, 'authority_metrics': {'resolver_decisions_total': 330, 'resolver_decisions_preserved': 305, 'resolver_decisions_overwritten': 25, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's2', 'conversation_segment_ids': ['s1']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "frequency",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": "context:s2:HAS_FREQUENCY:frequency",
+                "relation_type": "HAS_FREQUENCY",
+                "source": "context:s2",
+                "source_mention_id": "context:s2",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "frequency",
+                "target_mention_id": "frequency",
+                "value": "depois do café"
+              }
+            ],
+            "surface": "estômago"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "c71f348b4e4b6ce0816ef0e305b4b1a3227b4f6ac15dbc534de79ef794773c03",
+      "changed_fields": [
+        "frequency",
+        "temporality"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "4cd4937c6af39be8dfd3b14204fac8374ef79d7bdf990ce270737e736e2952fd",
+      "output_hash": "4cd4937c6af39be8dfd3b14204fac8374ef79d7bdf990ce270737e736e2952fd",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "depois do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A dor lombar melhorou.\\npatient: Falando de outra coisa, meu estômago queima depois do café.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1:2:12', 'owner_span': (2, 12), 'source_evidence_id': 'context:s1'}}, 'projection': {'mention_id': 'context:s1:2:12', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:s1', 'target': 'frequency', 'value': 'depois do café', 'source_mention_id': 'context:s1', 'target_mention_id': 'frequency', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'frequency', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s1',), 'candidate_source': 's1', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s1', 'owner_segment_id': 's1'}}}, 'authority_metrics': {'resolver_decisions_total': 319, 'resolver_decisions_preserved': 295, 'resolver_decisions_overwritten': 24, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's1', 'conversation_segment_ids': ['s2']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "frequency",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": "context:s1:HAS_FREQUENCY:frequency",
+                "relation_type": "HAS_FREQUENCY",
+                "source": "context:s1",
+                "source_mention_id": "context:s1",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "frequency",
+                "target_mention_id": "frequency",
+                "value": "depois do café"
+              }
+            ],
+            "surface": "dor lombar"
+          },
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": "depois do café",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: A dor lombar melhorou.\\npatient: Falando de outra coisa, meu estômago queima depois do café.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2:28:36', 'owner_span': (28, 36), 'source_evidence_id': 'context:s2'}}, 'projection': {'mention_id': 'context:s2:28:36', 'attributes': {'laterality': None, 'status': None}, 'relations': [{'relation_id': 'context:s2:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:s2', 'target': 'frequency', 'value': 'depois do café', 'source_mention_id': 'context:s2', 'target_mention_id': 'frequency', 'source_segment_ids': ['s2'], 'confidence': 1.0, 'provenance': {'rule': 'resolved-attribute-materialization', 'attribute': 'frequency', 'source_segment_ids': ('s2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('s2',), 'candidate_source': 's2', 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:s2', 'owner_segment_id': 's2'}}}, 'authority_metrics': {'resolver_decisions_total': 330, 'resolver_decisions_preserved': 305, 'resolver_decisions_overwritten': 25, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'source_scope': 'conversation', 'target_segment_id': 's2', 'conversation_segment_ids': ['s1']}",
+            "relations": [
+              {
+                "confidence": 1.0,
+                "provenance": {
+                  "attribute": "frequency",
+                  "rule": "resolved-attribute-materialization",
+                  "source_segment_ids": [
+                    "s2"
+                  ]
+                },
+                "relation_id": "context:s2:HAS_FREQUENCY:frequency",
+                "relation_type": "HAS_FREQUENCY",
+                "source": "context:s2",
+                "source_mention_id": "context:s2",
+                "source_segment_ids": [
+                  "s2"
+                ],
+                "target": "frequency",
+                "target_mention_id": "frequency",
+                "value": "depois do café"
+              }
+            ],
+            "surface": "estômago"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-025",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "1b345e525319e0a687a1dd0eca5b52371505a3b518647021da9a03a979349a03",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "4cd4937c6af39be8dfd3b14204fac8374ef79d7bdf990ce270737e736e2952fd",
+      "output_hash": "6217d1aba555094d78b0bbeac282a4010bce18b030130c5b1df0d6657157a1ad",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "temporality": [
+                "s1"
+              ]
+            },
+            "concept_id": "symptom.back_pain",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "past"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "s1"
+            ],
+            "surface": "dor lombar"
+          },
+          {
+            "attribute_provenance": {
+              "mention": [
+                "s2"
+              ]
+            },
+            "concept_id": "anatomical.stomach",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": null,
+              "dose_unit": null,
+              "dose_value": null,
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "relation_provenance": {},
+            "relations": [],
+            "segment_ids": [
+              "s2"
+            ],
+            "surface": "estômago"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-025",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "aa25883ab6302163342ddb4897f01896a8123100e44ca971cd5eed919e1d7521",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "input_hash": "6217d1aba555094d78b0bbeac282a4010bce18b030130c5b1df0d6657157a1ad",
+      "output_hash": "759e590f2bc5657abbae07e82336b8a549b5a73c1ee7705f1b66da80432f1297",
+      "payload": {
+        "case_id": "D1-025"
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D1-025",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D1_boundary_evaluation"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v1"
+}

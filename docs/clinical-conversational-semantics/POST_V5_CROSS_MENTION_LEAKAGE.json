@@ -1,0 +1,62 @@
+{
+  "definition": "Mismatch where actual equals a sibling gold value or actual provenance comes from a segment outside the target gold provenance.",
+  "cross_mention_attribute_leak": 4,
+  "cross_mention_status_leak": 2,
+  "cross_mention_negation_leak": 1,
+  "cross_mention_temporality_leak": 1,
+  "cross_mention_laterality_leak": 0,
+  "affected_mentions_by_field": {
+    "temporality": 1,
+    "status": 2,
+    "negated": 1
+  },
+  "items": [
+    {
+      "case_id": "sim-v6-0026",
+      "surface": "AVC",
+      "field": "temporality",
+      "reason": "sibling_expected_value",
+      "expected": "past",
+      "actual": "current",
+      "segment_ids": [
+        "sim-v6-0026:segment-01"
+      ]
+    },
+    {
+      "case_id": "sim-v6-0038",
+      "surface": "fraqueza",
+      "field": "status",
+      "reason": "sibling_expected_value",
+      "expected": "present",
+      "actual": null,
+      "segment_ids": [
+        "sim-v6-0038:segment-01"
+      ]
+    },
+    {
+      "case_id": "sim-v6-0040",
+      "surface": "desequilíbrio",
+      "field": "negated",
+      "reason": "sibling_expected_value",
+      "expected": false,
+      "actual": true,
+      "segment_ids": [
+        "sim-v6-0040:segment-01"
+      ]
+    },
+    {
+      "case_id": "sim-v6-0040",
+      "surface": "desequilíbrio",
+      "field": "status",
+      "reason": "sibling_expected_value",
+      "expected": "present",
+      "actual": null,
+      "segment_ids": [
+        "sim-v6-0040:segment-01"
+      ]
+    }
+  ],
+  "relations_frozen": true,
+  "provenance_frozen": true,
+  "cross_segment_architecture_frozen": true
+}

@@ -5,8 +5,9 @@ from .events import (
     WorkflowFailedEvent,
     StepStartedEvent,
     StepCompletedEvent,
-    StepFailedEvent
+    StepFailedEvent,
 )
+from .port import EventBusPort, EventHandler, EventPublisher, EventSubscriber, serialize_event
 
 __all__ = [
     "BaseEvent",
@@ -15,5 +16,10 @@ __all__ = [
     "WorkflowFailedEvent",
     "StepStartedEvent",
     "StepCompletedEvent",
-    "StepFailedEvent"
+    "StepFailedEvent",
+    "EventBusPort",
+    "EventHandler",
+    "EventPublisher",
+    "EventSubscriber",
+    "serialize_event",
 ]

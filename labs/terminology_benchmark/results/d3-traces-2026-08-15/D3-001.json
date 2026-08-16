@@ -1,0 +1,1355 @@
+{
+  "case_id": "D3-001",
+  "corpus_checksum": "cef75b21b8eae6ec940b9f6cffe3d27fbe5b050db838569f3f19ef68434f1b0d",
+  "corpus_version": "D3",
+  "decisions": [],
+  "evaluation_id": "d3-one-shot-4c137795-99d1-4973-a98d-20eb89de0617",
+  "mismatches": [
+    {
+      "actual": "6,25 mg",
+      "confidence": 0.55,
+      "details": {
+        "mention": "carvedilol",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "6.25 mg",
+      "policy_rules": [],
+      "semantic_dimension": "dose",
+      "stage": "prediction"
+    },
+    {
+      "actual": "após o jantar",
+      "confidence": 0.55,
+      "details": {
+        "mention": "carvedilol",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": null,
+      "policy_rules": [],
+      "semantic_dimension": "frequency",
+      "stage": "prediction"
+    },
+    {
+      "actual": null,
+      "confidence": 0.55,
+      "details": {
+        "mention": "carvedilol",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "active",
+      "policy_rules": [],
+      "semantic_dimension": "status",
+      "stage": "prediction"
+    },
+    {
+      "actual": [],
+      "confidence": 0.86,
+      "details": {
+        "mention": "carvedilol",
+        "relation_output_count": 0
+      },
+      "expected": [
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "6.25 mg"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "d7dda54457cf896392e41edc8c259098b190c1c9bfa1ed82c6a1e5c7a46a59a7",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "28ecd60ad8bd039cfb737d59175b9a2a3be7e0e4746b6c5d5744cd462b86479f",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "8e58e48cb3ddf866e73834f69e28ebfda40892a243f1ae38c7ce710a57e054f0",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "q1",
+            "speaker": "clinician",
+            "text": "Qual a dose da carvedilol após o jantar?"
+          },
+          {
+            "segment_id": "q2",
+            "speaker": "patient",
+            "text": "Duas cápsulas de 6,25 mg."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-001",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "aac602c3938741ccd17a954b758ec0bd2366f858ecf6e1f32b77ad3da68ab7b1",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "8e58e48cb3ddf866e73834f69e28ebfda40892a243f1ae38c7ce710a57e054f0",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-001",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "4da4fdfda5bb0abda0188cd0ed2f1715e012495db65a9c1441c9a4d170b12be8",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "carvedilol"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "6,25 mg",
+            "dose_unit": "mg",
+            "dose_value": "6.25",
+            "experiencer": "patient",
+            "frequency": "após o jantar",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-001",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "0a388f7c61418fa23a6a9d747153efac041ff0933a3ded25a5fe67dee4d17765",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "carvedilol"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "6,25 mg",
+            "dose_unit": "mg",
+            "dose_value": "6.25",
+            "experiencer": "patient",
+            "frequency": "após o jantar",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-001",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "e9fd400b95325cf04ec8c10492dbc454c19890184483638f3c6f516c5f0044a3",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "carvedilol"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "6,25 mg",
+            "dose_unit": "mg",
+            "dose_value": "6.25",
+            "experiencer": "patient",
+            "frequency": "após o jantar",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "a9d411cbc77e282cb2c86d13170138d7b3cc6c2cb88f279759e0516103a621a6",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          },
+          "dose": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q2"
+            ]
+          },
+          "dose_unit": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q2"
+            ]
+          },
+          "dose_value": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q2"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          },
+          "frequency": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:q1",
+            "owner_segment_id": "q1",
+            "owner_type": null,
+            "source_segment_ids": [
+              "q1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-001",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "b4579ff623668b033a579942c18152df95f1d7db0bf41ee4f7b37db2976922bf",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "a9d411cbc77e282cb2c86d13170138d7b3cc6c2cb88f279759e0516103a621a6",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-001",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "b2d4a1693fef6d71439d71e45e9b7914c4fc88ae867ac6a9478b6cbd654485b6",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "44e82aaacd631d4f40c5b7459b61552491b8ce48dcdc2f5f08ca0827a7be1d26",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "dose": [
+              "q2"
+            ],
+            "dose_unit": [
+              "q2"
+            ],
+            "dose_value": [
+              "q2"
+            ],
+            "frequency": [
+              "q1"
+            ]
+          },
+          "candidate_source": "q1",
+          "owner_mention_id": "context:q1",
+          "owner_type": null,
+          "source_segment_ids": [
+            "q1"
+          ],
+          "transition_evidence": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: Qual a dose da carvedilol após o jantar?\\npatient: Duas cápsulas de 6,25 mg.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:q1:15:25', 'owner_span': (15, 25), 'source_evidence_id': 'context:q1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('q1',), 'candidate_source': 'q1', 'owner_type': None, 'owner_mention_id': 'context:q1', 'attribute_provenance': {'dose': ['q2'], 'dose_value': ['q2'], 'dose_unit': ['q2'], 'frequency': ['q1']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'certainty': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'temporality': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'experiencer': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'dose': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_value': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_unit': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'frequency': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 11, 'resolver_decisions_preserved': 7, 'resolver_decisions_overwritten': 4, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'q1', 'conversation_segment_ids': ['q2']}",
+            "relations": [],
+            "surface": "carvedilol"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-001",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "f4aecc0554257bbf8a9a4cf9cc0a40d87133285002aec36cfa61b76358bdbfbd",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        },
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "carvedilol"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "6,25 mg",
+            "dose_unit": "mg",
+            "dose_value": "6.25",
+            "experiencer": "patient",
+            "frequency": "após o jantar",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        }
+      },
+      "input_hash": "44e82aaacd631d4f40c5b7459b61552491b8ce48dcdc2f5f08ca0827a7be1d26",
+      "output_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "payload": {
+        "relations": [
+          []
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-001",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "1f0626d77437ddf2cbe91a6ba7e1fdfc953e62fae8687616f7bd028f04c93236",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q2"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:q1",
+              "owner_segment_id": "q1",
+              "owner_type": null,
+              "source_segment_ids": [
+                "q1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "surface": "carvedilol"
+          }
+        },
+        "per_mention_relations": {
+          "m1": []
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "6,25 mg",
+            "dose_unit": "mg",
+            "dose_value": "6.25",
+            "experiencer": "patient",
+            "frequency": "após o jantar",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": null,
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": []
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "e1cb77678b7fa55caa11ee2fe7f23434612b04f4f004d5820c9c8798a3d1a764",
+      "output_hash": "5682d43487244f07a45645b738ba8915592e355a3bf20a1f6dc8e7e0df02b7af",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: Qual a dose da carvedilol após o jantar?\\npatient: Duas cápsulas de 6,25 mg.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:q1:15:25', 'owner_span': (15, 25), 'source_evidence_id': 'context:q1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('q1',), 'candidate_source': 'q1', 'owner_type': None, 'owner_mention_id': 'context:q1', 'attribute_provenance': {'dose': ['q2'], 'dose_value': ['q2'], 'dose_unit': ['q2'], 'frequency': ['q1']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'certainty': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'temporality': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'experiencer': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'dose': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_value': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_unit': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'frequency': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 11, 'resolver_decisions_preserved': 7, 'resolver_decisions_overwritten': 4, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'q1', 'conversation_segment_ids': ['q2']}",
+            "relations": [],
+            "surface": "carvedilol"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-001",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "e879c225591e155bcf207d6953f7679c97ed72ac4a9a7f3699bf8b5f4d087498",
+      "changed_fields": [
+        "dose",
+        "frequency",
+        "status"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "5682d43487244f07a45645b738ba8915592e355a3bf20a1f6dc8e7e0df02b7af",
+      "output_hash": "5682d43487244f07a45645b738ba8915592e355a3bf20a1f6dc8e7e0df02b7af",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "6,25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": "após o jantar",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": null,
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'clinician: Qual a dose da carvedilol após o jantar?\\npatient: Duas cápsulas de 6,25 mg.', 'rules': (), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:q1:15:25', 'owner_span': (15, 25), 'source_evidence_id': 'context:q1'}}, 'relation_signals': [], 'projection': {'relations': []}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('q1',), 'candidate_source': 'q1', 'owner_type': None, 'owner_mention_id': 'context:q1', 'attribute_provenance': {'dose': ['q2'], 'dose_value': ['q2'], 'dose_unit': ['q2'], 'frequency': ['q1']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'certainty': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'temporality': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'experiencer': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}, 'dose': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_value': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'dose_unit': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q2',)}, 'frequency': {'owner_mention_id': 'context:q1', 'owner_segment_id': 'q1', 'owner_type': None, 'source_segment_ids': ('q1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 11, 'resolver_decisions_preserved': 7, 'resolver_decisions_overwritten': 4, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 0, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'q1', 'conversation_segment_ids': ['q2']}",
+            "relations": [],
+            "surface": "carvedilol"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-001",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "851e902a0a8950cf4f225b20b1fc17ae885f799f3fe7680c2c9a61595c861779",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "5682d43487244f07a45645b738ba8915592e355a3bf20a1f6dc8e7e0df02b7af",
+      "output_hash": "dfe24fc528e5917e46fb06a293030b01d5cbf5cdb994f9dcbbb3277d441e2b5a",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "dose": [
+                "q2"
+              ],
+              "dose_unit": [
+                "q2"
+              ],
+              "dose_value": [
+                "q2"
+              ],
+              "status": [
+                "q2"
+              ]
+            },
+            "concept_id": "medication.carvedilol",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "6.25 mg",
+              "dose_unit": "mg",
+              "dose_value": "6.25",
+              "experiencer": "patient",
+              "frequency": null,
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "HAS_DOSE": [
+                "q2"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "6.25 mg"
+              }
+            ],
+            "segment_ids": [
+              "q1",
+              "q2"
+            ],
+            "surface": "carvedilol"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-001",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "9aadc32cf3b3a95f7935e3f559a6e48010d2217d0f0089db3a26e8742f6ede09",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "dfe24fc528e5917e46fb06a293030b01d5cbf5cdb994f9dcbbb3277d441e2b5a",
+      "output_hash": "9bdf5fc9ebd80c92ce9243555ad68de58300352ced6d49bb7aca735f5ae23f21",
+      "payload": {
+        "case_id": "D3-001",
+        "mismatch_count": 4
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-001",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

@@ -1,0 +1,623 @@
+{
+  "status": "HUMAN_GATE",
+  "source_execution_id": "d1-one-shot-7df72fa5-2760-4d73-b09e-197d5e0af39a",
+  "source_trace_directory": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/d1-traces-2026-08-15",
+  "rerun_performed": false,
+  "repair_performed": false,
+  "relation_first_divergence_cases": 15,
+  "prediction_first_divergence_cases": 16,
+  "relation_finding_count": 28,
+  "relation_findings": [
+    {
+      "case_id": "D1-002",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_EXTRA",
+      "relation": {
+        "relation_type": "HAS_FREQUENCY",
+        "target": "frequency",
+        "value": "à noite"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-005",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_MISSING",
+      "relation": {
+        "relation_type": "HAS_FREQUENCY",
+        "target": "frequency",
+        "value": "todas as noites"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-010",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_MISSING",
+      "relation": {
+        "relation_type": "CHANGED_FROM",
+        "target": "dose",
+        "value": "25 mg"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-010",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "ATTRIBUTE_AVAILABLE_BUT_RELATION_NOT_MATERIALIZED",
+      "relation": {
+        "relation_type": "HAS_DOSE",
+        "target": "dose",
+        "value": "12,5 mg"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-010",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_WRONG_TYPE",
+      "relation": {
+        "relation_type": "HAS_DOSE",
+        "target": "dose",
+        "value": "25 mg"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-011",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "ATTRIBUTE_AVAILABLE_BUT_RELATION_NOT_MATERIALIZED",
+      "relation": {
+        "relation_type": "DISCONTINUED_AT",
+        "target": "status",
+        "value": "discontinued"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-013",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_MISSING",
+      "relation": {
+        "relation_type": "CHANGED_FROM",
+        "target": "dose",
+        "value": "300 mg"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-013",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "ATTRIBUTE_AVAILABLE_BUT_RELATION_NOT_MATERIALIZED",
+      "relation": {
+        "relation_type": "HAS_DOSE",
+        "target": "dose",
+        "value": "400 mg"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-013",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_WRONG_TYPE",
+      "relation": {
+        "relation_type": "HAS_DOSE",
+        "target": "dose",
+        "value": "300 mg"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-014",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "ATTRIBUTE_AVAILABLE_BUT_RELATION_NOT_MATERIALIZED",
+      "relation": {
+        "relation_type": "HAS_DOSE",
+        "target": "dose",
+        "value": "7 mg"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-014",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_WRONG_TYPE",
+      "relation": {
+        "relation_type": "HAS_DOSE",
+        "target": "dose",
+        "value": "14 mg"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-016",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_MISSING",
+      "relation": {
+        "relation_type": "CHANGED_FROM",
+        "target": "frequency",
+        "value": "duas vezes ao dia"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-016",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "ATTRIBUTE_AVAILABLE_BUT_RELATION_NOT_MATERIALIZED",
+      "relation": {
+        "relation_type": "HAS_FREQUENCY",
+        "target": "frequency",
+        "value": "uma vez ao dia"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-016",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_WRONG_TYPE",
+      "relation": {
+        "relation_type": "HAS_FREQUENCY",
+        "target": "frequency",
+        "value": "duas vezes ao dia"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-017",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_MISSING",
+      "relation": {
+        "relation_type": "CHANGED_FROM",
+        "target": "frequency",
+        "value": "pela manhã"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-017",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "ATTRIBUTE_AVAILABLE_BUT_RELATION_NOT_MATERIALIZED",
+      "relation": {
+        "relation_type": "HAS_FREQUENCY",
+        "target": "frequency",
+        "value": "à noite"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-017",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_WRONG_VALUE",
+      "relation": {
+        "relation_type": "HAS_FREQUENCY",
+        "target": "frequency",
+        "value": "depois do jantar"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-018",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_MISSING",
+      "relation": {
+        "relation_type": "CHANGED_FROM",
+        "target": "frequency",
+        "value": "dias alternados"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-018",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_MISSING",
+      "relation": {
+        "relation_type": "HAS_FREQUENCY",
+        "target": "frequency",
+        "value": "todos os dias"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-019",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_EXTRA",
+      "relation": {
+        "relation_type": "HAS_FREQUENCY",
+        "target": "frequency",
+        "value": "pela manhã"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-019",
+      "mention_index": 1,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_EXTRA",
+      "relation": {
+        "relation_type": "HAS_FREQUENCY",
+        "target": "frequency",
+        "value": "pela manhã"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-025",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_EXTRA",
+      "relation": {
+        "relation_type": "HAS_FREQUENCY",
+        "target": "frequency",
+        "value": "depois do café"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-025",
+      "mention_index": 1,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_EXTRA",
+      "relation": {
+        "relation_type": "HAS_FREQUENCY",
+        "target": "frequency",
+        "value": "depois do café"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-027",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_EXTRA",
+      "relation": {
+        "relation_type": "HAS_FREQUENCY",
+        "target": "frequency",
+        "value": "à noite"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-027",
+      "mention_index": 1,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_EXTRA",
+      "relation": {
+        "relation_type": "HAS_FREQUENCY",
+        "target": "frequency",
+        "value": "à noite"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-028",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_MISSING",
+      "relation": {
+        "relation_type": "HAS_DOSE",
+        "target": "dose",
+        "value": "40 mg"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-033",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_WRONG_VALUE",
+      "relation": {
+        "relation_type": "HAS_LATERALITY",
+        "target": "laterality",
+        "value": "right"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    },
+    {
+      "case_id": "D1-035",
+      "mention_index": 0,
+      "first_divergence_stage": "generated_relations",
+      "category": "RELATION_MISSING",
+      "relation": {
+        "relation_type": "CHANGED_FROM",
+        "target": "frequency",
+        "value": "à noite"
+      },
+      "count": 1,
+      "repair_class": "G1"
+    }
+  ],
+  "prediction_findings": [
+    {
+      "case_id": "D1-003",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "case_id": "D1-004",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "case_id": "D1-006",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "case_id": "D1-008",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "case_id": "D1-012",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "case_id": "D1-015",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "case_id": "D1-020",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "case_id": "D1-021",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "case_id": "D1-022",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "case_id": "D1-023",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "case_id": "D1-024",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "case_id": "D1-030",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "case_id": "D1-031",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "case_id": "D1-032",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "case_id": "D1-034",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    },
+    {
+      "case_id": "D1-036",
+      "first_divergence_stage": "prediction",
+      "category": "TRACE_GRANULARITY_INSUFFICIENT",
+      "confidence": 0.9,
+      "details": {
+        "final_projection_matches_prediction": true,
+        "final_projection_matches_gold": false,
+        "prediction_matches_gold": false,
+        "cause_not_attributable_to_projection_prediction_boundary": true
+      },
+      "repair_class": "INDETERMINATE"
+    }
+  ],
+  "relation_category_counts": {
+    "RELATION_MISSING": 9,
+    "RELATION_EXTRA": 7,
+    "RELATION_WRONG_TYPE": 4,
+    "RELATION_WRONG_ENDPOINT": 0,
+    "RELATION_WRONG_VALUE": 2,
+    "RELATION_DUPLICATED": 0,
+    "RELATION_HISTORICAL_AS_CURRENT": 0,
+    "ATTRIBUTE_AVAILABLE_BUT_RELATION_NOT_MATERIALIZED": 6
+  },
+  "prediction_category_counts": {
+    "PREDICTION_FIELD_DROPPED": 0,
+    "PREDICTION_FIELD_DEFAULTED": 0,
+    "PREDICTION_FIELD_TRANSFORMED": 0,
+    "PREDICTION_MENTION_DROPPED": 0,
+    "PREDICTION_MENTION_EXTRA": 0,
+    "PREDICTION_RELATION_DROPPED": 0,
+    "SERIALIZATION_MISMATCH": 0,
+    "EVALUATOR_CONTRACT_MISMATCH": 0,
+    "TRACE_GRANULARITY_INSUFFICIENT": 16
+  },
+  "relation_materialization_bugs": 6,
+  "relation_boundary_g1_findings": 28,
+  "confirmed_g1_cases": 15,
+  "prediction_mapping_bugs": 0,
+  "evaluator_contract_bugs": 0,
+  "trace_insufficient_cases": 16,
+  "confirmed_class_counts": {
+    "G1": 28,
+    "G2": 0,
+    "G3": 0,
+    "G4": 0
+  },
+  "still_indeterminate": 16,
+  "classification_guard": "G3/G4 not inferred; no provider decision authorized",
+  "shadow": "BLOCKED",
+  "production": "BLOCKED"
+}

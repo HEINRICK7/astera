@@ -1,0 +1,2323 @@
+{
+  "case_id": "D3-031",
+  "corpus_checksum": "cef75b21b8eae6ec940b9f6cffe3d27fbe5b050db838569f3f19ef68434f1b0d",
+  "corpus_version": "D3",
+  "decisions": [],
+  "evaluation_id": "d3-one-shot-4c137795-99d1-4973-a98d-20eb89de0617",
+  "mismatches": [
+    {
+      "actual": "à noite",
+      "confidence": 0.55,
+      "details": {
+        "mention": "enalapril",
+        "reason": "saved v2 trace contains semantic mismatch without earlier boundary evidence"
+      },
+      "expected": "pela manhã",
+      "policy_rules": [
+        "ptbr-dose",
+        "ptbr-active-medication-context"
+      ],
+      "semantic_dimension": "frequency",
+      "stage": "prediction"
+    },
+    {
+      "actual": [
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "10 mg"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "à noite"
+        }
+      ],
+      "confidence": 0.86,
+      "details": {
+        "mention": "enalapril",
+        "relation_output_count": 2
+      },
+      "expected": [
+        {
+          "relation_type": "HAS_DOSE",
+          "target": "dose",
+          "value": "10 mg"
+        },
+        {
+          "relation_type": "HAS_FREQUENCY",
+          "target": "frequency",
+          "value": "pela manhã"
+        }
+      ],
+      "policy_rules": [],
+      "semantic_dimension": "relations",
+      "stage": "generated_relations"
+    }
+  ],
+  "policy_version": "1.3",
+  "resolver_checksum": "d7dda54457cf896392e41edc8c259098b190c1c9bfa1ed82c6a1e5c7a46a59a7",
+  "resolver_version": "440caca7b29df3c615fe4055a7e0f9d7c11178c6",
+  "snapshots": [
+    {
+      "chain_hash": "7937fba6a7d4ddf7b84f83baed90b3d02eabef53c52d89bdbf8bd5e6396281e5",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": null,
+      "output_hash": "72953d31ee1d26b7f8b86e8934b54a747fb12b44c61bffdcbe1851bffc4dc649",
+      "payload": {
+        "segments": [
+          {
+            "segment_id": "p1",
+            "speaker": "patient",
+            "text": "Tomo enalapril 10 mg e atenolol 25 mg."
+          },
+          {
+            "segment_id": "p2",
+            "speaker": "patient",
+            "text": "O primeiro é pela manhã; o segundo, à noite."
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-031",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "input_segments"
+    },
+    {
+      "chain_hash": "e7ea0c7320ad16e588311dd5829ab5a021716494499f18b57a75555013d22f74",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "72953d31ee1d26b7f8b86e8934b54a747fb12b44c61bffdcbe1851bffc4dc649",
+      "output_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "payload": {
+        "mentions": []
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-031",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "local_mentions"
+    },
+    {
+      "chain_hash": "1a1b989724131bdf757675c5f30c03f82a527a967ca2fe1e2f9ef2e22b96c4fb",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "enalapril"
+          },
+          "m2": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "atenolol"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "10 mg"
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ],
+          "m2": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "25 mg"
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "10 mg",
+            "dose_unit": "mg",
+            "dose_value": "10",
+            "experiencer": "patient",
+            "frequency": "à noite",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          },
+          "m2": {
+            "certainty": "confirmed",
+            "dose": "25 mg",
+            "dose_unit": "mg",
+            "dose_value": "25",
+            "experiencer": "patient",
+            "frequency": "à noite",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "p1"
+                ]
+              },
+              "relation_id": "context:p1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:p1",
+              "source_mention_id": "context:p1",
+              "source_segment_ids": [
+                "p1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "10 mg"
+            },
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "p2"
+                ]
+              },
+              "relation_id": "context:p1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:p1",
+              "source_mention_id": "context:p1",
+              "source_segment_ids": [
+                "p2"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "à noite"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "10 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "m2": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "25 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "83182dca7ffa240407a671146e8c35f30a32c297ee51af00c48dc717250e015d",
+      "output_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "payload": {
+        "candidate_trace": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-031",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "semantic_candidates"
+    },
+    {
+      "chain_hash": "29036e23558815dda0ace96807877e83316b1d26687f041a2010aeec9b0969e0",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "enalapril"
+          },
+          "m2": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "atenolol"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "10 mg"
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ],
+          "m2": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "25 mg"
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "10 mg",
+            "dose_unit": "mg",
+            "dose_value": "10",
+            "experiencer": "patient",
+            "frequency": "à noite",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          },
+          "m2": {
+            "certainty": "confirmed",
+            "dose": "25 mg",
+            "dose_unit": "mg",
+            "dose_value": "25",
+            "experiencer": "patient",
+            "frequency": "à noite",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "p1"
+                ]
+              },
+              "relation_id": "context:p1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:p1",
+              "source_mention_id": "context:p1",
+              "source_segment_ids": [
+                "p1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "10 mg"
+            },
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "p2"
+                ]
+              },
+              "relation_id": "context:p1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:p1",
+              "source_mention_id": "context:p1",
+              "source_segment_ids": [
+                "p2"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "à noite"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "10 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "m2": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "25 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "9f6c0bb1021fca740f0449be476c2dd88edd95c6b31bf6082db942512e64c9ad",
+      "output_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "payload": {
+        "antecedent_candidates": null,
+        "ranked_candidates": null,
+        "rejected_candidates": null,
+        "resolution_status": null,
+        "selected_owner": null
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-031",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "reference_resolution"
+    },
+    {
+      "chain_hash": "eb028dba5fd8128a20685700507d409f937f08e9564eecc48c7a65d878165f81",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "enalapril"
+          },
+          "m2": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "atenolol"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "10 mg"
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ],
+          "m2": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "25 mg"
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "10 mg",
+            "dose_unit": "mg",
+            "dose_value": "10",
+            "experiencer": "patient",
+            "frequency": "à noite",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          },
+          "m2": {
+            "certainty": "confirmed",
+            "dose": "25 mg",
+            "dose_unit": "mg",
+            "dose_value": "25",
+            "experiencer": "patient",
+            "frequency": "à noite",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "p1"
+                ]
+              },
+              "relation_id": "context:p1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:p1",
+              "source_mention_id": "context:p1",
+              "source_segment_ids": [
+                "p1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "10 mg"
+            },
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "p2"
+                ]
+              },
+              "relation_id": "context:p1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:p1",
+              "source_mention_id": "context:p1",
+              "source_segment_ids": [
+                "p2"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "à noite"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "10 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "m2": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "25 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "a95f9bb6b3d3daffaad5ddd484554c7b16bda4d6dafa3f7d2550a23519b54c87",
+      "output_hash": "c83ddd270be68f710d8061be755484b0b6a3f47aa91824580b348e451db11d38",
+      "payload": {
+        "attribute_ownership": {
+          "certainty": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p1"
+            ]
+          },
+          "dose": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p1"
+            ]
+          },
+          "dose_unit": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p1"
+            ]
+          },
+          "dose_value": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p1"
+            ]
+          },
+          "experiencer": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p1"
+            ]
+          },
+          "frequency": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p2"
+            ]
+          },
+          "negated": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p1"
+            ]
+          },
+          "status": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p1"
+            ]
+          },
+          "temporality": {
+            "owner_mention_id": "context:p1",
+            "owner_segment_id": "p1",
+            "owner_type": "medication",
+            "source_segment_ids": [
+              "p1"
+            ]
+          }
+        },
+        "segment_provenance": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-031",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "ownership_resolution"
+    },
+    {
+      "chain_hash": "b74e4556f7f8f4522ea76b085222ffb3e89745b34f528cd871504882f82b7cda",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "c83ddd270be68f710d8061be755484b0b6a3f47aa91824580b348e451db11d38",
+      "output_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "payload": {
+        "context_state": {},
+        "typed_context_state": {}
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-031",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "cross_segment_state"
+    },
+    {
+      "chain_hash": "bea11fcf5a5088694d88e6c070e5df1808c30c66eedfab91073df25449d4f35a",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "d7b71eac7683dd448f6241517c50e289f75560cde87885f7bf542aa5a2502844",
+      "output_hash": "507921fd189b58b9f7705917fcba9846a1004e94a1572874882c5d424f52fdd4",
+      "payload": {
+        "authority": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            }
+          },
+          "attribute_provenance": {
+            "frequency": [
+              "p2"
+            ]
+          },
+          "candidate_source": "p1",
+          "owner_mention_id": "context:p1",
+          "owner_type": "medication",
+          "source_segment_ids": [
+            "p1"
+          ],
+          "transition_evidence": []
+        },
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tomo enalapril 10 mg e atenolol 25 mg.\\npatient: O primeiro é pela manhã; o segundo, à noite.', 'rules': ('ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:p1:5:14', 'owner_span': (5, 14), 'source_evidence_id': 'context:p1'}}, 'relation_signals': [{'relation_type': 'HAS_DOSE', 'source': 'context:p1:5:14', 'target': 'dose', 'value': '10 mg', 'provenance': {'rule': 'ptbr-dose'}}], 'projection': {'relations': [{'relation_id': 'context:p1:HAS_DOSE:dose', 'relation_type': 'HAS_DOSE', 'source': 'context:p1', 'target': 'dose', 'value': '10 mg', 'source_mention_id': 'context:p1', 'target_mention_id': 'dose', 'source_segment_ids': ['p1'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'dose', 'source_segment_ids': ('p1',)}}, {'relation_id': 'context:p1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:p1', 'target': 'frequency', 'value': 'à noite', 'source_mention_id': 'context:p1', 'target_mention_id': 'frequency', 'source_segment_ids': ['p2'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('p2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('p1',), 'candidate_source': 'p1', 'owner_type': 'medication', 'owner_mention_id': 'context:p1', 'attribute_provenance': {'frequency': ['p2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'certainty': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'temporality': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'experiencer': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose_value': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose_unit': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'frequency': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p2',)}, 'status': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 341, 'resolver_decisions_preserved': 304, 'resolver_decisions_overwritten': 37, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 2, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'p1', 'conversation_segment_ids': ['p2']}",
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "10 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "surface": "enalapril"
+          },
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m2",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tomo enalapril 10 mg e atenolol 25 mg.\\npatient: O primeiro é pela manhã; o segundo, à noite.', 'rules': ('ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:p1:23:31', 'owner_span': (23, 31), 'source_evidence_id': 'context:p1'}}, 'relation_signals': [{'relation_type': 'HAS_DOSE', 'source': 'context:p1:23:31', 'target': 'dose', 'value': '25 mg', 'provenance': {'rule': 'ptbr-dose'}}], 'projection': {'relations': [{'relation_id': 'context:p1:HAS_DOSE:dose', 'relation_type': 'HAS_DOSE', 'source': 'context:p1', 'target': 'dose', 'value': '25 mg', 'source_mention_id': 'context:p1', 'target_mention_id': 'dose', 'source_segment_ids': ['p1'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'dose', 'source_segment_ids': ('p1',)}}, {'relation_id': 'context:p1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:p1', 'target': 'frequency', 'value': 'à noite', 'source_mention_id': 'context:p1', 'target_mention_id': 'frequency', 'source_segment_ids': ['p2'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('p2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('p1',), 'candidate_source': 'p1', 'owner_type': 'medication', 'owner_mention_id': 'context:p1', 'attribute_provenance': {'frequency': ['p2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'certainty': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'temporality': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'experiencer': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose_value': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose_unit': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'frequency': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p2',)}, 'status': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 352, 'resolver_decisions_preserved': 314, 'resolver_decisions_overwritten': 38, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 2, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'p1', 'conversation_segment_ids': ['p2']}",
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "25 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "surface": "atenolol"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-031",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "resolved_semantics"
+    },
+    {
+      "chain_hash": "f3ad2f4937e5e409f9bb10cd8ff5a18d24453ec6d00a639e4c79c6b309f20ff6",
+      "changed_fields": [
+        "relations"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        },
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "enalapril"
+          },
+          "m2": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "atenolol"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "10 mg"
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ],
+          "m2": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "25 mg"
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "10 mg",
+            "dose_unit": "mg",
+            "dose_value": "10",
+            "experiencer": "patient",
+            "frequency": "à noite",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          },
+          "m2": {
+            "certainty": "confirmed",
+            "dose": "25 mg",
+            "dose_unit": "mg",
+            "dose_value": "25",
+            "experiencer": "patient",
+            "frequency": "à noite",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "p1"
+                ]
+              },
+              "relation_id": "context:p1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:p1",
+              "source_mention_id": "context:p1",
+              "source_segment_ids": [
+                "p1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "10 mg"
+            },
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "p2"
+                ]
+              },
+              "relation_id": "context:p1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:p1",
+              "source_mention_id": "context:p1",
+              "source_segment_ids": [
+                "p2"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "à noite"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "10 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "m2": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "25 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {
+          "generated_relations": [
+            "relations"
+          ]
+        }
+      },
+      "input_hash": "507921fd189b58b9f7705917fcba9846a1004e94a1572874882c5d424f52fdd4",
+      "output_hash": "135925734b3f32f35d41c7f0d863afea41ea7d14419da8bf87d539d4e6670f40",
+      "payload": {
+        "relations": [
+          [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "10 mg"
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ],
+          [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "25 mg"
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ]
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-031",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "generated_relations"
+    },
+    {
+      "chain_hash": "387af0895543bae11996ae6fd3bef26b2e0ef2cb0205a365b955c2f72183facb",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {
+        "candidate_to_resolved_field_map": {
+          "candidate_trace": {},
+          "resolved_fields": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "dropped_fields_by_stage": {},
+        "ownership_decisions": {
+          "attribute_ownership": {
+            "certainty": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose_unit": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "dose_value": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "experiencer": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "frequency": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p2"
+              ]
+            },
+            "negated": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "status": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            },
+            "temporality": {
+              "owner_mention_id": "context:p1",
+              "owner_segment_id": "p1",
+              "owner_type": "medication",
+              "source_segment_ids": [
+                "p1"
+              ]
+            }
+          },
+          "segment_provenance": {}
+        },
+        "per_mention_attributes": {
+          "m1": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "enalapril"
+          },
+          "m2": {
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "surface": "atenolol"
+          }
+        },
+        "per_mention_relations": {
+          "m1": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "10 mg"
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ],
+          "m2": [
+            {
+              "relation_type": "HAS_DOSE",
+              "target": "dose",
+              "value": "25 mg"
+            },
+            {
+              "relation_type": "HAS_FREQUENCY",
+              "target": "frequency",
+              "value": "à noite"
+            }
+          ]
+        },
+        "projection_field_map": {
+          "m1": {
+            "certainty": "confirmed",
+            "dose": "10 mg",
+            "dose_unit": "mg",
+            "dose_value": "10",
+            "experiencer": "patient",
+            "frequency": "à noite",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          },
+          "m2": {
+            "certainty": "confirmed",
+            "dose": "25 mg",
+            "dose_unit": "mg",
+            "dose_value": "25",
+            "experiencer": "patient",
+            "frequency": "à noite",
+            "laterality": null,
+            "negated": false,
+            "route": null,
+            "status": "active",
+            "temporality": "current"
+          }
+        },
+        "relation_generation_inputs": {
+          "existing_projection_relations": [
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "dose",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "p1"
+                ]
+              },
+              "relation_id": "context:p1:HAS_DOSE:dose",
+              "relation_type": "HAS_DOSE",
+              "source": "context:p1",
+              "source_mention_id": "context:p1",
+              "source_segment_ids": [
+                "p1"
+              ],
+              "target": "dose",
+              "target_mention_id": "dose",
+              "value": "10 mg"
+            },
+            {
+              "confidence": 1.0,
+              "provenance": {
+                "attribute": "frequency",
+                "rule": "clinical-relation-compiler-v1",
+                "source_segment_ids": [
+                  "p2"
+                ]
+              },
+              "relation_id": "context:p1:HAS_FREQUENCY:frequency",
+              "relation_type": "HAS_FREQUENCY",
+              "source": "context:p1",
+              "source_mention_id": "context:p1",
+              "source_segment_ids": [
+                "p2"
+              ],
+              "target": "frequency",
+              "target_mention_id": "frequency",
+              "value": "à noite"
+            }
+          ],
+          "resolved_semantics": {
+            "m1": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "m2": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            }
+          }
+        },
+        "relation_generation_outputs": {
+          "relations": {
+            "m1": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "10 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "m2": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "25 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ]
+          }
+        },
+        "transformed_fields_by_stage": {}
+      },
+      "input_hash": "135925734b3f32f35d41c7f0d863afea41ea7d14419da8bf87d539d4e6670f40",
+      "output_hash": "ba04df509beaf47b603924a7bc446536cfe2403760a3d1d905865a2ea9be12a5",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tomo enalapril 10 mg e atenolol 25 mg.\\npatient: O primeiro é pela manhã; o segundo, à noite.', 'rules': ('ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:p1:5:14', 'owner_span': (5, 14), 'source_evidence_id': 'context:p1'}}, 'relation_signals': [{'relation_type': 'HAS_DOSE', 'source': 'context:p1:5:14', 'target': 'dose', 'value': '10 mg', 'provenance': {'rule': 'ptbr-dose'}}], 'projection': {'relations': [{'relation_id': 'context:p1:HAS_DOSE:dose', 'relation_type': 'HAS_DOSE', 'source': 'context:p1', 'target': 'dose', 'value': '10 mg', 'source_mention_id': 'context:p1', 'target_mention_id': 'dose', 'source_segment_ids': ['p1'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'dose', 'source_segment_ids': ('p1',)}}, {'relation_id': 'context:p1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:p1', 'target': 'frequency', 'value': 'à noite', 'source_mention_id': 'context:p1', 'target_mention_id': 'frequency', 'source_segment_ids': ['p2'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('p2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('p1',), 'candidate_source': 'p1', 'owner_type': 'medication', 'owner_mention_id': 'context:p1', 'attribute_provenance': {'frequency': ['p2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'certainty': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'temporality': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'experiencer': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose_value': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose_unit': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'frequency': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p2',)}, 'status': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 341, 'resolver_decisions_preserved': 304, 'resolver_decisions_overwritten': 37, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 2, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'p1', 'conversation_segment_ids': ['p2']}",
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "10 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "surface": "enalapril"
+          },
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m2",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tomo enalapril 10 mg e atenolol 25 mg.\\npatient: O primeiro é pela manhã; o segundo, à noite.', 'rules': ('ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:p1:23:31', 'owner_span': (23, 31), 'source_evidence_id': 'context:p1'}}, 'relation_signals': [{'relation_type': 'HAS_DOSE', 'source': 'context:p1:23:31', 'target': 'dose', 'value': '25 mg', 'provenance': {'rule': 'ptbr-dose'}}], 'projection': {'relations': [{'relation_id': 'context:p1:HAS_DOSE:dose', 'relation_type': 'HAS_DOSE', 'source': 'context:p1', 'target': 'dose', 'value': '25 mg', 'source_mention_id': 'context:p1', 'target_mention_id': 'dose', 'source_segment_ids': ['p1'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'dose', 'source_segment_ids': ('p1',)}}, {'relation_id': 'context:p1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:p1', 'target': 'frequency', 'value': 'à noite', 'source_mention_id': 'context:p1', 'target_mention_id': 'frequency', 'source_segment_ids': ['p2'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('p2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('p1',), 'candidate_source': 'p1', 'owner_type': 'medication', 'owner_mention_id': 'context:p1', 'attribute_provenance': {'frequency': ['p2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'certainty': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'temporality': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'experiencer': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose_value': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose_unit': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'frequency': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p2',)}, 'status': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 352, 'resolver_decisions_preserved': 314, 'resolver_decisions_overwritten': 38, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 2, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'p1', 'conversation_segment_ids': ['p2']}",
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "25 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "surface": "atenolol"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-031",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "final_projection"
+    },
+    {
+      "chain_hash": "ed8a95722d7b2fdabacbbad252598a764298789c619d24200706985f63f83b8a",
+      "changed_fields": [
+        "frequency"
+      ],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "ba04df509beaf47b603924a7bc446536cfe2403760a3d1d905865a2ea9be12a5",
+      "output_hash": "ba04df509beaf47b603924a7bc446536cfe2403760a3d1d905865a2ea9be12a5",
+      "payload": {
+        "mentions": [
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m1",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tomo enalapril 10 mg e atenolol 25 mg.\\npatient: O primeiro é pela manhã; o segundo, à noite.', 'rules': ('ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:p1:5:14', 'owner_span': (5, 14), 'source_evidence_id': 'context:p1'}}, 'relation_signals': [{'relation_type': 'HAS_DOSE', 'source': 'context:p1:5:14', 'target': 'dose', 'value': '10 mg', 'provenance': {'rule': 'ptbr-dose'}}], 'projection': {'relations': [{'relation_id': 'context:p1:HAS_DOSE:dose', 'relation_type': 'HAS_DOSE', 'source': 'context:p1', 'target': 'dose', 'value': '10 mg', 'source_mention_id': 'context:p1', 'target_mention_id': 'dose', 'source_segment_ids': ['p1'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'dose', 'source_segment_ids': ('p1',)}}, {'relation_id': 'context:p1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:p1', 'target': 'frequency', 'value': 'à noite', 'source_mention_id': 'context:p1', 'target_mention_id': 'frequency', 'source_segment_ids': ['p2'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('p2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('p1',), 'candidate_source': 'p1', 'owner_type': 'medication', 'owner_mention_id': 'context:p1', 'attribute_provenance': {'frequency': ['p2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'certainty': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'temporality': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'experiencer': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose_value': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose_unit': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'frequency': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p2',)}, 'status': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 341, 'resolver_decisions_preserved': 304, 'resolver_decisions_overwritten': 37, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 2, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'p1', 'conversation_segment_ids': ['p2']}",
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "10 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "surface": "enalapril"
+          },
+          {
+            "concept_id": null,
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "mention_id": "m2",
+            "provenance": "{'provider': 'niede-pt-br-safety-rules', 'semantic_role': 'PROJECTION_WRITER', 'source_text': 'patient: Tomo enalapril 10 mg e atenolol 25 mg.\\npatient: O primeiro é pela manhã; o segundo, à noite.', 'rules': ('ptbr-dose', 'ptbr-active-medication-context'), 'attribute_ownership': {'experiencer': {'owner_mention_id': 'context:p1:23:31', 'owner_span': (23, 31), 'source_evidence_id': 'context:p1'}}, 'relation_signals': [{'relation_type': 'HAS_DOSE', 'source': 'context:p1:23:31', 'target': 'dose', 'value': '25 mg', 'provenance': {'rule': 'ptbr-dose'}}], 'projection': {'relations': [{'relation_id': 'context:p1:HAS_DOSE:dose', 'relation_type': 'HAS_DOSE', 'source': 'context:p1', 'target': 'dose', 'value': '25 mg', 'source_mention_id': 'context:p1', 'target_mention_id': 'dose', 'source_segment_ids': ['p1'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'dose', 'source_segment_ids': ('p1',)}}, {'relation_id': 'context:p1:HAS_FREQUENCY:frequency', 'relation_type': 'HAS_FREQUENCY', 'source': 'context:p1', 'target': 'frequency', 'value': 'à noite', 'source_mention_id': 'context:p1', 'target_mention_id': 'frequency', 'source_segment_ids': ['p2'], 'confidence': 1.0, 'provenance': {'rule': 'clinical-relation-compiler-v1', 'attribute': 'frequency', 'source_segment_ids': ('p2',)}}]}, 'authoritative_resolution': True, 'resolution_status': 'RESOLVED', 'unresolved': [], 'resolved_provenance': {'source_segment_ids': ('p1',), 'candidate_source': 'p1', 'owner_type': 'medication', 'owner_mention_id': 'context:p1', 'attribute_provenance': {'frequency': ['p2']}, 'attribute_ownership': {'negated': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'certainty': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'temporality': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'experiencer': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose_value': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'dose_unit': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}, 'frequency': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p2',)}, 'status': {'owner_mention_id': 'context:p1', 'owner_segment_id': 'p1', 'owner_type': 'medication', 'source_segment_ids': ('p1',)}}, 'transition_evidence': []}, 'authority_metrics': {'resolver_decisions_total': 352, 'resolver_decisions_preserved': 314, 'resolver_decisions_overwritten': 38, 'legacy_fallback_count': 0, 'ambiguous_forced_resolution_count': 0}, 'relation_compiler': {'version': 'clinical-relation-compiler-v1', 'immutable_relation_count': 2, 'post_compile_mutation_forbidden': True}, 'source_scope': 'conversation', 'target_segment_id': 'p1', 'conversation_segment_ids': ['p2']}",
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "25 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "surface": "atenolol"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-031",
+        "stage_source": "adapter_result_provenance",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "prediction"
+    },
+    {
+      "chain_hash": "584ac0ebd1caa2e9afaa4297d4cc25de0f7a13989b04f39e6a91791b7ec97343",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "ba04df509beaf47b603924a7bc446536cfe2403760a3d1d905865a2ea9be12a5",
+      "output_hash": "51bfcb3611de1329a2ae52cc4bd9aca91373dcb4abf78ea3783f33a3501bcfc5",
+      "payload": {
+        "mentions": [
+          {
+            "attribute_provenance": {
+              "dose": [
+                "p1"
+              ],
+              "dose_unit": [
+                "p1"
+              ],
+              "dose_value": [
+                "p1"
+              ],
+              "frequency": [
+                "p2"
+              ],
+              "status": [
+                "p1"
+              ]
+            },
+            "concept_id": "medication.enalapril",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "10 mg",
+              "dose_unit": "mg",
+              "dose_value": "10",
+              "experiencer": "patient",
+              "frequency": "pela manhã",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "HAS_DOSE": [
+                "p1"
+              ],
+              "HAS_FREQUENCY": [
+                "p2"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "10 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "pela manhã"
+              }
+            ],
+            "segment_ids": [
+              "p1",
+              "p2"
+            ],
+            "surface": "enalapril"
+          },
+          {
+            "attribute_provenance": {
+              "dose": [
+                "p1"
+              ],
+              "dose_unit": [
+                "p1"
+              ],
+              "dose_value": [
+                "p1"
+              ],
+              "frequency": [
+                "p2"
+              ],
+              "status": [
+                "p1"
+              ]
+            },
+            "concept_id": "medication.atenolol",
+            "fields": {
+              "certainty": "confirmed",
+              "dose": "25 mg",
+              "dose_unit": "mg",
+              "dose_value": "25",
+              "experiencer": "patient",
+              "frequency": "à noite",
+              "laterality": null,
+              "negated": false,
+              "route": null,
+              "status": "active",
+              "temporality": "current"
+            },
+            "relation_provenance": {
+              "HAS_DOSE": [
+                "p1"
+              ],
+              "HAS_FREQUENCY": [
+                "p2"
+              ]
+            },
+            "relations": [
+              {
+                "relation_type": "HAS_DOSE",
+                "target": "dose",
+                "value": "25 mg"
+              },
+              {
+                "relation_type": "HAS_FREQUENCY",
+                "target": "frequency",
+                "value": "à noite"
+              }
+            ],
+            "segment_ids": [
+              "p1",
+              "p2"
+            ],
+            "surface": "atenolol"
+          }
+        ]
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-031",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "gold"
+    },
+    {
+      "chain_hash": "0d2d2fde621713cb729fecf8f7cfe4ebd4fb3376ffe6f392782d34488bd28991",
+      "changed_fields": [],
+      "decisions": [],
+      "dropped_fields": [],
+      "granularity": {},
+      "input_hash": "51bfcb3611de1329a2ae52cc4bd9aca91373dcb4abf78ea3783f33a3501bcfc5",
+      "output_hash": "7dd7c6b1cf6d8d5727c9cfa593fd7c197e6cf5713bb3b55f7b91f7043c5a7659",
+      "payload": {
+        "case_id": "D3-031",
+        "mismatch_count": 2
+      },
+      "preserved_fields": [],
+      "provenance": {
+        "case_id": "D3-031",
+        "stage_source": "evaluation_boundary",
+        "trace_capture": "D3_trace_granularity_v2"
+      },
+      "stage": "comparison"
+    }
+  ],
+  "stage_order": [
+    "input_segments",
+    "local_mentions",
+    "semantic_candidates",
+    "reference_resolution",
+    "ownership_resolution",
+    "cross_segment_state",
+    "resolved_semantics",
+    "generated_relations",
+    "final_projection",
+    "prediction",
+    "gold",
+    "comparison"
+  ],
+  "trace_schema": "clinical-evaluation-trace/v2"
+}

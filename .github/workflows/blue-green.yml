@@ -1,0 +1,44 @@
+name: Astera Blue Green Promotion
+
+on:
+  workflow_dispatch:
+    inputs:
+      color:
+        description: Color to validate and promote
+        required: true
+        type: choice
+        options: [blue, green]
+      image:
+        description: Immutable image reference
+        required: true
+        type: string
+      namespace:
+        description: Kubernetes namespace
+        required: true
+        default: astera
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure cluster access
+        run: echo "Cluster access must be configured by the production environment."
+      - name: Update target color
+        env:
+          COLOR: ${{ inputs.color }}
+          IMAGE: ${{ inputs.image }}
+          NAMESPACE: ${{ inputs.namespace }}
+        run: |
+          kubectl -n "$NAMESPACE" set image "deployment/astera-runtime-$COLOR" runtime="$IMAGE"
+          kubectl -n "$NAMESPACE" rollout status "deployment/astera-runtime-$COLOR" --timeout=10m
+      - name: Promote traffic
+        env:
+          TARGET_COLOR: ${{ inputs.color }}
+          KUBE_NAMESPACE: ${{ inputs.namespace }}
+        run: ./infrastructure/scripts/switch-color.sh

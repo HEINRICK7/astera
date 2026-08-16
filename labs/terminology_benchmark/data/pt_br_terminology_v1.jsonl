@@ -1,0 +1,10 @@
+{"case_id":"negation-001","language":"pt-BR","text":"Paciente nega dor torácica.","gold":[{"surface":"dor torácica","concept_id":"symptom.chest_pain","negated":true,"certainty":"confirmed","temporality":"current","experiencer":"patient"}]}
+{"case_id":"temporal-001","language":"pt-BR","text":"Refere dor no peito há três dias.","gold":[{"surface":"dor no peito","concept_id":"symptom.chest_pain","temporality":"current","experiencer":"patient"}]}
+{"case_id":"experiencer-001","language":"pt-BR","text":"Mãe relata histórico de diabetes.","gold":[{"surface":"diabetes","concept_id":"condition.diabetes","temporality":"past","experiencer":"family"}]}
+{"case_id":"certainty-001","language":"pt-BR","text":"Suspeita de pneumonia, ainda sem confirmação.","gold":[{"surface":"pneumonia","concept_id":"condition.pneumonia","certainty":"suspected","temporality":"current","experiencer":"patient"}]}
+{"case_id":"dose-001","language":"pt-BR","text":"Usa losartana 50 mg.","gold":[{"surface":"losartana","concept_id":"medication.losartan","dose":"50 mg","experiencer":"patient"}]}
+{"case_id":"abbreviation-001","language":"pt-BR","text":"Teve IAM há cinco anos.","gold":[{"surface":"IAM","concept_id":"condition.myocardial_infarction","temporality":"past","experiencer":"patient"}]}
+{"case_id":"multi-negation-001","language":"pt-BR","text":"Sem febre, calafrios ou dispneia.","gold":[{"surface":"febre","concept_id":"symptom.fever","negated":true},{"surface":"dispneia","concept_id":"symptom.dyspnea","negated":true}]}
+{"case_id":"allergy-001","language":"pt-BR","text":"Possível alergia à dipirona.","gold":[{"surface":"alergia","concept_id":"allergy.unspecified","certainty":"possible"},{"surface":"dipirona","concept_id":"medication.dipyrone","certainty":"possible"}]}
+{"case_id":"family-001","language":"pt-BR","text":"Paciente diz que o pai teve AVC.","gold":[{"surface":"AVC","concept_id":"condition.stroke","temporality":"past","experiencer":"family"}]}
+{"case_id":"laterality-001","language":"pt-BR","text":"Queixa-se de dor no lado esquerdo do abdome.","gold":[{"surface":"dor no lado esquerdo do abdome","concept_id":"symptom.abdominal_pain","laterality":"left"}]}

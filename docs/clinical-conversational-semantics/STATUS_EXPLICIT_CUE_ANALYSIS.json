@@ -1,0 +1,2461 @@
+{
+  "status": "HUMAN_GATE_REQUIRED",
+  "policy": "clinical-semantic-policy-v1.1 (under review; v1.2 not approved)",
+  "source_audit": "/home/carlos-henrique/Documentos/workspace/astera/labs/terminology_benchmark/results/post-v5-mention-state-audit-2026-08-15.json",
+  "frozen_corpus_sha256": "1721ad71b7ef92c20a06fa9cae956098fefad0e079f92464d67f1bf9255a3f10",
+  "status_mismatch_findings": 90,
+  "status_only_failures": 89,
+  "status_plus_other_field": 1,
+  "classification_counts": {
+    "EXPLICIT_LIFECYCLE_STATUS": 0,
+    "IMPLICIT_ASSERTION_ONLY": 9,
+    "TEMPORALITY_ONLY": 7,
+    "NEGATION_ONLY": 0,
+    "MEDICATION_LIFECYCLE": 0,
+    "PROCEDURE_LIFECYCLE": 1,
+    "EVENT_LIFECYCLE": 10,
+    "NO_STATUS_EVIDENCE": 63
+  },
+  "by_entity_type": {
+    "event": {
+      "EVENT_LIFECYCLE": 10
+    },
+    "person": {
+      "TEMPORALITY_ONLY": 3
+    },
+    "procedure": {
+      "PROCEDURE_LIFECYCLE": 1
+    },
+    "symptom": {
+      "IMPLICIT_ASSERTION_ONLY": 9,
+      "NO_STATUS_EVIDENCE": 63,
+      "TEMPORALITY_ONLY": 4
+    }
+  },
+  "status_transitions": {
+    "None → historical": 18,
+    "None → present": 63,
+    "present → None": 9
+  },
+  "records": [
+    {
+      "case_id": "sim-v6-0013",
+      "entity_type": "procedure",
+      "text": "A cirurgia foi há anos; atualmente sente peso na perna esquerda.",
+      "surface": "cirurgia",
+      "occurrence": 0,
+      "segment_ids": [
+        "sim-v6-0013:segment-01"
+      ],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "past",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\batualmente\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "PROCEDURE_LIFECYCLE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0027",
+      "entity_type": "symptom",
+      "text": "A dormência ocupa o lado direito do rosto e a dor está na perna esquerda.",
+      "surface": "dor",
+      "occurrence": 0,
+      "segment_ids": [
+        "sim-v6-0027:segment-01"
+      ],
+      "gold_status": "present",
+      "resolved_status": null,
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "IMPLICIT_ASSERTION_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0027",
+      "entity_type": "symptom",
+      "text": "A dormência ocupa o lado direito do rosto e a dor está na perna esquerda.",
+      "surface": "dormência",
+      "occurrence": 0,
+      "segment_ids": [
+        "sim-v6-0027:segment-01"
+      ],
+      "gold_status": "present",
+      "resolved_status": null,
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "IMPLICIT_ASSERTION_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0029",
+      "entity_type": "symptom",
+      "text": "A pressão incomoda o ouvido esquerdo, enquanto o zumbido aparece no direito.",
+      "surface": "pressão",
+      "occurrence": 0,
+      "segment_ids": [
+        "sim-v6-0029:segment-01"
+      ],
+      "gold_status": "present",
+      "resolved_status": null,
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "IMPLICIT_ASSERTION_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0029",
+      "entity_type": "symptom",
+      "text": "A pressão incomoda o ouvido esquerdo, enquanto o zumbido aparece no direito.",
+      "surface": "zumbido",
+      "occurrence": 0,
+      "segment_ids": [
+        "sim-v6-0029:segment-01"
+      ],
+      "gold_status": "present",
+      "resolved_status": null,
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "IMPLICIT_ASSERTION_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0031",
+      "entity_type": "symptom",
+      "text": "O inchaço está no tornozelo esquerdo e a coceira na mão direita.",
+      "surface": "coceira",
+      "occurrence": 0,
+      "segment_ids": [
+        "sim-v6-0031:segment-01"
+      ],
+      "gold_status": "present",
+      "resolved_status": null,
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "IMPLICIT_ASSERTION_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0031",
+      "entity_type": "symptom",
+      "text": "O inchaço está no tornozelo esquerdo e a coceira na mão direita.",
+      "surface": "inchaço",
+      "occurrence": 0,
+      "segment_ids": [
+        "sim-v6-0031:segment-01"
+      ],
+      "gold_status": "present",
+      "resolved_status": null,
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "IMPLICIT_ASSERTION_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": false,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0038",
+      "entity_type": "symptom",
+      "text": "Nega formigamento na mão, embora tenha fraqueza no braço.",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "segment_ids": [
+        "sim-v6-0038:segment-01"
+      ],
+      "gold_status": "present",
+      "resolved_status": null,
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "IMPLICIT_ASSERTION_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0040",
+      "entity_type": "symptom",
+      "text": "Diz que não tem tontura e que sente apenas desequilíbrio ao andar.",
+      "surface": "desequilíbrio",
+      "occurrence": 0,
+      "segment_ids": [
+        "sim-v6-0040:segment-01"
+      ],
+      "gold_status": "present",
+      "resolved_status": null,
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "status_plus_other_field",
+      "classification": "IMPLICIT_ASSERTION_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "sim-v6-0051",
+      "entity_type": "symptom",
+      "text": "Médico: A dor melhorou?\nPaciente: Sim, não sinto mais, só formigamento na mão direita.",
+      "surface": "formigamento",
+      "occurrence": 0,
+      "segment_ids": [
+        "sim-v6-0051:segment-02"
+      ],
+      "gold_status": "present",
+      "resolved_status": null,
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [
+        "\\bmelhorou\\b"
+      ],
+      "temporal_cues": [],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "IMPLICIT_ASSERTION_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-c-002-1",
+      "entity_type": "person",
+      "text": "Médico: Sua mãe teve câncer e diabetes?\nPaciente: Teve, de mama. na consulta de hoje",
+      "surface": "mãe",
+      "occurrence": 0,
+      "segment_ids": [
+        "seg_02_0_02"
+      ],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "family",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b",
+        "\\bna consulta de hoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "TEMPORALITY_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-c-002-2",
+      "entity_type": "person",
+      "text": "Médico: Sua mãe teve câncer e diabetes?\nPaciente: Teve, de mama. no retorno desta semana",
+      "surface": "mãe",
+      "occurrence": 0,
+      "segment_ids": [
+        "seg_02_1_02"
+      ],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "family",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bretorno desta semana\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "TEMPORALITY_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-c-002-3",
+      "entity_type": "person",
+      "text": "Médico: Sua mãe teve câncer e diabetes?\nPaciente: Teve, de mama. durante a revisão clínica",
+      "surface": "mãe",
+      "occurrence": 0,
+      "segment_ids": [
+        "seg_02_2_02"
+      ],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "family",
+      "explicit_status_cue": [],
+      "temporal_cues": [],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "TEMPORALITY_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": false,
+      "type_b_fields_ignored": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-c-004-1",
+      "entity_type": "symptom",
+      "text": "Médico: Ele ainda usa a bombinha?\nPaciente: Usa quando começa com chiado, mas não sente falta de ar. na consulta de hoje",
+      "surface": "chiado",
+      "occurrence": 0,
+      "segment_ids": [
+        "seg_04_0_02"
+      ],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [
+        "\\bainda usa\\b",
+        "\\busa\\b"
+      ],
+      "temporal_cues": [
+        "\\bhoje\\b",
+        "\\bna consulta de hoje\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-c-004-2",
+      "entity_type": "symptom",
+      "text": "Médico: Ele ainda usa a bombinha?\nPaciente: Usa quando começa com chiado, mas não sente falta de ar. no retorno desta semana",
+      "surface": "chiado",
+      "occurrence": 0,
+      "segment_ids": [
+        "seg_04_1_02"
+      ],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [
+        "\\bainda usa\\b",
+        "\\busa\\b"
+      ],
+      "temporal_cues": [
+        "\\bretorno desta semana\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-c-004-3",
+      "entity_type": "symptom",
+      "text": "Médico: Ele ainda usa a bombinha?\nPaciente: Usa quando começa com chiado, mas não sente falta de ar. durante a revisão clínica",
+      "surface": "chiado",
+      "occurrence": 0,
+      "segment_ids": [
+        "seg_04_2_02"
+      ],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [
+        "\\bainda usa\\b",
+        "\\busa\\b"
+      ],
+      "temporal_cues": [],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-001",
+      "entity_type": "symptom",
+      "text": "Refere dor no joelho esquerdo ao acordar e formigamento na mão direita depois de caminhar.",
+      "surface": "dor no joelho esquerdo",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-001",
+      "entity_type": "symptom",
+      "text": "Refere dor no joelho esquerdo ao acordar e formigamento na mão direita depois de caminhar.",
+      "surface": "formigamento na mão direita",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-002",
+      "entity_type": "symptom",
+      "text": "Refere queimação no pé esquerdo ao acordar e peso na perna direita depois de caminhar.",
+      "surface": "peso na perna direita",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-002",
+      "entity_type": "symptom",
+      "text": "Refere queimação no pé esquerdo ao acordar e peso na perna direita depois de caminhar.",
+      "surface": "queimação no pé esquerdo",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-003",
+      "entity_type": "symptom",
+      "text": "Refere dor no ombro esquerdo ao acordar e fraqueza no braço direito depois de caminhar.",
+      "surface": "dor no ombro esquerdo",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-003",
+      "entity_type": "symptom",
+      "text": "Refere dor no ombro esquerdo ao acordar e fraqueza no braço direito depois de caminhar.",
+      "surface": "fraqueza no braço direito",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-004",
+      "entity_type": "symptom",
+      "text": "Refere inchaço no tornozelo esquerdo ao acordar e dormência na coxa direita depois de caminhar.",
+      "surface": "dormência na coxa direita",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-004",
+      "entity_type": "symptom",
+      "text": "Refere inchaço no tornozelo esquerdo ao acordar e dormência na coxa direita depois de caminhar.",
+      "surface": "inchaço no tornozelo esquerdo",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-005",
+      "entity_type": "symptom",
+      "text": "Refere pontada no lado esquerdo ao acordar e sensibilidade no lado direito depois de caminhar.",
+      "surface": "pontada no lado esquerdo",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-005",
+      "entity_type": "symptom",
+      "text": "Refere pontada no lado esquerdo ao acordar e sensibilidade no lado direito depois de caminhar.",
+      "surface": "sensibilidade no lado direito",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-006",
+      "entity_type": "symptom",
+      "text": "Refere dor na mama esquerda ao acordar e nódulo na axila direita depois de caminhar.",
+      "surface": "dor na mama esquerda",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-006",
+      "entity_type": "symptom",
+      "text": "Refere dor na mama esquerda ao acordar e nódulo na axila direita depois de caminhar.",
+      "surface": "nódulo na axila direita",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-007",
+      "entity_type": "symptom",
+      "text": "Refere coceira na mão esquerda ao acordar e ardor no pé direito depois de caminhar.",
+      "surface": "ardor no pé direito",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-007",
+      "entity_type": "symptom",
+      "text": "Refere coceira na mão esquerda ao acordar e ardor no pé direito depois de caminhar.",
+      "surface": "coceira na mão esquerda",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-008",
+      "entity_type": "symptom",
+      "text": "Refere rigidez no quadril esquerdo ao acordar e dor na panturrilha direita depois de caminhar.",
+      "surface": "dor na panturrilha direita",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-008",
+      "entity_type": "symptom",
+      "text": "Refere rigidez no quadril esquerdo ao acordar e dor na panturrilha direita depois de caminhar.",
+      "surface": "rigidez no quadril esquerdo",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-009",
+      "entity_type": "symptom",
+      "text": "Refere tremor na mão esquerda ao acordar e perda de força na perna direita depois de caminhar.",
+      "surface": "perda de força na perna direita",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-009",
+      "entity_type": "symptom",
+      "text": "Refere tremor na mão esquerda ao acordar e perda de força na perna direita depois de caminhar.",
+      "surface": "tremor na mão esquerda",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-010",
+      "entity_type": "symptom",
+      "text": "Refere desconforto no ouvido esquerdo ao acordar e zumbido no ouvido direito depois de caminhar.",
+      "surface": "desconforto no ouvido esquerdo",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-010",
+      "entity_type": "symptom",
+      "text": "Refere desconforto no ouvido esquerdo ao acordar e zumbido no ouvido direito depois de caminhar.",
+      "surface": "zumbido no ouvido direito",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bao acordar\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-011",
+      "entity_type": "symptom",
+      "text": "Nega febre, mas relata tosse seca desde ontem.",
+      "surface": "tosse seca",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-012",
+      "entity_type": "symptom",
+      "text": "Nega náusea, mas relata dor abdominal desde ontem.",
+      "surface": "dor abdominal",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-013",
+      "entity_type": "symptom",
+      "text": "Nega calafrio, mas relata cansaço desde ontem.",
+      "surface": "cansaço",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-014",
+      "entity_type": "symptom",
+      "text": "Nega vômito, mas relata azia desde ontem.",
+      "surface": "azia",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-015",
+      "entity_type": "symptom",
+      "text": "Nega dispneia, mas relata chiado desde ontem.",
+      "surface": "chiado",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-016",
+      "entity_type": "symptom",
+      "text": "Nega sangramento, mas relata tontura desde ontem.",
+      "surface": "tontura",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-017",
+      "entity_type": "symptom",
+      "text": "Nega dor torácica, mas relata palpitação desde ontem.",
+      "surface": "palpitação",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-018",
+      "entity_type": "symptom",
+      "text": "Nega diarreia, mas relata cólica desde ontem.",
+      "surface": "cólica",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-019",
+      "entity_type": "symptom",
+      "text": "Nega prurido, mas relata vermelhidão desde ontem.",
+      "surface": "vermelhidão",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-020",
+      "entity_type": "symptom",
+      "text": "Nega desmaio, mas relata fraqueza desde ontem.",
+      "surface": "fraqueza",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-051",
+      "entity_type": "event",
+      "text": "Teve cirurgia no ombro há anos, mas hoje sente dormência no braço.",
+      "surface": "cirurgia no ombro",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "past",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "EVENT_LIFECYCLE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-051",
+      "entity_type": "symptom",
+      "text": "Teve cirurgia no ombro há anos, mas hoje sente dormência no braço.",
+      "surface": "dormência no braço",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-052",
+      "entity_type": "symptom",
+      "text": "Teve queda há anos, mas hoje sente dor no quadril.",
+      "surface": "dor no quadril",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-052",
+      "entity_type": "event",
+      "text": "Teve queda há anos, mas hoje sente dor no quadril.",
+      "surface": "queda",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "past",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "EVENT_LIFECYCLE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-053",
+      "entity_type": "event",
+      "text": "Teve pneumonia há anos, mas hoje sente tosse.",
+      "surface": "pneumonia",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "past",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "EVENT_LIFECYCLE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-053",
+      "entity_type": "symptom",
+      "text": "Teve pneumonia há anos, mas hoje sente tosse.",
+      "surface": "tosse",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-054",
+      "entity_type": "symptom",
+      "text": "Teve lesão no joelho há anos, mas hoje sente inchaço no tornozelo.",
+      "surface": "inchaço no tornozelo",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-054",
+      "entity_type": "event",
+      "text": "Teve lesão no joelho há anos, mas hoje sente inchaço no tornozelo.",
+      "surface": "lesão no joelho",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "past",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "EVENT_LIFECYCLE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-055",
+      "entity_type": "event",
+      "text": "Teve fratura na mão há anos, mas hoje sente rigidez nos dedos.",
+      "surface": "fratura na mão",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "past",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "EVENT_LIFECYCLE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-055",
+      "entity_type": "symptom",
+      "text": "Teve fratura na mão há anos, mas hoje sente rigidez nos dedos.",
+      "surface": "rigidez nos dedos",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-056",
+      "entity_type": "symptom",
+      "text": "Teve infarto há anos, mas hoje sente cansaço.",
+      "surface": "cansaço",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-056",
+      "entity_type": "event",
+      "text": "Teve infarto há anos, mas hoje sente cansaço.",
+      "surface": "infarto",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "past",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "EVENT_LIFECYCLE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-057",
+      "entity_type": "symptom",
+      "text": "Teve crise de asma há anos, mas hoje sente chiado.",
+      "surface": "chiado",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-057",
+      "entity_type": "event",
+      "text": "Teve crise de asma há anos, mas hoje sente chiado.",
+      "surface": "crise de asma",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "past",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "EVENT_LIFECYCLE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-058",
+      "entity_type": "event",
+      "text": "Teve dor lombar há anos, mas hoje sente formigamento na perna.",
+      "surface": "dor lombar",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "past",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "EVENT_LIFECYCLE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-058",
+      "entity_type": "symptom",
+      "text": "Teve dor lombar há anos, mas hoje sente formigamento na perna.",
+      "surface": "formigamento na perna",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-059",
+      "entity_type": "symptom",
+      "text": "Teve trombose há anos, mas hoje sente peso na panturrilha.",
+      "surface": "peso na panturrilha",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-059",
+      "entity_type": "event",
+      "text": "Teve trombose há anos, mas hoje sente peso na panturrilha.",
+      "surface": "trombose",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "past",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "EVENT_LIFECYCLE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-060",
+      "entity_type": "event",
+      "text": "Teve otite há anos, mas hoje sente zumbido.",
+      "surface": "otite",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "past",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "EVENT_LIFECYCLE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-i-060",
+      "entity_type": "symptom",
+      "text": "Teve otite há anos, mas hoje sente zumbido.",
+      "surface": "zumbido",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhá anos?\\b",
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-003-1",
+      "entity_type": "symptom",
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte hoje.",
+      "surface": "azia",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-003-1",
+      "entity_type": "symptom",
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte hoje.",
+      "surface": "enjoo",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-003-2",
+      "entity_type": "symptom",
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte desde ontem.",
+      "surface": "azia",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-003-2",
+      "entity_type": "symptom",
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte desde ontem.",
+      "surface": "enjoo",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-003-3",
+      "entity_type": "symptom",
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte depois do almoço.",
+      "surface": "azia",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "TEMPORALITY_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-r-003-3",
+      "entity_type": "symptom",
+      "text": "Diz que não vomitou mas teve enjoo e uma azia forte depois do almoço.",
+      "surface": "enjoo",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "TEMPORALITY_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-r-005-1",
+      "entity_type": "symptom",
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço hoje.",
+      "surface": "inchaço",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-005-1",
+      "entity_type": "symptom",
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço hoje.",
+      "surface": "vermelhidão",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-005-2",
+      "entity_type": "symptom",
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço desde ontem.",
+      "surface": "inchaço",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-005-2",
+      "entity_type": "symptom",
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço desde ontem.",
+      "surface": "vermelhidão",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-005-3",
+      "entity_type": "symptom",
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço depois do almoço.",
+      "surface": "inchaço",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-005-3",
+      "entity_type": "symptom",
+      "text": "Não sente coceira mas apareceu vermelhidão e inchaço depois do almoço.",
+      "surface": "vermelhidão",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-006-1",
+      "entity_type": "symptom",
+      "text": "Nega palpitação, refere cansaço e peso no peito hoje.",
+      "surface": "cansaço",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-006-1",
+      "entity_type": "symptom",
+      "text": "Nega palpitação, refere cansaço e peso no peito hoje.",
+      "surface": "peso no peito",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-006-2",
+      "entity_type": "symptom",
+      "text": "Nega palpitação, refere cansaço e peso no peito desde ontem.",
+      "surface": "cansaço",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-006-2",
+      "entity_type": "symptom",
+      "text": "Nega palpitação, refere cansaço e peso no peito desde ontem.",
+      "surface": "peso no peito",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-006-3",
+      "entity_type": "symptom",
+      "text": "Nega palpitação, refere cansaço e peso no peito depois do almoço.",
+      "surface": "cansaço",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-006-3",
+      "entity_type": "symptom",
+      "text": "Nega palpitação, refere cansaço e peso no peito depois do almoço.",
+      "surface": "peso no peito",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation_cues": [
+        "\\bnega\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-008-1",
+      "entity_type": "symptom",
+      "text": "Não relata calafrio mas teve febre e dor no corpo hoje.",
+      "surface": "dor no corpo",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-008-1",
+      "entity_type": "symptom",
+      "text": "Não relata calafrio mas teve febre e dor no corpo hoje.",
+      "surface": "febre",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bhoje\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-008-2",
+      "entity_type": "symptom",
+      "text": "Não relata calafrio mas teve febre e dor no corpo desde ontem.",
+      "surface": "dor no corpo",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-008-2",
+      "entity_type": "symptom",
+      "text": "Não relata calafrio mas teve febre e dor no corpo desde ontem.",
+      "surface": "febre",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "present",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdesde ontem\\b",
+        "\\bontem\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "NO_STATUS_EVIDENCE",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": []
+    },
+    {
+      "case_id": "v6-r-008-3",
+      "entity_type": "symptom",
+      "text": "Não relata calafrio mas teve febre e dor no corpo depois do almoço.",
+      "surface": "dor no corpo",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "TEMPORALITY_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": [
+        "temporality"
+      ]
+    },
+    {
+      "case_id": "v6-r-008-3",
+      "entity_type": "symptom",
+      "text": "Não relata calafrio mas teve febre e dor no corpo depois do almoço.",
+      "surface": "febre",
+      "occurrence": 0,
+      "segment_ids": [],
+      "gold_status": null,
+      "resolved_status": "historical",
+      "negation": false,
+      "certainty": "confirmed",
+      "temporality": "current",
+      "experiencer": "patient",
+      "explicit_status_cue": [],
+      "temporal_cues": [
+        "\\bdepois do almoço\\b"
+      ],
+      "negation_cues": [
+        "\\bnão\\b"
+      ],
+      "status_failure_scope": "only_status",
+      "classification": "TEMPORALITY_ONLY",
+      "proposed_normative_status": null,
+      "rationale": "Candidate v1.2 treats status as lifecycle/state only; human adjudication is required before changing policy.",
+      "cue_scope_warning": true,
+      "type_b_fields_ignored": [
+        "temporality"
+      ]
+    }
+  ],
+  "decision_required": [
+    "whether positive assertion alone produces status=present",
+    "whether historical event/procedure/person cues produce status or only temporality",
+    "whether symptom lifecycle values such as ongoing/resolved are approved",
+    "whether resolved may coexist with negated=true"
+  ],
+  "mutations": {
+    "resolver_changes": 0,
+    "gold_changes": 0,
+    "corpus_changes": 0,
+    "policy_changes": 0,
+    "repair_started": false
+  }
+}

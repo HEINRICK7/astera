@@ -24,7 +24,7 @@ function renderApiContracts() {
   objLayer.innerHTML = `
     <div class="arch-layer-header">Objetivo</div>
     <p style="margin-bottom: 8px;">Este documento define oficialmente todos os contratos públicos da plataforma Astera.</p>
-    <p style="margin-bottom: 8px;">Ele representa a fronteira entre o Astera Workspace (Desktop) e a Astera Cloud.</p>
+    <p style="margin-bottom: 8px;">Ele representa a fronteira entre o Astera Workspace (Deno Desktop) e a Astera Cloud.</p>
     <p style="margin-bottom: 8px;">Toda comunicação entre cliente e servidor deverá respeitar estes contratos.</p>
     <p style="margin-bottom: 8px;">Nenhuma regra de negócio poderá existir no Desktop.</p>
     <p>Toda inteligência pertence ao Astera Runtime.</p>
